@@ -1,174 +1,173 @@
 #!/bin/sh
 
 # Modulos Drupal para migracion
-ddev drush en -y migrate_upgrade
-ddev drush en -y migrate_drupal_ui
-ddev drush en -y migrate_plus
-ddev drush en -y migrate_tools
-ddev drush en -y migrate_upgrade
-ddev drush en -y migrate_devel
-ddev drush en -y views_migration
-ddev drush en -y migrate_url2link
-ddev drush en -y migrate_file_to_media
-ddev drush en -y webform_migrate
-ddev drush en -y field_group_migrate
+vendor/bin/drush en -y migrate_upgrade
+vendor/bin/drush en -y migrate_drupal_ui
+vendor/bin/drush en -y migrate_plus
+vendor/bin/drush en -y migrate_tools
+vendor/bin/drush en -y migrate_upgrade
+vendor/bin/drush en -y migrate_devel
+vendor/bin/drush en -y views_migration
+vendor/bin/drush en -y migrate_url2link
+vendor/bin/drush en -y migrate_file_to_media
+vendor/bin/drush en -y webform_migrate
+vendor/bin/drush en -y field_group_migrate
 
 # Modulos que estaban en el sitio Drupal 7
-ddev drush en -y address
-ddev drush en -y telephone
-ddev drush en -y admin_toolbar
-ddev drush en -y adminimal_admin_toolbar
-ddev drush en -y audit_log
-ddev drush en -y auto_entitylabel
+vendor/bin/drush en -y address
+vendor/bin/drush en -y telephone
+vendor/bin/drush en -y admin_toolbar
+vendor/bin/drush en -y adminimal_admin_toolbar
+vendor/bin/drush en -y audit_log
+vendor/bin/drush en -y auto_entitylabel
 # ddev drush en -y backup_migrate
-ddev drush en -y better_exposed_filters
-ddev drush en -y block_class
-ddev drush en -y captcha
-ddev drush en -y fullcalendar_view
-ddev drush en -y colorbox
-ddev drush en -y context
-ddev drush en -y context_ui
-ddev drush en -y diff
-ddev drush en -y entityqueue
-ddev drush en -y config_split
-ddev drush en -y feeds
-ddev drush en -y field_formatter_class
-ddev drush en -y field_group
-ddev drush en -y field_permissions
-ddev drush en -y paragraphs
-ddev drush en -y file_resup
-ddev drush en -y flood_control
-ddev drush en -y fontawesome
-ddev drush en -y forum
+vendor/bin/drush en -y better_exposed_filters
+vendor/bin/drush en -y block_class
+vendor/bin/drush en -y captcha
+vendor/bin/drush en -y fullcalendar_view
+vendor/bin/drush en -y colorbox
+vendor/bin/drush en -y context
+vendor/bin/drush en -y context_ui
+vendor/bin/drush en -y diff
+vendor/bin/drush en -y entityqueue
+vendor/bin/drush en -y config_split
+vendor/bin/drush en -y feeds
+vendor/bin/drush en -y field_formatter_class
+vendor/bin/drush en -y field_group
+vendor/bin/drush en -y field_permissions
+vendor/bin/drush en -y paragraphs
+vendor/bin/drush en -y file_resup
+vendor/bin/drush en -y flood_control
+vendor/bin/drush en -y fontawesome
+vendor/bin/drush en -y forum
 
 
-ddev drush en -y fivestar
-ddev drush en -y advagg_bundler
-ddev drush en -y advagg_mod
-ddev drush en -y advagg
-ddev drush en -y autologout
-ddev drush en -y cacheexclude
-ddev drush en -y charts
-ddev drush en -y computed_field
-ddev drush en -y search_api_db
-ddev drush en -y geocoder
-ddev drush en -y geocoder_autocomplete
-ddev drush en -y geofield
-ddev drush en -y google_analytics_counter
-ddev drush en -y charts_google
-ddev drush en -y hacked
-ddev drush en -y charts_highcharts
-ddev drush en -y imce
-ddev drush en -y image_field_caption
-ddev drush en -y inline_entity_form
-ddev drush en -y insert
-ddev drush en -y leaflet
-ddev drush en -y libraries
-ddev drush en -y login_emailusername
-ddev drush en -y mailsystem
-ddev drush en -y media
-ddev drush en -y media_bulk_upload
-ddev drush en -y metatag
-ddev drush en -y metatag_facebook
-ddev drush en -y metatag_google_cse
-ddev drush en -y metatag_google_plus
-ddev drush en -y metatag_mobile
-ddev drush en -y metatag_twitter_cards
-ddev drush en -y metatag_verification
-ddev drush en -y metatag_views
-ddev drush en -y metatag_favicons
-ddev drush en -y metatag_hreflang
-ddev drush en -y module_filter
-ddev drush en -y nice_menus
-ddev drush en -y panels
-ddev drush en -y pathauto
-ddev drush en -y plupload
-ddev drush en -y publishcontent
-ddev drush en -y purge
-ddev drush en -y quicktabs
-ddev drush en -y roleassign
-ddev drush en -y rules
-ddev drush en -y smtp
-ddev drush en -y search404
-ddev drush en -y search_api
-ddev drush en -y search_api_glossary
-ddev drush en -y search_api_autocomplete
-ddev drush en -y search_api_sorts
-ddev drush en -y search_api_spellcheck
-ddev drush en -y seckit
-ddev drush en -y security_review
-ddev drush en -y slick
-ddev drush en -y slick_ui
-ddev drush en -y slick_devel
-ddev drush en -y slick_extras
-ddev drush en -y slick_views
-ddev drush en -y search_api_solr
-ddev drush en -y statistics
-ddev drush en -y taxonomy_manager
-ddev drush en -y taxonomy_menu
-ddev drush en -y term_reference_tree
-ddev drush en -y token
-ddev drush en -y varnish
-ddev drush en -y video
-ddev drush en -y view_unpublished
-ddev drush en -y views
-ddev drush en -y views_autocomplete_filters
-ddev drush en -y views_bootstrap
-ddev drush en -y views_bulk_operations
-ddev drush en -y views_conditional
-ddev drush en -y views_contextual_filters_or
-ddev drush en -y views_data_export
-ddev drush en -y views_field_view
-ddev drush en -y views_infinite_scroll
-ddev drush en -y views_natural_sort
-ddev drush en -y views_slideshow
-ddev drush en -y views_fieldsets
-ddev drush en -y votingapi
-ddev drush en -y webform
-ddev drush en -y webform_ui
-ddev drush en -y xmlsitemap
-ddev drush en -y youtube
-ddev drush en -y geophp
-ddev drush en -y recaptcha
-ddev drush en -y advagg_css_minify
-ddev drush en -y advagg_js_minify
-ddev drush en -y devel
-ddev drush en -y config_translation
-ddev drush en -y content_translation
-ddev drush en -y dashboard
-ddev drush en -y date_popup
-ddev drush en -y menu_link_attributes
-ddev drush en -y metatag_open_graph
-ddev drush en -y metatag_open_graph_products
-ddev drush en -y sitemap
-ddev drush en -y views_timelinejs
-ddev drush en -y facets
-ddev drush en -y facets_exposed_filters
-
-ddev drush en -y field_validation
-ddev drush en -y google_analytics
-ddev drush en -y shs
-ddev drush en -y image_effects
-ddev drush en -y webform_analysis
-ddev drush en -y taxonomy_menu_ui
-ddev drush en -y scheduler
-ddev drush en -y bootstrap_quicktabs
-ddev drush en -y views_flexbox
-ddev drush en -y doe
-ddev drush en -y bootstrap_layouts
-ddev drush en -y bootstrap_layout_builder
-ddev drush en -y panelizer
-ddev drush en -y menu_item_extras
-ddev drush en -y job_scheduler
-ddev drush en -y we_megamenu
-ddev drush en -y page_manager
-ddev drush en -y php
-ddev drush en -y poll
-ddev drush en -y rdf
-ddev drush en -y easy_breadcrumb
-ddev drush en -y pdf_using_mpdf
-ddev drush en -y page_manager_ui
-ddev drush en -y purge_ui
-ddev drush en -y geocoder_geofield
-ddev drush en -y geofield_map
-ddev drush en -y datetime_range
+vendor/bin/drush en -y fivestar
+vendor/bin/drush en -y advagg_bundler
+vendor/bin/drush en -y advagg_mod
+vendor/bin/drush en -y advagg
+vendor/bin/drush en -y autologout
+vendor/bin/drush en -y cacheexclude
+vendor/bin/drush en -y charts
+vendor/bin/drush en -y computed_field
+vendor/bin/drush en -y search_api_db
+vendor/bin/drush en -y geocoder
+vendor/bin/drush en -y geocoder_autocomplete
+vendor/bin/drush en -y geofield
+vendor/bin/drush en -y google_analytics_counter
+vendor/bin/drush en -y charts_google
+vendor/bin/drush en -y hacked
+vendor/bin/drush en -y charts_highcharts
+vendor/bin/drush en -y imce
+vendor/bin/drush en -y image_field_caption
+vendor/bin/drush en -y inline_entity_form
+vendor/bin/drush en -y insert
+vendor/bin/drush en -y leaflet
+vendor/bin/drush en -y libraries
+vendor/bin/drush en -y login_emailusername
+vendor/bin/drush en -y mailsystem
+vendor/bin/drush en -y media
+vendor/bin/drush en -y media_bulk_upload
+vendor/bin/drush en -y metatag
+vendor/bin/drush en -y metatag_facebook
+vendor/bin/drush en -y metatag_google_cse
+vendor/bin/drush en -y metatag_google_plus
+vendor/bin/drush en -y metatag_mobile
+vendor/bin/drush en -y metatag_twitter_cards
+vendor/bin/drush en -y metatag_verification
+vendor/bin/drush en -y metatag_views
+vendor/bin/drush en -y metatag_favicons
+vendor/bin/drush en -y metatag_hreflang
+vendor/bin/drush en -y module_filter
+vendor/bin/drush en -y nice_menus
+vendor/bin/drush en -y panels
+vendor/bin/drush en -y pathauto
+vendor/bin/drush en -y plupload
+vendor/bin/drush en -y publishcontent
+vendor/bin/drush en -y purge
+vendor/bin/drush en -y quicktabs
+vendor/bin/drush en -y roleassign
+vendor/bin/drush en -y rules
+vendor/bin/drush en -y smtp
+vendor/bin/drush en -y search404
+vendor/bin/drush en -y search_api
+vendor/bin/drush en -y search_api_glossary
+vendor/bin/drush en -y search_api_autocomplete
+vendor/bin/drush en -y search_api_sorts
+vendor/bin/drush en -y search_api_spellcheck
+vendor/bin/drush en -y seckit
+vendor/bin/drush en -y security_review
+vendor/bin/drush en -y slick
+vendor/bin/drush en -y slick_ui
+vendor/bin/drush en -y slick_devel
+vendor/bin/drush en -y slick_extras
+vendor/bin/drush en -y slick_views
+vendor/bin/drush en -y search_api_solr
+vendor/bin/drush en -y statistics
+vendor/bin/drush en -y taxonomy_manager
+vendor/bin/drush en -y taxonomy_menu
+vendor/bin/drush en -y term_reference_tree
+vendor/bin/drush en -y token
+vendor/bin/drush en -y varnish
+vendor/bin/drush en -y video
+vendor/bin/drush en -y view_unpublished
+vendor/bin/drush en -y views
+vendor/bin/drush en -y views_autocomplete_filters
+vendor/bin/drush en -y views_bootstrap
+vendor/bin/drush en -y views_bulk_operations
+vendor/bin/drush en -y views_conditional
+vendor/bin/drush en -y views_contextual_filters_or
+vendor/bin/drush en -y views_data_export
+vendor/bin/drush en -y views_field_view
+vendor/bin/drush en -y views_infinite_scroll
+vendor/bin/drush en -y views_natural_sort
+vendor/bin/drush en -y views_slideshow
+vendor/bin/drush en -y views_fieldsets
+vendor/bin/drush en -y votingapi
+vendor/bin/drush en -y webform
+vendor/bin/drush en -y webform_ui
+vendor/bin/drush en -y xmlsitemap
+vendor/bin/drush en -y youtube
+vendor/bin/drush en -y geophp
+vendor/bin/drush en -y recaptcha
+vendor/bin/drush en -y advagg_css_minify
+vendor/bin/drush en -y advagg_js_minify
+vendor/bin/drush en -y devel
+vendor/bin/drush en -y config_translation
+vendor/bin/drush en -y content_translation
+vendor/bin/drush en -y dashboard
+vendor/bin/drush en -y date_popup
+vendor/bin/drush en -y menu_link_attributes
+vendor/bin/drush en -y metatag_open_graph
+vendor/bin/drush en -y metatag_open_graph_products
+vendor/bin/drush en -y sitemap
+vendor/bin/drush en -y views_timelinejs
+vendor/bin/drush en -y facets
+vendor/bin/drush en -y facets_exposed_filters
+vendor/bin/drush en -y field_validation
+vendor/bin/drush en -y google_analytics
+vendor/bin/drush en -y shs
+vendor/bin/drush en -y image_effects
+vendor/bin/drush en -y webform_analysis
+vendor/bin/drush en -y taxonomy_menu_ui
+vendor/bin/drush en -y scheduler
+vendor/bin/drush en -y bootstrap_quicktabs
+vendor/bin/drush en -y views_flexbox
+vendor/bin/drush en -y doe
+vendor/bin/drush en -y bootstrap_layouts
+vendor/bin/drush en -y bootstrap_layout_builder
+vendor/bin/drush en -y panelizer
+vendor/bin/drush en -y menu_item_extras
+vendor/bin/drush en -y job_scheduler
+vendor/bin/drush en -y we_megamenu
+vendor/bin/drush en -y page_manager
+vendor/bin/drush en -y php
+vendor/bin/drush en -y poll
+vendor/bin/drush en -y rdf
+vendor/bin/drush en -y easy_breadcrumb
+vendor/bin/drush en -y pdf_using_mpdf
+vendor/bin/drush en -y page_manager_ui
+vendor/bin/drush en -y purge_ui
+vendor/bin/drush en -y geocoder_geofield
+vendor/bin/drush en -y geofield_map
+vendor/bin/drush en -y datetime_range
