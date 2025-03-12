@@ -1,0 +1,27 @@
+id: upgrade_d7_bean_block
+label: 'Migrate D7 Bean Blocks to D10'
+migration_group: custom_migrations
+migration_tags:
+  - 'Drupal 7'
+  - 'Block'
+source:
+  plugin: bean_block
+  source_module: bean
+process:
+  id: delta
+  type: bundle
+  uuid: uuid
+  label: label
+  info: title
+  field_builder/value: field_builder_value
+  field_builder/format: field_builder_format
+  changed: changed
+  created: created
+  revision_uid: uid
+  revision_timestamp: changed
+  langcode: language
+destination:
+  plugin: entity:block_content
+migration_dependencies:
+  required:
+    - upgrade_d7_bean_block_type

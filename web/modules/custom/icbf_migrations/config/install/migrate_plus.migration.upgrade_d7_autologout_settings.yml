@@ -1,0 +1,75 @@
+id: upgrade_d7_autologout_settings
+class: Drupal\migrate\Plugin\Migration
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: custom_migrations
+label: 'Automated Logout Configuration'
+source:
+  plugin: variable
+  variables:
+    - autologout_timeout
+    - autologout_max_timeout
+    - autologout_padding
+    - autologout_role_logout
+    - autologout_redirect_url
+    - autologout_no_dialog
+    - autologout_message
+    - autologout_inactivity_message
+    - autologout_enforce_admin
+    - autologout_use_alt_logout_method
+    - autologout_use_watchdog
+    - autologout_whitelisted_ip_addresses
+  source_module: autologout
+process:
+  timeout:
+    -
+      plugin: get
+      source: autologout_timeout
+  max_timeout:
+    -
+      plugin: get
+      source: autologout_max_timeout
+  padding:
+    -
+      plugin: get
+      source: autologout_padding
+  role_logout:
+    -
+      plugin: get
+      source: autologout_role_logout
+  redirect_url:
+    -
+      plugin: get
+      source: /user/login
+  no_dialog:
+    -
+      plugin: get
+      source: autologout_no_dialog
+  message:
+    -
+      plugin: get
+      source: autologout_message
+  inactivity_message:
+    -
+      plugin: get
+      source: autologout_inactivity_message
+  enforce_admin:
+    -
+      plugin: get
+      source: autologout_enforce_admin
+  use_alt_logout_method:
+    -
+      plugin: get
+      source: autologout_use_alt_logout_method
+  use_watchdog:
+    -
+      plugin: get
+      source: autologout_use_watchdog
+  whitelisted_ip_addresses:
+    -
+      plugin: get
+      source: autologout_whitelisted_ip_addresses
+destination:
+  plugin: config
+  config_name: autologout.settings

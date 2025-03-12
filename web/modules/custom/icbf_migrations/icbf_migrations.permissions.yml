@@ -1,0 +1,645 @@
+access administration menu:
+  title: 'Migrate - Access administration menu'
+access media browser:
+  title: 'Migrate - access media browser'
+allow CKFinder file uploads:
+  title: 'Migrate - allow CKFinder file uploads'
+create files:
+  title: 'Migrate - create files'
+delete own audio files:
+  title: 'Migrate - delete own audio files'
+delete own document files:
+  title: 'delete own document files'
+delete own image files:
+  title: 'Migrate - delete own image files'
+delete own video files:
+  title: 'Migrate - delete own video files'
+download own audio files:
+  title: 'Migrate - download own audio files'
+download own document files:
+  title: 'Migrate - download own document files'
+download own image files:
+  title: 'Migrate - download own image files'
+download own video files:
+  title: 'Migrate - download own video files'
+edit own audio files:
+  title: 'Migrate - edit own audio files'
+edit own document files:
+  title: 'Migrate - edit own document files'
+edit own image files:
+  title: 'Migrate - edit own image files'
+edit own video files:
+  title: 'Migrate - edit own video files'
+geocoder_service_all_handlers:
+  title: 'Migrate - geocoder_service_all_handlers'
+geocoder_service_handler_bing:
+  title: 'Migrate - geocoder_service_handler_bing'
+geocoder_service_handler_exif:
+  title: 'Migrate - geocoder_service_handler_exif'
+geocoder_service_handler_google:
+  title: 'Migrate - geocoder_service_handler_google'
+geocoder_service_handler_gpx:
+  title: 'Migrate - geocoder_service_handler_gpx'
+geocoder_service_handler_json:
+  title: 'Migrate - geocoder_service_handler_json'
+geocoder_service_handler_kml:
+  title: 'Migrate - geocoder_service_handler_kml'
+import media:
+  title: 'Migrate - import media'
+view any footer bean:
+  title: 'Migrate - view any footer bean'
+view revisions:
+  title: 'Migrate - view revisions'
+access all views:
+  title: 'Migrate - access all views'
+access all webform results:
+  title: 'Migrate - access all webform results'
+access bean overview:
+  title: 'Migrate - access bean overview'
+access dashboard:
+  title: 'Migrate - access dashboard'
+access example charts:
+  title: 'Migrate - access example charts'
+access flood unblock:
+  title: 'Migrate - access flood unblock'
+access own webform results:
+  title: 'Migrate - access own webform results'
+access own webform submissions:
+  title: 'Migrate - access own webform submissions'
+access sarnia entity pages:
+  title: 'Migrate - access sarnia entity pages'
+access site map:
+  title: 'Migrate - access site map'
+access statistics:
+  title: 'Migrate - access statistics'
+administer bean settings:
+  title: 'Migrate - administer bean settings'
+administer bean types:
+  title: 'Migrate - administer bean types'
+administer beans:
+  title: 'Migrate - administer beans'
+administer charts:
+  title: 'Migrate - administer charts'
+administer ckeditor:
+  title: 'Migrate - administer ckeditor'
+administer css injection:
+  title: 'Migrate - administer css injection'
+administer ctools access ruleset:
+  title: 'Migrate - administer ctools access ruleset'
+administer entity view modes:
+  title: 'Migrate - administer entity view modes'
+administer event status:
+  title: 'Migrate - administer event status'
+administer facetapi pretty paths:
+  title: 'Migrate - administer facetapi pretty paths'
+administer features:
+  title: 'Migrate - administer features'
+administer field collections:
+  title: 'Migrate - administer field collections'
+administer fieldgroups:
+  title: 'Migrate - administer fieldgroups'
+administer fields:
+  title: 'Migrate - administer fields'
+administer file types:
+  title: 'Migrate - administer file types'
+administer files:
+  title: 'Migrate - administer files'
+administer glazed builder configuration:
+  title: 'Migrate - administer glazed builder configuration'
+administer isotope:
+  title: 'Migrate - administer isotope'
+administer layouts:
+  title: 'Migrate - administer layouts'
+administer mailsystem:
+  title: 'Migrate - administer mailsystem'
+administer md_megamenu:
+  title: 'Migrate - administer md_megamenu'
+administer media browser:
+  title: 'Migrate - administer media browser'
+administer mini panels:
+  title: 'Migrate - administer mini panels'
+administer module filter:
+  title: 'Migrate - administer module filter'
+administer page manager:
+  title: 'Migrate - administer page manager'
+administer panel-nodes:
+  title: 'Migrate - administer panel-nodes'
+administer panelizer bean footer defaults:
+  title: 'Migrate - administer panelizer bean footer defaults'
+administer panelizer bean tokens defaults:
+  title: 'Migrate - administer panelizer bean tokens defaults'
+administer panelizer comment comment_node_acta_contentiva defaults:
+  title: 'Migrate - administer panelizer comment comment_node_acta_contentiva defaults'
+administer panelizer comment comment_node_agencies_adoptions_colombian defaults:
+  title: 'Migrate - administer panelizer comment comment_node_agencies_adoptions_colombian defaults'
+administer panelizer comment comment_node_announcement defaults:
+  title: 'Migrate - administer panelizer comment comment_node_announcement defaults'
+administer panelizer comment comment_node_article defaults:
+  title: 'Migrate - administer panelizer comment comment_node_article defaults'
+administer panelizer comment comment_node_articles_iin defaults:
+  title: 'Migrate - administer panelizer comment comment_node_articles_iin defaults'
+administer panelizer comment comment_node_articles_portal_web defaults:
+  title: 'Migrate - administer panelizer comment comment_node_articles_portal_web defaults'
+administer panelizer comment comment_node_articulo_nna defaults:
+  title: 'Migrate - administer panelizer comment comment_node_articulo_nna defaults'
+administer panelizer comment comment_node_banner_home defaults:
+  title: 'Migrate - administer panelizer comment comment_node_banner_home defaults'
+administer panelizer comment comment_node_blog defaults:
+  title: 'Migrate - administer panelizer comment comment_node_blog defaults'
+administer panelizer comment comment_node_curriculum_vitae defaults:
+  title: 'Migrate - administer panelizer comment comment_node_curriculum_vitae defaults'
+administer panelizer comment comment_node_document defaults:
+  title: 'Migrate - administer panelizer comment comment_node_document defaults'
+administer panelizer comment comment_node_documentos_contrataci_n defaults:
+  title: 'Migrate - administer panelizer comment comment_node_documentos_contrataci_n defaults'
+administer panelizer comment comment_node_encargos defaults:
+  title: 'Migrate - administer panelizer comment comment_node_encargos defaults'
+administer panelizer comment comment_node_encuesta_web defaults:
+  title: 'Migrate - administer panelizer comment comment_node_encuesta_web defaults'
+administer panelizer comment comment_node_enlaces_referencia defaults:
+  title: 'Migrate - administer panelizer comment comment_node_enlaces_referencia defaults'
+administer panelizer comment comment_node_enlaces_transparencia defaults:
+  title: 'Migrate - administer panelizer comment comment_node_enlaces_transparencia defaults'
+administer panelizer comment comment_node_evaluaci_n defaults:
+  title: 'Migrate - administer panelizer comment comment_node_evaluaci_n defaults'
+administer panelizer comment comment_node_event_calendar defaults:
+  title: 'Migrate - administer panelizer comment comment_node_event_calendar defaults'
+administer panelizer comment comment_node_forum defaults:
+  title: 'Migrate - administer panelizer comment comment_node_forum defaults'
+administer panelizer comment comment_node_glosario defaults:
+  title: 'Migrate - administer panelizer comment comment_node_glosario defaults'
+administer panelizer comment comment_node_hiring_process defaults:
+  title: 'Migrate - administer panelizer comment comment_node_hiring_process defaults'
+administer panelizer comment comment_node_info_contexto defaults:
+  title: 'Migrate - administer panelizer comment comment_node_info_contexto defaults'
+administer panelizer comment comment_node_infografia_observatorio defaults:
+  title: 'Migrate - administer panelizer comment comment_node_infografia_observatorio defaults'
+administer panelizer comment comment_node_informe_denuncias_anticorrupcion defaults:
+  title: 'Migrate - administer panelizer comment comment_node_informe_denuncias_anticorrupcion defaults'
+administer panelizer comment comment_node_instituciones_adopciones defaults:
+  title: 'Migrate - administer panelizer comment comment_node_instituciones_adopciones defaults'
+administer panelizer comment comment_node_local_shopping defaults:
+  title: 'Migrate - administer panelizer comment comment_node_local_shopping defaults'
+administer panelizer comment comment_node_monitoreo_gesti_n defaults:
+  title: 'administer panelizer comment comment_node_monitoreo_gesti_n defaults'
+administer panelizer comment comment_node_multimedia defaults:
+  title: 'administer panelizer comment comment_node_multimedia defaults'
+administer panelizer comment comment_node_news defaults:
+  title: 'administer panelizer comment comment_node_news defaults'
+administer panelizer comment comment_node_notifications defaults:
+  title: 'administer panelizer comment comment_node_notifications defaults'
+administer panelizer comment comment_node_page defaults:
+  title: 'administer panelizer comment comment_node_page defaults'
+administer panelizer comment comment_node_panel defaults:
+  title: 'administer panelizer comment comment_node_panel defaults'
+administer panelizer comment comment_node_persona defaults:
+  title: 'administer panelizer comment comment_node_persona defaults'
+administer panelizer comment comment_node_petition_rights defaults:
+  title: 'administer panelizer comment comment_node_petition_rights defaults'
+administer panelizer comment comment_node_photo_gallery2_event defaults:
+  title: 'administer panelizer comment comment_node_photo_gallery2_event defaults'
+administer panelizer comment comment_node_poll defaults:
+  title: 'administer panelizer comment comment_node_poll defaults'
+administer panelizer comment comment_node_portfolio_tramite defaults:
+  title: 'administer panelizer comment comment_node_portfolio_tramite defaults'
+administer panelizer comment comment_node_process defaults:
+  title: 'administer panelizer comment comment_node_process defaults'
+administer panelizer comment comment_node_rendicion_de_cuentas defaults:
+  title: 'administer panelizer comment comment_node_rendicion_de_cuentas defaults'
+administer panelizer comment comment_node_sector_studies defaults:
+  title: 'administer panelizer comment comment_node_sector_studies defaults'
+administer panelizer comment comment_node_sede_local defaults:
+  title: 'administer panelizer comment comment_node_sede_local defaults'
+administer panelizer comment comment_node_services_faq defaults:
+  title: 'administer panelizer comment comment_node_services_faq defaults'
+administer panelizer comment comment_node_summon defaults:
+  title: 'administer panelizer comment comment_node_summon defaults'
+administer panelizer comment comment_node_summon_sdg defaults:
+  title: 'administer panelizer comment comment_node_summon_sdg defaults'
+administer panelizer comment comment_node_tramites_vus defaults:
+  title: 'administer panelizer comment comment_node_tramites_vus defaults'
+administer panelizer comment comment_node_transparency defaults:
+  title: 'administer panelizer comment comment_node_transparency defaults'
+administer panelizer comment comment_node_venta_de_bienes defaults:
+  title: 'administer panelizer comment comment_node_venta_de_bienes defaults'
+administer panelizer comment comment_node_webform defaults:
+  title: 'administer panelizer comment comment_node_webform defaults'
+administer panelizer file audio defaults administer panelizer file document defaults:
+  title: 'Migrate - administer panelizer file audio defaults administer panelizer file document defaults'
+administer panelizer file image defaults:
+  title: 'Migrate - administer panelizer file image defaults'
+administer panelizer file video defaults:
+  title: 'Migrate - administer panelizer file video defaults'
+administer panelizer node acta_contentiva context:
+  title: 'Migrate - administer panelizer node acta_contentiva context'
+administer panelizer node acta_contentiva overview:
+  title: 'Migrate - administer panelizer node acta_contentiva overview'
+administer panelizer node acta_contentiva settings:
+  title: 'Migrate - administer panelizer node acta_contentiva settings'
+administer panelizer node agencies_adoptions_colombian context:
+  title: 'Migrate - administer panelizer node agencies_adoptions_colombian context'
+administer panelizer node agencies_adoptions_colombian overview:
+  title: 'Migrate - administer panelizer node agencies_adoptions_colombian overview'
+administer panelizer node agencies_adoptions_colombian settings:
+  title: 'Migrate - administer panelizer node agencies_adoptions_colombian settings'
+administer panelizer node announcement context:
+  title: 'Migrate - administer panelizer node announcement context'
+administer panelizer node announcement overview:
+  title: 'Migrate - administer panelizer node announcement overview'
+administer panelizer node announcement settings:
+  title: 'Migrate - administer panelizer node announcement settings'
+administer panelizer node article context:
+  title: 'Migrate - administer panelizer node article context'
+administer panelizer node article overview:
+  title: 'Migrate - administer panelizer node article overview'
+administer panelizer node article settings:
+  title: 'Migrate - administer panelizer node article settings'
+administer panelizer node articles_iin context:
+  title: 'Migrate - administer panelizer node articles_iin context'
+administer panelizer node articles_iin overview:
+  title: 'Migrate - administer panelizer node articles_iin overview'
+administer panelizer node articles_iin settings:
+  title: 'Migrate - administer panelizer node articles_iin settings'
+administer panelizer node articles_portal_web context:
+  title: 'Migrate - administer panelizer node articles_portal_web context'
+administer panelizer node articles_portal_web overview:
+  title: 'Migrate - administer panelizer node articles_portal_web overview'
+administer panelizer node articles_portal_web settings:
+  title: 'Migrate - administer panelizer node articles_portal_web settings'
+administer panelizer node articulo_mis_manos_te_ensenan context:
+  title: 'Migrate - administer panelizer node articulo_mis_manos_te_ensenan context'
+administer panelizer node articulo_mis_manos_te_ensenan overview:
+  title: 'Migrate - administer panelizer node articulo_mis_manos_te_ensenan overview'
+administer panelizer node articulo_mis_manos_te_ensenan settings:
+  title: 'Migrate - administer panelizer node articulo_mis_manos_te_ensenan settings'
+administer panelizer node articulo_nna context:
+  title: 'Migrate - administer panelizer node articulo_nna context'
+administer panelizer node articulo_nna overview:
+  title: 'Migrate - administer panelizer node articulo_nna overview'
+administer panelizer node articulo_nna settings:
+  title: 'Migrate - administer panelizer node articulo_nna settings'
+administer panelizer node blog context:
+  title: 'Migrate - administer panelizer node blog context'
+administer panelizer node blog overview:
+  title: 'Migrate - administer panelizer node blog overview'
+administer panelizer node blog settings:
+  title: 'Migrate - administer panelizer node blog settings'
+administer panelizer node bot_n_home context:
+  title: 'Migrate - administer panelizer node bot_n_home context'
+administer panelizer node bot_n_home overview:
+  title: 'Migrate - administer panelizer node bot_n_home overview'
+administer panelizer node bot_n_home settings:
+  title: 'Migrate - administer panelizer node bot_n_home settings'
+administer panelizer node document context:
+  title: 'Migrate - administer panelizer node document context'
+administer panelizer node document overview:
+  title: 'Migrate - administer panelizer node document overview'
+administer panelizer node document settings:
+  title: 'Migrate - administer panelizer node document settings'
+administer panelizer node document_microsite context:
+  title: 'Migrate - administer panelizer node document_microsite context'
+administer panelizer node document_microsite overview:
+  title: 'Migrate - administer panelizer node document_microsite overview'
+administer panelizer node document_microsite settings:
+  title: 'Migrate - administer panelizer node document_microsite settings'
+administer panelizer node documento_de_convocatoria context:
+  title: 'Migrate - administer panelizer node documento_de_convocatoria context'
+administer panelizer node documento_de_convocatoria overview:
+  title: 'Migrate - administer panelizer node documento_de_convocatoria overview'
+administer panelizer node documento_de_convocatoria settings:
+  title: 'Migrate - administer panelizer node documento_de_convocatoria settings'
+administer panelizer node documento_multiple context:
+  title: 'Migrate - administer panelizer node documento_multiple context'
+administer panelizer node documento_multiple overview:
+  title: 'Migrate - administer panelizer node documento_multiple overview'
+administer panelizer node documento_multiple settings:
+  title: 'Migrate - administer panelizer node documento_multiple settings'
+administer panelizer node documentos_de_normativa context:
+  title: 'Migrate - administer panelizer node documentos_de_normativa context'
+administer panelizer node documentos_de_normativa overview:
+  title: 'Migrate - administer panelizer node documentos_de_normativa overview'
+administer panelizer node documentos_de_normativa settings:
+  title: 'Migrate - administer panelizer node documentos_de_normativa settings'
+administer panelizer node enlaces_transparencia context:
+  title: 'Migrate - administer panelizer node enlaces_transparencia context'
+administer panelizer node enlaces_transparencia overview:
+  title: 'Migrate - administer panelizer node enlaces_transparencia overview'
+administer panelizer node enlaces_transparencia settings:
+  title: 'Migrate - administer panelizer node enlaces_transparencia settings'
+administer panelizer node evaluaci_n context:
+  title: 'Migrate - administer panelizer node evaluaci_n context'
+administer panelizer node evaluaci_n overview:
+  title: 'Migrate - administer panelizer node evaluaci_n overview'
+administer panelizer node evaluaci_n settings:
+  title: 'Migrate - administer panelizer node evaluaci_n settings'
+administer panelizer node event_calendar context:
+  title: 'Migrate - administer panelizer node event_calendar context'
+administer panelizer node event_calendar overview:
+  title: 'Migrate - administer panelizer node event_calendar overview'
+administer panelizer node event_calendar settings:
+  title: 'Migrate - administer panelizer node event_calendar settings'
+administer panelizer node hiring_process context:
+  title: 'Migrate - administer panelizer node hiring_process context'
+administer panelizer node hiring_process overview:
+  title: 'Migrate - administer panelizer node hiring_process overview'
+administer panelizer node hiring_process settings:
+  title: 'Migrate - administer panelizer node hiring_process settings'
+administer panelizer node info_contexto context:
+  title: 'Migrate - administer panelizer node info_contexto context'
+administer panelizer node info_contexto overview:
+  title: 'Migrate - administer panelizer node info_contexto overview'
+administer panelizer node info_contexto settings:
+  title: 'Migrate - administer panelizer node info_contexto settings'
+administer panelizer node infografia_observatorio context:
+  title: 'Migrate - administer panelizer node infografia_observatorio context'
+administer panelizer node infografia_observatorio overview:
+  title: 'Migrate - administer panelizer node infografia_observatorio overview'
+administer panelizer node infografia_observatorio settings:
+  title: 'Migrate - administer panelizer node infografia_observatorio settings'
+administer panelizer node informe_denuncias_anticorrupcion context:
+  title: 'Migrate - administer panelizer node informe_denuncias_anticorrupcion context'
+administer panelizer node informe_denuncias_anticorrupcion overview:
+  title: 'Migrate - administer panelizer node informe_denuncias_anticorrupcion overview'
+administer panelizer node informe_denuncias_anticorrupcion settings:
+  title: 'Migrate - administer panelizer node informe_denuncias_anticorrupcion settings'
+administer panelizer node instituciones_adopciones context:
+  title: 'Migrate - administer panelizer node instituciones_adopciones context'
+administer panelizer node instituciones_adopciones overview:
+  title: 'Migrate - administer panelizer node instituciones_adopciones overview'
+administer panelizer node instituciones_adopciones settings:
+  title: 'Migrate - administer panelizer node instituciones_adopciones settings'
+administer panelizer node local_shopping context:
+  title: 'Migrate - administer panelizer node local_shopping context'
+administer panelizer node local_shopping overview:
+  title: 'Migrate - administer panelizer node local_shopping overview'
+administer panelizer node local_shopping settings:
+  title: 'Migrate - administer panelizer node local_shopping settings'
+administer panelizer node monitoreo_gesti_n context:
+  title: 'Migrate - administer panelizer node monitoreo_gesti_n context'
+administer panelizer node monitoreo_gesti_n overview:
+  title: 'Migrate - administer panelizer node monitoreo_gesti_n overview'
+administer panelizer node monitoreo_gesti_n settings:
+  title: 'Migrate - administer panelizer node monitoreo_gesti_n settings'
+administer panelizer node multimedia context:
+  title: 'Migrate - administer panelizer node multimedia context'
+administer panelizer node multimedia overview:
+  title: 'Migrate - administer panelizer node multimedia overview'
+administer panelizer node multimedia settings:
+  title: 'Migrate - administer panelizer node multimedia settings'
+administer panelizer node news context:
+  title: 'Migrate - administer panelizer node news context'
+administer panelizer node news overview:
+  title: 'Migrate - administer panelizer node news overview'
+administer panelizer node news settings:
+  title: 'Migrate - administer panelizer node news settings'
+administer panelizer node notifications context:
+  title: 'Migrate - administer panelizer node notifications context'
+administer panelizer node notifications overview:
+  title: 'Migrate - administer panelizer node notifications overview'
+administer panelizer node notifications settings:
+  title: 'Migrate - administer panelizer node notifications settings'
+administer panelizer node page context:
+  title: 'Migrate - administer panelizer node page context'
+administer panelizer node page:
+  title: 'Migrate - administer panelizer node page'
+# ', 'administer panelizer node page'
+# overview', 'administer panelizer node page settings', 'administer panelizer node petition_rights context', 'administer panelizer node petition_rights
+# overview', 'administer panelizer node petition_rights settings', 'administer panelizer node photo_gallery2_event context', 'administer panelizer node
+# photo_gallery2_event overview', 'administer panelizer node photo_gallery2_event settings', 'administer panelizer node process context', 'administer
+# panelizer node process overview', 'administer panelizer node process settings', 'administer panelizer node sector_studies context', 'administer
+# panelizer node sector_studies overview', 'administer panelizer node sector_studies settings', 'administer panelizer node sede_local context',
+# 'administer panelizer node sede_local overview', 'administer panelizer node sede_local settings', 'administer panelizer node summon context',
+# 'administer panelizer node summon overview', 'administer panelizer node summon settings', 'administer panelizer node summon_sdg context', 'administer
+# panelizer node summon_sdg overview', 'administer panelizer node summon_sdg settings', 'administer panelizer node transparency context', 'administer
+# panelizer node transparency overview', 'administer panelizer node transparency settings', 'administer panelizer taxonomy_term congreso_xxii context',
+# 'administer panelizer taxonomy_term congreso_xxii overview', 'administer panelizer taxonomy_term congreso_xxii settings', 'administer panelizer
+# taxonomy_term eventos context', 'administer panelizer taxonomy_term eventos overview', 'administer panelizer taxonomy_term eventos settings',
+# 'administer panelizer taxonomy_term eventos_agenda context', 'administer panelizer taxonomy_term eventos_agenda overview', 'administer panelizer
+# taxonomy_term eventos_agenda settings', 'administer panelizer taxonomy_term hiring_process_type context', 'administer panelizer taxonomy_term
+# hiring_process_type overview', 'administer panelizer taxonomy_term hiring_process_type settings', 'administer panelizer taxonomy_term locations
+# context', 'administer panelizer taxonomy_term locations overview', 'administer panelizer taxonomy_term locations settings', 'administer panelizer
+# taxonomy_term menu_observatory context', 'administer panelizer taxonomy_term menu_observatory overview', 'administer panelizer taxonomy_term
+# menu_observatory settings', 'administer panelizer taxonomy_term mis_manos_te_ensenan context', 'administer panelizer taxonomy_term
+# mis_manos_te_ensenan overview', 'administer panelizer taxonomy_term mis_manos_te_ensenan settings', 'administer panelizer taxonomy_term
+# ninos_ninas_y_adolescentes context', 'administer panelizer taxonomy_term ninos_ninas_y_adolescentes overview', 'administer panelizer taxonomy_term
+# ninos_ninas_y_adolescentes settings', 'administer panelizer taxonomy_term para_papas context', 'administer panelizer taxonomy_term para_papas
+# overview', 'administer panelizer taxonomy_term para_papas settings', 'administer panelizer taxonomy_term procedure context', 'administer panelizer
+# taxonomy_term procedure overview', 'administer panelizer taxonomy_term procedure settings', 'administer panelizer taxonomy_term programa_adopciones
+# context', 'administer panelizer taxonomy_term programa_adopciones overview', 'administer panelizer taxonomy_term programa_adopciones settings',
+# 'administer panelizer taxonomy_term secctions context', 'administer panelizer taxonomy_term secctions overview', 'administer panelizer taxonomy_term
+# secctions settings', 'administer panelizer taxonomy_term sige context', 'administer panelizer taxonomy_term sige overview', 'administer panelizer
+# taxonomy_term sige settings', 'administer panelizer taxonomy_term tags_tr_mites context', 'administer panelizer taxonomy_term tags_tr_mites overview',
+# 'administer panelizer taxonomy_term tags_tr_mites settings', 'administer panels display styles', 'administer panels pane styles', 'administer panels
+# region styles', 'administer respondjs', 'administer sarnia entity types', 'administer varnish', 'administer video presets', 'block IP addresses',
+# 'bypass access in place editing', 'bypass conversion video', 'bypass file access', 'change layouts in place editing', 'clone node', 'clone own nodes',
+# 'configure_webform_charts', 'context ajax block access', 'control node view', 'convert on submission', 'create any footer bean', 'create any js bean',
+# 'create any tokens bean', 'create glosary content', 'create mini panels', 'customize ckeditor', 'delete all webform submissions', 'delete any audio
+# files', 'delete any document files', 'delete any footer bean', 'delete any image files', 'delete any js bean', 'delete any tokens bean', 'delete any
+# video files', 'delete md_megamenu', 'delete own document files', 'delete own glosary content', 'delete own webform submissions', 'delete revisions',
+# 'delete terms in 1', 'delete terms in 10', 'delete terms in 12', 'delete terms in 13', 'delete terms in 14', 'delete terms in 15', 'delete terms in
+# 16', 'delete terms in 17
+# delete terms in 18
+# delete terms in 19
+# delete terms in 21
+# delete terms in 22
+# delete terms in 23
+# delete terms in 24
+# delete terms in 25
+# delete terms in 26
+# delete terms in 27
+# delete terms in 28
+# delete terms in 29
+# delete terms in 3
+# delete terms in 30
+# delete terms in 31
+# delete terms in 32
+# delete terms in 33
+# delete terms in 34
+# delete terms in 35
+# delete terms in 36
+# delete terms in 37
+# delete terms in 38
+# delete terms in 39
+# delete terms in 40
+# delete terms in 41
+# delete terms in 42
+# delete terms in 44
+# delete terms in 45
+# delete terms in 46
+# delete terms in 5
+# delete terms in 6
+# delete terms in 7
+# delete terms in 8
+# delete terms in 9
+# diff view changes
+# display drupal links
+# download any audio files
+# download any document files
+# download any image files
+# download any video files
+# edit all webform submissions
+# edit any audio files
+# edit any document files
+# edit any footer bean
+# edit any image files
+# edit any js bean
+# edit any tokens bean
+# edit any video files
+# edit bean view mode
+# edit meta tags
+# edit own glosary content
+# edit own webform submissions
+# edit revisions
+# edit terms in 1
+# edit terms in 10
+# edit terms in 12
+# edit terms in 13
+# edit terms in 14
+# edit terms in 15
+# edit terms in 16
+# edit terms in 17
+# edit terms in 18
+# edit terms in 19
+# edit terms in 21
+# edit terms in 22
+# edit terms in 23
+# edit terms in 24
+# edit terms in 25
+# edit terms in 26
+# edit terms in 27
+# edit terms in 28
+# edit terms in 29
+# edit terms in 3
+# edit terms in 30
+# edit terms in 31
+# edit terms in 32
+# edit terms in 33
+# edit terms in 34
+# edit terms in 35
+# edit terms in 36
+# edit terms in 37
+# edit terms in 38
+# edit terms in 39
+# edit terms in 40
+# edit terms in 41
+# edit terms in 42
+# edit terms in 44
+# edit terms in 45
+# edit terms in 46
+# edit terms in 5
+# edit terms in 6
+# edit terms in 7
+# edit terms in 8
+# edit terms in 9
+# edit via glazed builder
+# edit webform components
+extended file field delete any file contents:
+  title: 'Migrate - extended file field delete any file contents'
+extended file field delete own file contents:
+  title: 'Migrate - extended file field delete own file contents'
+flush caches:
+  title: 'Migrate - flush caches'
+generate features:
+  title: 'Migrate - generate features'
+generate pdf using mpdf:
+  title: 'Migrate - generate pdf using mpdf'
+geocoder_service_handler_latlon:
+  title: 'Migrate - geocoder_service_handler_latlon'
+geocoder_service_handler_mapquest_nominatim:
+  title: 'Migrate - geocoder_service_handler_mapquest_nominatim'
+geocoder_service_handler_openstreetmap_nominatim:
+  title: 'Migrate - geocoder_service_handler_openstreetmap_nominatim'
+geocoder_service_handler_wkt:
+  title: 'Migrate - geocoder_service_handler_wkt'
+geocoder_service_handler_yahoo:
+  title: 'Migrate - geocoder_service_handler_yahoo'
+geocoder_service_handler_yandex:
+  title: 'Migrate - geocoder_service_handler_yandex'
+inspect all votes:
+  title: 'Migrate - inspect all votes'
+manage features:
+  title: 'Migrate - manage features'
+opt-in or out of tracking:
+  title: 'Migrate - opt-in or out of tracking'
+override player dimensions:
+  title: 'Migrate - override player dimensions'
+publish any forum content:
+  title: 'Migrate - publish any forum content'
+publish editable forum content:
+  title: 'Migrate - publish editable forum content'
+publish own forum content:
+  title: 'Migrate - publish own forum content'
+publish revisions:
+  title: 'Migrate - publish revisions'
+re convert video:
+  title: 'Migrate - re convert video'
+rename features:
+  title: 'Migrate - rename features'
+revert revisions:
+  title: 'Migrate - revert revisions'
+translate admin strings:
+  title: 'Migrate - translate admin strings'
+translate user-defined strings:
+  title: 'Migrate - translate user-defined strings'
+unpublish any forum content:
+  title: 'Migrate - unpublish any forum content'
+unpublish current revision:
+  title: 'Migrate - unpublish current revision'
+unpublish editable forum content:
+  title: 'Migrate - unpublish editable forum content'
+unpublish own forum content:
+  title: 'Migrate - unpublish own forum content'
+use PHP for label patterns:
+  title: 'Migrate - use PHP for label patterns'
+use PHP for tracking visibility:
+  title: 'Migrate - use PHP for tracking visibility'
+use ctools import:
+  title: 'Migrate - use ctools import'
+use default thumb:
+  title: 'Migrate - use default thumb'
+use page manager:
+  title: 'Migrate - use page manager'
+use panels in place editing:
+  title: 'Migrate - use panels in place editing'
+use search_api_autocomplete for search_api_page_global_search:
+  title: 'Migrate - use search_api_autocomplete for search_api_page_global_search'
+use search_api_autocomplete for search_api_views_faqs_icbf:
+  title: 'Migrate - use search_api_autocomplete for search_api_views_faqs_icbf'
+use search_api_autocomplete for search_api_views_hiring_process:
+  title: 'Migrate - use search_api_autocomplete for search_api_views_hiring_process'
+use search_api_autocomplete for search_api_views_post_familias:
+  title: 'Migrate - use search_api_autocomplete for search_api_views_post_familias'
+use search_api_autocomplete for search_api_views_tramites:
+  title: 'Migrate - use search_api_autocomplete for search_api_views_tramites'
+use search_api_autocomplete:
+  title: 'Migrate - use search_api_autocomplete'
+for search_api_views_ubicaciones:
+  title: 'Migrate - for search_api_views_ubicaciones'
+use search_api_sorts:
+  title: 'Migrate - use search_api_sorts'
+use xmlsitemap:
+  title: 'Migrate - use xmlsitemap'
+use_search_api_live_results:
+  title: 'Migrate - use_search_api_live_results'
+view any js bean:
+  title: 'Migrate - view any js bean'
+view any tokens bean:
+  title: 'Migrate - view any tokens bean'
+view bean page:
+  title: 'Migrate - view bean page'
+view bean revisions:
+  title: 'Migrate - view bean revisions'
+view files:
+  title: 'Migrate - view files'
+view own files:
+  title: 'Migrate - view own files'
+view own private files:
+  title: 'Migrate - view own private files'
+view private files:
+  title: 'Migrate - view private files'
+view revision status messages:
+  title: 'Migrate - view revision status messages'
+view_webform_charts :
+  title: 'Migrate - view_webform_charts '
+vote on polls:
+  title: 'Migrate - vote on polls'

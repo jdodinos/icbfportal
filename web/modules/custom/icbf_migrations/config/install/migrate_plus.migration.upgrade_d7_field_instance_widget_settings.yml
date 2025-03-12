@@ -1,0 +1,149 @@
+id: upgrade_d7_field_instance_widget_settings
+class: Drupal\migrate_drupal\Plugin\migrate\FieldMigration
+field_plugin_method: alterFieldWidgetMigration
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: custom_migrations
+label: 'Field instance widget configuration'
+source:
+  key: migrate
+  plugin: d7_field_instance_per_form_display
+  constants:
+    form_mode: default
+    third_party_settings: {  }
+process:
+  # @modified
+  field_type_exists:
+    -
+      plugin: migration_lookup
+      migration: upgrade_d7_field
+      source:
+        - field_name
+        - entity_type
+    -
+      plugin: extract
+      index:
+        - 0
+    -
+      plugin: skip_on_empty
+      method: row
+      message: "Field storage configuration does not exist."
+  bundle:
+    -
+      plugin: migration_lookup
+      migration: upgrade_d7_field_instance
+      source:
+        - entity_type
+        - bundle
+        - field_name
+    -
+      plugin: extract
+      index:
+        - 1
+  form_mode:
+    -
+      plugin: get
+      source: constants/form_mode
+  field_name:
+    -
+      plugin: get
+      source: field_name
+  entity_type:
+    -
+      plugin: get
+      source: entity_type
+    -
+      plugin: static_map
+      map:
+        field_collection_item: paragraph
+        paragraphs_item: paragraph
+        bean: block_content
+      bypass: true
+  options/weight:
+    -
+      plugin: get
+      source: widget/weight
+  widget_type:
+    -
+      plugin: process_field
+      source: type
+      method: getFieldWidgetType
+  options/type:
+    type:
+      plugin: static_map
+      bypass: true
+      source: '@widget_type'
+      map:
+        link_field: link_default
+        email_textfield: email_default
+        date_select: datetime_default
+        date_text: datetime_default
+        date_popup: datetime_default
+        media_generic: file_generic
+        phone_textfield: telephone_default
+        options_onoff: boolean_checkbox
+        entityreference_autocomplete: entity_reference_autocomplete
+        entityreference_autocomplete_tags: entity_reference_autocomplete_tags
+        taxonomy_autocomplete: entity_reference_autocomplete
+        inline_entity_form_single: inline_entity_form_simple
+        inline_entity_form: inline_entity_form_complex
+        d7_text: d7_text_default
+        taxonomy_term_reference: taxonomy_term_reference_default
+        taxonomy_hs: entity_reference_autocomplete
+        file_mfw: file_generic
+        filefield_widget: file_generic
+        image: image_default
+        image_miw: image_image
+        date: datetime_default
+        datetime: datetime_default
+        datestamp: datetime_timestamp
+        youtube: youtube
+        list: list_default
+        field_collection_embed: entity_reference_paragraphs
+        field_collection: field_collection_default
+        entityreference: entityreference_default
+        url_external: link_default
+        number_default: number_default_default
+        addressfield_standard: address_default
+        addressfield_autocomplete: address_default
+        exposed: fivestar_stars
+        stars: fivestar_stars
+        fivestar_select: fivestar_select
+        video_upload: video_upload
+        geofield_wkt: geofield_default
+        geofield_geojson: geofield_default
+        geofield_kml: geofield_default
+        geofield_gpx: geofield_default
+        geofield_geohash: geofield_default
+        geofield_latlon: geofield_latlon
+        geofield_lat: geofield_default
+        geofield_lon: geofield_default
+        geofield_geo_type: geofield_default
+        geofield_def_list: geofield_default
+        geofield_description: geofield_default
+        geofield_openlayers: geofield_default
+        geocoder: geofield_default
+  options/settings:
+    -
+      plugin: field_instance_widget_settings
+      source:
+        - widget/type
+        - widget/settings
+  options/third_party_settings:
+    -
+      plugin: get
+      source: constants/third_party_settings
+  options/third_party_settings/insert:
+    -
+      plugin: get
+      source: insert_config
+destination:
+  plugin: component_entity_form_display
+migration_dependencies:
+  required:
+    - upgrade_d7_field_instance
+  optional:
+    - upgrade_d7_field_collection_type
+    - upgrade_d7_field
+    - upgrade_d7_field_instance

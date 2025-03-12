@@ -1,0 +1,28 @@
+id: upgrade_taxonomy_manager_settings
+class: Drupal\migrate\Plugin\Migration
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: custom_migrations
+label: 'Taxonomy manager'
+source:
+  plugin: variable
+  variables:
+    - taxonomy_manager_pager_tree_page_size
+    - taxonomy_manager_disable_mouseover
+  source_module: taxonomy_manager
+process:
+  taxonomy_manager_pager_tree_page_size:
+    -
+      plugin: default_value
+      default_value: 100
+  taxonomy_manager_disable_mouseover:
+    -
+      plugin: default_value
+      default_value: false
+destination:
+  plugin: config
+  config_name: taxonomy_manager.settings
+migration_dependencies:
+  required: {  }
+  optional: {  }

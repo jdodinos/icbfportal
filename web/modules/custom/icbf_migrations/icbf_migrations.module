@@ -1,0 +1,232 @@
+<?php
+
+use Drupal\migrate\Row;
+use Drupal\migrate\Plugin\MigrateSourceInterface;
+use Drupal\migrate\Plugin\MigrationInterface;
+
+/**
+* Implements hook_migrate_prepare_row().
+*/
+function icbf_migrations_migrate_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration) {
+  $source = $row->getSource();
+  $instances = $row->getSourceProperty('instances');
+  if (isset($source['entity_type']) && $source['entity_type'] == 'comment') {
+    $bundle = $row->getSourceProperty('bundle');
+    $bundle = substr($bundle, 0, 32);
+    $row->setSourceProperty('bundle', $bundle);
+  }
+
+  if (is_array($instances) && !empty($instances)) {
+    $instance_changed = FALSE;
+    foreach ($instances as $key => &$instance) {
+      if ($instance['entity_type'] == 'comment') {
+        $instance['bundle'] = substr($instance['bundle'], 0, 32);
+        $instance_changed = TRUE;
+      }
+    }
+    if ($instance_changed) {
+      $row->setSourceProperty('instances', $instances);
+    }
+  }
+
+  switch ($migration->id()) {
+    case 'upgrade_d7_field':
+    case 'upgrade_d7_field_instance':
+    case 'upgrade_d7_field_instance_widget_settings':
+      $type = $row->getSourceProperty('type');
+
+      if ($type == 'text_long' || $type == 'text_with_summary') {
+        $instances = $row->getSourceProperty('instances');
+        foreach ($instances as $key => $instance) {
+          if (isset($instance['data'])) {
+            $data = unserialize($instance['data']);
+            if (isset($data['settings']['text_processing'])) {
+              // Set all text processing to filtered text.
+              $data['settings']['text_processing'] = 1;
+
+              if (!empty($data['display'])) {
+                foreach ($data['display'] as &$display_value) {
+                  if ($display_value['type'] == 'text_glazed_builder') {
+                    $display_value['type'] = 'text_default';
+                    $display_value['module'] = 'text';
+                  }
+                }
+              }
+
+              $instance['data'] = serialize($data);
+              $instances[$key] = $instance;
+              $row->setSourceProperty('instances', $instances);
+            }
+          }
+        }
+      }
+      elseif ($type == 'sarnia') {
+        return FALSE;
+      }
+      break;
+
+    case 'upgrade_d7_comment_type':
+      if (!$row->getSourceProperty('field_name')) {
+        $row->setSourceProperty('field_name', 'comment_body');
+      }
+      break;
+
+    case 'upgrade_d7_view_modes':
+      $entity_type = $row->getSourceProperty('entity_type');
+      if ($entity_type == 'sarnia_sarnia') {
+        return FALSE;
+      }
+      elseif ($entity_type == 'bean') {
+        $row->setSourceProperty('entity_type', 'block_content');
+        $instances = $row->getSourceProperty('instances');
+        foreach ($instances as $key => $instance) {
+          $instance['entity_type'] = 'block_content';
+          $instances[$key] = $instance;
+          $row->setSourceProperty('instances', $instances);
+        }
+      }
+      break;
+
+    case 'upgrade_d7_filter_format':
+      if ($row->hasSourceProperty('filters')) {
+        $filters = $row->getSourceProperty('filters');
+
+        foreach ($filters as &$filter) {
+          if (isset($filter['module']) && $filter['module'] === 'ds_format') {
+            $filter = [
+              'format' => 'php',
+              'module' => 'php',
+              'name' => 'ds_code',
+              'weight' => '0',
+              'status' => '1',
+              'settings' => [],
+            ];
+          }
+        }
+        $row->setSourceProperty('filters', $filters);
+      }
+      break;
+
+    case 'upgrade_d7_node_complete_webform':
+      // Assign default title to Webform nodes.
+      if (!$row->hasSourceProperty('title') || empty($row->getSourceProperty('title'))) {
+        $row->setSourceProperty('title', 'Webform sin título ' . $row->getSourceProperty('nid'));
+      }
+      break;
+
+    case 'upgrade_d7_field_formatter_settings':
+      $entity_type = $row->getSourceProperty('entity_type');
+      $bundle = $row->getSourceProperty('bundle');
+      $field_name = $row->getSourceProperty('field_name');
+
+
+      // if (!is_array($source) || empty($source) || $entity_type == 'bean') {
+      //   return FALSE;
+      // }
+
+      $type = $row->getSourceProperty('type');
+      // if ($bundle == 'news' && $field_name == 'field_images') {
+      //   $instances = $row->getSourceProperty('instances');
+
+      //   foreach ($instances as $key => $instance) {
+      //     if (isset($instance['data'])) {
+      //       $data = unserialize($instance['data']);
+      //       if ($data['display']['default']['type'] == 'slick') {
+      //         $data['display']['default']['type'] == 'slick_image';
+      //         $data['display']['default']['module'] == 'slick';
+      //         $instance['data'] = serialize($data);
+      //         $instances[$key] = $instance;
+      //       }
+      //     }
+      //   }
+      //   $row->setSourceProperty('instances', $instances);
+      // }
+
+      if ($type == 'text_long' || $type == 'text_with_summary') {
+
+        $instances = $row->getSourceProperty('instances');
+        foreach ($instances as $key => $instance) {
+          if (isset($instance['data'])) {
+            $data = unserialize($instance['data']);
+            if (isset($data['settings']['text_processing'])) {
+              // Set all text processing to filtered text.
+              $data['settings']['text_processing'] = 1;
+
+              if (!empty($data['display'])) {
+                foreach ($data['display'] as &$display_value) {
+                  if ($display_value['type'] == 'text_glazed_builder') {
+                    $display_value['type'] = 'text_default';
+                    $display_value['module'] = 'text';
+                  }
+                }
+              }
+              $instance['data'] = serialize($data);
+              $instances[$key] = $instance;
+              $row->setSourceProperty('instances', $instances);
+
+            }
+          }
+        }
+      }
+      // elseif ($entity_type == 'bean') {}
+    //   if (!$row->hasSourceProperty('field_name')) {
+    //     $row->setSourceProperty('field_name', 'default_field');
+    //   }
+    // // Deserializar 'data' si está en formato serializado.
+    // $data = $row->getSourceProperty('data');
+    // if (is_string($data) && str_starts_with($data, 'a:')) {
+    //   $data = unserialize($data);
+    //   if ($data !== false) {
+    //     $row->setSourceProperty('data', $data);
+    //   }
+    // }
+
+    // // Deserializar 'field_definition["data"]'
+    // if ($row->hasSourceProperty('field_definition')) {
+    //   $field_definition = $row->getSourceProperty('field_definition');
+    //   if (isset($field_definition['data']) && is_string($field_definition['data']) && str_starts_with($field_definition['data'], 'a:')) {
+    //     $field_definition['data'] = unserialize($field_definition['data']);
+    //     $row->setSourceProperty('field_definition', $field_definition);
+    //   }
+    // }
+    //   if (!$row->hasSourceProperty('settings') || !is_array($row->getSourceProperty('settings'))) {
+    //     $row->setSourceProperty('settings', ['text_processing' => 0, 'user_register_form' => false]);
+    //   }
+    //   if (!$row->hasSourceProperty('formatter') || !is_array($row->getSourceProperty('formatter'))) {
+    //     $row->setSourceProperty('formatter', [
+    //       'label' => 'above',
+    //       'type' => 'text_default',
+    //       'settings' => ['field_formatter_class' => ''],
+    //       'module' => 'text',
+    //       'weight' => 11,
+    //     ]);
+    //   }
+      break;
+
+    case 'upgrade_d7_bean_block':
+      if (!$row->getSourceProperty('title')) {
+        $label = $row->getSourceProperty('label');
+        $row->setSourceProperty('title', $label);
+      }
+      break;
+
+    case 'upgrade_d7_views_migration':
+      // unset($source['display']);
+      // $row->setSourceProperty('display', []);
+      // $array = [4, 29];
+      // if (in_array($source['vid'], $array)) {
+      //   dump($source);
+      //   return FALSE;
+      // }
+      // else {
+      //   dump($source['vid']);
+      // }
+      break;
+
+    case 'upgrade_d7_search_api_server':
+      // dump($source);
+      dump(unserialize($source['options']));
+      // die();
+      break;
+  }
+}

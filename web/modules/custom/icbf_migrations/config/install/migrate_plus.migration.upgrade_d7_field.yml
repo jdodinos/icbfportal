@@ -1,0 +1,93 @@
+id: upgrade_d7_field
+class: Drupal\migrate_drupal\Plugin\migrate\FieldMigration
+field_plugin_method: alterFieldMigration
+label: 'Field configuration'
+migration_group: custom_migrations
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+source:
+  plugin: d7_field
+  data_rows:
+    - redirect_url: /user/login
+  ids:
+    id:
+      type: int
+process:
+  entity_type:
+    -
+      plugin: get
+      source: entity_type
+    -
+      plugin: static_map
+      map:
+        field_collection_item: paragraph
+        paragraphs_item: paragraph
+        bean: block_content
+      bypass: true
+  status:
+    -
+      plugin: get
+      source: constants/status
+  langcode:
+    -
+      plugin: get
+      source: constants/langcode
+  field_name:
+    -
+      plugin: get
+      source: field_name
+  type:
+    -
+      plugin: process_field
+      source: type
+      method: getFieldType
+      map:
+        d7_text:
+          d7_text: d7_text
+        taxonomy_term_reference:
+          taxonomy_term_reference: taxonomy_term_reference
+        file:
+          file: file
+        image:
+          image: image
+        date:
+          date: date
+        datetime:
+          datetime: datetime
+        youtube:
+          youtube: youtube
+        list:
+          list: list
+        entityreference:
+          entityreference: entityreference
+        field_url:
+          field_url: field_url
+        number_default:
+          number_default: number_default
+        email:
+          email: email
+        addressfield:
+          addressfield: addressfield
+        video:
+          video: video
+  cardinality:
+    -
+      plugin: get
+      source: cardinality
+  settings:
+    0:
+      plugin: d7_field_settings
+    field_collection:
+      plugin: field_collection_field_settings
+    geofield:
+      plugin: geofield_field_settings
+  third_party_settings/field_permissions:
+    -
+      plugin: d7_field_permission_settings
+destination:
+  plugin: 'entity:field_storage_config'
+migration_dependencies:
+  required: {  }
+  optional:
+    - upgrade_d7_field_collection_type

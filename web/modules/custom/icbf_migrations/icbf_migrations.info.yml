@@ -1,0 +1,7 @@
+name: 'ICBF Migrations'
+description: "Manejo de la migración Drupal 7 a 10."
+type: module
+core_version_requirement: ^10
+package: "ICBF Modules"
+dependencies:
+  - drupal:auto_entitylabel
