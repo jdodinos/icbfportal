@@ -1,0 +1,126 @@
+.localizationContainer {
+    .panels-flexible-region-localizationContainer-map-inside {
+        padding: 0;
+    }
+    .panels-flexible-region-localizationContainer-right-inside {
+        padding: 0;
+        height: 300px;
+        width: 100%;
+        background-image: url('../images/map_background.png');
+        background-size: cover;
+    }
+    .pane-taxonomy-term-field-localization {
+        position: relative;
+    }
+    .panels-flexible-row-localizationContainer-1 {
+        margin-bottom: 1em;
+    }
+    .imageAndTextContainer {
+        z-index: 999;
+        background: rgba(254, 254, 254, 0.94);
+        padding: 0.5em;
+        width: 400px;
+        z-index: 2;
+        max-height: 410px;
+        position: absolute;
+        top: 15px;
+        right: 135px;
+        box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.14), 0 2px 3px -1px rgba(0, 0, 0, 0.12);
+        .panel-separator {
+            margin: 0!important;
+        }
+        .pane-term-name {
+            h1 {
+                margin: 0.2em 0;
+                font-size: 2em;
+                text-align: center;
+                color: $icbf_green;
+            }
+        }
+        .file-image {
+            img {
+                height: 190px;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .pane-taxonomy-term-field-working-hours {
+            text-align: center;
+            .field-item {
+                text-align: center;
+                &:before {
+                    content: '\f073';
+                    font-family: FontAwesome;
+                    display: inline-block;
+                    margin-right: 0.4em;
+                    font-size: 17px;
+                }
+            }
+        }
+        .view-id-ubicaciones.view-display-id-block_2 {
+            text-align: center;
+        }
+    }
+    .panels-flexible-region-localizationContainer-columna_derecha-inside {
+        margin-top: 5em;
+        .pane-procedure {
+            &>.pane-title {
+                font-size: 1.5em;
+            }
+        }
+    }
+    .view-procedure.view-id-procedure {
+        border-bottom: 2px solid #ddd;
+        .procedureRelatedRow {
+            margin: 1.5em 0;
+            padding-top: 1em;
+            .views-field-title {
+                span {
+                    a {
+                        font-size: 1.1em;
+                        font-weight: bold;
+                    }
+                }
+            }
+            .views-field-field-list-image {
+                span {
+                    padding: 0;
+                }
+                blockquote {
+                    display: none;
+                }
+            }
+            .views-fieldset {
+                .views-field-name {
+                    span {
+                        a {
+                            font-size: 1.1em;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .pane-taxonomy-term-field-address,
+    .pane-taxonomy-term-field-phone,
+    .pane-taxonomy-term-field-place-type,
+    .pane-taxonomy-term-field-board,
+    .pane-taxonomy-term-field-region-scope,
+    .pane-taxonomy-term-field_contact_email,
+    .pane-taxonomy-term-field-field_web_site,
+    .pane-taxonomy-term-field-field_content,
+    .pane-taxonomy-term-description {
+        .pane-title {
+            font-size: 1.6em;
+            line-height: 1.8em;
+            color: $icbf_green;
+        }
+        .field-items {
+            .field-item,
+            p {
+                font-size: 1em;
+            }
+        }
+    }
+}

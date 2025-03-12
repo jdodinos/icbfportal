@@ -1,0 +1,179 @@
+@use  "../../abstracts/variables" as var;
+
+.footer{
+    padding-bottom: 0;
+    .footer-top{
+        background-color: var.$footer-top-bg;
+        display: block;
+        font-family: var.$font-montserrat;
+        padding: 2em 0;
+        width: 100vw;
+        position: relative;
+        margin-left: -50vw;
+        left: 50%;
+        &_content{
+            margin: auto;
+            padding: 12px;
+        }
+        &_atention{
+          
+            line-height: 1.56em;
+        }
+        &_title{
+            color: var.$footer-top-text ;
+            font-family: var.$font-montserrat;
+            font-size: 22.12px;
+            font-weight: 600;
+            line-height: 1.56em;
+        }
+        &_card{
+            .subtitle{
+                font-family: 'Montserrat', sans-serif;
+                font-size: 17.2px;
+                font-weight: 600;
+                line-height: normal;
+                color: var.$footer-top-text;
+                a{
+                    color: var.$color-primary-tag_a;
+                    text-decoration: none;
+                    font-weight: 600;
+                }
+            }
+            .text{
+                color: var.$footer-top-text;
+                font-family: var.$font-montserrat;
+                font-size: 14px;
+                line-height: 1.56em;
+            }
+            .line_icon {
+                width: auto;
+                height: 57px;
+            }
+        }
+        &_info{
+            padding: 16px 12px;
+            .subtitle{
+                font-family: 'Montserrat', sans-serif;
+                font-size: 22.2px;
+                font-weight: 600;
+                line-height: normal;
+                color: var.$footer-top-text;
+            }
+            .text{
+                color: var.$footer-top-text;
+                font-family: var.$font-montserrat;
+                font-size: 14px;
+                line-height: 1.56em;
+            }
+        }
+    }
+    
+    .footer-center{
+        background-color: var.$footer-center-bg;
+        color: var.$footer-center-text;
+        font-family: var.$font-montserrat;
+        font-size: 12px;
+        letter-spacing: 0;
+        opacity: 1;
+        padding: 2em 0 1em;
+        &_row{
+            justify-content: center;
+            margin: auto;
+            @media(max-width: 768px){
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        &_logos{
+            padding: 12px; 
+            .img-gov{
+                height: auto;
+                width: 150px;
+                padding-bottom: 15px;
+            }
+            @media(max-width: 768px){
+                order: 3;
+            }
+            
+        }
+        &_dates{
+            padding: 12px;
+            border-right: 1px solid var.$color-primary-white;
+            border-left: 1px solid var.$color-primary-white;
+            @media(max-width: 768px){
+                order: 1;
+                border-right: none;
+                border-left: none;
+                border-bottom: 1px solid var.$color-primary-white;
+            }
+        }
+        &_contact{
+            padding: 12px;
+            @media(max-width: 768px){
+                order: 2;
+                border-bottom: 1px solid var.$color-primary-white;
+            }
+        }
+        &_title {
+            font-family: var.$font-montserrat;
+            font-size: 15.6px;
+            font-weight: 700;
+            line-height: normal;
+            color: var.$footer-center-text;
+        }
+        &_text{
+            font-family: var.$font-montserrat;
+            font-size: 12px;
+            line-height: normal;
+            color: var.$footer-center-text;
+        }
+        &_item {
+            font-family: var.$font-montserrat;
+            font-size: 12px;
+            line-height: 1.56em;
+            color: var.$footer-center-text;
+            list-style: none;
+            margin-left: -2.6em;
+    
+            a{
+                color: var.$footer-center-text;
+                font-weight: 600;
+                &:hover{
+                    color: var.$footer-center-text_hover;
+                }   
+            }
+        }
+        &_link{
+            font-family: var.$font-montserrat;
+            font-size: 12px;
+            line-height: 1.56em;
+            color: var.$footer-center-text;
+            font-weight: 600;
+            a{
+                color: var.$footer-center-text;
+                font-weight: 600;
+                &:hover{
+                    color: var.$footer-center-text_hover;
+                }   
+            }
+        }
+    }
+    
+    .footer-bottom{
+        background-color: var.$footer-top-bg;
+        color: var.$footer-top-text;
+        &_row {
+            padding: 10px;
+        }
+        &_content{
+            margin: auto;
+        }
+        &_cpy{
+            font-family: var.$font-montserrat;
+            font-size: 14px;
+            line-height: 1.56em;
+            color: var.$footer-top-text;
+            padding: 5px
+        }
+    }
+}

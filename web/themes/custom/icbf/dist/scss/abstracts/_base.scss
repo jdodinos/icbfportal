@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+html, body {
+  overflow-x: hidden;
+}
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+.site-footer .block{
+  margin: 0;
+  border: 0;
+  border-color: unset;
+  padding: 0;
+}

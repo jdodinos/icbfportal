@@ -1,0 +1,9 @@
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+      dist/css/main.css: {}
+  js:
+    js/script.js: {}
+  dependencies:
+    - bootstrap5/bootstrap

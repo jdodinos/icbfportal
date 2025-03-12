@@ -1,0 +1,30 @@
+.view-id-transparencia.view-display-id-block,
+.view-id-transparencia.view-display-id-block_1,
+.view-id-transparencia.view-display-id-block_2,
+.view-id-transparencia.view-display-id-block_3,
+.view-id-transparencia.view-display-id-block_4,
+.view-id-accountability.view-display-id-block,
+.view-id-accountability.view-display-id-block_1,
+.view-id-accountability.view-display-id-block_2 {
+    .views-row {
+        padding: 10px;
+        margin: 10px 0;
+        background: #f9f9f9;
+        border-radius: 4px;
+        .views-field-title {
+            padding: 0.5em 0;
+            margin-bottom: 0.2em;
+            .field-content,
+            span,
+            a {
+                font-size: 1.1em;
+                font-weight: bold;
+            }
+        }
+        .views-field-field-date {
+            .views-label-field-date {
+                font-weight: bold;
+            }
+        }
+    }
+}

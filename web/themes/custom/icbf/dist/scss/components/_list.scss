@@ -1,0 +1,106 @@
+.m1,
+.m2,
+.m3,
+.m4 {
+    padding-left: 0;
+}
+ul.m1 li {
+    background: url(../../elements/Cajas/images/green-list-arrow.png) no-repeat;
+    list-style: none;
+    margin-bottom: 0.5em;
+    padding-left: 1.5em;
+}
+
+ul.m2 li {
+    background: url(../../elements/Cajas/images/blue-list-arrow.png) no-repeat;
+    list-style: none;
+    margin-bottom: 0.5em;
+    padding-left: 1.5em;
+}
+
+ul.m3 li {
+    background: url(../../elements/Cajas/images/orange-list-arrow.png) no-repeat;
+    list-style: none;
+    margin-bottom: 0.5em;
+    padding-left: 1.5em;
+}
+
+ul.m4 li {
+    background: url(../../elements/Cajas/images/red-list-arrow.png) no-repeat;
+    list-style: none;
+    margin-bottom: 0.5em;
+    padding-left: 1.5em;
+}
+
+ul.m5 li {
+    background: url(../../elements/Cajas/images/green-2-list-arrow.png) no-repeat;
+    list-style: none;
+    margin-bottom: 0.5em;
+    padding-left: 1.5em;
+}
+.regionalListRow {
+    padding: 10px 0;
+    margin: 10px 0;
+    background: #f9f9f9;
+    border-radius: 4px;
+    .views-field-name {
+        margin-top: 0.1em;
+        font-size: 2em;
+    }
+    .views-field-field-list-image-1 {
+        min-height: 168px;
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    .views-field-field-working-hours,
+    .views-field-field-phone,
+    .views-field-field-address,
+    .country {
+        padding: 0.2em;
+        margin-top: 0.3em;
+        &>span {
+            display: block;
+        }
+    }
+    .views-field-field-address {
+        &>span {
+            display: inline-block;
+            &>div {
+                display: inline-block;
+            }
+        }
+        .street-block {
+            display: inline-block;
+            &>div:after {
+                content: ",";
+                display: inline-block;
+                margin-right: 0.2em;
+            }
+        }
+        .addressfield-container-inline {
+            display: inline-block;
+            &:after {
+                content: ",";
+                display: inline-block;
+                height: 0;
+                clear: both;
+                visibility: visible;
+                margin-right: 0.2em;
+            }
+        }
+    }
+    .buttonsContainer {
+        margin-top: 1em;
+        .moreInfoButton {
+            padding: 0.5em;
+            background: $icbf_green;
+            border-radius: 4px;
+            color: white;
+            &:hover {
+                background: $icbf_green_light;
+            }
+        }
+    }
+}

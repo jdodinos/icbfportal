@@ -1,0 +1,41 @@
+
+.slide-background {
+    position: relative;
+    margin-bottom: 2em;
+    .slide-content.dark-color {
+        width: 100%;
+        color: #FFF;
+        a,
+        a:visited {
+            color: #FFF;
+        }
+    }
+    .slide-content.full-width {
+        width: 100%;
+    }
+    .slide-content {
+        position: absolute;
+        top: 1.2em;
+        left: 1.2em;
+        width: 50%;
+        color: #FFF;
+        a,
+        a:visited {
+            color: #FFF;
+        }
+        h1 {
+            font-size: 3.5em;
+        }
+        h2 {
+            font-size: 2.1em;
+        }
+    }
+}
+
+.slide-background.banner-box {
+    margin-left: 0;
+    margin-right: 0;
+    .slide-content {
+        width: auto;
+    }
+}

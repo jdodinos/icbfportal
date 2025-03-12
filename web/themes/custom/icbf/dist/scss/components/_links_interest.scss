@@ -1,0 +1,51 @@
+@use "../abstracts/variables" as var;
+
+.icbf-links_interest {
+  &_content {
+    margin: auto;
+    padding: 12px;
+  }
+  &_title {
+    color: var.$footer-top-text;
+    font-family: var.$font-montserrat;
+    font-size: 22.12px;
+    font-weight: 600;
+    line-height: 1.56em;
+    padding: 14px 0;
+  }
+  &_a {
+    color: var.$color-primary-tag_a;
+    text-decoration: none;
+    font-family: var.$font-montserrat;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.1;
+    &:hover {
+        color: #125e81;
+        text-decoration: underline;
+    }
+  }
+  &_item {
+    color: var.$color-primary-tag_a;
+    text-decoration: none;
+    font-family: var.$font-montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.1;
+    &:hover {
+        color: #125e81;
+        text-decoration: underline;
+    }
+  }
+  .icon-container {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: var.$color-primary-white;
+    border: 1px solid var.$color-primary-green;
+  }
+
+}

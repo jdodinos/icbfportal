@@ -1,0 +1,35 @@
+.view-sarnia-search {
+    &__content {
+        padding: 1em 0.5em;
+        border-bottom: 1px solid #d0d0d0;
+        
+        &-title {
+            margin: 10px 0;
+        }
+        
+        &-type-icon {
+            color: #82C63F;
+        }
+        
+        &-multimedia {
+            @include tabIcon('\f008', inherit);
+        }
+        
+        &-document {
+            @include tabIcon('\f016', inherit);
+        }
+        
+        &-section {
+            @include tabIcon('\f147', inherit);
+        }
+    }
+}
+
+.facetapi {
+    &__qyloazhijs5j1zwwj12kxk1xwdjzreqf,
+    &__pcsrkr3xy6jtpybl81idbyklzmogmdng {
+        ul {
+            padding-left: 10px;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "hn_michelob_ultra",
+  "version": "1.0.0",
+  "description": "Michelob Re Design",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --style=compressed dist/scss:dist/css",
+    "prefix": "npm run sass && postcss dist/css/**/*.css --use=autoprefixer --dir dist/css --map",
+    "build": "onchange \"dist/scss/**/*.scss\" -- npm run prefix"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "IE 10"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "onchange": "^7.1.0",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^9.1.0",
+    "sass": "^1.69.5"
+  }
+}

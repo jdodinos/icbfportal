@@ -1,0 +1,86 @@
+.view-id-adoptions_ubication.view-display-id-block,
+.view-id-adoptions_location_colombia.view-display-id-block {
+    .views-row {
+        padding: 10px;
+        margin: 10px 0;
+        background: #f9f9f9;
+        border-radius: 4px;
+        .views-field-title {
+            padding: 0.5em 0;
+            margin-bottom: 0.2em;
+            a {
+                font-size: 1.3em;
+                color: $icbf_green;
+            }
+        }
+    }
+}
+
+.view-id-adoptions_location_colombia.view-display-id-block {
+    .views-row {
+        .views-field-title {
+            font-size: 1.6em;
+            color: $icbf_green;
+        }
+    }
+}
+
+#sp-news-block_9 {
+    .cbp-wrapper {
+        .cbp-item {
+            .cbp-l-caption-body {
+                padding: 10px;
+                .field-title {
+                    a {
+                        font-size: 1.2em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.adoptionsContainer {
+    .panels-flexible-region-adoptionsContainer-title-inside {
+        .pane-node-title {
+            margin: 0.8em 0;
+            font-size: 1.6em;
+            color: $icbf_green;
+        }
+    }
+    .panels-flexible-row-adoptionsContainer-2 {
+        position: relative;
+        .panels-flexible-region-adoptionsContainer-mapa {
+            padding: 0;
+            height: 300px;
+            width: 100%;
+            background-image: url('../images/map_background.png');
+            background-size: cover;
+            .panels-flexible-region-adoptionsContainer-mapa-inside {
+                padding: 0;
+            }
+        }
+        .imageAndTextContainer {
+            z-index: 999;
+            background: rgba(254, 254, 254, 0.94);
+            padding: 0.5em;
+            width: 400px;
+            z-index: 2;
+            max-height: 410px;
+            position: absolute;
+            top: 24px;
+            right: 45px;
+            box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.14), 0 2px 3px -1px rgba(0, 0, 0, 0.12);
+            .panel-separator {
+                margin: 0!important;
+            }
+        }
+    }
+    .panels-flexible-region-adoptionsContainer-bot {
+        .pane-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: $icbf_green;
+        }
+    }
+}
