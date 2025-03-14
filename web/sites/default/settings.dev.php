@@ -1,7 +1,5 @@
 <?php
-/*
-$host = "ddev-d7icbf-db";
-$port = 3306;
+
 $driver = "mysql";
 
 $settings['migrate_source_connection'] = 'migrate';
@@ -10,14 +8,14 @@ $settings['migrate_file_public_path'] = '/var/www/html/web';
 $settings['migrate_file_private_path'] = '';
 
 $databases['migrate']['default'] = [
-  'database' => 'db',
-  'username' => 'db',
-  'password' => 'db',
-  'host' => $host,
+  'database' => getenv('DB_MIGRATE_NAME'),
+  'username' => getenv('DB_MIGRATE_USER'),
+  'password' => getenv('DB_MIGRATE_PASSWORD'),
+  'host' => getenv('DB_MIGRATE_HOST'),
   'driver' => $driver,
-  'port' => $port,
+  'port' => getenv('DB_MIGRATE_PORT'),
   'prefix' => '',
-];*/
+];
 
 $databases['default']['default'] = array (
   'database' => getenv('DATABASE_NAME'),
