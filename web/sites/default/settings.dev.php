@@ -1,5 +1,5 @@
 <?php
-
+/*
 $host = "ddev-d7icbf-db";
 $port = 3306;
 $driver = "mysql";
@@ -17,5 +17,18 @@ $databases['migrate']['default'] = [
   'driver' => $driver,
   'port' => $port,
   'prefix' => '',
-];
+];*/
+
+$databases['default']['default'] = array (
+  'database' => getenv('DATABASE_NAME'),
+  'username' => getenv('DATABASE_USER'),
+  'password' => getenv('DATABASE_PASSWORD'),
+  'prefix' => '',
+  'host' => getenv('DATABASE_HOST'),
+  'port' => getenv('DATABASE_PORT'),
+  'isolation_level' => 'READ COMMITTED',
+  'driver' => 'mysql',
+  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
+  'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
+);
 $settings['config_sync_directory'] = '../config/sync';
