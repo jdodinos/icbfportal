@@ -59,11 +59,12 @@
       {% block head %}
         {% if page.header %}
           {{ page.header }}
-        {% endif %}        
+        {% endif %}
       {% endblock %}
-    </header>    
-    
-    <div id="main-wrapper" class="layout-main-wrapper clearfix">
+    </header>
+
+    <div id="main-wrapper" class="main-container layout-main-wrapper clearfix">
+    {{ page.nav_main }}
       {% block content %}
         <div id="main" class="{{ container }}">
           {{ page.featured_top }}

@@ -107,6 +107,7 @@ process:
           image_plain: image
           image_nodelink: image
           image_imagelink: image
+          file_rendered: file_default
         datetime:
           date_default: datetime_default
           format_interval: datetime_time_ago

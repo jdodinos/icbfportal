@@ -88,22 +88,25 @@ function icbf_migrations_migrate_prepare_row(Row $row, MigrateSourceInterface $s
       break;
 
     case 'upgrade_d7_filter_format':
-      if ($row->hasSourceProperty('filters')) {
-        $filters = $row->getSourceProperty('filters');
+      if ($source['format'] == 'ds_code') {
+        $row->setSourceProperty('format', 'php');
 
-        foreach ($filters as &$filter) {
-          if (isset($filter['module']) && $filter['module'] === 'ds_format') {
-            $filter = [
-              'format' => 'php',
-              'module' => 'php',
-              'name' => 'ds_code',
-              'weight' => '0',
-              'status' => '1',
-              'settings' => [],
-            ];
+        if ($row->hasSourceProperty('filters')) {
+          $filters = $row->getSourceProperty('filters');
+          foreach ($filters as &$filter) {
+            if (isset($filter['module']) && $filter['module'] === 'ds_format') {
+              $filter = [
+                'format' => 'php',
+                'module' => 'php',
+                'name' => 'php_code',
+                'weight' => '0',
+                'status' => '1',
+                'settings' => [],
+              ];
+            }
           }
+          $row->setSourceProperty('filters', $filters);
         }
-        $row->setSourceProperty('filters', $filters);
       }
       break;
 
@@ -118,32 +121,27 @@ function icbf_migrations_migrate_prepare_row(Row $row, MigrateSourceInterface $s
       $entity_type = $row->getSourceProperty('entity_type');
       $bundle = $row->getSourceProperty('bundle');
       $field_name = $row->getSourceProperty('field_name');
-
-
-      // if (!is_array($source) || empty($source) || $entity_type == 'bean') {
-      //   return FALSE;
-      // }
-
       $type = $row->getSourceProperty('type');
-      // if ($bundle == 'news' && $field_name == 'field_images') {
-      //   $instances = $row->getSourceProperty('instances');
 
-      //   foreach ($instances as $key => $instance) {
-      //     if (isset($instance['data'])) {
-      //       $data = unserialize($instance['data']);
-      //       if ($data['display']['default']['type'] == 'slick') {
-      //         $data['display']['default']['type'] == 'slick_image';
-      //         $data['display']['default']['module'] == 'slick';
-      //         $instance['data'] = serialize($data);
-      //         $instances[$key] = $instance;
-      //       }
-      //     }
-      //   }
-      //   $row->setSourceProperty('instances', $instances);
-      // }
+      $formatter = $row->getSourceProperty('formatter');
+      $display = $row->getSourceProperty('display');
+      if ($formatter['type'] == 'text_glazed_builder') {
+        $formatter['type'] = 'text_default';
+        $formatter['module'] = 'text';
+        $row->setSourceProperty('formatter', $formatter);
+      }
+      elseif ($formatter['type'] == 'fivestar_formatter_default') {
+        $formatter['type'] = 'fivestar_stars';
+        $row->setSourceProperty('formatter', $formatter);
+      }
+
+      if (isset($display['type']) && $display['type'] == 'text_glazed_builder') {
+        $display['type'] = 'text_default';
+        $display['module'] = 'text';
+        $row->setSourceProperty('display', $display);
+      }
 
       if ($type == 'text_long' || $type == 'text_with_summary') {
-
         $instances = $row->getSourceProperty('instances');
         foreach ($instances as $key => $instance) {
           if (isset($instance['data'])) {
@@ -163,44 +161,10 @@ function icbf_migrations_migrate_prepare_row(Row $row, MigrateSourceInterface $s
               $instance['data'] = serialize($data);
               $instances[$key] = $instance;
               $row->setSourceProperty('instances', $instances);
-
             }
           }
         }
       }
-      // elseif ($entity_type == 'bean') {}
-    //   if (!$row->hasSourceProperty('field_name')) {
-    //     $row->setSourceProperty('field_name', 'default_field');
-    //   }
-    // // Deserializar 'data' si está en formato serializado.
-    // $data = $row->getSourceProperty('data');
-    // if (is_string($data) && str_starts_with($data, 'a:')) {
-    //   $data = unserialize($data);
-    //   if ($data !== false) {
-    //     $row->setSourceProperty('data', $data);
-    //   }
-    // }
-
-    // // Deserializar 'field_definition["data"]'
-    // if ($row->hasSourceProperty('field_definition')) {
-    //   $field_definition = $row->getSourceProperty('field_definition');
-    //   if (isset($field_definition['data']) && is_string($field_definition['data']) && str_starts_with($field_definition['data'], 'a:')) {
-    //     $field_definition['data'] = unserialize($field_definition['data']);
-    //     $row->setSourceProperty('field_definition', $field_definition);
-    //   }
-    // }
-    //   if (!$row->hasSourceProperty('settings') || !is_array($row->getSourceProperty('settings'))) {
-    //     $row->setSourceProperty('settings', ['text_processing' => 0, 'user_register_form' => false]);
-    //   }
-    //   if (!$row->hasSourceProperty('formatter') || !is_array($row->getSourceProperty('formatter'))) {
-    //     $row->setSourceProperty('formatter', [
-    //       'label' => 'above',
-    //       'type' => 'text_default',
-    //       'settings' => ['field_formatter_class' => ''],
-    //       'module' => 'text',
-    //       'weight' => 11,
-    //     ]);
-    //   }
       break;
 
     case 'upgrade_d7_bean_block':
@@ -210,23 +174,507 @@ function icbf_migrations_migrate_prepare_row(Row $row, MigrateSourceInterface $s
       }
       break;
 
-    case 'upgrade_d7_views_migration':
-      // unset($source['display']);
-      // $row->setSourceProperty('display', []);
-      // $array = [4, 29];
-      // if (in_array($source['vid'], $array)) {
-      //   dump($source);
-      //   return FALSE;
-      // }
-      // else {
-      //   dump($source['vid']);
-      // }
-      break;
+    case 'upgrade_d7_user_role':
+      $permissions = $row->getSourceProperty('permissions');
+      $permissions_to_remove = icbf_migrations_permissions_to_ignore();
+      foreach ($permissions as $key => $perm_name) {
+        if (in_array($perm_name, $permissions_to_remove)) {
+          unset($permissions[$key]);
+        }
+      }
 
-    case 'upgrade_d7_search_api_server':
-      // dump($source);
-      dump(unserialize($source['options']));
-      // die();
+      $row->setSourceProperty('permissions', $permissions);
       break;
   }
+}
+
+
+function icbf_migrations_permissions_to_ignore() {
+  $permissions = [
+    'access administration menu',
+    'access media browser',
+    'allow CKFinder file uploads',
+    'create files',
+    'delete own audio files', 'download own audio files', 'edit own audio files',
+    'delete own document files', 'download own document files', 'edit own document files',
+    'delete own image files', 'download own image files', 'edit own image files',
+    'delete own video files', 'download own video files', 'edit own video files',
+    'geocoder_service_all_handlers',
+    'geocoder_service_handler_bing',
+    'geocoder_service_handler_exif',
+    'geocoder_service_handler_google',
+    'geocoder_service_handler_gpx',
+    'geocoder_service_handler_json',
+    'geocoder_service_handler_kml',
+    'import media',
+    'view any footer bean',
+    'view revisions',
+    'access all views',
+    'access all webform results',
+    'access bean overview',
+    'access dashboard',
+    'access example charts',
+    'access flood unblock',
+    'access own webform results',
+    'access own webform submissions',
+    'access sarnia entity pages',
+    'access site map',
+    'access statistics',
+    'administer bean settings',
+    'administer bean types',
+    'administer beans',
+    'administer charts',
+    'administer ckeditor',
+    'administer css injection',
+    'administer ctools access ruleset',
+    'administer entity view modes',
+    'administer event status',
+    'administer facetapi pretty paths',
+    'administer features',
+    'administer field collections',
+    'administer fieldgroups',
+    'administer fields',
+    'administer file types',
+    'administer files',
+    'administer glazed builder configuration',
+    'administer isotope',
+    'administer layouts',
+    'administer mailsystem',
+    'administer md_megamenu',
+    'administer media browser',
+    'administer mini panels',
+    'administer module filter',
+    'administer page manager',
+    'administer panel-nodes',
+    'administer panelizer bean footer defaults',
+    'administer panelizer bean tokens defaults',
+    'administer panelizer comment comment_node_acta_contentiva defaults',
+    'administer panelizer comment comment_node_agencies_adoptions_colombian defaults',
+    'administer panelizer comment comment_node_announcement defaults',
+    'administer panelizer comment comment_node_article defaults',
+    'administer panelizer comment comment_node_articles_iin defaults',
+    'administer panelizer comment comment_node_articles_portal_web defaults',
+    'administer panelizer comment comment_node_articulo_nna defaults',
+    'administer panelizer comment comment_node_banner_home defaults',
+    'administer panelizer comment comment_node_blog defaults',
+    'administer panelizer comment comment_node_curriculum_vitae defaults',
+    'administer panelizer comment comment_node_document defaults',
+    'administer panelizer comment comment_node_documentos_contrataci_n defaults',
+    'administer panelizer comment comment_node_encargos defaults',
+    'administer panelizer comment comment_node_encuesta_web defaults',
+    'administer panelizer comment comment_node_enlaces_referencia defaults',
+    'administer panelizer comment comment_node_enlaces_transparencia defaults',
+    'administer panelizer comment comment_node_evaluaci_n defaults',
+    'administer panelizer comment comment_node_event_calendar defaults',
+    'administer panelizer comment comment_node_forum defaults',
+    'administer panelizer comment comment_node_glosario defaults',
+    'administer panelizer comment comment_node_hiring_process defaults',
+    'administer panelizer comment comment_node_info_contexto defaults',
+    'administer panelizer comment comment_node_infografia_observatorio defaults',
+    'administer panelizer comment comment_node_informe_denuncias_anticorrupcion defaults',
+    'administer panelizer comment comment_node_instituciones_adopciones defaults',
+    'administer panelizer comment comment_node_local_shopping defaults',
+    'administer panelizer comment comment_node_monitoreo_gesti_n defaults',
+    'administer panelizer comment comment_node_multimedia defaults',
+    'administer panelizer comment comment_node_news defaults',
+    'administer panelizer comment comment_node_notifications defaults',
+    'administer panelizer comment comment_node_page defaults',
+    'administer panelizer comment comment_node_panel defaults',
+    'administer panelizer comment comment_node_persona defaults',
+    'administer panelizer comment comment_node_petition_rights defaults',
+    'administer panelizer comment comment_node_photo_gallery2_event defaults',
+    'administer panelizer comment comment_node_poll defaults',
+    'administer panelizer comment comment_node_portfolio_tramite defaults',
+    'administer panelizer comment comment_node_process defaults',
+    'administer panelizer comment comment_node_rendicion_de_cuentas defaults',
+    'administer panelizer comment comment_node_sector_studies defaults',
+    'administer panelizer comment comment_node_sede_local defaults',
+    'administer panelizer comment comment_node_services_faq defaults',
+    'administer panelizer comment comment_node_summon defaults',
+    'administer panelizer comment comment_node_summon_sdg defaults',
+    'administer panelizer comment comment_node_tramites_vus defaults',
+    'administer panelizer comment comment_node_transparency defaults',
+    'administer panelizer comment comment_node_venta_de_bienes defaults',
+    'administer panelizer comment comment_node_webform defaults',
+    'administer panelizer file audio defaults administer panelizer file document defaults',
+    'administer panelizer file image defaults',
+    'administer panelizer file video defaults',
+    'administer panelizer node acta_contentiva context',
+    'administer panelizer node acta_contentiva overview',
+    'administer panelizer node acta_contentiva settings',
+    'administer panelizer node agencies_adoptions_colombian context',
+    'administer panelizer node agencies_adoptions_colombian overview',
+    'administer panelizer node agencies_adoptions_colombian settings',
+    'administer panelizer node announcement context',
+    'administer panelizer node announcement overview',
+    'administer panelizer node announcement settings',
+    'administer panelizer node article context',
+    'administer panelizer node article overview',
+    'administer panelizer node article settings',
+    'administer panelizer node articles_iin context',
+    'administer panelizer node articles_iin overview',
+    'administer panelizer node articles_iin settings',
+    'administer panelizer node articles_portal_web context',
+    'administer panelizer node articles_portal_web overview',
+    'administer panelizer node articles_portal_web settings',
+    'administer panelizer node articulo_mis_manos_te_ensenan context',
+    'administer panelizer node articulo_mis_manos_te_ensenan overview',
+    'administer panelizer node articulo_mis_manos_te_ensenan settings',
+    'administer panelizer node articulo_nna context',
+    'administer panelizer node articulo_nna overview',
+    'administer panelizer node articulo_nna settings',
+    'administer panelizer node blog context',
+    'administer panelizer node blog overview',
+    'administer panelizer node blog settings',
+    'administer panelizer node bot_n_home context',
+    'administer panelizer node bot_n_home overview',
+    'administer panelizer node bot_n_home settings',
+    'administer panelizer node document context',
+    'administer panelizer node document overview',
+    'administer panelizer node document settings',
+    'administer panelizer node document_microsite context',
+    'administer panelizer node document_microsite overview',
+    'administer panelizer node document_microsite settings',
+    'administer panelizer node documento_de_convocatoria context',
+    'administer panelizer node documento_de_convocatoria overview',
+    'administer panelizer node documento_de_convocatoria settings',
+    'administer panelizer node documento_multiple context',
+    'administer panelizer node documento_multiple overview',
+    'administer panelizer node documento_multiple settings',
+    'administer panelizer node documentos_de_normativa context',
+    'administer panelizer node documentos_de_normativa overview',
+    'administer panelizer node documentos_de_normativa settings',
+    'administer panelizer node enlaces_transparencia context',
+    'administer panelizer node enlaces_transparencia overview',
+    'administer panelizer node enlaces_transparencia settings',
+    'administer panelizer node evaluaci_n context',
+    'administer panelizer node evaluaci_n overview',
+    'administer panelizer node evaluaci_n settings',
+    'administer panelizer node event_calendar context',
+    'administer panelizer node event_calendar overview',
+    'administer panelizer node event_calendar settings',
+    'administer panelizer node hiring_process context',
+    'administer panelizer node hiring_process overview',
+    'administer panelizer node hiring_process settings',
+    'administer panelizer node info_contexto context',
+    'administer panelizer node info_contexto overview',
+    'administer panelizer node info_contexto settings',
+    'administer panelizer node infografia_observatorio context',
+    'administer panelizer node infografia_observatorio overview',
+    'administer panelizer node infografia_observatorio settings',
+    'administer panelizer node informe_denuncias_anticorrupcion context',
+    'administer panelizer node informe_denuncias_anticorrupcion overview',
+    'administer panelizer node informe_denuncias_anticorrupcion settings',
+    'administer panelizer node instituciones_adopciones context',
+    'administer panelizer node instituciones_adopciones overview',
+    'administer panelizer node instituciones_adopciones settings',
+    'administer panelizer node local_shopping context',
+    'administer panelizer node local_shopping overview',
+    'administer panelizer node local_shopping settings',
+    'administer panelizer node monitoreo_gesti_n context',
+    'administer panelizer node monitoreo_gesti_n overview',
+    'administer panelizer node monitoreo_gesti_n settings',
+    'administer panelizer node multimedia context',
+    'administer panelizer node multimedia overview',
+    'administer panelizer node multimedia settings',
+    'administer panelizer node news context',
+    'administer panelizer node news overview',
+    'administer panelizer node news settings',
+    'administer panelizer node notifications context',
+    'administer panelizer node notifications overview',
+    'administer panelizer node notifications settings',
+    'administer panelizer node page context',
+    'administer panelizer node page',
+    'administer panelizer node page overview',
+    'administer panelizer node page settings',
+    'administer panelizer node petition_rights context',
+    'administer panelizer node petition_rights overview',
+    'administer panelizer node petition_rights settings',
+    'administer panelizer node photo_gallery2_event context',
+    'administer panelizer node photo_gallery2_event overview',
+    'administer panelizer node photo_gallery2_event settings',
+    'administer panelizer node process context',
+    'administer panelizer node process overview',
+    'administer panelizer node process settings',
+    'administer panelizer node sector_studies context',
+    'administer panelizer node sector_studies overview',
+    'administer panelizer node sector_studies settings',
+    'administer panelizer node sede_local context',
+    'administer panelizer node sede_local overview',
+    'administer panelizer node sede_local settings',
+    'administer panelizer node summon context',
+    'administer panelizer node summon overview',
+    'administer panelizer node summon settings',
+    'administer panelizer node summon_sdg context',
+    'administer panelizer node summon_sdg overview',
+    'administer panelizer node summon_sdg settings',
+    'administer panelizer node transparency context',
+    'administer panelizer node transparency overview',
+    'administer panelizer node transparency settings',
+    'administer panelizer taxonomy_term congreso_xxii context',
+    'administer panelizer taxonomy_term congreso_xxii overview',
+    'administer panelizer taxonomy_term congreso_xxii settings',
+    'administer panelizer taxonomy_term eventos context',
+    'administer panelizer taxonomy_term eventos overview',
+    'administer panelizer taxonomy_term eventos settings',
+    'administer panelizer taxonomy_term eventos_agenda context',
+    'administer panelizer taxonomy_term eventos_agenda overview',
+    'administer panelizer taxonomy_term eventos_agenda settings',
+    'administer panelizer taxonomy_term hiring_process_type context',
+    'administer panelizer taxonomy_term hiring_process_type overview',
+    'administer panelizer taxonomy_term hiring_process_type settings',
+    'administer panelizer taxonomy_term locations context',
+    'administer panelizer taxonomy_term locations overview',
+    'administer panelizer taxonomy_term locations settings',
+    'administer panelizer taxonomy_term menu_observatory context',
+    'administer panelizer taxonomy_term menu_observatory overview',
+    'administer panelizer taxonomy_term menu_observatory settings',
+    'administer panelizer taxonomy_term mis_manos_te_ensenan context',
+    'administer panelizer taxonomy_term mis_manos_te_ensenan overview',
+    'administer panelizer taxonomy_term mis_manos_te_ensenan settings',
+    'administer panelizer taxonomy_term ninos_ninas_y_adolescentes context',
+    'administer panelizer taxonomy_term ninos_ninas_y_adolescentes overview',
+    'administer panelizer taxonomy_term ninos_ninas_y_adolescentes settings',
+    'administer panelizer taxonomy_term para_papas context',
+    'administer panelizer taxonomy_term para_papas overview',
+    'administer panelizer taxonomy_term para_papas settings',
+    'administer panelizer taxonomy_term procedure context',
+    'administer panelizer taxonomy_term procedure overview',
+    'administer panelizer taxonomy_term procedure settings',
+    'administer panelizer taxonomy_term programa_adopciones context',
+    'administer panelizer taxonomy_term programa_adopciones overview',
+    'administer panelizer taxonomy_term programa_adopciones settings',
+    'administer panelizer taxonomy_term secctions context',
+    'administer panelizer taxonomy_term secctions overview',
+    'administer panelizer taxonomy_term secctions settings',
+    'administer panelizer taxonomy_term sige context',
+    'administer panelizer taxonomy_term sige overview',
+    'administer panelizer taxonomy_term sige settings',
+    'administer panelizer taxonomy_term tags_tr_mites context',
+    'administer panelizer taxonomy_term tags_tr_mites overview',
+    'administer panelizer taxonomy_term tags_tr_mites settings',
+    'administer panels display styles',
+    'administer panels pane styles',
+    'administer panels region styles',
+    'administer respondjs',
+    'administer sarnia entity types',
+    'administer varnish',
+    'administer video presets',
+    'block IP addresses',
+    'bypass access in place editing',
+    'bypass conversion video',
+    'bypass file access',
+    'change layouts in place editing',
+    'clone node',
+    'clone own nodes',
+    'configure_webform_charts',
+    'context ajax block access',
+    'control node view',
+    'convert on submission',
+    'create any footer bean',
+    'create any js bean',
+    'create any tokens bean',
+    'create glosary content',
+    'create mini panels',
+    'customize ckeditor',
+    'delete all webform submissions',
+    'delete any audio files',
+    'delete any document files',
+    'delete any footer bean',
+    'delete any image files',
+    'delete any js bean',
+    'delete any tokens bean',
+    'delete any video files',
+    'delete md_megamenu',
+    'delete own document files',
+    'delete own glosary content',
+    'delete own webform submissions',
+    'delete revisions',
+    'delete terms in 1', 'delete terms in 10', 'delete terms in 12', 'delete terms in 13',
+    'delete terms in 14', 'delete terms in 15', 'delete terms in 16', 'delete terms in 17',
+    'delete terms in 18', 'delete terms in 19', 'delete terms in 21', 'delete terms in 22',
+    'delete terms in 23', 'delete terms in 24', 'delete terms in 25', 'delete terms in 26',
+    'delete terms in 27', 'delete terms in 28', 'delete terms in 29', 'delete terms in 3',
+    'delete terms in 30', 'delete terms in 31', 'delete terms in 32', 'delete terms in 33',
+    'delete terms in 34', 'delete terms in 35', 'delete terms in 36', 'delete terms in 37',
+    'delete terms in 38', 'delete terms in 39', 'delete terms in 40', 'delete terms in 41',
+    'delete terms in 42', 'delete terms in 44', 'delete terms in 45', 'delete terms in 46',
+    'delete terms in 5', 'delete terms in 6', 'delete terms in 7', 'delete terms in 8', 'delete terms in 9',
+    'diff view changes',
+    'display drupal links',
+    'download any audio files',
+    'download any document files',
+    'download any image files',
+    'download any video files',
+    'edit all webform submissions',
+    'edit any audio files',
+    'edit any document files',
+    'edit any footer bean',
+    'edit any image files',
+    'edit any js bean',
+    'edit any tokens bean',
+    'edit any video files',
+    'edit bean view mode',
+    'edit meta tags',
+    'edit own glosary content',
+    'edit own webform submissions',
+    'edit revisions',
+    'edit terms in 1', 'edit terms in 10', 'edit terms in 12', 'edit terms in 13',
+    'edit terms in 14', 'edit terms in 15', 'edit terms in 16', 'edit terms in 17',
+    'edit terms in 18', 'edit terms in 19', 'edit terms in 21', 'edit terms in 22',
+    'edit terms in 23', 'edit terms in 24', 'edit terms in 25', 'edit terms in 26',
+    'edit terms in 27', 'edit terms in 28', 'edit terms in 29', 'edit terms in 3',
+    'edit terms in 30', 'edit terms in 31', 'edit terms in 32', 'edit terms in 33',
+    'edit terms in 34', 'edit terms in 35', 'edit terms in 36', 'edit terms in 37',
+    'edit terms in 38', 'edit terms in 39', 'edit terms in 40', 'edit terms in 41',
+    'edit terms in 42', 'edit terms in 44', 'edit terms in 45', 'edit terms in 46',
+    'edit terms in 5', 'edit terms in 6', 'edit terms in 7', 'edit terms in 8', 'edit terms in 9',
+    'edit via glazed builder',
+    'edit webform components',
+    'extended file field delete any file contents',
+    'extended file field delete own file contents',
+    'flush caches',
+    'generate features',
+    'generate pdf using mpdf',
+    'geocoder_service_handler_latlon',
+    'geocoder_service_handler_mapquest_nominatim',
+    'geocoder_service_handler_openstreetmap_nominatim',
+    'geocoder_service_handler_wkt',
+    'geocoder_service_handler_yahoo',
+    'geocoder_service_handler_yandex',
+    'inspect all votes',
+    'manage features',
+    'opt-in or out of tracking',
+    'override player dimensions',
+    'publish any forum content',
+    'publish editable forum content',
+    'publish own forum content',
+    'publish revisions',
+    're convert video',
+    'rename features',
+    'revert revisions',
+    'translate admin strings',
+    'translate user-defined strings',
+    'unpublish any forum content',
+    'unpublish current revision',
+    'unpublish editable forum content',
+    'unpublish own forum content',
+    'use PHP for label patterns',
+    'use PHP for tracking visibility',
+    'use ctools import',
+    'use default thumb',
+    'use page manager',
+    'use panels in place editing',
+    'use search_api_autocomplete for search_api_page_global_search',
+    'use search_api_autocomplete for search_api_views_faqs_icbf',
+    'use search_api_autocomplete for search_api_views_hiring_process',
+    'use search_api_autocomplete for search_api_views_post_familias',
+    'use search_api_autocomplete for search_api_views_tramites',
+    'use search_api_autocomplete',
+    'for search_api_views_ubicaciones',
+    'use search_api_sorts',
+    'use xmlsitemap',
+    'use_search_api_live_results',
+    'view any js bean',
+    'view any tokens bean',
+    'view bean page',
+    'view bean revisions',
+    'view files',
+    'view own files',
+    'view own private files',
+    'view private files',
+    'view revision status messages',
+    'view_webform_charts ',
+    'vote on polls',
+    'use search_api_autocomplete for search_api_views_ubicaciones',
+    'access backup and migrate',
+    'access backup files',
+    'access draggableviews',
+    'access fieldable panels panes master list',
+    'access memcache statistics',
+    'access noticias search_api_page',
+    'access overlay',
+    'access printer-friendly version',
+    'access printfriendly',
+    'access search_api_page',
+    'access slab cachedump',
+    'add content to books',
+    'administer backup and migrate',
+    'administer book outlines',
+    'administer breakpoints',
+    'administer event colors',
+    'administer fb_autopost',
+    'administer fieldable panels panes',
+    'administer geofield_gmap',
+    'administer geofield_map configuration',
+    'administer optimizedb settings',
+    'administer page titles',
+    'administer panelizer comment comment_node_carousel defaults',
+    'administer panelizer comment comment_node_glosary defaults',
+    'administer panelizer file audio defaults',
+    'administer panelizer file document defaults',
+    'administer panelizer node carousel defaults',
+    'administer panelizer node file defaults',
+    'administer panelizer node forum context',
+    'administer panelizer node forum overview',
+    'administer panelizer node forum settings',
+    'administer panelizer node glosary defaults',
+    'administer panelizer taxonomy_term category_content content',
+    'administer panelizer taxonomy_term category_content context',
+    'administer panelizer taxonomy_term category_content defaults',
+    'administer panelizer taxonomy_term category_content layout',
+    'administer panelizer taxonomy_term category_content overview',
+    'administer panelizer taxonomy_term category_content settings',
+    'administer panelizer taxonomy_term historias_de_usuario defaults',
+    'administer panelizer taxonomy_term petition_rights_types defaults',
+    'administer pictures',
+    'administer printfriendly',
+    'administer smart_ip',
+    'audit_log_db_view_admin',
+    'audit_log_filter_admin',
+    'create carousel content',
+    'create fieldable fieldable_panels_pane',
+    'create file content',
+    'create new books',
+    'delete any carousel content',
+    'delete any file content',
+    'delete any glosary content',
+    'delete backup files',
+    'delete fieldable fieldable_panels_pane',
+    'delete own carousel content',
+    'delete own file content',
+    'delete terms in 11', 'delete terms in 2', 'delete terms in 4',
+    'edit terms in 11', 'edit terms in 2', 'edit terms in 4',
+    'edit any carousel content',
+    'edit any file content',
+    'edit any glosary content',
+    'edit fieldable fieldable_panels_pane',
+    'edit own carousel content',
+    'edit own file content',
+    'perform backup',
+    'restore from backup',
+    'set facebook permissions',
+    'set page title',
+    'use text format buscarphp', 'use text format busv2f', 'use text format encontradosavanz',
+    'use text format perfil_php_2', 'use text format php', 'use text format php_buscador',
+    'use text format php_buscadoravanzado', 'use text format php_buscadorv2',
+    'use text format php_buscar', 'use text format php_perfil_buscador',
+    'view a11y simulations',
+    'view any unpublished carousel content',
+    'view_webform_charts',
+    'create archivo content',
+    'create location content',
+    'delete own archivo content',
+    'delete own location content',
+    'edit own archivo content',
+    'edit own location content',
+    'publish any webform content',
+    'publish editable webform content',
+    'publish own webform content',
+    'unpublish any webform content',
+    'unpublish editable webform content',
+    'unpublish own webform content'
+  ];
+
+  return $permissions;
 }
