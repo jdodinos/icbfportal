@@ -1,0 +1,92 @@
+@use "../../abstracts/variables" as var;
+#block-icbf-page-title {
+  width: 70%;
+  margin: auto;
+  h1 {
+    font-family: var.$font-montserrat;
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+    font-size: 23.8px;
+    color: var.$color-text-gray;
+  }
+}
+
+#block-icbf-content {
+  width: 70%;
+  margin: auto;
+}
+.view-taxonomy-term {
+  .field.field--name-title {
+    font-size: 19.6px;
+    padding-bottom: 9px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: var.$Asap;
+  }
+  .field--label-above {
+    display: none;
+  }
+  .field--label-inline.clearfix {
+    display: none;
+  }
+  .feed-icons {
+    display: none;
+  }
+  .links {
+    li {
+      padding: 0;
+      font-size: 14px;
+    }
+  }
+  footer {
+    padding: 0;
+    &.node__meta {
+      font-family: var.$Asap;
+      font-weight: 400;
+      color: #777;
+      a {
+        color: #777;
+      }
+    }
+  }
+}
+
+.node--view-mode-full {
+  footer {
+    padding: 0;
+    font-family: "Asap";
+    font-weight: 400;
+    color: #777;
+    font-size: 14px;
+  }
+  .field__label {
+    color: var.$color-text-gray;
+    font-size: 14px;
+    font-family: "Asap";
+  }
+  .field__item {
+    font-size: 14px;
+    font-family: "Asap";
+    color: var.$color-text-gray;
+    p{
+        margin: 0;
+    }
+  }
+
+  [class*="field--name-field-link-"] {
+    margin: 0 1em;
+    padding: 0.3em 0 0.3em;
+  }
+
+  [class*="field--name-field-title-link-"] {
+    margin: 0 1em;
+    padding: 0.3em 0 0.3em;
+  }
+  
+  .field--name-field-enlaces-referidos {
+    border-bottom: 1px solid #d3d7d9;
+    margin-bottom: 1em;
+    padding-bottom: 0.5rem;
+}
+}

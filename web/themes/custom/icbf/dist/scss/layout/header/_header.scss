@@ -1,0 +1,149 @@
+@use "../../abstracts/variables" as var;
+
+
+.navbar-default {
+    background-color: var.$background-color !important;
+    border: none;
+}
+
+.navbar-header {
+    float: none;
+}
+
+.navbar.container {
+    max-width: inherit;
+}
+
+.navbar-collapse {
+    padding: 1em 0;
+}
+
+.header-social {
+    margin: auto;
+    ul {
+        margin-bottom: 0;
+        padding-left: 0;
+        li {
+            display: inline-block;
+            padding: 0;
+            .fa {
+                display: inline-block;
+                width: 32px;
+                height: 32px;
+                border-radius: 100%;
+                text-align: center;
+                line-height: 32px;
+                color: #fff;
+                font-size: 1.3em;
+                margin: 0 7px 0 0;
+            }
+        }
+    }
+    span {
+        display: none;
+    }
+}
+
+.navbar .logo {
+    width: 70%;
+}
+
+#top_menu {
+    font-size: 0.9em;
+    background: #74bc4d;
+    height: 49px;
+    padding: 8px 0;
+    ul.menu li {
+        float: left;
+        a {
+            padding: 5px 8px;
+            color: #fff;
+            &:hover {
+                color: none;
+            }
+        }
+    }
+    .btn-primary {
+        background: #FFF;
+        color: var.$icbf_green;
+        border: none;
+    }
+}
+
+#block-menu-menu-top-menu {
+    font-size: 0.9em;
+}
+
+#navbar-collapse {
+    background: var.$background-color !important;
+    padding-top: 0;
+}
+
+.navbar {
+    position: relative;
+    min-height: none;
+    margin-bottom: 15px;
+    border: none;
+}
+
+#block-menu-menu-menu-superior .nav > li > a:hover,
+#block-menu-menu-menu-superior.nav > li > a:focus {
+    background: none;
+}
+
+#accesibility {
+    float: left;
+    img {
+        width: 33px;
+    }
+}
+
+#block-views-exp-sarnia-search-page {
+    .views-exposed-widgets {
+        padding: 0;
+        margin: 0;
+    }
+    .views-widget-filter-search_api_views_fulltext {
+        width: 100%;
+        padding: 0;
+        input {
+            height: 33px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+            box-shadow: none;
+            border: none;
+        }
+    }
+    .btn {
+        padding: 0;
+    }
+    input,
+    select {
+        background: #FFF;
+    }
+    form {
+        width: 76%;
+        float: left;
+        margin-right: 26px;
+    }
+    .views-submit-button {
+        padding: 0;
+        height: 33px;
+        .form-submit {
+            margin-top: 0;
+            border: none;
+            height: 100%;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+            width: 100%;
+        }
+    }
+}
+
+#block-icbf-module-citizen-situation {
+    margin-left: 0.5em;
+}

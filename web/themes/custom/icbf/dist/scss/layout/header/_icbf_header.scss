@@ -1,0 +1,8 @@
+@use "../../abstracts/variables" as var;
+
+.he_govheader {
+    background: var.$color-secundary-blue;
+    font-family: var.$font-montserrat;
+    letter-spacing: 0;
+    opacity: 1;
+}

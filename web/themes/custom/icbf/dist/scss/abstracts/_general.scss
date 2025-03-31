@@ -1,48 +1,39 @@
-@use  "variables" as var;
-.btn-primary {
-    background-color: var.$color-primary-blue;
-    border-radius: 30px;
-    border: 2px solid var.$color-primary-blue;
-    color:var.$color-primary-white ;
-    display: inline-block;
-    font-family:  var.$font-montserrat;
-    font-size: 12px;
-    font-weight: 600;
-    margin: .2em .3em .4em 0;
-    padding: .2em .83em;
-    text-decoration: none;
-    transition: all .3slinear;
-    -webkit-transition: all .3slinear;
-    -moz-transition: all .3s linear;
-    -o-transition: all .3s linear;
-    &:hover {
-        background-color: var.$color-primary-white;
-        color: var.$color-primary-blue;
-        text-decoration: underline;
-    }
-}
+@use "variables" as var;
 
-.btn-secondary {
+a {
+  color: var.$link_color;
+  &:link {
+    color: var.$link_color;
+    text-decoration: none !important;
+  }
+  &.active {
+    color: var.$link_visited_color;
+    text-decoration: underline !important;
+  }
+  &:hover {
+    color: var.$link_visited_color;
+    text-decoration: underline !important;
+  }
+  &.btn-1519-2 {
     background-color: var.$color-primary-white;
     border-radius: 30px;
     border: 2px solid var.$color-primary-blue;
     color: var.$color-primary-blue;
     display: inline-block;
-    font-family:  var.$font-montserrat;
-    font-size: 12px;
-    font-weight: 600;
-    margin: .2em .3em .4em 0;
-    padding: .2em .83em;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12.88px;
+    margin: 0.2em 0.3em 0.4em 0;
+    padding: 0.2em 0.83em;
     text-decoration: none;
-    transition: all .3slinear;
-    -webkit-transition: all .3slinear;
-    -moz-transition: all .3s linear;
-    -o-transition: all .3s linear;
-    text-decoration: none;
-    &:hover, &:focus , &:active {
-        background-color: var.$color-primary-blue;
-        color: var.$color-primary-white;
-        border: 2px solid var.$color-primary-blue;
-        text-decoration: underline;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    &:hover {
+      background-color: var.$color-primary-blue;
+      border: 2px solid var.$color-primary-blue;
+      color: var.$color-primary-white;
+      text-decoration: underline;
     }
+  }
 }

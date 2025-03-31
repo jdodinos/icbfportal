@@ -122,9 +122,9 @@ function icbf_migrations_migrate_prepare_row(Row $row, MigrateSourceInterface $s
       $bundle = $row->getSourceProperty('bundle');
       $field_name = $row->getSourceProperty('field_name');
       $type = $row->getSourceProperty('type');
-
       $formatter = $row->getSourceProperty('formatter');
       $display = $row->getSourceProperty('display');
+
       if ($formatter['type'] == 'text_glazed_builder') {
         $formatter['type'] = 'text_default';
         $formatter['module'] = 'text';
@@ -132,6 +132,18 @@ function icbf_migrations_migrate_prepare_row(Row $row, MigrateSourceInterface $s
       }
       elseif ($formatter['type'] == 'fivestar_formatter_default') {
         $formatter['type'] = 'fivestar_stars';
+        $row->setSourceProperty('formatter', $formatter);
+      }
+      elseif ($formatter['type'] == 'slick') {
+        $formatter['type'] = 'slick_image';
+        $row->setSourceProperty('formatter', $formatter);
+      }
+      elseif ($formatter['type'] == 'extended_file_field' || $formatter['type'] == 'file_rendered') {
+        $formatter['type'] = 'file_default';
+        $row->setSourceProperty('formatter', $formatter);
+      }
+      elseif ($formatter['type'] == 'field_collection_fields') {
+        $formatter['type'] = 'paragraph_summary';
         $row->setSourceProperty('formatter', $formatter);
       }
 
@@ -165,6 +177,22 @@ function icbf_migrations_migrate_prepare_row(Row $row, MigrateSourceInterface $s
           }
         }
       }
+
+      if ($bundle == 'event' || $bundle == 'drag_drop_page' || $bundle == 'portfolio' || $bundle == 'cb_drag_drop_page') {
+        return false;
+      }
+
+      if ($entity_type == 'bean') {
+        $row->setSourceProperty('entity_type', 'block_content');
+        $instances = $row->getSourceProperty('instances');
+        foreach ($instances as $key => &$instance) {
+          if ($instance['entity_type'] == 'bean') {
+            $instance['entity_type'] = 'block_content';
+          }
+        }
+        $row->setSourceProperty('instances', $instances);
+
+      }
       break;
 
     case 'upgrade_d7_bean_block':
@@ -177,13 +205,21 @@ function icbf_migrations_migrate_prepare_row(Row $row, MigrateSourceInterface $s
     case 'upgrade_d7_user_role':
       $permissions = $row->getSourceProperty('permissions');
       $permissions_to_remove = icbf_migrations_permissions_to_ignore();
-      foreach ($permissions as $key => $perm_name) {
-        if (in_array($perm_name, $permissions_to_remove)) {
-          unset($permissions[$key]);
+      if (is_array($permissions) && !empty($permissions)) {
+        foreach ($permissions as $key => $perm_name) {
+          if (in_array($perm_name, $permissions_to_remove)) {
+            unset($permissions[$key]);
+          }
         }
-      }
 
-      $row->setSourceProperty('permissions', $permissions);
+        $row->setSourceProperty('permissions', $permissions);
+      }
+      break;
+
+    case 'upgrade_d7_search404_settings':
+      $search_path = $row->getSourceProperty('search404_custom_search_path');
+      $search_path = str_replace('https://www.icbf.gov.co/', '', $search_path);
+      $row->setSourceProperty('search404_custom_search_path', $search_path);
       break;
   }
 }

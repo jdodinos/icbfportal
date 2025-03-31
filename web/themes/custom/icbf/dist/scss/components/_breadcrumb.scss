@@ -1,0 +1,151 @@
+@use "../abstracts/variables" as var;
+
+.breadcrumb {
+  background-color: transparent;
+  &-container {
+    display: flex;
+    gap: 1rem;
+    margin: auto;
+    width: 70%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  &-title{
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: var.$Asap;
+  }
+}
+
+
+
+a.tooltipv {
+  text-decoration: underline;
+  transition: all 0.2s linear;
+  padding: 0px;
+  margin: auto;
+  span {
+    display: none;
+    margin: -145px 4px 4px 2px;
+    padding: 15px;
+    width: auto;
+    opacity: 0.9;
+    word-wrap: break-word;
+  }
+  img {
+    height: auto;
+    margin-top: -41px;
+    margin-left: 4px;
+    padding: 0;
+    width: 62px;
+    position: relative;
+  }
+}
+
+a.tooltipid span {
+  display: none;
+  margin: -10px 1px 1px 1px;
+  padding: 14px;
+  width: 25%;
+  opacity: 1;
+  word-wrap: break-word;
+}
+.div-cs {
+  font-size: 0.9em;
+  font-weight: normal;
+  line-height: 1em;
+}
+
+a.bar-cs {
+  padding: 0;
+  margin: auto;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+}
+
+a.bar-cs:hover {
+  padding: 0;
+  margin: auto;
+  text-decoration: underline;
+}
+
+a.bar-cs h3 {
+  text-decoration: none;
+  color: #74bc4d;
+}
+
+a.bar-cs h3:hover {
+  text-decoration: underline !important;
+  color: #1996d0;
+}
+
+a.bar-cs h2 {
+  text-decoration: none;
+  color: #74bc4d;
+}
+
+a.bar-cs h2:hover {
+  text-decoration: underline !important;
+  color: #1996d0 !important;
+}
+
+.img-barcs {
+  width: 25%;
+  min-width: 70px;
+  height: auto;
+  padding: 0;
+  margin: auto;
+}
+
+a.tooltipmd {
+  text-decoration: none;
+  margin: 0;
+  cursor: help;
+  transition: all 0.2s linear;
+}
+a.tooltipmd:hover {
+  text-decoration: underline;
+  margin: 0;
+  display: inline-block;
+}
+a.tooltipmd span {
+  display: none;
+  padding: 0;
+  margin: -5px 10px 5px -180px;
+  min-width: 45em;
+  width: 100%;
+  word-wrap: break-word;
+  z-index: 1;
+}
+a.tooltipmd:hover span {
+  display: inline;
+  position: absolute;
+  padding: 10px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  background-color: #333;
+  color: #fff;
+  font-size: 0.92em;
+  text-align: left;
+  z-index: 1;
+}
+a.tooltipmd h3 {
+  text-decoration: none;
+  color: #74bc4d;
+}
+a.tooltipmd h3:hover {
+  text-decoration: underline;
+}
+.tooltip-inner {
+  min-width: 100px;
+  max-width: 100%;
+}
+.region-top-bar select {
+  background: #fff;
+}

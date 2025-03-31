@@ -18,21 +18,29 @@ process:
         - field_name
         - entity_type
     -
+      plugin: default_value
+      default_value: 'block_content'
+    -
       plugin: extract
       index:
         - 0
     -
       plugin: skip_on_empty
       method: row
+
   entity_type:
     -
       plugin: get
       source: entity_type
     -
+      plugin: default_value
+      default_value: 'undefined'
+    -
       plugin: static_map
       map:
         field_collection_item: paragraph
         paragraphs_item: paragraph
+        bean: block_content
       bypass: true
   bundle:
     -
@@ -76,8 +84,11 @@ process:
       source: formatter/weight
   plugin_id:
     -
-      plugin: process_field
+      plugin: default_value
       source: type
+      default_value: 'basic_string'
+    -
+      plugin: process_field
       method: getPluginId
   formatter_type:
     -
