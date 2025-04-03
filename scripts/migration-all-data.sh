@@ -1,7 +1,7 @@
 #!/bin/bash
 
-drushcommand="ddev drush";
-# drushcommand='vendor/bin/drush';
+# drushcommand="ddev drush";
+drushcommand='vendor/bin/drush';
 
 # Validate paramters
 if [ -z "$1" ]; then

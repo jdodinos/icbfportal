@@ -1,7 +1,7 @@
 #!/bin/bash
 
-drushcommand="ddev drush";
-# drushcommand='vendor/bin/drush';
+# drushcommand="ddev drush";
+drushcommand='vendor/bin/drush';
 
 migrationRollback() {
   echo "Procesando Rollback para $1"
