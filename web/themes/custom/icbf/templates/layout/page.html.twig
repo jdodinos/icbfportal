@@ -59,16 +59,22 @@
       {% block head %}
         {% if page.header %}
           {{ page.header }}
-        {% endif %}
+        {% endif %}        
       {% endblock %}
-    </header>
-
-    <div id="main-wrapper" class="main-container layout-main-wrapper clearfix">
-    {{ page.nav_main }}
+    </header>    
+    
+    <div id="main-wrapper" class="layout-main-wrapper clearfix">
       {% block content %}
         <div id="main" class="{{ container }}">
           {{ page.featured_top }}
-          {{ page.breadcrumb }}
+
+          <div class="breadcrumb">
+           <div class="breadcrumb-container">
+             <p class="breadcrumb-title">{{ 'Usted está en: ' }}</p>
+             <div class="breadcrumb-content"> {{ page.breadcrumb }}</div>
+           </div>
+          </div>
+          
           <div class="row row-offcanvas row-offcanvas-left clearfix">
             <main{{ content_attributes }}>
               {{ page.content }}

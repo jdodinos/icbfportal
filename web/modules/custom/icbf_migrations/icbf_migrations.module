@@ -63,6 +63,11 @@ function icbf_migrations_migrate_prepare_row(Row $row, MigrateSourceInterface $s
       elseif ($type == 'sarnia') {
         return FALSE;
       }
+
+      // $bundle = $row->getSourceProperty('bundle');
+      // if ($bundle == 'event' || $bundle == 'drag_drop_page' || $bundle == 'portfolio' || $bundle == 'cb_drag_drop_page') {
+      //   return false;
+      // }
       break;
 
     case 'upgrade_d7_comment_type':
@@ -178,9 +183,9 @@ function icbf_migrations_migrate_prepare_row(Row $row, MigrateSourceInterface $s
         }
       }
 
-      if ($bundle == 'event' || $bundle == 'drag_drop_page' || $bundle == 'portfolio' || $bundle == 'cb_drag_drop_page') {
-        return false;
-      }
+      // if ($bundle == 'event' || $bundle == 'drag_drop_page' || $bundle == 'portfolio' || $bundle == 'cb_drag_drop_page') {
+      //   return false;
+      // }
 
       if ($entity_type == 'bean') {
         $row->setSourceProperty('entity_type', 'block_content');
@@ -220,6 +225,39 @@ function icbf_migrations_migrate_prepare_row(Row $row, MigrateSourceInterface $s
       $search_path = $row->getSourceProperty('search404_custom_search_path');
       $search_path = str_replace('https://www.icbf.gov.co/', '', $search_path);
       $row->setSourceProperty('search404_custom_search_path', $search_path);
+      break;
+
+    case 'upgrade_d7_menu_links':
+      if ($source['plid'] == 1741 || $source['plid'] == 50) {
+        $row->setSourceProperty('plid', 0);
+      }
+
+      if ($row->hasSourceProperty('link_path')) {
+        $link_path = $row->getSourceProperty('link_path');
+
+        if (strpos($link_path, 'node/') === 0) {
+          $link_path = str_replace('node/', 'internal:/node/', $link_path);
+        }
+        elseif (strpos($link_path, 'taxonomy/term/') === 0) {
+          $link_path = str_replace('taxonomy/term/', 'entity:taxonomy_term/', $link_path);
+        }
+        elseif (strpos($link_path, 'admin/') === 0) {
+          $link_path = str_replace('admin/', 'internal:/admin/', $link_path);
+        }
+        elseif (strpos($link_path, 'citaciones/') === 0) {
+          $link_path = str_replace('citaciones/', 'internal:/citaciones/', $link_path);
+        }
+
+        $row->setSourceProperty('link_path', $link_path);
+      }
+      elseif ($row->hasSourceProperty('parent_link_path')) {
+        $link_path = $row->getSourceProperty('parent_link_path');
+
+        if (strpos($link_path, 'admin/') === 0) {
+          $link_path = str_replace('admin/', 'internal:/admin/', $link_path);
+        }
+        $row->setSourceProperty('parent_link_path', $link_path);
+      }
       break;
   }
 }

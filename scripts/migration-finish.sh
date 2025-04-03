@@ -49,7 +49,8 @@ if [ -n "$2" ]; then
   migrationskey=("$2")
 else
   migrationskey=(
-
+    # Despues de migrar contenidos
+    upgrade_d7_google_analytics_user_settings
   )
 fi
 

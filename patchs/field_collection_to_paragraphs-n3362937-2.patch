@@ -1,0 +1,30 @@
+diff --git a/field_collection_to_paragraphs.info.yml b/field_collection_to_paragraphs.info.yml
+index b886fbb..4983f4a 100644
+--- a/field_collection_to_paragraphs.info.yml
++++ b/field_collection_to_paragraphs.info.yml
+@@ -1,6 +1,6 @@
+ name: Field Collection To Paragraphs migration
+ description: 'Migrates Field Collection items to Paragraphs'
+-core_version_requirement: ^8 || ^9
++core_version_requirement: ^8 || ^9 || ^10
+ package: Migration
+ type: module
+ dependencies:
+diff --git a/src/FieldCollectionVersionTrait.php b/src/FieldCollectionVersionTrait.php
+index fb5585f..acae7eb 100644
+--- a/src/FieldCollectionVersionTrait.php
++++ b/src/FieldCollectionVersionTrait.php
+@@ -21,7 +21,12 @@ trait FieldCollectionVersionTrait {
+    */
+   function determineFcVersion() {
+     // Get the schema version of the installed Field Collection module.
+-    $schema_version = drupal_get_installed_schema_version('field_collection');
++    if (function_exists('drupal_get_installed_schema_version')) {
++      $schema_version = drupal_get_installed_schema_version('field_collection');
++    }
++    else {
++      $schema_version = \Drupal\Core\Update\UpdateHookRegistry::getInstalledVersion('field_collection');
++    }
+
+     // Schema version 8000 means this is Field Collection v1. This is the
+     // default when installing a module in Drupal 8 (or 9?) when there are no

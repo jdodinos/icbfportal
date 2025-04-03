@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# drushcommand="ddev drush";
+drushcommand='vendor/bin/drush';
+
 modules=(
   # Modulos Drupal para migracion
   migrate_upgrade
@@ -146,7 +149,6 @@ modules=(
   content_translation
   dashboard
   date_popup
-
   sitemap
   facets
   facets_exposed_filters
@@ -161,7 +163,7 @@ modules=(
   doe
   panelizer
   job_scheduler
-  we_megamenu
+  # we_megamenu
   page_manager
   php
   poll
@@ -174,8 +176,6 @@ modules=(
   geofield_map
 )
 
-# drushcommand="ddev drush";
-drushcommand='vendor/bin/drush';
 for module_name in "${modules[@]}"; do
   $drushcommand en -y "$module_name"
 done

@@ -1,0 +1,15 @@
+diff --git a/src/Plugin/migrate/process/AddressField.php b/src/Plugin/migrate/process/AddressField.php
+index 414144a..9b824f2 100644
+--- a/src/Plugin/migrate/process/AddressField.php
++++ b/src/Plugin/migrate/process/AddressField.php
+@@ -19,6 +19,10 @@ class AddressField extends ProcessPluginBase {
+    * {@inheritdoc}
+    */
+   public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
++    if (is_null($value)) {
++      return FALSE;
++    }
++
+     $parsed = [
+       'country_code' => $value['country'],
+       'administrative_area' => $value['administrative_area'],

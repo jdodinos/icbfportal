@@ -1,0 +1,15 @@
+diff --git a/src/Plugin/migrate/process/GeoField.php b/src/Plugin/migrate/process/GeoField.php
+index cefb13e..7ffca78 100644
+--- a/src/Plugin/migrate/process/GeoField.php
++++ b/src/Plugin/migrate/process/GeoField.php
+@@ -49,6 +49,10 @@ class GeoField extends ProcessPluginBase implements ContainerFactoryPluginInterf
+    * {@inheritdoc}
+    */
+   public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
++    if (is_null($value)) {
++      return FALSE;
++    }
++
+     return [
+       'value' => $this->toWtk($value['geom']),
+       'geo_type' => $value['geo_type'],

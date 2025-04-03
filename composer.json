@@ -287,6 +287,12 @@
             },
             "drupal/audit_log": {
                 "The getVocabularyId() method had been deprecated": "https://www.drupal.org/files/issues/2021-07-15/3223737_1.patch"
+            },
+            "drupal/geofield": {
+                "Drupal 10 Migration Geofield": "./patchs/geofield-validate-value-to-migration.patch"
+            },
+            "drupal/address": {
+                "Drupal 10 Migration Address": "./patchs/address-validate-value-to-migration.patch"
             }
         },
         "merge-plugin": {

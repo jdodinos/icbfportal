@@ -13,7 +13,6 @@ source:
     form_mode: default
     third_party_settings: {  }
 process:
-  # @modified
   field_type_exists:
     -
       plugin: migration_lookup
@@ -28,7 +27,7 @@ process:
     -
       plugin: skip_on_empty
       method: row
-      message: "Field storage configuration does not exist."
+      message: 'Field storage configuration does not exist.'
   bundle:
     -
       plugin: migration_lookup

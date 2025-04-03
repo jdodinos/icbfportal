@@ -1,12 +1,13 @@
 #!/bin/bash
+
 # Validate paramters
 if [ -z "$1" ]; then
   echo "Error: Debes escribir una opción válida. Usa 'rollback' o 'import'."
   exit 1
 fi
 
-# drushcommand="ddev drush";
-drushcommand='vendor/bin/drush';
+drushcommand="ddev drush";
+# drushcommand='vendor/bin/drush';
 
 oper='';
 if [ "$1" = "rollback" ]; then
@@ -110,7 +111,6 @@ else
     upgrade_block_content_entity_display
     upgrade_block_content_entity_form_display
     upgrade_d7_field
-    upgrade_d7_field_instance
     upgrade_d7_metatag_field_taxonomy_term
     upgrade_d7_metatag_field_instance_taxonomy_term_forums
     upgrade_d7_metatag_field_instance_widget_settings_taxonomy_term_forums
@@ -283,22 +283,22 @@ else
     upgrade_d7_field_group_taxonomy_term_procedure
     upgrade_d7_field_group_taxonomy_term_programa_adopciones
     upgrade_d7_field_group_taxonomy_term_secctions
-    upgrade_d7_field_instance_widget_settings
     upgrade_d7_rdf_mapping
     upgrade_language_prefixes_and_domains
     upgrade_d7_language_content_comment_settings
+    upgrade_d7_field_instance
+    upgrade_d7_field_instance_widget_settings
+    upgrade_d7_field_formatter_settings
     upgrade_d7_field_formatter_class
+    upgrade_d7_menu_links
 
     # Pendiente de revision
-    # upgrade_d7_menu_links
-    # upgrade_node_translation_menu_links
-    # upgrade_d7_language_content_menu_settings
-    # upgrade_d7_language_content_settings
-    # upgrade_d7_field_formatter_settings
+    upgrade_d7_language_content_settings
     # upgrade_d7_views_migration
 
-    # Despues de migrar contenidos
-    # upgrade_d7_google_analytics_user_settings
+    # No migrar
+    # # upgrade_d7_language_content_menu_settings
+    # # upgrade_node_translation_menu_links
   )
 fi
 
