@@ -293,6 +293,9 @@
             },
             "drupal/address": {
                 "Drupal 10 Migration Address": "./patchs/address-validate-value-to-migration.patch"
+            },
+            "drupal/metatag": {
+                "Fix error when sort metetags": "./patchs/metatag-remove-group-sort.patch"
             }
         },
         "merge-plugin": {

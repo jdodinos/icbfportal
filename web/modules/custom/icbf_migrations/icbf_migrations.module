@@ -94,14 +94,17 @@ function icbf_migrations_migrate_prepare_row(Row $row, MigrateSourceInterface $s
 
     case 'upgrade_d7_filter_format':
       if ($source['format'] == 'ds_code') {
-        $row->setSourceProperty('format', 'php');
+        $row->setSourceProperty('format', 'ds_code');
 
         if ($row->hasSourceProperty('filters')) {
           $filters = $row->getSourceProperty('filters');
+          $filters = [
+            'php_code' => $filters['ds_code'],
+          ];
           foreach ($filters as &$filter) {
             if (isset($filter['module']) && $filter['module'] === 'ds_format') {
               $filter = [
-                'format' => 'php',
+                'format' => 'ds_code',
                 'module' => 'php',
                 'name' => 'php_code',
                 'weight' => '0',
@@ -259,10 +262,49 @@ function icbf_migrations_migrate_prepare_row(Row $row, MigrateSourceInterface $s
         $row->setSourceProperty('parent_link_path', $link_path);
       }
       break;
+
+    case 'upgrade_d7_views_migration':
+      $views_id = [
+        'usuarios',
+        'editorial_last_content',
+        'calendario_rendici_n',
+        'taxonomy_term',
+        'tranpsarencia_listado_temas',
+        'glosario_icbf',
+        'contexto_micrositios',
+        'ada_home_grid',
+        'micrositios_contextos',
+        'documentos_contratacion',
+        'ubicaciones_20',
+        'tracker',
+        'botones_home',
+        'ni_os_migrantes_venezolanos',
+        'me_conoces_ni_os_venezolanos',
+        'proveedores',
+        'media_browser_plus',
+        'media_default',
+        'informes_regionales_rendici_n_de_cuestas_',
+        'sitemap',
+        'notificaciones_pc_coactivos',
+        'admin_views_node',
+        'transparencia_home',
+        'actas_contentivas_',
+        'estudios_de_sector_v1',
+        // 'calendar',
+      ];
+      if (in_array($source['name'], $views_id)) {
+        // dump($source['name']);
+        // dump($source);
+      }
+      else {
+        return FALSE;
+      }
+      break;
   }
 }
-
-
+/**
+ * Implements icbf_migrations_permissions_to_ignore().
+ */
 function icbf_migrations_permissions_to_ignore() {
   $permissions = [
     'access administration menu',
