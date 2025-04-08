@@ -145,6 +145,7 @@
         "drupal/poll": "^1.6",
         "drupal/publishcontent": "^1.7",
         "drupal/purge": "^3.6",
+        "drupal/quick_node_clone": "^1.22",
         "drupal/quicktabs": "^4.0",
         "drupal/rdf": "^2.0",
         "drupal/recaptcha": "^3.4",
