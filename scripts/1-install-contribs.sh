@@ -174,6 +174,7 @@ modules=(
   purge_ui
   geocoder_geofield
   geofield_map
+  quick_node_clone
 )
 
 for module_name in "${modules[@]}"; do
