@@ -66,6 +66,7 @@
         "drupal/auto_entitylabel": "^3.4",
         "drupal/autologout": "^2.0",
         "drupal/better_exposed_filters": "^7.0",
+        "drupal/better_permissions_page": "^1.0",
         "drupal/block_class": "^4.0",
         "drupal/block_content_revision_ui": "^2.280",
         "drupal/bootstrap5": "^4.0",
