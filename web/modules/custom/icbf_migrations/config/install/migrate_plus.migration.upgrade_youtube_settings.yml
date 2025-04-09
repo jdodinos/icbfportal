@@ -1,0 +1,64 @@
+id: upgrade_youtube_settings
+class: Drupal\migrate\Plugin\Migration
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: custom_migrations
+label: 'Youtube Settings'
+source:
+  plugin: youtube_settings
+process:
+  youtube_suggest:
+    -
+      plugin: get
+      source: youtube_suggest
+  youtube_modestbranding:
+    -
+      plugin: get
+      source: youtube_modestbranding
+  youtube_theme:
+    -
+      plugin: get
+      source: youtube_theme
+  youtube_color:
+    -
+      plugin: get
+      source: youtube_color
+  youtube_enablejsapi:
+    -
+      plugin: get
+      source: youtube_enablejsapi
+  youtube_wmode:
+    -
+      plugin: get
+      source: youtube_wmode
+  youtube_override:
+    -
+      plugin: get
+      source: youtube_override
+  youtube_privacy:
+    -
+      plugin: get
+      source: youtube_privacy
+  youtube_player_class:
+    -
+      plugin: get
+      source: youtube_player_class
+  youtube_thumb_dir:
+    -
+      plugin: get
+      source: youtube_thumb_dir
+  youtube_thumb_hires:
+    -
+      plugin: get
+      source: youtube_thumb_hires
+  youtube_thumb_token_image_style:
+    -
+      plugin: get
+      source: youtube_thumb_token_image_style
+destination:
+  plugin: config
+  config_name: youtube.settings
+migration_dependencies:
+  required: {  }
+  optional: {  }
