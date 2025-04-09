@@ -1,19 +1,19 @@
 diff --git a/src/MetatagManager.php b/src/MetatagManager.php
-index 2d84bcb4..804d33bf 100644
+index 2d84bcb4..9e2c832a 100644
 --- a/src/MetatagManager.php
 +++ b/src/MetatagManager.php
-@@ -285,10 +285,10 @@ class MetatagManager implements MetatagManagerInterface {
-         'Drupal\Component\Utility\SortArray',
-         'sortByWeightElement',
-       ]);
--      foreach ($tags[$group_name] as $tag_name => $tag_info) {
--        $tag_info['weight'] = $tag_weight++;
--        $sorted_tags[$tag_name] = $tag_info;
--      }
-+      // foreach ($tags[$group_name] as $tag_name => $tag_info) {
-+      //   $tag_info['weight'] = $tag_weight++;
-+      //   $sorted_tags[$tag_name] = $tag_info;
-+      // }
-     }
+@@ -281,10 +281,10 @@ class MetatagManager implements MetatagManagerInterface {
  
-     return $sorted_tags;
+       // First, sort the tags within the group according to the original sort
+       // order provided by the tag's definition.
+-      uasort($tags[$group_name], [
+-        'Drupal\Component\Utility\SortArray',
+-        'sortByWeightElement',
+-      ]);
++      // uasort($tags[$group_name], [
++      //   'Drupal\Component\Utility\SortArray',
++      //   'sortByWeightElement',
++      // ]);
+       foreach ($tags[$group_name] as $tag_name => $tag_info) {
+         $tag_info['weight'] = $tag_weight++;
+         $sorted_tags[$tag_name] = $tag_info;
