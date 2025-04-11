@@ -1,0 +1,10 @@
+id: desactivado_micrositio_ser_papas
+label: 'desactivado micrositio ser papas'
+events:
+  -
+    event_name: 'rules_entity_update:taxonomy_term'
+description: ''
+tags: {  }
+config_version: '3'
+expression:
+  id: rules_rule

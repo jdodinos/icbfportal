@@ -1,0 +1,5 @@
+name: 'ICBF Configurations to Migrations'
+description: "Manejo de la migración de las configuraciones del sitio de Drupal 7 a 10."
+type: module
+core_version_requirement: ^10
+package: "ICBF Modules"

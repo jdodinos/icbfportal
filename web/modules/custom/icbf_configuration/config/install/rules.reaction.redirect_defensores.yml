@@ -1,0 +1,10 @@
+id: redirect_defensores
+label: 'Redirect Defensores'
+events:
+  -
+    event_name: rules_user_login
+description: ''
+tags: {  }
+config_version: '3'
+expression:
+  id: rules_rule
