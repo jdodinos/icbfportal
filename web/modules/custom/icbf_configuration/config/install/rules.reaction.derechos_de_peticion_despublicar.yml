@@ -1,0 +1,35 @@
+id: derechos_de_peticion_despublicar
+label: 'Derechos de petición - Despublicar'
+events:
+  -
+    event_name: 'rules_entity_insert:node--petition_rights'
+description: ''
+tags: {  }
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: 69885f28-7499-4a57-82b3-83c5ecb78c3b
+  weight: 0
+  conditions:
+    id: rules_and
+    uuid: 1d41f144-f9cc-428a-bb37-d63ab01a3673
+    weight: 0
+    conditions: {  }
+  actions:
+    id: rules_action_set
+    uuid: 21083677-a5e8-4c6d-8cf6-5aca5e5e1020
+    weight: 0
+    actions:
+      -
+        id: rules_action
+        uuid: 2d6600be-e664-4455-b7b0-39a02458801d
+        weight: 0
+        action_id: rules_data_set
+        context_values:
+          value: '+6 days'
+        context_mapping:
+          data: node.unpublish_on
+        context_processors:
+          value:
+            rules_tokens: {  }
+        provides_mapping: {  }

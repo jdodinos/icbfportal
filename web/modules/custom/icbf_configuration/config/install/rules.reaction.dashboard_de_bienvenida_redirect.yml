@@ -1,0 +1,53 @@
+id: dashboard_de_bienvenida_redirect
+label: 'Dashboard de Bienvenida Redirect'
+events:
+  -
+    event_name: rules_user_login
+description: ''
+tags: {  }
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: 6331c2eb-9a84-4378-ae25-812b8ab27809
+  weight: 0
+  conditions:
+    id: rules_and
+    uuid: 53b2b458-edd0-4b71-90da-52de60894842
+    weight: 0
+    conditions:
+      -
+        id: rules_condition
+        uuid: 476a0afd-29be-4f44-b619-6b5dd04f4c0b
+        weight: 0
+        condition_id: rules_user_has_role
+        negate: true
+        context_values:
+          roles:
+            - Citaciones
+            - 'Defensor de Familia'
+          operation: any
+        context_mapping:
+          user: account
+        context_processors:
+          roles:
+            rules_tokens: {  }
+          operation:
+            rules_tokens: {  }
+        provides_mapping: {  }
+  actions:
+    id: rules_action_set
+    uuid: 3d110dad-96c3-4b13-a17d-95996f09e7d4
+    weight: 0
+    actions:
+      -
+        id: rules_action
+        uuid: 6d281d8b-0d57-457f-b55c-3760a3584a10
+        weight: 0
+        action_id: rules_page_redirect
+        context_values:
+          url: editorial-last-content
+        context_mapping: {  }
+        context_processors:
+          url:
+            rules_tokens: {  }
+        provides_mapping: {  }
