@@ -28,6 +28,7 @@ migrationskey=(
   upgrade_d7_custom_block
   upgrade_d7_block
   upgrade_d7_bean_block
+  upgrade_d7_megamenu
 )
 
 for mig_key in "${migrationskey[@]}"; do

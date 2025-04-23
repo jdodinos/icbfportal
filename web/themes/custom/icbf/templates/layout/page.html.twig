@@ -59,10 +59,14 @@
       {% block head %}
         {% if page.header %}
           {{ page.header }}
-        {% endif %}        
+        {% endif %}
       {% endblock %}
-    </header>    
-    
+    </header>
+
+    {% if page.nav_main %}
+      {{ page.nav_main }}
+    {% endif %}
+
     <div id="main-wrapper" class="layout-main-wrapper clearfix">
       {% block content %}
         <div id="main" class="{{ container }}">
@@ -74,7 +78,7 @@
              <div class="breadcrumb-content"> {{ page.breadcrumb }}</div>
            </div>
           </div>
-          
+
           <div class="row row-offcanvas row-offcanvas-left clearfix">
             <main{{ content_attributes }}>
               {{ page.content }}
