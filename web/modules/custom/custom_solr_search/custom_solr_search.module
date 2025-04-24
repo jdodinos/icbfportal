@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Custom Solr Search module file.
+ */
+/**
+ * Implements hook_theme().
+ */
+function custom_solr_search_theme($existing, $type, $theme, $path) {
+  return [
+    'search_results' => [
+      'variables' => [
+        'results' => [],
+        'total_results' => 0,
+        'pager' => NULL,
+      ],
+      'template' => 'search-results',
+    ],
+  ];
+}

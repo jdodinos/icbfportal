@@ -1,0 +1,41 @@
+<?php 
+/**
+ * @file
+ * Contains web_scraper.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_help().
+ */
+function web_scraper_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.web_scraper':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('The Web Scraper module allows you to extract information from websites and index it using Search API and Solr.') . '</p>';
+      return $output;
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function web_scraper_theme() {
+  return [
+    'web_scraper_results' => [
+      'variables' => [
+        'results' => NULL,
+      ],
+    ],
+  ];
+}
+/**
+ * Implements hook_cron().
+ */
+function web_scraper_cron() {
+  \Drupal::service('web_scraper.cron')->cron();
+}

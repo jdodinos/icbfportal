@@ -1,0 +1,58 @@
+<div class="search-report">
+  <canvas id="responseChart"></canvas>
+  <canvas id="usageChart"></canvas>
+
+  <h2>Términos más buscados</h2>
+  <table>
+    <thead>
+      <tr><th>Término</th><th># de Búsquedas</th></tr>
+    </thead>
+    <tbody>
+    {% for term, count in data.most_searched %}
+      <tr><td>{{ term }}</td><td>{{ count }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+
+  <h2>Términos sin resultados</h2>
+  <table>
+    <thead>
+      <tr><th>Término</th><th>Fecha</th></tr>
+    </thead>
+    <tbody>
+    {% for item in data.no_results %}
+      <tr><td>{{ item.term }}</td><td>{{ item.date }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const responseCtx = document.getElementById('responseChart');
+  const usageCtx = document.getElementById('usageChart');
+
+  new Chart(responseCtx, {
+    type: 'line',
+    data: {
+      labels: {{ data.response_times|map(i => i.x)|json_encode|raw }},
+      datasets: [{
+        label: 'Tiempo de respuesta',
+        data: {{ data.response_times|map(i => i.y)|json_encode|raw }},
+        borderColor: 'blue',
+      }]
+    }
+  });
+
+  new Chart(usageCtx, {
+    type: 'line',
+    data: {
+      labels: {{ data.search_usage|map(i => i.x)|json_encode|raw }},
+      datasets: [{
+        label: 'Uso del buscador',
+        data: {{ data.search_usage|map(i => i.y)|json_encode|raw }},
+        borderColor: 'green',
+      }]
+    }
+  });
+</script>

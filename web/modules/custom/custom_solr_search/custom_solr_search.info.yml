@@ -1,0 +1,8 @@
+name: 'Buscador Custom ICBF'
+type: module
+description: 'Bloque de busqueda con autocompletado y filtros avanzados usando Search API y Solr.'
+core_version_requirement: ^10 || ^11
+package: Custom
+dependencies:
+  - search_api
+  - search_api_solr
