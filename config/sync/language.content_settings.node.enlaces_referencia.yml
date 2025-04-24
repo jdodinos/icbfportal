@@ -1,0 +1,16 @@
+uuid: dd844a1e-4e39-49a1-8530-666b8028338b
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.enlaces_referencia
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: node.enlaces_referencia
+target_entity_type_id: node
+target_bundle: enlaces_referencia
+default_langcode: current_interface
+language_alterable: true

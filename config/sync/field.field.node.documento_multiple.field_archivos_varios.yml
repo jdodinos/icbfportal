@@ -1,0 +1,27 @@
+uuid: ff3f1291-830a-47e4-99a5-d333a445aa05
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_archivos_varios
+    - node.type.documento_multiple
+  module:
+    - file
+id: node.documento_multiple.field_archivos_varios
+field_name: field_archivos_varios
+entity_type: node
+bundle: documento_multiple
+label: 'Archivos Varios'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'txt pdf doc xls xlsx docx ppt pptx pps ppsx png jpg jpge tiff gif zip rar msg xps mp4'
+  max_filesize: 80mb
+  description_field: true
+field_type: file

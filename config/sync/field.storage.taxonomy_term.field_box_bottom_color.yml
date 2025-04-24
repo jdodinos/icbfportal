@@ -1,0 +1,43 @@
+uuid: a0b16f51-aee9-4ed2-b077-18ea3aeee73e
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - taxonomy
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: taxonomy_term.field_box_bottom_color
+field_name: field_box_bottom_color
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: ada-boxcolor1
+      label: 'color 1'
+    -
+      value: ada-boxcolor2
+      label: 'color 2'
+    -
+      value: ada-boxcolor3
+      label: 'color 3'
+    -
+      value: ada-boxcolor4
+      label: 'color 4'
+    -
+      value: ada-boxcolor5
+      label: 'color 5'
+    -
+      value: ada-boxcolor6
+      label: 'color 6'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

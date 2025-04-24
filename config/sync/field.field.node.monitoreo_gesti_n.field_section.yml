@@ -1,0 +1,28 @@
+uuid: f4b159f0-2b31-4cfe-acd6-5890eed17e47
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section
+    - node.type.monitoreo_gesti_n
+    - taxonomy.vocabulary.secctions
+id: node.monitoreo_gesti_n.field_section
+field_name: field_section
+entity_type: node
+bundle: monitoreo_gesti_n
+label: Sección
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    tid: '7014'
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      secctions: secctions
+    sort:
+      field: _none
+field_type: entity_reference

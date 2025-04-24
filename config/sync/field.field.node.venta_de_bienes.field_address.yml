@@ -1,0 +1,25 @@
+uuid: b25d026a-207e-4b22-9cdd-5e814d925749
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address
+    - node.type.venta_de_bienes
+  module:
+    - address
+id: node.venta_de_bienes.field_address
+field_name: field_address
+entity_type: node
+bundle: venta_de_bienes
+label: Dirección
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: null
+  field_overrides: {  }
+  fields: {  }
+field_type: address

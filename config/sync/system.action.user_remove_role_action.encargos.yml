@@ -1,0 +1,14 @@
+uuid: 4d46d35c-4d40-4e3d-92ca-a12f42104672
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.encargos
+  module:
+    - user
+id: user_remove_role_action.encargos
+label: 'Elimina el rol Encargos al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: encargos

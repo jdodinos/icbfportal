@@ -1,0 +1,265 @@
+uuid: a4f08ef0-44b0-4765-9e71-bdff2558cccd
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_transparency.default
+    - field.field.node.transparency.comment_node_transparency
+    - field.field.node.transparency.event_calendar_status
+    - field.field.node.transparency.field_auditory_type
+    - field.field.node.transparency.field_code_bpin
+    - field.field.node.transparency.field_component_transparency
+    - field.field.node.transparency.field_content
+    - field.field.node.transparency.field_dae_year
+    - field.field.node.transparency.field_date
+    - field.field.node.transparency.field_documents_transparency
+    - field.field.node.transparency.field_external_file_url
+    - field.field.node.transparency.field_field_documents_trans_word
+    - field.field.node.transparency.field_file_categoria
+    - field.field.node.transparency.field_images
+    - field.field.node.transparency.field_list_image
+    - field.field.node.transparency.field_location
+    - field.field.node.transparency.field_metatag
+    - field.field.node.transparency.field_multimedia
+    - field.field.node.transparency.field_parent
+    - field.field.node.transparency.field_pdf_a
+    - field.field.node.transparency.field_person_area
+    - field.field.node.transparency.field_priority
+    - field.field.node.transparency.field_relevant
+    - field.field.node.transparency.field_section
+    - field.field.node.transparency.field_trd_ubicacion
+    - field.field.node.transparency.field_trd_vigencia
+    - field.field.node.transparency.field_trimester
+    - node.type.transparency
+  module:
+    - comment
+    - datetime
+    - file
+    - image
+    - link
+    - options
+    - text
+    - user
+id: node.transparency.default
+targetEntityType: node
+bundle: transparency
+mode: default
+content:
+  comment_node_transparency:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  event_calendar_status:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_auditory_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  field_code_bpin:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_component_transparency:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_content:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_dae_year:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_documents_transparency:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_external_file_url:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_field_documents_trans_word:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_file_categoria:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_images:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_list_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_location:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_multimedia:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_parent:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_pdf_a:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 31
+    region: content
+  field_person_area:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_priority:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_relevant:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_section:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_trd_ubicacion:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 28
+    region: content
+  field_trd_vigencia:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 29
+    region: content
+  field_trimester:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_metatag: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

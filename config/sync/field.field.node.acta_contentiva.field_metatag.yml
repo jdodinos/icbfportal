@@ -1,0 +1,21 @@
+uuid: bcf99391-13c2-4a3f-ab5f-775838064311
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.acta_contentiva
+  module:
+    - metatag
+id: node.acta_contentiva.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: acta_contentiva
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

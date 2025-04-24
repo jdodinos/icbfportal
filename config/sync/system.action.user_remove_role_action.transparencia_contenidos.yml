@@ -1,0 +1,14 @@
+uuid: d30804c5-6d51-41f1-bfb7-06a35cd452b3
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.transparencia_contenidos
+  module:
+    - user
+id: user_remove_role_action.transparencia_contenidos
+label: 'Elimina el rol Transparencia Contenidos al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: transparencia_contenidos

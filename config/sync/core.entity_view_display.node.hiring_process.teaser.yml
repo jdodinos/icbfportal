@@ -1,0 +1,99 @@
+uuid: 19275c7e-5ea3-4739-8bb8-3310e46d02bf
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.hiring_process.comment_node_hiring_process
+    - field.field.node.hiring_process.field_aditional_info
+    - field.field.node.hiring_process.field_contact_email
+    - field.field.node.hiring_process.field_dae_year
+    - field.field.node.hiring_process.field_document
+    - field.field.node.hiring_process.field_hiring_process_category
+    - field.field.node.hiring_process.field_hiring_type_process
+    - field.field.node.hiring_process.field_link_secop2
+    - field.field.node.hiring_process.field_location
+    - field.field.node.hiring_process.field_metatag
+    - field.field.node.hiring_process.field_process_object
+    - node.type.hiring_process
+  module:
+    - datetime
+    - file
+    - text
+    - user
+id: node.hiring_process.teaser
+targetEntityType: node
+bundle: hiring_process
+mode: teaser
+content:
+  field_contact_email:
+    type: email_mailto
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_dae_year:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_document:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_hiring_process_category:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_hiring_type_process:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_location:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_process_object:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment_node_hiring_process: true
+  field_aditional_info: true
+  field_link_secop2: true
+  field_metatag: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

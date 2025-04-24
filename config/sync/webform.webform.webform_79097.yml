@@ -1,0 +1,1564 @@
+uuid: 18672fa5-5f6e-40c4-a0d1-5164444870af
+langcode: es
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: webform_79097
+title: 'Reporte Regional de Ejercicios de Participación y Control Social'
+description: null
+categories: {  }
+elements: |-
+  fecha_reporte:
+    '#type': date
+    '#title_display': inline
+    '#title': 'Fecha de Reporte'
+  direccion_regional:
+    '#type': select
+    '#options':
+      1: 'Regional Amazonas'
+      2: 'Regional Antioquia'
+      3: 'Regional Arauca'
+      4: 'Regional Atlántico'
+      5: 'Regional Bogotá'
+      6: 'Regional Boyacá'
+      7: 'Regional Bolívar'
+      8: 'Regional Caldas'
+      9: 'Regional Caquetá'
+      10: 'Regional Casanare'
+      11: 'Regional Cauca'
+      12: 'Regional Cesar'
+      13: 'Regional Chocó'
+      14: 'Regional Córdoba'
+      15: 'Regional Cundinamarca'
+      17: 'Regional Guainía'
+      18: 'Regional Guaviare'
+      19: 'Regional Huila'
+      16: 'Regional La Guajira'
+      20: 'Regional Magdalena'
+      21: 'Regional Meta'
+      22: 'Regional Nariño'
+      23: 'Regional Norte de Santander'
+      24: 'Regional Putumayo'
+      25: 'Regional Quindio'
+      26: 'Regional Risaralda'
+      27: 'Regional San Andrés'
+      28: 'Regional Santander'
+      29: 'Regional Sucre'
+      30: 'Regional Tolima'
+      31: 'Regional Valle'
+      32: 'Regional Vaupés'
+      33: 'Regional Vichada'
+      34: 'Sede Dirección General'
+    '#title_display': inline
+    '#title': Regional
+    '#required': true
+  municipios_amazonas:
+    '#type': select
+    '#options':
+      1: 'El Encanto'
+      2: 'La Chorrera'
+      3: 'La Pedrera'
+      4: 'La Victoria'
+      5: Leticia
+      6: 'Miriti - Parana'
+      7: 'Puerto Alegria'
+      8: 'Puerto Arica'
+      9: 'Puerto Nariño'
+      10: 'Puerto Santander'
+      11: Tarapaca
+    '#title': 'Municipios Amazonas'
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '1'
+  municipios_antioquia:
+    '#type': select
+    '#options':
+      1: Abejorral
+      2: Abriaqui
+      3: Alejandria
+      4: Amaga
+      5: Amalfi
+      6: Andes
+      7: Angelopolis
+      8: Angostura
+      9: Anori
+      10: Anza
+      11: Apartadó
+      12: Arboletes
+      13: Argelia
+      14: Armenia
+      15: Barbosa
+      16: Bello
+      17: Belmira
+      18: Betania
+      19: Betulia
+      20: Briceño
+      21: Buritica
+      22: Caceres
+      23: Caicedo
+      24: Caldas
+      25: Campamento
+      26: Cañasgordas
+      27: Caracoli
+      28: Caramanta
+      29: Carepa
+      30: Carolina
+      31: Caucasia
+      32: Chigorodó
+      33: Cisneros
+      34: 'Ciudad Bolivar'
+      35: Cocorna
+      36: Concepción
+      37: Concordia
+      38: Copacabana
+      39: Dabeiba
+      40: 'Don Matias'
+      41: Ebejico
+      42: 'El Bagre'
+      43: 'El Carmen De Viboral'
+      44: 'El Santuario'
+      45: Entrerrios
+      46: Envigado
+      47: Fredonia
+      48: Frontino
+      49: Giraldo
+      50: Girardota
+      51: 'Gomez Plata'
+      52: Granada
+      53: Guadalupe
+      54: Guarne
+      55: Guatape
+      56: Heliconia
+      57: Hispania
+      58: Itagüí
+      59: Ituango
+      60: Jardin
+      61: Jericó
+      62: 'La Ceja'
+      63: 'La Estrella'
+      64: 'La Pintada'
+      65: 'La Unión'
+      66: Liborina
+      67: Maceo
+      68: Marinilla
+      69: Medellín
+      70: Montebello
+      71: Murindo
+      72: Mutata
+      73: Nariño
+      74: Nechi
+      75: Necocli
+      76: Olaya
+      77: Peque
+      78: Peðol
+      79: Pueblorrico
+      80: 'Puerto Berrio'
+      81: 'Puerto Nare'
+      82: 'Puerto Triunfo'
+      83: Remedios
+      84: Retiro
+      85: Rionegro
+      86: Sabanalarga
+      87: Sabaneta
+      88: Salgar
+      89: 'San Andres De Cuerquia'
+      90: 'San Carlos'
+      91: 'San Francisco'
+      92: 'San Jeronimo'
+      93: 'San Jose De La Montaña'
+      94: 'San Juan De Uraba'
+      95: 'San Luis'
+      96: 'San Pedro'
+      97: 'San Pedro De Uraba'
+      98: 'San Rafael'
+      99: 'San Roque'
+      100: 'San Vicente'
+      101: 'Santa Bárbara'
+      102: 'Santa Rosa De Osos'
+      103: 'Santafe De Antioquia'
+      104: 'Santo Domingo'
+      105: Segovia
+      106: Sonson
+      107: Sopetran
+      108: Tamesis
+      109: Taraza
+      110: Tarso
+      111: Titiribi
+      112: Toledo
+      113: Turbo
+      114: Uramita
+      115: Urrao
+      116: Valdivia
+      117: Valparaiso
+      118: Vegachi
+      119: Venecia
+      120: 'Vigia Del Fuerte'
+      121: Yali
+      122: Yarumal
+      123: Yolombo
+      124: Yondo
+      125: Zaragoza
+    '#title': 'Municipios Antioquia'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '2'
+  municipios_atlantico:
+    '#type': select
+    '#options':
+      1: Baranoa
+      2: Barranquilla
+      3: 'Campo De La Cruz'
+      4: Candelaria
+      5: Galapa
+      6: 'Juan De Acosta'
+      7: Luruaco
+      8: Malambo
+      9: Manati
+      10: 'Palmar De Varela'
+      11: Piojo
+      12: Polonuevo
+      13: Ponedera
+      14: 'Puerto Colombia'
+      15: Repelon
+      16: Sabanagrande
+      17: Sabanalarga
+      18: 'Santa Lucia'
+      19: 'Santo Tomas'
+      20: Soledad
+      21: Suan
+      22: Tubara
+      23: Usiacuri
+    '#title': 'Municipios Atlántico'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '4'
+  municipios_arauca:
+    '#type': select
+    '#options':
+      1: Arauca
+      2: Arauquita
+      3: 'Cravo Norte'
+      4: Fortul
+      5: 'Puerto Rondon'
+      6: Saravena
+      7: Tame
+    '#title': 'Municipios Arauca'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '3'
+  distrito_capital:
+    '#type': radios
+    '#options':
+      1: 'Bogotá, D. C.'
+    '#title': 'Distrito Capital'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '5'
+  municipios_bolivar:
+    '#type': select
+    '#options':
+      1: Achi
+      2: 'Altos Del Rosario'
+      3: Arenal
+      4: Arjona
+      5: Arroyohondo
+      6: 'Barranco De Loba'
+      7: Calamar
+      8: Cantagallo
+      9: Cartagena
+      10: Cicuco
+      11: Clemencia
+      12: Cordoba
+      13: 'El Carmen De Bolivar'
+      14: 'El Guamo'
+      15: 'El Peñon'
+      16: 'Hatillo De Loba'
+      17: Magangue
+      18: Mahates
+      19: Margarita
+      20: 'Maria La Baja'
+      21: Mompos
+      22: Montecristo
+      23: Morales
+      24: Norosi
+      25: Pinillos
+      26: Regidor
+      27: 'Rio Viejo'
+      28: 'San Cristobal'
+      29: 'San Estanislao'
+      30: 'San Fernando'
+      31: 'San Jacinto'
+      32: 'San Jacinto Del Cauca'
+      33: 'San Juan Nepomuceno'
+      34: 'San Martin De Loba'
+      35: 'San Pablo'
+      36: 'Santa Catalina'
+      37: 'Santa Rosa'
+      38: 'Santa Rosa Del Sur'
+      39: Simití
+      40: Soplaviento
+      41: 'Talaigua Nuevo'
+      42: Tiquisio
+      43: Turbaco
+      44: Turbana
+      45: Villanueva
+      46: Zambrano
+    '#title': 'Municipios Bolívar'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '7'
+  municipios_boyaca:
+    '#type': select
+    '#options':
+      1: Almeida
+      2: Aquitania
+      3: Arcabuco
+      4: Belen
+      5: Berbeo
+      6: Beteitiva
+      7: Boavita
+      8: Boyaca
+      9: Briceño
+      10: Buenavista
+      11: Busbanza
+      12: Caldas
+      13: Campohermoso
+      14: Cerinza
+      15: Chinavita
+      16: Chiquinquira
+      17: Chiquiza
+      18: Chiscas
+      19: Chita
+      20: Chitaraque
+      21: Chivata
+      22: Chivor
+      23: Cienega
+      24: Combita
+      25: Coper
+      26: Corrales
+      27: Covarachia
+      28: Cubara
+      29: Cucaita
+      30: Cuitiva
+      31: Duitama
+      32: 'El Cocuy'
+      33: 'El Espino'
+      34: Firavitoba
+      35: Floresta
+      36: Gachantiva
+      37: Gameza
+      38: Garagoa
+      39: Gsican
+      40: Guacamayas
+      41: Guateque
+      42: Guayata
+      43: Iza
+      44: Jenesano
+      45: Jerico
+      46: 'La Capilla'
+      47: 'La Uvita'
+      48: 'La Victoria'
+      49: Labranzagrande
+      50: Macanal
+      51: Maripi
+      52: Miraflores
+      53: Mongua
+      54: Mongui
+      55: Moniquira
+      56: Motavita
+      57: Muzo
+      58: Nobsa
+      59: 'Nuevo Colon'
+      60: Oicata
+      61: Otanche
+      62: Pachavita
+      63: Paez
+      64: Paipa
+      65: Pajarito
+      66: Panqueba
+      67: Pauna
+      68: Paya
+      69: 'Paz De Rio'
+      70: Pesca
+      71: Pisba
+      72: 'Puerto Boyaca'
+      73: Quipama
+      74: Ramiriqui
+      75: Raquira
+      76: Rondon
+      77: Saboya
+      78: Sachica
+      79: Samaca
+      80: 'San Eduardo'
+      81: 'San Jose De Pare'
+      82: 'San Luis De Gaceno'
+      83: 'San Mateo'
+      84: 'San Miguel De Sema'
+      85: 'San Pablo De Borbur'
+      86: 'Santa Maria'
+      87: 'Santa Rosa De Viterbo'
+      88: 'Santa Sofia'
+      89: Santana
+      90: Sativanorte
+      91: Sativasur
+      92: Siachoque
+      93: Soata
+      94: Socha
+      95: Socota
+      96: Sogamoso
+      97: Somondoco
+      98: Sora
+      99: Soraca
+      100: Sotaquira
+      101: Susacon
+      102: Sutamarchan
+      103: Sutatenza
+      104: Tasco
+      105: Tenza
+      106: Tibana
+      107: Tibasosa
+      108: Tinjaca
+      109: Tipacoque
+      110: Toca
+      111: Togsi
+      112: Topaga
+      113: Tota
+      114: Tunja
+      115: Tunungua
+      116: Turmeque
+      117: Tuta
+      118: Tutaza
+      119: Umbita
+      120: Ventaquemada
+      121: 'Villa De Leyva'
+      122: Viracacha
+      123: Zetaquira
+    '#title': 'Municipios Boyacá'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '6'
+  municipios_caldas:
+    '#type': select
+    '#options':
+      1: Aguadas
+      2: Anserma
+      3: Aranzazu
+      4: Belalcazar
+      5: Chinchiná
+      6: Filadelfia
+      7: 'La Dorada'
+      8: 'La Merced'
+      9: Manizales
+      10: Manzanares
+      11: Marmato
+      12: Marquetalia
+      13: Marulanda
+      14: Neira
+      15: Norcasia
+      16: Pacora
+      17: Palestina
+      18: Pensilvania
+      19: Riosucio
+      20: Risaralda
+      21: Salamina
+      22: Samana
+      23: 'San José'
+      24: Supia
+      25: Victoria
+      26: Villamaria
+      27: Viterbo
+    '#title': 'Municipios Caldas'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '8'
+  municipios_caqueta:
+    '#type': select
+    '#options':
+      1: Albania
+      2: 'Belén de Los Andaquíes'
+      3: 'Cartagena del Chairá'
+      4: Curillo
+      5: 'El Doncello'
+      6: 'El Paujil'
+      7: Florencia
+      8: 'La Montañita'
+      9: Milan
+      10: Morelia
+      11: 'Puerto Rico'
+      12: 'San José del Fragua'
+      13: 'San Vicente del Caguán'
+      14: Solano
+      15: Solita
+      16: Valparaiso
+    '#title': 'Municipios Caquetá'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '9'
+  municipios_casanare:
+    '#type': select
+    '#options':
+      1: Aguazul
+      2: Chameza
+      3: 'Hato Corozal'
+      4: 'La Salina'
+      5: Mani
+      6: Monterrey
+      7: Nunchia
+      8: Orocue
+      9: 'Paz De Ariporo'
+      10: Pore
+      11: Recetor
+      12: Sabanalarga
+      13: Sacama
+      14: 'San Luis De Palenque'
+      15: Tamara
+      16: Tauramena
+      17: Trinidad
+      18: Villanueva
+      19: Yopal
+    '#title': 'Municipios Casanare'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '10'
+  municipios_cauca:
+    '#type': select
+    '#options':
+      1: Almaguer
+      2: Argelia
+      3: Balboa
+      4: Bolivar
+      5: 'Buenos Aires'
+      6: Cajibio
+      7: Caldono
+      8: Caloto
+      9: Corinto
+      10: 'El Tambo'
+      11: Florencia
+      12: Guachene
+      13: Guapi
+      14: Inza
+      15: Jambalo
+      16: 'La Sierra'
+      17: 'La Vega'
+      18: Lopez
+      19: Mercaderes
+      20: Miranda
+      21: Morales
+      22: Padilla
+      23: Paez
+      24: Patia
+      25: Piamonte
+      26: Piendamo
+      27: Popayán
+      28: 'Puerto Tejada'
+      29: Purace
+      30: Rosas
+      31: 'San Sebastian'
+      32: 'Santa Rosa'
+      33: 'Santander De Quilichao'
+      34: Silvia
+      35: Sotara
+      36: Suarez
+      37: Sucre
+      38: Timbio
+      39: Timbiqui
+      40: Toribio
+      41: Totoro
+      42: 'Villa Rica'
+    '#title': 'Municipios Cauca'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '11'
+  municipios_cesar:
+    '#type': select
+    '#options':
+      1: Aguachica
+      2: 'Agustin Codazzi'
+      3: Astrea
+      4: Becerril
+      5: Bosconia
+      6: Chimichagua
+      7: Chiriguana
+      8: Curumani
+      9: 'El Copey'
+      10: 'El Paso'
+      11: Gamarra
+      12: Gonzalez
+      13: 'La Gloria'
+      14: 'La Jagua De Ibirico'
+      15: 'La Paz'
+      16: Manaure
+      17: Pailitas
+      18: Pelaya
+      19: 'Pueblo Bello'
+      20: 'Rio De Oro'
+      21: 'San Alberto'
+      22: 'San Diego'
+      23: 'San Martin'
+      24: Tamalameque
+      25: Valledupar
+    '#title': 'Municipios Cesar'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '12'
+  municipiox_choco:
+    '#type': select
+    '#options':
+      1: Acandi
+      2: 'Alto Baudo'
+      3: Atrato
+      4: Bagado
+      5: 'Bahia Solano'
+      6: 'Bajo Baudo'
+      7: Bojaya
+      8: Capurganá
+      9: 'Carmen Del Darien'
+      10: Certegui
+      11: Condoto
+      12: 'El Canton Del San Pablo'
+      13: 'El Carmen De Atrato'
+      14: 'El Litoral Del San Juan'
+      15: Istmina
+      16: Jurado
+      17: Lloro
+      18: 'Medio Atrato'
+      19: 'Medio Baudo'
+      20: 'Medio San Juan'
+      21: Novita
+      22: Nuqui
+      23: Quibdó
+      24: 'Rio Iro'
+      25: 'Rio Quito'
+      26: Riosucio
+      27: 'San Jose Del Palmar'
+      28: Sipi
+      29: Tadó
+      30: Unguia
+      31: 'Unión Panamericana'
+    '#title': 'Municipiox Chocó'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '13'
+  municipios_cordoba:
+    '#type': select
+    '#options':
+      1: Ayapel
+      2: Buenavista
+      3: Canalete
+      4: Cerete
+      5: Chima
+      6: Chinu
+      7: 'Ciénaga de Oro'
+      8: Cotorra
+      9: 'La Apartada'
+      10: Lorica
+      11: 'Los Cordobas'
+      12: Momil
+      13: Moñitos
+      14: Montelibano
+      15: Montería
+      16: 'Planeta Rica'
+      17: 'Pueblo Nuevo'
+      18: 'Puerto Escondido'
+      19: 'Puerto Libertador'
+      20: Purisima
+      21: Sahagun
+      22: 'San Andres Sotavento'
+      23: 'San Antero'
+      24: 'San Bernardo Del Viento'
+      25: 'San Carlos'
+      26: 'San Pelayo'
+      27: Tierralta
+      28: Valencia
+    '#title': 'Municipios Córdoba'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '14'
+  municipios_cundinamarca:
+    '#type': select
+    '#options':
+      1: 'Agua De Dios'
+      2: Alban
+      3: Anapoima
+      4: Anolaima
+      5: Apulo
+      6: Arbelaez
+      7: Beltrán
+      8: Bituima
+      9: Bojaca
+      10: Cabrera
+      11: Cachipay
+      12: Cajicá
+      13: Caparrapi
+      14: Caqueza
+      15: 'Carmen De Carupa'
+      16: Chaguani
+      17: Chía
+      18: Chipaque
+      19: Choachi
+      20: Chocontá
+      21: Cogua
+      22: Cota
+      23: Cucunubá
+      24: 'El Colegio'
+      25: 'El Peñon'
+      26: 'El Rosal'
+      27: Facatativá
+      28: Fomeque
+      29: Fosca
+      30: Funza
+      31: Fuquene
+      32: Fusagasugá
+      33: Gachala
+      34: Gachancipa
+      35: Gacheta
+      36: Gama
+      37: Girardot
+      38: Granada
+      39: Guacheta
+      40: Guaduas
+      41: Guasca
+      42: Guataqui
+      43: Guatavita
+      44: 'Guayabal De Siquima'
+      45: Guayabetal
+      46: Gutierrez
+      47: Jerusalén
+      48: Junin
+      49: 'La Calera'
+      50: 'La Mesa'
+      51: 'La Palma'
+      52: 'La Peña'
+      53: 'La Vega'
+      54: Lenguazaque
+      55: Macheta
+      56: Madrid
+      57: Manta
+      58: Medina
+      59: Mosquera
+      60: Nariño
+      61: Nemocón
+      62: Nilo
+      63: Nimaima
+      64: Nocaima
+      65: Pacho
+      66: Paime
+      67: Pandi
+      68: Paratebueno
+      69: Pasca
+      70: 'Puerto Salgar'
+      71: Puli
+      72: Quebradanegra
+      73: Quetame
+      74: Quipile
+      75: Ricaurte
+      76: 'San Antonio Del Tequendama'
+      77: 'San Bernardo'
+      78: 'San Cayetano'
+      79: 'San Francisco'
+      80: 'San Juan De Rio Seco'
+      81: Sasaima
+      82: Sesquile
+      83: Sibate
+      84: Silvania
+      85: Simijaca
+      86: Soacha
+      87: Sopo
+      88: Subachoque
+      89: Suesca
+      90: Supata
+      91: Susa
+      92: Sutatausa
+      93: Tabio
+      94: Tausa
+      95: Tena
+      96: Tenjo
+      97: Tibacuy
+      98: Tibirita
+      99: Tocaima
+      100: Tocancipá
+      101: Topaipi
+      102: Ubala
+      103: Ubaque
+      104: Une
+      105: Utica
+      106: Venecia
+      107: Vergara
+      108: Viani
+      109: 'Villa De San Diego De Ubate'
+      110: Villagomez
+      111: Villapinzon
+      112: Villeta
+      113: Viota
+      114: Yacopi
+      115: Zipacon
+      116: Zipaquirá
+    '#title': 'Municipios Cundinamarca'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '15'
+  municipios_guainia:
+    '#type': select
+    '#options':
+      1: 'Barranco Minas'
+      2: Cacahual
+      3: Inírida
+      4: 'La Guadalupe'
+      5: Mapiripana
+      6: Morichal
+      7: 'Pana Pana'
+      8: 'Puerto Colombia'
+      9: 'San Felipe'
+    '#title': 'Municipios Guainía'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '17'
+  municipios_guaviare:
+    '#type': select
+    '#options':
+      1: Calamar
+      2: 'El Retorno'
+      3: Miraflores
+      4: 'San José del Guaviare'
+    '#title': 'Municipios Guaviare'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '18'
+  municipios_la_guajira:
+    '#type': select
+    '#options':
+      1: Albania
+      2: Barrancas
+      3: Dibulla
+      4: Distraccion
+      5: 'El Molino'
+      6: Fonseca
+      7: Hatonuevo
+      8: 'La Jagua Del Pilar'
+      9: Maicao
+      10: Manaure
+      11: Riohacha
+      12: 'San Juan Del Cesar'
+      13: Uribía
+      14: Urumita
+      15: Villanueva
+    '#title': 'Municipios La Guajira'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '16'
+  municipios_huila:
+    '#type': select
+    '#options':
+      1: Acevedo
+      2: Agrado
+      3: Aipe
+      4: Algeciras
+      5: Altamira
+      6: Baraya
+      7: Campoalegre
+      8: Colombia
+      9: Elias
+      10: Garzón
+      11: Gigante
+      12: Guadalupe
+      13: Hobo
+      14: Iquira
+      15: Isnos
+      16: 'La Argentina'
+      17: 'La Plata'
+      18: Nataga
+      19: Neiva
+      20: Oporapa
+      21: Paicol
+      22: Palermo
+      23: Palestina
+      24: Pital
+      25: Pitalito
+      26: Rivera
+      27: Saladoblanco
+      28: 'San Agustín'
+      29: 'Santa Maria'
+      30: Suaza
+      31: Tarqui
+      32: Tello
+      33: Teruel
+      34: Tesalia
+      35: Timana
+      36: Villavieja
+      37: Yaguara
+    '#title': 'Municipios Huila'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '19'
+  municipios_magdalena:
+    '#type': select
+    '#options':
+      1: Algarrobo
+      2: Aracataca
+      3: Ariguani
+      4: 'Cerro San Antonio'
+      5: Chibolo
+      6: Cienaga
+      7: Concordia
+      8: 'El Banco'
+      9: 'El Piñon'
+      10: 'El Reten'
+      11: Fundacion
+      12: Guamal
+      13: 'Nueva Granada'
+      14: Pedraza
+      15: 'Pijiño Del Carmen'
+      16: Pivijay
+      17: Plato
+      18: Puebloviejo
+      19: Remolino
+      20: 'Sabanas De San Angel'
+      21: Salamina
+      22: 'San Sebastian De Buenavista'
+      23: 'San Zenon'
+      24: 'Santa Ana'
+      25: 'Santa Barbara De Pinto'
+      26: 'Santa Marta'
+      27: Sitionuevo
+      28: Tenerife
+      29: Zapayan
+      30: 'Zona Bananera'
+    '#title': 'Municipios Magdalena'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '20'
+  municipios_meta:
+    '#type': select
+    '#options':
+      1: Acacias
+      2: 'Barranca De Upia'
+      3: Cabuyaro
+      4: 'Castilla La Nueva'
+      5: Cubarral
+      6: Cumaral
+      7: 'El Calvario'
+      8: 'El Castillo'
+      9: 'El Dorado'
+      10: 'Fuente De Oro'
+      11: Granada
+      12: Guamal
+      13: 'La Macarena'
+      14: Lejanias
+      15: Mapiripán
+      16: Mesetas
+      17: 'Puerto Concordia'
+      18: 'Puerto Gaitán'
+      19: 'Puerto Lleras'
+      20: 'Puerto López'
+      21: 'Puerto Rico'
+      22: Restrepo
+      23: 'San Carlos De Guaroa'
+      24: 'San Juan De Arama'
+      25: 'San Juanito'
+      26: 'San Martin'
+      27: Uribe
+      28: Villavicencio
+      29: Vistahermosa
+    '#title': 'Municipios Meta'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '21'
+  municipios_narino:
+    '#type': select
+    '#options':
+      1: Alban
+      2: Aldana
+      3: Ancuya
+      4: Arboleda
+      5: Barbacoas
+      6: Belen
+      7: Buesaco
+      8: Chachagsi
+      9: Colon
+      10: Consaca
+      11: Contadero
+      12: Cordoba
+      13: Cuaspud
+      14: Cumbal
+      15: Cumbitara
+      16: 'El Charco'
+      17: 'El Peñol'
+      18: 'El Rosario'
+      19: 'El Tablon De Gomez'
+      20: 'El Tambo'
+      21: 'Francisco Pizarro'
+      22: Funes
+      23: Guachucal
+      24: Guaitarilla
+      25: Gualmatan
+      26: Iles
+      27: Imues
+      28: Ipiales
+      29: 'La Cruz'
+      30: 'La Florida'
+      31: 'La Llanada'
+      32: 'La Tola'
+      33: 'La Union'
+      34: Leiva
+      35: Linares
+      36: 'Los Andes'
+      37: Magsi
+      38: Mallama
+      39: Mosquera
+      40: Nariño
+      41: 'Olaya Herrera'
+      42: Ospina
+      43: Pasto
+      44: Policarpa
+      45: Potosi
+      46: Providencia
+      47: Puerres
+      48: Pupiales
+      49: Ricaurte
+      50: 'Roberto Payan'
+      51: Samaniego
+      52: 'San Andres De Tumaco'
+      53: 'San Bernardo'
+      54: 'San Lorenzo'
+      55: 'San Pablo'
+      56: 'San Pedro De Cartago'
+      57: Sandona
+      58: 'Santa Barbara'
+      59: Santacruz
+      60: Sapuyes
+      61: Taminango
+      62: Tangua
+      63: Tuquerres
+      64: Yacuanquer
+    '#title': 'Municipios Nariño'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '22'
+  municipios_norte_de_santander:
+    '#type': select
+    '#options':
+      1: Abrego
+      2: Arboledas
+      3: Bochalema
+      4: Bucarasica
+      5: Cachira
+      6: Cacota
+      7: Chinacota
+      8: Chitaga
+      9: Convencion
+      10: Cúcuta
+      11: Cucutilla
+      12: Durania
+      13: 'El Carmen'
+      14: 'El Tarra'
+      15: 'El Zulia'
+      16: Gramalote
+      17: Hacari
+      18: Herran
+      19: 'La Esperanza'
+      20: 'La Playa'
+      21: Labateca
+      22: 'Los Patios'
+      23: Lourdes
+      24: Mutiscua
+      25: Ocaña
+      26: Pamplona
+      27: Pamplonita
+      28: 'Puerto Santander'
+      29: Ragonvalia
+      30: Salazar
+      31: 'San Calixto'
+      32: 'San Cayetano'
+      33: Santiago
+      34: Sardinata
+      35: Silos
+      36: Teorama
+      37: Tibu
+      38: Toledo
+      39: 'Villa Caro'
+      40: 'Villa Del Rosario'
+    '#title': 'Municipios Norte de Santander'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '23'
+  municipios_putumayo:
+    '#type': select
+    '#options':
+      1: Colón
+      2: Leguizamo
+      3: Mocoa
+      4: Orito
+      5: 'Puerto Asis'
+      6: 'Puerto Caicedo'
+      7: 'Puerto Guzman'
+      8: 'San Francisco'
+      9: 'San Miguel'
+      10: Santiago
+      11: Sibundoy
+      12: 'Valle Del Guamuez'
+      13: Villagarzon
+    '#title': 'Municipios Putumayo'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '24'
+  municipios_quindio:
+    '#type': select
+    '#options':
+      1: Armenia
+      2: Buenavista
+      3: Calarcá
+      4: Circasia
+      5: Cordoba
+      6: Filandia
+      7: Genova
+      8: 'La Tebaida'
+      9: Montenegro
+      10: Pijao
+      11: Quimbaya
+      12: Salento
+    '#title': 'Municipios Quindío'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '25'
+  municipios_risaralda:
+    '#type': select
+    '#options':
+      1: Apia
+      2: Balboa
+      3: 'Belén de Umbría'
+      4: Dosquebradas
+      5: Guatica
+      6: 'La Celia'
+      7: 'La Virginia'
+      8: Marsella
+      9: Mistrato
+      10: Pereira
+      11: 'Pueblo Rico'
+      12: Quinchia
+      13: 'Santa Rosa de Cabal'
+      14: Santuario
+    '#title': 'Municipios Risaralda'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '26'
+  municipios_san_andres:
+    '#type': radios
+    '#options':
+      1: Providencia
+      2: 'San Andrés'
+    '#title': 'Municipios San Andrés'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '27'
+  municipios_santander:
+    '#type': select
+    '#options':
+      1: Aguada
+      2: Albania
+      3: Aratoca
+      4: Barbosa
+      5: Barichara
+      6: Barrancabermeja
+      7: Betulia
+      8: Bolivar
+      9: Bucaramanga
+      10: Cabrera
+      11: California
+      12: Capitanejo
+      13: Carcasi
+      14: Cepita
+      15: Cerrito
+      16: Charala
+      17: Charta
+      18: Chima
+      19: Chipata
+      20: Cimitarra
+      21: Concepcion
+      22: Confines
+      23: Contratacion
+      24: Coromoro
+      25: Curiti
+      26: 'El Carmen De Chucuri'
+      27: 'El Guacamayo'
+      28: 'El Peñon'
+      29: 'El Playon'
+      30: Encino
+      31: Enciso
+      32: Florian
+      33: Floridablanca
+      34: Galan
+      35: Gambita
+      36: Giron
+      37: Gsepsa
+      38: Guaca
+      39: Guadalupe
+      40: Guapota
+      41: Guavata
+      42: Hato
+      43: 'Jesus Maria'
+      44: Jordan
+      45: 'La Belleza'
+      46: 'La Paz'
+      47: Landazuri
+      48: Lebrija
+      49: 'Los Santos'
+      50: Macaravita
+      51: Malaga
+      52: Matanza
+      53: Mogotes
+      54: Molagavita
+      55: Ocamonte
+      56: Oiba
+      57: Onzaga
+      58: Palmar
+      59: 'Palmas Del Socorro'
+      60: Paramo
+      61: Piedecuesta
+      62: Pinchote
+      63: 'Puente Nacional'
+      64: 'Puerto Parra'
+      65: 'Puerto Wilches'
+      66: Rionegro
+      67: 'Sabana De Torres'
+      68: 'San Andres'
+      69: 'San Benito'
+      70: 'San Gil'
+      71: 'San Joaquin'
+      72: 'San Jose De Miranda'
+      73: 'San Miguel'
+      74: 'San Vicente De Chucuri'
+      75: 'Santa Barbara'
+      76: 'Santa Helena Del Opon'
+      77: Simacota
+      78: Socorro
+      79: Suaita
+      80: Sucre
+      81: Surata
+      82: Tona
+      83: 'Valle De San Jose'
+      84: Vélez
+      85: Vetas
+      86: Villanueva
+      87: Zapatoca
+    '#title': 'Municipios Santander'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '28'
+  municipios_sucre:
+    '#type': select
+    '#options':
+      1: Buenavista
+      2: Caimito
+      3: Chalan
+      4: Coloso
+      5: Corozal
+      6: Coveñas
+      7: 'El Roble'
+      8: Galeras
+      9: Guaranda
+      10: 'La Unión'
+      11: 'Los Palmitos'
+      12: Majagual
+      13: Morroa
+      14: Ovejas
+      15: Palmito
+      16: Sampues
+      17: 'San Benito Abad'
+      18: 'San Juan De Betulia'
+      19: 'San Luis De Since'
+      20: 'San Marcos'
+      21: 'San Onofre'
+      22: 'San Pedro'
+      23: 'Santiago De Tolu'
+      24: Sincelejo
+      25: Sucre
+      26: 'Tolu Viejo'
+    '#title': 'Municipios Sucre'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '29'
+  municipios_tolima:
+    '#type': select
+    '#options':
+      1: Alpujarra
+      2: Alvarado
+      3: Ambalema
+      4: Anzoategui
+      5: Armero
+      6: Ataco
+      7: Cajamarca
+      8: 'Cármen de Apicalá'
+      9: Casabianca
+      10: Chaparral
+      11: Coello
+      12: Coyaima
+      13: Cunday
+      14: Dolores
+      15: Espinal
+      16: Falan
+      17: Flandes
+      18: Fresno
+      19: Guamo
+      20: Herveo
+      21: Honda
+      22: Ibagué
+      23: Icononzo
+      24: Lerida
+      25: Libano
+      26: Mariquita
+      27: Melgar
+      28: Murillo
+      29: Natagaima
+      30: Ortega
+      31: Palocabildo
+      32: Piedras
+      33: Planadas
+      34: Prado
+      35: Purificacion
+      36: Rioblanco
+      37: Roncesvalles
+      38: Rovira
+      39: Saldaña
+      40: 'San Antonio'
+      41: 'San Luis'
+      42: 'Santa Isabel'
+      43: Suarez
+      44: 'Valle De San Juan'
+      45: Venadillo
+      46: Villahermosa
+      47: Villarrica
+    '#title': 'Municipios Tolima'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '30'
+  municipios_valle:
+    '#type': select
+    '#options':
+      1: Alcalá
+      2: Andalucia
+      3: Ansermanuevo
+      4: Argelia
+      5: Bolivar
+      6: Buenaventura
+      7: Bugalagrande
+      8: Caicedonia
+      9: Cali
+      10: Calima
+      11: Candelaria
+      12: Cartago
+      13: Dagua
+      14: 'El Aguila'
+      15: 'El Cairo'
+      16: 'El Cerrito'
+      17: 'El Dovio'
+      18: Florida
+      19: Ginebra
+      20: Guacari
+      21: 'Guadalajara De Buga'
+      22: Jamundi
+      23: 'La Cumbre'
+      24: 'La Union'
+      25: 'La Victoria'
+      26: Obando
+      27: Palmira
+      28: Pradera
+      29: Restrepo
+      30: Riofrio
+      31: Roldanillo
+      32: 'San Pedro'
+      33: Sevilla
+      34: Toro
+      35: Trujillo
+      36: Tulua
+      37: Ulloa
+      38: Versalles
+      39: Vijes
+      40: Yotoco
+      41: Yumbo
+      42: Zarzal
+    '#title': 'Municipios Valle'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '31'
+  municipios_vaupes:
+    '#type': select
+    '#options':
+      1: Caruru
+      2: Mitu
+      3: Pacoa
+      4: Papunaua
+      5: Taraira
+      6: Yavarate
+    '#title': 'Municipios Vaupés'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '32'
+  municipios_vichada:
+    '#type': select
+    '#options':
+      1: Cumaribo
+      2: 'La Primavera'
+      3: 'Puerto Carreño'
+      4: 'Santa Rosalia'
+    '#title': 'Municipios Vichada'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="direccion_regional"]':
+            value: '33'
+  programa_gcb:
+    '#type': radios
+    '#options':
+      1: 'Modalidad Étnica'
+      2: 'Modalidad Tradicional'
+      3: 'Modalidad Rural'
+    '#title': 'Programa GCB'
+    '#required': true
+  fieldset_evidencias:
+    '#type': fieldset
+    '#open': true
+    '#title': Evidencias
+    numero_actas_anexos_38:
+      '#type': textfield
+      '#size': 20
+      '#unique': false
+      '#title': 'Número de actas de control social que se anexan'
+    numero_fotografias_anexos_38:
+      '#type': textfield
+      '#size': 20
+      '#unique': false
+      '#title': 'Número de evidencias fotográficas que se anexan'
+    numero_listados_anexos_38:
+      '#type': textfield
+      '#size': 20
+      '#unique': false
+      '#title': 'Número de listados de asistencia que se anexan'
+    numero_total_ejercicios_realizados_38:
+      '#type': textfield
+      '#size': 20
+      '#unique': false
+      '#title': 'Número total de ejercicios de participación y control social realizados'
+  fieldset_participantes:
+    '#type': fieldset
+    '#open': true
+    '#title': Participantes
+    numero_ninas_participantes_42:
+      '#type': textfield
+      '#size': 20
+      '#unique': false
+      '#title': 'Número de Niñas y Adolescentes Participantes'
+    numero_nna_participantes_42:
+      '#type': textfield
+      '#size': 20
+      '#unique': false
+      '#title': 'Número de Niños y Adolescentes Participantes'
+    numero_mujeres_participantes_42:
+      '#type': textfield
+      '#size': 20
+      '#unique': false
+      '#title': 'Número de Mujeres Adultas Participantes'
+    numero_hombres_participantes_42:
+      '#type': textfield
+      '#size': 20
+      '#unique': false
+      '#title': 'Número de Hombres Adultos Participantes'
+    numero_total_participantes_42:
+      '#type': textfield
+      '#size': 20
+      '#unique': false
+      '#title': 'Número Total de Participantes'
+  observaciones:
+    '#type': textfield
+    '#title': Observaciones
+css: ''
+javascript: ''
+settings:
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: 'Gracias por completar el registro de Ejercicios de Participación y Control Social.'
+  limit_total: null
+  limit_user: null
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }

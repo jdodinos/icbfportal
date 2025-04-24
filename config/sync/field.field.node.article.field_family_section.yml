@@ -1,0 +1,26 @@
+uuid: 39f06ee5-c725-4ae1-837e-1e0be5b18066
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_family_section
+    - node.type.article
+    - taxonomy.vocabulary.para_papas
+id: node.article.field_family_section
+field_name: field_family_section
+entity_type: node
+bundle: article
+label: 'Sección en Familias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      para_papas: para_papas
+    sort:
+      field: _none
+field_type: entity_reference

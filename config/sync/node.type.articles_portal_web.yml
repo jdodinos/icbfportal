@@ -1,0 +1,30 @@
+uuid: 97e7d8ba-0618-450d-b0c8-0dde1763a0c0
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: true
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Articulos Secciones Portal'
+type: articles_portal_web
+description: 'Información hipertextual de las secciones del portal web'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,28 @@
+uuid: 613c6d88-c04f-4af6-aaa6-833af6049e23
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_policy_institution
+    - node.type.documentos_de_normativa
+    - taxonomy.vocabulary.entidad_titular
+id: node.documentos_de_normativa.field_policy_institution
+field_name: field_policy_institution
+entity_type: node
+bundle: documentos_de_normativa
+label: 'Entidad Titular'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    tid: '7840'
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      entidad_titular: entidad_titular
+    sort:
+      field: _none
+field_type: entity_reference

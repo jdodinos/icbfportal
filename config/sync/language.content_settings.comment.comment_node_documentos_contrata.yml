@@ -1,0 +1,11 @@
+uuid: 300c6c8f-9701-40e4-ac26-bf38d799d433
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_documentos_contrata
+id: comment.comment_node_documentos_contrata
+target_entity_type_id: comment
+target_bundle: comment_node_documentos_contrata
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,22 @@
+uuid: 9301be50-7118-4072-b44d-e36749a4f914
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resume
+    - node.type.notifications
+  module:
+    - text
+id: node.notifications.field_resume
+field_name: field_resume
+entity_type: node
+bundle: notifications
+label: Descripción
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

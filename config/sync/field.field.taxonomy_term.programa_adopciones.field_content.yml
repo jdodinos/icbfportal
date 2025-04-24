@@ -1,0 +1,22 @@
+uuid: 54d54853-fce0-4ba3-8e5b-763cfb393fc7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_content
+    - taxonomy.vocabulary.programa_adopciones
+  module:
+    - text
+id: taxonomy_term.programa_adopciones.field_content
+field_name: field_content
+entity_type: taxonomy_term
+bundle: programa_adopciones
+label: Contenido
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

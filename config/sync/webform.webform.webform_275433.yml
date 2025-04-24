@@ -1,0 +1,169 @@
+uuid: 8a5eabaa-06a0-4298-bef5-d49372fbd320
+langcode: es
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 6816
+template: false
+archive: false
+id: webform_275433
+title: 'Dialogo Ciudadano'
+description: null
+categories: {  }
+elements: |-
+  respuesta_usuario:
+    '#type': hidden
+    '#default_value': '[current-page:query:pRespuestaUsuario]'
+    '#title': 'Respuesta usuario'
+  numero_de_identificacion:
+    '#type': hidden
+    '#default_value': '[current-page:query:pNumeroIdentificacion]'
+    '#title': 'Numero de identificacion'
+  nombre_y_o_raz_n_social:
+    '#type': hidden
+    '#default_value': '[current-page:query:pNombre]'
+    '#title': 'Nombre y/o Razón Social'
+  correo_electr_nico:
+    '#type': hidden
+    '#default_value': '[current-page:query:pCorreo]'
+    '#title': 'Correo electrónico'
+  sistema_informaci_n:
+    '#type': hidden
+    '#title': 'Sistema Información'
+  identificaci_n_del_tr_mite:
+    '#type': hidden
+    '#default_value': '[current-page:query:pIdentificacionTramite]'
+    '#title': 'Identificación del trámite'
+  new_markup:
+    '#type': processed_text
+    '#format': full_html
+    '#text': |-
+      <h1>DIÁLOGO CIUDADANO PARA ESTABLECER IDONEIDAD EN TERNAS DE DIRECTORES REGIONALES</h1>
+      <p>Con el ánimo de conocer opiniones, propuestas y estrechar los vínculos con la ciudadanía, desde la Dirección General del ICBF se ha establecido un mecanismo de diálogo que permita conocer los intereses, expectativas y alertas que puedan tener lugar en relación con la elección de los directores regionales .</p>
+      <p>El diálogo ciudadano se llevará a cabo de forma virtual al igual que mediante buzones cerrados en las sedes de las direcciones regionales y centros zonales, de modo que  sea posible recoger las voces de todos y todas las personas que deseen participar en el proceso. </p>
+      <p>El diálogo ciudadano deberá ser comunicado y socializado a través de las regionales y centros zonales del ICBF y tendrá una duración de diez días hábiles; pasado este tiempo, la Dirección General del ICBF dispondrá de un mecanismo de análisis del diálogo que permita enriquecer la toma de decisiones para dar paso a las entrevistas en el proceso de selección de las ternas de candidatos para las direcciones regionales del ICBF. </p>
+      <p></p>
+  1_qu_tan_clara_le_pareci_la_informaci_n_del_tr_mite_:
+    '#type': radios
+    '#options':
+      1: "1.\tSoy un ciudadano interesado"
+      2: "2.\tSoy un funcionario del ICBF"
+      3: "3.\tSoy un beneficiario de servicios del ICBF"
+      "4.\tSoy parte del talento humano de algún operador del ICBF": "4.\tSoy parte del talento humano de algún operador del ICBF"
+      "5.\tSoy un operador del ICBF": "5.\tSoy un operador del ICBF"
+      "6.\tSoy un adolescente": "6.\tSoy un adolescente"
+    '#title': '1. Seleccione de acuerdo con su condición particular: '
+  2_pertenece_a_alguno_de_estos_grupos_tnicos_:
+    '#type': radios
+    '#options':
+      1: "1.\tIndígena"
+      2: "2.\tAfrocolombiano"
+      3: "3.\tRom"
+      "4.\tSoy parte del talento humano de algún operador del ICBF": "4.\tRaizal"
+      "5.\tSoy un operador del ICBF": "5.\tOtro, ¿cuál?"
+      "6.\tSoy un adolescente": "6.\tNinguno"
+    '#title': '2. Pertenece a alguno de estos grupos étnicos:'
+  2_en_qu_podemos_mejorar_el_tr_mite_:
+    '#type': textarea
+    '#title': 'Agregue su nombre'
+css: ''
+javascript: ''
+settings:
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: url
+  confirmation_url: encuestas/finalizada
+  confirmation_message: ''
+  limit_total: null
+  limit_user: null
+access:
+  create:
+    roles:
+      - abastecimiento
+      - admin_webforms
+      - administrador_funcional
+      - administrador_funcional_ajustado
+      - administrador_icbf
+      - administrador_infraestructura
+      - administrar_datos_niños_migrantes_venezolanos
+      - adopciones
+      - aseguramiento_calidad
+      - citaciones
+      - comunicaciones
+      - constructor_glazed_b
+      - contratación
+      - contratación_regionales
+      - convocatoria
+      - defensor_de_familia
+      - documentos
+      - documentos_micrositiios
+      - editor_contenidos_(vip)
+      - editor_micrositios
+      - editor_niños_y_niñas
+      - editor_transparencia
+      - encargos
+      - evaluación
+      - eventos_calendario
+      - gestion_humana
+      - información_transparencia
+      - jurídica
+      - mejoramiento_sige
+      - migracion
+      - noticias
+      - noticias_compras_locales
+      - notificaciones_coactivos
+      - observatorio_de_bienestar
+      - planeación
+      - regional_amazonas
+      - regional_antioquia
+      - regional_arauca
+      - regional_atlántico
+      - regional_bogotá
+      - regional_bolívar
+      - regional_boyacá
+      - regional_caldas
+      - regional_caquetá
+      - regional_casanare
+      - regional_cauca
+      - regional_cesar
+      - regional_chocó
+      - regional_córdoba
+      - regional_cundinamarca
+      - regional_guainía
+      - regional_guaviare
+      - regional_huila
+      - regional_la_guajira
+      - regional_magdalena
+      - regional_meta
+      - regional_nariño
+      - regional_norte_de_santander
+      - regional_putumayo
+      - regional_quindio
+      - regional_risaralda
+      - regional_san_andres
+      - regional_santander
+      - regional_sucre
+      - regional_tolima
+      - regional_valle
+      - regional_vaupés
+      - regional_vichada
+      - rendición_de_cuentas
+      - rol_1
+      - sede_dirección_general
+      - 'servicios_(docs_-_derechos_peticion,_puntos_atencion)'
+      - servicios_(portafolio)
+      - transparencia_contenidos
+      - anonymous
+      - authenticated
+      - web_master
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }

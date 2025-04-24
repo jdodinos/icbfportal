@@ -1,0 +1,14 @@
+uuid: 4f73700d-6811-4b07-a71d-8b821bc470d5
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.informacion_transparencia
+  module:
+    - user
+id: user_remove_role_action.informacion_transparencia
+label: 'Elimina el rol Información Transparencia al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: informacion_transparencia

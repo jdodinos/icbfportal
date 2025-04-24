@@ -1,0 +1,8 @@
+uuid: f8fc5cfc-61ab-46b2-b017-9cd998069ace
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_sede_local
+label: 'Punto de Atención comment'
+target_entity_type_id: node
+description: null

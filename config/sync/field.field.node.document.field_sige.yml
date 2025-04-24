@@ -1,0 +1,26 @@
+uuid: ec0a6264-f8e5-4c1d-9f86-bb9d55e78190
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sige
+    - node.type.document
+    - taxonomy.vocabulary.sige
+id: node.document.field_sige
+field_name: field_sige
+entity_type: node
+bundle: document
+label: SIGE
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      sige: sige
+    sort:
+      field: _none
+field_type: entity_reference

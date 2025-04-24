@@ -1,0 +1,20 @@
+uuid: b2cba640-c861-4525-8718-b9fbb5419ff9
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 97tvtzGOa8_flb22CzSjgtm_YkiGMHvEBO-6q2K9V_U
+id: node_search
+label: Contenido
+path: node
+weight: -10
+plugin: node_search
+configuration:
+  rankings:
+    comments: 5
+    promote: 4
+    relevance: 0
+    sticky: 3
+    views: 1

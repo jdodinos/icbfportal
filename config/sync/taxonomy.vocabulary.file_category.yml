@@ -1,0 +1,9 @@
+uuid: a334f71e-bf74-451c-b86d-16aa4d582a94
+langcode: es
+status: true
+dependencies: {  }
+name: 'Categoría archivo'
+vid: file_category
+description: null
+weight: -5
+new_revision: false

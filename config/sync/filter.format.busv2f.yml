@@ -1,0 +1,18 @@
+uuid: 6e9666c6-3af0-415b-9d50-49c5e132f4eb
+langcode: es
+status: false
+dependencies:
+  module:
+    - slick
+name: busv2f
+format: busv2f
+weight: 0
+filters:
+  slick_filter:
+    id: slick_filter
+    provider: slick
+    status: false
+    weight: 4
+    settings:
+      optionset: default
+      media_switch: ''

@@ -1,0 +1,26 @@
+uuid: e16f3bd2-8c8b-4e3e-b0e2-0c682425bbdd
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_trimester
+    - node.type.transparency
+    - taxonomy.vocabulary.periodicity
+id: node.transparency.field_trimester
+field_name: field_trimester
+entity_type: node
+bundle: transparency
+label: Periodicidad
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      periodicity: periodicity
+    sort:
+      field: _none
+field_type: entity_reference

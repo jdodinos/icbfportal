@@ -1,0 +1,19 @@
+uuid: 49eaa41c-3ccd-4be8-870a-89f04a33afd8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_person_degree
+    - node.type.persona
+id: node.persona.field_person_degree
+field_name: field_person_degree
+entity_type: node
+bundle: persona
+label: Grado
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

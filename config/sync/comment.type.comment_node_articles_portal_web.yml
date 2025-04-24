@@ -1,0 +1,8 @@
+uuid: 65872238-2a26-4c77-acc6-84381af2affd
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_articles_portal_web
+label: 'Articulos Secciones Portal comment'
+target_entity_type_id: node
+description: null

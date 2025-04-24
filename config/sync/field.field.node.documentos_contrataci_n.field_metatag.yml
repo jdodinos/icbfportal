@@ -1,0 +1,21 @@
+uuid: 6c020a96-f32a-4cc9-831d-36f9b7cda4af
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.documentos_contrataci_n
+  module:
+    - metatag
+id: node.documentos_contrataci_n.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: documentos_contrataci_n
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

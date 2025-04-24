@@ -1,0 +1,9 @@
+uuid: 4103d4cd-27c3-47c8-893d-5e2de896b90a
+langcode: es
+status: true
+dependencies: {  }
+name: 'Grupo proceso SIGE'
+vid: sige_process_type
+description: null
+weight: 6
+new_revision: false

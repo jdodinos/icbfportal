@@ -1,0 +1,21 @@
+uuid: 90a95258-6b15-4b8d-b5ac-430948ecd16d
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.transparency
+  module:
+    - node
+    - system
+id: informacion_transparencia
+label: 'Información Transparencia'
+weight: 25
+is_admin: null
+permissions:
+  - 'access content'
+  - 'create transparency content'
+  - 'delete any transparency content'
+  - 'delete own transparency content'
+  - 'edit any transparency content'
+  - 'edit own transparency content'
+  - 'view the administration theme'

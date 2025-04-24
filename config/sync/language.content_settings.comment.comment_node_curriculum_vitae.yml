@@ -1,0 +1,11 @@
+uuid: 92176ab1-f4c8-4989-a39b-a1d03f8b334f
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_curriculum_vitae
+id: comment.comment_node_curriculum_vitae
+target_entity_type_id: comment
+target_bundle: comment_node_curriculum_vitae
+default_langcode: site_default
+language_alterable: false

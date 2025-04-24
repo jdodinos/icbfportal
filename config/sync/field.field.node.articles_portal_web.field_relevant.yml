@@ -1,0 +1,21 @@
+uuid: b731226b-ea7e-4934-bb8f-5d20f1fd69b3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_relevant
+    - node.type.articles_portal_web
+  module:
+    - options
+id: node.articles_portal_web.field_relevant
+field_name: field_relevant
+entity_type: node
+bundle: articles_portal_web
+label: Relevancia
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

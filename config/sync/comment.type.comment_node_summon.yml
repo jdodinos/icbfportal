@@ -1,0 +1,8 @@
+uuid: 660a64ba-5ed5-4deb-af51-62871d3ff19a
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_summon
+label: 'Citación comment'
+target_entity_type_id: node
+description: null

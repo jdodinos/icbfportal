@@ -1,0 +1,208 @@
+uuid: 3def6d15-7d9a-4912-844c-baac7d6c196e
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_articles_iin.default
+    - field.field.node.articles_iin.comment_node_articles_iin
+    - field.field.node.articles_iin.field_contact_email
+    - field.field.node.articles_iin.field_content_article
+    - field.field.node.articles_iin.field_content_type_iin
+    - field.field.node.articles_iin.field_date
+    - field.field.node.articles_iin.field_document
+    - field.field.node.articles_iin.field_file_categoria
+    - field.field.node.articles_iin.field_images
+    - field.field.node.articles_iin.field_label_iin
+    - field.field.node.articles_iin.field_link_more_info
+    - field.field.node.articles_iin.field_list_image
+    - field.field.node.articles_iin.field_lugar
+    - field.field.node.articles_iin.field_metatag
+    - field.field.node.articles_iin.field_multimedia
+    - field.field.node.articles_iin.field_phone_contact
+    - field.field.node.articles_iin.field_profile_photo1
+    - field.field.node.articles_iin.field_resume
+    - field.field.node.articles_iin.field_seccion_micrositio_xxii
+    - field.field.node.articles_iin.field_youtube
+    - node.type.articles_iin
+  module:
+    - comment
+    - datetime
+    - file
+    - image
+    - options
+    - text
+    - user
+    - youtube
+id: node.articles_iin.default
+targetEntityType: node
+bundle: articles_iin
+mode: default
+content:
+  comment_node_articles_iin:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_contact_email:
+    type: email_mailto
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_content_article:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_content_type_iin:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_date:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_document:
+    type: file_default
+    label: inline
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_file_categoria:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_images:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_label_iin:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_link_more_info:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_list_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_lugar:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_multimedia:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_phone_contact:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_profile_photo1:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_resume:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_seccion_micrositio_xxii:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_youtube:
+    type: youtube_video
+    label: hidden
+    settings:
+      youtube_size: 420x315
+      youtube_width: null
+      youtube_height: null
+      youtube_autoplay: false
+      youtube_mute: false
+      youtube_loop: false
+      youtube_controls: false
+      youtube_autohide: false
+      youtube_iv_load_policy: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_metatag: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

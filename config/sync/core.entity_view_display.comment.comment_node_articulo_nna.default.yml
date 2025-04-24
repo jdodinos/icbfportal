@@ -1,0 +1,30 @@
+uuid: 4c7976bc-918b-4d20-8227-ce40a43a34e6
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_articulo_nna
+    - field.field.comment.comment_node_articulo_nna.comment_body
+  module:
+    - text
+id: comment.comment_node_articulo_nna.default
+targetEntityType: comment
+bundle: comment_node_articulo_nna
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

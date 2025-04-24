@@ -1,0 +1,22 @@
+uuid: 428e4c19-c788-4200-b63c-d406f6d2bc9f
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_documentos_contrata
+    - field.storage.comment.comment_body
+  module:
+    - text
+id: comment.comment_node_documentos_contrata.comment_body
+field_name: comment_body
+entity_type: comment
+bundle: comment_node_documentos_contrata
+label: Comment
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

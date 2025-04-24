@@ -1,0 +1,8 @@
+uuid: c855fe10-7682-4089-872c-329dbf112788
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_curriculum_vitae
+label: 'Hoja de Vida comment'
+target_entity_type_id: node
+description: null

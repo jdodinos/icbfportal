@@ -1,0 +1,11 @@
+uuid: 8fb69d63-fa28-421c-b665-f2945fa26f4a
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_acta_contentiva
+id: comment.comment_node_acta_contentiva
+target_entity_type_id: comment
+target_bundle: comment_node_acta_contentiva
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,25 @@
+uuid: 31864668-47ae-46b0-97a9-d3385dc203cb
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_announcement
+    - node.type.announcement
+  module:
+    - text
+id: node.announcement.field_content_announcement
+field_name: field_content_announcement
+entity_type: node
+bundle: announcement
+label: 'Contenido genérico'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: "Importante:<br />\r\nEs indispensable diligenciar las dos páginas del formulario Único de Inscripción, de lo contrario no se tendrá en cuenta su registro."
+    format: full_html
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

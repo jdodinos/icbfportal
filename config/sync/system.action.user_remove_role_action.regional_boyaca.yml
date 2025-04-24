@@ -1,0 +1,14 @@
+uuid: 102bf797-5316-45b0-8e23-4e16da524684
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.regional_boyaca
+  module:
+    - user
+id: user_remove_role_action.regional_boyaca
+label: 'Elimina el rol Regional Boyacá al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: regional_boyaca

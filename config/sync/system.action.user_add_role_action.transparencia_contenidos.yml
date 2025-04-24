@@ -1,0 +1,14 @@
+uuid: 6d216235-e607-4cb9-86b3-96ab567060b4
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.transparencia_contenidos
+  module:
+    - user
+id: user_add_role_action.transparencia_contenidos
+label: 'Añade el rol Transparencia Contenidos al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: transparencia_contenidos

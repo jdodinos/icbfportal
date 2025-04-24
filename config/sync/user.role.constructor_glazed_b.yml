@@ -1,0 +1,27 @@
+uuid: 67da7d87-de82-4488-a8ab-ce090c89aaeb
+langcode: es
+status: true
+dependencies:
+  config:
+    - filter.format.clean
+    - filter.format.full_html
+  module:
+    - filter
+    - node
+    - publishcontent
+    - scheduler
+    - system
+id: constructor_glazed_b
+label: 'Constructor Glazed B'
+weight: 14
+is_admin: null
+permissions:
+  - 'access content'
+  - 'publish any content'
+  - 'schedule publishing of nodes'
+  - 'unpublish editable content'
+  - 'use text format clean'
+  - 'use text format full_html'
+  - 'view own unpublished content'
+  - 'view scheduled content'
+  - 'view the administration theme'

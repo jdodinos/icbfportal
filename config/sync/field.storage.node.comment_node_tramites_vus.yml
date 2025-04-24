@@ -1,0 +1,20 @@
+uuid: b85386e8-9206-49af-806f-d65e5353ed5f
+langcode: es
+status: true
+dependencies:
+  module:
+    - comment
+    - node
+id: node.comment_node_tramites_vus
+field_name: comment_node_tramites_vus
+entity_type: node
+type: comment
+settings:
+  comment_type: comment_node_tramites_vus
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,8 @@
+uuid: 11af1f1b-bef1-4acf-ac14-bb9767fadc5c
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_documento_en_constr
+label: 'Documento en Construccion comment'
+target_entity_type_id: node
+description: null

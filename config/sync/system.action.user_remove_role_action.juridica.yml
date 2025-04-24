@@ -1,0 +1,14 @@
+uuid: 86db0843-1e2e-4a11-9e5c-10d32d180416
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.juridica
+  module:
+    - user
+id: user_remove_role_action.juridica
+label: 'Elimina el rol Jurídica al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: juridica

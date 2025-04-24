@@ -1,0 +1,21 @@
+uuid: 9c587306-56eb-4301-81e4-d9d7f99e0ff2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_type_iin
+    - node.type.photo_gallery2_event
+  module:
+    - options
+id: node.photo_gallery2_event.field_content_type_iin
+field_name: field_content_type_iin
+entity_type: node
+bundle: photo_gallery2_event
+label: 'Contenido IIN'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

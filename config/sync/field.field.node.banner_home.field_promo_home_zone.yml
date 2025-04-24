@@ -1,0 +1,21 @@
+uuid: bda7e26c-f3ac-4c6c-b758-d0d85bfb85e4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promo_home_zone
+    - node.type.banner_home
+  module:
+    - options
+id: node.banner_home.field_promo_home_zone
+field_name: field_promo_home_zone
+entity_type: node
+bundle: banner_home
+label: 'Zona en Home'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

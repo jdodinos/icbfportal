@@ -1,0 +1,8 @@
+uuid: 602359f4-3d8b-480e-ad64-0cd043c55a2a
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_acta_contentiva
+label: 'Acta Contentiva comment'
+target_entity_type_id: node
+description: null

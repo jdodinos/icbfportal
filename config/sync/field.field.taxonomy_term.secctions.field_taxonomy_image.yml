@@ -1,0 +1,35 @@
+uuid: ccc2032b-da1e-4eb6-8b2a-81480ab52aa9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_taxonomy_image
+    - taxonomy.vocabulary.secctions
+  module:
+    - image
+id: taxonomy_term.secctions.field_taxonomy_image
+field_name: field_taxonomy_image
+entity_type: taxonomy_term
+bundle: secctions
+label: 'Imagen representa la sección'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image: 0
+  caption_field: false
+  caption_field_required: false
+field_type: image

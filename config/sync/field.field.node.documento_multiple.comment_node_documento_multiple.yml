@@ -1,0 +1,33 @@
+uuid: 570e351b-5830-46b5-9739-83b08ebe3463
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.comment_node_documento_multiple
+    - node.type.documento_multiple
+  module:
+    - comment
+id: node.documento_multiple.comment_node_documento_multiple
+field_name: comment_node_documento_multiple
+entity_type: node
+bundle: documento_multiple
+label: Comments
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    status: 1
+    cid: 0
+    last_comment_timestamp: 0
+    last_comment_name: null
+    last_comment_uid: 0
+    comment_count: 0
+default_value_callback: ''
+settings:
+  default_mode: 0
+  per_page: 10
+  anonymous: 0
+  form_location: false
+  preview: 0
+field_type: comment

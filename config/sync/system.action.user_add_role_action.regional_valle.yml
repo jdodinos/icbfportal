@@ -1,0 +1,14 @@
+uuid: 6048d46b-7750-43f6-95f7-64300727d091
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.regional_valle
+  module:
+    - user
+id: user_add_role_action.regional_valle
+label: 'Añade el rol Regional Valle al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: regional_valle

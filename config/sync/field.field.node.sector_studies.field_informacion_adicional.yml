@@ -1,0 +1,22 @@
+uuid: 94b29546-e595-4255-afb2-e341f7fc7028
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_informacion_adicional
+    - node.type.sector_studies
+  module:
+    - text
+id: node.sector_studies.field_informacion_adicional
+field_name: field_informacion_adicional
+entity_type: node
+bundle: sector_studies
+label: 'Información adicional'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

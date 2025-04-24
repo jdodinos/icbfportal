@@ -1,0 +1,156 @@
+uuid: 049ca36d-ccdc-4018-92ea-2b9e6f12cab0
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_instituciones_adopc.default
+    - field.field.node.instituciones_adopciones.comment_node_instituciones_adopc
+    - field.field.node.instituciones_adopciones.field_address_col
+    - field.field.node.instituciones_adopciones.field_address_world
+    - field.field.node.instituciones_adopciones.field_board
+    - field.field.node.instituciones_adopciones.field_colombian_phone
+    - field.field.node.instituciones_adopciones.field_contact_email
+    - field.field.node.instituciones_adopciones.field_countries_adopt
+    - field.field.node.instituciones_adopciones.field_document
+    - field.field.node.instituciones_adopciones.field_email
+    - field.field.node.instituciones_adopciones.field_icon
+    - field.field.node.instituciones_adopciones.field_link_more_info
+    - field.field.node.instituciones_adopciones.field_lugar
+    - field.field.node.instituciones_adopciones.field_metatag
+    - field.field.node.instituciones_adopciones.field_phone
+    - field.field.node.instituciones_adopciones.field_representante_en_colombia
+    - node.type.instituciones_adopciones
+  module:
+    - comment
+    - file
+    - image
+    - options
+    - text
+    - user
+id: node.instituciones_adopciones.default
+targetEntityType: node
+bundle: instituciones_adopciones
+mode: default
+content:
+  comment_node_instituciones_adopc:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_address_col:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_address_world:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_board:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_colombian_phone:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_contact_email:
+    type: email_mailto
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_countries_adopt:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_document:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_email:
+    type: email_mailto
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_icon:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_link_more_info:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_lugar:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_phone:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_representante_en_colombia:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_metatag: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

@@ -1,0 +1,14 @@
+uuid: 51095e6e-6fc5-41e9-81a4-4a28ed346bd6
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.web_master
+  module:
+    - user
+id: user_remove_role_action.web_master
+label: 'Elimina el rol Web Master al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: web_master

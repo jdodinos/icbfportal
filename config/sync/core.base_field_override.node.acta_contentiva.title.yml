@@ -1,0 +1,18 @@
+uuid: a7fa0f8d-76be-461f-9c00-3d11404a0a94
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.acta_contentiva
+id: node.acta_contentiva.title
+field_name: title
+entity_type: node
+bundle: acta_contentiva
+label: Título
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

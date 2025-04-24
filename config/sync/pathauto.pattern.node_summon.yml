@@ -1,0 +1,21 @@
+uuid: 3d7cf92f-b7ba-4013-a868-7e821862468c
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node_summon
+label: 'Contenido - Citación'
+type: 'canonical_entities:node'
+pattern: 'citaciones/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      summon: summon
+selection_logic: and
+weight: 0
+relationships: {  }

@@ -1,0 +1,28 @@
+uuid: e7f334f2-5dd5-47d1-97bf-3bb0c748d228
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: true
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Derechos de petición'
+type: petition_rights
+description: 'Publicaciones Ley 1755 de 2015 - Servicios y Atención a la Ciudadanía'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

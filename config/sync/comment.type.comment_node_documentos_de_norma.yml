@@ -1,0 +1,8 @@
+uuid: f67150ef-8399-403c-a8ca-c476f0525646
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_documentos_de_norma
+label: 'Documentos de Normativa comment'
+target_entity_type_id: node
+description: null

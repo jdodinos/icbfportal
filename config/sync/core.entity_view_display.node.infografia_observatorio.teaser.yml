@@ -1,0 +1,49 @@
+uuid: 23919aa3-7089-4d99-a2b0-2957553f484e
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.infografia_observatorio.body
+    - field.field.node.infografia_observatorio.comment_node_infografia_observat
+    - field.field.node.infografia_observatorio.field_date
+    - field.field.node.infografia_observatorio.field_document
+    - field.field.node.infografia_observatorio.field_file_categoria
+    - field.field.node.infografia_observatorio.field_list_image
+    - field.field.node.infografia_observatorio.field_metatag
+    - field.field.node.infografia_observatorio.field_resume
+    - field.field.node.infografia_observatorio.field_section
+    - node.type.infografia_observatorio
+  module:
+    - text
+    - user
+id: node.infografia_observatorio.teaser
+targetEntityType: node
+bundle: infografia_observatorio
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment_node_infografia_observat: true
+  field_date: true
+  field_document: true
+  field_file_categoria: true
+  field_list_image: true
+  field_metatag: true
+  field_resume: true
+  field_section: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

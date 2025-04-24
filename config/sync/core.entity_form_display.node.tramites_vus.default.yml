@@ -1,0 +1,240 @@
+uuid: bff44d85-768b-43fc-b8e2-a8cfb0afc9ca
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.tramites_vus.comment_node_tramites_vus
+    - field.field.node.tramites_vus.field_category_citizen
+    - field.field.node.tramites_vus.field_document
+    - field.field.node.tramites_vus.field_icon
+    - field.field.node.tramites_vus.field_link_app
+    - field.field.node.tramites_vus.field_link_more_info
+    - field.field.node.tramites_vus.field_link_nomasfilas
+    - field.field.node.tramites_vus.field_link_portfolio_dsya
+    - field.field.node.tramites_vus.field_link_videotutorial
+    - field.field.node.tramites_vus.field_list_image
+    - field.field.node.tramites_vus.field_metatag
+    - field.field.node.tramites_vus.field_priority
+    - field.field.node.tramites_vus.field_procedure_type
+    - field.field.node.tramites_vus.field_tooltip
+    - node.type.tramites_vus
+  module:
+    - comment
+    - field_group
+    - file
+    - metatag
+    - path
+    - term_reference_tree
+    - text
+third_party_settings:
+  field_group:
+    group_links_related:
+      children:
+        - field_document
+        - field_link_app
+        - field_link_nomasfilas
+        - field_link_more_info
+        - field_link_portfolio_dsya
+        - field_link_videotutorial
+      label: Enlaces
+      region: content
+      parent_name: ''
+      weight: 10
+      format_type: fieldset
+      format_settings:
+        classes: 'group-links-related field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+    group_references:
+      children:
+        - field_procedure_type
+        - field_priority
+        - field_category_citizen
+      label: Referencias
+      region: content
+      parent_name: ''
+      weight: 16
+      format_type: fieldset
+      format_settings:
+        classes: 'group-references field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+id: node.tramites_vus.default
+targetEntityType: node
+bundle: tramites_vus
+mode: default
+content:
+  comment_node_tramites_vus:
+    type: comment_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_category_citizen:
+    type: term_reference_tree
+    weight: 4
+    region: content
+    settings:
+      start_minimized: true
+      leaves_only: false
+      select_parents: false
+      cascading_selection: 0
+      max_depth: 0
+    third_party_settings: {  }
+  field_document:
+    type: file_generic
+    weight: 8
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_icon:
+    type: file_generic
+    weight: 4
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_link_app:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 120
+      placeholder: ''
+    third_party_settings: {  }
+  field_link_more_info:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 120
+      placeholder: ''
+    third_party_settings: {  }
+  field_link_nomasfilas:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_link_portfolio_dsya:
+    type: string_textfield
+    weight: 12
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_link_videotutorial:
+    type: string_textfield
+    weight: 13
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_list_image:
+    type: file_generic
+    weight: 3
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 121
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
+    third_party_settings: {  }
+  field_priority:
+    type: number
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_procedure_type:
+    type: options_buttons
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_tooltip:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  publish_on: true
+  unpublish_on: true

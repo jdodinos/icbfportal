@@ -1,0 +1,16 @@
+uuid: 0bfce73e-6103-4f29-b185-59ddfe472ec4
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_glosario
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: comment.comment_node_glosario
+target_entity_type_id: comment
+target_bundle: comment_node_glosario
+default_langcode: current_interface
+language_alterable: true

@@ -1,0 +1,23 @@
+uuid: 056fd797-31b3-4439-b4fb-0ac38bf34125
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_link_mte
+    - node.type.articulo_mis_manos_te_ensenan
+  module:
+    - link
+id: node.articulo_mis_manos_te_ensenan.field_related_link_mte
+field_name: field_related_link_mte
+entity_type: node
+bundle: articulo_mis_manos_te_ensenan
+label: 'Enlace a referenciar'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

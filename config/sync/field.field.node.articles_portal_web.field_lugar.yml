@@ -1,0 +1,26 @@
+uuid: 79310831-cf70-4c9f-b647-8f834bb00abd
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lugar
+    - node.type.articles_portal_web
+    - taxonomy.vocabulary.departments_municipalities
+id: node.articles_portal_web.field_lugar
+field_name: field_lugar
+entity_type: node
+bundle: articles_portal_web
+label: Lugar
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      departments_municipalities: departments_municipalities
+    sort:
+      field: _none
+field_type: entity_reference

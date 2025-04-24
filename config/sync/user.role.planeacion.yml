@@ -1,0 +1,62 @@
+uuid: ff87c24b-c650-4570-a2bb-3ec39176f494
+langcode: es
+status: true
+dependencies:
+  config:
+    - filter.format.clean
+    - filter.format.full_html
+    - node.type.articles_portal_web
+    - node.type.document
+    - node.type.monitoreo_gesti_n
+    - node.type.transparency
+  module:
+    - field_permissions
+    - filter
+    - node
+    - publishcontent
+    - scheduler
+    - system
+id: planeacion
+label: Planeación
+weight: 27
+is_admin: null
+permissions:
+  - 'access content'
+  - 'access content overview'
+  - 'create articles_portal_web content'
+  - 'create document content'
+  - 'create field_creation_date'
+  - 'create field_documents_transparency'
+  - 'create field_field_documents_trans_word'
+  - 'create monitoreo_gesti_n content'
+  - 'create transparency content'
+  - 'delete any monitoreo_gesti_n content'
+  - 'delete own articles_portal_web content'
+  - 'delete own document content'
+  - 'delete own monitoreo_gesti_n content'
+  - 'delete own transparency content'
+  - 'edit any articles_portal_web content'
+  - 'edit any monitoreo_gesti_n content'
+  - 'edit any transparency content'
+  - 'edit field_creation_date'
+  - 'edit field_documents_transparency'
+  - 'edit field_field_documents_trans_word'
+  - 'edit own articles_portal_web content'
+  - 'edit own document content'
+  - 'edit own field_creation_date'
+  - 'edit own field_documents_transparency'
+  - 'edit own field_field_documents_trans_word'
+  - 'edit own monitoreo_gesti_n content'
+  - 'edit own transparency content'
+  - 'schedule publishing of nodes'
+  - 'unpublish editable content'
+  - 'use text format clean'
+  - 'use text format full_html'
+  - 'view field_creation_date'
+  - 'view field_documents_transparency'
+  - 'view own field_creation_date'
+  - 'view own field_documents_transparency'
+  - 'view own field_field_documents_trans_word'
+  - 'view own unpublished content'
+  - 'view scheduled content'
+  - 'view the administration theme'

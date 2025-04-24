@@ -1,0 +1,22 @@
+uuid: 86d097fd-2b49-48b3-a432-3f7ca687c4ca
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nna_content
+    - node.type.articulo_nna
+  module:
+    - text
+id: node.articulo_nna.field_nna_content
+field_name: field_nna_content
+entity_type: node
+bundle: articulo_nna
+label: 'Contenido para Niños'
+description: 'contenido hipertexto del post micrositio NNA'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

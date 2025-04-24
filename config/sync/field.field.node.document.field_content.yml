@@ -1,0 +1,22 @@
+uuid: 94d4f569-c94b-4625-bb04-24943f9e6817
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.document
+  module:
+    - text
+id: node.document.field_content
+field_name: field_content
+entity_type: node
+bundle: document
+label: Contenido
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,18 @@
+uuid: 272765ea-e378-4384-b737-f87083946000
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.banner_home
+id: node.banner_home.title
+field_name: title
+entity_type: node
+bundle: banner_home
+label: Título
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

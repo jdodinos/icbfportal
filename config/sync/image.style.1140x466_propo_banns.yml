@@ -1,0 +1,15 @@
+uuid: 994d28d5-fe32-450c-8300-cbb2046fb012
+langcode: es
+status: true
+dependencies: {  }
+name: 1140x466_propo_banns
+label: '1140x466 Propo Banns'
+effects:
+  5046e290-0f42-4d86-a602-e6df53abaea4:
+    uuid: 5046e290-0f42-4d86-a602-e6df53abaea4
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1140
+      height: 466
+      anchor: center-center

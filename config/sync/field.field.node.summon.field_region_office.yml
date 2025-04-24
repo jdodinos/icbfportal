@@ -1,0 +1,26 @@
+uuid: e2fa2b52-3896-43ea-a8fa-fbfa7d313444
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_region_office
+    - node.type.summon
+    - taxonomy.vocabulary.locations
+id: node.summon.field_region_office
+field_name: field_region_office
+entity_type: node
+bundle: summon
+label: Regional
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      locations: locations
+    sort:
+      field: _none
+field_type: entity_reference

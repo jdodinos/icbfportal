@@ -1,0 +1,52 @@
+uuid: 57117d78-0a8d-4466-a24f-44a29ebf8345
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_post_document_plus
+    - node.type.article
+    - paragraphs.paragraphs_type.post_document_plus
+  module:
+    - entity_reference_revisions
+id: node.article.field_post_document_plus
+field_name: field_post_document_plus
+entity_type: node
+bundle: article
+label: 'Documentos de Artículo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      post_document_plus: post_document_plus
+    negate: 0
+    target_bundles_drag_drop:
+      bookpost_group:
+        weight: 2
+        enabled: false
+      children_defendant:
+        weight: 3
+        enabled: false
+      enlaces_referidos:
+        weight: 4
+        enabled: false
+      glazed_content_design:
+        weight: 5
+        enabled: false
+      local_staff_list:
+        weight: 6
+        enabled: false
+      multimedia_collection:
+        weight: 7
+        enabled: false
+      post_document_plus:
+        weight: 1
+        enabled: true
+      summoned:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,27 @@
+uuid: 6a1f1d1e-b358-4825-9400-dd1efb6867ec
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_multimedia_complement
+    - taxonomy.vocabulary.secctions
+  module:
+    - file
+id: taxonomy_term.secctions.field_multimedia_complement
+field_name: field_multimedia_complement
+entity_type: taxonomy_term
+bundle: secctions
+label: 'Imágen, Audio, Vídeo complementarios'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'wma mp3 mp4 gp3 wmv mpeg jpeg png jpg gif'
+  max_filesize: ''
+  description_field: true
+field_type: file

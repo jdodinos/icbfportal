@@ -1,0 +1,7 @@
+uuid: 3ff748f7-6203-40e4-aca6-c7221281615d
+langcode: es
+status: true
+dependencies: {  }
+formId: comment_node_hiring_process_form
+captchaType: captcha/default
+label: comment_node_hiring_process_form

@@ -1,0 +1,22 @@
+uuid: 35b58bcb-cf57-47a9-bd67-6364be44e444
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_infografia_observat
+    - field.storage.comment.comment_body
+  module:
+    - text
+id: comment.comment_node_infografia_observat.comment_body
+field_name: comment_body
+entity_type: comment
+bundle: comment_node_infografia_observat
+label: Comment
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

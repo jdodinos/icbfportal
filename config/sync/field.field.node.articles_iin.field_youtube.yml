@@ -1,0 +1,21 @@
+uuid: 490cefce-80c2-438f-a865-391690c2fc9e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_youtube
+    - node.type.articles_iin
+  module:
+    - youtube
+id: node.articles_iin.field_youtube
+field_name: field_youtube
+entity_type: node
+bundle: articles_iin
+label: Youtube
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: youtube

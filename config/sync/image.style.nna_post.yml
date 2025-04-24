@@ -1,0 +1,15 @@
+uuid: 0f996d78-1b38-4cdc-b777-c912a3eda4ef
+langcode: es
+status: true
+dependencies: {  }
+name: nna_post
+label: 'NNA post'
+effects:
+  63dac62d-d3ad-4eb5-89c1-08e4b52b4ad8:
+    uuid: 63dac62d-d3ad-4eb5-89c1-08e4b52b4ad8
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 720
+      height: 485
+      anchor: center-center

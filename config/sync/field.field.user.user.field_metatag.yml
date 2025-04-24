@@ -1,0 +1,21 @@
+uuid: e2645070-13a0-44c8-a2b2-ac07266dc74f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_metatag
+  module:
+    - metatag
+    - user
+id: user.user.field_metatag
+field_name: field_metatag
+entity_type: user
+bundle: user
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

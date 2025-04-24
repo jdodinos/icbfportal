@@ -1,0 +1,22 @@
+uuid: 4aabaedb-fe56-4065-96ad-d66561df6730
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_infogral_msite
+    - node.type.document_microsite
+  module:
+    - text
+id: node.document_microsite.field_infogral_msite
+field_name: field_infogral_msite
+entity_type: node
+bundle: document_microsite
+label: 'Presentación documento'
+description: 'texto descriptivo sobre el documento. Máx 260 caracteres.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

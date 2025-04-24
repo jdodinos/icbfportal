@@ -1,0 +1,30 @@
+uuid: ebfe2c10-e2b2-4fab-b31c-22e9763e9eab
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_sector_studies
+    - field.field.comment.comment_node_sector_studies.comment_body
+  module:
+    - text
+id: comment.comment_node_sector_studies.default
+targetEntityType: comment
+bundle: comment_node_sector_studies
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

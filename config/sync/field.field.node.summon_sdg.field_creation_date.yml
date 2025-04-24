@@ -1,0 +1,21 @@
+uuid: faaabc86-581f-42dc-862e-6827d60c01df
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_creation_date
+    - node.type.summon_sdg
+  module:
+    - datetime
+id: node.summon_sdg.field_creation_date
+field_name: field_creation_date
+entity_type: node
+bundle: summon_sdg
+label: 'Fecha fijación'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

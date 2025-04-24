@@ -1,0 +1,11 @@
+uuid: 6bc62d50-610e-4360-ad0b-97f66cde37db
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_documento_de_convoc
+id: comment.comment_node_documento_de_convoc
+target_entity_type_id: comment
+target_bundle: comment_node_documento_de_convoc
+default_langcode: site_default
+language_alterable: false

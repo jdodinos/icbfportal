@@ -1,0 +1,11 @@
+uuid: 126727fd-f470-457d-b3d4-436a8b02073e
+langcode: es
+status: true
+dependencies:
+  module:
+    - file_resup
+id: file_resup.token
+label: Comodín
+description: ''
+targetEntityType: file_resup
+cache: true

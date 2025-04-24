@@ -1,0 +1,27 @@
+uuid: 03376e07-cbef-4160-8ac5-8e31594f1df5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document
+    - node.type.hiring_process
+  module:
+    - file
+id: node.hiring_process.field_document
+field_name: field_document
+entity_type: node
+bundle: hiring_process
+label: 'Documento Aviso de Convocatoria'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'jpg jpeg gif png txt doc docx xls xlsx pdf ppt pptx pps ppsx odt ods odp mp3 mov mp4 m4a m4v mpeg avi ogg oga ogv weba webp webm'
+  max_filesize: ''
+  description_field: true
+field_type: file

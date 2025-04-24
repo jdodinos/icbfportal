@@ -1,0 +1,229 @@
+uuid: e8ce310f-39bd-44f4-854f-acb3d00c6b35
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.evaluaci_n.comment_node_evaluaci_n
+    - field.field.node.evaluaci_n.field_dae_year
+    - field.field.node.evaluaci_n.field_document
+    - field.field.node.evaluaci_n.field_file_categoria
+    - field.field.node.evaluaci_n.field_file_priority
+    - field.field.node.evaluaci_n.field_list_image
+    - field.field.node.evaluaci_n.field_metatag
+    - field.field.node.evaluaci_n.field_resume
+    - field.field.node.evaluaci_n.field_sme_author_org
+    - field.field.node.evaluaci_n.field_sme_aval_type
+    - field.field.node.evaluaci_n.field_sme_database1
+    - field.field.node.evaluaci_n.field_sme_dictionary
+    - field.field.node.evaluaci_n.field_sme_instrument
+    - image.style.thumbnail
+    - node.type.evaluaci_n
+  module:
+    - comment
+    - datetime
+    - field_group
+    - file
+    - image
+    - metatag
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_sme1:
+      children:
+        - field_document
+        - field_list_image
+        - field_file_categoria
+        - field_resume
+        - field_dae_year
+        - field_sme_author_org
+      label: 'Informacón Básica'
+      region: content
+      parent_name: ''
+      weight: 5
+      format_type: fieldset
+      format_settings:
+        classes: 'group-sme1 field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+    group_sme2:
+      children:
+        - field_sme_instrument
+        - field_sme_dictionary
+        - field_sme_database1
+      label: 'Información Complementaria'
+      region: content
+      parent_name: ''
+      weight: 6
+      format_type: fieldset
+      format_settings:
+        classes: 'group-sme2 field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+id: node.evaluaci_n.default
+targetEntityType: node
+bundle: evaluaci_n
+mode: default
+content:
+  comment_node_evaluaci_n:
+    type: comment_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dae_year:
+    type: datetime_default
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_document:
+    type: file_generic
+    weight: 9
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_file_categoria:
+    type: entity_reference_autocomplete
+    weight: 13
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_file_priority:
+    type: options_select
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_image:
+    type: image_image
+    weight: 14
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 121
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
+    third_party_settings: {  }
+  field_resume:
+    type: text_textarea
+    weight: 11
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_sme_author_org:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 125
+      placeholder: ''
+    third_party_settings: {  }
+  field_sme_aval_type:
+    type: options_buttons
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_sme_database1:
+    type: file_generic
+    weight: 14
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_sme_dictionary:
+    type: file_generic
+    weight: 13
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_sme_instrument:
+    type: text_textarea
+    weight: 12
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  publish_on: true
+  unpublish_on: true

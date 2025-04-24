@@ -1,0 +1,21 @@
+uuid: f9eb5ce6-867f-4ece-b0c7-16d09e3c8db5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_component_transparency
+    - node.type.transparency
+  module:
+    - options
+id: node.transparency.field_component_transparency
+field_name: field_component_transparency
+entity_type: node
+bundle: transparency
+label: Componente
+description: 'Identificar Número de Componente del Plan Anticorrupción y de Atención al Ciudadano'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

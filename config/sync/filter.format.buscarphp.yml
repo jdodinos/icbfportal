@@ -1,0 +1,25 @@
+uuid: b30d3794-079e-4c26-b00d-3d86f3c3429e
+langcode: es
+status: false
+dependencies:
+  module:
+    - php
+    - slick
+name: buscarPHP
+format: buscarphp
+weight: 0
+filters:
+  php_code:
+    id: php_code
+    provider: php
+    status: true
+    weight: 0
+    settings: {  }
+  slick_filter:
+    id: slick_filter
+    provider: slick
+    status: false
+    weight: 4
+    settings:
+      optionset: default
+      media_switch: ''

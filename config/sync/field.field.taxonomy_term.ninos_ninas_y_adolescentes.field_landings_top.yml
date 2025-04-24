@@ -1,0 +1,22 @@
+uuid: 66a6828e-deca-4b33-96be-30b88db86c02
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_landings_top
+    - taxonomy.vocabulary.ninos_ninas_y_adolescentes
+  module:
+    - text
+id: taxonomy_term.ninos_ninas_y_adolescentes.field_landings_top
+field_name: field_landings_top
+entity_type: taxonomy_term
+bundle: ninos_ninas_y_adolescentes
+label: 'TOP Micrositio'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,19 @@
+uuid: a9f2da78-d7d8-4fd9-9473-27bfb4827f6f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_header_block_text_color
+    - paragraphs.paragraphs_type.glazed_content_design
+id: paragraph.glazed_content_design.field_header_block_text_color
+field_name: field_header_block_text_color
+entity_type: paragraph
+bundle: glazed_content_design
+label: 'Block Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

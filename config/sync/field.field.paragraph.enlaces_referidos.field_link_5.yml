@@ -1,0 +1,19 @@
+uuid: d97a3d9c-1d7e-4410-a944-e32a8130979b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_5
+    - paragraphs.paragraphs_type.enlaces_referidos
+id: paragraph.enlaces_referidos.field_link_5
+field_name: field_link_5
+entity_type: paragraph
+bundle: enlaces_referidos
+label: 'enlace 5'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

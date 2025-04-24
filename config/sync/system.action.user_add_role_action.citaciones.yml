@@ -1,0 +1,14 @@
+uuid: f8d85318-21a7-42c6-bc53-3153bd9e4532
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.citaciones
+  module:
+    - user
+id: user_add_role_action.citaciones
+label: 'Añade el rol Citaciones al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: citaciones

@@ -1,0 +1,70 @@
+uuid: 8c0dc7dd-f3ec-4963-b3ce-89055b5e9b48
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.glazed_content_design.field_dropdown_background
+    - field.field.paragraph.glazed_content_design.field_dropdown_hover_background
+    - field.field.paragraph.glazed_content_design.field_dropdown_hover_text_color
+    - field.field.paragraph.glazed_content_design.field_dropdown_text_color
+    - field.field.paragraph.glazed_content_design.field_full_width_header
+    - field.field.paragraph.glazed_content_design.field_glazed_body_image
+    - field.field.paragraph.glazed_content_design.field_glazed_content_region
+    - field.field.paragraph.glazed_content_design.field_glazed_header_image
+    - field.field.paragraph.glazed_content_design.field_glazed_header_mode
+    - field.field.paragraph.glazed_content_design.field_glazed_header_position
+    - field.field.paragraph.glazed_content_design.field_glazed_header_style
+    - field.field.paragraph.glazed_content_design.field_glazed_hide_regions
+    - field.field.paragraph.glazed_content_design.field_header_background
+    - field.field.paragraph.glazed_content_design.field_header_block_background
+    - field.field.paragraph.glazed_content_design.field_header_block_text_color
+    - field.field.paragraph.glazed_content_design.field_header_height
+    - field.field.paragraph.glazed_content_design.field_header_layout
+    - field.field.paragraph.glazed_content_design.field_header_text
+    - field.field.paragraph.glazed_content_design.field_menu_background
+    - field.field.paragraph.glazed_content_design.field_menu_hover_background
+    - field.field.paragraph.glazed_content_design.field_menu_hover_effect
+    - field.field.paragraph.glazed_content_design.field_menu_hover_text_color
+    - field.field.paragraph.glazed_content_design.field_menu_text_color
+    - field.field.paragraph.glazed_content_design.field_navbar_background
+    - field.field.paragraph.glazed_content_design.field_page_layout
+    - field.field.paragraph.glazed_content_design.field_side_header_background
+    - field.field.paragraph.glazed_content_design.field_side_header_text_color
+    - field.field.paragraph.glazed_content_design.field_side_header_width
+    - paragraphs.paragraphs_type.glazed_content_design
+id: paragraph.glazed_content_design.default
+targetEntityType: paragraph
+bundle: glazed_content_design
+mode: default
+content: {  }
+hidden:
+  field_dropdown_background: true
+  field_dropdown_hover_background: true
+  field_dropdown_hover_text_color: true
+  field_dropdown_text_color: true
+  field_full_width_header: true
+  field_glazed_body_image: true
+  field_glazed_content_region: true
+  field_glazed_header_image: true
+  field_glazed_header_mode: true
+  field_glazed_header_position: true
+  field_glazed_header_style: true
+  field_glazed_hide_regions: true
+  field_header_background: true
+  field_header_block_background: true
+  field_header_block_text_color: true
+  field_header_height: true
+  field_header_layout: true
+  field_header_text: true
+  field_menu_background: true
+  field_menu_hover_background: true
+  field_menu_hover_effect: true
+  field_menu_hover_text_color: true
+  field_menu_text_color: true
+  field_navbar_background: true
+  field_page_layout: true
+  field_side_header_background: true
+  field_side_header_text_color: true
+  field_side_header_width: true
+  search_api_attachments: true
+  search_api_excerpt: true

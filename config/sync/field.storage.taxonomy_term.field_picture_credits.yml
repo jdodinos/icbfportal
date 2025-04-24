@@ -1,0 +1,23 @@
+uuid: efe7b967-99e9-4348-bc79-e4fd91b65388
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - taxonomy
+    - text
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: taxonomy_term.field_picture_credits
+field_name: field_picture_credits
+entity_type: taxonomy_term
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,14 @@
+uuid: d06ef956-d7f2-4cf9-bdc7-d1f19dd45e38
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.editor_contenidos_vip_
+  module:
+    - user
+id: user_remove_role_action.editor_contenidos_vip_
+label: 'Elimina el rol Editor Contenidos (VIP) al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: editor_contenidos_vip_

@@ -1,0 +1,14 @@
+uuid: f9805200-cb5b-440d-8777-f1ba01ff221e
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.documentos
+  module:
+    - user
+id: user_remove_role_action.documentos
+label: 'Elimina el rol Documentos al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: documentos

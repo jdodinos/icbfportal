@@ -1,0 +1,19 @@
+uuid: c83c5f07-0827-438b-9936-d1abe9531d71
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_seo_title
+    - node.type.articulo_mis_manos_te_ensenan
+id: node.articulo_mis_manos_te_ensenan.field_seo_title
+field_name: field_seo_title
+entity_type: node
+bundle: articulo_mis_manos_te_ensenan
+label: 'Título Presentación'
+description: 'título para vistas'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

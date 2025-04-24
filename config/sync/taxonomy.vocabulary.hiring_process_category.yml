@@ -1,0 +1,9 @@
+uuid: 434cfa90-0429-4307-89cc-820fcd9f0405
+langcode: es
+status: true
+dependencies: {  }
+name: 'Categoría de proceso de contratación'
+vid: hiring_process_category
+description: null
+weight: -3
+new_revision: false

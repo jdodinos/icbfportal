@@ -1,0 +1,28 @@
+uuid: bbf54246-7764-4eda-95b9-8eaefd934160
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_referenced_link
+    - node.type.enlaces_referencia
+    - taxonomy.vocabulary.file_category
+id: node.enlaces_referencia.field_referenced_link
+field_name: field_referenced_link
+entity_type: node
+bundle: enlaces_referencia
+label: Referencia
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    tid: '7571'
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      file_category: file_category
+    sort:
+      field: _none
+field_type: entity_reference

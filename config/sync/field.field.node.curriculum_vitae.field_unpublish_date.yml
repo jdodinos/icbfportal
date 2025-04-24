@@ -1,0 +1,21 @@
+uuid: 0fb1b7b2-08f7-4da9-a9f3-7248ca358547
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_unpublish_date
+    - node.type.curriculum_vitae
+  module:
+    - datetime
+id: node.curriculum_vitae.field_unpublish_date
+field_name: field_unpublish_date
+entity_type: node
+bundle: curriculum_vitae
+label: 'Fecha desfijación'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

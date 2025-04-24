@@ -1,0 +1,22 @@
+uuid: 7f61e506-b11f-4643-9817-b0f201ac0efa
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resume
+    - node.type.monitoreo_gesti_n
+  module:
+    - text
+id: node.monitoreo_gesti_n.field_resume
+field_name: field_resume
+entity_type: node
+bundle: monitoreo_gesti_n
+label: Resumen
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

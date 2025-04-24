@@ -1,0 +1,21 @@
+uuid: a27569df-0364-4bf3-84ce-add9068bcfae
+langcode: es
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term_procedure
+label: 'Término de taxonomía - Trámite'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'portafolio-de-servicios-icbf/[term:name]'
+selection_criteria:
+  -
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      procedure: procedure
+selection_logic: and
+weight: 0
+relationships: {  }

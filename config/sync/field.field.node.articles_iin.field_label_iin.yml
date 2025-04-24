@@ -1,0 +1,21 @@
+uuid: f7746fe0-6d6c-4047-a415-d35d30bf1811
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_label_iin
+    - node.type.articles_iin
+  module:
+    - options
+id: node.articles_iin.field_label_iin
+field_name: field_label_iin
+entity_type: node
+bundle: articles_iin
+label: 'Label IIN'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

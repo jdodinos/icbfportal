@@ -1,0 +1,21 @@
+uuid: 83496a12-dfb4-438c-9c2f-6abe81c50fb2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_regional
+    - node.type.datos_ni_os_migrantes
+  module:
+    - options
+id: node.datos_ni_os_migrantes.field_regional
+field_name: field_regional
+entity_type: node
+bundle: datos_ni_os_migrantes
+label: Regional
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

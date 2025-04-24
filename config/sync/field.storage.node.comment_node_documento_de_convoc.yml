@@ -1,0 +1,20 @@
+uuid: 59a84cb2-0daa-4c2c-a994-6669a6438bd2
+langcode: es
+status: true
+dependencies:
+  module:
+    - comment
+    - node
+id: node.comment_node_documento_de_convoc
+field_name: comment_node_documento_de_convoc
+entity_type: node
+type: comment
+settings:
+  comment_type: comment_node_documento_de_convoc
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

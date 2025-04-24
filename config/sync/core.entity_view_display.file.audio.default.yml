@@ -1,0 +1,23 @@
+uuid: 462d45a5-5e47-40cc-8e0d-21b3529521cc
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.file.audio.field_folder
+  module:
+    - file
+id: file.audio.default
+targetEntityType: file
+bundle: audio
+mode: default
+content:
+  field_folder:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

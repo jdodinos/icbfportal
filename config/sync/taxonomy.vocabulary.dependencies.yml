@@ -1,0 +1,9 @@
+uuid: 7a005289-10ad-4746-b937-79000b11323e
+langcode: es
+status: true
+dependencies: {  }
+name: Áreas
+vid: dependencies
+description: null
+weight: -8
+new_revision: false

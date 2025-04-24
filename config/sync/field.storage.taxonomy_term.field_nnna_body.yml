@@ -1,0 +1,23 @@
+uuid: 2067951c-1a9a-4f30-a745-09b4970cf328
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - taxonomy
+    - text
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: taxonomy_term.field_nnna_body
+field_name: field_nnna_body
+entity_type: taxonomy_term
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

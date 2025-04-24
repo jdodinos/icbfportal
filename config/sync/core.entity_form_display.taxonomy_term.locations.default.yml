@@ -1,0 +1,253 @@
+uuid: 1c0471a8-7f57-4ab8-8c1c-b8af424e2106
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.locations.field_address
+    - field.field.taxonomy_term.locations.field_board
+    - field.field.taxonomy_term.locations.field_contact_email
+    - field.field.taxonomy_term.locations.field_field_region_scope
+    - field.field.taxonomy_term.locations.field_list_image
+    - field.field.taxonomy_term.locations.field_localization
+    - field.field.taxonomy_term.locations.field_location_root
+    - field.field.taxonomy_term.locations.field_metatag
+    - field.field.taxonomy_term.locations.field_phone
+    - field.field.taxonomy_term.locations.field_picture_credits
+    - field.field.taxonomy_term.locations.field_place_type
+    - field.field.taxonomy_term.locations.field_priority
+    - field.field.taxonomy_term.locations.field_region_scope
+    - field.field.taxonomy_term.locations.field_web_site
+    - field.field.taxonomy_term.locations.field_working_hours
+    - taxonomy.vocabulary.locations
+  module:
+    - address
+    - field_group
+    - file
+    - geofield
+    - link
+    - metatag
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_top_locations:
+      children:
+        - field_place_type
+        - field_list_image
+        - name
+        - description
+      label: 'Top Ubicación'
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: 'group-top-locations field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+    group_body_locations:
+      children:
+        - field_board
+        - field_working_hours
+        - field_phone
+        - field_address
+        - field_contact_email
+        - field_region_scope
+        - field_field_region_scope
+      label: 'Contenido Ubicación'
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        classes: 'group-body-locations field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+    group_links_locations:
+      children:
+        - field_web_site
+        - field_localization
+        - field_priority
+      label: 'Relaciones de Ubicación'
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        classes: 'group-links-locations field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+id: taxonomy_term.locations.default
+targetEntityType: taxonomy_term
+bundle: locations
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_address:
+    type: address_default
+    weight: 8
+    region: content
+    settings:
+      wrapper_type: fieldset
+    third_party_settings: {  }
+  field_board:
+    type: text_textarea
+    weight: 10
+    region: content
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+  field_contact_email:
+    type: email_default
+    weight: 11
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_field_region_scope:
+    type: text_textarea
+    weight: 13
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_list_image:
+    type: file_generic
+    weight: 4
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_localization:
+    type: geofield_default
+    weight: 7
+    region: content
+    settings:
+      geometry_validation: false
+    third_party_settings: {  }
+  field_location_root:
+    type: entity_reference_autocomplete_tags
+    weight: 15
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 102
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
+    third_party_settings: {  }
+  field_phone:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_picture_credits:
+    type: text_textarea
+    weight: 10
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_place_type:
+    type: options_buttons
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_priority:
+    type: number
+    weight: 9
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_region_scope:
+    type: text_textarea
+    weight: 12
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_web_site:
+    type: link_default
+    weight: 8
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_working_hours:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  menu:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  publish_on: true
+  unpublish_on: true

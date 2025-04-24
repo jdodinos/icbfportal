@@ -1,0 +1,21 @@
+uuid: 62e372e3-22ef-4753-abe9-a5392865c183
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node_articulo_mis_manos_te_ensenan
+label: 'Contenido - Artículo Mis Manos Te Enseñan'
+type: 'canonical_entities:node'
+pattern: 'mis-manos-te-ensenan/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      articulo_mis_manos_te_ensenan: articulo_mis_manos_te_ensenan
+selection_logic: and
+weight: 0
+relationships: {  }

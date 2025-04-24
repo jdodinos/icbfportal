@@ -1,0 +1,21 @@
+uuid: 7cd89f25-2171-4e4a-8fe2-a4ee762ef3a9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_glazed_header_position
+    - paragraphs.paragraphs_type.glazed_content_design
+  module:
+    - options
+id: paragraph.glazed_content_design.field_glazed_header_position
+field_name: field_glazed_header_position
+entity_type: paragraph
+bundle: glazed_content_design
+label: Position
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

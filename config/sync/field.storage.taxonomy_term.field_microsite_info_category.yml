@@ -1,0 +1,46 @@
+uuid: 1e250d1a-1c59-45a3-94bf-748fae7fbf0a
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - taxonomy
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: taxonomy_term.field_microsite_info_category
+field_name: field_microsite_info_category
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: 'Compras Locales'
+    -
+      value: '2'
+      label: Familias
+    -
+      value: '3'
+      label: Niñez
+    -
+      value: '4'
+      label: Nutrición
+    -
+      value: '5'
+      label: Protección
+    -
+      value: '6'
+      label: 'Primera Infancia'
+    -
+      value: '7'
+      label: SNBF
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

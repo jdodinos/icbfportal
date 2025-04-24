@@ -1,0 +1,16 @@
+uuid: 9dc85efa-b14c-4ea7-9c80-552199ce1014
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.glosario
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: node.glosario
+target_entity_type_id: node
+target_bundle: glosario
+default_langcode: current_interface
+language_alterable: true

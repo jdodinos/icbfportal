@@ -1,0 +1,23 @@
+uuid: 555fde50-5246-4446-a38d-bc14d7c706d9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_priority
+    - node.type.services_faq
+id: node.services_faq.field_priority
+field_name: field_priority
+entity_type: node
+bundle: services_faq
+label: Prioridad
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

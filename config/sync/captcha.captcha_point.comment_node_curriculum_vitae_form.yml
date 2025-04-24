@@ -1,0 +1,7 @@
+uuid: eef50e7b-26ad-4753-919f-8af930743fe4
+langcode: es
+status: true
+dependencies: {  }
+formId: comment_node_curriculum_vitae_form
+captchaType: captcha/default
+label: comment_node_curriculum_vitae_form

@@ -1,0 +1,19 @@
+uuid: aab87e10-1f71-4118-972c-cd6ee8d2a4c7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_email
+    - node.type.hiring_process
+id: node.hiring_process.field_contact_email
+field_name: field_contact_email
+entity_type: node
+bundle: hiring_process
+label: 'Correo electrónico de contacto'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

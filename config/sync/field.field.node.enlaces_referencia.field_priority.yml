@@ -1,0 +1,23 @@
+uuid: 853fca60-d848-4acf-926d-838c3ddaf20d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_priority
+    - node.type.enlaces_referencia
+id: node.enlaces_referencia.field_priority
+field_name: field_priority
+entity_type: node
+bundle: enlaces_referencia
+label: Prioridad
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

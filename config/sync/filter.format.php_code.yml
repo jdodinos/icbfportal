@@ -1,0 +1,10 @@
+uuid: 21600d3a-1646-4727-9f5e-4ded11f2b693
+langcode: es
+status: false
+dependencies: {  }
+_core:
+  default_config_hash: xwUOj7cXz8VE1JG4Yn8qnm-qp4X0lOoKxfnHRS2i46E
+name: 'PHP code'
+format: php_code
+weight: -5
+filters: {  }

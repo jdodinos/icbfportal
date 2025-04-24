@@ -1,0 +1,14 @@
+uuid: e986467b-fdcb-4ef3-ad1e-f2aac616657f
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.encargos
+  module:
+    - user
+id: user_add_role_action.encargos
+label: 'Añade el rol Encargos al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: encargos

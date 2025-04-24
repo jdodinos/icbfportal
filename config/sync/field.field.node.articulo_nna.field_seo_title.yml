@@ -1,0 +1,19 @@
+uuid: f40bb0d5-78cc-4fc7-9dd9-3a62c44ade5e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_seo_title
+    - node.type.articulo_nna
+id: node.articulo_nna.field_seo_title
+field_name: field_seo_title
+entity_type: node
+bundle: articulo_nna
+label: 'Título Presentación'
+description: SEO
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

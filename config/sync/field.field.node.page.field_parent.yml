@@ -1,0 +1,36 @@
+uuid: 380ec0a0-94d3-4d68-b89c-1dae8b8d5cc1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_parent
+    - node.type.announcement
+    - node.type.hiring_process
+    - node.type.page
+    - node.type.process
+id: node.page.field_parent
+field_name: field_parent
+entity_type: node
+bundle: page
+label: 'Contenido padre'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      announcement: announcement
+      hiring_process: hiring_process
+      process: process
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 1
+      entityqueue:
+        status: 0
+field_type: entity_reference

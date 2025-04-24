@@ -1,0 +1,19 @@
+uuid: f44281a8-04da-499a-a825-a26cff937776
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtitle
+    - node.type.announcement
+id: node.announcement.field_subtitle
+field_name: field_subtitle
+entity_type: node
+bundle: announcement
+label: Subtítulo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: ad39e926-dc7a-4afd-9447-2105bc3e59ed
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.file.video.field_folder
+  module:
+    - file
+id: file.video.default
+targetEntityType: file
+bundle: video
+mode: default
+content:
+  field_folder:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

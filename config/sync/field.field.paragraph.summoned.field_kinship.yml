@@ -1,0 +1,21 @@
+uuid: 193d184e-51c3-42fb-bf8c-c051c40e8a55
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_kinship
+    - paragraphs.paragraphs_type.summoned
+  module:
+    - options
+id: paragraph.summoned.field_kinship
+field_name: field_kinship
+entity_type: paragraph
+bundle: summoned
+label: Parentesco
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

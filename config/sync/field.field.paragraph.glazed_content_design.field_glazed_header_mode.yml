@@ -1,0 +1,21 @@
+uuid: 3c6d9624-7254-497b-b05f-db76532562e3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_glazed_header_mode
+    - paragraphs.paragraphs_type.glazed_content_design
+  module:
+    - options
+id: paragraph.glazed_content_design.field_glazed_header_mode
+field_name: field_glazed_header_mode
+entity_type: paragraph
+bundle: glazed_content_design
+label: 'Top Header / Side Header'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,19 @@
+uuid: 674e4eed-145b-4d70-8fab-0073011bc203
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_telefono
+    - node.type.datos_ni_os_migrantes
+id: node.datos_ni_os_migrantes.field_telefono
+field_name: field_telefono
+entity_type: node
+bundle: datos_ni_os_migrantes
+label: Telefono
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

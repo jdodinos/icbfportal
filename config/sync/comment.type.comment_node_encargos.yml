@@ -1,0 +1,8 @@
+uuid: fa1a5bae-ff91-4a58-99fb-b8a3881d9c5a
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_encargos
+label: 'Encargos comment'
+target_entity_type_id: node
+description: null

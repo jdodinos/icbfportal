@@ -1,0 +1,8 @@
+uuid: 64fbb8cd-9ee1-4ffc-b051-0bb4d9b0be7c
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_photo_gallery2_even
+label: 'Galería de Fotos comment'
+target_entity_type_id: node
+description: null

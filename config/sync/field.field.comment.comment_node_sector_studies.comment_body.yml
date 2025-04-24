@@ -1,0 +1,22 @@
+uuid: 0270af9a-b382-457a-b320-37a5f9b178fa
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_sector_studies
+    - field.storage.comment.comment_body
+  module:
+    - text
+id: comment.comment_node_sector_studies.comment_body
+field_name: comment_body
+entity_type: comment
+bundle: comment_node_sector_studies
+label: Comment
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

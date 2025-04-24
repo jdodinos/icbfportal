@@ -1,0 +1,15 @@
+uuid: ac56be6a-759c-4a70-9e09-67a594df2177
+langcode: es
+status: true
+dependencies: {  }
+name: '245_105'
+label: '245*105'
+effects:
+  0d7a4c2e-2f81-4b2c-9975-f98e667396cb:
+    uuid: 0d7a4c2e-2f81-4b2c-9975-f98e667396cb
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 245
+      height: 105
+      anchor: center-center

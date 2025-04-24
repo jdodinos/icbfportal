@@ -1,0 +1,21 @@
+uuid: 2284404a-3762-4747-9ccb-526b303296ce
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_document_type
+    - paragraphs.paragraphs_type.summoned
+  module:
+    - options
+id: paragraph.summoned.field_document_type
+field_name: field_document_type
+entity_type: paragraph
+bundle: summoned
+label: 'Tipo de documento'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

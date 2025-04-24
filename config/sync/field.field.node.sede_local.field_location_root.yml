@@ -1,0 +1,31 @@
+uuid: cbdfbf57-abbc-4d7a-89ae-742c72fadd10
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location_root
+    - node.type.sede_local
+id: node.sede_local.field_location_root
+field_name: field_location_root
+entity_type: node
+bundle: sede_local
+label: 'Ubicación Raiz'
+description: 'Dirección Regional o sede principal de referencia'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      sede_local: sede_local
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 1
+      entityqueue:
+        status: 0
+field_type: entity_reference

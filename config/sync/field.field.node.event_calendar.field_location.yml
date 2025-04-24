@@ -1,0 +1,26 @@
+uuid: dff8bdda-4b65-4626-951f-4e3e762b0c51
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.event_calendar
+    - taxonomy.vocabulary.locations
+id: node.event_calendar.field_location
+field_name: field_location
+entity_type: node
+bundle: event_calendar
+label: 'Dirección Regional'
+description: 'Dirección Regional y Centro Zonal del ICBF donde se llevará a cabo el evento'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      locations: locations
+    sort:
+      field: _none
+field_type: entity_reference

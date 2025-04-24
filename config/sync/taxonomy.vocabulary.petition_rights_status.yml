@@ -1,0 +1,9 @@
+uuid: 8a7c4a9e-1dd0-4b69-8060-deabfd9b256c
+langcode: es
+status: true
+dependencies: {  }
+name: 'Respuesta derechos de petición'
+vid: petition_rights_status
+description: null
+weight: 10
+new_revision: false

@@ -1,0 +1,15 @@
+uuid: 50a46492-d668-4116-ab1d-d3ac0ffd4929
+langcode: es
+status: true
+dependencies: {  }
+name: 1024x465_detalle_micrositios
+label: '1024x465 Detalle micrositios'
+effects:
+  621ed431-5198-40bd-a53f-eb1347bb58cc:
+    uuid: 621ed431-5198-40bd-a53f-eb1347bb58cc
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1024
+      height: 465
+      anchor: center-center

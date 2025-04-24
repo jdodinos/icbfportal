@@ -1,0 +1,22 @@
+uuid: d7ac84f5-fe62-47ba-8310-6b1fcf109ce5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.process
+  module:
+    - text
+id: node.process.field_content
+field_name: field_content
+entity_type: node
+bundle: process
+label: Contenido
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

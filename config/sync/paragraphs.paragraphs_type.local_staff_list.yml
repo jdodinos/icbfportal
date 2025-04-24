@@ -1,0 +1,10 @@
+uuid: d6decf23-e4db-4f16-936a-6fa437bfae4e
+langcode: es
+status: true
+dependencies: {  }
+id: local_staff_list
+label: 'Local staff list'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from field_collection field_local_staff_list'
+behavior_plugins: {  }

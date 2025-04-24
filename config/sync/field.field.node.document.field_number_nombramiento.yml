@@ -1,0 +1,23 @@
+uuid: 6131b783-051b-4544-9782-61518e0e27b5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_number_nombramiento
+    - node.type.document
+id: node.document.field_number_nombramiento
+field_name: field_number_nombramiento
+entity_type: node
+bundle: document
+label: 'No Resolución Nombramiento'
+description: 'Número de Resolución, consecutivo de nombramiento'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

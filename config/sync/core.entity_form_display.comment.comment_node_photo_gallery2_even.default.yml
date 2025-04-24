@@ -1,0 +1,36 @@
+uuid: f0364e9f-8faa-429f-9aa1-8e91e2a9d97e
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_photo_gallery2_even
+    - field.field.comment.comment_node_photo_gallery2_even.comment_body
+  module:
+    - text
+id: comment.comment_node_photo_gallery2_even.default
+targetEntityType: comment
+bundle: comment_node_photo_gallery2_even
+mode: default
+content:
+  author:
+    weight: -2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  comment_body:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden:
+  subject: true

@@ -1,0 +1,21 @@
+uuid: fdd87e4c-a360-43d4-8ef1-73dafbde0afa
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_relevant
+    - node.type.transparency
+  module:
+    - options
+id: node.transparency.field_relevant
+field_name: field_relevant
+entity_type: node
+bundle: transparency
+label: Relevancia
+description: 'Si el nodo está vigente o es histórico'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

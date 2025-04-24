@@ -1,0 +1,52 @@
+uuid: 32ffbecd-4408-42bd-b74c-7e4384c4b48f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summoned
+    - node.type.summon
+    - paragraphs.paragraphs_type.summoned
+  module:
+    - entity_reference_revisions
+id: node.summon.field_summoned
+field_name: field_summoned
+entity_type: node
+bundle: summon
+label: Citados
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      summoned: summoned
+    negate: 0
+    target_bundles_drag_drop:
+      bookpost_group:
+        weight: 2
+        enabled: false
+      children_defendant:
+        weight: 3
+        enabled: false
+      enlaces_referidos:
+        weight: 4
+        enabled: false
+      glazed_content_design:
+        weight: 5
+        enabled: false
+      local_staff_list:
+        weight: 6
+        enabled: false
+      multimedia_collection:
+        weight: 7
+        enabled: false
+      post_document_plus:
+        weight: 8
+        enabled: false
+      summoned:
+        weight: 1
+        enabled: true
+field_type: entity_reference_revisions

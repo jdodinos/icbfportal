@@ -1,0 +1,21 @@
+uuid: cf9d393a-5f93-458b-afab-a977290888a9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_glazed_content_region
+    - paragraphs.paragraphs_type.glazed_content_design
+  module:
+    - options
+id: paragraph.glazed_content_design.field_glazed_content_region
+field_name: field_glazed_content_region
+entity_type: paragraph
+bundle: glazed_content_design
+label: 'Main content layout'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

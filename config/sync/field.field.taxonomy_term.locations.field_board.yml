@@ -1,0 +1,22 @@
+uuid: 4c1d1295-a9fc-4043-8310-4b851bc9ba08
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_board
+    - taxonomy.vocabulary.locations
+  module:
+    - text
+id: taxonomy_term.locations.field_board
+field_name: field_board
+entity_type: taxonomy_term
+bundle: locations
+label: 'Directores y/o Encargados'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

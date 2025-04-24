@@ -1,0 +1,11 @@
+uuid: 939141c7-a421-48e0-96f4-318b24695b56
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_link_content
+id: menu_link_content.token
+label: Comodín
+description: ''
+targetEntityType: menu_link_content
+cache: true

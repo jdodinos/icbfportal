@@ -1,0 +1,26 @@
+uuid: 6ad6b90a-9a4a-4cef-9152-6613345c2cef
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section
+    - node.type.bot_n_home
+    - taxonomy.vocabulary.secctions
+id: node.bot_n_home.field_section
+field_name: field_section
+entity_type: node
+bundle: bot_n_home
+label: Sección
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      secctions: secctions
+    sort:
+      field: _none
+field_type: entity_reference

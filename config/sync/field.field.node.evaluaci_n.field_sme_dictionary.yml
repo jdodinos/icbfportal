@@ -1,0 +1,27 @@
+uuid: 2f90d227-67c0-4de6-96af-1d4b6f7170ca
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sme_dictionary
+    - node.type.evaluaci_n
+  module:
+    - file
+id: node.evaluaci_n.field_sme_dictionary
+field_name: field_sme_dictionary
+entity_type: node
+bundle: evaluaci_n
+label: Diccionario
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'pdf doc docx xls xlsx ppt pptx jpg txt zip rar'
+  max_filesize: 30mb
+  description_field: true
+field_type: file

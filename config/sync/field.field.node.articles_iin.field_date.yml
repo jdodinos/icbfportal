@@ -1,0 +1,21 @@
+uuid: ca760187-34f9-466c-a8c9-3ef5863a3858
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.articles_iin
+  module:
+    - datetime
+id: node.articles_iin.field_date
+field_name: field_date
+entity_type: node
+bundle: articles_iin
+label: Fecha
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,19 @@
+uuid: 202bfc6a-9070-451e-b3cf-fd2c55859bc7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_receiver
+    - node.type.notifications
+id: node.notifications.field_receiver
+field_name: field_receiver
+entity_type: node
+bundle: notifications
+label: Destinatario
+description: 'Persona involucrada con el trámite'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,26 @@
+uuid: 868b5d6e-2f34-4f95-9e8c-8fffe3107bf4
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.articulo_nna
+    - node.type.document
+    - node.type.multimedia
+  module:
+    - node
+    - system
+id: editor_ninos_y_ninas
+label: 'Editor Niños y Niñas'
+weight: 21
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'create articulo_nna content'
+  - 'create document content'
+  - 'create multimedia content'
+  - 'delete own articulo_nna content'
+  - 'delete own multimedia content'
+  - 'edit any articulo_nna content'
+  - 'edit own articulo_nna content'
+  - 'edit own document content'
+  - 'edit own multimedia content'

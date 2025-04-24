@@ -1,0 +1,93 @@
+uuid: 4f6bbef9-e53e-43b4-bb51-4a154476b084
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_documentos_contrata.default
+    - field.field.node.documentos_contrataci_n.comment_node_documentos_contrata
+    - field.field.node.documentos_contrataci_n.field_date
+    - field.field.node.documentos_contrataci_n.field_document
+    - field.field.node.documentos_contrataci_n.field_documento_banco_oferentes
+    - field.field.node.documentos_contrataci_n.field_file_categoria
+    - field.field.node.documentos_contrataci_n.field_location
+    - field.field.node.documentos_contrataci_n.field_metatag
+    - field.field.node.documentos_contrataci_n.field_section
+    - node.type.documentos_contrataci_n
+  module:
+    - comment
+    - datetime
+    - file
+    - user
+id: node.documentos_contrataci_n.default
+targetEntityType: node
+bundle: documentos_contrataci_n
+mode: default
+content:
+  comment_node_documentos_contrata:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_document:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_documento_banco_oferentes:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_file_categoria:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_location:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_section:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_metatag: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

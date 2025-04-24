@@ -1,0 +1,23 @@
+uuid: 571494db-240d-4499-b750-2ebd701a86ae
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_priority
+    - node.type.articulo_mis_manos_te_ensenan
+id: node.articulo_mis_manos_te_ensenan.field_priority
+field_name: field_priority
+entity_type: node
+bundle: articulo_mis_manos_te_ensenan
+label: Prioridad
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

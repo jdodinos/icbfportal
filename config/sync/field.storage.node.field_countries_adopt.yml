@@ -1,0 +1,64 @@
+uuid: 836a50b3-142c-4b37-bbfd-17c226ca5edc
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_countries_adopt
+field_name: field_countries_adopt
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: Alemania
+    -
+      value: '2'
+      label: Bélgica
+    -
+      value: '3'
+      label: Canadá
+    -
+      value: '4'
+      label: Dinamarca
+    -
+      value: '5'
+      label: España
+    -
+      value: '6'
+      label: Finlandia
+    -
+      value: '7'
+      label: Francia
+    -
+      value: '8'
+      label: Holanda
+    -
+      value: '9'
+      label: Italia
+    -
+      value: '10'
+      label: Noruega
+    -
+      value: '11'
+      label: Suecia
+    -
+      value: '12'
+      label: Suiza
+    -
+      value: '13'
+      label: 'Estados Unidos de América - US'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

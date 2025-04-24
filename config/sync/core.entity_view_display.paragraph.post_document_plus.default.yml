@@ -1,0 +1,44 @@
+uuid: 9543dbf5-aa33-45d9-9fa0-7d1c124eec07
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.post_document_plus.field_document
+    - field.field.paragraph.post_document_plus.field_list_image
+    - image.style.medium
+    - paragraphs.paragraphs_type.post_document_plus
+  module:
+    - field_formatter_class
+    - file
+    - image
+id: paragraph.post_document_plus.default
+targetEntityType: paragraph
+bundle: post_document_plus
+mode: default
+content:
+  field_document:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings:
+      field_formatter_class:
+        class: 'col-sm-8 col-sx-12 word-gral h4'
+    weight: 1
+    region: content
+  field_list_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: file
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      field_formatter_class:
+        class: 'col-sm-4 col-sx-12'
+    weight: 0
+    region: content
+hidden:
+  search_api_attachments: true
+  search_api_excerpt: true

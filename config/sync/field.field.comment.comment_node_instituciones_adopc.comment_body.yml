@@ -1,0 +1,22 @@
+uuid: 82e35ec3-db05-4b26-a01e-af4a768e4ef4
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_instituciones_adopc
+    - field.storage.comment.comment_body
+  module:
+    - text
+id: comment.comment_node_instituciones_adopc.comment_body
+field_name: comment_body
+entity_type: comment
+bundle: comment_node_instituciones_adopc
+label: Comment
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

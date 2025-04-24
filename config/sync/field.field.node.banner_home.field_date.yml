@@ -1,0 +1,21 @@
+uuid: b7cd0801-fe38-48b9-b4e2-bbf1d234ecd5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.banner_home
+  module:
+    - datetime
+id: node.banner_home.field_date
+field_name: field_date
+entity_type: node
+bundle: banner_home
+label: 'Fecha de publicación'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

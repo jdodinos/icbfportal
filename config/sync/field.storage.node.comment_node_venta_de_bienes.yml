@@ -1,0 +1,20 @@
+uuid: a6211920-0375-43ca-9019-36df21e65ce0
+langcode: es
+status: true
+dependencies:
+  module:
+    - comment
+    - node
+id: node.comment_node_venta_de_bienes
+field_name: comment_node_venta_de_bienes
+entity_type: node
+type: comment
+settings:
+  comment_type: comment_node_venta_de_bienes
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

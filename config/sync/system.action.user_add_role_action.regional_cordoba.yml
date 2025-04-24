@@ -1,0 +1,14 @@
+uuid: a520344b-5930-4bcc-8865-cceff9e110c0
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.regional_cordoba
+  module:
+    - user
+id: user_add_role_action.regional_cordoba
+label: 'Añade el rol Regional Córdoba al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: regional_cordoba

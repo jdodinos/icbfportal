@@ -1,0 +1,22 @@
+uuid: 75369810-0416-4632-8771-dee2a745a796
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_profile
+    - node.type.persona
+  module:
+    - text
+id: node.persona.field_content_profile
+field_name: field_content_profile
+entity_type: node
+bundle: persona
+label: 'Perfil Profesional'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

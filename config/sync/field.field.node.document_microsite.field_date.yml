@@ -1,0 +1,21 @@
+uuid: 6cf73833-5da6-41fb-a6bb-c6fecb373e21
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.document_microsite
+  module:
+    - datetime
+id: node.document_microsite.field_date
+field_name: field_date
+entity_type: node
+bundle: document_microsite
+label: Fecha
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

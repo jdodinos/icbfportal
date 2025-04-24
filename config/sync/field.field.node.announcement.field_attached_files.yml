@@ -1,0 +1,27 @@
+uuid: 9dee115b-633d-4a08-8726-f6cc4c6175f8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_attached_files
+    - node.type.announcement
+  module:
+    - file
+id: node.announcement.field_attached_files
+field_name: field_attached_files
+entity_type: node
+bundle: announcement
+label: Documentos
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'pdf doc docx xls xlsx ppt pptx zip xlm'
+  max_filesize: '10 MB'
+  description_field: true
+field_type: file

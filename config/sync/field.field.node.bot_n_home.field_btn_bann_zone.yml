@@ -1,0 +1,21 @@
+uuid: 22b726c4-499f-46f1-ba18-ef275d0fc0ba
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_btn_bann_zone
+    - node.type.bot_n_home
+  module:
+    - options
+id: node.bot_n_home.field_btn_bann_zone
+field_name: field_btn_bann_zone
+entity_type: node
+bundle: bot_n_home
+label: 'Zona en Home'
+description: 'Ubicación en página de inicio para la vista del contenido'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,26 @@
+uuid: 259af42b-19ef-433f-8d1a-1c70fffca052
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hiring_type_process
+    - node.type.hiring_process
+    - taxonomy.vocabulary.hiring_process_type
+id: node.hiring_process.field_hiring_type_process
+field_name: field_hiring_type_process
+entity_type: node
+bundle: hiring_process
+label: 'Tipo de proceso de contratación'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      hiring_process_type: hiring_process_type
+    sort:
+      field: _none
+field_type: entity_reference

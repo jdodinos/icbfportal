@@ -1,0 +1,14 @@
+uuid: 744e5fc5-853d-4961-b43b-1f4750d42a9e
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.abastecimiento
+  module:
+    - user
+id: user_remove_role_action.abastecimiento
+label: 'Elimina el rol Abastecimiento al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: abastecimiento

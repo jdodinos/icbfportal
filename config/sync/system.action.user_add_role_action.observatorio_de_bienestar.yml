@@ -1,0 +1,14 @@
+uuid: b505d194-3e8a-4d7e-ad15-6165627094b6
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.observatorio_de_bienestar
+  module:
+    - user
+id: user_add_role_action.observatorio_de_bienestar
+label: 'Añade el rol Observatorio de Bienestar al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: observatorio_de_bienestar

@@ -1,0 +1,8 @@
+uuid: 5dfd4b86-331b-4803-ae46-78ad0d137db2
+langcode: en
+status: true
+dependencies: {  }
+id: menu-tranparencia
+label: Tranparencia
+description: ''
+locked: false

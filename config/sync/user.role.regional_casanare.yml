@@ -1,0 +1,20 @@
+uuid: 6bd38c9a-7b91-4df3-a8e6-9b3ba894cbb7
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - publishcontent
+    - scheduler
+    - system
+id: regional_casanare
+label: 'Regional Casanare'
+weight: 45
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'schedule publishing of nodes'
+  - 'unpublish editable content'
+  - 'view field_creation_date'
+  - 'view own field_creation_date'
+  - 'view scheduled content'

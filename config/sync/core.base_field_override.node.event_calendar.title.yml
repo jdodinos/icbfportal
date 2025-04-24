@@ -1,0 +1,18 @@
+uuid: 90d1f839-2140-4c1e-be8c-3b3f254a4db4
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.event_calendar
+id: node.event_calendar.title
+field_name: title
+entity_type: node
+bundle: event_calendar
+label: Título
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

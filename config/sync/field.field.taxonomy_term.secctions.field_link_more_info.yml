@@ -1,0 +1,19 @@
+uuid: 821ccccf-5b8b-4954-82d6-0ca5ff6f051c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_link_more_info
+    - taxonomy.vocabulary.secctions
+id: taxonomy_term.secctions.field_link_more_info
+field_name: field_link_more_info
+entity_type: taxonomy_term
+bundle: secctions
+label: 'Link Relacionado'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

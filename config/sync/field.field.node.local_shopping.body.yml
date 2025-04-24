@@ -1,0 +1,24 @@
+uuid: d76e288d-3f51-4fb2-8d33-221fe5316c63
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.local_shopping
+  module:
+    - text
+id: node.local_shopping.body
+field_name: body
+entity_type: node
+bundle: local_shopping
+label: Descripción
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

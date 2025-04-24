@@ -1,0 +1,19 @@
+uuid: a7deb207-0131-4730-95f7-6e13fb184435
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email
+    - node.type.event_calendar
+id: node.event_calendar.field_email
+field_name: field_email
+entity_type: node
+bundle: event_calendar
+label: 'Correo Electrónico'
+description: 'Correo de contacto'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

@@ -1,0 +1,9 @@
+uuid: 299e18c6-05ec-4d76-b376-6427e9e9f900
+langcode: es
+status: true
+dependencies: {  }
+name: 'Carpetas Multimedia'
+vid: media_folders
+description: 'Carpetas para ordenar los archivos multimedia'
+weight: -6
+new_revision: false

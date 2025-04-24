@@ -1,0 +1,9 @@
+uuid: 39fc7001-a595-47c6-9af4-408561db1d3c
+langcode: es
+status: true
+dependencies: {  }
+name: 'Etiquetas Noticias'
+vid: section_labels
+description: 'Labels comunicados de prensa'
+weight: 2
+new_revision: false

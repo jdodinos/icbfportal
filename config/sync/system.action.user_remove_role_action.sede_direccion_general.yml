@@ -1,0 +1,14 @@
+uuid: dfc435e1-5f52-4b88-9c81-d346b5ced075
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.sede_direccion_general
+  module:
+    - user
+id: user_remove_role_action.sede_direccion_general
+label: 'Elimina el rol Sede Dirección General al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: sede_direccion_general

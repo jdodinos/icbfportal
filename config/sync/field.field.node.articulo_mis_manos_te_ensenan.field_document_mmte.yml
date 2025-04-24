@@ -1,0 +1,27 @@
+uuid: 18de7d5f-710d-42b1-8cd1-6fef5f4f99b2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document_mmte
+    - node.type.articulo_mis_manos_te_ensenan
+  module:
+    - file
+id: node.articulo_mis_manos_te_ensenan.field_document_mmte
+field_name: field_document_mmte
+entity_type: node
+bundle: articulo_mis_manos_te_ensenan
+label: 'Documento adjunto'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'pdf doc docx xls xlsx xlsm xlsmx ppt pptx pps ppsx zip rar msg xps'
+  max_filesize: ''
+  description_field: true
+field_type: file

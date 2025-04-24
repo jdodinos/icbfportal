@@ -1,0 +1,7 @@
+uuid: 897f4adb-e756-4e72-a28d-00059a4c7001
+langcode: es
+status: true
+dependencies: {  }
+formId: comment_node_carousel_form
+captchaType: captcha/default
+label: comment_node_carousel_form

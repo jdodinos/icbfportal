@@ -1,0 +1,21 @@
+uuid: b1b655a1-9102-4c37-bc1d-11918ce63a30
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.local_shopping
+  module:
+    - metatag
+id: node.local_shopping.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: local_shopping
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

@@ -1,0 +1,11 @@
+uuid: 0318c95d-2ec6-4dae-980b-4f25425b4365
+langcode: es
+status: true
+dependencies: {  }
+name: 'Web Scraped Content'
+type: web_scraped_content
+description: 'Content scraped from external websites.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,26 @@
+uuid: 64e7ead5-515f-4e80-b191-e3575c57b17c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_procedure
+    - node.type.glosario
+    - taxonomy.vocabulary.procedure
+id: node.glosario.field_procedure
+field_name: field_procedure
+entity_type: node
+bundle: glosario
+label: Trámites
+description: 'Oferta institucional con la cual el término de Glosario se relaciona'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      procedure: procedure
+    sort:
+      field: _none
+field_type: entity_reference

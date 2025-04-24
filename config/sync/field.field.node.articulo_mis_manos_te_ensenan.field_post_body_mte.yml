@@ -1,0 +1,22 @@
+uuid: 1f1bcc1d-8b82-4177-b334-f55e05283e8f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_post_body_mte
+    - node.type.articulo_mis_manos_te_ensenan
+  module:
+    - text
+id: node.articulo_mis_manos_te_ensenan.field_post_body_mte
+field_name: field_post_body_mte
+entity_type: node
+bundle: articulo_mis_manos_te_ensenan
+label: 'Contenido del Post'
+description: 'cuerpo de texto'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

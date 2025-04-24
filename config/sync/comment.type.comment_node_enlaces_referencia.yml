@@ -1,0 +1,8 @@
+uuid: 7a73bed8-c9dd-42f6-b2d5-99d01108e38a
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_enlaces_referencia
+label: 'Enlaces de Referencia comment'
+target_entity_type_id: node
+description: null

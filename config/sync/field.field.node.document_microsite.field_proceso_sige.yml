@@ -1,0 +1,26 @@
+uuid: 40a8056e-bd73-469e-9d06-c85439b3dbee
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_proceso_sige
+    - node.type.document_microsite
+    - taxonomy.vocabulary.sige_process_type
+id: node.document_microsite.field_proceso_sige
+field_name: field_proceso_sige
+entity_type: node
+bundle: document_microsite
+label: 'Proceso en SIGE'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      sige_process_type: sige_process_type
+    sort:
+      field: _none
+field_type: entity_reference

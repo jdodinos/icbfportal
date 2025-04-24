@@ -1,0 +1,23 @@
+uuid: 3009471b-abb8-452e-8a1a-7ff7b41a44b4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_web_site
+    - taxonomy.vocabulary.locations
+  module:
+    - link
+id: taxonomy_term.locations.field_web_site
+field_name: field_web_site
+entity_type: taxonomy_term
+bundle: locations
+label: 'Sitio Web'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

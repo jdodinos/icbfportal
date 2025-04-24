@@ -1,0 +1,26 @@
+uuid: c9dc7fd1-13e6-48bf-baa4-55b3c10ea07e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_person_area
+    - node.type.transparency
+    - taxonomy.vocabulary.dependencies
+id: node.transparency.field_person_area
+field_name: field_person_area
+entity_type: node
+bundle: transparency
+label: Dependencia
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      dependencies: dependencies
+    sort:
+      field: _none
+field_type: entity_reference

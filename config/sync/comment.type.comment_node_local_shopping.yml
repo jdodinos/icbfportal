@@ -1,0 +1,8 @@
+uuid: f3118bc6-fb3b-440c-a3f9-31009aed878f
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_local_shopping
+label: 'Compras Locales comment'
+target_entity_type_id: node
+description: null

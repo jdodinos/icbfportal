@@ -1,0 +1,21 @@
+uuid: 55f2a058-e9dd-49bd-a0ef-029c6040070e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_registration_date
+    - node.type.informe_denuncias_anticorrupcion
+  module:
+    - datetime
+id: node.informe_denuncias_anticorrupcion.field_registration_date
+field_name: field_registration_date
+entity_type: node
+bundle: informe_denuncias_anticorrupcion
+label: 'Fecha Registro'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

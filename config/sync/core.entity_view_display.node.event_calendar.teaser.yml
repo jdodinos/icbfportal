@@ -1,0 +1,63 @@
+uuid: 79918147-8ccd-4a34-a7fa-8c23a41fa399
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.event_calendar.body
+    - field.field.node.event_calendar.comment_node_event_calendar
+    - field.field.node.event_calendar.event_calendar_date
+    - field.field.node.event_calendar.event_calendar_status
+    - field.field.node.event_calendar.field_address
+    - field.field.node.event_calendar.field_color
+    - field.field.node.event_calendar.field_date_day_calendaro
+    - field.field.node.event_calendar.field_email
+    - field.field.node.event_calendar.field_event_tag
+    - field.field.node.event_calendar.field_event_tag_dg
+    - field.field.node.event_calendar.field_list_image
+    - field.field.node.event_calendar.field_location
+    - field.field.node.event_calendar.field_metatag
+    - field.field.node.event_calendar.field_phone_contact
+    - field.field.node.event_calendar.field_region_scope
+    - field.field.node.event_calendar.field_timeline_color_de_fondo_
+    - node.type.event_calendar
+  module:
+    - text
+    - user
+id: node.event_calendar.teaser
+targetEntityType: node
+bundle: event_calendar
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment_node_event_calendar: true
+  event_calendar_date: true
+  event_calendar_status: true
+  field_address: true
+  field_color: true
+  field_date_day_calendaro: true
+  field_email: true
+  field_event_tag: true
+  field_event_tag_dg: true
+  field_list_image: true
+  field_location: true
+  field_metatag: true
+  field_phone_contact: true
+  field_region_scope: true
+  field_timeline_color_de_fondo_: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

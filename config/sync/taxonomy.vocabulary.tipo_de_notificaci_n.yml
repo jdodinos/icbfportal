@@ -1,0 +1,9 @@
+uuid: 3b8382eb-9d85-4ab1-8911-db59812f13e3
+langcode: es
+status: true
+dependencies: {  }
+name: 'Tipo de notificación'
+vid: tipo_de_notificaci_n
+description: null
+weight: 10
+new_revision: false

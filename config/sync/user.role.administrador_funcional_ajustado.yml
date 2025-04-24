@@ -1,0 +1,9 @@
+uuid: fc6b3fcf-a027-46ea-a48d-6f88e122a6a4
+langcode: es
+status: true
+dependencies: {  }
+id: administrador_funcional_ajustado
+label: 'Administrador Funcional Ajustado'
+weight: 73
+is_admin: null
+permissions: {  }

@@ -1,0 +1,9 @@
+uuid: 864bfad0-fb17-4f3c-ae5c-bed7e482255d
+langcode: es
+status: true
+dependencies: {  }
+name: 'Convocatorias Gestión Humana'
+vid: convocatorias_gesti_n_humana
+description: 'Tipos de convocatoria de la Dirección de Gestión Humana'
+weight: -1
+new_revision: false

@@ -1,0 +1,51 @@
+uuid: 1d33721c-8085-4bb8-92e5-e455440bcd32
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.multimedia.comment_node_multimedia
+    - field.field.node.multimedia.field_category_citizen
+    - field.field.node.multimedia.field_content
+    - field.field.node.multimedia.field_date
+    - field.field.node.multimedia.field_file_categoria
+    - field.field.node.multimedia.field_images
+    - field.field.node.multimedia.field_list_image
+    - field.field.node.multimedia.field_location
+    - field.field.node.multimedia.field_metatag
+    - field.field.node.multimedia.field_mmedia_type
+    - field.field.node.multimedia.field_priority
+    - field.field.node.multimedia.field_section
+    - field.field.node.multimedia.field_video
+    - field.field.node.multimedia.field_youtube
+    - node.type.multimedia
+  module:
+    - user
+id: node.multimedia.teaser
+targetEntityType: node
+bundle: multimedia
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment_node_multimedia: true
+  field_category_citizen: true
+  field_content: true
+  field_date: true
+  field_file_categoria: true
+  field_images: true
+  field_list_image: true
+  field_location: true
+  field_metatag: true
+  field_mmedia_type: true
+  field_priority: true
+  field_section: true
+  field_video: true
+  field_youtube: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

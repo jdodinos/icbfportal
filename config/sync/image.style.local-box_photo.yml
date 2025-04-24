@@ -1,0 +1,15 @@
+uuid: 94f73058-8bda-484e-887f-218a3d074851
+langcode: es
+status: true
+dependencies: {  }
+name: local-box_photo
+label: 'local-box photo'
+effects:
+  06ea4d8c-f6d9-46b5-aa6a-fb1346b79daa:
+    uuid: 06ea4d8c-f6d9-46b5-aa6a-fb1346b79daa
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 342
+      height: 256
+      anchor: center-center

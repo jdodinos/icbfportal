@@ -1,0 +1,19 @@
+uuid: 8f08ca06-67a6-461c-8e88-c0c6842819f5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email
+    - node.type.instituciones_adopciones
+id: node.instituciones_adopciones.field_email
+field_name: field_email
+entity_type: node
+bundle: instituciones_adopciones
+label: 'Correo Electrónico'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

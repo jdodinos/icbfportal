@@ -1,0 +1,7 @@
+uuid: 2691bdac-b698-4965-8a37-573ef54fdb51
+langcode: es
+status: true
+dependencies: {  }
+id: taxonomy_term__secctions
+label: 'Taxonomy Term: Secctions'
+tags: {  }

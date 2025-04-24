@@ -1,0 +1,53 @@
+uuid: 6411fd7a-8610-42d5-866c-e9a936dc1463
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.datos_ni_os_migrantes.body
+    - field.field.node.datos_ni_os_migrantes.comment_node_datos_ni_os_migrant
+    - field.field.node.datos_ni_os_migrantes.field_autoridad_1
+    - field.field.node.datos_ni_os_migrantes.field_correo_electronico_contact
+    - field.field.node.datos_ni_os_migrantes.field_edad
+    - field.field.node.datos_ni_os_migrantes.field_fecha_publicaci_n
+    - field.field.node.datos_ni_os_migrantes.field_fotografia
+    - field.field.node.datos_ni_os_migrantes.field_metatag
+    - field.field.node.datos_ni_os_migrantes.field_nombre
+    - field.field.node.datos_ni_os_migrantes.field_regional
+    - field.field.node.datos_ni_os_migrantes.field_telefono
+    - node.type.datos_ni_os_migrantes
+  module:
+    - text
+    - user
+id: node.datos_ni_os_migrantes.teaser
+targetEntityType: node
+bundle: datos_ni_os_migrantes
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment_node_datos_ni_os_migrant: true
+  field_autoridad_1: true
+  field_correo_electronico_contact: true
+  field_edad: true
+  field_fecha_publicaci_n: true
+  field_fotografia: true
+  field_metatag: true
+  field_nombre: true
+  field_regional: true
+  field_telefono: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

@@ -1,0 +1,21 @@
+uuid: c58c19c9-0ee4-4201-8a1c-6f5ff2b69d80
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fecha_publicaci_n
+    - node.type.datos_ni_os_migrantes
+  module:
+    - datetime
+id: node.datos_ni_os_migrantes.field_fecha_publicaci_n
+field_name: field_fecha_publicaci_n
+entity_type: node
+bundle: datos_ni_os_migrantes
+label: 'Fecha Publicación'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

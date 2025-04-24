@@ -1,0 +1,14 @@
+uuid: ed8587ad-d47f-40cf-bb5d-d1d290f499f3
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.regional_cundinamarca
+  module:
+    - user
+id: user_add_role_action.regional_cundinamarca
+label: 'Añade el rol Regional Cundinamarca al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: regional_cundinamarca

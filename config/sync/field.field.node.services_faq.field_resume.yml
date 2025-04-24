@@ -1,0 +1,25 @@
+uuid: 17129174-f3ea-4917-9ccd-96b823e5193a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resume
+    - node.type.services_faq
+  module:
+    - text
+id: node.services_faq.field_resume
+field_name: field_resume
+entity_type: node
+bundle: services_faq
+label: 'Respuesta escrita'
+description: 'Resumen, texto de respuesta'
+required: true
+translatable: false
+default_value:
+  -
+    value: "<div class=\"faq-title3\">Respuesta:</div>\r\n<p class=\"faq-txt\">este es el texto de la respuesta</p>\r\n"
+    format: full_html
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

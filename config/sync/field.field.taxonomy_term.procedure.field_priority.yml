@@ -1,0 +1,23 @@
+uuid: be9675a2-099d-43f4-a914-25a1499435e7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_priority
+    - taxonomy.vocabulary.procedure
+id: taxonomy_term.procedure.field_priority
+field_name: field_priority
+entity_type: taxonomy_term
+bundle: procedure
+label: Prioridad
+description: 'top 10'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,19 @@
+uuid: 43512e37-1f86-427f-b1aa-a7c60c314fa4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_header_height
+    - paragraphs.paragraphs_type.glazed_content_design
+id: paragraph.glazed_content_design.field_header_height
+field_name: field_header_height
+entity_type: paragraph
+bundle: glazed_content_design
+label: 'Header Height'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

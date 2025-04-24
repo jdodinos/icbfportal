@@ -1,0 +1,8 @@
+uuid: 01fca60f-841e-4b9b-b3d6-8b8a78845c89
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_documento_de_convoc
+label: 'Documento de Convocatoria comment'
+target_entity_type_id: node
+description: null

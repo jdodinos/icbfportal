@@ -1,0 +1,15 @@
+uuid: 7cc12622-3dbf-43a9-af1f-2d86c56a4671
+langcode: es
+status: true
+dependencies: {  }
+name: boletines_vive
+label: 'boletines vive'
+effects:
+  52f60b3d-fbd9-452e-83a3-0420c808085e:
+    uuid: 52f60b3d-fbd9-452e-83a3-0420c808085e
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 265
+      anchor: center-center

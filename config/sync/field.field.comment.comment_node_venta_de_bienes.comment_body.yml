@@ -1,0 +1,22 @@
+uuid: 46886a52-a8be-467f-8fcd-f26fba8c1d9f
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_venta_de_bienes
+    - field.storage.comment.comment_body
+  module:
+    - text
+id: comment.comment_node_venta_de_bienes.comment_body
+field_name: comment_body
+entity_type: comment
+bundle: comment_node_venta_de_bienes
+label: Comment
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

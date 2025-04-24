@@ -1,0 +1,21 @@
+uuid: c5244c36-7735-45bf-ad6d-e45f03744726
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_verify_fact_anticorruption
+    - node.type.informe_denuncias_anticorrupcion
+  module:
+    - options
+id: node.informe_denuncias_anticorrupcion.field_verify_fact_anticorruption
+field_name: field_verify_fact_anticorruption
+entity_type: node
+bundle: informe_denuncias_anticorrupcion
+label: '¿Se corroboró el hecho?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

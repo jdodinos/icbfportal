@@ -1,0 +1,15 @@
+uuid: 948dfb6b-60d0-40bd-b504-2889112b45a7
+langcode: es
+status: true
+dependencies: {  }
+name: grid-familias
+label: grid-familias
+effects:
+  648d2498-bb64-46ec-9c52-80adc16d60e8:
+    uuid: 648d2498-bb64-46ec-9c52-80adc16d60e8
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 650
+      height: 360
+      anchor: center-center

@@ -1,0 +1,60 @@
+uuid: 1768c063-2dce-4448-8482-77f255716f63
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.bookpost_group.field_book_author
+    - field.field.paragraph.bookpost_group.field_book_document
+    - field.field.paragraph.bookpost_group.field_book_editorial
+    - field.field.paragraph.bookpost_group.field_book_resume
+    - field.field.paragraph.bookpost_group.field_book_year
+    - paragraphs.paragraphs_type.bookpost_group
+  module:
+    - file
+    - text
+id: paragraph.bookpost_group.default
+targetEntityType: paragraph
+bundle: bookpost_group
+mode: default
+content:
+  field_book_author:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_book_document:
+    type: file_generic
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_book_editorial:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_book_resume:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_book_year:
+    type: number
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

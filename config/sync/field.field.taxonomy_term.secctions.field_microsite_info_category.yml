@@ -1,0 +1,21 @@
+uuid: 100e9e32-c8f8-4555-93af-e35098e62b50
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_microsite_info_category
+    - taxonomy.vocabulary.secctions
+  module:
+    - options
+id: taxonomy_term.secctions.field_microsite_info_category
+field_name: field_microsite_info_category
+entity_type: taxonomy_term
+bundle: secctions
+label: 'Categoría de Micrositio'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

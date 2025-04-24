@@ -1,0 +1,30 @@
+uuid: d7488c87-2f0b-49f3-80ce-5ec4a8ad59be
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_encuesta_web
+    - field.field.comment.comment_node_encuesta_web.comment_body
+  module:
+    - text
+id: comment.comment_node_encuesta_web.default
+targetEntityType: comment
+bundle: comment_node_encuesta_web
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

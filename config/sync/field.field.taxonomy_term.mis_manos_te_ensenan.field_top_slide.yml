@@ -1,0 +1,22 @@
+uuid: a4a65c62-f7aa-4cf6-a7a4-004406446ab6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_top_slide
+    - taxonomy.vocabulary.mis_manos_te_ensenan
+  module:
+    - text
+id: taxonomy_term.mis_manos_te_ensenan.field_top_slide
+field_name: field_top_slide
+entity_type: taxonomy_term
+bundle: mis_manos_te_ensenan
+label: 'Top Micrositio'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

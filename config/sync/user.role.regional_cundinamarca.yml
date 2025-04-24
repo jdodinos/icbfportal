@@ -1,0 +1,20 @@
+uuid: f5a640e2-31ed-4cb6-84a1-ac6c528b1068
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - publishcontent
+    - scheduler
+    - system
+id: regional_cundinamarca
+label: 'Regional Cundinamarca'
+weight: 50
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'schedule publishing of nodes'
+  - 'unpublish editable content'
+  - 'view field_creation_date'
+  - 'view own field_creation_date'
+  - 'view scheduled content'

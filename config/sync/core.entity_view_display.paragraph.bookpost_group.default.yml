@@ -1,0 +1,62 @@
+uuid: 5a677cd3-75ca-48f8-b1c6-8fbe6eecef67
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.bookpost_group.field_book_author
+    - field.field.paragraph.bookpost_group.field_book_document
+    - field.field.paragraph.bookpost_group.field_book_editorial
+    - field.field.paragraph.bookpost_group.field_book_resume
+    - field.field.paragraph.bookpost_group.field_book_year
+    - paragraphs.paragraphs_type.bookpost_group
+  module:
+    - file
+    - text
+id: paragraph.bookpost_group.default
+targetEntityType: paragraph
+bundle: bookpost_group
+mode: default
+content:
+  field_book_author:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_book_document:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_book_editorial:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_book_resume:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_book_year:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  search_api_attachments: true
+  search_api_excerpt: true

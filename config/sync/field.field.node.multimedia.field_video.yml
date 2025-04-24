@@ -1,0 +1,26 @@
+uuid: 5afa7c06-724a-4c67-ba10-8d7309aeb683
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video
+    - node.type.multimedia
+  module:
+    - video
+id: node.multimedia.field_video
+field_name: field_video
+entity_type: node
+bundle: multimedia
+label: Video
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: videos/original
+  file_extensions: 'mp4 ogg avi mov wmv flv ogv webm'
+  max_filesize: '80 mb'
+field_type: video

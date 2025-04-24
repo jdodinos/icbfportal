@@ -1,0 +1,28 @@
+uuid: 7f849598-092b-41f9-9036-bc96d4d67e44
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nna_section
+    - node.type.articulo_nna
+    - taxonomy.vocabulary.ninos_ninas_y_adolescentes
+id: node.articulo_nna.field_nna_section
+field_name: field_nna_section
+entity_type: node
+bundle: articulo_nna
+label: 'Sección Micrositio Niños'
+description: 'Ubicación dentro del as secciones del micrositio'
+required: false
+translatable: false
+default_value:
+  -
+    tid: '7631'
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      ninos_ninas_y_adolescentes: ninos_ninas_y_adolescentes
+    sort:
+      field: _none
+field_type: entity_reference

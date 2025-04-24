@@ -1,0 +1,22 @@
+uuid: 2b4d2538-54bc-4fb9-971e-6abeeb3617ae
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resume
+    - node.type.local_shopping
+  module:
+    - text
+id: node.local_shopping.field_resume
+field_name: field_resume
+entity_type: node
+bundle: local_shopping
+label: Resumen
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

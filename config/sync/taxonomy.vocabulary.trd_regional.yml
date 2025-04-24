@@ -1,0 +1,9 @@
+uuid: f4794eb9-f148-47bd-bb5a-76df8c52042d
+langcode: es
+status: true
+dependencies: {  }
+name: 'TRD Regional'
+vid: trd_regional
+description: 'clasificación Regional TRD'
+weight: 10
+new_revision: false

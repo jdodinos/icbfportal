@@ -1,0 +1,14 @@
+uuid: 3b799b89-9f5e-41b8-a939-66ce6ab81851
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.regional_sucre
+  module:
+    - user
+id: user_add_role_action.regional_sucre
+label: 'Añade el rol Regional Sucre al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: regional_sucre

@@ -1,0 +1,10 @@
+uuid: fc99f7b3-e2ee-4ce6-be35-6d17040821f1
+langcode: es
+status: true
+dependencies: {  }
+id: summoned
+label: Summoned
+icon_uuid: null
+icon_default: null
+description: 'Migrated from field_collection field_summoned'
+behavior_plugins: {  }

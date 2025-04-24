@@ -1,0 +1,104 @@
+uuid: 7e664a47-f471-4967-9a4f-b6627016f995
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_sector_studies.default
+    - field.field.node.sector_studies.comment_node_sector_studies
+    - field.field.node.sector_studies.field_attached_files
+    - field.field.node.sector_studies.field_category_citizen
+    - field.field.node.sector_studies.field_dae_year
+    - field.field.node.sector_studies.field_estado_estudo_sector
+    - field.field.node.sector_studies.field_informacion_adicional
+    - field.field.node.sector_studies.field_metatag
+    - field.field.node.sector_studies.field_process_area
+    - field.field.node.sector_studies.field_resume
+    - field.field.node.sector_studies.field_section
+    - node.type.sector_studies
+  module:
+    - comment
+    - datetime
+    - file
+    - options
+    - text
+    - user
+id: node.sector_studies.default
+targetEntityType: node
+bundle: sector_studies
+mode: default
+content:
+  comment_node_sector_studies:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_attached_files:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_category_citizen:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_dae_year:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_estado_estudo_sector:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_process_area:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_resume:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_section:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_informacion_adicional: true
+  field_metatag: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

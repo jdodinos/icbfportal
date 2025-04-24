@@ -1,0 +1,21 @@
+uuid: 77253e31-a2d0-4ca7-928c-dcea0e4ff3d0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_metatag
+    - taxonomy.vocabulary.para_papas
+  module:
+    - metatag
+id: taxonomy_term.para_papas.field_metatag
+field_name: field_metatag
+entity_type: taxonomy_term
+bundle: para_papas
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

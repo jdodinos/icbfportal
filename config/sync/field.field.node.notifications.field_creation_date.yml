@@ -1,0 +1,21 @@
+uuid: 417a5e75-5445-4924-9e6b-eaf6c6daca09
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_creation_date
+    - node.type.notifications
+  module:
+    - datetime
+id: node.notifications.field_creation_date
+field_name: field_creation_date
+entity_type: node
+bundle: notifications
+label: 'Fecha fijación'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

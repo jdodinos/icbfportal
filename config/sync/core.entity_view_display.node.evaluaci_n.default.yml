@@ -1,0 +1,140 @@
+uuid: 4e4507f3-9a52-46c5-8501-1af9f9ff3391
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_evaluaci_n.default
+    - field.field.node.evaluaci_n.comment_node_evaluaci_n
+    - field.field.node.evaluaci_n.field_dae_year
+    - field.field.node.evaluaci_n.field_document
+    - field.field.node.evaluaci_n.field_file_categoria
+    - field.field.node.evaluaci_n.field_file_priority
+    - field.field.node.evaluaci_n.field_list_image
+    - field.field.node.evaluaci_n.field_metatag
+    - field.field.node.evaluaci_n.field_resume
+    - field.field.node.evaluaci_n.field_sme_author_org
+    - field.field.node.evaluaci_n.field_sme_aval_type
+    - field.field.node.evaluaci_n.field_sme_database1
+    - field.field.node.evaluaci_n.field_sme_dictionary
+    - field.field.node.evaluaci_n.field_sme_instrument
+    - node.type.evaluaci_n
+  module:
+    - comment
+    - datetime
+    - file
+    - image
+    - options
+    - text
+    - user
+id: node.evaluaci_n.default
+targetEntityType: node
+bundle: evaluaci_n
+mode: default
+content:
+  comment_node_evaluaci_n:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_dae_year:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_document:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_file_categoria:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_file_priority:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_list_image:
+    type: image
+    label: inline
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_resume:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_sme_author_org:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_sme_aval_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_sme_database1:
+    type: file_default
+    label: inline
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_sme_dictionary:
+    type: file_default
+    label: inline
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_sme_instrument:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_metatag: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

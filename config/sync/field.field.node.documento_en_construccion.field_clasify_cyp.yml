@@ -1,0 +1,21 @@
+uuid: 3d996966-810b-4ade-894d-3d8dcbe285b8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_clasify_cyp
+    - node.type.documento_en_construccion
+  module:
+    - options
+id: node.documento_en_construccion.field_clasify_cyp
+field_name: field_clasify_cyp
+entity_type: node
+bundle: documento_en_construccion
+label: Clasificación
+description: 'Clasificación de página donde se mostrará el documentos para consulta y participación ciudadana'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

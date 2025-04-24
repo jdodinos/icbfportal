@@ -1,0 +1,31 @@
+uuid: 3f8d33eb-c3da-4698-91ac-d0a1d08a37dc
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_verify_fact_anticorruption
+field_name: field_verify_fact_anticorruption
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: Si
+    -
+      value: '2'
+      label: 'No'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

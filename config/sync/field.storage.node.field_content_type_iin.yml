@@ -1,0 +1,52 @@
+uuid: b6581479-2381-428e-80b9-dfcc3d1e77ef
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_content_type_iin
+field_name: field_content_type_iin
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: iin-slide
+      label: 'Noticia Slide'
+    -
+      value: iin-col
+      label: 'Noticia secundaria'
+    -
+      value: iin-visual
+      label: Video
+    -
+      value: iin-image
+      label: Galería
+    -
+      value: iin-contact
+      label: Contacto
+    -
+      value: iin-widget
+      label: Relacionado
+    -
+      value: iin-post
+      label: Post
+    -
+      value: iin-agenda
+      label: Agenda
+    -
+      value: iin-panelist
+      label: Panelista
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,10 @@
+uuid: ccacf256-09dd-43e0-912e-d0456cc17568
+langcode: es
+status: true
+dependencies: {  }
+id: children_defendant
+label: 'Children defendant'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from field_collection field_children_defendant'
+behavior_plugins: {  }

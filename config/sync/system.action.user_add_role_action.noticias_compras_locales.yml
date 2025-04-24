@@ -1,0 +1,14 @@
+uuid: 11bb4357-e182-4d9a-bc51-f08ba00c079e
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.noticias_compras_locales
+  module:
+    - user
+id: user_add_role_action.noticias_compras_locales
+label: 'Añade el rol Noticias Compras Locales al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: noticias_compras_locales

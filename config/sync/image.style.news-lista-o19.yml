@@ -1,0 +1,15 @@
+uuid: b1599c07-0b60-4d00-b362-e889ac245c88
+langcode: es
+status: true
+dependencies: {  }
+name: news-lista-o19
+label: 'News lista o19'
+effects:
+  70e84c72-6cb8-4506-9157-8c114d1b11db:
+    uuid: 70e84c72-6cb8-4506-9157-8c114d1b11db
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 325
+      anchor: center-center

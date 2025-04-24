@@ -1,0 +1,7 @@
+uuid: 1512edf0-377f-45c0-936c-a1d0b3168bb3
+langcode: es
+status: true
+dependencies: {  }
+formId: comment_node_forum_form
+captchaType: captcha/default
+label: comment_node_forum_form

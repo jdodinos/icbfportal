@@ -1,0 +1,21 @@
+uuid: 9c586fa6-b130-4085-8188-0cc9f04068cf
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_misional_nna_type
+    - node.type.articles_portal_web
+  module:
+    - options
+id: node.articles_portal_web.field_misional_nna_type
+field_name: field_misional_nna_type
+entity_type: node
+bundle: articles_portal_web
+label: 'Clasificación Misional'
+description: 'Contenido de micrositios de información misional'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

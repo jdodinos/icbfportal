@@ -1,0 +1,27 @@
+uuid: 0fd41e6b-1f4e-491a-9061-929c8e543033
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media_audio_mte
+    - node.type.articulo_mis_manos_te_ensenan
+  module:
+    - file
+id: node.articulo_mis_manos_te_ensenan.field_media_audio_mte
+field_name: field_media_audio_mte
+entity_type: node
+bundle: articulo_mis_manos_te_ensenan
+label: 'Audio adjunto'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'mp3 mp4 wmv'
+  max_filesize: ''
+  description_field: true
+field_type: file

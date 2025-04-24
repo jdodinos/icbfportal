@@ -1,0 +1,21 @@
+uuid: f7d811e8-4dae-43d9-9995-17f5fd8701d2
+langcode: es
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term_mis_manos_te_ensenan
+label: 'Término de taxonomía - Mis manos te enseñan'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'mis-manos-te-ensenan/[term:name]'
+selection_criteria:
+  -
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      mis_manos_te_ensenan: mis_manos_te_ensenan
+selection_logic: and
+weight: 0
+relationships: {  }

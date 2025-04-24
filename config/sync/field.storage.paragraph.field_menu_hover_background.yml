@@ -1,0 +1,25 @@
+uuid: 3f7116fc-ae5a-4a33-9f71-3743ed2f0a9d
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: paragraph.field_menu_hover_background
+field_name: field_menu_hover_background
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

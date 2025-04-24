@@ -1,0 +1,33 @@
+uuid: 4406a9ab-7d3b-4cdb-b586-73163ed22bf9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.comment_node_infografia_observat
+    - node.type.infografia_observatorio
+  module:
+    - comment
+id: node.infografia_observatorio.comment_node_infografia_observat
+field_name: comment_node_infografia_observat
+entity_type: node
+bundle: infografia_observatorio
+label: Comments
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    status: 1
+    cid: 0
+    last_comment_timestamp: 0
+    last_comment_name: null
+    last_comment_uid: 0
+    comment_count: 0
+default_value_callback: ''
+settings:
+  default_mode: 0
+  per_page: 50
+  anonymous: 0
+  form_location: true
+  preview: 1
+field_type: comment

@@ -1,0 +1,21 @@
+uuid: 69b97e64-76f9-4e97-9499-dc33c5386d79
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sme_aval_type
+    - node.type.evaluaci_n
+  module:
+    - options
+id: node.evaluaci_n.field_sme_aval_type
+field_name: field_sme_aval_type
+entity_type: node
+bundle: evaluaci_n
+label: 'Investigación Tipo'
+description: 'identificar si la investigación es realizadas por externos con aval técnico y metodológico del ICBF.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

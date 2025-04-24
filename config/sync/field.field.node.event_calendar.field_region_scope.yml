@@ -1,0 +1,22 @@
+uuid: 2ef738e1-8e3a-4581-bb42-ad78b5586f91
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_region_scope
+    - node.type.event_calendar
+  module:
+    - text
+id: node.event_calendar.field_region_scope
+field_name: field_region_scope
+entity_type: node
+bundle: event_calendar
+label: 'Lugar del Evento'
+description: 'Dirección Cobertura o Zonas de influencia'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

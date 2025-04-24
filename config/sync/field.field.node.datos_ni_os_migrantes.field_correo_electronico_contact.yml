@@ -1,0 +1,19 @@
+uuid: b8d322a6-c320-43ed-a4c4-04ef1ee90113
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_correo_electronico_contact
+    - node.type.datos_ni_os_migrantes
+id: node.datos_ni_os_migrantes.field_correo_electronico_contact
+field_name: field_correo_electronico_contact
+entity_type: node
+bundle: datos_ni_os_migrantes
+label: 'Correo Electronico Contacto'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

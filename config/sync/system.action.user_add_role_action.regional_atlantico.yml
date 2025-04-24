@@ -1,0 +1,14 @@
+uuid: 9745c993-2622-4532-b82f-44e76552eb3e
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.regional_atlantico
+  module:
+    - user
+id: user_add_role_action.regional_atlantico
+label: 'Añade el rol Regional Atlántico al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: regional_atlantico

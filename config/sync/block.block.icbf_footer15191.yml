@@ -1,0 +1,26 @@
+uuid: bb5ec173-218a-4bd3-93e4-a630d553bc86
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:528a0197-ca56-4d05-b68f-5d3aab9ac7ce'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - icbf
+id: icbf_footer15191
+theme: icbf
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:528a0197-ca56-4d05-b68f-5d3aab9ac7ce'
+settings:
+  id: 'block_content:528a0197-ca56-4d05-b68f-5d3aab9ac7ce'
+  label: 'Footer 1519 -1'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

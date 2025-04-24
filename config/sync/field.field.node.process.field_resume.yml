@@ -1,0 +1,22 @@
+uuid: 7f6a6f49-b2c8-4c7b-8897-e43b5b32fdd9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resume
+    - node.type.process
+  module:
+    - text
+id: node.process.field_resume
+field_name: field_resume
+entity_type: node
+bundle: process
+label: Resumen
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

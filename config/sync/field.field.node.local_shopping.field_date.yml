@@ -1,0 +1,21 @@
+uuid: 7f20a5f1-09d9-4826-a008-dcac86016921
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.local_shopping
+  module:
+    - datetime
+id: node.local_shopping.field_date
+field_name: field_date
+entity_type: node
+bundle: local_shopping
+label: Fecha
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

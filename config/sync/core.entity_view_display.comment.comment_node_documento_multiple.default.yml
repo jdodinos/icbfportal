@@ -1,0 +1,30 @@
+uuid: 357b93b9-a16d-4dde-bc3c-83e6013ad0e4
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_documento_multiple
+    - field.field.comment.comment_node_documento_multiple.comment_body
+  module:
+    - text
+id: comment.comment_node_documento_multiple.default
+targetEntityType: comment
+bundle: comment_node_documento_multiple
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

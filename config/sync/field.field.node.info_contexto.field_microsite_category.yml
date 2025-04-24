@@ -1,0 +1,26 @@
+uuid: 6166686e-3aef-4642-9275-7320fd3b94e0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_microsite_category
+    - node.type.info_contexto
+    - taxonomy.vocabulary.programa_adopciones
+id: node.info_contexto.field_microsite_category
+field_name: field_microsite_category
+entity_type: node
+bundle: info_contexto
+label: 'Sección en Micrositio ADA'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      programa_adopciones: programa_adopciones
+    sort:
+      field: _none
+field_type: entity_reference

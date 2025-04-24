@@ -1,0 +1,25 @@
+uuid: fbb391a9-d381-4cc3-baf1-19e138217e7a
+langcode: es
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - field_permissions
+    - node
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_bookpost_group
+field_name: field_bookpost_group
+entity_type: node
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

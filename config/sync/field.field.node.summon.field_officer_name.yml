@@ -1,0 +1,19 @@
+uuid: c3daf79b-34b9-43d8-9902-89d359da8025
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_officer_name
+    - node.type.summon
+id: node.summon.field_officer_name
+field_name: field_officer_name
+entity_type: node
+bundle: summon
+label: 'Nombre de defensor'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

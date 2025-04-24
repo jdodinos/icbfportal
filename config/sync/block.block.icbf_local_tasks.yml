@@ -1,0 +1,22 @@
+uuid: 445cacb3-d9c4-4b97-9cf6-6d9e6799f5f4
+langcode: es
+status: true
+dependencies:
+  theme:
+    - icbf
+_core:
+  default_config_hash: DwUwgcqTweB2vngQqkjGdWhCXMpHejMlJJhjGNnFpUw
+id: icbf_local_tasks
+theme: icbf
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Pestañas
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

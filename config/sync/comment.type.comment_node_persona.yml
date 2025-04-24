@@ -1,0 +1,8 @@
+uuid: 2524ba10-3373-4d54-afcb-6320433495e6
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_persona
+label: 'Perfil Directivos comment'
+target_entity_type_id: node
+description: null

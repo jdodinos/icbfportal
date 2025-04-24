@@ -1,0 +1,30 @@
+uuid: 1b9230b0-a542-4076-bfa0-d0c8f4496c15
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_encargos
+    - field.field.comment.comment_node_encargos.comment_body
+  module:
+    - text
+id: comment.comment_node_encargos.default
+targetEntityType: comment
+bundle: comment_node_encargos
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

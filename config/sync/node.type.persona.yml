@@ -1,0 +1,28 @@
+uuid: 926b9437-d646-4766-86f7-d08f798f8361
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: true
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Perfil Directivos'
+type: persona
+description: 'Perfiles de Funcionarios Directivos Sede Dirección General y Direcciones Regionales'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

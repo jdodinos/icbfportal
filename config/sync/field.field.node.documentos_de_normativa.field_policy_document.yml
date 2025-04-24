@@ -1,0 +1,27 @@
+uuid: fc30e51f-dc56-4019-8d84-b7110af3deee
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_policy_document
+    - node.type.documentos_de_normativa
+  module:
+    - file
+id: node.documentos_de_normativa.field_policy_document
+field_name: field_policy_document
+entity_type: node
+bundle: documentos_de_normativa
+label: 'Documento Normatividad'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: normatividad
+  file_extensions: 'pdf doc xls xlsx xlsm xlsmx docx ppt pptx pps ppsx zip rar'
+  max_filesize: ''
+  description_field: true
+field_type: file

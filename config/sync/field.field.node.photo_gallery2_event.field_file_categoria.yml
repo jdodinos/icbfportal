@@ -1,0 +1,30 @@
+uuid: 6fdbc794-bae7-4c3b-b57e-fbf260bb1403
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file_categoria
+    - node.type.photo_gallery2_event
+    - taxonomy.vocabulary.file_category
+id: node.photo_gallery2_event.field_file_categoria
+field_name: field_file_categoria
+entity_type: node
+bundle: photo_gallery2_event
+label: 'Categoría de Contenido'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    tid: '7508'
+  -
+    tid: '7521'
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      file_category: file_category
+    sort:
+      field: _none
+field_type: entity_reference

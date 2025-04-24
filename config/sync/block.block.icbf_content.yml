@@ -1,0 +1,22 @@
+uuid: d995fecd-9c10-454b-b526-27bacea285ca
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - icbf
+_core:
+  default_config_hash: xSVQZdsZ-3KR1rwUaKuUnrEnGLm9k8Nt87iYdCMTg58
+id: icbf_content
+theme: icbf
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenido principal de la página'
+  label_display: '0'
+  provider: system
+visibility: {  }

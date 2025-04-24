@@ -1,0 +1,26 @@
+uuid: 8185cc2c-6f39-469e-99f9-128695e77e46
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section
+    - node.type.articles_portal_web
+    - taxonomy.vocabulary.secctions
+id: node.articles_portal_web.field_section
+field_name: field_section
+entity_type: node
+bundle: articles_portal_web
+label: Sección
+description: 'Sección general en el portal web'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      secctions: secctions
+    sort:
+      field: _none
+field_type: entity_reference

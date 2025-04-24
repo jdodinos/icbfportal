@@ -1,0 +1,8 @@
+uuid: 2cf6a66c-014d-4ecd-84fa-39cd62ccc432
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_sector_studies
+label: 'Estudio de Sector comment'
+target_entity_type_id: node
+description: null

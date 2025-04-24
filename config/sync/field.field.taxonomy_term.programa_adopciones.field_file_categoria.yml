@@ -1,0 +1,28 @@
+uuid: 2f750fe1-499a-432c-9782-c395624fa65d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_file_categoria
+    - taxonomy.vocabulary.file_category
+    - taxonomy.vocabulary.programa_adopciones
+id: taxonomy_term.programa_adopciones.field_file_categoria
+field_name: field_file_categoria
+entity_type: taxonomy_term
+bundle: programa_adopciones
+label: 'Categoría de Contenido'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    tid: '7037'
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      file_category: file_category
+    sort:
+      field: _none
+field_type: entity_reference

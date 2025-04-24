@@ -1,0 +1,7 @@
+uuid: a9925de8-3fd0-4cb1-bd70-ce6aab71e624
+langcode: es
+status: true
+dependencies: {  }
+formId: comment_node_sector_studies_form
+captchaType: captcha/default
+label: comment_node_sector_studies_form

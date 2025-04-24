@@ -1,0 +1,26 @@
+uuid: 575feb11-cf9b-4770-b3e7-1964a8ce9330
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_related_procedures
+    - taxonomy.vocabulary.procedure
+    - taxonomy.vocabulary.secctions
+id: taxonomy_term.secctions.field_related_procedures
+field_name: field_related_procedures
+entity_type: taxonomy_term
+bundle: secctions
+label: 'Trámites relacionados'
+description: 'Relaciones con Oferta Institucional'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      procedure: procedure
+    sort:
+      field: _none
+field_type: entity_reference

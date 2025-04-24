@@ -1,0 +1,19 @@
+uuid: 13221654-4afb-48b9-98dd-8bedfb98a98f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_act_code
+    - node.type.acta_contentiva
+id: node.acta_contentiva.field_act_code
+field_name: field_act_code
+entity_type: node
+bundle: acta_contentiva
+label: Código
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

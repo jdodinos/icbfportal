@@ -1,0 +1,19 @@
+uuid: 352b5707-fcaf-4129-a1bf-313c5d07d482
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_policy_code
+    - node.type.documentos_de_normativa
+id: node.documentos_de_normativa.field_policy_code
+field_name: field_policy_code
+entity_type: node
+bundle: documentos_de_normativa
+label: 'Código de Normativa'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

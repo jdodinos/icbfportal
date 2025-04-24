@@ -1,0 +1,21 @@
+uuid: 6eed2fcd-102f-4bb5-8545-94ac86810971
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dae_year
+    - node.type.announcement
+  module:
+    - datetime
+id: node.announcement.field_dae_year
+field_name: field_dae_year
+entity_type: node
+bundle: announcement
+label: 'Fecha Año'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

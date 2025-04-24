@@ -1,0 +1,14 @@
+uuid: 9db04bfe-8b9f-4a96-9b24-aa3f3a1ae34d
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.regional_norte_de_santander
+  module:
+    - user
+id: user_add_role_action.regional_norte_de_santander
+label: 'Añade el rol Regional Norte de Santander al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: regional_norte_de_santander

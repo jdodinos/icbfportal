@@ -1,0 +1,11 @@
+uuid: 6a72b3c8-a26c-46e9-8d55-cab4b636fe3c
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_petition_rights
+id: comment.comment_node_petition_rights
+target_entity_type_id: comment
+target_bundle: comment_node_petition_rights
+default_langcode: site_default
+language_alterable: false

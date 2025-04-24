@@ -1,0 +1,15 @@
+uuid: c42e497d-ba09-4181-8ba4-44237f65192b
+langcode: es
+status: true
+dependencies: {  }
+name: perfilx70
+label: perfilx70
+effects:
+  e1bbf36b-240c-47d7-abd2-853d65052971:
+    uuid: e1bbf36b-240c-47d7-abd2-853d65052971
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 70
+      height: 70
+      anchor: center-center

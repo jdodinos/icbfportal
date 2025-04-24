@@ -1,0 +1,14 @@
+uuid: 46d4173e-d011-49ca-88f8-0af43ac27f06
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.regional_cundinamarca
+  module:
+    - user
+id: user_remove_role_action.regional_cundinamarca
+label: 'Elimina el rol Regional Cundinamarca al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: regional_cundinamarca

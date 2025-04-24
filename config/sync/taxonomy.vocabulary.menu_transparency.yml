@@ -1,0 +1,9 @@
+uuid: 72250bfe-61f9-47b3-a330-9bf83b15584d
+langcode: es
+status: true
+dependencies: {  }
+name: 'Menú transparencia'
+vid: menu_transparency
+description: null
+weight: 10
+new_revision: false

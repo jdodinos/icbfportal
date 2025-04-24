@@ -1,0 +1,19 @@
+uuid: 32d07018-fdbc-4adb-b742-e9df9c8907a9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_other_kinship
+    - paragraphs.paragraphs_type.summoned
+id: paragraph.summoned.field_other_kinship
+field_name: field_other_kinship
+entity_type: paragraph
+bundle: summoned
+label: 'Otro parentesco'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

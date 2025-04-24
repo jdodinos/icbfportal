@@ -1,0 +1,15 @@
+uuid: 3e14e455-559d-4e21-8c9d-7634a96c2d81
+langcode: es
+status: true
+dependencies: {  }
+name: boton_195x95
+label: 'Boton 195x95'
+effects:
+  a9f7a442-0009-4df8-9ee8-f2e20b49cd2f:
+    uuid: a9f7a442-0009-4df8-9ee8-f2e20b49cd2f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 195
+      height: 95
+      anchor: center-center

@@ -1,0 +1,21 @@
+uuid: 164ebf48-25d0-4df4-9f59-4b22a3ef1560
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_label_iin
+    - node.type.photo_gallery2_event
+  module:
+    - options
+id: node.photo_gallery2_event.field_label_iin
+field_name: field_label_iin
+entity_type: node
+bundle: photo_gallery2_event
+label: 'Label IIN'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,19 @@
+uuid: 665ba12f-a766-4808-bbbb-d565059ef437
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.isotope_example_shape
+    - node.type.isotope_example
+id: node.isotope_example.isotope_example_shape
+field_name: isotope_example_shape
+entity_type: node
+bundle: isotope_example
+label: Forma
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

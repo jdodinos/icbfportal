@@ -1,0 +1,14 @@
+uuid: 548be314-9d36-40ca-90e0-ebe0ca1b6826
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.regional_vaupes
+  module:
+    - user
+id: user_remove_role_action.regional_vaupes
+label: 'Elimina el rol Regional Vaupés al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: regional_vaupes

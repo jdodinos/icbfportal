@@ -1,0 +1,278 @@
+uuid: f8371579-2070-4a65-bdf5-6b054298d881
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.event_calendar.body
+    - field.field.node.event_calendar.comment_node_event_calendar
+    - field.field.node.event_calendar.event_calendar_date
+    - field.field.node.event_calendar.event_calendar_status
+    - field.field.node.event_calendar.field_address
+    - field.field.node.event_calendar.field_color
+    - field.field.node.event_calendar.field_date_day_calendaro
+    - field.field.node.event_calendar.field_email
+    - field.field.node.event_calendar.field_event_tag
+    - field.field.node.event_calendar.field_event_tag_dg
+    - field.field.node.event_calendar.field_list_image
+    - field.field.node.event_calendar.field_location
+    - field.field.node.event_calendar.field_metatag
+    - field.field.node.event_calendar.field_phone_contact
+    - field.field.node.event_calendar.field_region_scope
+    - field.field.node.event_calendar.field_timeline_color_de_fondo_
+    - image.style.thumbnail
+    - node.type.event_calendar
+  module:
+    - address
+    - comment
+    - datetime
+    - field_group
+    - image
+    - metatag
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_event_rc1:
+      children:
+        - body
+        - event_calendar_date
+        - field_event_tag
+        - field_color
+        - field_event_tag_dg
+        - title
+      label: 'Información Básica'
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: 'group-event-rc1 field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+    group_event_localization:
+      children:
+        - field_location
+        - field_email
+        - field_region_scope
+        - field_phone_contact
+        - field_address
+      label: Localización
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: 'group-event-localization field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+    group_event_rc2:
+      children:
+        - event_calendar_status
+        - field_timeline_color_de_fondo_
+        - field_list_image
+      label: 'Datos Complementarios'
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        classes: 'group-event-rc2 field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+id: node.event_calendar.default
+targetEntityType: node
+bundle: event_calendar
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 3
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  comment_node_event_calendar:
+    type: comment_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  event_calendar_date:
+    type: datetime_default
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  event_calendar_status:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_address:
+    type: address_default
+    weight: 4
+    region: content
+    settings:
+      wrapper_type: fieldset
+    third_party_settings: {  }
+  field_color:
+    type: options_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_date_day_calendaro:
+    type: datetime_default
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_email:
+    type: email_default
+    weight: 6
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_event_tag:
+    type: options_buttons
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_event_tag_dg:
+    type: options_buttons
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_image:
+    type: image_image
+    weight: 5
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_location:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 122
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
+    third_party_settings: {  }
+  field_phone_contact:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_region_scope:
+    type: text_textarea
+    weight: 5
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_timeline_color_de_fondo_:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  publish_on: true
+  unpublish_on: true

@@ -1,0 +1,59 @@
+uuid: 6d47c44d-9af9-4d44-831e-55a8121deb02
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.summoned.field_citizen_id
+    - field.field.paragraph.summoned.field_document_type
+    - field.field.paragraph.summoned.field_full_name
+    - field.field.paragraph.summoned.field_kinship
+    - field.field.paragraph.summoned.field_other_kinship
+    - paragraphs.paragraphs_type.summoned
+  module:
+    - options
+id: paragraph.summoned.default
+targetEntityType: paragraph
+bundle: summoned
+mode: default
+content:
+  field_citizen_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_document_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_full_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_kinship:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_other_kinship:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  search_api_attachments: true
+  search_api_excerpt: true

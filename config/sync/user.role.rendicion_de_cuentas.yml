@@ -1,0 +1,40 @@
+uuid: b0ecdaa0-c41a-4223-911c-600ac43d4847
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.event_calendar
+    - node.type.rendicion_de_cuentas
+  module:
+    - field_permissions
+    - node
+    - scheduler
+    - system
+id: rendicion_de_cuentas
+label: 'Rendición de Cuentas'
+weight: 71
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content'
+  - 'create event_calendar content'
+  - 'create field_creation_date'
+  - 'create field_field_documents_trans_word'
+  - 'create rendicion_de_cuentas content'
+  - 'delete any rendicion_de_cuentas content'
+  - 'delete own event_calendar content'
+  - 'delete own rendicion_de_cuentas content'
+  - 'edit any event_calendar content'
+  - 'edit any rendicion_de_cuentas content'
+  - 'edit field_creation_date'
+  - 'edit field_field_documents_trans_word'
+  - 'edit own event_calendar content'
+  - 'edit own field_creation_date'
+  - 'edit own field_field_documents_trans_word'
+  - 'edit own rendicion_de_cuentas content'
+  - 'schedule publishing of nodes'
+  - 'view own field_creation_date'
+  - 'view own field_field_documents_trans_word'
+  - 'view own unpublished content'
+  - 'view scheduled content'
+  - 'view the administration theme'

@@ -1,0 +1,14 @@
+uuid: 3d736800-f6cb-47d2-bb62-e706b2382429
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.rendicion_de_cuentas
+  module:
+    - user
+id: user_remove_role_action.rendicion_de_cuentas
+label: 'Elimina el rol Rendición de Cuentas al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: rendicion_de_cuentas

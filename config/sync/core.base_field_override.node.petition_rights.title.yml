@@ -1,0 +1,18 @@
+uuid: 6b3782a6-ac3c-4e3e-863e-95d77cefeb5b
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.petition_rights
+id: node.petition_rights.title
+field_name: title
+entity_type: node
+bundle: petition_rights
+label: Título
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

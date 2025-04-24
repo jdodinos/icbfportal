@@ -1,0 +1,46 @@
+uuid: 09a9ae54-ea66-4b61-b414-09f4de1370bf
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_ejes_sige
+field_name: field_ejes_sige
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: eje0
+      label: 'Política Integrada'
+    -
+      value: eje1
+      label: 'Política Calidad'
+    -
+      value: eje2
+      label: 'Política Ambiental'
+    -
+      value: eje3
+      label: 'Política SGSI'
+    -
+      value: eje4
+      label: 'Política SST'
+    -
+      value: eje5
+      label: 'Política Riesgos'
+    -
+      value: eje6
+      label: 'Política Tratamiento Datos Personales'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

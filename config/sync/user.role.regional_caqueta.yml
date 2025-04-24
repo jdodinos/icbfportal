@@ -1,0 +1,20 @@
+uuid: b0314d5d-eb41-4932-8af6-2201aea1ec94
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - publishcontent
+    - scheduler
+    - system
+id: regional_caqueta
+label: 'Regional Caquetá'
+weight: 44
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'schedule publishing of nodes'
+  - 'unpublish editable content'
+  - 'view field_creation_date'
+  - 'view own field_creation_date'
+  - 'view scheduled content'

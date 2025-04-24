@@ -1,0 +1,30 @@
+uuid: d7de0d95-e25c-4fb2-9047-e4e0e59ef937
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: true
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Observatorio Infografias'
+type: infografia_observatorio
+description: 'infografías de micrositio'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

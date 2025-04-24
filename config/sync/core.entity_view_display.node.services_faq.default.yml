@@ -1,0 +1,151 @@
+uuid: 31b8a47d-26cb-4f98-a3eb-c6a6c8292d72
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_services_faq.default
+    - field.field.node.services_faq.comment_node_services_faq
+    - field.field.node.services_faq.field_date
+    - field.field.node.services_faq.field_faq_code
+    - field.field.node.services_faq.field_faqs_related
+    - field.field.node.services_faq.field_file_categoria
+    - field.field.node.services_faq.field_icon
+    - field.field.node.services_faq.field_link_more_info
+    - field.field.node.services_faq.field_metatag
+    - field.field.node.services_faq.field_multimedia
+    - field.field.node.services_faq.field_priority
+    - field.field.node.services_faq.field_related_procedures
+    - field.field.node.services_faq.field_resume
+    - field.field.node.services_faq.field_youtube
+    - node.type.services_faq
+  module:
+    - comment
+    - datetime
+    - file
+    - image
+    - text
+    - user
+    - youtube
+id: node.services_faq.default
+targetEntityType: node
+bundle: services_faq
+mode: default
+content:
+  comment_node_services_faq:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_date:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_faq_code:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_faqs_related:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_file_categoria:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_icon:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_link_more_info:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_multimedia:
+    type: file_default
+    label: inline
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_priority:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_related_procedures:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_resume:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_youtube:
+    type: youtube_video
+    label: above
+    settings:
+      youtube_size: 420x315
+      youtube_width: null
+      youtube_height: null
+      youtube_autoplay: false
+      youtube_mute: false
+      youtube_loop: false
+      youtube_controls: false
+      youtube_autohide: false
+      youtube_iv_load_policy: false
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_metatag: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

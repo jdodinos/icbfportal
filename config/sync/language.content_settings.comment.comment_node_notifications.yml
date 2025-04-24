@@ -1,0 +1,11 @@
+uuid: f6276440-a766-466a-be91-510729d1321f
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_notifications
+id: comment.comment_node_notifications
+target_entity_type_id: comment
+target_bundle: comment_node_notifications
+default_langcode: site_default
+language_alterable: false

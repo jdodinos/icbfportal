@@ -1,0 +1,19 @@
+uuid: 2e86e760-8bef-4bf6-9e06-fe6471f9d4c3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_full_name
+    - paragraphs.paragraphs_type.summoned
+id: paragraph.summoned.field_full_name
+field_name: field_full_name
+entity_type: paragraph
+bundle: summoned
+label: 'Nombre completo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

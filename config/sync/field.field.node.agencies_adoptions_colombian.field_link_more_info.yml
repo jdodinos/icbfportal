@@ -1,0 +1,19 @@
+uuid: c99f27ea-2a42-451b-b1e3-a2fb686f8d85
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_more_info
+    - node.type.agencies_adoptions_colombian
+id: node.agencies_adoptions_colombian.field_link_more_info
+field_name: field_link_more_info
+entity_type: node
+bundle: agencies_adoptions_colombian
+label: 'Link Relacionado'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

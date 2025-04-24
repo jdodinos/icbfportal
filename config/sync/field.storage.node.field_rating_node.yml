@@ -1,0 +1,24 @@
+uuid: f12902fc-cc47-4b77-8ce3-7535197d1943
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - fivestar
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_rating_node
+field_name: field_rating_node
+entity_type: node
+type: fivestar
+settings:
+  vote_type: vote
+module: fivestar
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,30 @@
+uuid: 66a93d2a-2e23-499e-8f87-547fe52d244c
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: false
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Venta de Bienes'
+type: venta_de_bienes
+description: 'catalogo bienes muebles e inmuebles'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,37 @@
+uuid: 93b7a95c-83a8-48cc-a034-970e2d92ab9a
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.encuesta_web.body
+    - field.field.node.encuesta_web.comment_node_encuesta_web
+    - field.field.node.encuesta_web.field_metatag
+    - node.type.encuesta_web
+  module:
+    - text
+    - user
+id: node.encuesta_web.teaser
+targetEntityType: node
+bundle: encuesta_web
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment_node_encuesta_web: true
+  field_metatag: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

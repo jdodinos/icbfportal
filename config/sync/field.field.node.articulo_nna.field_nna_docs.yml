@@ -1,0 +1,27 @@
+uuid: b1dc63ba-cd6b-4fb1-a4f1-29ec8fda3696
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nna_docs
+    - node.type.articulo_nna
+  module:
+    - file
+id: node.articulo_nna.field_nna_docs
+field_name: field_nna_docs
+entity_type: node
+bundle: articulo_nna
+label: 'Documentos para Niños'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ninos-y-ninas
+  file_extensions: 'txt pdf doc xls xlsx xlsm xlsmx docx ppt pptx pps ppsx png jpg jpeg tiff tif gif zip rar msg xps mp3 mp4 wmv mpeg pptm'
+  max_filesize: ''
+  description_field: true
+field_type: file

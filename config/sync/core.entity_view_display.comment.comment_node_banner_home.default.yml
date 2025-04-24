@@ -1,0 +1,30 @@
+uuid: bc068561-bdf7-4a6c-af62-4daf36a77cef
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_banner_home
+    - field.field.comment.comment_node_banner_home.comment_body
+  module:
+    - text
+id: comment.comment_node_banner_home.default
+targetEntityType: comment
+bundle: comment_node_banner_home
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

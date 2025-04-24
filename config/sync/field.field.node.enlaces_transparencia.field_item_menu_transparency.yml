@@ -1,0 +1,26 @@
+uuid: e87c3517-fdb1-4f53-ad6c-d13a8e852742
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_item_menu_transparency
+    - node.type.enlaces_transparencia
+    - taxonomy.vocabulary.menu_transparency
+id: node.enlaces_transparencia.field_item_menu_transparency
+field_name: field_item_menu_transparency
+entity_type: node
+bundle: enlaces_transparencia
+label: 'Item Transparencia'
+description: 'Menú secciones transparencia, según Decreto 1085 de 2015'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      menu_transparency: menu_transparency
+    sort:
+      field: _none
+field_type: entity_reference

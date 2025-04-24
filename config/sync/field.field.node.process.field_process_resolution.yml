@@ -1,0 +1,27 @@
+uuid: 79246952-98c1-4263-bea5-64aecc2c5ff6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_process_resolution
+    - node.type.process
+  module:
+    - file
+id: node.process.field_process_resolution
+field_name: field_process_resolution
+entity_type: node
+bundle: process
+label: Resoluciones
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'pdf doc xls xlsx docx ppt pptx xlm'
+  max_filesize: ''
+  description_field: true
+field_type: file

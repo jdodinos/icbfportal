@@ -1,0 +1,25 @@
+uuid: 212c65a0-f946-4638-8216-959a02ad7f96
+langcode: es
+status: false
+dependencies:
+  module:
+    - php
+    - slick
+name: PHP_buscadoravanzado
+format: php_buscadoravanzado
+weight: 0
+filters:
+  php_code:
+    id: php_code
+    provider: php
+    status: true
+    weight: 0
+    settings: {  }
+  slick_filter:
+    id: slick_filter
+    provider: slick
+    status: false
+    weight: 4
+    settings:
+      optionset: default
+      media_switch: ''

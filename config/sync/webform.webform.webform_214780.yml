@@ -1,0 +1,79 @@
+uuid: de1a7197-7520-42b6-b8f4-ab090344c099
+langcode: es
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 6816
+template: false
+archive: false
+id: webform_214780
+title: 'Encuesta de satisfacción de contenido del Portafolio de Servicio'
+description: null
+categories: {  }
+elements: |-
+  por_favor_escriba_el_nombre_del_tr_mite_o_servicio_que_consultaste:
+    '#type': textfield
+    '#title': 'Por favor escriba el nombre del trámite o servicio que consultaste'
+  _la_informaci_n_fue_clara_:
+    '#type': radios
+    '#options':
+      1: Si
+      2: 'No'
+    '#title': '¿La información fue clara?'
+    '#required': true
+  expl_canos_un_poco_m_s_elige_una_o_m_s_razones_por_las_cuales_crees_la_informaci_n_no_es_clara_:
+    '#type': checkboxes
+    '#options':
+      1: 'La información es muy densa'
+      2: 'Lenguaje es muy técnico'
+      3: 'No incuentro lo que busco'
+    '#multiple': true
+    '#title': "Explícanos un poco más, elige una o más\_ razones por las cuales crees la información NO es clara."
+    '#states':
+      visible:
+        - ':input[name="_la_informaci_n_fue_clara_"]':
+            value: '2'
+  _fue_f_cil_para_usted_encontrar_esta_informaci_n_:
+    '#type': radios
+    '#options':
+      1: Si
+      2: 'No'
+    '#title': '¿Fue fácil para usted encontrar esta información?'
+    '#states':
+      visible:
+        - ':input[name="_la_informaci_n_fue_clara_"]':
+            value: '1'
+  expl_canos_un_poco_m_s_elige_una_o_m_s_razones_por_las_cuales_no_fue_f_cil_encontrar_la_informaci_n_:
+    '#type': checkboxes
+    '#options':
+      1: 'La disposición de la información no tiene un orden lógico'
+      2: 'Navegar dentro de la página web y buscar la información resulta difícil'
+      3: 'No pude entrar a la página web en el primer intento'
+    '#multiple': true
+    '#title': 'Explícanos un poco más, elige una o más razones por las cuales NO fue fácil encontrar la información.'
+css: ''
+javascript: ''
+settings:
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: ''
+  limit_total: null
+  limit_user: null
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }

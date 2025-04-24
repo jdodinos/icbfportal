@@ -1,0 +1,22 @@
+uuid: df5c0dca-172d-4254-8d5f-b30722415f1b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.glosario
+  module:
+    - text
+id: node.glosario.field_content
+field_name: field_content
+entity_type: node
+bundle: glosario
+label: Definición
+description: 'Texto descriptivo con la explicación del término'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

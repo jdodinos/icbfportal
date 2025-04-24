@@ -1,0 +1,249 @@
+uuid: 8e429dfe-6651-4ac2-b8e7-dbc77cf1a889
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.photo_gallery2_event.comment_node_photo_gallery2_even
+    - field.field.node.photo_gallery2_event.field_content_type_iin
+    - field.field.node.photo_gallery2_event.field_date
+    - field.field.node.photo_gallery2_event.field_file_categoria
+    - field.field.node.photo_gallery2_event.field_images_gallery_event
+    - field.field.node.photo_gallery2_event.field_label_iin
+    - field.field.node.photo_gallery2_event.field_lugar
+    - field.field.node.photo_gallery2_event.field_metatag
+    - field.field.node.photo_gallery2_event.field_photo
+    - field.field.node.photo_gallery2_event.field_priority
+    - field.field.node.photo_gallery2_event.field_resume
+    - field.field.node.photo_gallery2_event.field_seccion_micrositio_xxii
+    - field.field.node.photo_gallery2_event.field_section_tag
+    - field.field.node.photo_gallery2_event.field_video_02
+    - image.style.thumbnail
+    - node.type.photo_gallery2_event
+  module:
+    - comment
+    - datetime
+    - field_group
+    - image
+    - metatag
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_gallery_basics:
+      children:
+        - field_lugar
+        - field_date
+        - field_photo
+        - field_images_gallery_event
+        - field_resume
+      label: 'Información Básica'
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: 'group-gallery-basics field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+    group_gallery_microsites:
+      children:
+        - field_label_iin
+        - field_content_type_iin
+        - field_seccion_micrositio_xxii
+      label: 'Clasificación en Micrositios'
+      region: content
+      parent_name: ''
+      weight: 5
+      format_type: fieldset
+      format_settings:
+        classes: 'group-gallery-microsites field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+id: node.photo_gallery2_event.default
+targetEntityType: node
+bundle: photo_gallery2_event
+mode: default
+content:
+  comment_node_photo_gallery2_even:
+    type: comment_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_content_type_iin:
+    type: options_select
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_date:
+    type: datetime_default
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_file_categoria:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_images_gallery_event:
+    type: image_image
+    weight: 6
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_label_iin:
+    type: options_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_lugar:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 121
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
+    third_party_settings: {  }
+  field_photo:
+    type: image_image
+    weight: 4
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_priority:
+    type: number
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_resume:
+    type: text_textarea
+    weight: 5
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_seccion_micrositio_xxii:
+    type: entity_reference_autocomplete
+    weight: 8
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_section_tag:
+    type: entity_reference_autocomplete
+    weight: 4
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_video_02:
+    type: text_textarea
+    weight: 9
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  publish_on: true
+  unpublish_on: true

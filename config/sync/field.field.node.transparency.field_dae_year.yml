@@ -1,0 +1,21 @@
+uuid: e2c0ad78-f090-4963-907c-56056bfc86c4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dae_year
+    - node.type.transparency
+  module:
+    - datetime
+id: node.transparency.field_dae_year
+field_name: field_dae_year
+entity_type: node
+bundle: transparency
+label: 'Fecha (Año)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

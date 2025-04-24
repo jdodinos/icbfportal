@@ -1,0 +1,8 @@
+uuid: 927253f6-f3ee-4cf2-b044-2be0b4e57e4a
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_venta_de_bienes
+label: 'Venta de Bienes comment'
+target_entity_type_id: node
+description: null

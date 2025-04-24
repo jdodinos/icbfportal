@@ -1,0 +1,33 @@
+uuid: 0f298583-0bb3-4a5b-8ae6-85ef26e582b7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.comment_node_petition_rights
+    - node.type.petition_rights
+  module:
+    - comment
+id: node.petition_rights.comment_node_petition_rights
+field_name: comment_node_petition_rights
+entity_type: node
+bundle: petition_rights
+label: Comments
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    status: 1
+    cid: 0
+    last_comment_timestamp: 0
+    last_comment_name: null
+    last_comment_uid: 0
+    comment_count: 0
+default_value_callback: ''
+settings:
+  default_mode: 1
+  per_page: 50
+  anonymous: 0
+  form_location: true
+  preview: 1
+field_type: comment

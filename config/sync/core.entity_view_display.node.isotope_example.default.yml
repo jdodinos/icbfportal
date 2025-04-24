@@ -1,0 +1,61 @@
+uuid: 8e693933-68ad-47bc-9f25-b3e8e9bc39b1
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_isotope_example.default
+    - field.field.node.isotope_example.comment_node_isotope_example
+    - field.field.node.isotope_example.isotope_example_color
+    - field.field.node.isotope_example.isotope_example_shape
+    - field.field.node.isotope_example.isotope_example_size
+    - node.type.isotope_example
+  module:
+    - comment
+    - user
+id: node.isotope_example.default
+targetEntityType: node
+bundle: isotope_example
+mode: default
+content:
+  comment_node_isotope_example:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  isotope_example_color:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  isotope_example_shape:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  isotope_example_size:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

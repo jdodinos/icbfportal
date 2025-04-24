@@ -1,0 +1,30 @@
+uuid: 8d08e817-afea-47fd-a5b2-82a17eb2bcdd
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_documento_de_convoc
+    - field.field.comment.comment_node_documento_de_convoc.comment_body
+  module:
+    - text
+id: comment.comment_node_documento_de_convoc.default
+targetEntityType: comment
+bundle: comment_node_documento_de_convoc
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

@@ -1,0 +1,36 @@
+uuid: 06cc3f37-8bae-4241-9e72-20cb33939d42
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_curriculum_vitae
+    - field.field.comment.comment_node_curriculum_vitae.comment_body
+  module:
+    - text
+id: comment.comment_node_curriculum_vitae.default
+targetEntityType: comment
+bundle: comment_node_curriculum_vitae
+mode: default
+content:
+  author:
+    weight: -2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  comment_body:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden:
+  subject: true

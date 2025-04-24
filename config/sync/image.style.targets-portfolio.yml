@@ -1,0 +1,15 @@
+uuid: cb47041e-3c8a-4d0d-8780-5ab06ce72e32
+langcode: es
+status: true
+dependencies: {  }
+name: targets-portfolio
+label: targets-portfolio
+effects:
+  57b1e18d-e04b-4f71-b464-a96c2deb5124:
+    uuid: 57b1e18d-e04b-4f71-b464-a96c2deb5124
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 185
+      height: 185
+      anchor: center-center

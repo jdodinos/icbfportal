@@ -1,0 +1,104 @@
+uuid: 961b1111-48fa-4934-8793-d6b6ed8be457
+langcode: es
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 0
+template: false
+archive: false
+id: webform_66187
+title: 'Encuesta de Satisfacción Transparencia'
+description: null
+categories: {  }
+elements: |-
+  identificar_seccion_transparencia_portal_icbf:
+    '#type': radios
+    '#options':
+      1: Si
+      2: 'No'
+    '#title': '¿Fue fácil identificar la sección de Transparencia y Acceso a la Información Pública en el portal web?'
+    '#required': true
+  de_acuerdo_algun_comentario_mas:
+    '#type': textfield
+    '#title': 'De acuerdo. ¿Algún comentario más?'
+    '#states':
+      visible:
+        - ':input[name="identificar_seccion_transparencia_portal_icbf"]':
+            value: '1'
+  como_podemos_mejorarlo:
+    '#type': textfield
+    '#title': '¿Cómo podemos mejorarlo?'
+    '#states':
+      visible:
+        - ':input[name="identificar_seccion_transparencia_portal_icbf"]':
+            value: '2'
+  informacion_publicada_fue_util:
+    '#type': radios
+    '#options':
+      1: '1'
+      2: '2'
+      3: '3'
+      4: '4'
+      5: '5'
+    '#title': 'Fue útil y estoy satisfecho con la información publicada en la sección de Transparencia de la entidad:'
+    '#required': true
+  distribucion_y_diseno_agradable:
+    '#type': radios
+    '#options':
+      1: '1'
+      2: '2'
+      3: '3'
+      4: '4'
+      5: '5'
+    '#title': 'Estoy satisfecho con la distribución y diseño de la sección:'
+    '#required': true
+  buscar_informacion_facil:
+    '#type': radios
+    '#options':
+      1: Si
+      2: 'No'
+    '#title': '¿Fue fácil buscar la información de mi interés dentro de la sección?'
+    '#required': true
+  de_acuerdo_algo_para_resaltar:
+    '#type': textfield
+    '#title': 'De acuerdo. ¿Algo para resaltar?'
+    '#states':
+      visible:
+        - ':input[name="buscar_informacion_facil"]':
+            value: '1'
+  como_sugieres_mejorarlo:
+    '#type': textfield
+    '#title': '¿Cómo sugieres mejorarlo?'
+    '#states':
+      visible:
+        - ':input[name="buscar_informacion_facil"]':
+            value: '2'
+  comentarios_adicionales_:
+    '#type': textarea
+    '#title': 'Comentarios adicionales.'
+css: ''
+javascript: ''
+settings:
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: "<p><strong>Gracias por participar. </strong></p>\r\n\r\n<p>Para mayor información comunícate con el ICBF a través de <a href=\"https://www.icbf.gov.co/servicios\">nuestros canales de atención</a></p>\r\n"
+  limit_total: null
+  limit_user: null
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }

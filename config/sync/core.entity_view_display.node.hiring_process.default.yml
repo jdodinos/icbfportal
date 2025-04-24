@@ -1,0 +1,123 @@
+uuid: 7f403c7b-050f-4e81-b685-732e06f432d8
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_hiring_process.default
+    - field.field.node.hiring_process.comment_node_hiring_process
+    - field.field.node.hiring_process.field_aditional_info
+    - field.field.node.hiring_process.field_contact_email
+    - field.field.node.hiring_process.field_dae_year
+    - field.field.node.hiring_process.field_document
+    - field.field.node.hiring_process.field_hiring_process_category
+    - field.field.node.hiring_process.field_hiring_type_process
+    - field.field.node.hiring_process.field_link_secop2
+    - field.field.node.hiring_process.field_location
+    - field.field.node.hiring_process.field_metatag
+    - field.field.node.hiring_process.field_process_object
+    - node.type.hiring_process
+  module:
+    - comment
+    - datetime
+    - file
+    - link
+    - text
+    - user
+id: node.hiring_process.default
+targetEntityType: node
+bundle: hiring_process
+mode: default
+content:
+  comment_node_hiring_process:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_aditional_info:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_contact_email:
+    type: email_mailto
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_dae_year:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_document:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_hiring_process_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_hiring_type_process:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_link_secop2:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_location:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_process_object:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_metatag: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

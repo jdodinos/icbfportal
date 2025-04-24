@@ -1,0 +1,14 @@
+uuid: 6c47f1cb-f32e-4cfa-a99d-d62edc3bceeb
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.convocatoria
+  module:
+    - user
+id: user_remove_role_action.convocatoria
+label: 'Elimina el rol Convocatoria al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: convocatoria

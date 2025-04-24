@@ -1,0 +1,29 @@
+uuid: 3678602b-a7b8-4a11-9ce9-11748ed833fc
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rating_node
+    - node.type.news
+  module:
+    - fivestar
+id: node.news.field_rating_node
+field_name: field_rating_node
+entity_type: node
+bundle: news
+label: 'Valoración del contenido'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  stars: 5
+  allow_clear: false
+  allow_revote: true
+  allow_ownvote: true
+  rated_while: viewing
+  enable_voting_target: false
+  target_bridge_field: ''
+  target_fivestar_field: ''
+field_type: fivestar

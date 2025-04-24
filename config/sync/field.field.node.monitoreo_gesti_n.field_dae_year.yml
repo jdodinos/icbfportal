@@ -1,0 +1,21 @@
+uuid: c7c6593a-bd4d-488b-a5b2-3c40cc0a2a97
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dae_year
+    - node.type.monitoreo_gesti_n
+  module:
+    - datetime
+id: node.monitoreo_gesti_n.field_dae_year
+field_name: field_dae_year
+entity_type: node
+bundle: monitoreo_gesti_n
+label: Fecha
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

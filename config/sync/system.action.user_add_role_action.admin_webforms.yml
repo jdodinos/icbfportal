@@ -1,0 +1,14 @@
+uuid: 3f1107d9-e58d-4c80-bf48-2108464ec1f9
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.admin_webforms
+  module:
+    - user
+id: user_add_role_action.admin_webforms
+label: 'Añade el rol Admin Webforms al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: admin_webforms

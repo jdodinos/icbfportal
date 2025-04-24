@@ -1,0 +1,33 @@
+uuid: bbcce749-dc7d-467f-b204-a092f558f7c8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.multimedia_collection.field_multimedia
+    - field.field.paragraph.multimedia_collection.field_multimedia_description
+    - paragraphs.paragraphs_type.multimedia_collection
+  module:
+    - file
+id: paragraph.multimedia_collection.default
+targetEntityType: paragraph
+bundle: multimedia_collection
+mode: default
+content:
+  field_multimedia:
+    type: file_generic
+    weight: 2
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_multimedia_description:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

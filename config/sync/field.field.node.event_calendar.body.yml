@@ -1,0 +1,28 @@
+uuid: 6733f950-1cd5-46c6-9c4f-ffc7b6bd89f7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.event_calendar
+  module:
+    - text
+id: node.event_calendar.body
+field_name: body
+entity_type: node
+bundle: event_calendar
+label: Descripción
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: "<ul>\r\n\t<li><strong>Temática:&nbsp;</strong></li>\r\n\t<li><strong>Municipio:&nbsp;</strong></li>\r\n</ul>\r\n"
+    summary: ''
+    format: full_html
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

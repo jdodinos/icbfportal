@@ -1,0 +1,25 @@
+uuid: c53a94f0-cf1a-464f-9fab-4432c02de61d
+langcode: es
+status: false
+dependencies:
+  module:
+    - php
+    - slick
+name: encontradosavanz
+format: encontradosavanz
+weight: 0
+filters:
+  php_code:
+    id: php_code
+    provider: php
+    status: true
+    weight: 0
+    settings: {  }
+  slick_filter:
+    id: slick_filter
+    provider: slick
+    status: false
+    weight: 4
+    settings:
+      optionset: default
+      media_switch: ''

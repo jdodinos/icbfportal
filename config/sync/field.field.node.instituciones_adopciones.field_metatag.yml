@@ -1,0 +1,21 @@
+uuid: b5c620fe-fb9d-41d4-b282-7c9f5e1c7c78
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.instituciones_adopciones
+  module:
+    - metatag
+id: node.instituciones_adopciones.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: instituciones_adopciones
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

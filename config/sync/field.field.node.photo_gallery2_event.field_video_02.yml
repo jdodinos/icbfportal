@@ -1,0 +1,22 @@
+uuid: b5f6241d-5c5d-4668-88e2-72efd54d0eb8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video_02
+    - node.type.photo_gallery2_event
+  module:
+    - text
+id: node.photo_gallery2_event.field_video_02
+field_name: field_video_02
+entity_type: node
+bundle: photo_gallery2_event
+label: Video
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

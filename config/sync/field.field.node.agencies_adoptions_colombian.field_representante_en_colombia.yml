@@ -1,0 +1,19 @@
+uuid: 9f6f49c7-235a-4cbf-b9d9-9a116a0812d7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_representante_en_colombia
+    - node.type.agencies_adoptions_colombian
+id: node.agencies_adoptions_colombian.field_representante_en_colombia
+field_name: field_representante_en_colombia
+entity_type: node
+bundle: agencies_adoptions_colombian
+label: 'Representante Legal y Director'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

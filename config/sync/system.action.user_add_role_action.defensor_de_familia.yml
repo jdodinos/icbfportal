@@ -1,0 +1,14 @@
+uuid: 9d9fd7f0-3e98-48bb-9ef0-0035b1873e14
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.defensor_de_familia
+  module:
+    - user
+id: user_add_role_action.defensor_de_familia
+label: 'Añade el rol Defensor de Familia al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: defensor_de_familia

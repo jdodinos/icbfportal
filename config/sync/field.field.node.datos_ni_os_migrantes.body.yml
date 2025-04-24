@@ -1,0 +1,24 @@
+uuid: 4ea6a83a-26b3-4dd6-9222-c51f3a519d64
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.datos_ni_os_migrantes
+  module:
+    - text
+id: node.datos_ni_os_migrantes.body
+field_name: body
+entity_type: node
+bundle: datos_ni_os_migrantes
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary
