@@ -1,0 +1,108 @@
+<?php
+
+use Drupal\search_api\Entity\Index;
+use Drupal\Core\File\FileSystemInterface;
+use GuzzleHttp\Client;
+use Drupal\Core\StreamWrapper\StreamWrapperInterface;
+
+/**
+ * Procesa las rutas configuradas y las indexa en Solr usando update/extract.
+ */
+function custom_solr_extractor_process_documents($index_id = NULL) {
+  if (!$index_id) {
+    $index_id = \Drupal::config('custom_solr_extractor.settings')->get('index');
+  }
+
+  if (!$index_id) {
+    \Drupal::logger('custom_solr_extractor')->error('No se especificó un índice.');
+    return;
+  }
+
+  /** @var \Drupal\search_api\IndexInterface $index */
+  $index = Index::load($index_id);
+  if (!$index) {
+    \Drupal::logger('custom_solr_extractor')->error('Índice no válido: @index', ['@index' => $index_id]);
+    return;
+  }
+
+  $backend = $index->getServerInstance()->getBackend();
+  if ($backend->getPluginId() !== 'search_api_solr') {
+    \Drupal::logger('custom_solr_extractor')->error('El índice seleccionado no utiliza Solr como backend.');
+    return;
+  }
+
+  // Obtener información del conector Solr.
+  $connector = $backend->getSolrConnector();
+  $config = $connector->getConfiguration();
+
+  $scheme = $config['scheme'] ?? 'http';
+  $host = $config['host'] ?? 'localhost';
+  $port = $config['port'] ?? 8983;
+  $path = trim($config['path'], '/') ?: 'solr';
+  $core = trim($config['core'], '/');
+
+  // Armar URL final.
+  $solr_url = "{$scheme}://{$host}:{$port}/{$path}/{$core}/update/extract?wt=json";
+
+  // Obtener rutas configuradas.
+  $routes = \Drupal::config('custom_solr_extractor.settings')->get('routes') ?? [];
+
+  $file_system = \Drupal::service('file_system');
+  $http_client = \Drupal::httpClient();
+
+  foreach ($routes as $file_url) {
+    try {
+      if (str_starts_with($file_url, 'http://') || str_starts_with($file_url, 'https://')) {
+        // Descargar archivo remoto.
+        $response = $http_client->get($file_url, [
+          'headers' => ['User-Agent' => 'Drupal/10 SolrExtractor'],
+          'http_errors' => false,
+        ]);
+
+        if ($response->getStatusCode() !== 200) {
+          throw new \Exception("No se pudo descargar el archivo remoto. Código HTTP: " . $response->getStatusCode());
+        }
+
+        $filename = basename(parse_url($file_url, PHP_URL_PATH));
+        $temp_path = 'temporary://' . $filename;
+        $file_system->saveData($response->getBody()->getContents(), $temp_path, FileSystemInterface::EXISTS_REPLACE);
+        $real_path = $file_system->realpath($temp_path);
+      }
+      elseif (file_exists($file_system->realpath($file_url))) {
+        // Ruta local válida.
+        $real_path = $file_system->realpath($file_url);
+        $filename = basename($real_path);
+      }
+      else {
+        throw new \Exception("Ruta no válida o archivo no encontrado: " . $file_url);
+      }
+
+      // Enviar a Solr via multipart/form-data.
+      $client = new Client();
+      $response = $client->post($solr_url. '&uprefix=ignored_&capture=false', [
+        'multipart' => [
+          [
+            'name'     => 'file',
+            'contents' => fopen($real_path, 'r'),
+            'filename' => $filename,
+          ],
+          ['name' => 'resource.name', 'contents' => $filename],
+          ['name' => 'literal.id', 'contents' => md5($file_url)],
+        ],
+      ]);
+
+      $code = $response->getStatusCode();
+      if ($code !== 200) {
+        throw new \Exception("Respuesta Solr no OK: HTTP $code");
+      }
+
+      \Drupal::logger('custom_solr_extractor')->info('Archivo indexado exitosamente: @url', ['@url' => $file_url]);
+    }
+    catch (\Exception $e) {
+      \Drupal::logger('custom_solr_extractor')->error('Error indexando @url: @msg', [
+        '@url' => $file_url,
+        '@msg' => $e->getMessage(),
+      ]);
+    }
+  }
+}

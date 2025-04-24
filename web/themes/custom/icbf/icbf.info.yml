@@ -1,8 +1,8 @@
-name: ICBF Theme
+name: icbf
 type: theme
 description: 'icbf subtheme based on Bootstrap 5 theme.'
 core_version_requirement: '^10.1 || ^11.0'
-base theme: bootstrap5
+'base theme': bootstrap5
 libraries:
   - icbf/global-styling
 ckeditor_stylesheets:
@@ -19,5 +19,6 @@ regions:
   sidebar_first: 'Sidebar first'
   sidebar_second: 'Sidebar second'
   footer: Footer
+  hidden: Hidden
 libraries-override:
   bootstrap5/global-styling: false

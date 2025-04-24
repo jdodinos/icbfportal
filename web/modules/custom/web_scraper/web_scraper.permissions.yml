@@ -1,0 +1,4 @@
+administer web scraper:
+  title: 'Administer Web Scraper'
+  description: 'Allow users to configure and run the web scraper to index content.'
+  restrict access: TRUE

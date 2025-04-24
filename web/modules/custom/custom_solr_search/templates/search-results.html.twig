@@ -1,0 +1,19 @@
+<div class="custom-results-container">
+  {% if results %}
+    <p>Se encontraron {{ total_results }} resultados.</p>
+    {% for item in results %}
+      <div class="search-result">
+      <a href="{{item.uri}}">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.snippet|raw }}</p>
+        <div class="result-meta">Tipo: {{ item.file_type }}</div>
+      </a>
+      </div>
+    {% endfor %}
+    <div class="pagination-wrapper">
+      {{ pager }}
+    </div>
+  {% else %}
+    <p>No se encontraron resultados.</p>
+  {% endif %}
+</div>

@@ -1,0 +1,33 @@
+<?php
+
+use Drupal\search_api\Query\QueryInterface;
+
+/**
+ * Implements hook_search_api_query_alter().
+ */
+function search_reports_search_api_query_alter(QueryInterface $query) {
+  $query->addOption('search_reports_start_time', microtime(TRUE));
+}
+
+/**
+ * Implements hook_search_api_results_alter().
+ */
+function search_reports_search_api_results_alter(QueryInterface $query, array &$results) {
+  $start_time = $query->getOption('search_reports_start_time', microtime(TRUE));
+  $end_time = microtime(TRUE);
+  $response_time = round($end_time - $start_time, 4);
+
+  $keywords = $query->getKeys();
+  $term = is_array($keywords) ? implode(' ', $keywords) : $keywords;
+
+  $results_count = count($results);
+
+  \Drupal::database()->insert('search_log')
+    ->fields([
+      'term' => $term,
+      'results_count' => $results_count,
+      'response_time' => $response_time,
+      'timestamp' => \Drupal::time()->getCurrentTime(),
+    ])
+    ->execute();
+}
