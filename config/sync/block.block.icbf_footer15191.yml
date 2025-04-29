@@ -5,7 +5,6 @@ dependencies:
   content:
     - 'block_content:basic:528a0197-ca56-4d05-b68f-5d3aab9ac7ce'
   module:
-    - block_class
     - block_content
   theme:
     - icbf
