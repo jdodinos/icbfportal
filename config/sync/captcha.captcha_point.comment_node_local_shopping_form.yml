@@ -1,0 +1,7 @@
+uuid: 9904fd30-31ae-44aa-a609-779fd5be6977
+langcode: es
+status: true
+dependencies: {  }
+formId: comment_node_local_shopping_form
+captchaType: captcha/default
+label: comment_node_local_shopping_form

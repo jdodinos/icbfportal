@@ -1,0 +1,21 @@
+uuid: c7e3bb23-937a-479c-9ca8-c87ef5aa20b4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_relevant
+    - node.type.document
+  module:
+    - options
+id: node.document.field_relevant
+field_name: field_relevant
+entity_type: node
+bundle: document
+label: Relevancia
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

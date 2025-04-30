@@ -1,0 +1,30 @@
+uuid: 37e3474e-fe0d-46ef-af7c-47e66b17d559
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: fieldset
+    publish_enable: true
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: true
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Banner home'
+type: banner_home
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

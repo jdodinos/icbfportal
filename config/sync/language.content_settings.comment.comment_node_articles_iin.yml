@@ -1,0 +1,16 @@
+uuid: 0855bf1b-e35e-40db-9809-ea3ba56590a6
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_articles_iin
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: comment.comment_node_articles_iin
+target_entity_type_id: comment
+target_bundle: comment_node_articles_iin
+default_langcode: current_interface
+language_alterable: true

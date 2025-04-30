@@ -1,0 +1,46 @@
+uuid: c89a9668-888e-42fb-87b8-df60f43b50a1
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_component_transparency
+field_name: field_component_transparency
+entity_type: node
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 1
+      label: PLAN
+    -
+      value: 2
+      label: '1. Gestión del Riesgo de Corrupción – Mapa de Riesgos de Corrupción'
+    -
+      value: 3
+      label: '2. Racionalización de trámites.'
+    -
+      value: 4
+      label: '3. Rendición de cuentas'
+    -
+      value: 5
+      label: '4. Mecanismos para mejorar la atención al ciudadano.'
+    -
+      value: 6
+      label: '5. Mecanismos para la transparencia y acceso a la Información'
+    -
+      value: 7
+      label: '6. Iniciativas adicionales que permitan fortalecer su estrategia de lucha contra la corrupción'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

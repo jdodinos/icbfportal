@@ -1,0 +1,27 @@
+uuid: 25a199cf-ec8e-4d67-90c9-a648ce92d88f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_microsite_category
+    - taxonomy.vocabulary.programa_adopciones
+id: taxonomy_term.programa_adopciones.field_microsite_category
+field_name: field_microsite_category
+entity_type: taxonomy_term
+bundle: programa_adopciones
+label: 'Sección de Micrositio'
+description: 'Sección dentro del micrositio al cual pertenece el nodo'
+required: false
+translatable: false
+default_value:
+  -
+    tid: '7439'
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      programa_adopciones: programa_adopciones
+    sort:
+      field: _none
+field_type: entity_reference

@@ -1,0 +1,14 @@
+uuid: c31b3785-1f35-4e5c-8c95-dc735ffc69bf
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.editor_micrositios
+  module:
+    - user
+id: user_remove_role_action.editor_micrositios
+label: 'Elimina el rol Editor Micrositios al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: editor_micrositios

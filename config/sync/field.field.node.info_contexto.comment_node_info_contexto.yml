@@ -1,0 +1,33 @@
+uuid: 997a1309-1221-4739-8c36-e8c27991b8af
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.comment_node_info_contexto
+    - node.type.info_contexto
+  module:
+    - comment
+id: node.info_contexto.comment_node_info_contexto
+field_name: comment_node_info_contexto
+entity_type: node
+bundle: info_contexto
+label: Comments
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    status: 1
+    cid: 0
+    last_comment_timestamp: 0
+    last_comment_name: null
+    last_comment_uid: 0
+    comment_count: 0
+default_value_callback: ''
+settings:
+  default_mode: 0
+  per_page: 50
+  anonymous: 0
+  form_location: false
+  preview: 0
+field_type: comment

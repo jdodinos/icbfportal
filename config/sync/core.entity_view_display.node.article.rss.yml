@@ -1,0 +1,83 @@
+uuid: 459fb717-754e-4e71-bb1d-09bf50b77c78
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.rss
+    - field.field.node.article.body
+    - field.field.node.article.comment
+    - field.field.node.article.comment_node_article
+    - field.field.node.article.event_calendar_date
+    - field.field.node.article.field_body_infograph
+    - field.field.node.article.field_content_article
+    - field.field.node.article.field_content_article2
+    - field.field.node.article.field_content_collapsible
+    - field.field.node.article.field_dae_year
+    - field.field.node.article.field_date
+    - field.field.node.article.field_family_section
+    - field.field.node.article.field_file_categoria
+    - field.field.node.article.field_icon_label
+    - field.field.node.article.field_image
+    - field.field.node.article.field_images
+    - field.field.node.article.field_imgcover_infograph
+    - field.field.node.article.field_label_range
+    - field.field.node.article.field_link_more_info
+    - field.field.node.article.field_list_image
+    - field.field.node.article.field_location
+    - field.field.node.article.field_metatag
+    - field.field.node.article.field_news_files
+    - field.field.node.article.field_post_document_plus
+    - field.field.node.article.field_post_number_home
+    - field.field.node.article.field_ref_autor
+    - field.field.node.article.field_ref_editorial
+    - field.field.node.article.field_resume
+    - field.field.node.article.field_seo_title
+    - field.field.node.article.field_tags
+    - field.field.node.article.field_youtube
+    - node.type.article
+  module:
+    - user
+_core:
+  default_config_hash: 2rIr6K5Q0UQ9khg0zE_CK-PtJH76UL-BDDZcZnZzwCc
+id: node.article.rss
+targetEntityType: node
+bundle: article
+mode: rss
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  body: true
+  comment: true
+  comment_node_article: true
+  event_calendar_date: true
+  field_body_infograph: true
+  field_content_article: true
+  field_content_article2: true
+  field_content_collapsible: true
+  field_dae_year: true
+  field_date: true
+  field_family_section: true
+  field_file_categoria: true
+  field_icon_label: true
+  field_image: true
+  field_images: true
+  field_imgcover_infograph: true
+  field_label_range: true
+  field_link_more_info: true
+  field_list_image: true
+  field_location: true
+  field_metatag: true
+  field_news_files: true
+  field_post_document_plus: true
+  field_post_number_home: true
+  field_ref_autor: true
+  field_ref_editorial: true
+  field_resume: true
+  field_seo_title: true
+  field_tags: true
+  field_youtube: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

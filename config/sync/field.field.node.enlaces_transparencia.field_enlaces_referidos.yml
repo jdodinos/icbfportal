@@ -1,0 +1,52 @@
+uuid: b2d6a7f1-3ca7-4ac5-a2c5-38a1d82e247f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_enlaces_referidos
+    - node.type.enlaces_transparencia
+    - paragraphs.paragraphs_type.enlaces_referidos
+  module:
+    - entity_reference_revisions
+id: node.enlaces_transparencia.field_enlaces_referidos
+field_name: field_enlaces_referidos
+entity_type: node
+bundle: enlaces_transparencia
+label: 'Enlaces referidos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      enlaces_referidos: enlaces_referidos
+    negate: 0
+    target_bundles_drag_drop:
+      bookpost_group:
+        weight: 2
+        enabled: false
+      children_defendant:
+        weight: 3
+        enabled: false
+      enlaces_referidos:
+        weight: 1
+        enabled: true
+      glazed_content_design:
+        weight: 4
+        enabled: false
+      local_staff_list:
+        weight: 5
+        enabled: false
+      multimedia_collection:
+        weight: 6
+        enabled: false
+      post_document_plus:
+        weight: 7
+        enabled: false
+      summoned:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

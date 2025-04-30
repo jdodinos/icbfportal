@@ -1,0 +1,19 @@
+uuid: 0e370b55-b856-46d0-93d8-0c5a0a460d6b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_url
+    - node.type.articulo_nna
+id: node.articulo_nna.field_link_url
+field_name: field_link_url
+entity_type: node
+bundle: articulo_nna
+label: Url
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

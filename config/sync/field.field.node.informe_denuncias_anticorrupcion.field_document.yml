@@ -1,0 +1,27 @@
+uuid: aa883d18-8f0b-449a-9822-5e51790c9d5c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document
+    - node.type.informe_denuncias_anticorrupcion
+  module:
+    - file
+id: node.informe_denuncias_anticorrupcion.field_document
+field_name: field_document
+entity_type: node
+bundle: informe_denuncias_anticorrupcion
+label: Documento
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: reportes-anticorrupcion
+  file_extensions: 'txt pdf doc xls xlsx docx ppt pptx pps ppsx png jpg jpge tiff gif zip rar msg xps'
+  max_filesize: ''
+  description_field: true
+field_type: file

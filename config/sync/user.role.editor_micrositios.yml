@@ -1,0 +1,22 @@
+uuid: 8a52a6cc-24b4-4332-9ded-39304c2326d9
+langcode: es
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+    - node.type.articulo_mis_manos_te_ensenan
+  module:
+    - filter
+    - node
+    - system
+id: editor_micrositios
+label: 'Editor Micrositios'
+weight: 20
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'create articulo_mis_manos_te_ensenan content'
+  - 'delete own articulo_mis_manos_te_ensenan content'
+  - 'edit any articulo_mis_manos_te_ensenan content'
+  - 'edit own articulo_mis_manos_te_ensenan content'
+  - 'use text format full_html'

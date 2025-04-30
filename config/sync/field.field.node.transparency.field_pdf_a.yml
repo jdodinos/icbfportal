@@ -1,0 +1,23 @@
+uuid: 99b0b2d7-1a10-4295-9c9e-5ed2a8536c74
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pdf_a
+    - node.type.transparency
+id: node.transparency.field_pdf_a
+field_name: field_pdf_a
+entity_type: node
+bundle: transparency
+label: PDF/A
+description: 'Identificación de cumplimiento de estándares de accesibilidad'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Formato Accesible'
+  off_label: 'Formato NO accesible'
+field_type: boolean

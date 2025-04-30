@@ -1,0 +1,22 @@
+uuid: e8fa4c35-168a-471a-8aa0-74d33b049430
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.js
+    - field.storage.block_content.field_code
+  module:
+    - text
+id: block_content.js.field_code
+field_name: field_code
+entity_type: block_content
+bundle: js
+label: Code
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

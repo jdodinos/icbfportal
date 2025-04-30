@@ -1,0 +1,21 @@
+uuid: 7c293507-e385-458c-9d2d-49e54e7859e5
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node_sede_local
+label: 'Contenido - Punto de Atención'
+type: 'canonical_entities:node'
+pattern: 'puntos-atencion/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      sede_local: sede_local
+selection_logic: and
+weight: 0
+relationships: {  }

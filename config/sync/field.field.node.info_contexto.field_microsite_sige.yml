@@ -1,0 +1,21 @@
+uuid: fbbaafc4-b4d1-4c5a-9819-43d3ece15bc8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_microsite_sige
+    - node.type.info_contexto
+  module:
+    - options
+id: node.info_contexto.field_microsite_sige
+field_name: field_microsite_sige
+entity_type: node
+bundle: info_contexto
+label: 'Sección en SIGE'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

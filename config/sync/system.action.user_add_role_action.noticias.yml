@@ -1,0 +1,14 @@
+uuid: 2509e795-1732-4166-af5b-d0703ea19ab4
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.noticias
+  module:
+    - user
+id: user_add_role_action.noticias
+label: 'Añade el rol Noticias al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: noticias

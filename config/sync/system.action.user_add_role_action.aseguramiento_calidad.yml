@@ -1,0 +1,14 @@
+uuid: 5c8d50f6-8358-4aaf-ae37-c03131ba1987
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.aseguramiento_calidad
+  module:
+    - user
+id: user_add_role_action.aseguramiento_calidad
+label: 'Añade el rol Aseguramiento Calidad al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: aseguramiento_calidad

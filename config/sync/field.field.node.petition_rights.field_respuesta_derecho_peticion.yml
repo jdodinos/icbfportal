@@ -1,0 +1,26 @@
+uuid: 731de8cf-c6c5-44fc-b9a7-8a7aa6c7bbc0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_respuesta_derecho_peticion
+    - node.type.petition_rights
+    - taxonomy.vocabulary.actas_contentivas_type
+id: node.petition_rights.field_respuesta_derecho_peticion
+field_name: field_respuesta_derecho_peticion
+entity_type: node
+bundle: petition_rights
+label: 'Respuesta al derecho de peticion'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      actas_contentivas_type: actas_contentivas_type
+    sort:
+      field: _none
+field_type: entity_reference

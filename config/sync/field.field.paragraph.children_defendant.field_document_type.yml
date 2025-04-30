@@ -1,0 +1,21 @@
+uuid: 826476a0-0940-4799-af15-60ce8eb835dc
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_document_type
+    - paragraphs.paragraphs_type.children_defendant
+  module:
+    - options
+id: paragraph.children_defendant.field_document_type
+field_name: field_document_type
+entity_type: paragraph
+bundle: children_defendant
+label: 'Tipo de documento'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

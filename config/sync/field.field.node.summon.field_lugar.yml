@@ -1,0 +1,26 @@
+uuid: 80357cd7-bded-4995-9a8f-5e4f398895b6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lugar
+    - node.type.summon
+    - taxonomy.vocabulary.departments_municipalities
+id: node.summon.field_lugar
+field_name: field_lugar
+entity_type: node
+bundle: summon
+label: Departamento
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      departments_municipalities: departments_municipalities
+    sort:
+      field: _none
+field_type: entity_reference

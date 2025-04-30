@@ -1,0 +1,19 @@
+uuid: 8a7d471f-56b2-40c8-acb5-df6f14b6c6da
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_citizen_id
+    - paragraphs.paragraphs_type.children_defendant
+id: paragraph.children_defendant.field_citizen_id
+field_name: field_citizen_id
+entity_type: paragraph
+bundle: children_defendant
+label: 'Número documento'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

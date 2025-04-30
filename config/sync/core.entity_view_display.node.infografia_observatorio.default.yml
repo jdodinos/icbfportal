@@ -1,0 +1,105 @@
+uuid: 861e2750-ee12-49f4-83a8-a57b5922e8d9
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_infografia_observat.default
+    - field.field.node.infografia_observatorio.body
+    - field.field.node.infografia_observatorio.comment_node_infografia_observat
+    - field.field.node.infografia_observatorio.field_date
+    - field.field.node.infografia_observatorio.field_document
+    - field.field.node.infografia_observatorio.field_file_categoria
+    - field.field.node.infografia_observatorio.field_list_image
+    - field.field.node.infografia_observatorio.field_metatag
+    - field.field.node.infografia_observatorio.field_resume
+    - field.field.node.infografia_observatorio.field_section
+    - node.type.infografia_observatorio
+  module:
+    - comment
+    - datetime
+    - file
+    - image
+    - text
+    - user
+id: node.infografia_observatorio.default
+targetEntityType: node
+bundle: infografia_observatorio
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  comment_node_infografia_observat:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_document:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_file_categoria:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_list_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_resume:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_section:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_metatag: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

@@ -1,0 +1,20 @@
+uuid: 5d3b64c2-ea1a-4853-808d-1eee411dcb0f
+langcode: es
+status: true
+dependencies:
+  module:
+    - comment
+    - node
+id: node.comment_node_articulo_mis_manos_
+field_name: comment_node_articulo_mis_manos_
+entity_type: node
+type: comment
+settings:
+  comment_type: comment_node_articulo_mis_manos_
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

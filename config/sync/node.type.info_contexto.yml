@@ -1,0 +1,30 @@
+uuid: 198e3d0f-977f-4a3d-9e10-2c784c937a47
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: false
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Artículos ADA'
+type: info_contexto
+description: 'contenido genérico - hipertexto para secciones y micrositios'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: true

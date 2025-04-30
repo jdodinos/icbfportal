@@ -1,0 +1,14 @@
+uuid: a1a2f69b-2ad8-4501-aa1d-95211b1c82b1
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.noticias_compras_locales
+  module:
+    - user
+id: user_remove_role_action.noticias_compras_locales
+label: 'Elimina el rol Noticias Compras Locales al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: noticias_compras_locales

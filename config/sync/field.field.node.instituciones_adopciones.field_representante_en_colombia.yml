@@ -1,0 +1,19 @@
+uuid: bb83f5e1-7f63-44b9-aead-eaa0c86030f1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_representante_en_colombia
+    - node.type.instituciones_adopciones
+id: node.instituciones_adopciones.field_representante_en_colombia
+field_name: field_representante_en_colombia
+entity_type: node
+bundle: instituciones_adopciones
+label: 'Representante en Colombia'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

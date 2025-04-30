@@ -1,0 +1,46 @@
+uuid: 5ca8c87d-21db-415a-9987-83614714e320
+langcode: es
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 6816
+template: false
+archive: false
+id: webform_190080
+title: 'Participa Encuesta'
+description: null
+categories: {  }
+elements: |-
+  correo_electr_nico:
+    '#type': hidden
+    '#default_value': '[current-page:query:pCorreo]'
+    '#title': 'Correo Electrónico'
+  new_1658869650640:
+    '#type': textfield
+    '#title': 'New textfield'
+css: ''
+javascript: ''
+settings:
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: ''
+  limit_total: null
+  limit_user: null
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }

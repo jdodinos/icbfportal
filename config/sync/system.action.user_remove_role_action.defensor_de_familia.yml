@@ -1,0 +1,14 @@
+uuid: 3a06cba2-2e5b-465e-9f7b-8db310b08b10
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.defensor_de_familia
+  module:
+    - user
+id: user_remove_role_action.defensor_de_familia
+label: 'Elimina el rol Defensor de Familia al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: defensor_de_familia

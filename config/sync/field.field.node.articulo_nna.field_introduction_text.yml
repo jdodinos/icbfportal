@@ -1,0 +1,22 @@
+uuid: 820cdb51-ab67-46b1-8f5b-40b307486f8a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_introduction_text
+    - node.type.articulo_nna
+  module:
+    - text
+id: node.articulo_nna.field_introduction_text
+field_name: field_introduction_text
+entity_type: node
+bundle: articulo_nna
+label: Introducción
+description: 'información inicial que describe el contenido del post; lead.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

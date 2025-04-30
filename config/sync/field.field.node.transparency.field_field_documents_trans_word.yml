@@ -1,0 +1,27 @@
+uuid: 7fef75b0-72f2-4c6d-a1e6-9665e7be5c1a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_field_documents_trans_word
+    - node.type.transparency
+  module:
+    - file
+id: node.transparency.field_field_documents_trans_word
+field_name: field_field_documents_trans_word
+entity_type: node
+bundle: transparency
+label: 'Documento Office'
+description: 'Documentos en versión editable y/o anexos'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'doc docx xls xlsx xlm xlsm ppt pptx pdf zip'
+  max_filesize: '65 MB'
+  description_field: true
+field_type: file

@@ -1,0 +1,8 @@
+uuid: 25bd126f-b29d-40f3-821f-189dd4a67621
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_evaluaci_n
+label: 'Evaluación comment'
+target_entity_type_id: node
+description: null

@@ -1,0 +1,84 @@
+uuid: b08d3e35-42ec-4661-b8cd-dee4736d9e96
+langcode: es
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: webform_31554
+title: 'Pila Web old'
+description: null
+categories: {  }
+elements: |-
+  respuesta_usuario:
+    '#type': hidden
+    '#default_value': '[current-page:query:pRespuestaUsuario]'
+    '#title': 'Respuesta usuario'
+  numero_de_identificaci_n:
+    '#type': hidden
+    '#default_value': '[current-page:query:pNumeroIdentificacion]'
+    '#title': 'Numero de identificación (Ej: 25650247)'
+  nombre_y_o_raz_n_social:
+    '#type': hidden
+    '#default_value': '[current-page:query:pNombre]'
+    '#title': 'Nombre y/o Razón Social (Ej: Carlos Perez)'
+  correo_electr_nico:
+    '#type': hidden
+    '#default_value': '[current-page:query:pCorreo]'
+    '#title': 'Correo electrónico (Ej: nombre@dominio.com)'
+  sistema_informaci_n:
+    '#type': hidden
+    '#title': 'Sistema Información'
+  identificaci_n_del_tr_mite:
+    '#type': hidden
+    '#default_value': '[current-page:query:pIdentificacionTramite]'
+    '#title': 'Identificación del trámite'
+  new_markup:
+    '#type': processed_text
+    '#format': full_html
+    '#text': |-
+      <h1>Valoración Trámite en línea</h1>
+      <p>Al finalizar su trámite lo invitamos a diligenciar nuestra encuesta de satisfacción. </p>
+  1_qu_tan_clara_le_pareci_la_informaci_n_del_tr_mite_:
+    '#type': radios
+    '#options':
+      1: Bueno
+      2: Malo
+      3: Regular
+    '#title': '1. ¿Qué tan clara le pareció la información del trámite? (Ej: Seleccione una de las opciones )'
+    '#required': true
+  _en_qu_podemos_mejorar_el_tr_mite_:
+    '#type': textarea
+    '#title': '¿En qué podemos mejorar el trámite? (Ej: Una opción de mejora es...) '
+  new_1726000430990:
+    '#type': textfield
+    '#size': 20
+    '#unique': false
+    '#title': 'New number'
+css: ''
+javascript: ''
+settings:
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: url
+  confirmation_url: encuestas/finalizada
+  confirmation_message: ''
+  limit_total: null
+  limit_user: null
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }

@@ -1,0 +1,33 @@
+uuid: 91ceb6b3-4c29-4a98-8822-999b59b4f96b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.comment_node_venta_de_bienes
+    - node.type.venta_de_bienes
+  module:
+    - comment
+id: node.venta_de_bienes.comment_node_venta_de_bienes
+field_name: comment_node_venta_de_bienes
+entity_type: node
+bundle: venta_de_bienes
+label: Comments
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    status: 2
+    cid: 0
+    last_comment_timestamp: 0
+    last_comment_name: null
+    last_comment_uid: 0
+    comment_count: 0
+default_value_callback: ''
+settings:
+  default_mode: 1
+  per_page: 50
+  anonymous: 0
+  form_location: true
+  preview: 1
+field_type: comment

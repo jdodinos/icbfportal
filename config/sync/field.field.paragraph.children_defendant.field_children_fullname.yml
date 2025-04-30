@@ -1,0 +1,19 @@
+uuid: a2da2d74-641c-4710-9e4d-c493d85dc4a4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_children_fullname
+    - paragraphs.paragraphs_type.children_defendant
+id: paragraph.children_defendant.field_children_fullname
+field_name: field_children_fullname
+entity_type: paragraph
+bundle: children_defendant
+label: 'Nombre completo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

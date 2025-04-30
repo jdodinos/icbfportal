@@ -1,0 +1,21 @@
+uuid: 77f1608c-1791-4d99-be88-867109fe7242
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_icon_label
+    - node.type.article
+  module:
+    - options
+id: node.article.field_icon_label
+field_name: field_icon_label
+entity_type: node
+bundle: article
+label: 'Icono Label'
+description: 'identificador de tipo para presentación en vistas'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

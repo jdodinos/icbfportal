@@ -1,0 +1,27 @@
+uuid: a5f50ba5-1d42-41de-845f-f0fe39aebd85
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_documento_banco_oferentes
+    - node.type.documentos_contrataci_n
+  module:
+    - file
+id: node.documentos_contrataci_n.field_documento_banco_oferentes
+field_name: field_documento_banco_oferentes
+entity_type: node
+bundle: documentos_contrataci_n
+label: 'Documento Banco Oferentes'
+description: 'Documentos Propuestas Convocatorias Banco Oferentes'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'txt pdf doc xls xlsx xlsm xlsmx docx ppt pptx pps ppsx png jpg jpeg tiff tif gif zip rar msg xps mp3 mp4 wmv mpeg pptm'
+  max_filesize: 42mb
+  description_field: true
+field_type: file

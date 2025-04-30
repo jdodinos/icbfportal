@@ -1,0 +1,14 @@
+uuid: aa371bed-5f6e-4510-a1fe-8771549c0239
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.servicios_portafolio_
+  module:
+    - user
+id: user_add_role_action.servicios_portafolio_
+label: 'Añade el rol Servicios (Portafolio) al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: servicios_portafolio_

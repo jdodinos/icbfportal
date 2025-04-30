@@ -1,0 +1,66 @@
+uuid: 2fd46f8a-d77e-4d03-8ba2-d34bc954c597
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.persona.comment_node_persona
+    - field.field.node.persona.field_attached_files
+    - field.field.node.persona.field_content_profile
+    - field.field.node.persona.field_cv
+    - field.field.node.persona.field_email
+    - field.field.node.persona.field_file_priority
+    - field.field.node.persona.field_metatag
+    - field.field.node.persona.field_person_area
+    - field.field.node.persona.field_person_code
+    - field.field.node.persona.field_person_degree
+    - field.field.node.persona.field_person_extension
+    - field.field.node.persona.field_person_position
+    - field.field.node.persona.field_photo
+    - field.field.node.persona.field_section
+    - node.type.persona
+  module:
+    - file
+    - text
+    - user
+id: node.persona.teaser
+targetEntityType: node
+bundle: persona
+mode: teaser
+content:
+  field_content_profile:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_photo:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment_node_persona: true
+  field_attached_files: true
+  field_cv: true
+  field_email: true
+  field_file_priority: true
+  field_metatag: true
+  field_person_area: true
+  field_person_code: true
+  field_person_degree: true
+  field_person_extension: true
+  field_person_position: true
+  field_section: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

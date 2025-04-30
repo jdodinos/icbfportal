@@ -1,0 +1,18 @@
+uuid: 3ea8596c-f40d-4c4d-84cf-005e0fa38a32
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.transparency
+id: node.transparency.title
+field_name: title
+entity_type: node
+bundle: transparency
+label: Nombre
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

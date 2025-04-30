@@ -1,0 +1,34 @@
+uuid: 8c8c6582-a2f0-49ff-836c-035838880978
+langcode: es
+status: true
+dependencies:
+  config:
+    - filter.format.clean
+    - filter.format.full_html
+    - node.type.announcement
+  module:
+    - field_permissions
+    - filter
+    - node
+    - publishcontent
+    - scheduler
+    - system
+id: convocatoria
+label: Convocatoria
+weight: 13
+is_admin: null
+permissions:
+  - 'create announcement content'
+  - 'create field_creation_date'
+  - 'edit any announcement content'
+  - 'edit field_creation_date'
+  - 'edit own announcement content'
+  - 'edit own field_creation_date'
+  - 'schedule publishing of nodes'
+  - 'unpublish editable content'
+  - 'use text format clean'
+  - 'use text format full_html'
+  - 'view own field_creation_date'
+  - 'view own unpublished content'
+  - 'view scheduled content'
+  - 'view the administration theme'

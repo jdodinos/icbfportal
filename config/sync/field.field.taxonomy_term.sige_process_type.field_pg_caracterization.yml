@@ -1,0 +1,27 @@
+uuid: aa849a98-9d88-47e5-b331-5cf426d439d1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_pg_caracterization
+    - taxonomy.vocabulary.sige_process_type
+  module:
+    - file
+id: taxonomy_term.sige_process_type.field_pg_caracterization
+field_name: field_pg_caracterization
+entity_type: taxonomy_term
+bundle: sige_process_type
+label: Caracterización
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: procesos
+  file_extensions: 'pdf doc xls xlsx docx ppt pptx xlm'
+  max_filesize: ''
+  description_field: true
+field_type: file

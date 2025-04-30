@@ -1,0 +1,21 @@
+uuid: e07d6ad3-9ad7-4b4a-8301-73fb848a938d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.services_faq
+  module:
+    - datetime
+id: node.services_faq.field_date
+field_name: field_date
+entity_type: node
+bundle: services_faq
+label: Fecha
+description: 'Fecha de publicación de la respuesta al ciudadano. Por defecto, la fecha de registro en el sistema'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

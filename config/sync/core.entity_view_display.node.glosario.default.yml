@@ -1,0 +1,89 @@
+uuid: 950b2579-cf91-44c5-b7ed-c132246ffc86
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_glosario.default
+    - field.field.node.glosario.comment_node_glosario
+    - field.field.node.glosario.field_content
+    - field.field.node.glosario.field_file_categoria
+    - field.field.node.glosario.field_link_more_info
+    - field.field.node.glosario.field_metatag
+    - field.field.node.glosario.field_procedure
+    - field.field.node.glosario.field_tags
+    - field.field.node.glosario.field_tooltip
+    - node.type.glosario
+  module:
+    - comment
+    - text
+    - user
+id: node.glosario.default
+targetEntityType: node
+bundle: glosario
+mode: default
+content:
+  comment_node_glosario:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_content:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_file_categoria:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_link_more_info:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_procedure:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_tooltip:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_metatag: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

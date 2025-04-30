@@ -1,0 +1,123 @@
+uuid: f899ded7-52cf-459a-857c-9f22dee21b97
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_datos_ni_os_migrant.default
+    - field.field.node.datos_ni_os_migrantes.body
+    - field.field.node.datos_ni_os_migrantes.comment_node_datos_ni_os_migrant
+    - field.field.node.datos_ni_os_migrantes.field_autoridad_1
+    - field.field.node.datos_ni_os_migrantes.field_correo_electronico_contact
+    - field.field.node.datos_ni_os_migrantes.field_edad
+    - field.field.node.datos_ni_os_migrantes.field_fecha_publicaci_n
+    - field.field.node.datos_ni_os_migrantes.field_fotografia
+    - field.field.node.datos_ni_os_migrantes.field_metatag
+    - field.field.node.datos_ni_os_migrantes.field_nombre
+    - field.field.node.datos_ni_os_migrantes.field_regional
+    - field.field.node.datos_ni_os_migrantes.field_telefono
+    - node.type.datos_ni_os_migrantes
+  module:
+    - comment
+    - datetime
+    - image
+    - options
+    - text
+    - user
+id: node.datos_ni_os_migrantes.default
+targetEntityType: node
+bundle: datos_ni_os_migrantes
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  comment_node_datos_ni_os_migrant:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_autoridad_1:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_correo_electronico_contact:
+    type: email_mailto
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_edad:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_fecha_publicaci_n:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_fotografia:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_nombre:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_regional:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_telefono:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_metatag: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

@@ -1,0 +1,110 @@
+uuid: ee085242-93f8-4243-8080-216171063578
+langcode: es
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: webform_82732
+title: 'Formulario de Contacto - Preguntas Frecuentes'
+description: null
+categories: {  }
+elements: |-
+  nombres_y_apellidos_:
+    '#type': textfield
+    '#title': 'Nombres y Apellidos (Ej: Alberto Dominguez)'
+    '#required': true
+  correo_electr_nico:
+    '#type': email
+    '#size': 20
+    '#title': 'Correo electrónico (Ej: Alberto.dominguez@gmail.com)'
+    '#required': true
+  confirmar_correo_electr_nico:
+    '#type': email
+    '#size': 20
+    '#title': 'Confirmar correo electrónico'
+    '#required': true
+  pa_s:
+    '#type': textfield
+    '#title': 'País (Ej: Colombia)'
+  ciudad:
+    '#type': textfield
+    '#title': 'Ciudad (Ej: Santa Marta)'
+  pregunta:
+    '#type': textarea
+    '#title': 'Escriba su Pregunta'
+    '#required': true
+  pol_tica_de_tratamiento_de_datos_personales:
+    '#type': checkbox
+    '#options':
+      1: 'Acepto Términos y Condiciones'
+    '#multiple': true
+    '#title_display': inline
+    '#title': 'Política de Tratamiento de Datos Personales'
+    '#required': true
+css: ''
+javascript: ''
+settings:
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: "<div align=\"center\"><h2>Muchas gracias por enviar su información</h2></div>\r\n"
+  limit_total: null
+  limit_user: null
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+handlers:
+  email_1:
+    id: email
+    handler_id: email_1
+    label: 'Email 1'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: atencionalciudadano@icbf.gov.co
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: atencionalciudadano@icbf.gov.co
+      from_options: {  }
+      from_name: 'Preguntas Frecuentes ICBF - [webform_submission:values:nombre_y_apellidos]'
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Preguntas Frecuentes ICBF - [webform_submission:values:nombre_y_apellidos]'
+      body: |
+        <p>Enviado el [webform_submission:date:long]</p>
+        [webform_submission:values]
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

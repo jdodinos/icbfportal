@@ -1,0 +1,14 @@
+uuid: cac18358-da3d-4cdd-bf93-772bc8652eaf
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.contratacion_regionales
+  module:
+    - user
+id: user_remove_role_action.contratacion_regionales
+label: 'Elimina el rol Contratación Regionales al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: contratacion_regionales

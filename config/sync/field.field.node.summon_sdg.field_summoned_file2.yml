@@ -1,0 +1,27 @@
+uuid: 62832a9f-26aa-468f-aff2-f9d689eafdb2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summoned_file2
+    - node.type.summon_sdg
+  module:
+    - file
+id: node.summon_sdg.field_summoned_file2
+field_name: field_summoned_file2
+entity_type: node
+bundle: summon_sdg
+label: 'Archivo adjunto'
+description: 'Documentos de Citaciones para cargue'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: pdf
+  max_filesize: '2 mb'
+  description_field: true
+field_type: file

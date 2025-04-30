@@ -1,0 +1,31 @@
+uuid: b163f64a-42dc-4249-aabc-2f1fbe3a5373
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: paragraph.field_full_width_header
+field_name: field_full_width_header
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: normal
+      label: 'Contained Header'
+    -
+      value: fullwidth
+      label: 'Full Width Header'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

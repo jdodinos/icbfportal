@@ -1,0 +1,28 @@
+uuid: 55e57ac6-2960-43df-abf0-c994bfa2e2b3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.article
+    - taxonomy.vocabulary.locations
+id: node.article.field_location
+field_name: field_location
+entity_type: node
+bundle: article
+label: Ubicación
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    tid: '6901'
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      locations: locations
+    sort:
+      field: _none
+field_type: entity_reference

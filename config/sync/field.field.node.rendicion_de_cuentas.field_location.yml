@@ -1,0 +1,26 @@
+uuid: 0bb4a683-7755-4e64-bf48-0ae92979a28a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.rendicion_de_cuentas
+    - taxonomy.vocabulary.locations
+id: node.rendicion_de_cuentas.field_location
+field_name: field_location
+entity_type: node
+bundle: rendicion_de_cuentas
+label: Ubicación
+description: 'Sede Regional donde se realizó la audiencia y/o mesa pública'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      locations: locations
+    sort:
+      field: _none
+field_type: entity_reference

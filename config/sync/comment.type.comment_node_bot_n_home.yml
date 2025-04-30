@@ -1,0 +1,8 @@
+uuid: 59432a51-c506-416d-bbda-bd4cabaad869
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_bot_n_home
+label: 'Botón Home comment'
+target_entity_type_id: node
+description: null

@@ -1,0 +1,14 @@
+uuid: 4be6a453-269f-42ac-81ba-5696322650a0
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.mejoramiento_sige
+  module:
+    - user
+id: user_add_role_action.mejoramiento_sige
+label: 'Añade el rol Mejoramiento SIGE al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: mejoramiento_sige

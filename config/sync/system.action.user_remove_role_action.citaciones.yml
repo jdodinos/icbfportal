@@ -1,0 +1,14 @@
+uuid: 8c88a0d4-fd95-4a7b-860e-b48b85d88b79
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.citaciones
+  module:
+    - user
+id: user_remove_role_action.citaciones
+label: 'Elimina el rol Citaciones al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: citaciones

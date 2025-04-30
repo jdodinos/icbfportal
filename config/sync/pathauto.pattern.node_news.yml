@@ -1,0 +1,21 @@
+uuid: 88a2805f-cf08-4d02-bde2-2d681a18aa7d
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node_news
+label: 'Contenido - Noticia'
+type: 'canonical_entities:node'
+pattern: 'noticias/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      news: news
+selection_logic: and
+weight: 0
+relationships: {  }

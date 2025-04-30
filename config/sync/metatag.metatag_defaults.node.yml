@@ -1,0 +1,18 @@
+uuid: 54b301f5-3d48-4056-94c4-5dcf9e647b56
+langcode: es
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: rpwvgyEURXLz_JjgMCrkS1rUv-0k3L79BpO-ReN7fDI
+id: node
+label: Contenido
+tags:
+  article_modified_time: '[node:changed:custom:c]'
+  article_published_time: '[node:created:custom:c]'
+  description: '[node:summary]'
+  og_description: '[node:summary]'
+  og_title: '[node:title]'
+  og_updated_time: '[node:changed:custom:c]'
+  title: '[node:title] | [current-page:pager][site:name]'
+  twitter_cards_description: '[node:summary]'
+  twitter_cards_title: '[node:title]'

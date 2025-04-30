@@ -1,0 +1,18 @@
+uuid: 308b27d8-2197-46d1-81e4-aca796e8c391
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.isotope_example
+id: node.isotope_example.title
+field_name: title
+entity_type: node
+bundle: isotope_example
+label: 'Example Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

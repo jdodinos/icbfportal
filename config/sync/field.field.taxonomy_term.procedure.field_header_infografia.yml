@@ -1,0 +1,24 @@
+uuid: 0d6e6d86-c908-405b-a240-a58d86ad0da5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_header_infografia
+    - taxonomy.vocabulary.procedure
+  module:
+    - text
+id: taxonomy_term.procedure.field_header_infografia
+field_name: field_header_infografia
+entity_type: taxonomy_term
+bundle: procedure
+label: 'Header Infografia'
+description: Titular
+required: true
+translatable: false
+default_value:
+  -
+    value: "<div class=\"az-element az-row row  az-row--sm\" style=\"\" data-az-id=\"rebyin6l\" data-azb=\"az_row\" data-azat-device=\"sm\" data-azcnt=\"true\"><div class=\"az-element az-ctnr az-column  col-sm-12\" style=\"\" data-az-id=\"wbn1hue0\" data-azb=\"az_column\" data-azcnt=\"true\"><div class=\"az-element az-text text-center\" style=\"margin-top:1em;\" data-az-id=\"94g55014\" data-azb=\"az_text\" data-azat-el_class=\"text-center\" data-azat-style=\"margin-top:1em;\" data-azcnt=\"true\"><p><span style=\"font-size:43px;\">Título Infografíar</span></p>\r\n\r\n<hr></div><div class=\"az-element az-cms-element\" style=\"\" data-az-id=\"gj8bqlti\" data-azb=\"az_block-bean-bloque-compartir---redes-infogra\"></div></div></div>"
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

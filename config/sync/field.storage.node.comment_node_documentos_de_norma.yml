@@ -1,0 +1,20 @@
+uuid: 43b65204-5480-4dbe-8abb-722108c2871a
+langcode: es
+status: true
+dependencies:
+  module:
+    - comment
+    - node
+id: node.comment_node_documentos_de_norma
+field_name: comment_node_documentos_de_norma
+entity_type: node
+type: comment
+settings:
+  comment_type: comment_node_documentos_de_norma
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

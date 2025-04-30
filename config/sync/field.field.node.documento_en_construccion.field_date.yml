@@ -1,0 +1,21 @@
+uuid: f125981f-391f-4ba7-b687-e20f39aa8f06
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.documento_en_construccion
+  module:
+    - datetime
+id: node.documento_en_construccion.field_date
+field_name: field_date
+entity_type: node
+bundle: documento_en_construccion
+label: Fecha
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

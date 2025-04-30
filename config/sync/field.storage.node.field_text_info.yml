@@ -1,0 +1,23 @@
+uuid: edad5132-706c-4df9-9f59-4d7d9335e1c6
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - text
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_text_info
+field_name: field_text_info
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

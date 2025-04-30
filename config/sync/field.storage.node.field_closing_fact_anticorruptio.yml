@@ -1,0 +1,24 @@
+uuid: 615dad46-3be3-401b-bb62-a96a011ffb35
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - taxonomy
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_closing_fact_anticorruptio
+field_name: field_closing_fact_anticorruptio
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

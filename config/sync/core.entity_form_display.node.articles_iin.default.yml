@@ -1,0 +1,327 @@
+uuid: 21bea25f-1d95-4d2e-a636-5ebff81de789
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.articles_iin.comment_node_articles_iin
+    - field.field.node.articles_iin.field_contact_email
+    - field.field.node.articles_iin.field_content_article
+    - field.field.node.articles_iin.field_content_type_iin
+    - field.field.node.articles_iin.field_date
+    - field.field.node.articles_iin.field_document
+    - field.field.node.articles_iin.field_file_categoria
+    - field.field.node.articles_iin.field_images
+    - field.field.node.articles_iin.field_label_iin
+    - field.field.node.articles_iin.field_link_more_info
+    - field.field.node.articles_iin.field_list_image
+    - field.field.node.articles_iin.field_lugar
+    - field.field.node.articles_iin.field_metatag
+    - field.field.node.articles_iin.field_multimedia
+    - field.field.node.articles_iin.field_phone_contact
+    - field.field.node.articles_iin.field_profile_photo1
+    - field.field.node.articles_iin.field_resume
+    - field.field.node.articles_iin.field_seccion_micrositio_xxii
+    - field.field.node.articles_iin.field_youtube
+    - image.style.thumbnail
+    - node.type.articles_iin
+  module:
+    - comment
+    - datetime
+    - field_group
+    - file
+    - image
+    - metatag
+    - path
+    - text
+    - youtube
+third_party_settings:
+  field_group:
+    group_iin_basics:
+      children:
+        - field_date
+        - field_list_image
+        - field_youtube
+        - field_resume
+        - title
+      label: 'Información Básica'
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: 'group-iin-basics field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+    group_iin_details:
+      children:
+        - field_document
+        - field_images
+        - field_content_article
+        - field_multimedia
+      label: 'Información Detalle'
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: 'group-iin-details field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+    group_iin_links:
+      children:
+        - field_file_categoria
+        - field_link_more_info
+        - field_lugar
+        - field_content_type_iin
+        - field_label_iin
+      label: 'Categorización y Relaciones'
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        classes: 'group-iin-links field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+    group_iin_contacts:
+      children:
+        - field_contact_email
+        - field_profile_photo1
+        - field_phone_contact
+      label: 'Información Contactos'
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        classes: 'group-iin-contacts field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+id: node.articles_iin.default
+targetEntityType: node
+bundle: articles_iin
+mode: default
+content:
+  comment_node_articles_iin:
+    type: comment_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_contact_email:
+    type: email_default
+    weight: 20
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_content_article:
+    type: text_textarea
+    weight: 13
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_content_type_iin:
+    type: options_buttons
+    weight: 25
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_date:
+    type: datetime_default
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_document:
+    type: file_generic
+    weight: 16
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_file_categoria:
+    type: entity_reference_autocomplete
+    weight: 26
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_images:
+    type: file_generic
+    weight: 14
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_label_iin:
+    type: options_buttons
+    weight: 23
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_link_more_info:
+    type: string_textfield
+    weight: 27
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_list_image:
+    type: file_generic
+    weight: 4
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_lugar:
+    type: entity_reference_autocomplete
+    weight: 24
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 121
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
+    third_party_settings: {  }
+  field_multimedia:
+    type: file_generic
+    weight: 15
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_phone_contact:
+    type: string_textfield
+    weight: 22
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_profile_photo1:
+    type: image_image
+    weight: 21
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_resume:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_seccion_micrositio_xxii:
+    type: entity_reference_autocomplete
+    weight: 28
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_youtube:
+    type: youtube
+    weight: 5
+    region: content
+    settings:
+      placeholder_url: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  publish_on: true
+  unpublish_on: true

@@ -1,0 +1,21 @@
+uuid: e2963110-70e9-4138-a129-053c1f931625
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_glazed_hide_regions
+    - paragraphs.paragraphs_type.glazed_content_design
+  module:
+    - options
+id: paragraph.glazed_content_design.field_glazed_hide_regions
+field_name: field_glazed_hide_regions
+entity_type: paragraph
+bundle: glazed_content_design
+label: 'Hide Regions'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

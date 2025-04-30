@@ -1,0 +1,7 @@
+uuid: ab33c4b7-2216-4fad-92d0-abf349f3c88d
+langcode: es
+status: true
+dependencies: {  }
+formId: comment_node_encargos_form
+captchaType: captcha/default
+label: comment_node_encargos_form

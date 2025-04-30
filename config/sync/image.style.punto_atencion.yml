@@ -1,0 +1,15 @@
+uuid: f5d87fd8-9257-4651-9b56-bf0fb9bf1832
+langcode: es
+status: true
+dependencies: {  }
+name: punto_atencion
+label: 'Punto de Atención'
+effects:
+  167d09f3-230c-4790-9b94-207dfadd6f8f:
+    uuid: 167d09f3-230c-4790-9b94-207dfadd6f8f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 650
+      height: 465
+      anchor: center-center

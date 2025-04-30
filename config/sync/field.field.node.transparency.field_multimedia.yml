@@ -1,0 +1,27 @@
+uuid: ef3f0098-cd35-4135-88c8-b6192f6d83b7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_multimedia
+    - node.type.transparency
+  module:
+    - file
+id: node.transparency.field_multimedia
+field_name: field_multimedia
+entity_type: node
+bundle: transparency
+label: 'Audio y/o Vídeo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'mp3 mp4 zip jpg png jpeg tiff'
+  max_filesize: 80MB
+  description_field: true
+field_type: file

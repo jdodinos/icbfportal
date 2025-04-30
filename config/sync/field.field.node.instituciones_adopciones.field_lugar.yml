@@ -1,0 +1,28 @@
+uuid: 87ab15f1-f8e7-44f9-9a53-cf5f2d195260
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lugar
+    - node.type.instituciones_adopciones
+    - taxonomy.vocabulary.departments_municipalities
+id: node.instituciones_adopciones.field_lugar
+field_name: field_lugar
+entity_type: node
+bundle: instituciones_adopciones
+label: 'Ciudad en Colombia'
+description: 'Departamento - Municipio'
+required: false
+translatable: false
+default_value:
+  -
+    tid: '4913'
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      departments_municipalities: departments_municipalities
+    sort:
+      field: _none
+field_type: entity_reference

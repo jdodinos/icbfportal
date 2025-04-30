@@ -1,0 +1,77 @@
+uuid: d1979734-fc45-4d07-b206-39ab233daf6e
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.article
+    - node.type.articles_iin
+    - node.type.banner_home
+    - node.type.event_calendar
+    - node.type.info_contexto
+    - node.type.photo_gallery2_event
+    - node.type.summon_sdg
+  module:
+    - field_permissions
+    - node
+    - publishcontent
+    - scheduler
+    - system
+id: comunicaciones
+label: Comunicaciones
+weight: 10
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'create article content'
+  - 'create articles_iin content'
+  - 'create banner_home content'
+  - 'create event_calendar content'
+  - 'create field_creation_date'
+  - 'create field_region_office'
+  - 'create field_unpublish_date'
+  - 'create info_contexto content'
+  - 'create photo_gallery2_event content'
+  - 'create summon_sdg content'
+  - 'delete any article content'
+  - 'delete any articles_iin content'
+  - 'delete any banner_home content'
+  - 'delete any photo_gallery2_event content'
+  - 'delete any summon_sdg content'
+  - 'delete own article content'
+  - 'delete own articles_iin content'
+  - 'delete own banner_home content'
+  - 'delete own event_calendar content'
+  - 'delete own info_contexto content'
+  - 'delete own photo_gallery2_event content'
+  - 'delete own summon_sdg content'
+  - 'edit any article content'
+  - 'edit any articles_iin content'
+  - 'edit any banner_home content'
+  - 'edit any event_calendar content'
+  - 'edit any info_contexto content'
+  - 'edit any photo_gallery2_event content'
+  - 'edit any summon_sdg content'
+  - 'edit field_creation_date'
+  - 'edit field_region_office'
+  - 'edit field_unpublish_date'
+  - 'edit own article content'
+  - 'edit own articles_iin content'
+  - 'edit own banner_home content'
+  - 'edit own event_calendar content'
+  - 'edit own field_creation_date'
+  - 'edit own field_region_office'
+  - 'edit own field_unpublish_date'
+  - 'edit own info_contexto content'
+  - 'edit own photo_gallery2_event content'
+  - 'edit own summon_sdg content'
+  - 'schedule publishing of nodes'
+  - 'unpublish editable content'
+  - 'view field_creation_date'
+  - 'view field_region_office'
+  - 'view field_unpublish_date'
+  - 'view own field_creation_date'
+  - 'view own field_region_office'
+  - 'view own field_unpublish_date'
+  - 'view scheduled content'
+  - 'view the administration theme'

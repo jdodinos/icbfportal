@@ -1,0 +1,248 @@
+uuid: 47a3dc93-b71b-4b21-b1a3-b691c9151877
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.glazed_content_design.field_dropdown_background
+    - field.field.paragraph.glazed_content_design.field_dropdown_hover_background
+    - field.field.paragraph.glazed_content_design.field_dropdown_hover_text_color
+    - field.field.paragraph.glazed_content_design.field_dropdown_text_color
+    - field.field.paragraph.glazed_content_design.field_full_width_header
+    - field.field.paragraph.glazed_content_design.field_glazed_body_image
+    - field.field.paragraph.glazed_content_design.field_glazed_content_region
+    - field.field.paragraph.glazed_content_design.field_glazed_header_image
+    - field.field.paragraph.glazed_content_design.field_glazed_header_mode
+    - field.field.paragraph.glazed_content_design.field_glazed_header_position
+    - field.field.paragraph.glazed_content_design.field_glazed_header_style
+    - field.field.paragraph.glazed_content_design.field_glazed_hide_regions
+    - field.field.paragraph.glazed_content_design.field_header_background
+    - field.field.paragraph.glazed_content_design.field_header_block_background
+    - field.field.paragraph.glazed_content_design.field_header_block_text_color
+    - field.field.paragraph.glazed_content_design.field_header_height
+    - field.field.paragraph.glazed_content_design.field_header_layout
+    - field.field.paragraph.glazed_content_design.field_header_text
+    - field.field.paragraph.glazed_content_design.field_menu_background
+    - field.field.paragraph.glazed_content_design.field_menu_hover_background
+    - field.field.paragraph.glazed_content_design.field_menu_hover_effect
+    - field.field.paragraph.glazed_content_design.field_menu_hover_text_color
+    - field.field.paragraph.glazed_content_design.field_menu_text_color
+    - field.field.paragraph.glazed_content_design.field_navbar_background
+    - field.field.paragraph.glazed_content_design.field_page_layout
+    - field.field.paragraph.glazed_content_design.field_side_header_background
+    - field.field.paragraph.glazed_content_design.field_side_header_text_color
+    - field.field.paragraph.glazed_content_design.field_side_header_width
+    - paragraphs.paragraphs_type.glazed_content_design
+  module:
+    - file
+id: paragraph.glazed_content_design.default
+targetEntityType: paragraph
+bundle: glazed_content_design
+mode: default
+content:
+  field_dropdown_background:
+    type: string_textfield
+    weight: 30
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_dropdown_hover_background:
+    type: string_textfield
+    weight: 32
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_dropdown_hover_text_color:
+    type: string_textfield
+    weight: 33
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_dropdown_text_color:
+    type: string_textfield
+    weight: 31
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_full_width_header:
+    type: options_select
+    weight: 37
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_glazed_body_image:
+    type: file_generic
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_glazed_content_region:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_glazed_header_image:
+    type: file_generic
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_glazed_header_mode:
+    type: options_select
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_glazed_header_position:
+    type: options_select
+    weight: 39
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_glazed_header_style:
+    type: options_select
+    weight: 40
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_glazed_hide_regions:
+    type: options_buttons
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_header_background:
+    type: string_textfield
+    weight: 21
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_header_block_background:
+    type: string_textfield
+    weight: 24
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_header_block_text_color:
+    type: string_textfield
+    weight: 25
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_header_height:
+    type: string_textfield
+    weight: 41
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_header_layout:
+    type: options_select
+    weight: 38
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_header_text:
+    type: string_textfield
+    weight: 22
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_menu_background:
+    type: string_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_menu_hover_background:
+    type: string_textfield
+    weight: 28
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_menu_hover_effect:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_menu_hover_text_color:
+    type: string_textfield
+    weight: 29
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_menu_text_color:
+    type: string_textfield
+    weight: 27
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_navbar_background:
+    type: string_textfield
+    weight: 23
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_page_layout:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_side_header_background:
+    type: string_textfield
+    weight: 44
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_side_header_text_color:
+    type: string_textfield
+    weight: 45
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_side_header_width:
+    type: string_textfield
+    weight: 46
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

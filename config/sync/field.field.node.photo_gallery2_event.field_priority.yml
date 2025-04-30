@@ -1,0 +1,23 @@
+uuid: d3f6c3a4-bdac-4aeb-81fa-ba0e7d76e5ea
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_priority
+    - node.type.photo_gallery2_event
+id: node.photo_gallery2_event.field_priority
+field_name: field_priority
+entity_type: node
+bundle: photo_gallery2_event
+label: Prioridad
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,11 @@
+uuid: b66da100-4e1e-44bd-b034-e4d3679052c2
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_photo_gallery2_even
+id: comment.comment_node_photo_gallery2_even
+target_entity_type_id: comment
+target_bundle: comment_node_photo_gallery2_even
+default_langcode: site_default
+language_alterable: false

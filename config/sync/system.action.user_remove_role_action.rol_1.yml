@@ -1,0 +1,14 @@
+uuid: 954951cb-7f83-4cf4-8d92-2e5413dc90a6
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.rol_1
+  module:
+    - user
+id: user_remove_role_action.rol_1
+label: 'Elimina el rol ROL_1 al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: rol_1

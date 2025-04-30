@@ -1,0 +1,24 @@
+uuid: 8db1dfc4-6b30-443e-bd2c-41ac9c1ecc0b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_about_procedure
+    - node.type.portfolio_tramite
+  module:
+    - text
+id: node.portfolio_tramite.field_about_procedure
+field_name: field_about_procedure
+entity_type: node
+bundle: portfolio_tramite
+label: '¿De qué se trata?'
+description: 'Descripción inicial del trámite que refiere su naturaleza y objetivo'
+required: true
+translatable: false
+default_value:
+  -
+    value: "<h2 class=\"pts-titlev\">¿De qué se trata?</h2>\r\n"
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

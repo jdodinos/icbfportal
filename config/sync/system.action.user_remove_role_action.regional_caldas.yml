@@ -1,0 +1,14 @@
+uuid: abe43d08-ef74-4ded-a37d-f07dd91799d7
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.regional_caldas
+  module:
+    - user
+id: user_remove_role_action.regional_caldas
+label: 'Elimina el rol Regional Caldas al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: regional_caldas

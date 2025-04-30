@@ -1,0 +1,8 @@
+uuid: be6ce51a-9250-471b-8929-b1d157b297bc
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_notifications
+label: 'Notificaciones Coactivos comment'
+target_entity_type_id: node
+description: null

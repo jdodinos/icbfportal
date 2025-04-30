@@ -1,0 +1,22 @@
+uuid: ed89ed57-955b-4612-8470-02c2b281593e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_board
+    - node.type.instituciones_adopciones
+  module:
+    - text
+id: node.instituciones_adopciones.field_board
+field_name: field_board
+entity_type: node
+bundle: instituciones_adopciones
+label: 'Directores y/o Encargados'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

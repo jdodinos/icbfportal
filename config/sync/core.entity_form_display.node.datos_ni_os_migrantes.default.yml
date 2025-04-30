@@ -1,0 +1,174 @@
+uuid: 4fc8b001-9de7-4286-bb4e-6ba1562fe0ac
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.datos_ni_os_migrantes.body
+    - field.field.node.datos_ni_os_migrantes.comment_node_datos_ni_os_migrant
+    - field.field.node.datos_ni_os_migrantes.field_autoridad_1
+    - field.field.node.datos_ni_os_migrantes.field_correo_electronico_contact
+    - field.field.node.datos_ni_os_migrantes.field_edad
+    - field.field.node.datos_ni_os_migrantes.field_fecha_publicaci_n
+    - field.field.node.datos_ni_os_migrantes.field_fotografia
+    - field.field.node.datos_ni_os_migrantes.field_metatag
+    - field.field.node.datos_ni_os_migrantes.field_nombre
+    - field.field.node.datos_ni_os_migrantes.field_regional
+    - field.field.node.datos_ni_os_migrantes.field_telefono
+    - image.style.thumbnail
+    - node.type.datos_ni_os_migrantes
+  module:
+    - comment
+    - datetime
+    - image
+    - metatag
+    - path
+    - text
+id: node.datos_ni_os_migrantes.default
+targetEntityType: node
+bundle: datos_ni_os_migrantes
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 41
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  comment_node_datos_ni_os_migrant:
+    type: comment_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_autoridad_1:
+    type: string_textfield
+    weight: 44
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_correo_electronico_contact:
+    type: email_default
+    weight: 48
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_edad:
+    type: number
+    weight: 49
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_fecha_publicaci_n:
+    type: datetime_default
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_fotografia:
+    type: image_image
+    weight: 43
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 122
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
+    third_party_settings: {  }
+  field_nombre:
+    type: string_textfield
+    weight: 42
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_regional:
+    type: options_select
+    weight: 47
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_telefono:
+    type: string_textfield
+    weight: 46
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  publish_on: true
+  unpublish_on: true

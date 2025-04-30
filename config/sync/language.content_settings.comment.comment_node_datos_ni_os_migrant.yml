@@ -1,0 +1,11 @@
+uuid: 9c5d9885-7c41-4936-89dd-b3b24fc17418
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_datos_ni_os_migrant
+id: comment.comment_node_datos_ni_os_migrant
+target_entity_type_id: comment
+target_bundle: comment_node_datos_ni_os_migrant
+default_langcode: site_default
+language_alterable: false

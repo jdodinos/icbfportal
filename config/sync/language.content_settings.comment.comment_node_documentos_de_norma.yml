@@ -1,0 +1,11 @@
+uuid: 207d619a-f031-4df3-a561-456b4c48b29f
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_documentos_de_norma
+id: comment.comment_node_documentos_de_norma
+target_entity_type_id: comment
+target_bundle: comment_node_documentos_de_norma
+default_langcode: site_default
+language_alterable: false

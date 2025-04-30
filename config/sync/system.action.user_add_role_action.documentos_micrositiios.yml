@@ -1,0 +1,14 @@
+uuid: 7159ed9e-d1d6-4591-a276-be7034e63756
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.documentos_micrositiios
+  module:
+    - user
+id: user_add_role_action.documentos_micrositiios
+label: 'Añade el rol Documentos Micrositiios al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: documentos_micrositiios

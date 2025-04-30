@@ -1,0 +1,24 @@
+uuid: 5341ac6f-d6b6-46ad-aad1-fe1dcb05251a
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - text
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_informacion_adicional
+field_name: field_informacion_adicional
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

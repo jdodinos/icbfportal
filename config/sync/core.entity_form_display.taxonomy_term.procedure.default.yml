@@ -1,0 +1,255 @@
+uuid: 1c606d6e-3cbc-4e0b-bb9d-cda2cb74d901
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.procedure.field_category_citizen
+    - field.field.taxonomy_term.procedure.field_content
+    - field.field.taxonomy_term.procedure.field_header_infografia
+    - field.field.taxonomy_term.procedure.field_icon
+    - field.field.taxonomy_term.procedure.field_link_more_info
+    - field.field.taxonomy_term.procedure.field_link_nomasfilas
+    - field.field.taxonomy_term.procedure.field_link_videotutorial
+    - field.field.taxonomy_term.procedure.field_list_image
+    - field.field.taxonomy_term.procedure.field_metatag
+    - field.field.taxonomy_term.procedure.field_priority
+    - field.field.taxonomy_term.procedure.field_procedure_type
+    - field.field.taxonomy_term.procedure.field_related_procedures
+    - field.field.taxonomy_term.procedure.field_tags_de_tramite
+    - field.field.taxonomy_term.procedure.field_tooltip
+    - taxonomy.vocabulary.procedure
+  module:
+    - field_group
+    - file
+    - metatag
+    - path
+    - term_reference_tree
+    - text
+third_party_settings:
+  field_group:
+    group_infograph_basics:
+      children:
+        - field_category_citizen
+        - field_content
+        - field_tooltip
+        - field_header_infografia
+        - name
+      label: General
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: 'group-infograph-basics field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+    group_infograph_parameters:
+      children:
+        - field_list_image
+        - field_icon
+        - field_procedure_type
+        - field_priority
+        - field_tags_de_tramite
+      label: 'Parámetros de Identificación'
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: 'group-infograph-parameters field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+    group_infograph_relations:
+      children:
+        - field_related_procedures
+        - field_link_videotutorial
+        - field_link_more_info
+        - field_link_nomasfilas
+      label: Relaciones
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        classes: 'group-infograph-relations field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+id: taxonomy_term.procedure.default
+targetEntityType: taxonomy_term
+bundle: procedure
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_category_citizen:
+    type: term_reference_tree
+    weight: 5
+    region: content
+    settings:
+      start_minimized: true
+      leaves_only: false
+      select_parents: false
+      cascading_selection: 0
+      max_depth: 0
+    third_party_settings: {  }
+  field_content:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 15
+      placeholder: ''
+    third_party_settings: {  }
+  field_header_infografia:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 8
+      placeholder: ''
+    third_party_settings: {  }
+  field_icon:
+    type: file_generic
+    weight: 7
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_link_more_info:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_link_nomasfilas:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_link_videotutorial:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_list_image:
+    type: file_generic
+    weight: 8
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 102
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
+    third_party_settings: {  }
+  field_priority:
+    type: number
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_procedure_type:
+    type: term_reference_tree
+    weight: 5
+    region: content
+    settings:
+      start_minimized: true
+      leaves_only: false
+      select_parents: false
+      cascading_selection: 0
+      max_depth: 0
+    third_party_settings: {  }
+  field_related_procedures:
+    type: term_reference_tree
+    weight: 3
+    region: content
+    settings:
+      start_minimized: true
+      leaves_only: false
+      select_parents: false
+      cascading_selection: 0
+      max_depth: 0
+    third_party_settings: {  }
+  field_tags_de_tramite:
+    type: term_reference_tree
+    weight: 6
+    region: content
+    settings:
+      start_minimized: true
+      leaves_only: false
+      select_parents: false
+      cascading_selection: 0
+      max_depth: 0
+    third_party_settings: {  }
+  field_tooltip:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  menu:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  publish_on: true
+  unpublish_on: true

@@ -1,0 +1,21 @@
+uuid: 430c74c5-2afd-4865-82a1-d31489d94c03
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node_articles_iin
+label: 'Contenido - Artículos XXII'
+type: 'canonical_entities:node'
+pattern: 'congreso-panamericano-xxii/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      articles_iin: articles_iin
+selection_logic: and
+weight: 0
+relationships: {  }

@@ -1,0 +1,26 @@
+uuid: 27b1eeb2-ca89-45ec-8012-bd1efbb93e87
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_procedure_type
+    - node.type.tramites_vus
+    - taxonomy.vocabulary.procedure_type
+id: node.tramites_vus.field_procedure_type
+field_name: field_procedure_type
+entity_type: node
+bundle: tramites_vus
+label: 'Tipo trámite'
+description: 'Selecciona hasta 4 opciones para filtrar el trámite '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      procedure_type: procedure_type
+    sort:
+      field: _none
+field_type: entity_reference

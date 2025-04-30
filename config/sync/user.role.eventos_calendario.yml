@@ -1,0 +1,9 @@
+uuid: 1e504712-d8a6-4e67-8fff-4d3abb69699d
+langcode: es
+status: true
+dependencies: {  }
+id: eventos_calendario
+label: 'Eventos Calendario'
+weight: 76
+is_admin: null
+permissions: {  }

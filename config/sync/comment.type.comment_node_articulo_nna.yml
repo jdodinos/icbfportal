@@ -1,0 +1,8 @@
+uuid: 70b4fe84-f6aa-4721-a9a4-6e5388da8f2b
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_articulo_nna
+label: 'Artículo Niños y Adolescentes comment'
+target_entity_type_id: node
+description: null

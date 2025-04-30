@@ -1,0 +1,21 @@
+uuid: bbf26ac5-3746-4a6f-a240-fd1458ec6cd4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.petition_rights
+  module:
+    - metatag
+id: node.petition_rights.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: petition_rights
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

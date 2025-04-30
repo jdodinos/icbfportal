@@ -1,0 +1,27 @@
+uuid: 1cb39517-cc6f-44a3-8bf1-bfb21696e957
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document_cyp
+    - node.type.documento_en_construccion
+  module:
+    - file
+id: node.documento_en_construccion.field_document_cyp
+field_name: field_document_cyp
+entity_type: node
+bundle: documento_en_construccion
+label: 'Documento de Construcción'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: documentos-construccion
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+field_type: file

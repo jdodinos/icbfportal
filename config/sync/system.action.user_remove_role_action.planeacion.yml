@@ -1,0 +1,14 @@
+uuid: b6897063-3743-4716-ad86-362815364f6c
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.planeacion
+  module:
+    - user
+id: user_remove_role_action.planeacion
+label: 'Elimina el rol Planeación al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: planeacion

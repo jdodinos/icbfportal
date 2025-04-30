@@ -1,0 +1,22 @@
+uuid: 4d414293-5024-4cdf-87a7-a4329870f30d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_introduction_text
+    - node.type.articles_portal_web
+  module:
+    - text
+id: node.articles_portal_web.field_introduction_text
+field_name: field_introduction_text
+entity_type: node
+bundle: articles_portal_web
+label: Introducción
+description: 'párrafo inicial o principal'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

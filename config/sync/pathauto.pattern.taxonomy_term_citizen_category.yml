@@ -1,0 +1,21 @@
+uuid: b8f1d3b2-bf2b-4686-94cf-02a97c8edade
+langcode: es
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term_citizen_category
+label: 'Término de taxonomía - Categoría situación del ciudadano'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'portafolio-de-servicios-icbf/[term:name]'
+selection_criteria:
+  -
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      citizen_category: citizen_category
+selection_logic: and
+weight: 0
+relationships: {  }

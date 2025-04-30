@@ -1,0 +1,27 @@
+uuid: c94978d8-690c-41e8-96c7-782bcb85bc7e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document
+    - node.type.infografia_observatorio
+  module:
+    - file
+id: node.infografia_observatorio.field_document
+field_name: field_document
+entity_type: node
+bundle: infografia_observatorio
+label: Documento
+description: 'Documento descargable'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'txt pdf doc xls xlsx docx ppt pptx png jpg jpge tiff gif zip rar msg xps'
+  max_filesize: '50 MB'
+  description_field: true
+field_type: file

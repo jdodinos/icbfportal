@@ -1,0 +1,25 @@
+uuid: ad283abd-1a0c-47dd-b9f8-5e582bf04329
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_ada_section_link
+    - taxonomy.vocabulary.programa_adopciones
+  module:
+    - text
+id: taxonomy_term.programa_adopciones.field_ada_section_link
+field_name: field_ada_section_link
+entity_type: taxonomy_term
+bundle: programa_adopciones
+label: 'ADA Section Link'
+description: 'enlace a sección interna del micrositio para cajas home'
+required: false
+translatable: false
+default_value:
+  -
+    value: "<a alt=\"clic para ampliar información\" class=\"box-btn-ada\" href=\"\">Consultar xoxoxoxoxo</a>\r\n"
+    format: full_html
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

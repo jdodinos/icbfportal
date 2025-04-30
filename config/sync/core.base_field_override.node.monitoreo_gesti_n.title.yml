@@ -1,0 +1,18 @@
+uuid: 285f02c3-3f47-4b74-b76b-81e34c2d378d
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.monitoreo_gesti_n
+id: node.monitoreo_gesti_n.title
+field_name: title
+entity_type: node
+bundle: monitoreo_gesti_n
+label: Nombre
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

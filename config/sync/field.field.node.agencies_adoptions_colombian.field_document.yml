@@ -1,0 +1,27 @@
+uuid: fc4c1b3d-0070-4fe4-b47f-1f67537608e9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document
+    - node.type.agencies_adoptions_colombian
+  module:
+    - file
+id: node.agencies_adoptions_colombian.field_document
+field_name: field_document
+entity_type: node
+bundle: agencies_adoptions_colombian
+label: 'Costos Proceso Adopción'
+description: 'Documento adjunto por institución autorizada'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: pdf
+  max_filesize: '3 MB'
+  description_field: true
+field_type: file

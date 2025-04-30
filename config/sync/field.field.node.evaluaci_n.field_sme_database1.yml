@@ -1,0 +1,27 @@
+uuid: 63b720cf-674b-43ef-8a65-0a53cbbbf46c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sme_database1
+    - node.type.evaluaci_n
+  module:
+    - file
+id: node.evaluaci_n.field_sme_database1
+field_name: field_sme_database1
+entity_type: node
+bundle: evaluaci_n
+label: 'Base de Datos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'txt pdf doc xls xlsx xlsm xlsmx docx ppt pptx pps ppsx png jpg jpeg tiff tif gif zip rar msg xps mp3 mp4 wmv mpeg pptm csv'
+  max_filesize: 20mb
+  description_field: true
+field_type: file

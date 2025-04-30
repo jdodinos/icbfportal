@@ -1,0 +1,22 @@
+uuid: 4430b602-b50b-4b23-9000-59ba33e23ee3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resume
+    - node.type.infografia_observatorio
+  module:
+    - text
+id: node.infografia_observatorio.field_resume
+field_name: field_resume
+entity_type: node
+bundle: infografia_observatorio
+label: Resumen
+description: 'Descripción general de la infografia'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

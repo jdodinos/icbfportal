@@ -1,0 +1,14 @@
+uuid: ff0758ca-429a-4d04-88a0-dd2a19c8d3ab
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.regional_vichada
+  module:
+    - user
+id: user_remove_role_action.regional_vichada
+label: 'Elimina el rol Regional Vichada al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: regional_vichada

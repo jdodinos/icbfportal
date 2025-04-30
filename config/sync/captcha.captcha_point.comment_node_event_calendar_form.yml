@@ -1,0 +1,7 @@
+uuid: 341f1fbd-2016-4ffa-be58-bc4927b67679
+langcode: es
+status: true
+dependencies: {  }
+formId: comment_node_event_calendar_form
+captchaType: captcha/default
+label: comment_node_event_calendar_form

@@ -1,0 +1,22 @@
+uuid: 15d7faff-34ea-41d3-9542-d42eafa600d6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_book_resume
+    - paragraphs.paragraphs_type.bookpost_group
+  module:
+    - text
+id: paragraph.bookpost_group.field_book_resume
+field_name: field_book_resume
+entity_type: paragraph
+bundle: bookpost_group
+label: Reseña
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

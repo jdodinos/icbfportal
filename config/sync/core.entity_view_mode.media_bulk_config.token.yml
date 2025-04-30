@@ -1,0 +1,11 @@
+uuid: 4e24ce4e-0c5e-4b3a-b36a-88dc5e20aa80
+langcode: es
+status: true
+dependencies:
+  module:
+    - media_bulk_upload
+id: media_bulk_config.token
+label: Comodín
+description: ''
+targetEntityType: media_bulk_config
+cache: true

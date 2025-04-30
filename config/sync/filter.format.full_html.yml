@@ -1,0 +1,16 @@
+uuid: 978d2626-a3b2-478e-9b87-eb1356446c2a
+langcode: es
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vpZysv3RHJjhYzq7O_q5q8mVlHdrSzKELmXyiX6RtV0
+name: 'Full HTML'
+format: full_html
+weight: -10
+filters:
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }

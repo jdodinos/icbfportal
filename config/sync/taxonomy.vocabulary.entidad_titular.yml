@@ -1,0 +1,9 @@
+uuid: fb58348a-94ef-47e2-ab2e-5349573cbb0a
+langcode: es
+status: true
+dependencies: {  }
+name: 'Entidad Titular'
+vid: entidad_titular
+description: null
+weight: 0
+new_revision: false

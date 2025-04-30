@@ -1,0 +1,24 @@
+uuid: 50b16989-b827-4441-9308-2082fd8d8166
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - taxonomy
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_hiring_type_process
+field_name: field_hiring_type_process
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

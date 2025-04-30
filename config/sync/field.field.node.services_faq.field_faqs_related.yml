@@ -1,0 +1,28 @@
+uuid: b6cdc149-13b6-4293-9c4d-2aa264bc101a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faqs_related
+    - node.type.services_faq
+  module:
+    - text
+id: node.services_faq.field_faqs_related
+field_name: field_faqs_related
+entity_type: node
+bundle: services_faq
+label: 'faqs relacionados'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: "<div class=\"az-element az-row row  az-row--sm\" data-az-id=\"ldj1abrs\" data-azat-device=\"sm\" data-azb=\"az_row\" data-azcnt=\"true\" style=\"\">\r\n<div class=\"az-element az-ctnr az-column  col-sm-12\" data-az-id=\"804js5eq\" data-azb=\"az_column\" data-azcnt=\"true\" style=\"\">\r\n<div class=\"az-element az-text\" data-az-id=\"lhpkg4p6\" data-azb=\"az_text\" data-azcnt=\"true\" style=\"\">\r\n<div class=\"faq-title3\">Más preguntas frecuentes relacionadas</div>\r\n\r\n<hr /></div>\r\n\r\n<div class=\"az-element az-cms-element\" data-az-id=\"sphn8rce\" data-azat-contextual_filter=\"7180\" data-azat-offset=\"\" data-azat-override_pager=\"no\" data-azat-toggle_fields=\"nid,url,title,field_faq_code,field_related_procedures,field_link_more_info,status,field_priority,nothing,edit_node\" data-azb=\"az_view-faqs_icbf-block_2\" style=\"\">&nbsp;</div>\r\n\r\n<div class=\"az-element az-button text-center\" data-az-id=\"pb4xp92k\" data-azat-el_class=\"text-center\" data-azat-link=\"/servicios/preguntas-frecuentes\" data-azat-link_target=\"_self\" data-azat-title=\"Volver a preguntas frecuentes\" data-azat-type=\"btn-default\" data-azb=\"az_button\" style=\"position: relative; left: 0px; top: 0px;\"><a class=\"btn btn-default  \" href=\"/servicios/preguntas-frecuentes\" style=\"\" target=\"_self\" type=\"button\">Volver a preguntas frecuentes</a></div>\r\n</div>\r\n</div>\r\n"
+    summary: ''
+    format: full_html
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

@@ -1,0 +1,21 @@
+uuid: 358e89d1-fc43-4445-bca1-f95f669f59c2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_unpublish_date
+    - node.type.document_microsite
+  module:
+    - datetime
+id: node.document_microsite.field_unpublish_date
+field_name: field_unpublish_date
+entity_type: node
+bundle: document_microsite
+label: 'Fecha desfijación'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

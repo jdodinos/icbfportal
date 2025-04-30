@@ -1,0 +1,69 @@
+uuid: 31bee11b-8346-40b6-a579-496d10f1ece8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.sige_process_type.field_attachments
+    - field.field.taxonomy_term.sige_process_type.field_encabezado_proceso_sige
+    - field.field.taxonomy_term.sige_process_type.field_metatag
+    - field.field.taxonomy_term.sige_process_type.field_pg_additional_information
+    - field.field.taxonomy_term.sige_process_type.field_pg_caracterization
+    - field.field.taxonomy_term.sige_process_type.field_pg_objective
+    - taxonomy.vocabulary.sige_process_type
+  module:
+    - file
+    - text
+id: taxonomy_term.sige_process_type.default
+targetEntityType: taxonomy_term
+bundle: sige_process_type
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_attachments:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_encabezado_proceso_sige:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_pg_additional_information:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_pg_caracterization:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_pg_objective:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_metatag: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

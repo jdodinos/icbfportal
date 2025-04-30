@@ -1,0 +1,49 @@
+uuid: efd6f996-cdab-49eb-b506-c5a2546c18f4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.mis_manos_te_ensenan.field_body_views
+    - field.field.taxonomy_term.mis_manos_te_ensenan.field_seo_title
+    - field.field.taxonomy_term.mis_manos_te_ensenan.field_top_slide
+    - taxonomy.vocabulary.mis_manos_te_ensenan
+  module:
+    - text
+id: taxonomy_term.mis_manos_te_ensenan.default
+targetEntityType: taxonomy_term
+bundle: mis_manos_te_ensenan
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_body_views:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_seo_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_top_slide:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

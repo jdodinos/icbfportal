@@ -1,0 +1,10 @@
+uuid: 2eadb9fc-e508-461e-9bc9-e3637e01ad58
+langcode: es
+status: true
+dependencies: {  }
+id: bookpost_group
+label: 'Bookpost group'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from field_collection field_bookpost_group'
+behavior_plugins: {  }

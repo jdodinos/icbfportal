@@ -1,0 +1,14 @@
+uuid: f56fdbea-3b99-4235-9277-d4e3aeda9f94
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.regional_quindio
+  module:
+    - user
+id: user_remove_role_action.regional_quindio
+label: 'Elimina el rol Regional Quindio al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: regional_quindio

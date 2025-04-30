@@ -1,0 +1,31 @@
+uuid: 993538a8-017b-4b05-a8a0-9cc3ea35ca97
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_microsite_sige
+field_name: field_microsite_sige
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: 'Objetivos SIGE'
+    -
+      value: '2'
+      label: 'Políticas SIGE'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

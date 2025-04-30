@@ -1,0 +1,20 @@
+uuid: 6cd18674-fae8-44e8-9b55-c9afb1ff89f8
+langcode: es
+status: true
+dependencies:
+  module:
+    - comment
+    - node
+id: node.comment_node_informe_denuncias_a
+field_name: comment_node_informe_denuncias_a
+entity_type: node
+type: comment
+settings:
+  comment_type: comment_node_informe_denuncias_a
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

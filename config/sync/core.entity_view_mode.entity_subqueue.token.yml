@@ -1,0 +1,11 @@
+uuid: 01d8addc-4b46-473a-9a24-1ef66516482b
+langcode: es
+status: true
+dependencies:
+  module:
+    - entityqueue
+id: entity_subqueue.token
+label: Comodín
+description: ''
+targetEntityType: entity_subqueue
+cache: true

@@ -1,0 +1,27 @@
+uuid: 102f1624-41f1-4098-9a49-8afb852fd55c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document
+    - node.type.petition_rights
+  module:
+    - file
+id: node.petition_rights.field_document
+field_name: field_document
+entity_type: node
+bundle: petition_rights
+label: Documento
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'pdf doc docx xls xlsx ppt pptx zip'
+  max_filesize: ''
+  description_field: true
+field_type: file

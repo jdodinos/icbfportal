@@ -1,0 +1,32 @@
+uuid: 0b23faf3-869d-4ad4-89e8-16dcafd77756
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.post_document_plus.field_document
+    - field.field.paragraph.post_document_plus.field_list_image
+    - paragraphs.paragraphs_type.post_document_plus
+  module:
+    - file
+id: paragraph.post_document_plus.default
+targetEntityType: paragraph
+bundle: post_document_plus
+mode: default
+content:
+  field_document:
+    type: file_generic
+    weight: 2
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_list_image:
+    type: file_generic
+    weight: 4
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

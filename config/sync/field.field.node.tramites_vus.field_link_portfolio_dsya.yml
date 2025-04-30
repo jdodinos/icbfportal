@@ -1,0 +1,19 @@
+uuid: 1b0aeb40-6667-4e43-9a9b-0ae0cf65f2d9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_portfolio_dsya
+    - node.type.tramites_vus
+id: node.tramites_vus.field_link_portfolio_dsya
+field_name: field_link_portfolio_dsya
+entity_type: node
+bundle: tramites_vus
+label: 'Link en Portafolio de Servicios'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

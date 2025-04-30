@@ -1,0 +1,16 @@
+uuid: bb29680e-318a-426d-afa5-3ed486007c81
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_enlaces_referencia
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: comment.comment_node_enlaces_referencia
+target_entity_type_id: comment
+target_bundle: comment_node_enlaces_referencia
+default_langcode: current_interface
+language_alterable: true

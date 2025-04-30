@@ -1,0 +1,22 @@
+uuid: b5cb8178-ed50-460c-b3de-7c4c70370c04
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resume
+    - node.type.articulo_mis_manos_te_ensenan
+  module:
+    - text
+id: node.articulo_mis_manos_te_ensenan.field_resume
+field_name: field_resume
+entity_type: node
+bundle: articulo_mis_manos_te_ensenan
+label: Resumen
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

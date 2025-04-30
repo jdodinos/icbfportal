@@ -1,0 +1,22 @@
+uuid: a1dbef59-03de-4ac5-9351-e54e516cacfa
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_article2
+    - node.type.article
+  module:
+    - text
+id: node.article.field_content_article2
+field_name: field_content_article2
+entity_type: node
+bundle: article
+label: 'Contenido Complementario'
+description: 'información adicional al primer texto del artículo'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

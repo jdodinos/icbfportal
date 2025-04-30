@@ -1,0 +1,61 @@
+uuid: dfda24f4-e5b1-4702-ae14-37696ffc4010
+langcode: es
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 0
+template: false
+archive: false
+id: webform_67009
+title: 'Valoración de Contenido'
+description: null
+categories: {  }
+elements: |-
+  _le_ha_sido_til_esta_informaci_n_:
+    '#type': radios
+    '#options':
+      1: Si
+      2: 'No'
+    '#title': '¿Le ha sido útil esta información?'
+  de_acuerdo_alg_n_comentario_m_s_:
+    '#type': textfield
+    '#size': 120
+    '#title': 'De acuerdo. ¿Algún comentario más?'
+    '#states':
+      visible:
+        - ':input[name="_le_ha_sido_til_esta_informaci_n_"]':
+            value: '1'
+  _c_mo_podemos_mejorarlo_:
+    '#type': textfield
+    '#size': 120
+    '#title': '¿Cómo podemos mejorarlo?'
+    '#states':
+      visible:
+        - ':input[name="_le_ha_sido_til_esta_informaci_n_"]':
+            value: '2'
+css: ''
+javascript: ''
+settings:
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: inline
+  confirmation_url: ''
+  confirmation_message: "<p>¡Gracias por sus comentarios!</p>\r\n"
+  limit_total: null
+  limit_user: null
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }

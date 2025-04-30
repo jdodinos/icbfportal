@@ -1,0 +1,21 @@
+uuid: f051e88c-d38e-4968-8412-5422004348a8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mipg_type
+    - node.type.articles_portal_web
+  module:
+    - options
+id: node.articles_portal_web.field_mipg_type
+field_name: field_mipg_type
+entity_type: node
+bundle: articles_portal_web
+label: 'Clasificación MIPG'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

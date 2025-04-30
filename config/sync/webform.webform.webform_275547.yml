@@ -1,0 +1,155 @@
+uuid: 72a22932-28dd-455f-87f4-17c4a9c25f29
+langcode: es
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 6816
+template: false
+archive: false
+id: webform_275547
+title: 'DIÁLOGO CIUDADANO PARA ESTABLECER IDONEIDAD EN TERNAS DE DIRECTORES REGIONALES'
+description: null
+categories: {  }
+elements: |-
+  condicion_particular:
+    '#type': radios
+    '#options':
+      1: 'Soy un ciudadano interesado'
+      2: 'Soy un funcionario del ICBF'
+      "3.\tSoy un beneficiario de servicios del ICBF": 'Soy un beneficiario de servicios del ICBF'
+      "4.\tSoy parte del talento humano de algún operador del ICBF": 'Soy parte del talento humano de algún operador del ICBF'
+      "5.\tSoy un operador del ICBF": 'Soy un operador del ICBF'
+      "6.\tSoy un adolescente": 'Soy un adolescente'
+    '#title': 'Seleccione de acuerdo con su condición particular: '
+    '#required': true
+  grupo_etnico:
+    '#type': radios
+    '#options':
+      1: Indígena
+      2: Afrocolombiano
+      3: Rom
+      4: Raizal
+      5: 'Otro, ¿cuál?'
+      '6. Ninguno': Ninguno
+    '#title': 'Pertenece a alguno de estos grupos étnicos:'
+    '#required': true
+  persona_con_discapacidad:
+    '#type': radios
+    '#options':
+      1: SI
+      2: 'NO'
+    '#title': '¿Es una persona con discapacidad?'
+    '#required': true
+  su_nombre:
+    '#type': textfield
+    '#field_suffix': '( Ej: Carlos Peréz)'
+    '#title': 'Agregue su nombre'
+    '#required': true
+  su_edad:
+    '#type': textfield
+    '#field_suffix': '(Ej: 30)'
+    '#title': Edad
+    '#required': true
+  su_genero:
+    '#type': textfield
+    '#title': Género
+    '#required': true
+  documento_identidad:
+    '#type': radios
+    '#options':
+      1: 'Cedula de ciudadanía'
+      2: 'Cedula de extranjería'
+      3: Pasaporte
+    '#title': 'Que tipo de documento de identidad tiene'
+    '#required': true
+  numero_identidad:
+    '#type': textfield
+    '#title': 'Agregue su número de identidad'
+    '#required': true
+  su_departamento:
+    '#type': textfield
+    '#title': Departamento
+    '#required': true
+  su_municipio:
+    '#type': textfield
+    '#field_suffix': '(Ej: Albania)'
+    '#title': Municipio
+    '#required': true
+  principales_cualidades:
+    '#type': radios
+    '#options':
+      1: Honestidad
+      2: Responsabilidad
+      "3.\tSoy un beneficiario de servicios del ICBF": Liderazgo
+      "4.\tSoy parte del talento humano de algún operador del ICBF": Resiliencia
+      "5.\tSoy un operador del ICBF": 'Habilidades de comunicación'
+      "6.\tSoy un adolescente": 'Resolución de conflictos'
+    '#title': 'Para usted ¿cuáles son las tres principales cualidades que debe tener el director regional de Bienestar Familiar? '
+    '#required': true
+  tipos_experiencia:
+    '#type': radios
+    '#options':
+      1: 'Gerencia en el sector público'
+      2: 'Haber sido director regional del ICBF'
+      "3.\tSoy un beneficiario de servicios del ICBF": 'Haber trabajado con niños, niñas, adolescentes y comunidades'
+      "4.\tSoy parte del talento humano de algún operador del ICBF": 'Tener trayectoria política'
+      "5.\tSoy un operador del ICBF": 'Haberse desempeñado como autoridad administrativa del Sistema Nacional de Bienestar Familiar (SNBF)'
+    '#title': 'De estos tipos de experiencia, ¿cuál considera que es la mejor para ejercer el rol de director regional de Bienestar Familiar? '
+    '#required': true
+  eje_central:
+    '#type': radios
+    '#options':
+      1: 'Ejecutar las políticas de infancia y adolescencia'
+      2: 'Atender alertas inmediatas'
+      "3.\tSoy un beneficiario de servicios del ICBF": 'Estar siempre disponible para la comunidad, niños, niñas y adolescentes'
+      "4.\tSoy parte del talento humano de algún operador del ICBF": 'Fortalecer la prestación del servicio en los centros zonales y unidades locales'
+      "5.\tSoy un operador del ICBF": 'Ejecutar los recursos financieros de la regional'
+    '#title': '¿Qué espera que sea el eje central del trabajo del nuevo director regional? '
+    '#required': true
+  perfil_ideal:
+    '#type': textfield
+    '#title': 'Por favor describa el perfil ideal de director o directora regional que usted espera en su departamento '
+    '#required': true
+  alerta_a_considerar:
+    '#type': textfield
+    '#title': 'Por favor describa si tiene alguna alerta a considerar del listado de candidatos propuesto para su región'
+    '#required': true
+  si_tiene_algun_documento_que_quiere_que_consideremos_por_favor_agregarlo_en_el_siguiente_enlace:
+    '#type': managed_file
+    '#max_filesize': 2.0
+    '#file_extensions': 'gif jpg jpeg png bmp eps tif pict psd txt rtf html pdf doc docx odt ppt pptx odp xls xlsx ods xml avi mov mp3 ogg wav'
+    '#title': 'Si tiene algún documento que quiere que consideremos, por favor agregarlo en el siguiente enlace'
+    '#description': 'En caso de seleccionar algún archivo, presione el botón "Subir al Servidor"'
+  datos_contacto:
+    '#type': textfield
+    '#title': '¿Quiere darnos sus datos de contacto en caso de ser necesario ampliar la información presentada?(opcional)'
+  mensaje:
+    '#type': processed_text
+    '#format': full_html
+    '#text': '<p>Con el diligenciamiento del presente documento acepto la política de tratamiento de datos personales del Instituto Colombiano de Bienestar Familiar – ICBF: “Los datos personales que se suministren serán tratados de conformidad con la política de tratamiento de datos personales, adoptada de conformidad con la Ley 1581 de 2012 y el Decreto 1074 de 2015. La política de tratamiento de datos personales del Instituto Colombiano de Bienestar Familiar puede ser consultada en la URL: https://www.icbf.gov.co/tratamiento-datos-personales".</p>'
+css: ''
+javascript: ''
+settings:
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: "<p><strong>Gracias por participar. </strong></p>\r\n\r\n<p>Para mayor información comunícate con el ICBF a través de <a href=\"https://www.icbf.gov.co/servicios\">nuestros canales de atención</a></p>\r\n"
+  limit_total: null
+  limit_user: null
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }

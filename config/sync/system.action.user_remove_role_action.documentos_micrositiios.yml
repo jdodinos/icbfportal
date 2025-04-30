@@ -1,0 +1,14 @@
+uuid: f17598f3-07dd-44b6-83ef-835bd2e66ce7
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.documentos_micrositiios
+  module:
+    - user
+id: user_remove_role_action.documentos_micrositiios
+label: 'Elimina el rol Documentos Micrositiios al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: documentos_micrositiios

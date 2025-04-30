@@ -1,0 +1,33 @@
+uuid: c314ef8a-8271-4cb4-8796-17c19da92f4c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.comment_node_sector_studies
+    - node.type.sector_studies
+  module:
+    - comment
+id: node.sector_studies.comment_node_sector_studies
+field_name: comment_node_sector_studies
+entity_type: node
+bundle: sector_studies
+label: Comments
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    status: 1
+    cid: 0
+    last_comment_timestamp: 0
+    last_comment_name: null
+    last_comment_uid: 0
+    comment_count: 0
+default_value_callback: ''
+settings:
+  default_mode: 1
+  per_page: 50
+  anonymous: 0
+  form_location: true
+  preview: 1
+field_type: comment

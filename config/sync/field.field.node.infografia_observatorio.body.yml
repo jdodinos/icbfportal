@@ -1,0 +1,24 @@
+uuid: bf9dd50a-5e69-421e-81fc-56339c85c46a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.infografia_observatorio
+  module:
+    - text
+id: node.infografia_observatorio.body
+field_name: body
+entity_type: node
+bundle: infografia_observatorio
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

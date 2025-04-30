@@ -1,0 +1,11 @@
+uuid: 10f324a2-2814-4961-990c-54652ab82cb2
+langcode: es
+status: true
+dependencies:
+  module:
+    - config_split
+id: config_split.token
+label: Comodín
+description: ''
+targetEntityType: config_split
+cache: true

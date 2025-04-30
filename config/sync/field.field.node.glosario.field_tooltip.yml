@@ -1,0 +1,22 @@
+uuid: e9554e54-e65c-4156-b269-a7299cc75fb0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tooltip
+    - node.type.glosario
+  module:
+    - text
+id: node.glosario.field_tooltip
+field_name: field_tooltip
+entity_type: node
+bundle: glosario
+label: Tooltip
+description: 'Descripción corta visible en hover'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

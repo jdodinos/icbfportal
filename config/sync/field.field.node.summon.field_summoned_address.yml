@@ -1,0 +1,19 @@
+uuid: aabed1fc-e0bb-4d59-bfa6-1941e349c7eb
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summoned_address
+    - node.type.summon
+id: node.summon.field_summoned_address
+field_name: field_summoned_address
+entity_type: node
+bundle: summon
+label: 'Dirección citación'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

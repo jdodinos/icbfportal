@@ -1,0 +1,23 @@
+uuid: 033dcea3-93f4-4d19-b853-caa954aa009d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nna_link_out
+    - node.type.articulo_nna
+  module:
+    - link
+id: node.articulo_nna.field_nna_link_out
+field_name: field_nna_link_out
+entity_type: node
+bundle: articulo_nna
+label: 'Enlace externo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

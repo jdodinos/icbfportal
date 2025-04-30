@@ -1,0 +1,27 @@
+uuid: 5dc689b0-9c53-42a2-868b-9267c9bfb6c5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_multimedia
+    - node.type.banner_home
+  module:
+    - file
+id: node.banner_home.field_multimedia
+field_name: field_multimedia
+entity_type: node
+bundle: banner_home
+label: 'Audio y/o Vídeo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'mp3 mpeg mpg wmv mp4'
+  max_filesize: '10 mb'
+  description_field: false
+field_type: file

@@ -1,0 +1,20 @@
+uuid: d05fbd74-4c34-485d-a5e8-1a3f87c95e30
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - publishcontent
+    - scheduler
+    - system
+id: regional_la_guajira
+label: 'Regional La Guajira'
+weight: 51
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'schedule publishing of nodes'
+  - 'unpublish editable content'
+  - 'view field_creation_date'
+  - 'view own field_creation_date'
+  - 'view scheduled content'

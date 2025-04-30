@@ -1,0 +1,27 @@
+uuid: ca2df44c-d371-43f0-b155-65cfb87d716d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document_l1712_r1519
+    - node.type.enlaces_transparencia
+  module:
+    - file
+id: node.enlaces_transparencia.field_document_l1712_r1519
+field_name: field_document_l1712_r1519
+entity_type: node
+bundle: enlaces_transparencia
+label: 'Documentos de Transparencia'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: transparencia
+  file_extensions: 'pdf xls xlsx xlsm doc docx zip jpg jpeg'
+  max_filesize: ''
+  description_field: true
+field_type: file

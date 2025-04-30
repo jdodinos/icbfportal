@@ -1,0 +1,19 @@
+uuid: fc056c82-9e51-4b4f-b43e-90f5e08aa0e0
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.documentos_contrataci_n
+    - node.type.hiring_process
+  module:
+    - node
+id: contratacion_regionales
+label: 'Contratación Regionales'
+weight: 12
+is_admin: null
+permissions:
+  - 'create documentos_contrataci_n content'
+  - 'create hiring_process content'
+  - 'delete own documentos_contrataci_n content'
+  - 'edit own documentos_contrataci_n content'
+  - 'edit own hiring_process content'

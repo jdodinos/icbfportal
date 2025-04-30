@@ -1,0 +1,19 @@
+uuid: 9a051fef-d185-45dc-a497-5ce22267dcc8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_more_info
+    - node.type.enlaces_transparencia
+id: node.enlaces_transparencia.field_link_more_info
+field_name: field_link_more_info
+entity_type: node
+bundle: enlaces_transparencia
+label: 'Link Relacionado'
+description: 'vínculo de referencia a otras secciones y/o subpáginas del micrositio'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

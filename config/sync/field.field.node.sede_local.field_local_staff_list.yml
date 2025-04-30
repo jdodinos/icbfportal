@@ -1,0 +1,52 @@
+uuid: 91f1ea9f-9ab3-4ed2-89d1-959a7cbedafb
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_local_staff_list
+    - node.type.sede_local
+    - paragraphs.paragraphs_type.local_staff_list
+  module:
+    - entity_reference_revisions
+id: node.sede_local.field_local_staff_list
+field_name: field_local_staff_list
+entity_type: node
+bundle: sede_local
+label: 'Directores y Encargados'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      local_staff_list: local_staff_list
+    negate: 0
+    target_bundles_drag_drop:
+      bookpost_group:
+        weight: 2
+        enabled: false
+      children_defendant:
+        weight: 3
+        enabled: false
+      enlaces_referidos:
+        weight: 4
+        enabled: false
+      glazed_content_design:
+        weight: 5
+        enabled: false
+      local_staff_list:
+        weight: 1
+        enabled: true
+      multimedia_collection:
+        weight: 6
+        enabled: false
+      post_document_plus:
+        weight: 7
+        enabled: false
+      summoned:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

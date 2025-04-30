@@ -1,0 +1,19 @@
+uuid: d1e744e5-74d4-48b7-9692-450d0714a619
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_coms_local_staff
+    - paragraphs.paragraphs_type.local_staff_list
+id: paragraph.local_staff_list.field_coms_local_staff
+field_name: field_coms_local_staff
+entity_type: paragraph
+bundle: local_staff_list
+label: 'Responsable Oficina de Comunicaciones'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

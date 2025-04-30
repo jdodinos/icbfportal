@@ -1,0 +1,27 @@
+uuid: 983ef497-0e45-4508-a953-108d1a676a57
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document
+    - node.type.tramites_vus
+  module:
+    - file
+id: node.tramites_vus.field_document
+field_name: field_document
+entity_type: node
+bundle: tramites_vus
+label: Documento
+description: 'Instructivo, Guía o Manual de Usuario'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'txt pdf doc xls xlsx xlsm xlsmx docx ppt pptx pps ppsx png jpg jpeg tiff tif gif zip rar msg xps mp3 mp4 wmv mpeg pptm csv'
+  max_filesize: 45MB
+  description_field: true
+field_type: file

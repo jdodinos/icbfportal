@@ -1,0 +1,46 @@
+uuid: f3743932-4cd8-4ca1-b960-b58078c2cbaa
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_misional_nna_type
+field_name: field_misional_nna_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: about
+      label: '¿De qué se trata?'
+    -
+      value: target
+      label: '¿A quién beneficia?'
+    -
+      value: operator
+      label: '¿Quién presta el servicio?'
+    -
+      value: register
+      label: '¿Cómo hacer parte del programa?'
+    -
+      value: initial
+      label: Presentación
+    -
+      value: general
+      label: General
+    -
+      value: docs
+      label: 'Documentos de Interés'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

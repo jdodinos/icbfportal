@@ -1,0 +1,14 @@
+uuid: 708dda20-4873-4f46-93a3-fb8155745dc6
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.editor_transparencia
+  module:
+    - user
+id: user_remove_role_action.editor_transparencia
+label: 'Elimina el rol Editor Transparencia al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: editor_transparencia

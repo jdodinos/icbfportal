@@ -1,0 +1,21 @@
+uuid: 133223a6-2b19-45be-a523-36e59cd58379
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resolution_date
+    - node.type.summon
+  module:
+    - datetime
+id: node.summon.field_resolution_date
+field_name: field_resolution_date
+entity_type: node
+bundle: summon
+label: 'Fecha Audiencia'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

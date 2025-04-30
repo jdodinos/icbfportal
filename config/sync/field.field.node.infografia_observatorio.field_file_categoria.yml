@@ -1,0 +1,30 @@
+uuid: 10424bef-a6b9-4384-9a9c-9b8bf106a36a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file_categoria
+    - node.type.infografia_observatorio
+    - taxonomy.vocabulary.file_category
+id: node.infografia_observatorio.field_file_categoria
+field_name: field_file_categoria
+entity_type: node
+bundle: infografia_observatorio
+label: 'Categoría del archivo'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    tid: '7021'
+  -
+    tid: '7022'
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      file_category: file_category
+    sort:
+      field: _none
+field_type: entity_reference

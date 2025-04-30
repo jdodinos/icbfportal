@@ -1,0 +1,27 @@
+uuid: 84a516fe-a8fd-4e0d-82db-dcd39abf333a
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - file
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: paragraph.field_multimedia
+field_name: field_multimedia
+entity_type: paragraph
+type: file
+settings:
+  target_type: file
+  display_field: true
+  display_default: true
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 5
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

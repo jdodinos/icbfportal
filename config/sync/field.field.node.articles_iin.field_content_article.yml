@@ -1,0 +1,22 @@
+uuid: 531e9823-f508-4ed5-9293-5a878f4378eb
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_article
+    - node.type.articles_iin
+  module:
+    - text
+id: node.articles_iin.field_content_article
+field_name: field_content_article
+entity_type: node
+bundle: articles_iin
+label: 'Contenido Artículo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

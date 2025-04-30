@@ -1,0 +1,27 @@
+uuid: 674dbb16-8140-4d2b-9c1f-5e1893f3b1f9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document
+    - node.type.encargos
+  module:
+    - file
+id: node.encargos.field_document
+field_name: field_document
+entity_type: node
+bundle: encargos
+label: Documento
+description: 'Resolución de Encargos y Resolución de Nombramientos Provisionales'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'jpg jpeg gif png txt doc docx xls xlsx pdf ppt pptx pps ppsx odt ods odp mp3 mov mp4 m4a m4v mpeg avi ogg oga ogv weba webp webm'
+  max_filesize: ''
+  description_field: true
+field_type: file

@@ -1,0 +1,22 @@
+uuid: 4dee5c15-332d-4930-be4a-0c721eb7b2d3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_body_views
+    - taxonomy.vocabulary.mis_manos_te_ensenan
+  module:
+    - text
+id: taxonomy_term.mis_manos_te_ensenan.field_body_views
+field_name: field_body_views
+entity_type: taxonomy_term
+bundle: mis_manos_te_ensenan
+label: 'Contenido Vistas'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,8 @@
+uuid: 32a37314-004e-4dc3-a4d1-28984ff25382
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_article
+label: 'Articulo Familias comment'
+target_entity_type_id: node
+description: null

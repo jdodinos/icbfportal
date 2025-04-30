@@ -1,0 +1,84 @@
+uuid: 51b78163-5e19-4e01-ab76-4574226cfbc1
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_documento_en_constr.default
+    - field.field.node.documento_en_construccion.comment_node_documento_en_constr
+    - field.field.node.documento_en_construccion.field__missional_area
+    - field.field.node.documento_en_construccion.field_clasify_cyp
+    - field.field.node.documento_en_construccion.field_date
+    - field.field.node.documento_en_construccion.field_document_cyp
+    - field.field.node.documento_en_construccion.field_metatag
+    - field.field.node.documento_en_construccion.field_section
+    - node.type.documento_en_construccion
+  module:
+    - comment
+    - datetime
+    - file
+    - options
+    - user
+id: node.documento_en_construccion.default
+targetEntityType: node
+bundle: documento_en_construccion
+mode: default
+content:
+  comment_node_documento_en_constr:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field__missional_area:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_clasify_cyp:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_document_cyp:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_section:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_metatag: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

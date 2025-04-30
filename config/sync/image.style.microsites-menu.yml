@@ -1,0 +1,15 @@
+uuid: 4e656382-abba-4cf4-8844-f8270f6f4d9e
+langcode: es
+status: true
+dependencies: {  }
+name: microsites-menu
+label: microsites-menu
+effects:
+  31b6081e-ad19-4622-9b31-64478129e08e:
+    uuid: 31b6081e-ad19-4622-9b31-64478129e08e
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 245
+      height: 105
+      anchor: center-center

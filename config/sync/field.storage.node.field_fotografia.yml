@@ -1,0 +1,30 @@
+uuid: 04f93357-1928-43ca-a53e-b2633ee7e63a
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - file
+    - image
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_fotografia
+field_name: field_fotografia
+entity_type: node
+type: image
+settings:
+  target_type: file
+  display_field: false
+  display_default: true
+  uri_scheme: public
+  default_image:
+    uuid: ''
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

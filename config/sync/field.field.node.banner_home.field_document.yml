@@ -1,0 +1,27 @@
+uuid: 8a97b29c-5b68-41b6-9a86-92f6b0295f1d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document
+    - node.type.banner_home
+  module:
+    - file
+id: node.banner_home.field_document
+field_name: field_document
+entity_type: node
+bundle: banner_home
+label: Documento
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'txt pdf doc xls xlsx xlsm xlsmx docx ppt pptx pps ppsx png jpg jpeg tiff tif gif zip rar msg xps mp3 mp4 wmv mpeg pptm'
+  max_filesize: ''
+  description_field: false
+field_type: file

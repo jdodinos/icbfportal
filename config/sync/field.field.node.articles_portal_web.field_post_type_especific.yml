@@ -1,0 +1,21 @@
+uuid: 314c38c9-e381-4716-910a-76b07633624b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_post_type_especific
+    - node.type.articles_portal_web
+  module:
+    - options
+id: node.articles_portal_web.field_post_type_especific
+field_name: field_post_type_especific
+entity_type: node
+bundle: articles_portal_web
+label: 'Post Tipo'
+description: 'Especificación para presentación del contenido, según sección y tipo'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

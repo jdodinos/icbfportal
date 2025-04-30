@@ -1,0 +1,22 @@
+uuid: 9cd5e42a-1707-415e-bfd3-59c842c71abf
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_pg_additional_information
+    - taxonomy.vocabulary.sige_process_type
+  module:
+    - text
+id: taxonomy_term.sige_process_type.field_pg_additional_information
+field_name: field_pg_additional_information
+entity_type: taxonomy_term
+bundle: sige_process_type
+label: 'Información adicional'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

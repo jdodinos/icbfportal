@@ -1,0 +1,22 @@
+uuid: a86af612-35c6-4379-b512-32486c5d965c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_aditional_info
+    - node.type.hiring_process
+  module:
+    - text
+id: node.hiring_process.field_aditional_info
+field_name: field_aditional_info
+entity_type: node
+bundle: hiring_process
+label: 'Información Adicional'
+description: '(Sólo si aplica)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

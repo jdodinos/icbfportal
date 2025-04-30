@@ -1,0 +1,14 @@
+uuid: dd5ff31a-4f6b-41df-ae27-5bd86b9812a2
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.regional_bogota
+  module:
+    - user
+id: user_remove_role_action.regional_bogota
+label: 'Elimina el rol Regional Bogotá al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: regional_bogota

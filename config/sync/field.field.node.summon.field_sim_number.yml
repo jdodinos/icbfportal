@@ -1,0 +1,19 @@
+uuid: 1d20ea9c-ce5f-4b26-a78a-11cbad24b7d3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sim_number
+    - node.type.summon
+id: node.summon.field_sim_number
+field_name: field_sim_number
+entity_type: node
+bundle: summon
+label: '# Radicado SIM'
+description: 'Escriba el número de creación del proceso en el SIM'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

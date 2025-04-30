@@ -1,0 +1,26 @@
+uuid: f90088f4-361d-4513-847c-b7369c8906d9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_place_type
+    - taxonomy.vocabulary.locations
+    - taxonomy.vocabulary.tipos_de_ubicaci_n
+id: taxonomy_term.locations.field_place_type
+field_name: field_place_type
+entity_type: taxonomy_term
+bundle: locations
+label: 'Tipo de Ubicación'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      tipos_de_ubicaci_n: tipos_de_ubicaci_n
+    sort:
+      field: _none
+field_type: entity_reference

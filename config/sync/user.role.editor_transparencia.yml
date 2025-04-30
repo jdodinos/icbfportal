@@ -1,0 +1,45 @@
+uuid: 8cddadb5-24af-4338-869d-ea73e193ca97
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.documento_en_construccion
+    - node.type.enlaces_transparencia
+    - node.type.transparency
+  module:
+    - field_permissions
+    - node
+    - system
+id: editor_transparencia
+label: 'Editor Transparencia'
+weight: 19
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content'
+  - 'access content overview'
+  - 'create documento_en_construccion content'
+  - 'create enlaces_transparencia content'
+  - 'create field_documents_transparency'
+  - 'create field_field_documents_trans_word'
+  - 'create transparency content'
+  - 'delete any documento_en_construccion content'
+  - 'delete any enlaces_transparencia content'
+  - 'delete any transparency content'
+  - 'delete own documento_en_construccion content'
+  - 'delete own enlaces_transparencia content'
+  - 'delete own transparency content'
+  - 'edit any documento_en_construccion content'
+  - 'edit any enlaces_transparencia content'
+  - 'edit any transparency content'
+  - 'edit field_documents_transparency'
+  - 'edit field_field_documents_trans_word'
+  - 'edit own documento_en_construccion content'
+  - 'edit own enlaces_transparencia content'
+  - 'edit own field_documents_transparency'
+  - 'edit own field_field_documents_trans_word'
+  - 'edit own transparency content'
+  - 'view field_documents_transparency'
+  - 'view field_field_documents_trans_word'
+  - 'view own field_documents_transparency'
+  - 'view own field_field_documents_trans_word'

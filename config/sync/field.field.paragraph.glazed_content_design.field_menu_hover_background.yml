@@ -1,0 +1,19 @@
+uuid: 0442a1cf-49dc-437d-bc2b-aeb1a65146b8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_menu_hover_background
+    - paragraphs.paragraphs_type.glazed_content_design
+id: paragraph.glazed_content_design.field_menu_hover_background
+field_name: field_menu_hover_background
+entity_type: paragraph
+bundle: glazed_content_design
+label: 'Menu Hover Background'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

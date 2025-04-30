@@ -1,0 +1,15 @@
+uuid: c322382a-52fe-46a5-8bf5-2bbc6d13898d
+langcode: es
+status: true
+dependencies: {  }
+name: 345x242_gallery_grid
+label: '345x242 Gallery Grid'
+effects:
+  76674cca-d5b8-4292-af12-386b525c11cb:
+    uuid: 76674cca-d5b8-4292-af12-386b525c11cb
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 345
+      height: 242
+      anchor: center-center

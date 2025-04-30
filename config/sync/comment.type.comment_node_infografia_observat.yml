@@ -1,0 +1,8 @@
+uuid: a0bcf5a6-d69c-4089-81d9-6433f92adc02
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_infografia_observat
+label: 'Observatorio Infografias comment'
+target_entity_type_id: node
+description: null

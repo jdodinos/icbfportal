@@ -1,0 +1,15 @@
+uuid: db3f93eb-2264-41bd-bfe7-79c3d8aaa108
+langcode: es
+status: true
+dependencies: {  }
+name: local-frame
+label: local-frame
+effects:
+  aa68526f-28a3-4b0b-8306-a6b55fd1d64a:
+    uuid: aa68526f-28a3-4b0b-8306-a6b55fd1d64a
+    id: image_scale_and_crop
+    weight: -10
+    data:
+      width: 345
+      height: 245
+      anchor: center-center

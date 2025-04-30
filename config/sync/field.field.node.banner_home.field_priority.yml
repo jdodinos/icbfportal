@@ -1,0 +1,23 @@
+uuid: eadcde72-1a8d-49d2-b7b3-0d60c1453b47
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_priority
+    - node.type.banner_home
+id: node.banner_home.field_priority
+field_name: field_priority
+entity_type: node
+bundle: banner_home
+label: Prioridad
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,28 @@
+uuid: 08f1e9a6-0643-4124-b3e7-635a045100f1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file_categoria
+    - node.type.rendicion_de_cuentas
+    - taxonomy.vocabulary.file_category
+id: node.rendicion_de_cuentas.field_file_categoria
+field_name: field_file_categoria
+entity_type: node
+bundle: rendicion_de_cuentas
+label: 'Categoría del archivo'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    tid: '7138'
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      file_category: file_category
+    sort:
+      field: _none
+field_type: entity_reference

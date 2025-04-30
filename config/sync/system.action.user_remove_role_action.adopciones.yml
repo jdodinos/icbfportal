@@ -1,0 +1,14 @@
+uuid: 4d95818b-f6cc-462f-8044-57fc2d9153e1
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.adopciones
+  module:
+    - user
+id: user_remove_role_action.adopciones
+label: 'Elimina el rol Adopciones al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: adopciones

@@ -1,0 +1,14 @@
+uuid: 18c4ea0c-5976-48fc-b4a7-6905dc1250f5
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.editor_micrositios
+  module:
+    - user
+id: user_add_role_action.editor_micrositios
+label: 'Añade el rol Editor Micrositios al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: editor_micrositios

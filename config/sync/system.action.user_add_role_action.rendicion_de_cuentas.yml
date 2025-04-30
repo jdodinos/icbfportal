@@ -1,0 +1,14 @@
+uuid: f8324b5f-0ff3-45e3-9959-0de9e3c7efa9
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.rendicion_de_cuentas
+  module:
+    - user
+id: user_add_role_action.rendicion_de_cuentas
+label: 'Añade el rol Rendición de Cuentas al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: rendicion_de_cuentas

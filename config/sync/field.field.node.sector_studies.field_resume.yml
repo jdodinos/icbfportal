@@ -1,0 +1,22 @@
+uuid: c3b803df-35c0-4e7e-b163-6046ac3adb87
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resume
+    - node.type.sector_studies
+  module:
+    - text
+id: node.sector_studies.field_resume
+field_name: field_resume
+entity_type: node
+bundle: sector_studies
+label: Resumen
+description: 'Campo para incluir observaciones de los documentos del proceso de Estudio de Sector'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

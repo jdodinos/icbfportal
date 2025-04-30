@@ -1,0 +1,36 @@
+uuid: e44e10a2-c0ad-4ff2-a955-102f1fce9634
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_documentos_contrata
+    - field.field.comment.comment_node_documentos_contrata.comment_body
+  module:
+    - text
+id: comment.comment_node_documentos_contrata.default
+targetEntityType: comment
+bundle: comment_node_documentos_contrata
+mode: default
+content:
+  author:
+    weight: -2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  comment_body:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden:
+  subject: true

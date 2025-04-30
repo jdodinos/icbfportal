@@ -1,0 +1,21 @@
+uuid: c88e7d8a-a34a-4e55-9617-322a77779d8c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dae_year
+    - node.type.sector_studies
+  module:
+    - datetime
+id: node.sector_studies.field_dae_year
+field_name: field_dae_year
+entity_type: node
+bundle: sector_studies
+label: Año
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

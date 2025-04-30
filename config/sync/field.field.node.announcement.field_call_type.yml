@@ -1,0 +1,26 @@
+uuid: 249dbb7d-ffc9-4059-8f58-1a9fc94f7e54
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_call_type
+    - node.type.announcement
+    - taxonomy.vocabulary.convocatorias_gesti_n_humana
+id: node.announcement.field_call_type
+field_name: field_call_type
+entity_type: node
+bundle: announcement
+label: 'Tipo de Convocatoria'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      convocatorias_gesti_n_humana: convocatorias_gesti_n_humana
+    sort:
+      field: _none
+field_type: entity_reference

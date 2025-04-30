@@ -1,0 +1,27 @@
+uuid: 066977b7-4979-4535-9a3e-502a3252676c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document
+    - node.type.venta_de_bienes
+  module:
+    - file
+id: node.venta_de_bienes.field_document
+field_name: field_document
+entity_type: node
+bundle: venta_de_bienes
+label: Documento
+description: 'archivo adjunto, ficha técnica o formato relacionado'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'txt pdf doc docx ppt pptx xls xlsx xlsm zip'
+  max_filesize: '30 mb'
+  description_field: true
+field_type: file

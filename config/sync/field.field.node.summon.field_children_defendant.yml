@@ -1,0 +1,52 @@
+uuid: f5ee85c4-f509-46aa-b4b1-f19786e0f5fa
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_children_defendant
+    - node.type.summon
+    - paragraphs.paragraphs_type.children_defendant
+  module:
+    - entity_reference_revisions
+id: node.summon.field_children_defendant
+field_name: field_children_defendant
+entity_type: node
+bundle: summon
+label: 'Niño, niña o adolescente'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      children_defendant: children_defendant
+    negate: 0
+    target_bundles_drag_drop:
+      bookpost_group:
+        weight: 2
+        enabled: false
+      children_defendant:
+        weight: 1
+        enabled: true
+      enlaces_referidos:
+        weight: 3
+        enabled: false
+      glazed_content_design:
+        weight: 4
+        enabled: false
+      local_staff_list:
+        weight: 5
+        enabled: false
+      multimedia_collection:
+        weight: 6
+        enabled: false
+      post_document_plus:
+        weight: 7
+        enabled: false
+      summoned:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

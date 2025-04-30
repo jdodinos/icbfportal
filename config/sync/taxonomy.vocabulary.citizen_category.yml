@@ -1,0 +1,9 @@
+uuid: fd2127c9-20e2-4a3f-922a-3c7312c7151b
+langcode: es
+status: true
+dependencies: {  }
+name: 'Categoría situación del ciudadano'
+vid: citizen_category
+description: null
+weight: -4
+new_revision: false

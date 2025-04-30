@@ -1,0 +1,19 @@
+uuid: 735425ab-dcd1-4dc5-9bd4-7601c84bd920
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_act_number
+    - node.type.summon
+id: node.summon.field_act_number
+field_name: field_act_number
+entity_type: node
+bundle: summon
+label: 'Número auto'
+description: 'Si seleccionó "Auto", ingrese el número de auto. Si seleccionó "Audiencia" ingrese el detalle de la misma'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

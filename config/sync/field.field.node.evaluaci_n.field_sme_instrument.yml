@@ -1,0 +1,22 @@
+uuid: 2b5c63de-210a-4cc2-819b-c307e9bb83dc
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sme_instrument
+    - node.type.evaluaci_n
+  module:
+    - text
+id: node.evaluaci_n.field_sme_instrument
+field_name: field_sme_instrument
+entity_type: node
+bundle: evaluaci_n
+label: Instrumentos
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

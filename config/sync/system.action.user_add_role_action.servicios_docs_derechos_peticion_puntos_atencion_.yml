@@ -1,0 +1,14 @@
+uuid: a7c1ea49-8d7d-4b78-b449-4096c519f9a9
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.servicios_docs_derechos_peticion_puntos_atencion_
+  module:
+    - user
+id: user_add_role_action.servicios_docs_derechos_peticion_puntos_atencion_
+label: 'Añade el rol Servicios (Docs - Derechos Peticion, Puntos Atencion) al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: servicios_docs_derechos_peticion_puntos_atencion_

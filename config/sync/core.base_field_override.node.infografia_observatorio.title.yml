@@ -1,0 +1,18 @@
+uuid: e0e26c26-03f7-41e1-9652-76af689ec33a
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.infografia_observatorio
+id: node.infografia_observatorio.title
+field_name: title
+entity_type: node
+bundle: infografia_observatorio
+label: Título
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

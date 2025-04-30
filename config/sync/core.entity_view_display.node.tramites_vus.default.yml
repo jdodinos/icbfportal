@@ -1,0 +1,153 @@
+uuid: 8177435d-7be6-4f72-b14f-48838f698abb
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_tramites_vus.default
+    - field.field.node.tramites_vus.comment_node_tramites_vus
+    - field.field.node.tramites_vus.field_category_citizen
+    - field.field.node.tramites_vus.field_document
+    - field.field.node.tramites_vus.field_icon
+    - field.field.node.tramites_vus.field_link_app
+    - field.field.node.tramites_vus.field_link_more_info
+    - field.field.node.tramites_vus.field_link_nomasfilas
+    - field.field.node.tramites_vus.field_link_portfolio_dsya
+    - field.field.node.tramites_vus.field_link_videotutorial
+    - field.field.node.tramites_vus.field_list_image
+    - field.field.node.tramites_vus.field_metatag
+    - field.field.node.tramites_vus.field_priority
+    - field.field.node.tramites_vus.field_procedure_type
+    - field.field.node.tramites_vus.field_tooltip
+    - node.type.tramites_vus
+  module:
+    - comment
+    - file
+    - image
+    - text
+    - user
+id: node.tramites_vus.default
+targetEntityType: node
+bundle: tramites_vus
+mode: default
+content:
+  comment_node_tramites_vus:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_category_citizen:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_document:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_icon:
+    type: image
+    label: inline
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_link_app:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_link_more_info:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_link_nomasfilas:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_link_portfolio_dsya:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_link_videotutorial:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_list_image:
+    type: image
+    label: inline
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_priority:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_procedure_type:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_tooltip:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_metatag: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

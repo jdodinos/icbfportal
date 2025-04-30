@@ -1,0 +1,292 @@
+uuid: 0d21ff32-9d6c-4517-b944-cf2067f40d81
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.announcement.comment_node_announcement
+    - field.field.node.announcement.field_announcement_form_link
+    - field.field.node.announcement.field_announcement_id
+    - field.field.node.announcement.field_announcement_label
+    - field.field.node.announcement.field_attached_files
+    - field.field.node.announcement.field_call_type
+    - field.field.node.announcement.field_content
+    - field.field.node.announcement.field_content_announcement
+    - field.field.node.announcement.field_content_announcemt2
+    - field.field.node.announcement.field_dae_year
+    - field.field.node.announcement.field_date
+    - field.field.node.announcement.field_label_alert
+    - field.field.node.announcement.field_location
+    - field.field.node.announcement.field_metatag
+    - field.field.node.announcement.field_resume
+    - field.field.node.announcement.field_section
+    - field.field.node.announcement.field_subtitle
+    - node.type.announcement
+  module:
+    - comment
+    - datetime
+    - field_group
+    - file
+    - link
+    - metatag
+    - path
+    - term_reference_tree
+    - text
+third_party_settings:
+  field_group:
+    group_announcement_basics:
+      children:
+        - field_announcement_id
+        - field_call_type
+        - field_subtitle
+        - title
+      label: 'Información Básica'
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: 'group-announcement-basics field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+    group_announcement_body:
+      children:
+        - field_announcement_form_link
+        - field_location
+        - field_content
+        - field_content_announcement
+        - field_content_announcemt2
+      label: 'Detalle de Convocatoria'
+      region: content
+      parent_name: ''
+      weight: 4
+      format_type: fieldset
+      format_settings:
+        classes: 'group-announcement-body field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+    group_announcement_files:
+      children:
+        - field_attached_files
+        - field_resume
+        - field_section
+      label: 'Información Adjunta'
+      region: content
+      parent_name: ''
+      weight: 5
+      format_type: fieldset
+      format_settings:
+        classes: 'group-announcement-files field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+id: node.announcement.default
+targetEntityType: node
+bundle: announcement
+mode: default
+content:
+  comment_node_announcement:
+    type: comment_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_announcement_form_link:
+    type: link_default
+    weight: 7
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_announcement_id:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_announcement_label:
+    type: options_buttons
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_attached_files:
+    type: file_generic
+    weight: 5
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_call_type:
+    type: term_reference_tree
+    weight: 4
+    region: content
+    settings:
+      start_minimized: true
+      leaves_only: false
+      select_parents: false
+      cascading_selection: 0
+      max_depth: 0
+    third_party_settings: {  }
+  field_content:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 10
+      placeholder: ''
+    third_party_settings: {  }
+  field_content_announcement:
+    type: text_textarea
+    weight: 5
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_content_announcemt2:
+    type: text_textarea
+    weight: 6
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_dae_year:
+    type: datetime_default
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_date:
+    type: datetime_default
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_label_alert:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_location:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 121
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
+    third_party_settings: {  }
+  field_resume:
+    type: text_textarea
+    weight: 6
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_section:
+    type: entity_reference_autocomplete
+    weight: 7
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_subtitle:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  publish_on: true
+  unpublish_on: true

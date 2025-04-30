@@ -1,0 +1,7 @@
+uuid: c2656480-2c5c-41eb-a3ca-2db17aa8a92e
+langcode: es
+status: true
+dependencies: {  }
+formId: comment_node_announcement_form
+captchaType: captcha/default
+label: comment_node_announcement_form

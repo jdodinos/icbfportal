@@ -1,0 +1,27 @@
+uuid: 60804091-d397-4113-9eba-908adcc17ec6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_multimedia
+    - paragraphs.paragraphs_type.multimedia_collection
+  module:
+    - file
+id: paragraph.multimedia_collection.field_multimedia
+field_name: field_multimedia
+entity_type: paragraph
+bundle: multimedia_collection
+label: 'Audio y/o Vídeo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'avi wav mp3 mp4 mpg mpeg'
+  max_filesize: ''
+  description_field: false
+field_type: file

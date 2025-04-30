@@ -1,0 +1,11 @@
+uuid: a6f92ba5-6e2a-42ec-9b40-6b5786966a5e
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_agencies_adoptions_
+id: comment.comment_node_agencies_adoptions_
+target_entity_type_id: comment
+target_bundle: comment_node_agencies_adoptions_
+default_langcode: site_default
+language_alterable: false

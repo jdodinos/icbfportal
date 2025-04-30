@@ -1,0 +1,25 @@
+uuid: bea53890-3a7b-4ce7-8b4c-704e5a6a5f52
+langcode: es
+status: false
+dependencies:
+  module:
+    - php
+    - slick
+name: PHP_buscar
+format: php_buscar
+weight: 0
+filters:
+  php_code:
+    id: php_code
+    provider: php
+    status: true
+    weight: 0
+    settings: {  }
+  slick_filter:
+    id: slick_filter
+    provider: slick
+    status: false
+    weight: 4
+    settings:
+      optionset: default
+      media_switch: ''

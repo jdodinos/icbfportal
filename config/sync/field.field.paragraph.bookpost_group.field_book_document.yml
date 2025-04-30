@@ -1,0 +1,27 @@
+uuid: 53f04cc4-553b-47a0-a511-d0b61dbb74d7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_book_document
+    - paragraphs.paragraphs_type.bookpost_group
+  module:
+    - file
+id: paragraph.bookpost_group.field_book_document
+field_name: field_book_document
+entity_type: paragraph
+bundle: bookpost_group
+label: 'Archivo editorial'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: pdf
+  max_filesize: '6 mb'
+  description_field: true
+field_type: file

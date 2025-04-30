@@ -1,0 +1,25 @@
+uuid: 4a41248e-fcf4-4ca5-b704-073b91b5d506
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:044b59f1-6243-445c-ad6c-e643fcac01f7'
+  module:
+    - block_content
+  theme:
+    - icbf
+id: icbf_top1519icbf
+theme: icbf
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:044b59f1-6243-445c-ad6c-e643fcac01f7'
+settings:
+  id: 'block_content:044b59f1-6243-445c-ad6c-e643fcac01f7'
+  label: 'TOP 1519 ICBF'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

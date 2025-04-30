@@ -1,0 +1,36 @@
+uuid: 84c4f59d-5200-4db7-ae2c-42bc6077fb3d
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_encuesta_web
+    - field.field.comment.comment_node_encuesta_web.comment_body
+  module:
+    - text
+id: comment.comment_node_encuesta_web.default
+targetEntityType: comment
+bundle: comment_node_encuesta_web
+mode: default
+content:
+  author:
+    weight: -2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  comment_body:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden:
+  subject: true

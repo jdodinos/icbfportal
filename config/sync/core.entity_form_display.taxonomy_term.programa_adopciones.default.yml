@@ -1,0 +1,259 @@
+uuid: adbe7475-ae23-47ff-a7d8-943f922dc96e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.programa_adopciones.field_ada_section_link
+    - field.field.taxonomy_term.programa_adopciones.field_ada_title
+    - field.field.taxonomy_term.programa_adopciones.field_box_bottom_color
+    - field.field.taxonomy_term.programa_adopciones.field_category_citizen
+    - field.field.taxonomy_term.programa_adopciones.field_content
+    - field.field.taxonomy_term.programa_adopciones.field_content2_ada
+    - field.field.taxonomy_term.programa_adopciones.field_file_categoria
+    - field.field.taxonomy_term.programa_adopciones.field_link_more_info
+    - field.field.taxonomy_term.programa_adopciones.field_list_image
+    - field.field.taxonomy_term.programa_adopciones.field_microsite_category
+    - field.field.taxonomy_term.programa_adopciones.field_multimedia
+    - field.field.taxonomy_term.programa_adopciones.field_priority
+    - field.field.taxonomy_term.programa_adopciones.field_text_intro
+    - field.field.taxonomy_term.programa_adopciones.field_youtube
+    - taxonomy.vocabulary.programa_adopciones
+  module:
+    - field_group
+    - file
+    - path
+    - term_reference_tree
+    - text
+    - youtube
+third_party_settings:
+  field_group:
+    group_top_ada:
+      children:
+        - field_list_image
+        - field_ada_title
+        - name
+        - description
+      label: 'TOP ADA'
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: 'group-top-ada field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+    group_body_ada:
+      children:
+        - field_text_intro
+        - field_multimedia
+        - field_content
+        - field_youtube
+        - field_content2_ada
+      label: 'CONTENIDO ADA'
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: 'group-body-ada field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+    group_bottom_ada:
+      children:
+        - field_category_citizen
+        - field_box_bottom_color
+        - field_ada_section_link
+      label: 'BOTTOM ADA'
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        classes: 'group-bottom-ada field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+    group_relations_ada:
+      children:
+        - field_link_more_info
+        - field_microsite_category
+        - field_file_categoria
+        - field_priority
+      label: 'Relaciones ADA'
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        classes: 'group-relations-ada field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+id: taxonomy_term.programa_adopciones.default
+targetEntityType: taxonomy_term
+bundle: programa_adopciones
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ada_section_link:
+    type: text_textarea
+    weight: 12
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_ada_title:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_box_bottom_color:
+    type: options_select
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_category_citizen:
+    type: term_reference_tree
+    weight: 14
+    region: content
+    settings:
+      start_minimized: true
+      leaves_only: false
+      select_parents: false
+      cascading_selection: 0
+      max_depth: 0
+    third_party_settings: {  }
+  field_content:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_content2_ada:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_file_categoria:
+    type: entity_reference_autocomplete
+    weight: 15
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_link_more_info:
+    type: string_textfield
+    weight: 17
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_list_image:
+    type: file_generic
+    weight: 4
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_microsite_category:
+    type: options_select
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_multimedia:
+    type: file_generic
+    weight: 5
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_priority:
+    type: number
+    weight: 18
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_text_intro:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_youtube:
+    type: youtube
+    weight: 6
+    region: content
+    settings:
+      placeholder_url: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  menu:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  publish_on: true
+  unpublish_on: true

@@ -1,0 +1,42 @@
+uuid: 74ae57b8-048b-42bf-9622-5a7c02e81dc5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.children_defendant.field_children_fullname
+    - field.field.paragraph.children_defendant.field_citizen_id
+    - field.field.paragraph.children_defendant.field_document_type
+    - paragraphs.paragraphs_type.children_defendant
+  module:
+    - options
+id: paragraph.children_defendant.default
+targetEntityType: paragraph
+bundle: children_defendant
+mode: default
+content:
+  field_children_fullname:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_citizen_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_document_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  search_api_attachments: true
+  search_api_excerpt: true

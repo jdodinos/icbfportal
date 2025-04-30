@@ -1,0 +1,28 @@
+uuid: f46331de-ffa2-4732-b7a9-89f3721d61c8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section
+    - node.type.encargos
+    - taxonomy.vocabulary.secctions
+id: node.encargos.field_section
+field_name: field_section
+entity_type: node
+bundle: encargos
+label: Sección
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    tid: '1240'
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      secctions: secctions
+    sort:
+      field: _none
+field_type: entity_reference

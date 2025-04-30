@@ -1,0 +1,8 @@
+uuid: c4a1e8ab-d9e9-4b8b-bdc9-57ae4b3de61a
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_documento_multiple
+label: 'Documento Multiple comment'
+target_entity_type_id: node
+description: null

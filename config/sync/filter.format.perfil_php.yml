@@ -1,0 +1,25 @@
+uuid: 0ce9139d-9797-47e0-b5c9-cb13d305f98e
+langcode: es
+status: true
+dependencies:
+  module:
+    - php
+    - slick
+name: Perfil_PHP
+format: perfil_php
+weight: 0
+filters:
+  php_code:
+    id: php_code
+    provider: php
+    status: true
+    weight: 0
+    settings: {  }
+  slick_filter:
+    id: slick_filter
+    provider: slick
+    status: false
+    weight: 4
+    settings:
+      optionset: default
+      media_switch: ''

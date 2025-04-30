@@ -1,0 +1,30 @@
+uuid: 2310bf56-ac71-4dc9-b293-276e5c3fb9fa
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_documentos_contrata
+    - field.field.comment.comment_node_documentos_contrata.comment_body
+  module:
+    - text
+id: comment.comment_node_documentos_contrata.default
+targetEntityType: comment
+bundle: comment_node_documentos_contrata
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

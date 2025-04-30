@@ -1,0 +1,26 @@
+uuid: 05044c1d-b3eb-4099-a744-f9a5ee05b32b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file_categoria
+    - node.type.enlaces_transparencia
+    - taxonomy.vocabulary.file_category
+id: node.enlaces_transparencia.field_file_categoria
+field_name: field_file_categoria
+entity_type: node
+bundle: enlaces_transparencia
+label: 'Categoría de Contenido'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      file_category: file_category
+    sort:
+      field: _none
+field_type: entity_reference

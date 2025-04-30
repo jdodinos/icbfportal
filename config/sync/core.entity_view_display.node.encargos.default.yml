@@ -1,0 +1,85 @@
+uuid: 9853aac5-9af8-47cf-a17b-b82d6f764100
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_encargos.default
+    - field.field.node.encargos.comment_node_encargos
+    - field.field.node.encargos.field_creation_date
+    - field.field.node.encargos.field_document
+    - field.field.node.encargos.field_metatag
+    - field.field.node.encargos.field_section
+    - field.field.node.encargos.field_tipo_de_encargo
+    - field.field.node.encargos.field_unpublish_date
+    - node.type.encargos
+  module:
+    - comment
+    - datetime
+    - file
+    - options
+    - user
+id: node.encargos.default
+targetEntityType: node
+bundle: encargos
+mode: default
+content:
+  comment_node_encargos:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_creation_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_document:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_section:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_tipo_de_encargo:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_unpublish_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_metatag: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

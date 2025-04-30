@@ -1,0 +1,40 @@
+uuid: 362d7b41-b0a3-457a-ae59-299aea21a3e7
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_label_alert
+field_name: field_label_alert
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '2'
+      label: Nuevo
+    -
+      value: '4'
+      label: 'En Curso'
+    -
+      value: '1'
+      label: Finalizado
+    -
+      value: '3'
+      label: Desierto
+    -
+      value: '5'
+      label: 'Terminación Anticipada'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

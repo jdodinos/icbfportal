@@ -1,0 +1,22 @@
+uuid: 143bb012-4d5f-482b-aa19-7e8e6f9bec48
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_process_object
+    - node.type.hiring_process
+  module:
+    - text
+id: node.hiring_process.field_process_object
+field_name: field_process_object
+entity_type: node
+bundle: hiring_process
+label: 'Objeto del proceso'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

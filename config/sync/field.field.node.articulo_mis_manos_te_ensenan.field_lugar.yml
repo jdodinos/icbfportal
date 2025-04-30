@@ -1,0 +1,26 @@
+uuid: 3d6bb848-2ff1-4659-841d-1a69ac517387
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lugar
+    - node.type.articulo_mis_manos_te_ensenan
+    - taxonomy.vocabulary.departments_municipalities
+id: node.articulo_mis_manos_te_ensenan.field_lugar
+field_name: field_lugar
+entity_type: node
+bundle: articulo_mis_manos_te_ensenan
+label: Lugar
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      departments_municipalities: departments_municipalities
+    sort:
+      field: _none
+field_type: entity_reference

@@ -1,0 +1,43 @@
+uuid: b2c1961a-e3bf-499b-8f0e-90315fe6708c
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.summon
+  module:
+    - field_permissions
+    - node
+id: citaciones
+label: Citaciones
+weight: 9
+is_admin: null
+permissions:
+  - 'create field_act_number'
+  - 'create field_legal_act'
+  - 'create field_region_office'
+  - 'create field_sim_number'
+  - 'create field_unpublish_date'
+  - 'create summon content'
+  - 'delete any summon content'
+  - 'delete own summon content'
+  - 'edit any summon content'
+  - 'edit field_legal_act'
+  - 'edit field_region_office'
+  - 'edit field_sim_number'
+  - 'edit field_summoned_file'
+  - 'edit field_unpublish_date'
+  - 'edit own field_act_number'
+  - 'edit own field_legal_act'
+  - 'edit own field_region_office'
+  - 'edit own field_sim_number'
+  - 'edit own field_summoned_file'
+  - 'edit own field_unpublish_date'
+  - 'edit own summon content'
+  - 'view field_legal_act'
+  - 'view field_region_office'
+  - 'view field_sim_number'
+  - 'view field_unpublish_date'
+  - 'view own field_legal_act'
+  - 'view own field_region_office'
+  - 'view own field_sim_number'
+  - 'view own field_unpublish_date'

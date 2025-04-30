@@ -1,0 +1,21 @@
+uuid: 800c144c-5638-4a61-bc55-e345bd131901
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tipo_de_encargo
+    - node.type.encargos
+  module:
+    - options
+id: node.encargos.field_tipo_de_encargo
+field_name: field_tipo_de_encargo
+entity_type: node
+bundle: encargos
+label: 'Tipo de encargo'
+description: 'tipo de resolución del documento'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

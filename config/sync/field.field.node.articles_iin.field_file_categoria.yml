@@ -1,0 +1,30 @@
+uuid: fac8818d-9e20-4709-8e0f-85c392ac0a9d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file_categoria
+    - node.type.articles_iin
+    - taxonomy.vocabulary.file_category
+id: node.articles_iin.field_file_categoria
+field_name: field_file_categoria
+entity_type: node
+bundle: articles_iin
+label: 'Categoría de Contenido'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    tid: '7508'
+  -
+    tid: '7509'
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      file_category: file_category
+    sort:
+      field: _none
+field_type: entity_reference

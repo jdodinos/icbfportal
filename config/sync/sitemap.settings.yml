@@ -1,0 +1,10 @@
+_core:
+  default_config_hash: GUKBlXIBQ2d0H8Q7M_Rqn1Q93tRxLPfs9cG-VeQC9NI
+langcode: es
+page_title: 'Mapa del sitio'
+path: sitemap
+message:
+  value: ''
+  format: plain_text
+plugins: {  }
+include_css: true

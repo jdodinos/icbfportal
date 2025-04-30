@@ -1,0 +1,14 @@
+uuid: 7d698e39-5845-4aa2-8abf-baeb7c5c041e
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.regional_cauca
+  module:
+    - user
+id: user_add_role_action.regional_cauca
+label: 'Añade el rol Regional Cauca al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: regional_cauca

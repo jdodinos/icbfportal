@@ -1,0 +1,43 @@
+uuid: 6c47a847-7056-4f69-b90c-ee406468f5e4
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_post_type_mte
+field_name: field_post_type_mte
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: mte_general
+      label: 'Post general'
+    -
+      value: mte_video
+      label: Video
+    -
+      value: mte_doc
+      label: Documento
+    -
+      value: mte_infograph
+      label: Infográfico
+    -
+      value: mte_slidetype
+      label: Destacado
+    -
+      value: mte_audiopost
+      label: Audio
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

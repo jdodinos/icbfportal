@@ -1,0 +1,31 @@
+uuid: 9114dadf-bc53-4362-a856-03173930efe5
+langcode: es
+status: true
+dependencies:
+  config:
+    - filter.format.filtered_html
+  module:
+    - comment
+    - field_permissions
+    - filter
+    - search
+    - system
+_core:
+  default_config_hash: cFrlqjtkTfvY3RGccjJkPf1SGIfJ942IrxTLWAO4mgA
+id: authenticated
+label: 'usuario autenticado'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use text format filtered_html'
+  - 'view field_act_number'
+  - 'view field_code'
+  - 'view field_summoned_file'
+  - 'view own field_act_number'
+  - 'view own field_code'
+  - 'view own field_summoned_file'

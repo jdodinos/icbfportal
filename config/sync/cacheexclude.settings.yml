@@ -1,0 +1,4 @@
+cacheexclude_list: |-
+  /buscador
+  /buscador/*
+cacheexclude_node_types: {  }

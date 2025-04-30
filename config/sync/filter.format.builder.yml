@@ -1,0 +1,18 @@
+uuid: 32b1ac62-f972-4ba5-a188-f459aea1fddf
+langcode: es
+status: false
+dependencies:
+  module:
+    - slick
+name: Builder
+format: builder
+weight: 0
+filters:
+  slick_filter:
+    id: slick_filter
+    provider: slick
+    status: false
+    weight: 4
+    settings:
+      optionset: default
+      media_switch: ''

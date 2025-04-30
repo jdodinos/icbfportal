@@ -1,0 +1,20 @@
+uuid: c874ca4b-0bf2-4bae-b6a4-0a020677a995
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.evaluaci_n
+  module:
+    - node
+    - system
+id: evaluacion
+label: Evaluación
+weight: 23
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'create evaluaci_n content'
+  - 'delete any evaluaci_n content'
+  - 'delete own evaluaci_n content'
+  - 'edit any evaluaci_n content'
+  - 'edit own evaluaci_n content'

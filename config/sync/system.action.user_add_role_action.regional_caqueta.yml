@@ -1,0 +1,14 @@
+uuid: 9c4b4664-0cd5-4efc-be84-9e690db165ef
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.regional_caqueta
+  module:
+    - user
+id: user_add_role_action.regional_caqueta
+label: 'Añade el rol Regional Caquetá al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: regional_caqueta

@@ -1,0 +1,21 @@
+uuid: 2813415a-a592-40b5-a180-c6cb6c0a06ec
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legal_act
+    - node.type.summon
+  module:
+    - options
+id: node.summon.field_legal_act
+field_name: field_legal_act
+entity_type: node
+bundle: summon
+label: 'Acción legal'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

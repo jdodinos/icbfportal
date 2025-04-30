@@ -1,0 +1,33 @@
+uuid: 4e54b752-deb0-495a-b38a-e542ecc06f99
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.comment_node_documentos_contrata
+    - node.type.documentos_contrataci_n
+  module:
+    - comment
+id: node.documentos_contrataci_n.comment_node_documentos_contrata
+field_name: comment_node_documentos_contrata
+entity_type: node
+bundle: documentos_contrataci_n
+label: Comments
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    status: 1
+    cid: 0
+    last_comment_timestamp: 0
+    last_comment_name: null
+    last_comment_uid: 0
+    comment_count: 0
+default_value_callback: ''
+settings:
+  default_mode: 0
+  per_page: 50
+  anonymous: 0
+  form_location: false
+  preview: 0
+field_type: comment

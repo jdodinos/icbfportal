@@ -1,0 +1,14 @@
+uuid: bdac280c-0961-4d9a-b7e9-915bc819679a
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.regional_cordoba
+  module:
+    - user
+id: user_remove_role_action.regional_cordoba
+label: 'Elimina el rol Regional Córdoba al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: regional_cordoba

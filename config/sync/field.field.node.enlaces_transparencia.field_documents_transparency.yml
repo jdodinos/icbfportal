@@ -1,0 +1,27 @@
+uuid: 8ffc5d9d-c45b-458e-9695-b7dba5efefd1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_documents_transparency
+    - node.type.enlaces_transparencia
+  module:
+    - file
+id: node.enlaces_transparencia.field_documents_transparency
+field_name: field_documents_transparency
+entity_type: node
+bundle: enlaces_transparencia
+label: 'Documento Adjunto en Enlace'
+description: 'Adjunto al enlace'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'pdf doc xls xlsx xlsm xlsmx docx ppt pptx pps ppsx png jpg jpeg tiff tif gif zip rar msg xps mp3 mp4 wmv mpeg pptm'
+  max_filesize: ''
+  description_field: true
+field_type: file

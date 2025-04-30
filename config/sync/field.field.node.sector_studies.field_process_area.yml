@@ -1,0 +1,26 @@
+uuid: fa748cc5-085f-4fd7-ae3e-71552c2d8c3f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_process_area
+    - node.type.sector_studies
+    - taxonomy.vocabulary.dependencies
+id: node.sector_studies.field_process_area
+field_name: field_process_area
+entity_type: node
+bundle: sector_studies
+label: Área
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      dependencies: dependencies
+    sort:
+      field: _none
+field_type: entity_reference

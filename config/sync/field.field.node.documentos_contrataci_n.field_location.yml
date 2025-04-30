@@ -1,0 +1,26 @@
+uuid: 8b0d397d-4492-494f-9fde-04dd86d2255e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.documentos_contrataci_n
+    - taxonomy.vocabulary.locations
+id: node.documentos_contrataci_n.field_location
+field_name: field_location
+entity_type: node
+bundle: documentos_contrataci_n
+label: Ubicación
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      locations: locations
+    sort:
+      field: _none
+field_type: entity_reference

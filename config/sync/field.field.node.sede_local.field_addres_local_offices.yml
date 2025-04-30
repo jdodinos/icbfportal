@@ -1,0 +1,19 @@
+uuid: 48be199e-068f-4e47-adc1-92cf0fb022b2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_addres_local_offices
+    - node.type.sede_local
+id: node.sede_local.field_addres_local_offices
+field_name: field_addres_local_offices
+entity_type: node
+bundle: sede_local
+label: 'Dirección sede'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

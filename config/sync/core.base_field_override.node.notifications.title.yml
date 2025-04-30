@@ -1,0 +1,18 @@
+uuid: 3c473f0b-e66a-4e01-8154-d2bb8b08b243
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.notifications
+id: node.notifications.title
+field_name: title
+entity_type: node
+bundle: notifications
+label: Título
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

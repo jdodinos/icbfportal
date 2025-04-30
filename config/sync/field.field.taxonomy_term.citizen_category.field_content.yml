@@ -1,0 +1,22 @@
+uuid: 68d70963-14f5-47e7-828b-51e7c91ec109
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_content
+    - taxonomy.vocabulary.citizen_category
+  module:
+    - text
+id: taxonomy_term.citizen_category.field_content
+field_name: field_content
+entity_type: taxonomy_term
+bundle: citizen_category
+label: Contenido
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

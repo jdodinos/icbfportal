@@ -1,0 +1,19 @@
+uuid: a53e4a1f-e062-4e31-bda9-a62a24d4c50b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_process_code
+    - node.type.notifications
+id: node.notifications.field_process_code
+field_name: field_process_code
+entity_type: node
+bundle: notifications
+label: 'Código del proceso'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

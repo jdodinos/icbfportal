@@ -1,0 +1,21 @@
+uuid: b6fe7fa6-745b-469d-9f5d-83d69aaca1d5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.enlaces_transparencia
+  module:
+    - metatag
+id: node.enlaces_transparencia.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: enlaces_transparencia
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

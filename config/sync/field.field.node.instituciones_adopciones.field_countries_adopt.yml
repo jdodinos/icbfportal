@@ -1,0 +1,21 @@
+uuid: ec0230a7-f82c-4156-818b-c9f7573a4f0a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_countries_adopt
+    - node.type.instituciones_adopciones
+  module:
+    - options
+id: node.instituciones_adopciones.field_countries_adopt
+field_name: field_countries_adopt
+entity_type: node
+bundle: instituciones_adopciones
+label: Pais
+description: 'Países de origen de las instituciones autorizadas'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

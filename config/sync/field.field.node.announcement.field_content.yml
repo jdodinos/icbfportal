@@ -1,0 +1,25 @@
+uuid: 8a8fd7d4-bed8-489d-a100-c3a7788af49e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.announcement
+  module:
+    - text
+id: node.announcement.field_content
+field_name: field_content
+entity_type: node
+bundle: announcement
+label: Contenido
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: "<div class=\"word-gral\" style=\"magin-right:1em;\">\r\n<p>El Instituto Colombiano de Bienestar Familiar convoca a los interesados en participar en el proceso de selección para conformar la terna, mediante la cual se proveerá el cargo de libre nombramiento y remoción de Director Regional, Código --- Grado ---, en la Regional -----</p>\r\n\r\n<h5>Se informa a los interesados en participar en el proceso público - abierto, que:&nbsp;</h5>\r\n\r\n<ol>\r\n\t<li>Inscripciones: ÚNICAMENTE&nbsp;en las oficinas de la Dirección Regional ----- del&nbsp; Instituto Colombiano de Bienestar Familiar. (Dirección ------------------), del (día---) de (mes---) de 2019.</li><br />\r\n\t<li>El horario de atención es desde las 8:00 a.m. hasta las 4:00 p.m. en jornada continua.</li><br />\r\n\t<li>Al momento de la inscripción es indispensable que se haga presente el interesado o un delegado de éste con el formato único de inscripción y los certificados requeridos.</li><br />\r\n\t<li>La aplicación de las pruebas de:&nbsp;conocimientos, competencias y entrevista, se realizarán exclusivamente en las regiones donde se haya dado apertura al concurso así:\r\n\t<ul>\r\n\t\t<li>REGIONAL: ------------</li>\r\n\t\t<li>CIUDAD: --------------</li>\r\n\t</ul>\r\n\t</li><br />\r\n\t<li>El sitio de aplicación de la prueba de conocimientos se publicará conjuntamente con la lista de admitidos y no admitidos.</li>\r\n</ol>\r\n</div>\r\n"
+    format: full_html
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

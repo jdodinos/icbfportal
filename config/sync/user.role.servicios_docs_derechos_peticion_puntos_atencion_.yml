@@ -1,0 +1,71 @@
+uuid: ae0cb090-5da8-4bb1-902a-4701233c370e
+langcode: es
+status: true
+dependencies:
+  config:
+    - filter.format.clean
+    - filter.format.full_html
+    - node.type.articles_portal_web
+    - node.type.document
+    - node.type.document_microsite
+    - node.type.enlaces_referencia
+    - node.type.glosario
+    - node.type.informe_denuncias_anticorrupcion
+    - node.type.multimedia
+    - node.type.petition_rights
+    - node.type.sede_local
+  module:
+    - field_permissions
+    - filter
+    - node
+    - publishcontent
+    - scheduler
+    - system
+id: servicios_docs_derechos_peticion_puntos_atencion_
+label: 'Servicios (Docs - Derechos Peticion, Puntos Atencion)'
+weight: 33
+is_admin: null
+permissions:
+  - 'create articles_portal_web content'
+  - 'create document content'
+  - 'create document_microsite content'
+  - 'create enlaces_referencia content'
+  - 'create field_creation_date'
+  - 'create field_unpublish_date'
+  - 'create glosario content'
+  - 'create informe_denuncias_anticorrupcion content'
+  - 'create multimedia content'
+  - 'create petition_rights content'
+  - 'create sede_local content'
+  - 'delete any sede_local content'
+  - 'delete own document content'
+  - 'delete own petition_rights content'
+  - 'delete own sede_local content'
+  - 'edit any articles_portal_web content'
+  - 'edit any document content'
+  - 'edit any petition_rights content'
+  - 'edit any sede_local content'
+  - 'edit field_creation_date'
+  - 'edit field_unpublish_date'
+  - 'edit own articles_portal_web content'
+  - 'edit own document content'
+  - 'edit own document_microsite content'
+  - 'edit own enlaces_referencia content'
+  - 'edit own field_creation_date'
+  - 'edit own field_unpublish_date'
+  - 'edit own glosario content'
+  - 'edit own informe_denuncias_anticorrupcion content'
+  - 'edit own multimedia content'
+  - 'edit own petition_rights content'
+  - 'edit own sede_local content'
+  - 'schedule publishing of nodes'
+  - 'unpublish editable content'
+  - 'use text format clean'
+  - 'use text format full_html'
+  - 'view field_creation_date'
+  - 'view field_unpublish_date'
+  - 'view own field_creation_date'
+  - 'view own field_unpublish_date'
+  - 'view own unpublished content'
+  - 'view scheduled content'
+  - 'view the administration theme'

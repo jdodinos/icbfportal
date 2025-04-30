@@ -1,0 +1,14 @@
+uuid: f155bc12-cf39-46fe-af77-92d0e45f5eed
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.aseguramiento_calidad
+  module:
+    - user
+id: user_remove_role_action.aseguramiento_calidad
+label: 'Elimina el rol Aseguramiento Calidad al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: aseguramiento_calidad

@@ -1,0 +1,30 @@
+uuid: e38f71da-8a5d-4ee9-a6f2-1270f4860d50
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:6b54a2b3-38bc-4776-a964-74eb188a19f0'
+  module:
+    - block_content
+    - system
+  theme:
+    - icbf
+id: icbf_block_51
+theme: icbf
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:6b54a2b3-38bc-4776-a964-74eb188a19f0'
+settings:
+  id: 'block_content:6b54a2b3-38bc-4776-a964-74eb188a19f0'
+  label: ''
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /buscar

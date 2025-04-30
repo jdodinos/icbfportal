@@ -1,0 +1,14 @@
+uuid: 94de15fb-15e0-4bd7-a6b4-a3a30857159e
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.eventos_calendario
+  module:
+    - user
+id: user_add_role_action.eventos_calendario
+label: 'Añade el rol Eventos Calendario al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: eventos_calendario

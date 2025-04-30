@@ -1,0 +1,9 @@
+uuid: 857ffd0b-ed18-4e31-89e2-5ee2ed3ee3cc
+langcode: es
+status: true
+dependencies: {  }
+name: 'Eventos MP'
+vid: eventos
+description: 'Tipo de eventos de Rendición de Cuentas'
+weight: 3
+new_revision: false

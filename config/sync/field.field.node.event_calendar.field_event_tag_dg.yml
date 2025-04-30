@@ -1,0 +1,26 @@
+uuid: fe203b0f-ea8d-4e0b-a14e-18f1b9d4bff6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_tag_dg
+    - node.type.event_calendar
+    - taxonomy.vocabulary.eventos_agenda
+id: node.event_calendar.field_event_tag_dg
+field_name: field_event_tag_dg
+entity_type: node
+bundle: event_calendar
+label: 'Tipo Evento Dirección General'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      eventos_agenda: eventos_agenda
+    sort:
+      field: _none
+field_type: entity_reference

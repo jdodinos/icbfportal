@@ -1,0 +1,21 @@
+uuid: 5f3358e0-7241-4071-82d9-a168fd6bde47
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_closin_fact_date
+    - node.type.informe_denuncias_anticorrupcion
+  module:
+    - datetime
+id: node.informe_denuncias_anticorrupcion.field_closin_fact_date
+field_name: field_closin_fact_date
+entity_type: node
+bundle: informe_denuncias_anticorrupcion
+label: 'Fecha Actuación de Cierre'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

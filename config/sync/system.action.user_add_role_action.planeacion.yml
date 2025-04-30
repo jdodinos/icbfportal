@@ -1,0 +1,14 @@
+uuid: 2db83bd9-1478-4868-bcfb-be834ee4c661
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.planeacion
+  module:
+    - user
+id: user_add_role_action.planeacion
+label: 'Añade el rol Planeación al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: planeacion

@@ -1,0 +1,18 @@
+uuid: b4ddff25-087a-4b46-863e-5ac32f09232e
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.process
+id: node.process.title
+field_name: title
+entity_type: node
+bundle: process
+label: Título
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

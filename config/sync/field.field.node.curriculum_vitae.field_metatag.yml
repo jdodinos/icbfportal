@@ -1,0 +1,21 @@
+uuid: 9a97b670-bdf6-415a-968c-6df122a63f4a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.curriculum_vitae
+  module:
+    - metatag
+id: node.curriculum_vitae.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: curriculum_vitae
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

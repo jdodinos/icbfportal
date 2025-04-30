@@ -1,0 +1,14 @@
+uuid: ffce892d-e702-4aa7-8dae-77c9e9c13c5a
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.sede_direccion_general
+  module:
+    - user
+id: user_add_role_action.sede_direccion_general
+label: 'Añade el rol Sede Dirección General al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: sede_direccion_general

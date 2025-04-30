@@ -1,0 +1,21 @@
+uuid: 753af5d6-ef0a-4ea9-96a9-76d12b117509
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_youtube
+    - node.type.services_faq
+  module:
+    - youtube
+id: node.services_faq.field_youtube
+field_name: field_youtube
+entity_type: node
+bundle: services_faq
+label: Youtube
+description: 'video LSC en youtube'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: youtube

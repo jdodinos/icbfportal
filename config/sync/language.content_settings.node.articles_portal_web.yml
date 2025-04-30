@@ -1,0 +1,16 @@
+uuid: 866f0593-7b73-4b59-8f94-f98c54f80632
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.articles_portal_web
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: node.articles_portal_web
+target_entity_type_id: node
+target_bundle: articles_portal_web
+default_langcode: current_interface
+language_alterable: true

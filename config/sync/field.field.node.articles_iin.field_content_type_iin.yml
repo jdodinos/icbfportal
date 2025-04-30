@@ -1,0 +1,21 @@
+uuid: dab8da85-3325-42b0-85e9-a320b886cd3c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_type_iin
+    - node.type.articles_iin
+  module:
+    - options
+id: node.articles_iin.field_content_type_iin
+field_name: field_content_type_iin
+entity_type: node
+bundle: articles_iin
+label: 'Tipo de Contenido IIN'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,21 @@
+uuid: cd68ce3d-4d69-4891-a61c-330df1cd8468
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_glazed_header_style
+    - paragraphs.paragraphs_type.glazed_content_design
+  module:
+    - options
+id: paragraph.glazed_content_design.field_glazed_header_style
+field_name: field_glazed_header_style
+entity_type: paragraph
+bundle: glazed_content_design
+label: Style
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

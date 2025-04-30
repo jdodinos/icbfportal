@@ -1,0 +1,22 @@
+uuid: 44cc48fe-129c-4954-9234-2d4cb0dbda5c
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_documento_de_convoc
+    - field.storage.comment.comment_body
+  module:
+    - text
+id: comment.comment_node_documento_de_convoc.comment_body
+field_name: comment_body
+entity_type: comment
+bundle: comment_node_documento_de_convoc
+label: Comment
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

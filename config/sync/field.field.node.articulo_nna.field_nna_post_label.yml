@@ -1,0 +1,21 @@
+uuid: f7c3c311-3acf-42e8-abd8-61962e7eaf0b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nna_post_label
+    - node.type.articulo_nna
+  module:
+    - options
+id: node.articulo_nna.field_nna_post_label
+field_name: field_nna_post_label
+entity_type: node
+bundle: articulo_nna
+label: 'Label Artículo Niños'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

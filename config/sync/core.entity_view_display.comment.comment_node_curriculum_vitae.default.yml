@@ -1,0 +1,30 @@
+uuid: be089bfd-2368-4cd8-ab78-dcbf8bf109d3
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_curriculum_vitae
+    - field.field.comment.comment_node_curriculum_vitae.comment_body
+  module:
+    - text
+id: comment.comment_node_curriculum_vitae.default
+targetEntityType: comment
+bundle: comment_node_curriculum_vitae
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

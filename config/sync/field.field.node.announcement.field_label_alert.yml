@@ -1,0 +1,21 @@
+uuid: c382ae29-c94c-40ff-98d7-3e874ae0aae4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_label_alert
+    - node.type.announcement
+  module:
+    - options
+id: node.announcement.field_label_alert
+field_name: field_label_alert
+entity_type: node
+bundle: announcement
+label: 'Estado actual para Alerta'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,25 @@
+uuid: 15c8c6f6-6197-41e3-a2fc-bcadda033b10
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_collapsible
+    - node.type.article
+  module:
+    - text
+id: node.article.field_content_collapsible
+field_name: field_content_collapsible
+entity_type: node
+bundle: article
+label: 'Contenido Collapsible'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: "<div class=\"az-element az-section\" data-az-id=\"ebtlax3j\" data-azb=\"az_section\" id=\"ebtlax3j\" style=\"\">\r\n<div class=\"az-ctnr container\" data-azcnt=\"true\" data-jsplus-bootstrap-editor-selected=\"1\">\r\n<div class=\"az-element az-row row  az-row--sm\" data-az-id=\"dbyows0a\" data-azat-device=\"sm\" data-azb=\"az_row\" data-azcnt=\"true\" style=\"\">\r\n<div class=\"az-element az-ctnr az-column  col-sm-12\" data-az-id=\"w8s3x4b6\" data-azat-width=\"1/1\" data-azb=\"az_column\" data-azcnt=\"true\" style=\"\">\r\n<div class=\"az-element az-accordion panel-group\" data-az-id=\"12ouhq9m\" data-azat-collapsed=\"yes\" data-azb=\"az_accordion\" data-azcnt=\"true\" id=\"12ouhq9m\" style=\"\">\r\n<div class=\"az-element az-toggle panel undefined pp-icon-collapsives\" data-az-id=\"qu23mpgx\" data-azat-el_class=\"pp-icon-collapsives\" data-azat-title=\"Siete recomendaciones para niños y familias\" data-azb=\"az_toggle\" style=\"\">\r\n<div class=\"panel-heading\">\r\n<h4 class=\"panel-title\"><a aria-expanded=\"false\" class=\"collapsed\" data-parent=\"#12ouhq9m\" data-toggle=\"collapse\" href=\"#qu23mpgx\">Collapsive 1</a></h4>\r\n</div>\r\n\r\n<div aria-expanded=\"false\" class=\"panel-collapse collapse\" id=\"qu23mpgx\">\r\n<div class=\"panel-body az-ctnr\" data-azcnt=\"true\">\r\n<div class=\"az-element az-text\" data-az-id=\"kkvybi3w\" data-azb=\"az_text\" data-azcnt=\"true\" style=\"\">\r\n<h2>Lorem ipsum dolor sit amet.</h2>\r\nConsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>\r\n</div>\r\n</div>\r\n</div>\r\n\r\n<div class=\"az-element az-toggle panel undefined pp-icon-collapsives\" data-az-id=\"kxlh9gwa\" data-azat-el_class=\"pp-icon-collapsives\" data-azat-title=\"Algunas recomendaciones\" data-azb=\"az_toggle\" style=\"\">\r\n<div class=\"panel-heading\">\r\n<h4 class=\"panel-title\"><a aria-expanded=\"false\" class=\"collapsed\" data-parent=\"#12ouhq9m\" data-toggle=\"collapse\" href=\"#kxlh9gwa\">Collapsive 2</a></h4>\r\n</div>\r\n\r\n<div aria-expanded=\"false\" class=\"panel-collapse collapse\" id=\"kxlh9gwa\">\r\n<div class=\"panel-body az-ctnr\" data-azcnt=\"true\">\r\n<div class=\"az-element az-text\" data-az-id=\"2uvesb5j\" data-azb=\"az_text\" data-azcnt=\"true\" style=\"\">\r\n<h2>Lorem ipsum dolor sit amet.</h2>\r\nConsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n<script src=\"-base-url-/-module-directory-/glazed_builder/glazed_frontend.min.js\"></script>"
+    format: full_html
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

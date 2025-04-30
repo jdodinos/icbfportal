@@ -1,0 +1,18 @@
+uuid: 8433a316-853c-4a4e-bf09-38fb53749805
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.multimedia
+id: node.multimedia.title
+field_name: title
+entity_type: node
+bundle: multimedia
+label: Título
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

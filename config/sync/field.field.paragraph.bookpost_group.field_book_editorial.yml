@@ -1,0 +1,19 @@
+uuid: ea02eaca-892c-431c-9b77-8c060d37ff3c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_book_editorial
+    - paragraphs.paragraphs_type.bookpost_group
+id: paragraph.bookpost_group.field_book_editorial
+field_name: field_book_editorial
+entity_type: paragraph
+bundle: bookpost_group
+label: Editorial
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

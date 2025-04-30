@@ -1,0 +1,27 @@
+uuid: dd941a9f-cc85-4f99-912e-8561ed4ea0f2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_multimedia
+    - taxonomy.vocabulary.programa_adopciones
+  module:
+    - file
+id: taxonomy_term.programa_adopciones.field_multimedia
+field_name: field_multimedia
+entity_type: taxonomy_term
+bundle: programa_adopciones
+label: 'Audio y/o Vídeo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'wmv mp4 mpeg mp3'
+  max_filesize: ''
+  description_field: true
+field_type: file

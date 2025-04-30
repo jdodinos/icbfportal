@@ -1,0 +1,28 @@
+uuid: 4ae3844a-a61a-4f0f-92b5-6f000ba4e2d2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section
+    - node.type.rendicion_de_cuentas
+    - taxonomy.vocabulary.secctions
+id: node.rendicion_de_cuentas.field_section
+field_name: field_section
+entity_type: node
+bundle: rendicion_de_cuentas
+label: Sección
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    tid: '6760'
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      secctions: secctions
+    sort:
+      field: _none
+field_type: entity_reference

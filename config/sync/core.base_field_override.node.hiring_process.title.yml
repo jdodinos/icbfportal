@@ -1,0 +1,18 @@
+uuid: b671bcd7-9869-49cb-a16f-dfda160771b6
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.hiring_process
+id: node.hiring_process.title
+field_name: title
+entity_type: node
+bundle: hiring_process
+label: Nombre
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

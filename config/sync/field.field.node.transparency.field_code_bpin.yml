@@ -1,0 +1,19 @@
+uuid: d3729443-0008-4303-9516-20fd996a5140
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_code_bpin
+    - node.type.transparency
+id: node.transparency.field_code_bpin
+field_name: field_code_bpin
+entity_type: node
+bundle: transparency
+label: 'Código BPIN'
+description: 'Código para registro de fichas de proyectos de inversión - transparencia'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

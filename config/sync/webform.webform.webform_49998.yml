@@ -1,0 +1,179 @@
+uuid: 1858d330-7522-44b1-b7dc-7d78e955348f
+langcode: es
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: webform_49998
+title: 'Encuesta Uso y Apropiación Sistemas de Información'
+description: null
+categories: {  }
+elements: |-
+  objetivo:
+    '#type': processed_text
+    '#format': full_html
+    '#text': |-
+      <p>&nbsp;</p>
+
+      <p>Objetivo: Valorar la percepción de los sistemas de información a los enlaces funcionales de la sede nacional y regionales.</p>
+  regional:
+    '#type': select
+    '#options':
+      1: 'Sede Dirección General'
+      2: 'Regional Amazonas'
+      3: 'Regional Antioquia'
+      4: 'Regional Arauca'
+      5: 'Regional Atlàntico'
+      6: 'Regional Bogotá'
+      7: 'Regional Bolívar'
+      8: 'Regional Boyacá'
+      9: 'Regional Caldas'
+      10: 'Regional Caquetá'
+      11: 'Regional Casanare'
+      12: 'Regional Cauca'
+      13: 'Regional Cesar'
+      14: 'Regional Chocó'
+      15: 'Regional Córdoba'
+      16: 'Regional Cundinamarca'
+      17: 'Regional Guainía'
+      18: 'Regional Guaviare'
+      19: 'Regional Huila'
+      20: 'Regional La Guajira'
+      21: 'Regional Magdalena'
+      22: 'Regional Meta'
+      23: 'Regional Nariño'
+      24: 'Regional Norte de Santander'
+      25: 'Regional Putumayo'
+      26: 'Regional Quindío'
+      27: 'Regional Risaralda'
+      28: 'Regional San Andrés'
+      29: 'Regional Santander'
+      30: 'Regional Sucre'
+      31: 'Regional Tolima'
+      32: 'Regional Valle'
+      33: 'Regional Vaupés'
+      34: 'Regional Vichada'
+    '#title': Regional
+    '#required': true
+  1_nombre_sistema:
+    '#type': textarea
+    '#title': "1.\tIndique el nombre del sistema de información: (si desea valorar otro sistema de información puede volver a diligenciar la encuesta)"
+    '#required': true
+  2_frecuencia:
+    '#type': radios
+    '#options':
+      1: 'Muy Frecuente'
+      2: Frecuente
+      3: Ocasionalmente
+    '#title': '2. Indique con qué frecuencia usa el sistema de información:'
+    '#required': true
+  3_sencillo:
+    '#type': radios
+    '#options':
+      1: Si
+      2: 'No'
+    '#title': '3. ¿Le ha resultado sencillo el uso del sistema?'
+    '#required': true
+  4_facil_acceder:
+    '#type': radios
+    '#options':
+      1: Si
+      2: 'No'
+    '#title': '4. ¿Es fácil acceder a la información registrada?'
+    '#required': true
+  5_recibe_informacion:
+    '#type': radios
+    '#options':
+      1: Si
+      2: 'No'
+    '#title': '5. ¿Recibe información cuando el sistema de información va a estar en mantenimiento?'
+    '#required': true
+  6_con_que_frecuencia_realiza_capacitaciones_del_sistema_de_informacion:
+    '#type': radios
+    '#options':
+      1: 'Muy Frecuente'
+      2: Frecuente
+      3: Ocasionalmente
+      4: Nunca
+    '#title': '6. Con que frecuencia realiza capacitaciones del sistema de información:'
+    '#required': true
+  7_satisfaccion:
+    '#type': webform_likert
+    '#questions':
+      -
+        - '1'
+        - 'El tiempo en que tarda generar un reporte'
+      -
+        - '2'
+        - 'La facilidad de registro y consulta de la información'
+      -
+        - '3'
+        - 'El tiempo de respuesta a las fallas y requerimientos'
+      -
+        - ''
+    '#answers':
+      -
+        - '1'
+        - 'Muy insatisfecho'
+      -
+        - '2'
+        - Insatisfecho
+      -
+        - '3'
+        - Aceptable
+      -
+        - '4'
+        - Satisfecho
+      -
+        - '5'
+        - 'Muy Satisfecho'
+      -
+        - ''
+    '#title': '7. Indíquenos su nivel de satisfacción respecto a:'
+    '#required': true
+  new_checkboxes:
+    '#type': checkboxes
+    '#options':
+      1: 'MIS por correo electrónico'
+      2: 'Extensión IP 8080'
+      3: 'Módulo de Autoservicio'
+      5: 'Al teléfono 4279010 a la línea 018000913434'
+      hj: 'Llamó al Subdirector de sistemas integrados de información'
+      hgj: 'Informo al Soporte en Sitio de MIS'
+      'Llamó al líder de soporte en sitio de la Sede de la Dirección General': 'Llamó al líder de soporte en sitio de la Sede de la Dirección General'
+      'Llamó al coordinador de MIS de la Sede de la Dirección General': 'Llamó al coordinador de MIS de la Sede de la Dirección General'
+    '#multiple': true
+    '#title': '8. Cuáles de los siguientes canales usa para reportar los fallas o incidentes de los sistemas de información '
+    '#required': true
+  9_cambios_o_mejoras:
+    '#type': textarea
+    '#title': '9. ¿Cuáles son los cambios o mejoras que, en su opinión debería incorporar nuestra aplicación?'
+    '#required': true
+css: ''
+javascript: ''
+settings:
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: "<p>Gracias por responder la encuesta! Los datos han sido registrados.</p>\r\n"
+  limit_total: null
+  limit_user: null
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }

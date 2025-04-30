@@ -1,0 +1,45 @@
+uuid: 4d377689-c48d-4c8d-a7ab-f752df47b086
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.documento_multiple.body
+    - field.field.node.documento_multiple.comment_node_documento_multiple
+    - field.field.node.documento_multiple.field_archivo_principal
+    - field.field.node.documento_multiple.field_archivos_varios
+    - field.field.node.documento_multiple.field_file_categoria
+    - field.field.node.documento_multiple.field_metatag
+    - field.field.node.documento_multiple.field_section
+    - node.type.documento_multiple
+  module:
+    - text
+    - user
+id: node.documento_multiple.teaser
+targetEntityType: node
+bundle: documento_multiple
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment_node_documento_multiple: true
+  field_archivo_principal: true
+  field_archivos_varios: true
+  field_file_categoria: true
+  field_metatag: true
+  field_section: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

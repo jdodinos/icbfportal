@@ -1,0 +1,28 @@
+uuid: 67a89ce1-da44-4ce2-8bfe-9c0607323061
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: true
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Acta Contentiva'
+type: acta_contentiva
+description: 'Actas Contentivas de Acuerdos Conciliatorios - Información Jurídica'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,8 @@
+uuid: 0683ac88-a9e4-49a6-8933-1be354502628
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_hiring_process
+label: 'Proceso Contratación comment'
+target_entity_type_id: node
+description: null

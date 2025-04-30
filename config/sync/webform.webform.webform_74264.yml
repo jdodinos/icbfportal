@@ -1,0 +1,129 @@
+uuid: 8946e30a-5a0b-45a2-8355-c63ba61df882
+langcode: es
+status: closed
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 861
+template: false
+archive: false
+id: webform_74264
+title: 'Encuesta Gestión Uso y Apropiación de TI'
+description: null
+categories: {  }
+elements: |-
+  1_recuerdas_haber_visto_alguna_campa_a_o_divulgaci_n_realizada_para_el_uso_y_apropiaci_n_de_alg_n_aplicativo_o_servicio_del_la_d:
+    '#type': radios
+    '#options':
+      1: Si
+      2: 'No'
+    '#title': '1. ¿Recuerdas haber visto alguna campaña o divulgación realizada para el uso y apropiación de algún aplicativo o servicio del la DIT?'
+    '#required': true
+  _cu_l_:
+    '#type': textfield
+    '#title': '¿Cuál?'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="1_recuerdas_haber_visto_alguna_campa_a_o_divulgaci_n_realizada_para_el_uso_y_apropiaci_n_de_alg_n_aplicativo_o_servicio_del_la_d"]':
+            value: '1'
+  2_haz_gestionado_solicitudes_al_equipo_de_uso_y_apropiaci_n_de_la_dit_f:
+    '#type': radios
+    '#options':
+      1: Si
+      2: 'No'
+    '#title': '2. ¿Haz gestionado solicitudes al equipo de uso y apropiación de la DIT?'
+    '#required': true
+  3_califica_de_1_a_5_siendo_1_el_m_s_bajo_y_5_el_m_s_alto_la_gesti_n_que_haz_recibido_acerca_de_tu_requerimiento_f:
+    '#type': radios
+    '#options':
+      1: '1 Malo'
+      2: '2 Deficiente'
+      3: '3 Aceptable'
+      '4 Bueno': '4 Bueno'
+      '5 Excelente': '5 Excelente'
+    '#title': '3. Califica de 1 a 5 siendo 1 el más bajo y 5 el más alto, la gestión que haz recibido acerca de tu requerimiento:'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="2_haz_gestionado_solicitudes_al_equipo_de_uso_y_apropiaci_n_de_la_dit_f"]':
+            value: '1'
+  4_consideras_que_hubo_un_impacto_positivo_en_tus_aplicaciones_productos_o_servicios_gracias_a_las_divulgaciones_realizadas_por_p:
+    '#type': radios
+    '#options':
+      1: Si
+      2: 'No'
+    '#title': '4. ¿Consideras que hubo un impacto positivo en tus aplicaciones, productos o servicios, gracias a las divulgaciones realizadas por parte del equipo de uso y apropiación?'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="3_califica_de_1_a_5_siendo_1_el_m_s_bajo_y_5_el_m_s_alto_la_gesti_n_que_haz_recibido_acerca_de_tu_requerimiento_f"]':
+            filled: false
+  _por_qu_:
+    '#type': textfield
+    '#title': '¿Por qué?'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="4_consideras_que_hubo_un_impacto_positivo_en_tus_aplicaciones_productos_o_servicios_gracias_a_las_divulgaciones_realizadas_por_p"]':
+            value: '2'
+  _porque_:
+    '#type': textfield
+    '#title': '¿ Por qué ?'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="4_consideras_que_hubo_un_impacto_positivo_en_tus_aplicaciones_productos_o_servicios_gracias_a_las_divulgaciones_realizadas_por_p"]':
+            value: '1'
+  3_consideras_que_para_la_aplicaci_n_producto_o_servicio_en_que_trabajas_el_equipo_de_uso_y_apropiaci_n_puede_apoyarte_f:
+    '#type': radios
+    '#options':
+      1: Si
+      2: 'No'
+    '#title': '3. ¿Consideras que para la aplicación, producto o servicio en que trabajas, el equipo de uso y apropiación puede apoyarte?'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="2_haz_gestionado_solicitudes_al_equipo_de_uso_y_apropiaci_n_de_la_dit_f"]':
+            value: '2'
+  cu_ntanos_en_que_temas_consideras_te_podr_a_apoyar_el_equipo_de_uso_y_apropiaci_n_:
+    '#type': textarea
+    '#title': '4. Cuéntanos en que temas consideras te podría apoyar el equipo y cómo:'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="3_consideras_que_para_la_aplicaci_n_producto_o_servicio_en_que_trabajas_el_equipo_de_uso_y_apropiaci_n_puede_apoyarte_f"]':
+            value: '1'
+  cuentanos_la_raz_n_por_la_cual_consideras_que_no_te_podr_a_ayudar_el_equipo_:
+    '#type': textarea
+    '#title': '4. Cuéntanos la razón por la cual consideras que no te podría apoyar el equipo:'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="3_consideras_que_para_la_aplicaci_n_producto_o_servicio_en_que_trabajas_el_equipo_de_uso_y_apropiaci_n_puede_apoyarte_f"]':
+            value: '2'
+css: ''
+javascript: ''
+settings:
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: "<p>Gracias por participar.</p>\r\n"
+  limit_total: null
+  limit_user: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }

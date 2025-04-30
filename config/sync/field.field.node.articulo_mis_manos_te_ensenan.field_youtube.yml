@@ -1,0 +1,21 @@
+uuid: 6930e8c6-4dc5-41bd-8db7-4d097723e6ba
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_youtube
+    - node.type.articulo_mis_manos_te_ensenan
+  module:
+    - youtube
+id: node.articulo_mis_manos_te_ensenan.field_youtube
+field_name: field_youtube
+entity_type: node
+bundle: articulo_mis_manos_te_ensenan
+label: 'Video en Youtube'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: youtube

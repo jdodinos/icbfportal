@@ -1,0 +1,27 @@
+uuid: f74f2c7d-5bdf-458e-b7f2-d928e8527b32
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - file
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_document_mmte
+field_name: field_document_mmte
+entity_type: node
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 5
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

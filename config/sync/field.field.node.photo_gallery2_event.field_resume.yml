@@ -1,0 +1,22 @@
+uuid: ec700352-1a4c-4103-96be-61e636796076
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resume
+    - node.type.photo_gallery2_event
+  module:
+    - text
+id: node.photo_gallery2_event.field_resume
+field_name: field_resume
+entity_type: node
+bundle: photo_gallery2_event
+label: Resumen
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

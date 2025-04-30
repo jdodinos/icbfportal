@@ -1,0 +1,14 @@
+uuid: 38f5e0af-d92e-467e-8a59-794efd424b8b
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.evaluacion
+  module:
+    - user
+id: user_remove_role_action.evaluacion
+label: 'Elimina el rol Evaluación al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: evaluacion

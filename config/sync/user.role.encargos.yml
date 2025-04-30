@@ -1,0 +1,31 @@
+uuid: 14c1a43b-c6a7-460d-b062-021adf4bdb38
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.encargos
+  module:
+    - field_permissions
+    - node
+    - publishcontent
+    - scheduler
+    - system
+id: encargos
+label: Encargos
+weight: 22
+is_admin: null
+permissions:
+  - 'create encargos content'
+  - 'create field_creation_date'
+  - 'delete any encargos content'
+  - 'delete own encargos content'
+  - 'edit any encargos content'
+  - 'edit field_creation_date'
+  - 'edit own encargos content'
+  - 'edit own field_creation_date'
+  - 'schedule publishing of nodes'
+  - 'unpublish editable content'
+  - 'view field_creation_date'
+  - 'view own field_creation_date'
+  - 'view scheduled content'
+  - 'view the administration theme'

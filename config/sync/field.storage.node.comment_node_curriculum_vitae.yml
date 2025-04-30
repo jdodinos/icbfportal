@@ -1,0 +1,20 @@
+uuid: 877f8721-301d-4d3e-9f33-3c19d1276c44
+langcode: es
+status: true
+dependencies:
+  module:
+    - comment
+    - node
+id: node.comment_node_curriculum_vitae
+field_name: comment_node_curriculum_vitae
+entity_type: node
+type: comment
+settings:
+  comment_type: comment_node_curriculum_vitae
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

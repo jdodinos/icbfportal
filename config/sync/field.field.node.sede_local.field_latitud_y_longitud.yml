@@ -1,0 +1,19 @@
+uuid: 5e3a8a63-cdcd-49bd-8764-812d5ad712c8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_latitud_y_longitud
+    - node.type.sede_local
+id: node.sede_local.field_latitud_y_longitud
+field_name: field_latitud_y_longitud
+entity_type: node
+bundle: sede_local
+label: 'Latitud y Longitud'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: 3c4cab64-d49c-4c63-b17a-ce3534763517
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nna_html_code
+    - node.type.articulo_nna
+  module:
+    - text
+id: node.articulo_nna.field_nna_html_code
+field_name: field_nna_html_code
+entity_type: node
+bundle: articulo_nna
+label: 'Código Incrustado'
+description: 'HTML para incrustar contenido audiovisual o a medida'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

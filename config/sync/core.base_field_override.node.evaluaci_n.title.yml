@@ -1,0 +1,18 @@
+uuid: c9d238d4-33f2-408f-ae0f-23f698467f4d
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.evaluaci_n
+id: node.evaluaci_n.title
+field_name: title
+entity_type: node
+bundle: evaluaci_n
+label: Título
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

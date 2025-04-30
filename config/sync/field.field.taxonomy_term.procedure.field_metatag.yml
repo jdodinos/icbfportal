@@ -1,0 +1,21 @@
+uuid: 11da4440-6763-41b1-8ec4-d4512a7a24a4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_metatag
+    - taxonomy.vocabulary.procedure
+  module:
+    - metatag
+id: taxonomy_term.procedure.field_metatag
+field_name: field_metatag
+entity_type: taxonomy_term
+bundle: procedure
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

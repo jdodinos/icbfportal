@@ -1,0 +1,19 @@
+uuid: e18fb06d-66ca-45b5-9602-8b428c108466
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtitle
+    - node.type.info_contexto
+id: node.info_contexto.field_subtitle
+field_name: field_subtitle
+entity_type: node
+bundle: info_contexto
+label: Subtítulo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

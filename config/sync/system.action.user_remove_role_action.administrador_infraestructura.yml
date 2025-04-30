@@ -1,0 +1,14 @@
+uuid: 8cd33609-941e-44a4-913e-61ac7aa7cde9
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.administrador_infraestructura
+  module:
+    - user
+id: user_remove_role_action.administrador_infraestructura
+label: 'Elimina el rol Administrador Infraestructura al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: administrador_infraestructura

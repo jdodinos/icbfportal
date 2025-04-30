@@ -1,0 +1,50 @@
+uuid: ade53ea3-3bf6-47cf-88e6-197e3d239806
+langcode: es
+status: true
+dependencies:
+  config:
+    - filter.format.clean
+    - filter.format.filtered_html
+    - filter.format.full_html
+    - node.type.articulo_nna
+    - node.type.glosario
+    - node.type.portfolio_tramite
+    - node.type.services_faq
+  module:
+    - filter
+    - node
+    - publishcontent
+    - scheduler
+    - system
+id: servicios_portafolio_
+label: 'Servicios (Portafolio)'
+weight: 34
+is_admin: null
+permissions:
+  - 'create articulo_nna content'
+  - 'create glosario content'
+  - 'create portfolio_tramite content'
+  - 'create services_faq content'
+  - 'delete any articulo_nna content'
+  - 'delete any glosario content'
+  - 'delete any portfolio_tramite content'
+  - 'delete any services_faq content'
+  - 'delete own articulo_nna content'
+  - 'delete own glosario content'
+  - 'delete own portfolio_tramite content'
+  - 'delete own services_faq content'
+  - 'edit any articulo_nna content'
+  - 'edit any glosario content'
+  - 'edit any portfolio_tramite content'
+  - 'edit any services_faq content'
+  - 'edit own articulo_nna content'
+  - 'edit own glosario content'
+  - 'edit own portfolio_tramite content'
+  - 'edit own services_faq content'
+  - 'schedule publishing of nodes'
+  - 'unpublish editable content'
+  - 'use text format clean'
+  - 'use text format filtered_html'
+  - 'use text format full_html'
+  - 'view scheduled content'
+  - 'view the administration theme'

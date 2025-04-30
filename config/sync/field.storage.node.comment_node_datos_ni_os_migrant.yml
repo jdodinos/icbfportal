@@ -1,0 +1,20 @@
+uuid: 268387c1-f7ba-4bce-a205-0ed55e438b84
+langcode: es
+status: true
+dependencies:
+  module:
+    - comment
+    - node
+id: node.comment_node_datos_ni_os_migrant
+field_name: comment_node_datos_ni_os_migrant
+entity_type: node
+type: comment
+settings:
+  comment_type: comment_node_datos_ni_os_migrant
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

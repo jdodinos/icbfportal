@@ -1,0 +1,25 @@
+uuid: 7283f9da-2f6d-4cde-b292-4b30baffb5ed
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.footer
+    - field.storage.block_content.field_builder
+  module:
+    - text
+id: block_content.footer.field_builder
+field_name: field_builder
+entity_type: block_content
+bundle: footer
+label: Builder
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: "<p>.</p>\r\n"
+    format: full_html
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

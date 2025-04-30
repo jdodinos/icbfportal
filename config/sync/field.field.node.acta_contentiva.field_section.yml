@@ -1,0 +1,28 @@
+uuid: 560e03bb-9ba7-4cd9-91da-9acb6c920f3c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section
+    - node.type.acta_contentiva
+    - taxonomy.vocabulary.secctions
+id: node.acta_contentiva.field_section
+field_name: field_section
+entity_type: node
+bundle: acta_contentiva
+label: Sección
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    tid: '1244'
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      secctions: secctions
+    sort:
+      field: _none
+field_type: entity_reference

@@ -1,0 +1,33 @@
+uuid: 78847239-f213-4db6-ae89-b46e754f5076
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.comment_node_datos_ni_os_migrant
+    - node.type.datos_ni_os_migrantes
+  module:
+    - comment
+id: node.datos_ni_os_migrantes.comment_node_datos_ni_os_migrant
+field_name: comment_node_datos_ni_os_migrant
+entity_type: node
+bundle: datos_ni_os_migrantes
+label: Comments
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    status: 2
+    cid: 0
+    last_comment_timestamp: 0
+    last_comment_name: null
+    last_comment_uid: 0
+    comment_count: 0
+default_value_callback: ''
+settings:
+  default_mode: 1
+  per_page: 50
+  anonymous: 0
+  form_location: true
+  preview: 1
+field_type: comment

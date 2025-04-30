@@ -1,0 +1,26 @@
+uuid: 4a2cd437-85f5-4322-9225-46cf86a10b02
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section
+    - node.type.document_microsite
+    - taxonomy.vocabulary.secctions
+id: node.document_microsite.field_section
+field_name: field_section
+entity_type: node
+bundle: document_microsite
+label: 'Sección: Mapa del Sitio'
+description: 'Secciones de contenido areas misionales y trasversales del sitio web. Seleccione, en caso de relacionar el documento al mapa del sitio.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      secctions: secctions
+    sort:
+      field: _none
+field_type: entity_reference

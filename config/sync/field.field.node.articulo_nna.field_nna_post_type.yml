@@ -1,0 +1,28 @@
+uuid: 0132ecfc-da59-4996-aec1-674935605255
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nna_post_type
+    - node.type.articulo_nna
+    - taxonomy.vocabulary.file_category
+id: node.articulo_nna.field_nna_post_type
+field_name: field_nna_post_type
+entity_type: node
+bundle: articulo_nna
+label: 'Artículo para Niños Tipo'
+description: 'Categorización del post'
+required: false
+translatable: false
+default_value:
+  -
+    tid: '7643'
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      file_category: file_category
+    sort:
+      field: _none
+field_type: entity_reference

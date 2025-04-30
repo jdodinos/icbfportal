@@ -1,0 +1,101 @@
+uuid: 56128813-a368-47cd-89a8-5f40fcff5125
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_bot_n_home.default
+    - field.field.node.bot_n_home.comment_node_bot_n_home
+    - field.field.node.bot_n_home.field_btn_bann_image
+    - field.field.node.bot_n_home.field_btn_bann_zone
+    - field.field.node.bot_n_home.field_btn_listnumber
+    - field.field.node.bot_n_home.field_enlace
+    - field.field.node.bot_n_home.field_file_categoria
+    - field.field.node.bot_n_home.field_file_priority
+    - field.field.node.bot_n_home.field_metatag
+    - field.field.node.bot_n_home.field_section
+    - node.type.bot_n_home
+  module:
+    - comment
+    - image
+    - options
+    - user
+id: node.bot_n_home.default
+targetEntityType: node
+bundle: bot_n_home
+mode: default
+content:
+  comment_node_bot_n_home:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_btn_bann_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_btn_bann_zone:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_btn_listnumber:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_enlace:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_file_categoria:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_file_priority:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_section:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_metatag: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

@@ -1,0 +1,14 @@
+uuid: dcc73e3d-f158-4c0f-8e57-1feb96676fc1
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.abastecimiento
+  module:
+    - user
+id: user_add_role_action.abastecimiento
+label: 'Añade el rol Abastecimiento al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: abastecimiento

@@ -1,0 +1,19 @@
+uuid: 87bba018-a59b-445a-a8f9-b8984fa10244
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_ada_title
+    - taxonomy.vocabulary.programa_adopciones
+id: taxonomy_term.programa_adopciones.field_ada_title
+field_name: field_ada_title
+entity_type: taxonomy_term
+bundle: programa_adopciones
+label: 'ADA Title'
+description: 'Titular para vista en home de micrositio'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

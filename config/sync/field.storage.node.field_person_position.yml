@@ -1,0 +1,67 @@
+uuid: f42b45e4-a9ea-4e77-aff5-9c559b43e56c
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_person_position
+field_name: field_person_position
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: 'Directora General'
+    -
+      value: '2'
+      label: 'Director General (Encargado)'
+    -
+      value: '3'
+      label: 'Subdirector General'
+    -
+      value: '4'
+      label: 'Subdirector General (Encargado)'
+    -
+      value: '5'
+      label: 'Director Regional'
+    -
+      value: '6'
+      label: 'Director Regional (Encargado)'
+    -
+      value: '7'
+      label: 'Jefe de Oficina'
+    -
+      value: '8'
+      label: 'Jefe de Oficina (Encargado)'
+    -
+      value: '9'
+      label: 'Director Técnico'
+    -
+      value: '10'
+      label: 'Director Técnico (Encargado)'
+    -
+      value: '11'
+      label: 'Subdirector Técnico'
+    -
+      value: '12'
+      label: 'Subdirector Técnico (Encargado)'
+    -
+      value: '13'
+      label: 'Secretario General'
+    -
+      value: '14'
+      label: 'Secretario General (Encargado)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

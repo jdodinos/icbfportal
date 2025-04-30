@@ -1,0 +1,21 @@
+uuid: 458b4612-e01b-4a4f-a47a-86735d33f10f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_trd_vigencia
+    - node.type.transparency
+  module:
+    - options
+id: node.transparency.field_trd_vigencia
+field_name: field_trd_vigencia
+entity_type: node
+bundle: transparency
+label: 'TRD Vigencia'
+description: 'Año de vigencia para el archivo (sólo aplica para TRD)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

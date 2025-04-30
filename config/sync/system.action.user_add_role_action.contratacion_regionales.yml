@@ -1,0 +1,14 @@
+uuid: a41b4f06-f11a-46dc-85dd-3bdc07aabddb
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.contratacion_regionales
+  module:
+    - user
+id: user_add_role_action.contratacion_regionales
+label: 'Añade el rol Contratación Regionales al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: contratacion_regionales

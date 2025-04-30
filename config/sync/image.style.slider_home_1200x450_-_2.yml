@@ -1,0 +1,15 @@
+uuid: 6f910e16-d0d7-4bfe-8601-a64b6af46032
+langcode: es
+status: true
+dependencies: {  }
+name: slider_home_1200x450_-_2
+label: 'Slider home 1200x450 - 2'
+effects:
+  d6cba9c4-2773-44b8-89bd-2d14d7076479:
+    uuid: d6cba9c4-2773-44b8-89bd-2d14d7076479
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 465
+      anchor: center-center

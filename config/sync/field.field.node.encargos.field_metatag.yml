@@ -1,0 +1,21 @@
+uuid: b01d0a39-3b3c-4f0c-9ad4-bf1d9070f9e4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.encargos
+  module:
+    - metatag
+id: node.encargos.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: encargos
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

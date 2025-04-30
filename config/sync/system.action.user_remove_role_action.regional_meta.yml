@@ -1,0 +1,14 @@
+uuid: 3205347a-7dcf-43a2-955a-0c243c29c3a9
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.regional_meta
+  module:
+    - user
+id: user_remove_role_action.regional_meta
+label: 'Elimina el rol Regional Meta al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: regional_meta
