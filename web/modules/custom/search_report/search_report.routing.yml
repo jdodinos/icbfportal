@@ -1,4 +1,4 @@
-search_reports.dashboard:
+search_report.dashboard:
   path: '/admin/reports/search-report'
   defaults:
     _form: '\Drupal\search_report\Form\SearchFilterForm'
