@@ -1,0 +1,25 @@
+uuid: bb920a4b-b55f-4c24-b61b-5771adc7554b
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:22871ae4-f183-459e-8fdd-9dc0e4ef961c'
+  module:
+    - block_content
+  theme:
+    - icbf
+id: icbf_menuprogramasright
+theme: icbf
+region: hidden
+weight: 0
+provider: null
+plugin: 'block_content:22871ae4-f183-459e-8fdd-9dc0e4ef961c'
+settings:
+  id: 'block_content:22871ae4-f183-459e-8fdd-9dc0e4ef961c'
+  label: 'Menu programas - right'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

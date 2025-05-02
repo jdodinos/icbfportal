@@ -3,7 +3,6 @@ langcode: es
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment_node_acta_contentiva.default
     - field.field.node.acta_contentiva.comment_node_acta_contentiva
     - field.field.node.acta_contentiva.field_act_code
     - field.field.node.acta_contentiva.field_category_citizen
@@ -14,32 +13,29 @@ dependencies:
     - field.field.node.acta_contentiva.field_section
     - node.type.acta_contentiva
   module:
-    - comment
     - datetime
     - file
+    - panelizer
     - text
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.acta_contentiva.default
 targetEntityType: node
 bundle: acta_contentiva
 mode: default
 content:
-  comment_node_acta_contentiva:
-    type: comment_default
-    label: hidden
-    settings:
-      view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
-    weight: 20
-    region: content
   field_act_code:
     type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 6
+    weight: 5
     region: content
   field_category_citizen:
     type: entity_reference_label
@@ -47,7 +43,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 4
+    weight: 3
     region: content
   field_date:
     type: datetime_default
@@ -56,7 +52,7 @@ content:
       timezone_override: ''
       format_type: long
     third_party_settings: {  }
-    weight: 5
+    weight: 4
     region: content
   field_news_files:
     type: file_default
@@ -64,14 +60,14 @@ content:
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
   field_resume:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 2
     region: content
   field_section:
     type: entity_reference_label
@@ -79,15 +75,12 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 2
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
+    weight: 1
     region: content
 hidden:
+  comment_node_acta_contentiva: true
   field_metatag: true
   langcode: true
+  links: true
   search_api_attachments: true
   search_api_excerpt: true
