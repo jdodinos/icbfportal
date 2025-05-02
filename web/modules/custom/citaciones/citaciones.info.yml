@@ -1,0 +1,8 @@
+name: Citaciones ICBF
+description: Module for the summon functionalities and theming
+core_version_requirement: ^9 || ^10
+type: module
+dependencies:
+  - drupal:field
+  - drupal:views
+package: "ICBF Modules"

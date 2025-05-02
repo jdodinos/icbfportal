@@ -3,7 +3,6 @@ langcode: es
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment_node_agencies_adoptions_.default
     - field.field.node.agencies_adoptions_colombian.comment_node_agencies_adoptions_
     - field.field.node.agencies_adoptions_colombian.field_address_col
     - field.field.node.agencies_adoptions_colombian.field_document
@@ -15,85 +14,60 @@ dependencies:
     - field.field.node.agencies_adoptions_colombian.field_representante_en_colombia
     - node.type.agencies_adoptions_colombian
   module:
-    - comment
-    - file
+    - field_formatter_class
+    - panelizer
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.agencies_adoptions_colombian.default
 targetEntityType: node
 bundle: agencies_adoptions_colombian
 mode: default
 content:
-  comment_node_agencies_adoptions_:
-    type: comment_default
-    label: hidden
-    settings:
-      view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
-    weight: 20
-    region: content
-  field_address_col:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 9
-    region: content
-  field_document:
-    type: file_default
-    label: above
-    settings:
-      use_description_as_link_text: true
-    third_party_settings: {  }
-    weight: 11
-    region: content
   field_email:
     type: email_mailto
-    label: above
+    label: inline
     settings: {  }
-    third_party_settings: {  }
-    weight: 4
-    region: content
-  field_link_more_info:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 10
-    region: content
-  field_lugar:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 7
-    region: content
-  field_phone:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 3
-    region: content
-  field_representante_en_colombia:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
     third_party_settings: {  }
     weight: 1
     region: content
-  links:
-    settings: {  }
+  field_lugar:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 3
+    region: content
+  field_phone:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    weight: 100
+    weight: 2
+    region: content
+  field_representante_en_colombia:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
+  comment_node_agencies_adoptions_: true
+  field_address_col: true
+  field_document: true
+  field_link_more_info: true
   field_metatag: true
   langcode: true
+  links: true
   search_api_attachments: true
   search_api_excerpt: true

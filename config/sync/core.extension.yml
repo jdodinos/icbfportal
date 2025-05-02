@@ -30,6 +30,7 @@ module:
   charts: 0
   charts_google: 0
   charts_highcharts: 0
+  citaciones: 0
   ckeditor5: 0
   colorbox: 0
   comment: 0
@@ -229,6 +230,7 @@ module:
   views_migration: 0
   views_natural_sort: 0
   views_slideshow: 0
+  views_slideshow_cycle: 0
   views_timelinejs: 0
   views_ui: 0
   votingapi: 0
