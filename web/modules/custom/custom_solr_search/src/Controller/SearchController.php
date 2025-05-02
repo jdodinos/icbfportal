@@ -18,12 +18,31 @@ class SearchController extends ControllerBase {
       $results = $query->execute();
 
       foreach ($results as $item) {
-        $fields = $item->getFields();
-        $label = $fields['title']->getValues()[0] ?? 'Sin título';
-        $matches[] = ['value' => $label, 'label' => $label];
+        try {
+          // Verifica que el datasource esté disponible
+          $datasource = $item->getDatasource();
+          $fields = $item->getFields();
+
+          // Puedes usar ss_url como alternativa para "título"
+          $url_field = $fields['title']->getValues()[0] ?? null;
+
+          if ($url_field) {
+            $slug = basename(parse_url($url_field, PHP_URL_PATH));
+            $label = ucwords(str_replace('-', ' ', $slug));
+          } else {
+            $label = 'Sin título';
+          }
+
+          $matches[] = ['value' => $label, 'label' => $label];
+        }
+        catch (\Exception $e) {
+          \Drupal::logger('custom_solr_search')->error('Autocomplete error: @msg', ['@msg' => $e->getMessage()]);
+          continue;
+        }
       }
     }
 
     return new JsonResponse($matches);
   }
 }
+
