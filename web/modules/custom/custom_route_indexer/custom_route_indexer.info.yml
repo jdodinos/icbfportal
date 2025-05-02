@@ -1,0 +1,10 @@
+name: 'Custom Route Indexer'
+config:
+  search_api.index.custom_route_indexer: true
+type: module
+description: 'Permite indexar contenido de rutas locales y URLs externas a través de Solr.'
+core_version_requirement: ^10
+package: 'Custom'
+dependencies:
+  - search_api
+  - search_api_solr

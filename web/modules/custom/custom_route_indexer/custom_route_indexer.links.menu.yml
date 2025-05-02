@@ -1,0 +1,6 @@
+custom_route_indexer.settings:
+  title: 'Custom Route Indexer'
+  description: 'Configura rutas para indexación automática.'
+  route_name: custom_route_indexer.settings
+  parent: system.admin_config_search
+  weight: 100
