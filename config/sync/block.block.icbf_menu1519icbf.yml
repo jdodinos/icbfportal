@@ -1,20 +1,21 @@
-uuid: b7bed450-8bc4-46ad-8272-2e80e14e467c
+uuid: 4d460c67-b83b-42cb-8340-28fa1115fa04
 langcode: es
 status: true
 dependencies:
   module:
+    - block_class
     - tb_megamenu
   theme:
     - icbf
-id: icbf_navegacionprincipal
+id: icbf_menu1519icbf
 theme: icbf
 region: nav_main
 weight: 0
 provider: null
-plugin: 'tb_megamenu_menu_block:main'
+plugin: 'tb_megamenu_menu_block:mgm-6049302480ef2'
 settings:
-  id: 'tb_megamenu_menu_block:main'
-  label: 'Navegación principal'
+  id: 'tb_megamenu_menu_block:mgm-6049302480ef2'
+  label: 'Menu 1519 ICBF'
   label_display: '0'
   provider: tb_megamenu
 visibility: {  }

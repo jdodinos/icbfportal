@@ -92,6 +92,7 @@ module:
   hacked: 0
   help: 0
   history: 0
+  icbf_configuration: 0
   icbf_migrations: 0
   image: 0
   image_effects: 0

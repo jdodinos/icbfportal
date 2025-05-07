@@ -1,36 +1,42 @@
-uuid: c4c42695-72d5-41e5-abb8-d174326e0a46
+uuid: a3a5e975-4897-431e-bb2f-6b64899c1a13
 langcode: es
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.summon
   module:
+    - csv_serialization
+    - node
+    - rest
+    - serialization
     - user
-_core:
-  default_config_hash: zji0_13MyVGK7Bn1lUMDeZyyOIZedWvqpYUeM_SioPI
-id: who_s_new
-label: 'Quién es nuevo'
-module: user
-description: 'Muestra una lista de las cuentas de usuario más recientes del sitio.'
-tag: default
-base_table: users_field_data
-base_field: uid
+    - views_data_export
+id: citaciones
+label: Citaciones
+module: views
+description: ''
+tag: ''
+base_table: node_field_data
+base_field: nid
 display:
   default:
     id: default
-    display_title: Master
+    display_title: Default
     display_plugin: default
     position: 0
     display_options:
-      title: 'Quién es nuevo'
+      title: Citaciones
       fields:
-        name:
-          id: name
-          table: users_field_data
-          field: name
+        title:
+          id: title
+          table: node_field_data
+          field: title
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: user
-          entity_field: name
+          entity_type: node
+          entity_field: title
           plugin_id: field
           label: ''
           exclude: false
@@ -55,12 +61,39 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          type: user_name
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
       pager:
-        type: some
+        type: mini
         options:
           offset: 0
-          items_per_page: 5
+          pagination_heading_level: h4
+          items_per_page: 10
+          total_pages: null
+          id: 0
+          tags:
+            next: ››
+            previous: ‹‹
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- Todo -'
+            offset: false
+            offset_label: Desplazamiento
       exposed_form:
         type: basic
         options:
@@ -82,55 +115,50 @@ display:
       sorts:
         created:
           id: created
-          table: users_field_data
+          table: node_field_data
           field: created
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: user
+          entity_type: node
           entity_field: created
           plugin_id: date
           order: DESC
           expose:
             label: ''
-            field_identifier: created
+            field_identifier: ''
           exposed: false
           granularity: second
       arguments: {  }
       filters:
         status:
           id: status
-          table: users_field_data
+          table: node_field_data
           field: status
-          entity_type: user
+          entity_type: node
           entity_field: status
           plugin_id: boolean
           value: '1'
           group: 1
           expose:
-            operator: '0'
-            operator_limit_selection: false
-            operator_list: {  }
-        access:
-          id: access
-          table: users_field_data
-          field: access
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: user
-          entity_field: access
-          plugin_id: date
-          operator: '>'
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          operator: in
           value:
-            min: ''
-            max: ''
-            value: '1970-01-01'
-            type: date
+            summon: summon
           group: 1
           exposed: false
           expose:
-            operator_id: '0'
+            operator_id: ''
             label: ''
             description: ''
             use_operator: false
@@ -143,6 +171,7 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            reduce: false
           is_grouped: false
           group_info:
             label: ''
@@ -156,9 +185,11 @@ display:
             default_group_multiple: {  }
             group_items: {  }
       style:
-        type: html_list
+        type: default
       row:
-        type: fields
+        type: 'entity:node'
+        options:
+          view_mode: teaser
       query:
         type: views_query
         options:
@@ -167,6 +198,7 @@ display:
           distinct: false
           replica: false
           query_tags: {  }
+          contextual_filters_or: false
       relationships: {  }
       header: {  }
       footer: {  }
@@ -176,22 +208,67 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  block_1:
-    id: block_1
-    display_title: 'Quién es nuevo'
-    display_plugin: block
+  data_export_1:
+    id: data_export_1
+    display_title: 'Data export'
+    display_plugin: data_export
     position: 1
     display_options:
-      display_description: 'Un listado de nuevos usuarios'
-      display_extenders: {  }
-      block_description: 'Quién es nuevo'
-      block_category: Usuario
+      style:
+        type: data_export
+        options:
+          formats:
+            csv: csv
+          csv_settings:
+            delimiter: ','
+            enclosure: '"'
+            escape_char: \
+            strip_tags: true
+            trim: true
+            encoding: utf8
+            utf8_bom: '0'
+            use_serializer_encode_only: false
+      display_extenders:
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
+      path: citaciones/exportar
+      filename: ''
+      automatic_download: false
+      store_in_public_file_directory: null
+      custom_redirect_path: false
+      redirect_to_display: none
+      include_query_params: false
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - request_format
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  page_1:
+    id: page_1
+    display_title: Page
+    display_plugin: page
+    position: 1
+    display_options:
+      display_extenders:
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
+      path: panel-de-control-defensores
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
         - user.permissions
       tags: {  }

@@ -1,0 +1,8 @@
+uuid: 137dfe90-bf09-43c8-b02a-0b1c10dd8c5e
+langcode: en
+status: true
+dependencies: {  }
+id: mgm-5d3f4fe8cd42b
+label: 'Menu familia'
+description: 'Menu micorsitio. Ser Papás'
+locked: false
