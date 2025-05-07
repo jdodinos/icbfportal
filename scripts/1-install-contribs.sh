@@ -163,7 +163,6 @@ modules=(
   doe
   panelizer
   job_scheduler
-  # we_megamenu
   page_manager
   php
   poll
@@ -175,6 +174,7 @@ modules=(
   geocoder_geofield
   geofield_map
   quick_node_clone
+  views_slideshow_cycle
 )
 
 for module_name in "${modules[@]}"; do
