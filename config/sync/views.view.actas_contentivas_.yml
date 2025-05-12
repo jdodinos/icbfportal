@@ -1,0 +1,615 @@
+uuid: 36feba77-011d-44b5-83ab-ab4bdd3884de
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_act_code
+    - field.storage.node.field_date
+    - field.storage.node.field_news_files
+    - node.type.acta_contentiva
+  module:
+    - better_exposed_filters
+    - datetime
+    - file
+    - node
+    - text
+    - user
+id: actas_contentivas_
+label: 'Actas Contentivas '
+module: views
+description: ''
+tag: default
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Master
+    display_plugin: default
+    position: 1
+    display_options:
+      title: 'Actas Contentivas '
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          plugin_id: field
+          label: ''
+          alter:
+            alter_text: false
+            make_link: false
+            absolute: false
+            word_boundary: false
+            ellipsis: false
+            strip_tags: false
+            trim: false
+            html: false
+          hide_empty: false
+          empty_zero: false
+          settings:
+            link_to_entity: 1
+        field_act_code:
+          id: field_act_code
+          table: node__field_act_code
+          field: field_act_code
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_news_files:
+          id: field_news_files
+          table: node__field_news_files
+          field: field_news_files
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: fid
+          type: file_default
+          settings: {  }
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_date:
+          id: field_date
+          table: node__field_date
+          field: field_date
+          plugin_id: field
+      pager:
+        type: full
+        options:
+          pagination_heading_level: h4
+          items_per_page: 5
+      exposed_form:
+        type: bef
+        options:
+          submit_button: Aplicar
+          reset_button: false
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Seleccione cualquier filtro y pulse Aplicar para ver los resultados'
+          text_input_required_format: full_html
+          bef:
+            general:
+              autosubmit: false
+              autosubmit_hide: true
+              input_required: false
+              allow_secondary: false
+              secondary_label: 'Opciones avanzadas'
+              secondary_open: false
+              secondary_collapse_override: '0'
+            filter:
+              sort:
+                plugin_id: default
+                advanced:
+                  collapsible: false
+                  is_secondary: null
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+        perm: 'access content'
+      cache:
+        type: none
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          plugin_id: date
+          order: DESC
+        field_date_value:
+          id: field_date_value
+          table: node__field_date
+          field: field_date_value
+          relationship: none
+          group_type: group
+          plugin_id: datetime
+          order: ASC
+          expose:
+            label: Fecha
+            order: ASC
+          exposed: true
+          ui_name: ''
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            acta_contentiva: acta_contentiva
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          row_class_special: 1
+          override: 1
+          sticky: 0
+          caption: ''
+          summary: ''
+          columns:
+            title: title
+            field_act_code: field_act_code
+            field_news_files: field_news_files
+            field_date: field_date
+          info:
+            title:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-left
+              separator: ''
+              empty_column: 0
+            field_act_code:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-left
+              separator: ''
+              empty_column: 0
+            field_news_files:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-left
+              separator: ''
+              empty_column: 0
+            field_date:
+              sortable: 1
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+          default: field_date
+          empty_table: 0
+          responsive: 0
+          bootstrap_styles:
+            striped: striped
+            bordered: 0
+            hover: 0
+            condensed: 0
+      row:
+        type: fields
+      query:
+        type: views_query
+        options: {  }
+      display_extenders: {  }
+      style_plugin: views_bootstrap_table_plugin_style
+      style_options:
+        grouping: {  }
+        row_class: ''
+        default_row_class: 1
+        row_class_special: 1
+        override: 1
+        sticky: 0
+        caption: ''
+        summary: ''
+        columns:
+          title: title
+          field_act_code: field_act_code
+          field_news_files: field_news_files
+          field_date: field_date
+        info:
+          title:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-left
+            separator: ''
+            empty_column: 0
+          field_act_code:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-left
+            separator: ''
+            empty_column: 0
+          field_news_files:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-left
+            separator: ''
+            empty_column: 0
+          field_date:
+            sortable: 1
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+        default: field_date
+        empty_table: 0
+        responsive: 0
+        bootstrap_styles:
+          striped: striped
+          bordered: 0
+          hover: 0
+          condensed: 0
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_act_code'
+        - 'config:field.storage.node.field_date'
+        - 'config:field.storage.node.field_news_files'
+  block:
+    id: block
+    display_title: 'bloque prueba de actas contentivas'
+    display_plugin: block
+    position: 2
+    display_options:
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: Nombre
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          settings:
+            link_to_entity: 1
+          ui_name: ''
+        field_act_code:
+          id: field_act_code
+          table: node__field_act_code
+          field: field_act_code
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'No. Radicado'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_news_files:
+          id: field_news_files
+          table: node__field_news_files
+          field: field_news_files
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: Archivo
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: fid
+          type: file_default
+          settings: {  }
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_date:
+          id: field_date
+          table: node__field_date
+          field: field_date
+          plugin_id: field
+      pager:
+        type: full
+        options:
+          offset: 0
+          pagination_heading_level: h4
+          items_per_page: 25
+          total_pages: null
+          id: 0
+          tags:
+            next: 'siguiente ›'
+            previous: '‹ anterior'
+            first: '« primero'
+            last: 'última »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options: '5, 10, 20, 40, 60'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- Todo -'
+            offset: false
+            offset_label: Desplazamiento
+          quantity: 9
+      query:
+        type: views_query
+        options: {  }
+      defaults:
+        pager: false
+        fields: false
+        pager_options: false
+      display_description: ''
+      display_extenders: {  }
+      field:
+        title:
+          link_to_node: 1
+      pager_options: null
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_act_code'
+        - 'config:field.storage.node.field_date'
+        - 'config:field.storage.node.field_news_files'

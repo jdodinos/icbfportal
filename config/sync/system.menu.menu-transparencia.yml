@@ -1,0 +1,8 @@
+uuid: 081b0016-2075-4882-9a77-53f4ac48707f
+langcode: en
+status: true
+dependencies: {  }
+id: menu-transparencia
+label: 'Menu Transparencia'
+description: 'side bar menu'
+locked: false

@@ -1,0 +1,8 @@
+uuid: cacfdbfc-7007-456c-b52e-565991c4732c
+langcode: en
+status: true
+dependencies: {  }
+id: mfu
+label: 'Menú MFU'
+description: ''
+locked: false

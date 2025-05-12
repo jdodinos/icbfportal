@@ -1,0 +1,8 @@
+uuid: 9000a4e0-0a46-4ae5-8210-1dd1ba8bfdcb
+langcode: en
+status: true
+dependencies: {  }
+id: mgm-5ee27f3730710
+label: 'Menu Proteccion'
+description: 'side bar menu section missional 2'
+locked: false

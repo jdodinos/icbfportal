@@ -1,0 +1,8 @@
+uuid: 4e0e1f6e-e3d0-4ae6-8fdd-b2f75516ba98
+langcode: en
+status: true
+dependencies: {  }
+id: mgm-5edaba119f9a0
+label: 'Menu Nutricion'
+description: 'side bar menu section missional 3'
+locked: false

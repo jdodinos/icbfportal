@@ -1,0 +1,8 @@
+uuid: bbec6608-058e-41db-ae71-a75619a8c871
+langcode: en
+status: true
+dependencies: {  }
+id: men-compras-locales
+label: Menú_Compras_Locales
+description: 'Menú que contiene accesos (links) a los nodos de compras locales'
+locked: false

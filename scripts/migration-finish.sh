@@ -1,9 +1,5 @@
 #!/bin/bash
 # Validate paramters
-if [ -z "$1" ]; then
-  echo "Error: Debes escribir una opción válida. Usa 'rollback' o 'import'."
-  exit 1
-fi
 
 # drushcommand="ddev drush";
 drushcommand='vendor/bin/drush';
@@ -19,9 +15,6 @@ elif [ "$1" = "reset" ]; then
   oper="reset-status"
 elif [ "$1" = "messages" ]; then
   oper="messages"
-else
-  echo "Error: Comando desconocido. Usa 'rollback' o 'import'."
-  exit 1
 fi
 
 migrationRollback() {
@@ -50,7 +43,10 @@ if [ -n "$2" ]; then
 else
   migrationskey=(
     # Despues de migrar contenidos
-    upgrade_d7_google_analytics_user_settings
+    upgrade_d7_views_migration
+    # upgrade_d7_google_analytics_user_settings
+      upgrade_d7_megamenu_menus
+    upgrade_d7_megamenu_links
   )
 fi
 
@@ -71,3 +67,21 @@ for mig_key in "${migrationskey[@]}"; do
     migrationMessages "$mig_key"
   fi
 done
+
+configsToDelete=(
+  captcha.captcha_point.user_login_form
+  rules.reaction.anadir_texto_al_cambiar_estado_estudios_del_sector
+  rules.reaction.dashboard_de_bienvenida_redirect
+  rules.reaction.derechos_de_peticion_despublicar
+  rules.reaction.desactivado_micrositio_ser_papas
+  rules.reaction.redirect_defensores
+  tb_megamenu.menu_config.main__icbf
+)
+
+for config in "${configsToDelete[@]}"; do
+  echo "Eliminando configuracion de $config"
+  $drushcommand config-delete $config
+done
+
+$drushcommand en icbf_configuration
+$drushcommand cache-rebuild
