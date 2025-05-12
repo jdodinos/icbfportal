@@ -1,0 +1,48 @@
+uuid: 73ae464a-a5df-4ebc-8234-7a3dbd36a098
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:footer:b3a0cdcf-2570-4f29-9db4-0ba314d039ea'
+  module:
+    - block_content
+    - system
+label: 'Home NNA ICBF'
+name: home_nna
+group: 'Home NNA ICBF'
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: fdf940e0-d505-4aec-93fa-ae0ec6ae54b6
+    context_mapping: {  }
+    pages: "/ninos-y-ninas-home-demo\r\n"
+reactions:
+  blocks:
+    id: blocks
+    uuid: 8869e7d2-69ed-41e5-a896-fd29ff8f5d6f
+    blocks:
+      a1757ef8-af31-4ac8-a51f-c103f6b24d27:
+        uuid: a1757ef8-af31-4ac8-a51f-c103f6b24d27
+        id: 'block_content:b3a0cdcf-2570-4f29-9db4-0ba314d039ea'
+        label: 'HOME - Top ID019'
+        provider: block_content
+        label_display: '0'
+        region: footer
+        weight: '0'
+        custom_id: block_content_b3a0cdcf_2570_4f29_9db4_0ba314d039ea
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: home_nna
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+    include_default_blocks: 0
+    saved: false
+weight: 0
