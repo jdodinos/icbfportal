@@ -5,7 +5,9 @@ dependencies:
   content:
     - 'block_content:basic:044b59f1-6243-445c-ad6c-e643fcac01f7'
   module:
+    - block_class
     - block_content
+    - system
   theme:
     - icbf
 id: icbf_top1519icbf
@@ -22,4 +24,8 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: /ninos-y-ninas-home-demo

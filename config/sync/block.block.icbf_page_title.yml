@@ -2,6 +2,9 @@ uuid: 1cf1642b-3c1f-467c-a53c-577667ad2854
 langcode: es
 status: true
 dependencies:
+  module:
+    - block_class
+    - system
   theme:
     - icbf
 _core:
@@ -17,4 +20,8 @@ settings:
   label: 'Título de la página'
   label_display: '0'
   provider: core
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: /ninos-y-ninas-home-demo
