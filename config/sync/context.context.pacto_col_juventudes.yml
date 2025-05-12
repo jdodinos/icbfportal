@@ -1,0 +1,21 @@
+uuid: 637b7b2b-8899-4478-91a1-9f807b46e6e6
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+label: pacto-col-juventudes
+name: pacto_col_juventudes
+group: null
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: b5355721-284a-40f2-9545-d86a6ad22707
+    context_mapping: {  }
+    pages: /pacto-colombia-con-las-juventudes
+reactions: {  }
+weight: 0

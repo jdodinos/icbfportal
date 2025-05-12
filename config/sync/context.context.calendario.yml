@@ -1,0 +1,21 @@
+uuid: 3b043a5d-8f6c-450a-ad5b-24d49212796f
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+label: Calendario
+name: calendario
+group: null
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: ebdf3b65-11ab-49ab-89bd-defbfe529c8a
+    context_mapping: {  }
+    pages: "/eventos-creados\r\n/eventos-creados/*"
+reactions: {  }
+weight: 0
