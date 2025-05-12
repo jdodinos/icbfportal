@@ -81,19 +81,6 @@ variant_settings:
             add_region_classes: 1
             attributes: ''
       components:
-        f05ffde2-8f6f-4bae-bfb6-85a824d86033:
-          uuid: f05ffde2-8f6f-4bae-bfb6-85a824d86033
-          region: left
-          configuration:
-            id: 'views_block:usuarios-block'
-            label: ''
-            label_display: visible
-            provider: views
-            context_mapping: {  }
-            views_label: ''
-            items_per_page: none
-          weight: 0
-          additional: {  }
         9dada113-c8c6-4157-9da0-4bfe109e334e:
           uuid: 9dada113-c8c6-4157-9da0-4bfe109e334e
           region: right
@@ -104,6 +91,19 @@ variant_settings:
             provider: views
             context_mapping: {  }
             views_label: ''
+            items_per_page: none
+          weight: 0
+          additional: {  }
+        199f6a52-db0b-4594-87cd-5ca1c975c127:
+          uuid: 199f6a52-db0b-4594-87cd-5ca1c975c127
+          region: left
+          configuration:
+            id: 'views_block:usuarios-block'
+            label: Defensores
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: Defensores
             items_per_page: none
           weight: 0
           additional: {  }

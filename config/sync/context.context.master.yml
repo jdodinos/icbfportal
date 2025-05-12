@@ -154,6 +154,21 @@ reactions:
         info: ''
         view_mode: full
         third_party_settings: {  }
+      a1962000-eec5-4889-84f2-9acdfa0f7bd3:
+        uuid: a1962000-eec5-4889-84f2-9acdfa0f7bd3
+        id: system_breadcrumb_block
+        label: 'Enlaces de ayuda a la navegación'
+        provider: system
+        label_display: '0'
+        region: breadcrumb
+        weight: '0'
+        custom_id: system_breadcrumb_block
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: master
+        context_mapping: {  }
+        third_party_settings: {  }
     include_default_blocks: 0
     saved: false
 weight: 0
