@@ -1,0 +1,50 @@
+uuid: 578b9aa7-70f5-4ad6-b0d3-a0e3e9921655
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+label: encuestas_pila_mostrencos_oac
+name: encuestas_pila_mostrencos_oac
+group: Webforms
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: a4ce148a-e1c3-45c7-b064-cc29e039e328
+    context_mapping: {  }
+    pages: "/encuestas/pilaweb\r\n/encuestas/mostrencos\r\n/encuestas/oac\r\n/encuestas/pilaweb/*\r\n/encuestas/mostrencos/*\r\n/encuestas/oac/*"
+reactions:
+  regions:
+    id: regions
+    uuid: 10d8f045-9d10-4ef1-a723-bb5da8d27196
+    regions:
+      olivero: {  }
+      claro: {  }
+      stable9: {  }
+      bootstrap5:
+        - header
+        - nav_branding
+        - nav_main
+        - nav_additional
+        - breadcrumb
+        - content
+        - sidebar_first
+        - sidebar_second
+        - footer
+      icbf:
+        - header
+        - nav_branding
+        - nav_main
+        - nav_additional
+        - breadcrumb
+        - feature
+        - sidebar_first
+        - sidebar_second
+        - footer
+        - hidden
+    saved: false
+weight: 0

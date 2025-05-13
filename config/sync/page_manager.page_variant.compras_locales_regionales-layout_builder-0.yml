@@ -1,0 +1,42 @@
+uuid: 6ddc918c-dae0-4a34-ac65-5b35f155364e
+langcode: es
+status: true
+dependencies:
+  config:
+    - page_manager.page.compras_locales_regionales
+  module:
+    - bootstrap_layouts
+id: compras_locales_regionales-layout_builder-0
+label: 'Compras locales en Regiones'
+weight: 0
+variant: layout_builder
+variant_settings:
+  id: layout_builder
+  label: null
+  weight: 0
+  uuid: 90150bea-aaa3-4b76-a978-6d05db139c7b
+  sections:
+    -
+      layout_id: bs_1col
+      layout_settings:
+        label: ''
+        context_mapping: {  }
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+      components: {  }
+      third_party_settings: {  }
+page: compras_locales_regionales
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

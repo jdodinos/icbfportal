@@ -12,7 +12,7 @@ dependencies:
 id: icbf_block_51
 theme: icbf
 region: content
-weight: 0
+weight: -3
 provider: null
 plugin: 'block_content:6b54a2b3-38bc-4776-a964-74eb188a19f0'
 settings:

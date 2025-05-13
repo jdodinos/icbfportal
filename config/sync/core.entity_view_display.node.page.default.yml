@@ -21,9 +21,16 @@ dependencies:
   module:
     - comment
     - file
+    - panelizer
     - text
     - user
     - youtube
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 _core:
   default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
 id: node.page.default
@@ -57,7 +64,7 @@ content:
     region: content
   field_content:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 0
@@ -87,6 +94,8 @@ content:
     weight: 3
     region: content
   links:
+    settings: {  }
+    third_party_settings: {  }
     weight: 101
     region: content
 hidden:

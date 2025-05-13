@@ -1,4 +1,4 @@
-uuid: ad989c99-4d46-42b6-8d0c-f98753f9240e
+uuid: 9f1720e5-4655-4cf1-a643-339fee3e91bd
 langcode: es
 status: true
 dependencies:
@@ -6,9 +6,7 @@ dependencies:
     - system
   theme:
     - icbf
-_core:
-  default_config_hash: gJ_fEe-AFT-q5U59HD5kPXwau8zXL8k8Tu_fTuCofys
-id: icbf_breadcrumbs
+id: icbf_enlacesdeayudaalanavegacion
 theme: icbf
 region: breadcrumb
 weight: 0

@@ -25,8 +25,8 @@ reactions:
     id: blocks
     uuid: fb312f7d-0b6a-41f8-a736-67e238a56760
     blocks:
-      b20d7ec1-9a07-4e18-8a42-33183176ffed:
-        uuid: b20d7ec1-9a07-4e18-8a42-33183176ffed
+      1e40527f-3e62-484e-a047-3549c0727d1d:
+        uuid: 1e40527f-3e62-484e-a047-3549c0727d1d
         id: 'block_content:4b0fab58-793e-41f9-8fe6-11898b40dc31'
         label: 'Menú Panel de Control Citaciones'
         provider: block_content

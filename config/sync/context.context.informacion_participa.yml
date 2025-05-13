@@ -1,0 +1,48 @@
+uuid: 2422a6d1-d774-4fa0-8629-533e524cfa35
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:footer:e22aa941-75b9-4b6b-9974-71bafadb22db'
+  module:
+    - block_content
+    - system
+label: informacion_participa
+name: informacion_participa
+group: 'Micrositio Participa'
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: a93d0b84-809d-4969-a622-87320b83a66d
+    context_mapping: {  }
+    pages: "/participa/diagnostico-e-identificacion-de-problemas\r\n/participa/planeacion-y-presupuesto-participativo\r\n/participa/consulta-ciudadana\r\n/participa/colaboracion-e-innovacion\r\n/participa/control-social\r\n/participacion-para-el-diagnostico-e-identificacion-de-problemas"
+reactions:
+  blocks:
+    id: blocks
+    uuid: 68642561-84ff-421a-8ca1-5dc71a257630
+    blocks:
+      cbf6a307-a0c6-4123-b636-5e5ecda05e6b:
+        uuid: cbf6a307-a0c6-4123-b636-5e5ecda05e6b
+        id: 'block_content:e22aa941-75b9-4b6b-9974-71bafadb22db'
+        label: 'Menú Participa'
+        provider: block_content
+        label_display: '0'
+        region: feature
+        weight: '0'
+        custom_id: block_content_e22aa941_75b9_4b6b_9974_71bafadb22db
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: informacion_participa
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+    include_default_blocks: 0
+    saved: false
+weight: 0

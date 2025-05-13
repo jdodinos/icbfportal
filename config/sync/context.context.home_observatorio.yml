@@ -1,0 +1,20 @@
+uuid: 514c30e8-136b-4c36-97eb-b7b8c4befa96
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+label: home_observatorio
+name: home_observatorio
+group: 'Micrositio Observatorio'
+description: 'Bloques que se muestran el en Home de Observatorio'
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: 5f1edc9b-7d00-4d8d-a351-988bc3589d7f
+    pages: ''
+reactions: {  }
+weight: 0

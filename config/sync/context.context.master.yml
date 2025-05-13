@@ -17,7 +17,7 @@ label: master
 name: master
 group: 'Sitio Principal ICBF'
 description: 'Layout para todas las páginas del Portal Web'
-requireAllConditions: true
+requireAllConditions: false
 disabled: false
 conditions:
   request_path:
@@ -25,7 +25,7 @@ conditions:
     negate: true
     uuid: 906f81f6-5eb0-496f-aa86-63db0eea48e5
     context_mapping: {  }
-    pages: "/backup-home\r\n/ser-papas\r\n/ser-papas/*\r\n/congreso-panamericano-xxii\r\n/congreso-panamericano-xxii/*\r\n/programa-adopciones\r\n/programa-adopciones/*\r\n/adopciones/quienes-pueden-ser-adoptados\r\n/adopciones/quienes-pueden-ser-adoptados/lineamiento\r\n/adopciones/quienes-pueden-adoptar\r\n/adopciones/requisitos-basicos\r\n/adopciones/proceso-de-adopcion\r\n/adopciones/proceso-de-adopcion/etapa-administrativa\r\n/adopciones/proceso-de-adopcion/etapa-judicial\r\n/adopciones/proceso-de-adopcion/seguimiento\r\n/adopciones/paso-paso\r\n/adopciones/instituciones-y-organismos-autorizados\r\n/adopciones/instituciones-organismos/colombia\r\n/adopciones/instituciones-organismos/internacionales\r\n/ninos-y-ninas-home-demo\r\n/ninos-y-ninas\r\n/ninos-y-ninas/*\r\n/adolescentes\r\n/adolescentes/*\r\n/atencion-servicios\r\n/pacto-colombia-con-las-juventudes\r\n/mi-familia-universal\r\n/mi-familia-universal/*"
+    pages: "/backup-home\r\n/ser-papas\r\n/ser-papas/*\r\n/congreso-panamericano-xxii\r\n/congreso-panamericano-xxii/*\r\n/adopciones\r\n/programa-adopciones\r\n/programa-adopciones/*\r\n/adopciones/quienes-pueden-ser-adoptados\r\n/adopciones/quienes-pueden-ser-adoptados/lineamiento\r\n/adopciones/quienes-pueden-adoptar\r\n/adopciones/requisitos-basicos\r\n/adopciones/proceso-de-adopcion\r\n/adopciones/proceso-de-adopcion/etapa-administrativa\r\n/adopciones/proceso-de-adopcion/etapa-judicial\r\n/adopciones/proceso-de-adopcion/seguimiento\r\n/adopciones/paso-paso\r\n/adopciones/instituciones-y-organismos-autorizados\r\n/adopciones/instituciones-organismos/colombia\r\n/adopciones/instituciones-organismos/internacionales\r\n/ninos-y-ninas-home-demo\r\n/ninos-y-ninas\r\n/ninos-y-ninas/*\r\n/adolescentes\r\n/adolescentes/*\r\n/atencion-servicios\r\n/pacto-colombia-con-las-juventudes\r\n/mi-familia-universal\r\n/mi-familia-universal/*"
 reactions:
   blocks:
     id: blocks
@@ -154,21 +154,6 @@ reactions:
         info: ''
         view_mode: full
         third_party_settings: {  }
-      a1962000-eec5-4889-84f2-9acdfa0f7bd3:
-        uuid: a1962000-eec5-4889-84f2-9acdfa0f7bd3
-        id: system_breadcrumb_block
-        label: 'Enlaces de ayuda a la navegación'
-        provider: system
-        label_display: '0'
-        region: breadcrumb
-        weight: '0'
-        custom_id: system_breadcrumb_block
-        theme: icbf
-        css_class: ''
-        unique: 0
-        context_id: master
-        context_mapping: {  }
-        third_party_settings: {  }
-    include_default_blocks: 0
+    include_default_blocks: 1
     saved: false
 weight: 0
