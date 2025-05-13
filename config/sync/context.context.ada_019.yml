@@ -1,0 +1,102 @@
+uuid: 28fcfbb4-5d24-4dc3-b699-aee1f88bab32
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:044b59f1-6243-445c-ad6c-e643fcac01f7'
+    - 'block_content:basic:b32da780-ad2d-4f3d-8a27-2340620d6d5c'
+    - 'block_content:footer:81df3ad9-d439-4cd5-afd5-d2264afb4c5f'
+  module:
+    - block_content
+    - system
+    - tb_megamenu
+label: ada_019
+name: ada_019
+group: 'Micrositio Adopciones ICBF'
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: c789d5f5-232c-47bd-ae93-c27c7546cf6c
+    context_mapping: {  }
+    pages: "/adopciones\r\n/programa-adopciones\r\n/programa-adopciones/*\r\n/adopciones/quienes-pueden-ser-adoptados\r\n/adopciones/quienes-pueden-ser-adoptados/lineamiento\r\n/adopciones/quienes-pueden-adoptar\r\n/adopciones/requisitos-basicos\r\n/adopciones/proceso-de-adopcion\r\n/adopciones/proceso-de-adopcion/etapa-administrativa\r\n/adopciones/proceso-de-adopcion/etapa-judicial\r\n/adopciones/proceso-de-adopcion/seguimiento\r\n/adopciones/paso-paso\r\n/adopciones/instituciones-y-organismos-autorizados\r\n/adopciones/instituciones-organismos/colombia\r\n/adopciones/instituciones-organismos/internacionales"
+reactions:
+  blocks:
+    id: blocks
+    uuid: 8dcd1c7d-0a09-4c9f-9ab0-baeb03665b5a
+    blocks:
+      32c9c818-bde7-4f42-82eb-5bd406a44ec6:
+        uuid: 32c9c818-bde7-4f42-82eb-5bd406a44ec6
+        id: 'block_content:b32da780-ad2d-4f3d-8a27-2340620d6d5c'
+        label: 'GOVCO 1519'
+        provider: block_content
+        label_display: '0'
+        region: header
+        weight: '-1'
+        custom_id: block_content_b32da780_ad2d_4f3d_8a27_2340620d6d5c
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: ada_019
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+      fb2a98cb-0240-4fd1-868b-1790323c6c65:
+        uuid: fb2a98cb-0240-4fd1-868b-1790323c6c65
+        id: 'block_content:044b59f1-6243-445c-ad6c-e643fcac01f7'
+        label: 'TOP 1519 ICBF'
+        provider: block_content
+        label_display: '0'
+        region: header
+        weight: '0'
+        custom_id: block_content_044b59f1_6243_445c_ad6c_e643fcac01f7
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: ada_019
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+      be0bfe5d-8130-4082-8ce8-1923b60c3cea:
+        uuid: be0bfe5d-8130-4082-8ce8-1923b60c3cea
+        id: 'block_content:81df3ad9-d439-4cd5-afd5-d2264afb4c5f'
+        label: 'TOP ADA'
+        provider: block_content
+        label_display: '0'
+        region: header
+        weight: '1'
+        custom_id: block_content_81df3ad9_d439_4cd5_afd5_d2264afb4c5f
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: ada_019
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+      47108dd3-3d3b-4c85-a652-f8d1f67248fa:
+        uuid: 47108dd3-3d3b-4c85-a652-f8d1f67248fa
+        id: 'tb_megamenu_menu_block:mgm-5ce41f0ce4a05'
+        label: 'Menu ADA'
+        provider: tb_megamenu
+        label_display: '0'
+        region: header
+        weight: '2'
+        custom_id: tb_megamenu_menu_block_mgm_5ce41f0ce4a05
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: ada_019
+        context_mapping: {  }
+        third_party_settings: {  }
+    include_default_blocks: 0
+    saved: false
+weight: 0

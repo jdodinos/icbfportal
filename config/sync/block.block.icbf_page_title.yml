@@ -3,7 +3,6 @@ langcode: es
 status: true
 dependencies:
   module:
-    - block_class
     - system
   theme:
     - icbf

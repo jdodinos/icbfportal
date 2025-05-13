@@ -11,7 +11,6 @@ dependencies:
     - datetime_range
     - fullcalendar_view
     - node
-    - user
 id: calendario_de_eventos
 label: 'Calendario de eventos'
 module: views
@@ -235,9 +234,8 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: perm
-        options:
-          perm: 'access content'
+        type: none
+        options: {  }
       cache:
         type: tag
         options: {  }
@@ -392,7 +390,6 @@ display:
         - 'languages:language_interface'
         - url.query_args
         - 'user.node_grants:view'
-        - user.permissions
       tags:
         - 'config:field.storage.node.event_calendar_date'
         - 'config:field.storage.node.field_date_day_calendaro'
@@ -414,7 +411,6 @@ display:
         - 'languages:language_interface'
         - url.query_args
         - 'user.node_grants:view'
-        - user.permissions
       tags:
         - 'config:field.storage.node.event_calendar_date'
         - 'config:field.storage.node.field_date_day_calendaro'
