@@ -1,0 +1,21 @@
+uuid: 2fe4c560-edf2-44b5-9d3f-fcc15fb970f7
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+label: home_childhood
+name: home_childhood
+group: 'Micrositio Primera Infancia'
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: 35ce6653-635d-4e4f-a531-c3137422921d
+    context_mapping: {  }
+    pages: "/programas-y-estrategias/primera-infancia\r\n/programas-y-estrategias/primera-infancia/*"
+reactions: {  }
+weight: 0

@@ -4,11 +4,14 @@ status: true
 dependencies:
   content:
     - 'block_content:basic:044b59f1-6243-445c-ad6c-e643fcac01f7'
+    - 'block_content:basic:5087fe76-c2c6-4f68-904e-796aa99a91e3'
+    - 'block_content:basic:528a0197-ca56-4d05-b68f-5d3aab9ac7ce'
     - 'block_content:basic:b32da780-ad2d-4f3d-8a27-2340620d6d5c'
     - 'block_content:footer:81df3ad9-d439-4cd5-afd5-d2264afb4c5f'
   module:
     - block_content
     - system
+    - taxonomy
     - tb_megamenu
 label: ada_019
 name: ada_019
@@ -17,10 +20,18 @@ description: ''
 requireAllConditions: false
 disabled: false
 conditions:
+  'entity_bundle:taxonomy_term':
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 3afd4e70-a631-4fe7-b5bb-f7de32a251f8
+    context_mapping:
+      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+    bundles:
+      programa_adopciones: programa_adopciones
   request_path:
     id: request_path
     negate: false
-    uuid: c789d5f5-232c-47bd-ae93-c27c7546cf6c
+    uuid: c11a5594-0a06-4faf-be81-68e4447d4ab5
     context_mapping: {  }
     pages: "/adopciones\r\n/programa-adopciones\r\n/programa-adopciones/*\r\n/adopciones/quienes-pueden-ser-adoptados\r\n/adopciones/quienes-pueden-ser-adoptados/lineamiento\r\n/adopciones/quienes-pueden-adoptar\r\n/adopciones/requisitos-basicos\r\n/adopciones/proceso-de-adopcion\r\n/adopciones/proceso-de-adopcion/etapa-administrativa\r\n/adopciones/proceso-de-adopcion/etapa-judicial\r\n/adopciones/proceso-de-adopcion/seguimiento\r\n/adopciones/paso-paso\r\n/adopciones/instituciones-y-organismos-autorizados\r\n/adopciones/instituciones-organismos/colombia\r\n/adopciones/instituciones-organismos/internacionales"
 reactions:
@@ -96,6 +107,42 @@ reactions:
         unique: 0
         context_id: ada_019
         context_mapping: {  }
+        third_party_settings: {  }
+      babce853-13aa-4271-934a-9970fe44d384:
+        uuid: babce853-13aa-4271-934a-9970fe44d384
+        id: 'block_content:528a0197-ca56-4d05-b68f-5d3aab9ac7ce'
+        label: 'Footer 1519 -1'
+        provider: block_content
+        label_display: '0'
+        region: footer
+        weight: '-2'
+        custom_id: block_content_528a0197_ca56_4d05_b68f_5d3aab9ac7ce
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: ada_019
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+      1b3c236f-f61d-4b38-b40e-f9c3486a94ac:
+        uuid: 1b3c236f-f61d-4b38-b40e-f9c3486a94ac
+        id: 'block_content:5087fe76-c2c6-4f68-904e-796aa99a91e3'
+        label: 'Footer GOVCO'
+        provider: block_content
+        label_display: '0'
+        region: footer
+        weight: '-1'
+        custom_id: block_content_5087fe76_c2c6_4f68_904e_796aa99a91e3
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: ada_019
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
         third_party_settings: {  }
     include_default_blocks: 0
     saved: false

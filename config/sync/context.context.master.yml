@@ -17,7 +17,7 @@ label: master
 name: master
 group: 'Sitio Principal ICBF'
 description: 'Layout para todas las páginas del Portal Web'
-requireAllConditions: true
+requireAllConditions: false
 disabled: false
 conditions:
   request_path:
@@ -153,38 +153,6 @@ reactions:
         status: true
         info: ''
         view_mode: full
-        third_party_settings: {  }
-      a1962000-eec5-4889-84f2-9acdfa0f7bd3:
-        uuid: a1962000-eec5-4889-84f2-9acdfa0f7bd3
-        id: system_breadcrumb_block
-        label: 'Enlaces de ayuda a la navegación'
-        provider: system
-        label_display: '0'
-        region: breadcrumb
-        weight: '0'
-        custom_id: system_breadcrumb_block
-        theme: icbf
-        css_class: ''
-        unique: 0
-        context_id: master
-        context_mapping: {  }
-        third_party_settings: {  }
-      32c34c6d-e619-4916-aca9-cf8f013068ce:
-        uuid: 32c34c6d-e619-4916-aca9-cf8f013068ce
-        id: local_tasks_block
-        label: Pestañas
-        provider: core
-        label_display: '0'
-        region: feature
-        weight: '0'
-        custom_id: local_tasks_block
-        theme: icbf
-        css_class: ''
-        unique: 0
-        context_id: master
-        context_mapping: {  }
-        primary: 1
-        secondary: 1
         third_party_settings: {  }
     include_default_blocks: 1
     saved: false
