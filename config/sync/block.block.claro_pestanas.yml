@@ -2,8 +2,6 @@ uuid: a16ed7e6-bf15-4ab0-91a9-684e4b29b522
 langcode: es
 status: true
 dependencies:
-  module:
-    - block_class
   theme:
     - claro
 id: claro_pestanas

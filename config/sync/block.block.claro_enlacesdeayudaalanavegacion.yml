@@ -1,0 +1,20 @@
+uuid: 758201b5-74de-46a1-bbb9-8d69ec4abcb1
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - claro
+id: claro_enlacesdeayudaalanavegacion
+theme: claro
+region: header
+weight: -2
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Enlaces de ayuda a la navegación'
+  label_display: '0'
+  provider: system
+visibility: {  }
