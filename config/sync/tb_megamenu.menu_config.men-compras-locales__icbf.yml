@@ -1,0 +1,13 @@
+uuid: 806bf42c-0a48-4a4c-8459-dd5186ba9acb
+langcode: es
+status: true
+dependencies:
+  theme:
+    - icbf
+  menu:
+    - men-compras-locales
+id: men-compras-locales__icbf
+menu: men-compras-locales
+theme: icbf
+block_config: '{"animation":"none","duration":400,"delay":200,"style":"","auto-arrow":"1","always-show-submenu":"1","number-columns":null}'
+menu_config: '{"menu_link_content:7d02377f-d490-44df-97cf-46a0ea9d56b9":{"rows_content":[],"submenu_config":{"width":"","class":"","group":"0"},"item_config":{"class":"","xicon":"","caption":"","alignsub":"","group":"0","hidewcol":"0","hidesub":"0","label":""}}}'

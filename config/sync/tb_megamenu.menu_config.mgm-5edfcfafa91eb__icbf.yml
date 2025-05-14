@@ -1,0 +1,13 @@
+uuid: 4d20be60-4be8-4d08-aace-816f0fc513a7
+langcode: es
+status: true
+dependencies:
+  theme:
+    - icbf
+  menu:
+    - mgm-5edfcfafa91eb
+id: mgm-5edfcfafa91eb__icbf
+menu: mgm-5edfcfafa91eb
+theme: icbf
+block_config: '[]'
+menu_config: '[]'
