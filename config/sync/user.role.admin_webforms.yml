@@ -1,0 +1,31 @@
+uuid: 7bfb709a-47c5-403c-9ad4-60c1f3ade0c7
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.webform
+  module:
+    - node
+    - publishcontent
+    - statistics
+    - system
+id: admin_webforms
+label: 'Admin Webforms'
+weight: 5
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content'
+  - 'access content overview'
+  - 'bypass node access'
+  - 'create webform content'
+  - 'delete any webform content'
+  - 'delete own webform content'
+  - 'edit any webform content'
+  - 'edit own webform content'
+  - 'publish any content'
+  - 'publish editable content'
+  - 'unpublish any content'
+  - 'unpublish editable content'
+  - 'view own unpublished content'
+  - 'view post access counter'

@@ -1,0 +1,25 @@
+uuid: 7e061715-7594-4ad6-9ce3-57183031aa9f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_related_procedures
+    - taxonomy.vocabulary.procedure
+id: taxonomy_term.procedure.field_related_procedures
+field_name: field_related_procedures
+entity_type: taxonomy_term
+bundle: procedure
+label: 'Trámites relacionados'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      procedure: procedure
+    sort:
+      field: _none
+field_type: entity_reference

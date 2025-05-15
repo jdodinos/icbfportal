@@ -1,0 +1,23 @@
+uuid: 124191ef-f5d6-4c76-abbb-e23ef946978d
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - taxonomy
+    - text
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: taxonomy_term.field_content2_ada
+field_name: field_content2_ada
+entity_type: taxonomy_term
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

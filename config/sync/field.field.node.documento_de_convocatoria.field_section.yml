@@ -1,0 +1,28 @@
+uuid: 3db99081-653b-416b-92db-df0c17c726e8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section
+    - node.type.documento_de_convocatoria
+    - taxonomy.vocabulary.secctions
+id: node.documento_de_convocatoria.field_section
+field_name: field_section
+entity_type: node
+bundle: documento_de_convocatoria
+label: Sección
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    tid: '1237'
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      secctions: secctions
+    sort:
+      field: _none
+field_type: entity_reference

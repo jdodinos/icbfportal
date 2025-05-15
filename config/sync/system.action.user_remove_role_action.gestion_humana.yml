@@ -1,0 +1,14 @@
+uuid: b4e18513-f401-4040-8ccf-5f4594e79414
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.gestion_humana
+  module:
+    - user
+id: user_remove_role_action.gestion_humana
+label: 'Elimina el rol Gestion Humana al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: gestion_humana

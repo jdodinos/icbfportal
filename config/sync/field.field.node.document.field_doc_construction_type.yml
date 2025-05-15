@@ -1,0 +1,21 @@
+uuid: 009753d8-b62e-4fa6-a9fd-6afa580b681d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_construction_type
+    - node.type.document
+  module:
+    - options
+id: node.document.field_doc_construction_type
+field_name: field_doc_construction_type
+entity_type: node
+bundle: document
+label: 'En Construcción'
+description: 'Exclusivo para clasificación de documentos en construcción'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

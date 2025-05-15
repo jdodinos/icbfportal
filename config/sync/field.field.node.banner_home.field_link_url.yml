@@ -1,0 +1,19 @@
+uuid: 5e7d5073-7704-4bb0-aaf9-8fa13e42dd64
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_url
+    - node.type.banner_home
+id: node.banner_home.field_link_url
+field_name: field_link_url
+entity_type: node
+bundle: banner_home
+label: Url
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

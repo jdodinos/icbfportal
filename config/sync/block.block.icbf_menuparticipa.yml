@@ -1,0 +1,25 @@
+uuid: eaf4ae2f-2516-4c70-b154-ebc348a01c29
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:footer:e22aa941-75b9-4b6b-9974-71bafadb22db'
+  module:
+    - block_content
+  theme:
+    - icbf
+id: icbf_menuparticipa
+theme: icbf
+region: hidden
+weight: 0
+provider: null
+plugin: 'block_content:e22aa941-75b9-4b6b-9974-71bafadb22db'
+settings:
+  id: 'block_content:e22aa941-75b9-4b6b-9974-71bafadb22db'
+  label: 'Menú Participa'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

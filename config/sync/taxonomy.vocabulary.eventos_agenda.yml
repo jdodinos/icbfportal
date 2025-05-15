@@ -1,0 +1,9 @@
+uuid: 42a92685-fa36-423f-aa67-3031e691f8d4
+langcode: es
+status: true
+dependencies: {  }
+name: 'Eventos Agenda'
+vid: eventos_agenda
+description: 'Eventos de Dirección General'
+weight: 5
+new_revision: false

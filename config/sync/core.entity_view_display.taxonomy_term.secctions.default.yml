@@ -1,0 +1,60 @@
+uuid: ee4e3cbf-5b05-455c-a559-eb96e684e262
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.secctions.field_category_citizen
+    - field.field.taxonomy_term.secctions.field_content
+    - field.field.taxonomy_term.secctions.field_docs
+    - field.field.taxonomy_term.secctions.field_icon
+    - field.field.taxonomy_term.secctions.field_landings_top
+    - field.field.taxonomy_term.secctions.field_link_more_info
+    - field.field.taxonomy_term.secctions.field_metatag
+    - field.field.taxonomy_term.secctions.field_microsite_info_category
+    - field.field.taxonomy_term.secctions.field_multimedia_complement
+    - field.field.taxonomy_term.secctions.field_priority
+    - field.field.taxonomy_term.secctions.field_related_procedures
+    - field.field.taxonomy_term.secctions.field_taxonomy_image
+    - taxonomy.vocabulary.secctions
+  module:
+    - text
+id: taxonomy_term.secctions.default
+targetEntityType: taxonomy_term
+bundle: secctions
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_landings_top:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_category_citizen: true
+  field_docs: true
+  field_icon: true
+  field_link_more_info: true
+  field_metatag: true
+  field_microsite_info_category: true
+  field_multimedia_complement: true
+  field_priority: true
+  field_related_procedures: true
+  field_taxonomy_image: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

@@ -1,0 +1,19 @@
+uuid: faedceed-3912-477c-89b5-b9e9cd2809a5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_id_diario_oficial
+    - node.type.documentos_de_normativa
+id: node.documentos_de_normativa.field_id_diario_oficial
+field_name: field_id_diario_oficial
+entity_type: node
+bundle: documentos_de_normativa
+label: 'ID en Diario Oficial'
+description: 'Número de identificación en Diario Oficial'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,84 @@
+uuid: 0c1feef3-262c-4cfd-b936-4211254831b3
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_rendicion_de_cuenta.default
+    - field.field.node.rendicion_de_cuentas.comment_node_rendicion_de_cuenta
+    - field.field.node.rendicion_de_cuentas.field_date
+    - field.field.node.rendicion_de_cuentas.field_document
+    - field.field.node.rendicion_de_cuentas.field_file_categoria
+    - field.field.node.rendicion_de_cuentas.field_location
+    - field.field.node.rendicion_de_cuentas.field_metatag
+    - field.field.node.rendicion_de_cuentas.field_section
+    - node.type.rendicion_de_cuentas
+  module:
+    - comment
+    - datetime
+    - file
+    - user
+id: node.rendicion_de_cuentas.default
+targetEntityType: node
+bundle: rendicion_de_cuentas
+mode: default
+content:
+  comment_node_rendicion_de_cuenta:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_document:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_file_categoria:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_location:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_section:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_metatag: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

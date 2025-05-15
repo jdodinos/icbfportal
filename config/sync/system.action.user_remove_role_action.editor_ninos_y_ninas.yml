@@ -1,0 +1,14 @@
+uuid: 93ec6856-d6f8-4f3b-b35d-fcf7a68e7ef4
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.editor_ninos_y_ninas
+  module:
+    - user
+id: user_remove_role_action.editor_ninos_y_ninas
+label: 'Elimina el rol Editor Niños y Niñas al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: editor_ninos_y_ninas

@@ -1,0 +1,30 @@
+uuid: ed738d49-4c04-4bda-85ae-b115e45317b9
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_photo_gallery2_even
+    - field.field.comment.comment_node_photo_gallery2_even.comment_body
+  module:
+    - text
+id: comment.comment_node_photo_gallery2_even.default
+targetEntityType: comment
+bundle: comment_node_photo_gallery2_even
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

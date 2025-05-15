@@ -1,0 +1,121 @@
+uuid: e8356c89-c129-47cb-a849-2e755fe92e08
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:25f7ea22-63d4-436d-a700-f3180540339a'
+    - 'block_content:basic:5087fe76-c2c6-4f68-904e-796aa99a91e3'
+    - 'block_content:footer:6d4baea1-1933-447d-947f-ecb4a1ba6cba'
+    - 'block_content:footer:d27abbca-f771-482d-ab2e-96c99398fd7f'
+  module:
+    - block_content
+    - system
+    - tb_megamenu
+label: congreso-iin
+name: congreso_iin
+group: 'Micrositio Congreso XXII'
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: 2f2940ed-4a49-43dc-96ca-19d64fa0d2b8
+    context_mapping: {  }
+    pages: "/congreso-panamericano-xxii\r\n/congreso-panamericano-xxii/*"
+reactions:
+  blocks:
+    id: blocks
+    uuid: 521d93b3-ea26-499f-b65d-71dd4034b8c7
+    blocks:
+      09c7703e-dd62-457e-b18d-ee584ffa785f:
+        uuid: 09c7703e-dd62-457e-b18d-ee584ffa785f
+        id: 'block_content:25f7ea22-63d4-436d-a700-f3180540339a'
+        label: 'GOVCO 20 MENU NAV'
+        provider: block_content
+        label_display: '0'
+        region: header
+        weight: '-1'
+        custom_id: block_content_25f7ea22_63d4_436d_a700_f3180540339a
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: congreso_iin
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+      30b7d427-82ee-46ae-8655-c5e67776e040:
+        uuid: 30b7d427-82ee-46ae-8655-c5e67776e040
+        id: 'block_content:6d4baea1-1933-447d-947f-ecb4a1ba6cba'
+        label: 'TOP XXII'
+        provider: block_content
+        label_display: '0'
+        region: header
+        weight: '0'
+        custom_id: block_content_6d4baea1_1933_447d_947f_ecb4a1ba6cba
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: congreso_iin
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+      5dd30e7d-9bd3-4073-ae4c-4c0b95b96f75:
+        uuid: 5dd30e7d-9bd3-4073-ae4c-4c0b95b96f75
+        id: 'tb_megamenu_menu_block:mgm-5da0e630d2a93'
+        label: 'Menu XXII'
+        provider: tb_megamenu
+        label_display: '0'
+        region: header
+        weight: '1'
+        custom_id: tb_megamenu_menu_block_mgm_5da0e630d2a93
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: congreso_iin
+        context_mapping: {  }
+        third_party_settings: {  }
+      9d3858f9-ea3a-4277-967b-f20f4e79ea45:
+        uuid: 9d3858f9-ea3a-4277-967b-f20f4e79ea45
+        id: 'block_content:d27abbca-f771-482d-ab2e-96c99398fd7f'
+        label: 'Footer XXII'
+        provider: block_content
+        label_display: '0'
+        region: footer
+        weight: '-2'
+        custom_id: block_content_d27abbca_f771_482d_ab2e_96c99398fd7f
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: congreso_iin
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+      178e5bdd-84ac-4c98-ae7d-0ae788be5941:
+        uuid: 178e5bdd-84ac-4c98-ae7d-0ae788be5941
+        id: 'block_content:5087fe76-c2c6-4f68-904e-796aa99a91e3'
+        label: 'Footer GOVCO'
+        provider: block_content
+        label_display: '0'
+        region: footer
+        weight: '-1'
+        custom_id: block_content_5087fe76_c2c6_4f68_904e_796aa99a91e3
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: congreso_iin
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+    include_default_blocks: 1
+    saved: false
+weight: 0

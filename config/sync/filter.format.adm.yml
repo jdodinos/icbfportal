@@ -1,0 +1,18 @@
+uuid: 2156fc66-6eea-4503-a52d-5cd4b6eed6c0
+langcode: es
+status: true
+dependencies:
+  module:
+    - slick
+name: adm
+format: adm
+weight: 0
+filters:
+  slick_filter:
+    id: slick_filter
+    provider: slick
+    status: false
+    weight: 4
+    settings:
+      optionset: default
+      media_switch: ''

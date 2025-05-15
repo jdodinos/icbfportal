@@ -1,0 +1,14 @@
+uuid: baee51a3-bac2-4ed2-bf4f-c336d995b830
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.mejoramiento_sige
+  module:
+    - user
+id: user_remove_role_action.mejoramiento_sige
+label: 'Elimina el rol Mejoramiento SIGE al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: mejoramiento_sige

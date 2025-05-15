@@ -1,0 +1,21 @@
+uuid: 801d298f-7c5f-439d-b8e4-6cdccd600578
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.rendicion_de_cuentas
+  module:
+    - metatag
+id: node.rendicion_de_cuentas.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: rendicion_de_cuentas
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

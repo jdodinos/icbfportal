@@ -1,0 +1,21 @@
+uuid: 051fd420-64b5-4df9-9ab9-e1ace79ea776
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.event_calendar_date
+    - node.type.event_calendar
+  module:
+    - datetime_range
+id: node.event_calendar.event_calendar_date
+field_name: event_calendar_date
+entity_type: node
+bundle: event_calendar
+label: 'Fecha de Programación'
+description: 'Fecha y Hora del evento programado'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

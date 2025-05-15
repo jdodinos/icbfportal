@@ -1,0 +1,28 @@
+uuid: 61291843-7f8e-423d-80f3-9854c5eaedea
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file_categoria
+    - node.type.process
+    - taxonomy.vocabulary.file_category
+id: node.process.field_file_categoria
+field_name: field_file_categoria
+entity_type: node
+bundle: process
+label: 'Categoría del archivo'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    tid: '6535'
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      file_category: file_category
+    sort:
+      field: _none
+field_type: entity_reference

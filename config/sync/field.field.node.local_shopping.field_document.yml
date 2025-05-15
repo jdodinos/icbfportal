@@ -1,0 +1,27 @@
+uuid: 49463b14-9a82-4296-a69e-f529a0eaebe1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document
+    - node.type.local_shopping
+  module:
+    - file
+id: node.local_shopping.field_document
+field_name: field_document
+entity_type: node
+bundle: local_shopping
+label: Documento
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'pdf doc xls xlsx docx ppt pptx xlm xlsm xlsb zip rar jpg jpeg png'
+  max_filesize: 60mb
+  description_field: true
+field_type: file

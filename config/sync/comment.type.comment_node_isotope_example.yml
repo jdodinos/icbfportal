@@ -1,0 +1,8 @@
+uuid: 30afe28a-6134-4d76-bb1d-44a9334690f4
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_isotope_example
+label: 'Isotope Example Node Type comment'
+target_entity_type_id: node
+description: null

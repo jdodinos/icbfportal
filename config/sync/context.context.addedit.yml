@@ -1,0 +1,48 @@
+uuid: 6c8218f1-eeef-4b72-b9f4-e5641b06d33e
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:1f1d1464-602a-4e9c-afa3-bf599c953400'
+  module:
+    - block_content
+    - system
+label: addedit
+name: addedit
+group: Node
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: 3ecde0cb-8823-4f02-875b-0d2f33d82e96
+    context_mapping: {  }
+    pages: "/media/browser\r\n/node/*/edit"
+reactions:
+  blocks:
+    id: blocks
+    uuid: 6f8e1cbf-28d6-471f-ab12-704e62183416
+    blocks:
+      d9b22d9b-c97e-4d7c-b3b2-8c8d02c3f8d3:
+        uuid: d9b22d9b-c97e-4d7c-b3b2-8c8d02c3f8d3
+        id: 'block_content:1f1d1464-602a-4e9c-afa3-bf599c953400'
+        label: 'Media title alt required'
+        provider: block_content
+        label_display: '0'
+        region: content
+        weight: '0'
+        custom_id: block_content_1f1d1464_602a_4e9c_afa3_bf599c953400
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: addedit
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+    include_default_blocks: 0
+    saved: false
+weight: 0

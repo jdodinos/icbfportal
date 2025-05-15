@@ -1,0 +1,21 @@
+uuid: 7d29e844-8978-42f6-9bb2-d1c54234c535
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_unpublish_date
+    - node.type.summon_sdg
+  module:
+    - datetime
+id: node.summon_sdg.field_unpublish_date
+field_name: field_unpublish_date
+entity_type: node
+bundle: summon_sdg
+label: 'Fecha desfijación'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

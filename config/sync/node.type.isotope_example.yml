@@ -1,0 +1,15 @@
+uuid: 13c91afe-fef1-490a-b27a-1ddc8d66b3d9
+langcode: es
+status: true
+dependencies:
+  module:
+    - scheduler
+third_party_settings:
+  scheduler: {  }
+name: 'Isotope Example Node Type'
+type: isotope_example
+description: 'This is an example node type with a few fields.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: true

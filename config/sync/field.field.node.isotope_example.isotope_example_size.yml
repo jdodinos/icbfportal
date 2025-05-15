@@ -1,0 +1,19 @@
+uuid: 097ab161-5bee-4618-b9a2-ef955796529e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.isotope_example_size
+    - node.type.isotope_example
+id: node.isotope_example.isotope_example_size
+field_name: isotope_example_size
+entity_type: node
+bundle: isotope_example
+label: Tamaño
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

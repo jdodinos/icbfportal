@@ -1,0 +1,26 @@
+uuid: d1284169-f51a-4be5-abd5-2544a6cdd9e2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section_mte
+    - node.type.document_microsite
+    - taxonomy.vocabulary.mis_manos_te_ensenan
+id: node.document_microsite.field_section_mte
+field_name: field_section_mte
+entity_type: node
+bundle: document_microsite
+label: 'Sección: mis manos te enseñan'
+description: 'Seleccione en caso de relacionar el documento al micrositio: mis manos te enseñan'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      mis_manos_te_ensenan: mis_manos_te_ensenan
+    sort:
+      field: _none
+field_type: entity_reference

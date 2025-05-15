@@ -1,0 +1,20 @@
+uuid: 75caf1c8-6ac8-4816-8d9b-10130acd38d8
+langcode: es
+status: true
+dependencies:
+  module:
+    - comment
+    - node
+id: node.comment_node_enlaces_transparenc
+field_name: comment_node_enlaces_transparenc
+entity_type: node
+type: comment
+settings:
+  comment_type: comment_node_enlaces_transparenc
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

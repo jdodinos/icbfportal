@@ -1,0 +1,182 @@
+uuid: 52aa2e32-8cf7-4dcf-9f9f-aac16ba65b6a
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_articulo_nna.default
+    - field.field.node.articulo_nna.comment_node_articulo_nna
+    - field.field.node.articulo_nna.field_date
+    - field.field.node.articulo_nna.field_introduction_text
+    - field.field.node.articulo_nna.field_link_url
+    - field.field.node.articulo_nna.field_nna_audio_file
+    - field.field.node.articulo_nna.field_nna_content
+    - field.field.node.articulo_nna.field_nna_docs
+    - field.field.node.articulo_nna.field_nna_html_code
+    - field.field.node.articulo_nna.field_nna_link_out
+    - field.field.node.articulo_nna.field_nna_post_image
+    - field.field.node.articulo_nna.field_nna_post_label
+    - field.field.node.articulo_nna.field_nna_post_type
+    - field.field.node.articulo_nna.field_nna_section
+    - field.field.node.articulo_nna.field_seo_title
+    - field.field.node.articulo_nna.field_youtube
+    - node.type.articulo_nna
+  module:
+    - comment
+    - datetime
+    - file
+    - image
+    - link
+    - options
+    - text
+    - user
+    - youtube
+id: node.articulo_nna.default
+targetEntityType: node
+bundle: articulo_nna
+mode: default
+content:
+  comment_node_articulo_nna:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_introduction_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_link_url:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_nna_audio_file:
+    type: file_audio
+    label: inline
+    settings:
+      controls: true
+      autoplay: false
+      loop: false
+      multiple_file_display_type: tags
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_nna_content:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_nna_docs:
+    type: file_default
+    label: inline
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_nna_html_code:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_nna_link_out:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_nna_post_image:
+    type: image
+    label: inline
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_nna_post_label:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_nna_post_type:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_nna_section:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_seo_title:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_youtube:
+    type: youtube_video
+    label: inline
+    settings:
+      youtube_size: 420x315
+      youtube_width: null
+      youtube_height: null
+      youtube_autoplay: false
+      youtube_mute: false
+      youtube_loop: false
+      youtube_controls: false
+      youtube_autohide: false
+      youtube_iv_load_policy: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

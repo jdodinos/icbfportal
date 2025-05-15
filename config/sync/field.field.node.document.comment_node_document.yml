@@ -1,0 +1,33 @@
+uuid: aa6dc09d-9dd4-4e2e-8c4a-9ec4f26e6f1e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.comment_node_document
+    - node.type.document
+  module:
+    - comment
+id: node.document.comment_node_document
+field_name: comment_node_document
+entity_type: node
+bundle: document
+label: Comments
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    status: 1
+    cid: 0
+    last_comment_timestamp: 0
+    last_comment_name: null
+    last_comment_uid: 0
+    comment_count: 0
+default_value_callback: ''
+settings:
+  default_mode: 0
+  per_page: 50
+  anonymous: 0
+  form_location: false
+  preview: 0
+field_type: comment

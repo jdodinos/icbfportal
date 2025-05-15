@@ -1,0 +1,36 @@
+uuid: 7687a071-9b8b-4bf3-a7bd-0cf7cc15439b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_parent
+    - node.type.announcement
+    - node.type.documento_de_convocatoria
+    - node.type.hiring_process
+    - node.type.process
+id: node.documento_de_convocatoria.field_parent
+field_name: field_parent
+entity_type: node
+bundle: documento_de_convocatoria
+label: 'Contenido padre'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      announcement: announcement
+      hiring_process: hiring_process
+      process: process
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 1
+      entityqueue:
+        status: 0
+field_type: entity_reference

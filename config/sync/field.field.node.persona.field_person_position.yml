@@ -1,0 +1,21 @@
+uuid: 30aed627-dbd1-4290-8f66-bbe065d4c3dc
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_person_position
+    - node.type.persona
+  module:
+    - options
+id: node.persona.field_person_position
+field_name: field_person_position
+entity_type: node
+bundle: persona
+label: Cargo
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

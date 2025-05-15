@@ -1,0 +1,18 @@
+uuid: cb2051ad-c3d6-4f87-a705-581730321c21
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.summon
+id: node.summon.title
+field_name: title
+entity_type: node
+bundle: summon
+label: Nombre
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

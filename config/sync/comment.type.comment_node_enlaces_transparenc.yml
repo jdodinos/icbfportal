@@ -1,0 +1,8 @@
+uuid: 44db7a1d-ccc4-4512-892f-1088881b70a2
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_enlaces_transparenc
+label: 'Enlaces Transparencia comment'
+target_entity_type_id: node
+description: null

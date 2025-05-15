@@ -1,0 +1,43 @@
+uuid: bc11ccb5-38ad-45e1-8dca-7b7c62ce827f
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_isotope_example
+    - field.field.comment.comment_node_isotope_example.comment_body
+  module:
+    - text
+id: comment.comment_node_isotope_example.default
+targetEntityType: comment
+bundle: comment_node_isotope_example
+mode: default
+content:
+  author:
+    weight: -2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  comment_body:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  subject:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

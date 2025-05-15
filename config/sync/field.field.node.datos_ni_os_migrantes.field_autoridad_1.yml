@@ -1,0 +1,19 @@
+uuid: 31386d7b-b8f8-474b-ae33-77a85592d775
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_autoridad_1
+    - node.type.datos_ni_os_migrantes
+id: node.datos_ni_os_migrantes.field_autoridad_1
+field_name: field_autoridad_1
+entity_type: node
+bundle: datos_ni_os_migrantes
+label: Autoridad
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

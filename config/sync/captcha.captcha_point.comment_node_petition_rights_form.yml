@@ -1,0 +1,7 @@
+uuid: 6f6a3020-a51c-4ca3-ba10-64457f9a1f50
+langcode: es
+status: true
+dependencies: {  }
+formId: comment_node_petition_rights_form
+captchaType: captcha/default
+label: comment_node_petition_rights_form

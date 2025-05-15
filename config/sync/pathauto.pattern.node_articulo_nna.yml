@@ -1,0 +1,21 @@
+uuid: 76d4325c-95b7-4807-aa61-ead7c5b4f20a
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node_articulo_nna
+label: 'Contenido - Artículo Niños y Adolescentes'
+type: 'canonical_entities:node'
+pattern: 'ninos-y-ninas/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      articulo_nna: articulo_nna
+selection_logic: and
+weight: 0
+relationships: {  }

@@ -1,0 +1,33 @@
+uuid: 1d0d2fba-6d70-4a2b-8e46-81a2a6807cb6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.comment_node_articles_portal_web
+    - node.type.articles_portal_web
+  module:
+    - comment
+id: node.articles_portal_web.comment_node_articles_portal_web
+field_name: comment_node_articles_portal_web
+entity_type: node
+bundle: articles_portal_web
+label: Comments
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    status: 1
+    cid: 0
+    last_comment_timestamp: 0
+    last_comment_name: null
+    last_comment_uid: 0
+    comment_count: 0
+default_value_callback: ''
+settings:
+  default_mode: 0
+  per_page: 10
+  anonymous: 0
+  form_location: false
+  preview: 0
+field_type: comment

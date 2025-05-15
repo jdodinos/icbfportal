@@ -1,0 +1,11 @@
+uuid: 3b0a1c21-0ed0-466a-bcc4-16e608168809
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_sector_studies
+id: comment.comment_node_sector_studies
+target_entity_type_id: comment
+target_bundle: comment_node_sector_studies
+default_langcode: site_default
+language_alterable: false

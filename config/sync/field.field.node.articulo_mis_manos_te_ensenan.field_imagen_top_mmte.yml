@@ -1,0 +1,35 @@
+uuid: 8f9b489a-a5bd-45ad-a851-e0764af709a9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_imagen_top_mmte
+    - node.type.articulo_mis_manos_te_ensenan
+  module:
+    - image
+id: node.articulo_mis_manos_te_ensenan.field_imagen_top_mmte
+field_name: field_imagen_top_mmte
+entity_type: node
+bundle: articulo_mis_manos_te_ensenan
+label: 'Imagen TOP Sección'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image: 0
+  caption_field: false
+  caption_field_required: false
+field_type: image

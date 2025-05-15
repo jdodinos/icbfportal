@@ -1,0 +1,9 @@
+uuid: 3f6f1523-c865-41db-bf3d-da0b702919c0
+langcode: es
+status: true
+dependencies: {  }
+name: Periodicidad
+vid: periodicity
+description: null
+weight: 10
+new_revision: false

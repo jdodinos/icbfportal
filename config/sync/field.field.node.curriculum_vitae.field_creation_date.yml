@@ -1,0 +1,21 @@
+uuid: 298876e2-797f-43f8-a891-ecff0472d7de
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_creation_date
+    - node.type.curriculum_vitae
+  module:
+    - datetime
+id: node.curriculum_vitae.field_creation_date
+field_name: field_creation_date
+entity_type: node
+bundle: curriculum_vitae
+label: 'Fecha fijación'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

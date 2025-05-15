@@ -1,0 +1,8 @@
+uuid: 3be4fb49-64bf-47d8-84d6-7c6e9469d940
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_rendicion_de_cuenta
+label: 'Rendicion de Cuentas comment'
+target_entity_type_id: node
+description: null

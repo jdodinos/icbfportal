@@ -1,0 +1,32 @@
+uuid: c2db8b6c-df5e-47d7-b9be-6987bfa17308
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_location_root
+    - node.type.sede_local
+    - taxonomy.vocabulary.locations
+id: taxonomy_term.locations.field_location_root
+field_name: field_location_root
+entity_type: taxonomy_term
+bundle: locations
+label: 'Ubicación Raiz'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      sede_local: sede_local
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 1
+      entityqueue:
+        status: 0
+field_type: entity_reference

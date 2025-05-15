@@ -1,0 +1,11 @@
+uuid: 5970934c-b901-4b01-9bf3-17ef1eef2728
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.agencies_adoptions_colombian
+id: node.agencies_adoptions_colombian
+target_entity_type_id: node
+target_bundle: agencies_adoptions_colombian
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,26 @@
+uuid: a196d8d9-3cb4-4329-afe6-e6cded91c68a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section_tag
+    - node.type.photo_gallery2_event
+    - taxonomy.vocabulary.section_labels
+id: node.photo_gallery2_event.field_section_tag
+field_name: field_section_tag
+entity_type: node
+bundle: photo_gallery2_event
+label: Etiqueta
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      section_labels: section_labels
+    sort:
+      field: _none
+field_type: entity_reference

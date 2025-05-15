@@ -1,0 +1,21 @@
+uuid: 1c222278-0097-479e-8a61-b15cd05d3f30
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.sector_studies
+  module:
+    - metatag
+id: node.sector_studies.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: sector_studies
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

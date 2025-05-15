@@ -1,0 +1,8 @@
+uuid: 2cb76e5c-80d4-41c8-8061-0d0d67baaa63
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_petition_rights
+label: 'Derechos de petición comment'
+target_entity_type_id: node
+description: null

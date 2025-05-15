@@ -1,0 +1,26 @@
+uuid: ec7663ef-ca94-4988-b8bd-18867e87d405
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.transparency
+    - taxonomy.vocabulary.locations
+id: node.transparency.field_location
+field_name: field_location
+entity_type: node
+bundle: transparency
+label: Ubicación
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      locations: locations
+    sort:
+      field: _none
+field_type: entity_reference

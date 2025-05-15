@@ -1,0 +1,7 @@
+uuid: bc716a59-2f42-45d0-b9c2-6ae88cb6688f
+langcode: es
+status: true
+dependencies: {  }
+formId: comment_node_rendicion_de_cuentas_form
+captchaType: captcha/default
+label: comment_node_rendicion_de_cuentas_form

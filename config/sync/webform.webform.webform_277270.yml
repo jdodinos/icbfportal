@@ -1,0 +1,51 @@
+uuid: 4316f228-70f0-4f3b-aa9b-717433d4cf14
+langcode: es
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 6816
+template: false
+archive: false
+id: webform_277270
+title: 'Valoración Trámite en línea'
+description: null
+categories: {  }
+elements: |-
+  informacion_tramite:
+    '#type': radios
+    '#options':
+      1: Bueno
+      2: Malo
+      "3.\tSoy un beneficiario de servicios del ICBF": Regular
+    '#title': '1. ¿Qué tan clara le pareció la información del trámite? *'
+    '#required': true
+  mejora_tramite:
+    '#type': processed_text
+    '#format': full_html
+    '#text': '<p>Con el diligenciamiento del presente documento acepto la política de tratamiento de datos personales del Instituto Colombiano de Bienestar Familiar – ICBF: “Los datos personales que se suministren serán tratados de conformidad con la política de tratamiento de datos personales, adoptada de conformidad con la Ley 1581 de 2012 y el Decreto 1074 de 2015. La política de tratamiento de datos personales del Instituto Colombiano de Bienestar Familiar puede ser consultada en la URL: https://www.icbf.gov.co/tratamiento-datos-personales".</p>'
+css: ''
+javascript: ''
+settings:
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: "<p><strong>Gracias por participar. </strong></p>\r\n\r\n<p>Para mayor información comunícate con el ICBF a través de <a href=\"https://www.icbf.gov.co/servicios\">nuestros canales de atención</a></p>\r\n"
+  limit_total: null
+  limit_user: null
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }

@@ -1,0 +1,21 @@
+uuid: ce3825b6-0977-4cbb-88e0-d488ba50069a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_btn_listnumber
+    - node.type.bot_n_home
+  module:
+    - options
+id: node.bot_n_home.field_btn_listnumber
+field_name: field_btn_listnumber
+entity_type: node
+bundle: bot_n_home
+label: Listado
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

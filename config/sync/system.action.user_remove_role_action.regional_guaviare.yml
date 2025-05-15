@@ -1,0 +1,14 @@
+uuid: 3c186ea0-22b2-41a8-8d84-3c0f271d71ba
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.regional_guaviare
+  module:
+    - user
+id: user_remove_role_action.regional_guaviare
+label: 'Elimina el rol Regional Guaviare al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: regional_guaviare

@@ -1,0 +1,30 @@
+uuid: 9069172b-9004-4c9d-9750-878097e11951
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_persona
+    - field.field.comment.comment_node_persona.comment_body
+  module:
+    - text
+id: comment.comment_node_persona.default
+targetEntityType: comment
+bundle: comment_node_persona
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

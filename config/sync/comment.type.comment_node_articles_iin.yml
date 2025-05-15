@@ -1,0 +1,8 @@
+uuid: 3b6e8502-d5b1-4145-89c1-d92ad05d7a02
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_articles_iin
+label: 'Artículos XXII comment'
+target_entity_type_id: node
+description: null

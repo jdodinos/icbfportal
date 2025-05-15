@@ -1,0 +1,14 @@
+custom_route_indexer.settings:
+  path: '/admin/config/search/custom-route-indexer'
+  defaults:
+    _form: '\Drupal\custom_route_indexer\Form\RouteIndexerForm'
+    _title: 'Custom Route Indexer'
+  requirements:
+    _permission: 'administer search'
+
+custom_route_indexer.download:
+  path: '/custom-route-indexer/download/{hash}'
+  defaults:
+    _controller: '\Drupal\custom_route_indexer\Controller\RouteIndexerController::download'
+  requirements:
+    _permission: 'access content'

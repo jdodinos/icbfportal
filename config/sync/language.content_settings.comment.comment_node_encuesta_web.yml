@@ -1,0 +1,11 @@
+uuid: 141847ba-58ad-408e-9e19-e7167b21e05a
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_encuesta_web
+id: comment.comment_node_encuesta_web
+target_entity_type_id: comment
+target_bundle: comment_node_encuesta_web
+default_langcode: site_default
+language_alterable: false

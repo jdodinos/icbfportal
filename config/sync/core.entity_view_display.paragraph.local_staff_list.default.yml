@@ -1,0 +1,71 @@
+uuid: 8cccdb09-c8e1-47f0-a781-143e327d056b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.local_staff_list.field_coms_local_staff
+    - field.field.paragraph.local_staff_list.field_director_local_staff
+    - field.field.paragraph.local_staff_list.field_manager_local_staff
+    - field.field.paragraph.local_staff_list.field_responsible_staff
+    - field.field.paragraph.local_staff_list.field_secretary_local_staff
+    - paragraphs.paragraphs_type.local_staff_list
+  module:
+    - field_formatter_class
+id: paragraph.local_staff_list.default
+targetEntityType: paragraph
+bundle: local_staff_list
+mode: default
+content:
+  field_coms_local_staff:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      field_formatter_class:
+        class: local-staff-list
+    weight: 4
+    region: content
+  field_director_local_staff:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      field_formatter_class:
+        class: local-staff-list
+    weight: 0
+    region: content
+  field_manager_local_staff:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      field_formatter_class:
+        class: local-staff-list
+    weight: 2
+    region: content
+  field_responsible_staff:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      field_formatter_class:
+        class: local-staff-list
+    weight: 3
+    region: content
+  field_secretary_local_staff:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      field_formatter_class:
+        class: local-staff-list
+    weight: 1
+    region: content
+hidden:
+  search_api_attachments: true
+  search_api_excerpt: true

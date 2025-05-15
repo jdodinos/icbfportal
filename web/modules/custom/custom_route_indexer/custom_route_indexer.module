@@ -1,0 +1,59 @@
+<?php
+
+use Drupal\search_api\Entity\Index;
+
+/**
+ * Implements hook_cron().
+ */
+function custom_route_indexer_cron() {
+  $config = \Drupal::config('custom_route_indexer.settings');
+  $index_id = $config->get('index_id');
+
+  if (!$index_id) {
+    \Drupal::logger('custom_route_indexer')->warning('No hay índice configurado.');
+    return;
+  }
+
+  $index = \Drupal\search_api\Entity\Index::load($index_id);
+  if (!$index) {
+    \Drupal::logger('custom_route_indexer')->error('Índice no encontrado: %index_id', ['%index_id' => $index_id]);
+    return;
+  }
+
+  $routes = $config->get('routes') ?? [];
+  $items = [];
+
+  foreach ($routes as $path) {
+    if (filter_var($path, FILTER_VALIDATE_URL)) {
+      // URL directa.
+      $items[] = md5($path);
+      continue;
+    }
+
+    $real_path = realpath($path);
+    if (!$real_path || !file_exists($real_path)) {
+      \Drupal::logger('custom_route_indexer')->warning('Ruta inválida o no encontrada: %path', ['%path' => $path]);
+      continue;
+    }
+
+    if (is_file($real_path)) {
+      $items[] = md5($real_path);
+    }
+    elseif (is_dir($real_path)) {
+      $rii = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($real_path));
+      foreach ($rii as $file) {
+        if ($file->isFile()) {
+          $ext = strtolower($file->getExtension());
+          if (in_array($ext, ['pdf', 'doc', 'docx', 'txt', 'odt'])) {
+            $items[] = md5($file->getPathname());
+          }
+        }
+      }
+    }
+  }
+
+  if (!empty($items)) {
+    $index->indexItems($items);
+    \Drupal::logger('custom_route_indexer')->info('Indexados @count documentos.', ['@count' => count($items)]);
+  }
+}

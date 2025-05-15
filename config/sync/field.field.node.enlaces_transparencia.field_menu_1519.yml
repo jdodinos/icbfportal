@@ -1,0 +1,26 @@
+uuid: 0664b322-8337-42eb-ac4e-f7bfa389388e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_menu_1519
+    - node.type.enlaces_transparencia
+    - taxonomy.vocabulary.transparencia_1519
+id: node.enlaces_transparencia.field_menu_1519
+field_name: field_menu_1519
+entity_type: node
+bundle: enlaces_transparencia
+label: 'Estructura Resolución 1519'
+description: 'Estructura de Información según Resolución 1519 de 2020'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      transparencia_1519: transparencia_1519
+    sort:
+      field: _none
+field_type: entity_reference

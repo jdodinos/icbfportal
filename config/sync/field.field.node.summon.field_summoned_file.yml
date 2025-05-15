@@ -1,0 +1,27 @@
+uuid: da320d34-e40b-4fcf-9765-46c143aa06ad
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summoned_file
+    - node.type.summon
+  module:
+    - file
+id: node.summon.field_summoned_file
+field_name: field_summoned_file
+entity_type: node
+bundle: summon
+label: 'Archivo '
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: citaciones
+  file_extensions: 'pdf doc docx'
+  max_filesize: ''
+  description_field: false
+field_type: file

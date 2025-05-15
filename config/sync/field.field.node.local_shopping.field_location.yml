@@ -1,0 +1,26 @@
+uuid: 96f235f4-791d-460b-ad61-3b7bf6d88739
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.local_shopping
+    - taxonomy.vocabulary.locations
+id: node.local_shopping.field_location
+field_name: field_location
+entity_type: node
+bundle: local_shopping
+label: Ubicación
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      locations: locations
+    sort:
+      field: _none
+field_type: entity_reference

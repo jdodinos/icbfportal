@@ -1,0 +1,7 @@
+uuid: 05713a38-c1e4-4080-8f5f-085a90d29a4e
+langcode: es
+status: true
+dependencies: {  }
+formId: comment_node_acta_contentiva_form
+captchaType: captcha/default
+label: comment_node_acta_contentiva_form

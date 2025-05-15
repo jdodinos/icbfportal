@@ -1,0 +1,98 @@
+uuid: 05fe736e-b922-4730-b953-2980d2cca9b2
+langcode: es
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: webform_67007
+title: 'Valoración de contenido (FAQS)'
+description: null
+categories: {  }
+elements: |-
+  _le_ha_sido_til_esta_informaci_n_:
+    '#type': radios
+    '#options':
+      1: Si
+      2: 'No'
+    '#title': '¿Le ha sido útil esta información?'
+  de_acuerdo_algun_comentario_mas:
+    '#type': textfield
+    '#title': 'De acuerdo. ¿Algún comentario más?'
+    '#disabled': true
+    '#states':
+      visible:
+        - ':input[name="_le_ha_sido_til_esta_informaci_n_"]':
+            value: '1'
+  como_podemos_mejorarlo:
+    '#type': textfield
+    '#title': '¿Cómo podemos mejorarlo?'
+    '#disabled': true
+    '#states':
+      visible:
+        - ':input[name="_le_ha_sido_til_esta_informaci_n_"]':
+            value: '2'
+css: ''
+javascript: ''
+settings:
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: "<h2>¡Gracias por sus comentarios!</h2>\r\n"
+  limit_total: null
+  limit_user: null
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+handlers:
+  email_1:
+    id: email
+    handler_id: email_1
+    label: 'Email 1'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: '[webform_submission:values:_le_ha_sido_til_esta_informaci_n_:raw]'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: _default
+      body: _default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

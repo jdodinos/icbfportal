@@ -1,0 +1,55 @@
+uuid: 091babb4-f69f-48fa-9981-0ad10f8ee2a2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.summoned.field_citizen_id
+    - field.field.paragraph.summoned.field_document_type
+    - field.field.paragraph.summoned.field_full_name
+    - field.field.paragraph.summoned.field_kinship
+    - field.field.paragraph.summoned.field_other_kinship
+    - paragraphs.paragraphs_type.summoned
+id: paragraph.summoned.default
+targetEntityType: paragraph
+bundle: summoned
+mode: default
+content:
+  field_citizen_id:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 20
+      placeholder: ''
+    third_party_settings: {  }
+  field_document_type:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_full_name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_kinship:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_other_kinship:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

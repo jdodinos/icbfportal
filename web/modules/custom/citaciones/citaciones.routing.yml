@@ -1,0 +1,15 @@
+citaciones.reports:
+  path: 'citaciones/reportes'
+  defaults:
+    _form: '\Drupal\citaciones\Form\ReportesForm'
+    _title: 'Reportes citaciones'
+  requirements:
+    _role: migracion+administrator+administrador_icbf+defensor_de_familia
+
+citaciones.autocomplete_officer_name:
+  path: 'node/autocomplete-officer-name'
+  defaults:
+    _controller: '\Drupal\citaciones\Controller\AutocompleteController::handleAutocompleteOfficerName'
+    _title: 'Autocomplete'
+  requirements:
+    _role: migracion+administrator+administrador_icbf+defensor_de_familia

@@ -1,0 +1,9 @@
+uuid: 6f7af109-1200-4e34-931f-47a797b43d85
+langcode: es
+status: true
+dependencies: {  }
+id: rol_1
+label: ROL_1
+weight: 72
+is_admin: null
+permissions: {  }

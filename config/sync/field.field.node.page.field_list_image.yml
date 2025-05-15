@@ -1,0 +1,35 @@
+uuid: 872a39f6-0005-45ec-bdb8-e05b02ecf2f1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_list_image
+    - node.type.page
+  module:
+    - image
+id: node.page.field_list_image
+field_name: field_list_image
+entity_type: node
+bundle: page
+label: 'Imagen Listado'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image: 0
+  caption_field: false
+  caption_field_required: false
+field_type: image

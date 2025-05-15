@@ -1,0 +1,39 @@
+uuid: 5f038604-cbac-4f2c-92ff-4942533ea2c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment
+  module:
+    - comment
+  enforced:
+    module:
+      - standard
+_core:
+  default_config_hash: y7-BgbfPpwPdVkEeBhWxmRjjrcqsjSJ2mIL3Tuna_DE
+id: comment.comment
+targetEntityType: comment
+bundle: comment
+types:
+  - 'schema:Comment'
+fieldMappings:
+  subject:
+    properties:
+      - 'schema:name'
+  created:
+    properties:
+      - 'schema:dateCreated'
+    datatype_callback:
+      callable: 'Drupal\rdf\CommonDataConverter::dateIso8601Value'
+  changed:
+    properties:
+      - 'schema:dateModified'
+    datatype_callback:
+      callable: 'Drupal\rdf\CommonDataConverter::dateIso8601Value'
+  comment_body:
+    properties:
+      - 'schema:text'
+  uid:
+    properties:
+      - 'schema:author'
+    mapping_type: rel

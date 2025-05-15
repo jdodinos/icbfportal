@@ -1,0 +1,43 @@
+uuid: 529d7540-5d29-4706-81f0-5bba7791d982
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_portfolio_tramite.default
+    - field.field.node.portfolio_tramite.comment_node_portfolio_tramite
+    - field.field.node.portfolio_tramite.field_about_procedure
+    - node.type.portfolio_tramite
+  module:
+    - comment
+    - text
+    - user
+id: node.portfolio_tramite.default
+targetEntityType: node
+bundle: portfolio_tramite
+mode: default
+content:
+  comment_node_portfolio_tramite:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_about_procedure:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

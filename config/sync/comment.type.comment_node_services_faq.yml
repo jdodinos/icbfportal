@@ -1,0 +1,8 @@
+uuid: 887aa6c4-eaa1-4981-a995-39e2d67dabc7
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_services_faq
+label: 'Pregunta Frecuente comment'
+target_entity_type_id: node
+description: null

@@ -1,0 +1,26 @@
+uuid: 6c5c2494-9f1b-4a44-b4f7-8bf33b43e5ed
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_category_citizen
+    - taxonomy.vocabulary.citizen_category
+    - taxonomy.vocabulary.programa_adopciones
+id: taxonomy_term.programa_adopciones.field_category_citizen
+field_name: field_category_citizen
+entity_type: taxonomy_term
+bundle: programa_adopciones
+label: 'Situación del ciudadano'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      citizen_category: citizen_category
+    sort:
+      field: _none
+field_type: entity_reference

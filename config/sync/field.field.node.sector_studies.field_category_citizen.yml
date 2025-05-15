@@ -1,0 +1,26 @@
+uuid: a028f6f3-13b7-4aa7-bb97-cbda8ad62d82
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_category_citizen
+    - node.type.sector_studies
+    - taxonomy.vocabulary.citizen_category
+id: node.sector_studies.field_category_citizen
+field_name: field_category_citizen
+entity_type: node
+bundle: sector_studies
+label: 'Categoría situación del ciudadano'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      citizen_category: citizen_category
+    sort:
+      field: _none
+field_type: entity_reference

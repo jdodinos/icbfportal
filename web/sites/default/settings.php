@@ -610,7 +610,7 @@ $settings['update_free_access'] = FALSE;
  * See https://www.drupal.org/documentation/modules/file for more information
  * about securing private files.
  */
-# $settings['file_private_path'] = '';
+$settings['file_private_path'] = 'sites/default/files/privateicbf';
 
 /**
  * Temporary file path:
@@ -910,8 +910,8 @@ $databases['default']['default'] = [
 
 $settings['migrate_source_connection'] = 'migrate';
 $settings['migrate_source_version'] = '7';
-$settings['migrate_file_public_path'] = '/var/www/html/web';
-$settings['migrate_file_private_path'] = '';
+$settings['migrate_file_public_path'] = 'sites/default/files';
+$settings['migrate_file_private_path'] = 'sites/default/files/privateicbf';
 $databases['migrate']['default'] = [
   'database' => getenv('DB_MIGRATE_NAME'),
   'username' => getenv('DB_MIGRATE_USER'),

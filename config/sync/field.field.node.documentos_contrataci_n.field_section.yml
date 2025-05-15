@@ -1,0 +1,28 @@
+uuid: e52576eb-51e6-413f-a4f0-4cfa7c40f84c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section
+    - node.type.documentos_contrataci_n
+    - taxonomy.vocabulary.secctions
+id: node.documentos_contrataci_n.field_section
+field_name: field_section
+entity_type: node
+bundle: documentos_contrataci_n
+label: Sección
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    tid: '1255'
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      secctions: secctions
+    sort:
+      field: _none
+field_type: entity_reference

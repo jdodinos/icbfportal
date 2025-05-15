@@ -1,0 +1,25 @@
+uuid: af59227f-06ca-46f1-bc26-c0ae8bd00fd8
+langcode: es
+status: false
+dependencies:
+  module:
+    - php
+    - slick
+name: php_perfil_buscador
+format: php_perfil_buscador
+weight: 0
+filters:
+  php_code:
+    id: php_code
+    provider: php
+    status: true
+    weight: 0
+    settings: {  }
+  slick_filter:
+    id: slick_filter
+    provider: slick
+    status: false
+    weight: 4
+    settings:
+      optionset: default
+      media_switch: ''

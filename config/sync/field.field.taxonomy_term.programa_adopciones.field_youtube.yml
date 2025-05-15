@@ -1,0 +1,21 @@
+uuid: 5356ffaf-3e7a-4ef1-8392-5e450bee1d88
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_youtube
+    - taxonomy.vocabulary.programa_adopciones
+  module:
+    - youtube
+id: taxonomy_term.programa_adopciones.field_youtube
+field_name: field_youtube
+entity_type: taxonomy_term
+bundle: programa_adopciones
+label: Youtube
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: youtube

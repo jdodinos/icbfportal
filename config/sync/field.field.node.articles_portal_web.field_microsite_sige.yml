@@ -1,0 +1,21 @@
+uuid: 0d09819f-16d0-403a-8063-8b8bd02a8daa
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_microsite_sige
+    - node.type.articles_portal_web
+  module:
+    - options
+id: node.articles_portal_web.field_microsite_sige
+field_name: field_microsite_sige
+entity_type: node
+bundle: articles_portal_web
+label: 'Sección en SIGE'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

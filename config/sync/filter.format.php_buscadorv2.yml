@@ -1,0 +1,25 @@
+uuid: dbb886be-e164-4410-8bc7-6d28e1215adb
+langcode: es
+status: false
+dependencies:
+  module:
+    - php
+    - slick
+name: php_buscadorv2
+format: php_buscadorv2
+weight: 0
+filters:
+  php_code:
+    id: php_code
+    provider: php
+    status: true
+    weight: 0
+    settings: {  }
+  slick_filter:
+    id: slick_filter
+    provider: slick
+    status: false
+    weight: 4
+    settings:
+      optionset: default
+      media_switch: ''

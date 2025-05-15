@@ -1,0 +1,8 @@
+uuid: 89cd02dc-5577-4cfb-8497-5a578373fbf8
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_agencies_adoptions_
+label: 'Agencias Colombia - Adopciones comment'
+target_entity_type_id: node
+description: null

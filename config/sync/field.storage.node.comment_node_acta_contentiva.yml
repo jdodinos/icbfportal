@@ -1,0 +1,20 @@
+uuid: ec3c7db0-6b7b-41e2-8583-25c41aa7fa41
+langcode: es
+status: true
+dependencies:
+  module:
+    - comment
+    - node
+id: node.comment_node_acta_contentiva
+field_name: comment_node_acta_contentiva
+entity_type: node
+type: comment
+settings:
+  comment_type: comment_node_acta_contentiva
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

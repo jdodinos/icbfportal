@@ -1,0 +1,52 @@
+uuid: 48a6914a-099f-4805-a156-6871c2b2b3ae
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_multimedia_collection
+    - node.type.news
+    - paragraphs.paragraphs_type.multimedia_collection
+  module:
+    - entity_reference_revisions
+id: node.news.field_multimedia_collection
+field_name: field_multimedia_collection
+entity_type: node
+bundle: news
+label: 'Audio y/o Video'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      multimedia_collection: multimedia_collection
+    negate: 0
+    target_bundles_drag_drop:
+      bookpost_group:
+        weight: 2
+        enabled: false
+      children_defendant:
+        weight: 3
+        enabled: false
+      enlaces_referidos:
+        weight: 4
+        enabled: false
+      glazed_content_design:
+        weight: 5
+        enabled: false
+      local_staff_list:
+        weight: 6
+        enabled: false
+      multimedia_collection:
+        weight: 1
+        enabled: true
+      post_document_plus:
+        weight: 7
+        enabled: false
+      summoned:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

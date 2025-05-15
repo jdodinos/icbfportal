@@ -1,0 +1,19 @@
+uuid: 6c7b5b3c-140c-436f-b9c7-7d71b04fdffd
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_more_info
+    - node.type.tramites_vus
+id: node.tramites_vus.field_link_more_info
+field_name: field_link_more_info
+entity_type: node
+bundle: tramites_vus
+label: 'Link Relacionado'
+description: 'Enlace referido para ampliar información '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

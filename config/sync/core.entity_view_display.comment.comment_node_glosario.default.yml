@@ -1,0 +1,30 @@
+uuid: d214b35a-ca18-42eb-b87c-1186bac2b8c7
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_glosario
+    - field.field.comment.comment_node_glosario.comment_body
+  module:
+    - text
+id: comment.comment_node_glosario.default
+targetEntityType: comment
+bundle: comment_node_glosario
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

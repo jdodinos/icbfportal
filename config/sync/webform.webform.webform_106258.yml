@@ -1,0 +1,128 @@
+uuid: 29809d5a-33d6-41ab-8246-3d923953b18a
+langcode: es
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: webform_106258
+title: 'Valoración Documentos en Construcción NUTRICION'
+description: null
+categories: {  }
+elements: |-
+  nombre:
+    '#type': textfield
+    '#title': Nombre
+    '#required': true
+  correo_electronico:
+    '#type': email
+    '#size': 20
+    '#title': 'Correo Electrónico'
+    '#required': true
+  rango_de_edad:
+    '#type': select
+    '#options':
+      1: '14-26 años de edad'
+      2: '27-59 años de edad'
+      3: '60 años y más'
+    '#title': 'Rango de edad'
+  a_que_parte_interesada_pertenece:
+    '#type': select
+    '#options':
+      1: Usuario
+      2: Estado
+      3: Colaborador
+      4: Proveedor
+      5: 'Aliado estratégico'
+      6: 'Comunidad o sociedad'
+    '#title': '¿A qué parte interesada pertenece?'
+    '#required': true
+  documento_sobre_el_cual_va_a_comentar:
+    '#type': textfield
+    '#title': 'Documento sobre el cual va a comentar'
+    '#description': 'Señale el nombre del documento en construcción publicado, sobre el cual desea realizar comentarios. Por favor identificarlo de la misma manera como está publicado en este sitio web'
+    '#required': true
+  considera_usted_que_el_documento_esta_escrito_en_lenguaje_claro_cercano_y_genera_entendimiento:
+    '#type': radios
+    '#options':
+      face_lc1: 'Muy claro'
+      face_lc2: Claro
+      face_lc3: 'Poco claro'
+      face_lc4: 'Nada claro'
+    '#title': '¿Considera usted que el documento está escrito en lenguaje claro, cercano y genera entendimiento?'
+  comentarios:
+    '#type': textarea
+    '#title': Comentarios
+    '#description': 'Indique sus observaciones acerca del documento en consulta. Máx 600 caracteres.'
+    '#required': true
+  tratamiento_de_datos_personales:
+    '#type': radios
+    '#options':
+      1: 'Si, acepto'
+    '#title': 'Tratamiento de Datos Personales'
+    '#description': 'Señor usuario, de conformidad con lo dispuesto en las normas vigentes sobre protección de datos personales, el ICBF solicita su autorización para la recolección y tratamiento de sus datos personales a fin de realizar caracterización poblacional y medición de calidad de servicio mediante encuesta, en cumplimiento de la misión institucional y funciones legales. Para mayor información lo invitamos a consultar nuestra <a href="https://www.icbf.gov.co/sites/default/files/politica_de_tratamiento_de_datos_personales_0.pdf" target="_blank" title="consultar política de tratamiento de datos personales">Política de Tratamiento de Datos Personales.</a>'
+    '#required': true
+css: ''
+javascript: ''
+settings:
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: inline
+  confirmation_url: ''
+  confirmation_message: "<h2>¡Gracias por sus comentarios!</h2>\r\n"
+  limit_total: null
+  limit_user: null
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+handlers:
+  email_1:
+    id: email
+    handler_id: email_1
+    label: 'Email 1'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: '3'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: _default
+      body: _default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

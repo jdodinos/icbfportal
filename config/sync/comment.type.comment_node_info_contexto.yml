@@ -1,0 +1,8 @@
+uuid: f9366a3e-73cd-4191-8bfa-67e0528837d6
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_info_contexto
+label: 'Artículos ADA comment'
+target_entity_type_id: node
+description: null

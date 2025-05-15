@@ -1,0 +1,70 @@
+uuid: 444c62d9-91c3-4759-8b76-63eece970e32
+langcode: en
+status: true
+dependencies: {  }
+id: anadir_texto_al_cambiar_estado_estudios_del_sector
+label: 'Añadir texto al cambiar estado Estudios del Sector'
+events:
+  -
+    event_name: 'rules_entity_update:node--sector_studies'
+description: ''
+tags: {  }
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: e7b7269f-78b6-4168-8b96-104b8e153114
+  weight: 0
+  conditions:
+    id: rules_and
+    uuid: 8cf9bc4f-3f4f-434d-b18f-3242b55474d4
+    weight: 0
+    conditions:
+      -
+        id: rules_condition
+        uuid: 89a1ef86-eaa3-4ca6-b012-87d9f33bc3ef
+        weight: -50
+        condition_id: rules_entity_is_of_type
+        negate: false
+        context_values:
+          type: sector_studies
+        context_mapping:
+          entity: node
+        context_processors:
+          type:
+            rules_tokens: {  }
+        provides_mapping: {  }
+      -
+        id: rules_condition
+        uuid: af78f22f-899e-4558-857e-e71f26e5fc94
+        weight: -49
+        condition_id: rules_data_comparison
+        negate: false
+        context_values:
+          operation: '=='
+          value: Finalizado
+        context_mapping:
+          data: node
+        context_processors:
+          operation:
+            rules_tokens: {  }
+          value:
+            rules_tokens: {  }
+        provides_mapping: {  }
+  actions:
+    id: rules_action_set
+    uuid: 1d6ef822-280b-4e1e-8df1-870310978688
+    weight: 0
+    actions:
+      -
+        id: rules_action
+        uuid: 71e729d8-2334-46f2-9fe6-161c6e213eed
+        weight: 0
+        action_id: rules_data_set
+        context_values:
+          value: 'Para conocer si se adelantó el proceso del selección, sugerimos consultar frecuentemente la pagina del SECOP I y/o SECOP II.'
+        context_mapping:
+          data: node
+        context_processors:
+          value:
+            rules_tokens: {  }
+        provides_mapping: {  }

@@ -1,0 +1,19 @@
+uuid: 872e310e-dcdf-4b78-96dd-372ff58f6fb8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address_col
+    - node.type.instituciones_adopciones
+id: node.instituciones_adopciones.field_address_col
+field_name: field_address_col
+entity_type: node
+bundle: instituciones_adopciones
+label: 'Sede en Colombia'
+description: 'Dirección en Colombia'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

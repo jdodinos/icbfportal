@@ -1,0 +1,26 @@
+uuid: 50f6a294-8acd-42ee-9771-0bae6fcec640
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lugar
+    - node.type.photo_gallery2_event
+    - taxonomy.vocabulary.departments_municipalities
+id: node.photo_gallery2_event.field_lugar
+field_name: field_lugar
+entity_type: node
+bundle: photo_gallery2_event
+label: Lugar
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      departments_municipalities: departments_municipalities
+    sort:
+      field: _none
+field_type: entity_reference

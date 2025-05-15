@@ -1,0 +1,28 @@
+uuid: 9ebfd529-4960-4b9d-b21d-28c7f2df6ffb
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section
+    - node.type.enlaces_referencia
+    - taxonomy.vocabulary.secctions
+id: node.enlaces_referencia.field_section
+field_name: field_section
+entity_type: node
+bundle: enlaces_referencia
+label: Sección
+description: 'Sección en portal web'
+required: false
+translatable: false
+default_value:
+  -
+    tid: '6889'
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      secctions: secctions
+    sort:
+      field: _none
+field_type: entity_reference

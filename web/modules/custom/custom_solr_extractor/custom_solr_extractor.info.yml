@@ -1,0 +1,8 @@
+name: 'Custom Solr Extractor'
+type: module
+description: 'Permite agregar rutas y extraer documentos usando Solr update/extract.'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - search_api
+  - search_api_solr

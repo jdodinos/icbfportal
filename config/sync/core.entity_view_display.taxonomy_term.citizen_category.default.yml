@@ -1,0 +1,41 @@
+uuid: 40bee9b8-db2d-449c-bf5e-a106390356ed
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.citizen_category.field_content
+    - field.field.taxonomy_term.citizen_category.field_procedure
+    - taxonomy.vocabulary.citizen_category
+  module:
+    - text
+id: taxonomy_term.citizen_category.default
+targetEntityType: taxonomy_term
+bundle: citizen_category
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_content:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_procedure:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

@@ -1,0 +1,159 @@
+uuid: 0e973ea5-bec7-4e53-9688-2105dbca7820
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:044b59f1-6243-445c-ad6c-e643fcac01f7'
+    - 'block_content:basic:26fc010e-8815-415f-83b5-18c7bfbd9323'
+    - 'block_content:basic:5087fe76-c2c6-4f68-904e-796aa99a91e3'
+    - 'block_content:basic:528a0197-ca56-4d05-b68f-5d3aab9ac7ce'
+    - 'block_content:basic:5926667d-7d37-4b32-9c20-a4947954fe4d'
+    - 'block_content:basic:b32da780-ad2d-4f3d-8a27-2340620d6d5c'
+  module:
+    - block_content
+    - system
+    - tb_megamenu
+label: master
+name: master
+group: 'Sitio Principal ICBF'
+description: 'Layout para todas las páginas del Portal Web'
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: true
+    uuid: 906f81f6-5eb0-496f-aa86-63db0eea48e5
+    context_mapping: {  }
+    pages: "/backup-home\r\n/ser-papas\r\n/ser-papas/*\r\n/congreso-panamericano-xxii\r\n/congreso-panamericano-xxii/*\r\n/adopciones\r\n/programa-adopciones\r\n/programa-adopciones/*\r\n/adopciones/quienes-pueden-ser-adoptados\r\n/adopciones/quienes-pueden-ser-adoptados/lineamiento\r\n/adopciones/quienes-pueden-adoptar\r\n/adopciones/requisitos-basicos\r\n/adopciones/proceso-de-adopcion\r\n/adopciones/proceso-de-adopcion/etapa-administrativa\r\n/adopciones/proceso-de-adopcion/etapa-judicial\r\n/adopciones/proceso-de-adopcion/seguimiento\r\n/adopciones/paso-paso\r\n/adopciones/instituciones-y-organismos-autorizados\r\n/adopciones/instituciones-organismos/colombia\r\n/adopciones/instituciones-organismos/internacionales\r\n/ninos-y-ninas-home-demo\r\n/ninos-y-ninas\r\n/ninos-y-ninas/*\r\n/adolescentes\r\n/adolescentes/*\r\n/atencion-servicios\r\n/pacto-colombia-con-las-juventudes\r\n/mi-familia-universal\r\n/mi-familia-universal/*"
+reactions:
+  blocks:
+    id: blocks
+    uuid: e4c4a847-b106-4858-8f73-21c8beef5e19
+    blocks:
+      078ec3f3-c684-4461-867e-c1e9d043b1c0:
+        uuid: 078ec3f3-c684-4461-867e-c1e9d043b1c0
+        id: 'tb_megamenu_menu_block:mgm-6049302480ef2'
+        label: 'Menu 1519 ICBF'
+        provider: tb_megamenu
+        label_display: '0'
+        region: nav_main
+        weight: '0'
+        custom_id: tb_megamenu_menu_block_mgm_6049302480ef2
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: master
+        context_mapping: {  }
+        third_party_settings: {  }
+      3708369f-4ff4-42ab-aa8d-940d631dc17b:
+        uuid: 3708369f-4ff4-42ab-aa8d-940d631dc17b
+        id: 'block_content:5926667d-7d37-4b32-9c20-a4947954fe4d'
+        label: 'Barra búsqueda'
+        provider: block_content
+        label_display: '0'
+        region: nav_main
+        weight: '1'
+        custom_id: block_content_5926667d_7d37_4b32_9c20_a4947954fe4d
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: master
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+      f6ffd70b-d6e9-4798-99a4-819099d64b51:
+        uuid: f6ffd70b-d6e9-4798-99a4-819099d64b51
+        id: 'block_content:b32da780-ad2d-4f3d-8a27-2340620d6d5c'
+        label: 'GOVCO 1519'
+        provider: block_content
+        label_display: '0'
+        region: header
+        weight: '0'
+        custom_id: block_content_b32da780_ad2d_4f3d_8a27_2340620d6d5c
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: master
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+      138d5196-ee85-4c56-aac4-a97bc4230b11:
+        uuid: 138d5196-ee85-4c56-aac4-a97bc4230b11
+        id: 'block_content:044b59f1-6243-445c-ad6c-e643fcac01f7'
+        label: 'TOP 1519 ICBF'
+        provider: block_content
+        label_display: '0'
+        region: header
+        weight: '0'
+        custom_id: block_content_044b59f1_6243_445c_ad6c_e643fcac01f7
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: master
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+      8c01bf9c-2744-4f3b-b880-6d18074a6307:
+        uuid: 8c01bf9c-2744-4f3b-b880-6d18074a6307
+        id: 'block_content:528a0197-ca56-4d05-b68f-5d3aab9ac7ce'
+        label: 'Footer 1519 -1'
+        provider: block_content
+        label_display: '0'
+        region: footer
+        weight: '-2'
+        custom_id: block_content_528a0197_ca56_4d05_b68f_5d3aab9ac7ce
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: master
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+      461686c7-9bc5-4a37-a1d2-05d22cbba0fa:
+        uuid: 461686c7-9bc5-4a37-a1d2-05d22cbba0fa
+        id: 'block_content:5087fe76-c2c6-4f68-904e-796aa99a91e3'
+        label: 'Footer GOVCO'
+        provider: block_content
+        label_display: '0'
+        region: footer
+        weight: '-1'
+        custom_id: block_content_5087fe76_c2c6_4f68_904e_796aa99a91e3
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: master
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+      fdff206f-1c28-4fb8-918d-e7144f1d1deb:
+        uuid: fdff206f-1c28-4fb8-918d-e7144f1d1deb
+        id: 'block_content:26fc010e-8815-415f-83b5-18c7bfbd9323'
+        label: 'Tawdis fixes'
+        provider: block_content
+        label_display: '0'
+        region: footer
+        weight: '0'
+        custom_id: block_content_26fc010e_8815_415f_83b5_18c7bfbd9323
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: master
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+    include_default_blocks: 1
+    saved: false
+weight: 0

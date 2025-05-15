@@ -1,0 +1,75 @@
+label: 'Search API Synonym'
+description: 'Editorial views used by Search API Synonym.'
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Apply
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Items per page'
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
+          tags:
+            previous: ‹‹
+            next: ››
+      fields:
+        word:
+          label: Word
+          separator: ', '
+        synonyms:
+          label: Synonyms
+          separator: ', '
+        type:
+          label: Type
+          separator: ', '
+        langcode:
+          label: Language
+          separator: ', '
+        name:
+          label: Author
+          separator: ', '
+        status:
+          label: Status
+          settings:
+            format_custom_true: active
+            format_custom_false: inactive
+          separator: ', '
+        changed:
+          label: Updated
+          separator: ', '
+        operations:
+          label: Operations
+      filters:
+        word:
+          expose:
+            label: Word
+        synonyms:
+          expose:
+            label: Synonyms
+        type:
+          expose:
+            label: Type
+          group_info:
+            label: Type
+            group_items:
+              1:
+                title: Synonym
+              2:
+                title: 'Spelling error'
+        status:
+          expose:
+            label: Status
+        langcode:
+          expose:
+            label: Language
+      title: 'Search API Synonym'
+  list:
+    display_title: Page

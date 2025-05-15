@@ -1,0 +1,19 @@
+uuid: 7b9621f4-5174-4762-b416-6f533a2f48fd
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_multimedia_description
+    - paragraphs.paragraphs_type.multimedia_collection
+id: paragraph.multimedia_collection.field_multimedia_description
+field_name: field_multimedia_description
+entity_type: paragraph
+bundle: multimedia_collection
+label: 'Descripción Multimedia'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

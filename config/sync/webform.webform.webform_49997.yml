@@ -1,0 +1,253 @@
+uuid: 32618058-184e-435f-8ca8-c7da28b5f2ac
+langcode: es
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: webform_49997
+title: 'Encuesta de Percepción de los Servicios de la DIT'
+description: null
+categories: {  }
+elements: |-
+  objetivo:
+    '#type': processed_text
+    '#format': full_html
+    '#text': |-
+      <p>Objeto: Valorar la percepción del nivel Directivo sobre la utilidad que le brinda la tecnología a sus respectivas áreas ó procesos. 15 Preguntas.</p>
+
+      <p>Grupo de Interés: Directivos de la Sede de la Dirección General de acuerdo a lo publicado en el directorio de la web Institucional<br />
+      https://www.icbf.gov.co/instituto/funcionarios-directivos</p>
+  seleccione_su_proceso:
+    '#type': select
+    '#options':
+      1: 'Comunicación Estratégica'
+      2: 'Coordinación y Articulación del SNBF y Agentes'
+      3: 'Direccionamiento Estratégico'
+      4: 'Gestión de la Tecnología e Información'
+      5: 'Mejora e Innovación'
+      6: 'Promoción y Prevención'
+      7: Protección
+      8: 'Relación con el Ciudadano'
+      9: 'Adquisición de Bienes y Servicios'
+      10: 'Gestión del Talento Humano'
+      11: 'Gestión Financiera'
+      12: 'Gestión Jurídica'
+      13: 'Servicios Administrativos'
+      14: 'Evaluación Independiente'
+      15: 'Inspección, Vigilancia y Control'
+      16: 'Monitoreo y Seguimiento a la Gestión'
+    '#title': 'Seleccione su proceso'
+    '#required': true
+  area:
+    '#type': textfield
+    '#title': Area
+    '#required': true
+  new_radios:
+    '#type': radios
+    '#options':
+      1: Si
+      2: 'No'
+    '#title': "1.\t¿Considera usted que las Tecnologías de la Información en el ICBF son un aliado estratégico para los procesos misionales, de apoyo, estratégicos y de evaluación?:"
+    '#required': true
+  por_que:
+    '#type': textarea
+    '#title': '¿Por qué?): '
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="new_radios"]':
+            value: '2'
+  2_peti:
+    '#type': checkboxes
+    '#options':
+      1: 'Alineado con la estrategia misional'
+      2: 'No se conecta con la misión'
+      3: 'Responde a las necesidades tecnológicas'
+      4: 'No lo conoce'
+    '#multiple': true
+    '#title': '2. En relación al Plan Estratégico de Tecnología de la Información (PETI) 2019 – 2022 de la Entidad, considera que está:'
+    '#required': true
+  3_participacion:
+    '#type': radios
+    '#options':
+      1: Activo
+      2: Medio
+      3: Bajo
+      4: Nulo
+    '#title': "3.\tReferente a la participación y liderazgo de la Dirección de información y Tecnología en el desarrollo de proyectos con componente tecnológico en su área califique: "
+    '#required': true
+  4_grado_de_madurez:
+    '#type': radios
+    '#options':
+      1: Alto
+      2: Medio
+      3: Bajo
+    '#title': "4.\t¿Considera usted que el grado de madurez de la Gestión TI (Tecnologías de la Información) en el ICBF es?"
+    '#required': true
+  5_desarrollo_area:
+    '#type': radios
+    '#options':
+      1: Siempre
+      2: 'A veces'
+      3: Nunca
+    '#title': '5.Cuándo se piensa en el desarrollo de un proyecto en su área, ¿se invita a participar del diseño al personal de la DIT?'
+    '#required': true
+  6_calidad_informacion:
+    '#type': radios
+    '#options':
+      1: Si
+      2: 'No'
+    '#title': '6. ¿Se han asignado responsables de la calidad de la información que genera su área?'
+    '#required': true
+  cuantos:
+    '#type': textfield
+    '#size': 20
+    '#unique': false
+    '#title': '¿Cuantos?'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="6_calidad_informacion"]':
+            value: '1'
+  7_sistemas_de_informacion:
+    '#type': radios
+    '#options':
+      1: Si
+      2: 'No'
+    '#title': '7. ¿Los sistemas de información le permiten gestionar la información de manera efectiva para la toma de decisiones?'
+    '#required': true
+  8_lineamientos_tecnologicos:
+    '#type': radios
+    '#options':
+      1: Si
+      2: 'No'
+    '#title': '8. ¿Conoce lineamientos tecnológicos que faciliten el intercambio de información con otras áreas y otras entidades?'
+    '#required': true
+  9_lherramientas_tecnologicas:
+    '#type': radios
+    '#options':
+      1: 'Oportuna y de calidad'
+      2: 'No Oportuna y con calidad'
+      3: 'Oportuna y sin calidad'
+      4: 'No oportuna y sin calidad'
+    '#title': '9. Las herramientas tecnológicas que soportan su proceso generan información: '
+    '#required': true
+  10_catalogo_de_servicios:
+    '#type': radios
+    '#options':
+      1: Si
+      2: 'No'
+    '#title': "10.\t¿Conoce el Catálogo de Servicios (Infraestructura de hardware y software) de la Dirección de Información y Tecnología y cómo acceder a el?: "
+    '#required': true
+  11indiquenos_su_nivel_de_satisfaccion_respecto_a:
+    '#type': webform_likert
+    '#questions':
+      -
+        - '1'
+        - 'Servicios de soporte de la Mesa Informática de Soluciones MIS'
+      -
+        - '2'
+        - 'Cobertura de Internet en las sedes del ICBF'
+      -
+        - '3'
+        - 'Comunicaciones unificadas (correo, Skype, telefonía IP)'
+      -
+        - '4'
+        - 'El tiempo de respuesta a nuevos requerimientos'
+      -
+        - '5'
+        - 'Transferencias de conocimiento en herramientas tecnológicas'
+      -
+        - ''
+    '#answers':
+      -
+        - '1'
+        - 'Muy insatisfecho 1'
+      -
+        - '2'
+        - 'Insatisfecho 2'
+      -
+        - '3'
+        - 'Aceptable 3'
+      -
+        - '4'
+        - 'Satisfecho 4'
+      -
+        - '5'
+        - 'Muy Satisfecho 5'
+      -
+        - ''
+    '#title': "11.\tIndíquenos su nivel de satisfacción respecto a:"
+    '#required': true
+  12_equipo_encargado:
+    '#type': radios
+    '#options':
+      1: Si
+      2: 'No'
+    '#title': "12.\t¿Existe en su área un equipo de personas encargadas de los sistemas de información o herramientas tecnológicas?"
+    '#required': true
+  cuantos2:
+    '#type': textfield
+    '#size': 20
+    '#unique': false
+    '#title': '¿Cuántos?'
+    '#states':
+      visible:
+        - ':input[name="12_equipo_encargado"]':
+            value: '1'
+  13_uso_efectivo:
+    '#type': radios
+    '#options':
+      1: Si
+      2: 'No'
+    '#title': '13. ¿En su área se realizan actividades para mejorar el uso efectivo de las herramientas tecnológicas y/o sistemas de información?'
+    '#required': true
+  14_seguridad_de_la_informacion:
+    '#type': radios
+    '#options':
+      1: Si
+      2: 'No'
+      3: 'Desconozco los controles'
+    '#title': '14. ¿Con respecto al Eje de Seguridad de la Información, considera apropiados los controles que permiten proteger, preservar y administrar la integridad, confidencialidad y disponibilidad de la informa información en el ICBF?'
+    '#description': 'Ejemplo de controles: uso de medios extraíbles, rotulado de la información.'
+    '#required': true
+  indique_por_que:
+    '#type': textfield
+    '#title': 'Indique por qué'
+    '#required': true
+    '#states':
+      visible:
+        - ':input[name="14_seguridad_de_la_informacion"]':
+            value: '2'
+  15_cambios_o_mejoras:
+    '#type': textarea
+    '#title': '15. ¿Cuáles son los cambios o mejoras que, en su opinión debería incorporar la Dirección de Información y Tecnología, para que su área disponga o aproveche mejor las herramientas tecnológicas?'
+    '#required': true
+css: ''
+javascript: ''
+settings:
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: "<p>Gracias por enviar su encuesta!&nbsp;</p>\r\n"
+  limit_total: null
+  limit_user: null
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }

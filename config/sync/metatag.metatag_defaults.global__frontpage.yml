@@ -1,0 +1,35 @@
+uuid: 1b2e735c-d626-481a-94b8-e3b1adb3547e
+langcode: es
+status: true
+dependencies: {  }
+id: global__frontpage
+label: 'Global: Frontpage'
+tags:
+  abstract: 'Institución del estado colombiano encargado del desarrollo y la protección de los menores de edad y el de las familias'
+  canonical_url: '[site:url]'
+  description: 'Instituto Colombiano de Bienestar Familiar: prevención y protección integral de la primera infancia, la niñez, la adolescencia, adultos mayores y el bienestar de las familias en Colombia. Sitio Web oficial ICBF'
+  fb_pages: 'https://www.facebook.com/ICBFColombia'
+  geo_placename: 'Sede Nacional del Instituto Colombiano de Bienestar Familiar'
+  geo_position: '4.673265,-74.091459'
+  geo_region: CO-DC
+  icbm: '4.673265,-74.091459'
+  og_country_name: Colombia
+  og_description: '[site:slogan]'
+  og_email: atencionalciudadano@icbf.gov.co
+  og_latitude: '4.673265'
+  og_locality: 'Bogotá DC'
+  og_longitude: '74.091459'
+  og_phone_number: '(+57 1) 437 76 30'
+  og_postal_code: '111061'
+  og_region: Bogotá
+  og_street_address: 'Avenida Carrera 68 # 64-45, Bogotá Colombia'
+  og_title: '[site:name]'
+  og_type: government
+  og_url: '[site:url]'
+  rights: 'Instituto Colombiano de Bienestar Faniliar. Todos los derechos reservados'
+  shortlink: '[site:url]'
+  title: '[site:name] | [current-page:pager]'
+  twitter_cards_description: '[site:slogan]'
+  twitter_cards_page_url: '[site:url]'
+  twitter_cards_site: '@ICBFColombia'
+  twitter_cards_title: '[site:name]'

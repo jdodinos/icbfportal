@@ -1,0 +1,7 @@
+uuid: cdce7c29-5f42-4ec4-af31-fb3e8f2deac3
+langcode: es
+status: true
+dependencies: {  }
+formId: comment_node_instituciones_adopciones_form
+captchaType: captcha/default
+label: comment_node_instituciones_adopciones_form

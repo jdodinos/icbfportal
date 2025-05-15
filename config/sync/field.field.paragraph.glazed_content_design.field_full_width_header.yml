@@ -1,0 +1,21 @@
+uuid: 65d3db19-9105-4415-a92b-48b7010f2485
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_full_width_header
+    - paragraphs.paragraphs_type.glazed_content_design
+  module:
+    - options
+id: paragraph.glazed_content_design.field_full_width_header
+field_name: field_full_width_header
+entity_type: paragraph
+bundle: glazed_content_design
+label: 'Full Width Header'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

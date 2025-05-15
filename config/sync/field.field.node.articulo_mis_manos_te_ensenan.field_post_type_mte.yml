@@ -1,0 +1,21 @@
+uuid: 11dc7813-1c62-4c9f-8061-ef03b89d6967
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_post_type_mte
+    - node.type.articulo_mis_manos_te_ensenan
+  module:
+    - options
+id: node.articulo_mis_manos_te_ensenan.field_post_type_mte
+field_name: field_post_type_mte
+entity_type: node
+bundle: articulo_mis_manos_te_ensenan
+label: 'Post tipo'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

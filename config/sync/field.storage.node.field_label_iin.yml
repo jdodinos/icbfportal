@@ -1,0 +1,64 @@
+uuid: 5d55d62c-150d-467c-94d3-9ab375fc212b
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_label_iin
+field_name: field_label_iin
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: label-conf
+      label: Conferencias
+    -
+      value: label-cong
+      label: Congreso
+    -
+      value: label-cons
+      label: Consejo
+    -
+      value: label-entrv
+      label: Entrevista
+    -
+      value: label-espc
+      label: Especiales
+    -
+      value: label-foro
+      label: Foro
+    -
+      value: label-hist
+      label: Historias
+    -
+      value: label-nota
+      label: Notas
+    -
+      value: label-pane
+      label: Panel
+    -
+      value: label-ponn
+      label: Ponencia
+    -
+      value: label-promo
+      label: Promoción
+    -
+      value: label-asis
+      label: Asistentes
+    -
+      value: label-part
+      label: Participantes
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,51 @@
+uuid: 71048a5d-2e00-4390-905d-235b4cc79961
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.local_shopping.body
+    - field.field.node.local_shopping.comment_node_local_shopping
+    - field.field.node.local_shopping.field_date
+    - field.field.node.local_shopping.field_document
+    - field.field.node.local_shopping.field_file_categoria
+    - field.field.node.local_shopping.field_images
+    - field.field.node.local_shopping.field_location
+    - field.field.node.local_shopping.field_metatag
+    - field.field.node.local_shopping.field_resume
+    - field.field.node.local_shopping.field_section
+    - node.type.local_shopping
+  module:
+    - text
+    - user
+id: node.local_shopping.teaser
+targetEntityType: node
+bundle: local_shopping
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment_node_local_shopping: true
+  field_date: true
+  field_document: true
+  field_file_categoria: true
+  field_images: true
+  field_location: true
+  field_metatag: true
+  field_resume: true
+  field_section: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

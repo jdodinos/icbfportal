@@ -1,0 +1,46 @@
+uuid: ea0b3771-4100-480c-978d-96a4d73f58b4
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: paragraph.field_header_layout
+field_name: field_header_layout
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: logo_left_menu_right
+      label: 'Normal (Logo left, Menu Right)'
+    -
+      value: centered
+      label: 'Centered (stacked)'
+    -
+      value: centered_inline
+      label: 'Centered (inline)'
+    -
+      value: logo_left_menu_left
+      label: 'Logo Left, Menu Left'
+    -
+      value: logo_center_menu_left
+      label: 'Logo Center, Menu Left'
+    -
+      value: logo_center_menu_right
+      label: 'Logo Center, Menu Right'
+    -
+      value: logo_right_menu_left
+      label: 'Logo Right, Menu Left'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

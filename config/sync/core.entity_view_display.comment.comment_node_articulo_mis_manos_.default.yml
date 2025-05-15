@@ -1,0 +1,30 @@
+uuid: 5b3860ce-8158-4554-a21a-d2381733f29a
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_articulo_mis_manos_
+    - field.field.comment.comment_node_articulo_mis_manos_.comment_body
+  module:
+    - text
+id: comment.comment_node_articulo_mis_manos_.default
+targetEntityType: comment
+bundle: comment_node_articulo_mis_manos_
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

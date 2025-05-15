@@ -1,0 +1,22 @@
+uuid: 09137aa7-684a-4c02-ab72-139ff7fbc457
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_petition_rights
+    - field.storage.comment.comment_body
+  module:
+    - text
+id: comment.comment_node_petition_rights.comment_body
+field_name: comment_body
+entity_type: comment
+bundle: comment_node_petition_rights
+label: Comment
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

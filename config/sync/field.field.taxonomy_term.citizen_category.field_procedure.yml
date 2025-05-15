@@ -1,0 +1,26 @@
+uuid: b25c3a34-49b6-4f74-a3d7-aafc25ca911c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_procedure
+    - taxonomy.vocabulary.citizen_category
+    - taxonomy.vocabulary.procedure
+id: taxonomy_term.citizen_category.field_procedure
+field_name: field_procedure
+entity_type: taxonomy_term
+bundle: citizen_category
+label: Trámites
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      procedure: procedure
+    sort:
+      field: _none
+field_type: entity_reference

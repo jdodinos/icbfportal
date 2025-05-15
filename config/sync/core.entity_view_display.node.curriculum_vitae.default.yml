@@ -1,0 +1,122 @@
+uuid: 5a5d68d3-7351-441a-8d44-5cd7559474b5
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_curriculum_vitae.default
+    - field.field.node.curriculum_vitae.body
+    - field.field.node.curriculum_vitae.comment_node_curriculum_vitae
+    - field.field.node.curriculum_vitae.field_creation_date
+    - field.field.node.curriculum_vitae.field_dae_year
+    - field.field.node.curriculum_vitae.field_document
+    - field.field.node.curriculum_vitae.field_metatag
+    - field.field.node.curriculum_vitae.field_person_code
+    - field.field.node.curriculum_vitae.field_person_degree
+    - field.field.node.curriculum_vitae.field_section
+    - field.field.node.curriculum_vitae.field_unpublish_date
+    - field.field.node.curriculum_vitae.field_work_position
+    - node.type.curriculum_vitae
+  module:
+    - comment
+    - datetime
+    - file
+    - text
+    - user
+id: node.curriculum_vitae.default
+targetEntityType: node
+bundle: curriculum_vitae
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  comment_node_curriculum_vitae:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_creation_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_dae_year:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_document:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_person_code:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_person_degree:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_section:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_unpublish_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_work_position:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_metatag: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

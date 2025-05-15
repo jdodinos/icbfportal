@@ -1,0 +1,272 @@
+uuid: b339d54d-b478-4090-891f-a055f7cd27c7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.articulo_nna.comment_node_articulo_nna
+    - field.field.node.articulo_nna.field_date
+    - field.field.node.articulo_nna.field_introduction_text
+    - field.field.node.articulo_nna.field_link_url
+    - field.field.node.articulo_nna.field_nna_audio_file
+    - field.field.node.articulo_nna.field_nna_content
+    - field.field.node.articulo_nna.field_nna_docs
+    - field.field.node.articulo_nna.field_nna_html_code
+    - field.field.node.articulo_nna.field_nna_link_out
+    - field.field.node.articulo_nna.field_nna_post_image
+    - field.field.node.articulo_nna.field_nna_post_label
+    - field.field.node.articulo_nna.field_nna_post_type
+    - field.field.node.articulo_nna.field_nna_section
+    - field.field.node.articulo_nna.field_seo_title
+    - field.field.node.articulo_nna.field_youtube
+    - node.type.articulo_nna
+  module:
+    - comment
+    - datetime
+    - field_group
+    - file
+    - link
+    - path
+    - text
+    - youtube
+third_party_settings:
+  field_group:
+    group_nna_basics:
+      children:
+        - field_date
+        - field_introduction_text
+        - field_nna_post_image
+      label: 'Información Básica'
+      region: content
+      parent_name: ''
+      weight: 5
+      format_type: fieldset
+      format_settings:
+        classes: 'group-nna-basics field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+    group_nna_body:
+      children:
+        - field_nna_content
+        - field_youtube
+        - field_link_url
+        - field_nna_html_code
+        - field_nna_audio_file
+        - field_nna_docs
+        - field_nna_link_out
+      label: 'Información Detalle'
+      region: content
+      parent_name: ''
+      weight: 6
+      format_type: fieldset
+      format_settings:
+        classes: 'group-nna-body field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+    group_nna_parameters:
+      children:
+        - field_nna_section
+        - field_nna_post_type
+        - field_nna_post_label
+      label: 'Categorización y Relaciones'
+      region: content
+      parent_name: ''
+      weight: 7
+      format_type: fieldset
+      format_settings:
+        classes: 'group-nna-parameters field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+id: node.articulo_nna.default
+targetEntityType: node
+bundle: articulo_nna
+mode: default
+content:
+  comment_node_articulo_nna:
+    type: comment_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_date:
+    type: datetime_default
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_introduction_text:
+    type: text_textarea
+    weight: 7
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_link_url:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_nna_audio_file:
+    type: file_generic
+    weight: 12
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_nna_content:
+    type: text_textarea
+    weight: 7
+    region: content
+    settings:
+      rows: 6
+      placeholder: ''
+    third_party_settings: {  }
+  field_nna_docs:
+    type: file_generic
+    weight: 8
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_nna_html_code:
+    type: text_textarea
+    weight: 13
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_nna_link_out:
+    type: link_default
+    weight: 9
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_nna_post_image:
+    type: file_generic
+    weight: 8
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_nna_post_label:
+    type: options_buttons
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_nna_post_type:
+    type: entity_reference_autocomplete
+    weight: 9
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_nna_section:
+    type: entity_reference_autocomplete
+    weight: 10
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_seo_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_youtube:
+    type: youtube
+    weight: 11
+    region: content
+    settings:
+      placeholder_url: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  publish_on: true
+  unpublish_on: true

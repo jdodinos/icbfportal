@@ -1,0 +1,23 @@
+_core:
+  default_config_hash: JqYNByWeXZGynyqoPRWQIjp3VcQhuoyq5WlM-7YzBvI
+langcode: es
+smtp_on: true
+smtp_host: mail.icbf.gov.co
+smtp_hostbackup: ''
+smtp_port: '25'
+smtp_protocol: standard
+smtp_autotls: true
+smtp_timeout: 10
+smtp_username: atencion.ciudadano@icbf.gov.co
+smtp_password: 'Icatebfnc1on0207**'
+smtp_from: ''
+smtp_fromname: ''
+smtp_client_hostname: mail.icbf.gov.co
+smtp_client_helo: HELO
+smtp_allowhtml: true
+smtp_test_address: ''
+smtp_reroute_address: ''
+smtp_debugging: true
+smtp_debug_level: 1
+prev_mail_system: php_mail
+smtp_keepalive: false

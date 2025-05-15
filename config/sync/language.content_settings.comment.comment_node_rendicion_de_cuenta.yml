@@ -1,0 +1,11 @@
+uuid: 720f4613-3af1-408b-a616-15706b6a8fb9
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_rendicion_de_cuenta
+id: comment.comment_node_rendicion_de_cuenta
+target_entity_type_id: comment
+target_bundle: comment_node_rendicion_de_cuenta
+default_langcode: site_default
+language_alterable: false

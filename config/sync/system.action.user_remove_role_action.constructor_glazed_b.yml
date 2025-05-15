@@ -1,0 +1,14 @@
+uuid: f591785d-4ea1-4f79-bc62-135f3e61b3b4
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.constructor_glazed_b
+  module:
+    - user
+id: user_remove_role_action.constructor_glazed_b
+label: 'Elimina el rol Constructor Glazed B al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: constructor_glazed_b

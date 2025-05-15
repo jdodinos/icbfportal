@@ -1,0 +1,21 @@
+uuid: aff8b791-332f-43f2-b3fa-749204684fa6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dae_year
+    - node.type.curriculum_vitae
+  module:
+    - datetime
+id: node.curriculum_vitae.field_dae_year
+field_name: field_dae_year
+entity_type: node
+bundle: curriculum_vitae
+label: 'Año de publicación'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

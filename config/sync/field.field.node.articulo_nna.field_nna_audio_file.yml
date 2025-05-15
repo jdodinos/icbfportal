@@ -1,0 +1,27 @@
+uuid: 7b27f371-4995-4661-b839-c5434bccbb58
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nna_audio_file
+    - node.type.articulo_nna
+  module:
+    - file
+id: node.articulo_nna.field_nna_audio_file
+field_name: field_nna_audio_file
+entity_type: node
+bundle: articulo_nna
+label: 'Audio para Niños'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'mp3 wmv'
+  max_filesize: ''
+  description_field: false
+field_type: file

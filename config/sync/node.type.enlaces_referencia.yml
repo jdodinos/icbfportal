@@ -1,0 +1,30 @@
+uuid: fb112947-9f16-434a-946a-d5eea10a6634
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: false
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Enlaces de Referencia'
+type: enlaces_referencia
+description: 'vínculos a otros sitios, secciones o documentos externos relacionados'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

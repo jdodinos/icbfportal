@@ -1,0 +1,26 @@
+uuid: c58254c2-5af6-4365-b231-aeedf019c55b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lugar
+    - node.type.news
+    - taxonomy.vocabulary.departments_municipalities
+id: node.news.field_lugar
+field_name: field_lugar
+entity_type: node
+bundle: news
+label: Lugar
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      departments_municipalities: departments_municipalities
+    sort:
+      field: _none
+field_type: entity_reference

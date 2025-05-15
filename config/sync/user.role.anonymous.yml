@@ -1,0 +1,40 @@
+uuid: ef0e5524-2f8d-4260-bb3c-593c975a4d39
+langcode: es
+status: true
+dependencies:
+  config:
+    - filter.format.filtered_html
+  module:
+    - comment
+    - field_permissions
+    - filter
+    - fivestar
+    - search
+    - system
+_core:
+  default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
+id: anonymous
+label: 'usuario anónimo'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'rate content'
+  - 'search content'
+  - 'use advanced search'
+  - 'use text format filtered_html'
+  - 'view field_act_number'
+  - 'view field_code'
+  - 'view field_creation_date'
+  - 'view field_documents_transparency'
+  - 'view field_field_documents_trans_word'
+  - 'view field_summoned_file'
+  - 'view field_unpublish_date'
+  - 'view own field_act_number'
+  - 'view own field_code'
+  - 'view own field_creation_date'
+  - 'view own field_documents_transparency'
+  - 'view own field_field_documents_trans_word'
+  - 'view own field_summoned_file'
+  - 'view own field_unpublish_date'

@@ -1,0 +1,120 @@
+uuid: 7ce3a2d1-e369-4c88-b316-75c5eb04ccdf
+langcode: es
+status: true
+dependencies:
+  config:
+    - page_manager.page.mesas_p_blicas
+    - views.view.calendario_rendici_n
+  content:
+    - 'block_content:footer:23b9b7d1-5a99-4afb-bcda-02b6fbef4c73'
+  module:
+    - block_content
+    - bootstrap_layouts
+    - views
+id: mesas_p_blicas-layout_builder-0
+label: Panel
+weight: 0
+variant: layout_builder
+variant_settings:
+  id: layout_builder
+  label: null
+  weight: 0
+  uuid: cb4b7649-ef14-4373-aa22-f3ef04be7f59
+  sections:
+    -
+      layout_id: bs_1col
+      layout_settings:
+        label: ''
+        context_mapping: {  }
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+      components:
+        85c14579-d5cf-4508-a89e-ea1719edf0a3:
+          uuid: 85c14579-d5cf-4508-a89e-ea1719edf0a3
+          region: main
+          configuration:
+            id: 'views_block:calendario_rendici_n-block_1'
+            label: ''
+            label_display: '0'
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 0
+          additional: {  }
+      third_party_settings: {  }
+    -
+      layout_id: bs_2col
+      layout_settings:
+        label: ''
+        context_mapping: {  }
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          left:
+            wrapper: div
+            classes:
+              col-sm-4: col-sm-4
+            add_region_classes: 1
+            attributes: ''
+          right:
+            wrapper: div
+            classes:
+              col-sm-8: col-sm-8
+            add_region_classes: 1
+            attributes: ''
+      components: {  }
+      third_party_settings: {  }
+    -
+      layout_id: bs_1col
+      layout_settings:
+        label: ''
+        context_mapping: {  }
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+      components:
+        44a59168-6fb8-4ee1-ad85-94125dd013fc:
+          uuid: 44a59168-6fb8-4ee1-ad85-94125dd013fc
+          region: main
+          configuration:
+            id: 'block_content:23b9b7d1-5a99-4afb-bcda-02b6fbef4c73'
+            label: 'Mapa de Colombia - Calendario MP'
+            label_display: '0'
+            provider: block_content
+            status: true
+            info: ''
+            view_mode: full
+            context_mapping: {  }
+          weight: 0
+          additional: {  }
+      third_party_settings: {  }
+page: mesas_p_blicas
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

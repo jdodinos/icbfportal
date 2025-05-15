@@ -1,0 +1,21 @@
+uuid: 6181a552-f101-4ac3-bb69-61c5746a568f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dae_year
+    - node.type.evaluaci_n
+  module:
+    - datetime
+id: node.evaluaci_n.field_dae_year
+field_name: field_dae_year
+entity_type: node
+bundle: evaluaci_n
+label: 'Año de Publicación'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

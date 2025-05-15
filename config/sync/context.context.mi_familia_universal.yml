@@ -1,0 +1,21 @@
+uuid: d739f374-ed12-485a-a493-99836298441f
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+label: mi_familia_universal
+name: mi_familia_universal
+group: null
+description: ''
+requireAllConditions: true
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: c07a1061-c059-441f-8418-1f29182c6c3b
+    context_mapping: {  }
+    pages: /mi-familia-universal
+reactions: {  }
+weight: 0

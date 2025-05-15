@@ -1,0 +1,8 @@
+uuid: e312cfd2-08b0-42f9-b38d-325ade8c74c0
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_instituciones_adopc
+label: 'Agencias Internacionales - Adopciones comment'
+target_entity_type_id: node
+description: null

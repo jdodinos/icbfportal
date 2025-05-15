@@ -1,0 +1,14 @@
+uuid: dd97443a-2ed0-4e69-89fb-434ac9038fa7
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.eventos_calendario
+  module:
+    - user
+id: user_remove_role_action.eventos_calendario
+label: 'Elimina el rol Eventos Calendario al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: eventos_calendario

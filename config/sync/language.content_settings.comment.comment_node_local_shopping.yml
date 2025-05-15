@@ -1,0 +1,11 @@
+uuid: 6afc073b-69f8-43c9-b963-ce979b4eac26
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_local_shopping
+id: comment.comment_node_local_shopping
+target_entity_type_id: comment
+target_bundle: comment_node_local_shopping
+default_langcode: site_default
+language_alterable: false

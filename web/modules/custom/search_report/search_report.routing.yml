@@ -1,0 +1,7 @@
+search_report.dashboard:
+  path: '/admin/reports/search-report'
+  defaults:
+    _form: '\Drupal\search_report\Form\SearchFilterForm'
+    _title: 'Reportes de Búsqueda'
+  requirements:
+    _permission: 'access search reports'

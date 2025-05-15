@@ -1,0 +1,94 @@
+uuid: a976ffe2-94aa-4211-bdab-926073ffcd2e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.programa_adopciones.field_ada_section_link
+    - field.field.taxonomy_term.programa_adopciones.field_ada_title
+    - field.field.taxonomy_term.programa_adopciones.field_box_bottom_color
+    - field.field.taxonomy_term.programa_adopciones.field_category_citizen
+    - field.field.taxonomy_term.programa_adopciones.field_content
+    - field.field.taxonomy_term.programa_adopciones.field_content2_ada
+    - field.field.taxonomy_term.programa_adopciones.field_file_categoria
+    - field.field.taxonomy_term.programa_adopciones.field_link_more_info
+    - field.field.taxonomy_term.programa_adopciones.field_list_image
+    - field.field.taxonomy_term.programa_adopciones.field_microsite_category
+    - field.field.taxonomy_term.programa_adopciones.field_multimedia
+    - field.field.taxonomy_term.programa_adopciones.field_priority
+    - field.field.taxonomy_term.programa_adopciones.field_text_intro
+    - field.field.taxonomy_term.programa_adopciones.field_youtube
+    - taxonomy.vocabulary.programa_adopciones
+  module:
+    - file
+    - text
+    - youtube
+id: taxonomy_term.programa_adopciones.default
+targetEntityType: taxonomy_term
+bundle: programa_adopciones
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_content2_ada:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_multimedia:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_text_intro:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_youtube:
+    type: youtube_video
+    label: hidden
+    settings:
+      youtube_size: 420x315
+      youtube_width: null
+      youtube_height: null
+      youtube_autoplay: false
+      youtube_mute: false
+      youtube_loop: false
+      youtube_controls: false
+      youtube_autohide: false
+      youtube_iv_load_policy: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  field_ada_section_link: true
+  field_ada_title: true
+  field_box_bottom_color: true
+  field_category_citizen: true
+  field_file_categoria: true
+  field_link_more_info: true
+  field_list_image: true
+  field_microsite_category: true
+  field_priority: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

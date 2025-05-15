@@ -1,0 +1,21 @@
+uuid: 8949ad84-1475-430b-93a4-e9064d928d36
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.infografia_observatorio
+  module:
+    - metatag
+id: node.infografia_observatorio.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: infografia_observatorio
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

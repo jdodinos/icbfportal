@@ -1,0 +1,14 @@
+uuid: 3693386f-1fc7-49d1-bbf8-88df63d53c06
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.regional_putumayo
+  module:
+    - user
+id: user_remove_role_action.regional_putumayo
+label: 'Elimina el rol Regional Putumayo al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: regional_putumayo

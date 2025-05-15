@@ -1,0 +1,15 @@
+uuid: 8c9a4fbc-eec7-4d4f-b24a-c0be9d254c9a
+langcode: es
+status: true
+dependencies: {  }
+name: home-slidep
+label: HOME-Slidep
+effects:
+  afed7474-d35e-4798-8663-9382e7f19e18:
+    uuid: afed7474-d35e-4798-8663-9382e7f19e18
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 725
+      height: 396
+      anchor: center-center

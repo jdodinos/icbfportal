@@ -1,0 +1,6 @@
+search_report.dashboard:
+  title: 'Reportes de búsqueda'
+  description: 'Ver reportes de uso del buscador'
+  route_name: search_reports.dashboard
+  parent: system.admin_reports
+  weight: 100

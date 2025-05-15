@@ -1,0 +1,91 @@
+uuid: 8a0d6bff-3990-4dd7-b369-b7d370bda402
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_info_contexto.default
+    - field.field.node.info_contexto.comment_node_info_contexto
+    - field.field.node.info_contexto.field_file_categoria
+    - field.field.node.info_contexto.field_metatag
+    - field.field.node.info_contexto.field_microsite_category
+    - field.field.node.info_contexto.field_microsite_sige
+    - field.field.node.info_contexto.field_priority
+    - field.field.node.info_contexto.field_subtitle
+    - field.field.node.info_contexto.field_text_info
+    - node.type.info_contexto
+  module:
+    - comment
+    - options
+    - text
+    - user
+id: node.info_contexto.default
+targetEntityType: node
+bundle: info_contexto
+mode: default
+content:
+  comment_node_info_contexto:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_file_categoria:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_microsite_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_microsite_sige:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_priority:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_subtitle:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_text_info:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_metatag: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

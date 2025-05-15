@@ -1,0 +1,19 @@
+uuid: d53b4121-1ba7-400b-a3a8-e40bcccceba7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_book_author
+    - paragraphs.paragraphs_type.bookpost_group
+id: paragraph.bookpost_group.field_book_author
+field_name: field_book_author
+entity_type: paragraph
+bundle: bookpost_group
+label: Autor
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,21 @@
+uuid: 6dbb5b3e-dc55-4961-8ead-0bb5053da560
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.transparency
+  module:
+    - datetime
+id: node.transparency.field_date
+field_name: field_date
+entity_type: node
+bundle: transparency
+label: Fecha
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

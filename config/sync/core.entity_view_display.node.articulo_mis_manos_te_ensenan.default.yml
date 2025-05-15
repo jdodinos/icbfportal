@@ -1,0 +1,77 @@
+uuid: 3a913a95-2e54-4c82-b1df-e2fe6b2f51d6
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_articulo_mis_manos_.default
+    - field.field.node.articulo_mis_manos_te_ensenan.comment_node_articulo_mis_manos_
+    - field.field.node.articulo_mis_manos_te_ensenan.field_bookpost_group
+    - field.field.node.articulo_mis_manos_te_ensenan.field_date
+    - field.field.node.articulo_mis_manos_te_ensenan.field_document_mmte
+    - field.field.node.articulo_mis_manos_te_ensenan.field_imagen_top_mmte
+    - field.field.node.articulo_mis_manos_te_ensenan.field_images
+    - field.field.node.articulo_mis_manos_te_ensenan.field_lugar
+    - field.field.node.articulo_mis_manos_te_ensenan.field_media_audio_mte
+    - field.field.node.articulo_mis_manos_te_ensenan.field_metatag
+    - field.field.node.articulo_mis_manos_te_ensenan.field_post_body_mte
+    - field.field.node.articulo_mis_manos_te_ensenan.field_post_image_mte
+    - field.field.node.articulo_mis_manos_te_ensenan.field_post_type_mte
+    - field.field.node.articulo_mis_manos_te_ensenan.field_priority
+    - field.field.node.articulo_mis_manos_te_ensenan.field_related_link_mte
+    - field.field.node.articulo_mis_manos_te_ensenan.field_resume
+    - field.field.node.articulo_mis_manos_te_ensenan.field_section_mte
+    - field.field.node.articulo_mis_manos_te_ensenan.field_seo_title
+    - field.field.node.articulo_mis_manos_te_ensenan.field_youtube
+    - node.type.articulo_mis_manos_te_ensenan
+  module:
+    - comment
+    - entity_reference_revisions
+    - user
+id: node.articulo_mis_manos_te_ensenan.default
+targetEntityType: node
+bundle: articulo_mis_manos_te_ensenan
+mode: default
+content:
+  comment_node_articulo_mis_manos_:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_bookpost_group:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: full
+      link: ''
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_date: true
+  field_document_mmte: true
+  field_imagen_top_mmte: true
+  field_images: true
+  field_lugar: true
+  field_media_audio_mte: true
+  field_metatag: true
+  field_post_body_mte: true
+  field_post_image_mte: true
+  field_post_type_mte: true
+  field_priority: true
+  field_related_link_mte: true
+  field_resume: true
+  field_section_mte: true
+  field_seo_title: true
+  field_youtube: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

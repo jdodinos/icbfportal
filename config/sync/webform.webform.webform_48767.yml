@@ -1,0 +1,68 @@
+uuid: 01190632-1d99-4b9e-a65f-106a96b3e9d6
+langcode: es
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: webform_48767
+title: 'Primera infancia (de los 0 a los 5 años)'
+description: null
+categories: {  }
+elements: |-
+  introduccion:
+    '#type': processed_text
+    '#format': full_html
+    '#text': '<p>Pondere en cada uno de los siguientes campos, las acciones que usted considera deberían continuar o ser prioridad para el próximo gobierno en relación con niños y niñas de primera infancia. Por cada ítem, asigne 1 a la más importante, 2 a la siguiente, y así, sucesivamente hasta darle un lugar a todas.</p>'
+  fieldset_a_para_fortalecer_la_familia:
+    '#type': fieldset
+    '#open': true
+    '#title': 'A. Para fortalecer la Familia'
+    formacion_4:
+      '#type': textfield
+      '#title': 'i) Formación y acompañamiento en las modalidades de educación inicial en el marco de la atención integral.'
+      '#description': |
+        Su principal objetivo es brindar procesos contínuos de formación a las familias para el fortalecimiento de sus vínculos en todas las modalidades de atención a la primera infancia. "							
+    cuidarte_4:
+      '#type': textfield
+      '#title': 'ii) CuidArte'
+      '#description': |
+        Esta estrategia combina el desarrollo de materiales pedagógicos con acciones de formación a familias, las cuales son adelantas, o distribuidos los materiales, en los diferentes entornos en los que de desenvuelven los niños y las niñas: Hogar, Salud, Educación y Espacio Público. Se centra en potenciar el rol protagónico de la familia en la promoción del desarrollo integral de niños y niñas y fortalecer las prácticas de cuidado, crianza y educación de padres, madres y personas cuidadoras."							
+        				
+    incentivos_4:
+      '#type': textfield
+      '#title': 'iii) Incentivos para acompañar a las familias en la garantía de Derechos'
+      '#description': |
+        Su objetivo es contribuir a la superación y prevención de la pobreza y a la formación de capital humano, mediante el apoyo monetario directo a la familia beneficiaria. El programa que adelanta estas acciones es Familias en Acción. El programa entrega, cada dos meses, un incentivo de salud a cada familia con uno o más niños y niñas menores de 6 años, siempre y cuando asistan oportunamente a todos los controles de crecimiento y desarrollo de acuerdo con su edad"							
+    salas_4:
+      '#type': textfield
+      '#title': 'iv) Salas de lectura'
+      '#description': |
+        Este programa propicia y genera las condiciones, para el encuentro entre la literatura, los niños y las niñas, y las familias. "
+css: ''
+javascript: ''
+settings:
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: ''
+  limit_total: null
+  limit_user: null
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }

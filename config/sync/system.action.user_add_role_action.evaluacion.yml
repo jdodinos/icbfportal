@@ -1,0 +1,14 @@
+uuid: 54f3f011-9392-426b-bf14-875713be50c8
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.evaluacion
+  module:
+    - user
+id: user_add_role_action.evaluacion
+label: 'Añade el rol Evaluación al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: evaluacion

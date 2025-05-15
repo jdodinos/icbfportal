@@ -1,0 +1,30 @@
+uuid: 1e817cac-072a-4c91-a37c-acd6b29813e5
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: false
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Punto de Atención'
+type: sede_local
+description: 'Direcciones regionales, centros zolaes, casas de justicia y demás puntos de atención al aciudadanía de la entidad.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: true

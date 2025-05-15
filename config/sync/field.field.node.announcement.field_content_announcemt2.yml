@@ -1,0 +1,25 @@
+uuid: f74f65c0-6d9f-4df5-b904-93f1b603ea64
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_announcemt2
+    - node.type.announcement
+  module:
+    - text
+id: node.announcement.field_content_announcemt2
+field_name: field_content_announcemt2
+entity_type: node
+bundle: announcement
+label: 'Contenido destacado'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: .
+    format: full_html
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

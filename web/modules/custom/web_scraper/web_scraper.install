@@ -1,0 +1,90 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Web Scraper module.
+ */
+
+use Drupal\node\Entity\NodeType;
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\field\Entity\FieldConfig;
+
+/**
+ * Implements hook_install().
+ */
+function web_scraper_install() {
+  // Check if the content type already exists
+  $node_type = NodeType::load('web_scraped_content');
+  if (!$node_type) {
+    // Create the content type programmatically if not using config/install
+    $node_type = NodeType::create([
+      'type' => 'web_scraped_content',
+      'name' => t('Web Scraped Content'),
+      'description' => t('Content scraped from external websites.'),
+    ]);
+    $node_type->save();
+    
+    // Add necessary fields if not using config/install
+    if (!FieldStorageConfig::loadByName('node', 'field_source_url')) {
+      // Create the source URL field
+      \Drupal::service('field_storage_definition.listener')->onFieldStorageDefinitionCreate(
+        FieldStorageConfig::create([
+          'field_name' => 'field_source_url',
+          'entity_type' => 'node',
+          'type' => 'link',
+          'cardinality' => 1,
+        ])
+      );
+      
+      // Attach the field to the content type
+      FieldConfig::create([
+        'field_name' => 'field_source_url',
+        'entity_type' => 'node',
+        'bundle' => 'web_scraped_content',
+        'label' => t('Source URL'),
+        'required' => TRUE,
+        'settings' => [
+          'link_type' => 17,
+          'title' => 0,
+        ],
+      ])->save();
+    }
+    
+    if (!FieldStorageConfig::loadByName('node', 'field_scraped_content')) {
+      // Create the scraped content field
+      \Drupal::service('field_storage_definition.listener')->onFieldStorageDefinitionCreate(
+        FieldStorageConfig::create([
+          'field_name' => 'field_scraped_content',
+          'entity_type' => 'node',
+          'type' => 'text_long',
+          'cardinality' => 1,
+        ])
+      );
+      
+      // Attach the field to the content type
+      FieldConfig::create([
+        'field_name' => 'field_scraped_content',
+        'entity_type' => 'node',
+        'bundle' => 'web_scraped_content',
+        'label' => t('Scraped Content'),
+        'required' => FALSE,
+      ])->save();
+    }
+  }
+  
+  // Set message
+  \Drupal::messenger()->addStatus(t('Web Scraper module has been installed. Please configure the module at /admin/config/search/web-scraper.'));
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function web_scraper_uninstall() {
+  // Remove configuration
+  \Drupal::configFactory()->getEditable('web_scraper.settings')->delete();
+  
+  // Remove state variables
+  \Drupal::state()->delete('web_scraper.last_run');
+  
+  // Note: Content type and fields are left intact to preserve data
+}

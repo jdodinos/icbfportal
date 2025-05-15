@@ -1,0 +1,104 @@
+uuid: 47ba443e-3fc3-43a8-995e-a30859237967
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_notifications.default
+    - field.field.node.notifications.comment_node_notifications
+    - field.field.node.notifications.field_creation_date
+    - field.field.node.notifications.field_document
+    - field.field.node.notifications.field_location
+    - field.field.node.notifications.field_metatag
+    - field.field.node.notifications.field_notification_type
+    - field.field.node.notifications.field_process_code
+    - field.field.node.notifications.field_receiver
+    - field.field.node.notifications.field_resume
+    - field.field.node.notifications.field_section
+    - node.type.notifications
+  module:
+    - comment
+    - datetime
+    - file
+    - text
+    - user
+id: node.notifications.default
+targetEntityType: node
+bundle: notifications
+mode: default
+content:
+  comment_node_notifications:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_creation_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_document:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_location:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_notification_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_process_code:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_receiver:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_resume:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_metatag: true
+  field_section: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

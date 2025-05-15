@@ -1,0 +1,18 @@
+uuid: 4651378d-b7e5-4bde-89dc-e28dba79645c
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.document
+id: node.document.title
+field_name: title
+entity_type: node
+bundle: document
+label: Nombre
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

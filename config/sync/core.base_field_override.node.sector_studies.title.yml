@@ -1,0 +1,18 @@
+uuid: 86a86039-01a3-41b5-8d79-3fe7a7d6772f
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.sector_studies
+id: node.sector_studies.title
+field_name: title
+entity_type: node
+bundle: sector_studies
+label: Título
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

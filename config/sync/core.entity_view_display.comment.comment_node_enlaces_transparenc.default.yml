@@ -1,0 +1,30 @@
+uuid: 4c0399c6-6312-448c-886a-78224ac994d7
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_enlaces_transparenc
+    - field.field.comment.comment_node_enlaces_transparenc.comment_body
+  module:
+    - text
+id: comment.comment_node_enlaces_transparenc.default
+targetEntityType: comment
+bundle: comment_node_enlaces_transparenc
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

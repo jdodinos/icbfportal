@@ -1,0 +1,9 @@
+uuid: a8a6200e-28cc-4d43-bced-5086d41f5d18
+langcode: es
+status: true
+dependencies: {  }
+name: 'Convocatoria estado'
+vid: announcement_status
+description: null
+weight: 0
+new_revision: false

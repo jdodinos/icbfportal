@@ -1,0 +1,15 @@
+uuid: 7e6cc007-d638-4998-853c-a6f9a3b0e91e
+langcode: es
+status: true
+dependencies: {  }
+name: home-promos
+label: HOME-Promos
+effects:
+  bd553b5d-103f-4dcd-974c-286447c7e818:
+    uuid: bd553b5d-103f-4dcd-974c-286447c7e818
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 350
+      height: 205
+      anchor: center-center

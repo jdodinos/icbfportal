@@ -1,0 +1,180 @@
+uuid: 0577c8a3-3c7d-459e-b1d0-b485cdd07391
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_summon.default
+    - field.field.node.summon.comment_node_summon
+    - field.field.node.summon.field_act_number
+    - field.field.node.summon.field_children_defendant
+    - field.field.node.summon.field_creation_date
+    - field.field.node.summon.field_legal_act
+    - field.field.node.summon.field_legal_act_date
+    - field.field.node.summon.field_legal_resolution
+    - field.field.node.summon.field_lugar
+    - field.field.node.summon.field_metatag
+    - field.field.node.summon.field_officer_name
+    - field.field.node.summon.field_region_office
+    - field.field.node.summon.field_resolution_date
+    - field.field.node.summon.field_sim_number
+    - field.field.node.summon.field_summoned
+    - field.field.node.summon.field_summoned_address
+    - field.field.node.summon.field_summoned_file
+    - field.field.node.summon.field_unpublish_date
+    - node.type.summon
+  module:
+    - comment
+    - datetime
+    - entity_reference_revisions
+    - file
+    - options
+    - user
+id: node.summon.default
+targetEntityType: node
+bundle: summon
+mode: default
+content:
+  comment_node_summon:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_act_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_children_defendant:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: full
+      link: ''
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_creation_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_legal_act:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_legal_act_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_legal_resolution:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_lugar:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_officer_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_region_office:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_resolution_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_sim_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_summoned:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: full
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_summoned_address:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_summoned_file:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_unpublish_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_metatag: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

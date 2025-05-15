@@ -1,0 +1,20 @@
+uuid: 22745a75-947c-4e68-96cc-3463d600666a
+langcode: es
+status: true
+dependencies:
+  module:
+    - comment
+    - node
+id: node.comment_node_documentos_contrata
+field_name: comment_node_documentos_contrata
+entity_type: node
+type: comment
+settings:
+  comment_type: comment_node_documentos_contrata
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,9 @@
+uuid: 36796c3e-c312-4c16-8431-cde4f7c43e70
+langcode: es
+status: true
+dependencies: {  }
+name: 'Menú observatorio'
+vid: menu_observatory
+description: null
+weight: 9
+new_revision: false

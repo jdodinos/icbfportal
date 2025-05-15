@@ -1,0 +1,8 @@
+uuid: 303e3d4e-2b1d-4847-8f43-b988ed76ee69
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_summon_sdg
+label: 'Citación Sede comment'
+target_entity_type_id: node
+description: null

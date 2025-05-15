@@ -1,0 +1,21 @@
+uuid: bb64b812-19ed-459a-8174-62030eb79a88
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_localization
+    - taxonomy.vocabulary.locations
+  module:
+    - geofield
+id: taxonomy_term.locations.field_localization
+field_name: field_localization
+entity_type: taxonomy_term
+bundle: locations
+label: Ubicación
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geofield

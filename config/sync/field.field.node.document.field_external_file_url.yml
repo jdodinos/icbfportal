@@ -1,0 +1,23 @@
+uuid: f0b63d54-ea53-4973-8485-a4faff50bd8e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_external_file_url
+    - node.type.document
+  module:
+    - link
+id: node.document.field_external_file_url
+field_name: field_external_file_url
+entity_type: node
+bundle: document
+label: 'URL archivo externo'
+description: 'Si su archivo se encuentra en una url externa al sitio web, por favor utilice este campo para ingresarla. No olvide utilizar el http o https para garantizar que el enlace funcione correctamente'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

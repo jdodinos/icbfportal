@@ -1,0 +1,14 @@
+uuid: 1b16c2b9-52b2-4f27-9379-aab970ae55f4
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.adopciones
+  module:
+    - user
+id: user_add_role_action.adopciones
+label: 'Añade el rol Adopciones al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: adopciones

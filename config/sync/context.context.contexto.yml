@@ -1,0 +1,21 @@
+uuid: a6cf07cc-92b9-4ccd-b6db-6dc61310a721
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+label: Contexto
+name: contexto
+group: null
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: c48d87d4-966f-479b-beb8-a5d37455f3a2
+    context_mapping: {  }
+    pages: "/eventos-creados\r\n/eventos-creados/*"
+reactions: {  }
+weight: 0

@@ -1,0 +1,26 @@
+uuid: 1cf1642b-3c1f-467c-a53c-577667ad2854
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - icbf
+_core:
+  default_config_hash: 6UnvmWZl7NrFEcTPqz8lpfZsWHdoN4qvRam_r8kgGkY
+id: icbf_page_title
+theme: icbf
+region: content
+weight: -8
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Título de la página'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: /ninos-y-ninas-home-demo

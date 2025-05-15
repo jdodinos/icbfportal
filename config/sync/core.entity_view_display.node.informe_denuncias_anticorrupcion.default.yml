@@ -1,0 +1,92 @@
+uuid: caf810ac-650b-448c-bb52-b32a834a841c
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_informe_denuncias_a.default
+    - field.field.node.informe_denuncias_anticorrupcion.comment_node_informe_denuncias_a
+    - field.field.node.informe_denuncias_anticorrupcion.field_closin_fact_date
+    - field.field.node.informe_denuncias_anticorrupcion.field_closing_fact_anticorruptio
+    - field.field.node.informe_denuncias_anticorrupcion.field_document
+    - field.field.node.informe_denuncias_anticorrupcion.field_location
+    - field.field.node.informe_denuncias_anticorrupcion.field_registration_date
+    - field.field.node.informe_denuncias_anticorrupcion.field_verify_fact_anticorruption
+    - node.type.informe_denuncias_anticorrupcion
+  module:
+    - comment
+    - datetime
+    - file
+    - options
+    - user
+id: node.informe_denuncias_anticorrupcion.default
+targetEntityType: node
+bundle: informe_denuncias_anticorrupcion
+mode: default
+content:
+  comment_node_informe_denuncias_a:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_closin_fact_date:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_closing_fact_anticorruptio:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_document:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_location:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_registration_date:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_verify_fact_anticorruption:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

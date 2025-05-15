@@ -1,0 +1,14 @@
+uuid: 55883cc3-eea5-4941-94a3-1a7397976209
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.servicios_portafolio_
+  module:
+    - user
+id: user_remove_role_action.servicios_portafolio_
+label: 'Elimina el rol Servicios (Portafolio) al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: servicios_portafolio_

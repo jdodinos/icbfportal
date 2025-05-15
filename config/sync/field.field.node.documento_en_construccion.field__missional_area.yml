@@ -1,0 +1,26 @@
+uuid: f8496720-c7e2-4b2c-9cf0-201e80bfd965
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field__missional_area
+    - node.type.documento_en_construccion
+    - taxonomy.vocabulary.dependencies
+id: node.documento_en_construccion.field__missional_area
+field_name: field__missional_area
+entity_type: node
+bundle: documento_en_construccion
+label: 'Área Misional'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      dependencies: dependencies
+    sort:
+      field: _none
+field_type: entity_reference

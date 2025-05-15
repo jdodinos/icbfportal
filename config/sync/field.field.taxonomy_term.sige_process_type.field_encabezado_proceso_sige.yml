@@ -1,0 +1,24 @@
+uuid: d8dbc897-fca1-46e7-83e0-91732ea30ca7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_encabezado_proceso_sige
+    - taxonomy.vocabulary.sige_process_type
+  module:
+    - text
+id: taxonomy_term.sige_process_type.field_encabezado_proceso_sige
+field_name: field_encabezado_proceso_sige
+entity_type: taxonomy_term
+bundle: sige_process_type
+label: 'Encabezado Proceso SIGE'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: .
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

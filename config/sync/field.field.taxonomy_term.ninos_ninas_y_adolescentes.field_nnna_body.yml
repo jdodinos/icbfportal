@@ -1,0 +1,22 @@
+uuid: f677e55a-7533-4543-ad01-78481e08871d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_nnna_body
+    - taxonomy.vocabulary.ninos_ninas_y_adolescentes
+  module:
+    - text
+id: taxonomy_term.ninos_ninas_y_adolescentes.field_nnna_body
+field_name: field_nnna_body
+entity_type: taxonomy_term
+bundle: ninos_ninas_y_adolescentes
+label: 'Contenido Sección Niños '
+description: 'Contenido del landing de sección'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

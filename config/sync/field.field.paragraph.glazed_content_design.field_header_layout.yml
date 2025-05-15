@@ -1,0 +1,21 @@
+uuid: dbce4b69-ccfc-450d-9ea3-8a4107cb9c3e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_header_layout
+    - paragraphs.paragraphs_type.glazed_content_design
+  module:
+    - options
+id: paragraph.glazed_content_design.field_header_layout
+field_name: field_header_layout
+entity_type: paragraph
+bundle: glazed_content_design
+label: 'Header Layout'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

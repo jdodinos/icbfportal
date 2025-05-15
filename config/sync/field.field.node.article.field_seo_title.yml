@@ -1,0 +1,19 @@
+uuid: 88c4efa7-0b58-433b-8c30-556503b5ab41
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_seo_title
+    - node.type.article
+id: node.article.field_seo_title
+field_name: field_seo_title
+entity_type: node
+bundle: article
+label: 'Título Presentación'
+description: 'Título que se mostrará en vistas y listados de publicaciones del micrositio'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

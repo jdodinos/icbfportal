@@ -1,0 +1,14 @@
+uuid: 439ad194-c611-4417-84ca-c6b10ab2a53f
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.regional_quindio
+  module:
+    - user
+id: user_add_role_action.regional_quindio
+label: 'Añade el rol Regional Quindio al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: regional_quindio

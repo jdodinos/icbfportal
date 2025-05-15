@@ -1,0 +1,11 @@
+uuid: 772084b8-c316-464c-92d4-0eb58ba1641a
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_venta_de_bienes
+id: comment.comment_node_venta_de_bienes
+target_entity_type_id: comment
+target_bundle: comment_node_venta_de_bienes
+default_langcode: site_default
+language_alterable: false

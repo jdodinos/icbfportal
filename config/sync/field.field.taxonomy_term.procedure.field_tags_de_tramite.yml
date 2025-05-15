@@ -1,0 +1,26 @@
+uuid: c9c527f6-4744-42f3-9737-de7cac369674
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_tags_de_tramite
+    - taxonomy.vocabulary.procedure
+    - taxonomy.vocabulary.tags_tr_mites
+id: taxonomy_term.procedure.field_tags_de_tramite
+field_name: field_tags_de_tramite
+entity_type: taxonomy_term
+bundle: procedure
+label: 'Área / Proceso del tramite'
+description: 'Área de la entidad responsable de gestorar el trámite'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      tags_tr_mites: tags_tr_mites
+    sort:
+      field: _none
+field_type: entity_reference

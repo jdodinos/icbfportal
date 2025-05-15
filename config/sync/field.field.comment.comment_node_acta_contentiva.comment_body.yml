@@ -1,0 +1,22 @@
+uuid: 2a1c7a36-1c7a-4fe2-9f75-082ec189376c
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_acta_contentiva
+    - field.storage.comment.comment_body
+  module:
+    - text
+id: comment.comment_node_acta_contentiva.comment_body
+field_name: comment_body
+entity_type: comment
+bundle: comment_node_acta_contentiva
+label: Comment
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

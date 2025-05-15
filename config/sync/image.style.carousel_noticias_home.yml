@@ -1,0 +1,15 @@
+uuid: 85315959-aeaa-49f2-abe8-d3c52a47db09
+langcode: es
+status: true
+dependencies: {  }
+name: carousel_noticias_home
+label: 'Carousel Noticias Home'
+effects:
+  86f89c28-5126-4608-872a-c8c7aa1fa44f:
+    uuid: 86f89c28-5126-4608-872a-c8c7aa1fa44f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 311
+      height: 180
+      anchor: center-center

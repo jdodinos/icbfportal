@@ -1,0 +1,19 @@
+uuid: c576b6a7-2ac2-4645-90af-cba6a6fbc5e7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_initials
+    - node.type.enlaces_referencia
+id: node.enlaces_referencia.field_initials
+field_name: field_initials
+entity_type: node
+bundle: enlaces_referencia
+label: Sigla
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

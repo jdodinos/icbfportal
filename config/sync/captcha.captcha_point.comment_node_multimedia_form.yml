@@ -1,0 +1,7 @@
+uuid: 2d09ebfe-906e-40fe-9078-bfcf8be1c209
+langcode: es
+status: true
+dependencies: {  }
+formId: comment_node_multimedia_form
+captchaType: captcha/default
+label: comment_node_multimedia_form

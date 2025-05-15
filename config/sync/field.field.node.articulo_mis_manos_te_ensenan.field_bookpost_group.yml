@@ -1,0 +1,52 @@
+uuid: d70f75c3-121b-499a-8b67-d02cfc6b2976
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bookpost_group
+    - node.type.articulo_mis_manos_te_ensenan
+    - paragraphs.paragraphs_type.bookpost_group
+  module:
+    - entity_reference_revisions
+id: node.articulo_mis_manos_te_ensenan.field_bookpost_group
+field_name: field_bookpost_group
+entity_type: node
+bundle: articulo_mis_manos_te_ensenan
+label: 'Información Bibliografía'
+description: 'Grupo de campos para post bibliográfico'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      bookpost_group: bookpost_group
+    negate: 0
+    target_bundles_drag_drop:
+      bookpost_group:
+        weight: 1
+        enabled: true
+      children_defendant:
+        weight: 2
+        enabled: false
+      enlaces_referidos:
+        weight: 3
+        enabled: false
+      glazed_content_design:
+        weight: 4
+        enabled: false
+      local_staff_list:
+        weight: 5
+        enabled: false
+      multimedia_collection:
+        weight: 6
+        enabled: false
+      post_document_plus:
+        weight: 7
+        enabled: false
+      summoned:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,19 @@
+uuid: 0c493cc3-7a73-40df-8754-913de8f9bfb9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_link_6
+    - paragraphs.paragraphs_type.enlaces_referidos
+id: paragraph.enlaces_referidos.field_title_link_6
+field_name: field_title_link_6
+entity_type: paragraph
+bundle: enlaces_referidos
+label: 'Título enlace 6'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

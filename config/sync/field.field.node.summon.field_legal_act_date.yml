@@ -1,0 +1,21 @@
+uuid: 97b83f99-f2e7-4353-adcb-4373127e16d1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legal_act_date
+    - node.type.summon
+  module:
+    - datetime
+id: node.summon.field_legal_act_date
+field_name: field_legal_act_date
+entity_type: node
+bundle: summon
+label: 'Fecha del auto'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

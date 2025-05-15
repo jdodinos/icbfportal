@@ -1,0 +1,27 @@
+uuid: 1357c620-1bd5-440e-9e58-d7a32e6f556a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document
+    - node.type.monitoreo_gesti_n
+  module:
+    - file
+id: node.monitoreo_gesti_n.field_document
+field_name: field_document
+entity_type: node
+bundle: monitoreo_gesti_n
+label: Documento
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'txt pdf doc xls xlsx docx ppt pptx png jpg jpge tiff gif zip rar msg xps'
+  max_filesize: 20mb
+  description_field: true
+field_type: file

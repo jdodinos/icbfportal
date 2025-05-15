@@ -1,0 +1,9 @@
+uuid: e2bab27c-ce35-4e7f-b43c-f36bd07d46b1
+langcode: es
+status: true
+dependencies: {  }
+name: 'Causales de Devoluciones'
+vid: actas_contentivas_type
+description: 'tipos de respuesta de derechos de petición'
+weight: -2
+new_revision: false

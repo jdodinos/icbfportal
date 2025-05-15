@@ -1,0 +1,20 @@
+uuid: bcb48df0-e749-48f9-b0e0-a267c0477207
+langcode: es
+status: true
+dependencies:
+  module:
+    - comment
+    - node
+id: node.comment_node_document_microsite
+field_name: comment_node_document_microsite
+entity_type: node
+type: comment
+settings:
+  comment_type: comment_node_document_microsite
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

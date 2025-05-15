@@ -1,0 +1,26 @@
+uuid: 1fbc4e75-cb87-4663-b09f-3a4e15a1e2b1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_policy_clasify
+    - node.type.documentos_de_normativa
+    - taxonomy.vocabulary.normativa
+id: node.documentos_de_normativa.field_policy_clasify
+field_name: field_policy_clasify
+entity_type: node
+bundle: documentos_de_normativa
+label: 'Clasificación Normativa'
+description: 'Clasificación en referencia al árbol de contenidos: El Derecho de Bienestar'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      normativa: normativa
+    sort:
+      field: _none
+field_type: entity_reference

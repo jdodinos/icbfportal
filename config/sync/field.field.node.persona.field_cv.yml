@@ -1,0 +1,27 @@
+uuid: e1c5a3fb-ccc5-4196-bf28-25f6147b11b2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cv
+    - node.type.persona
+  module:
+    - file
+id: node.persona.field_cv
+field_name: field_cv
+entity_type: node
+bundle: persona
+label: 'Hoja de Vida'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'pdf doc docx'
+  max_filesize: ''
+  description_field: false
+field_type: file

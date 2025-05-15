@@ -1,0 +1,14 @@
+uuid: 923a43b0-e5ac-4f99-bb47-70b2b64fed35
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.regional_risaralda
+  module:
+    - user
+id: user_add_role_action.regional_risaralda
+label: 'Añade el rol Regional Risaralda al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: regional_risaralda

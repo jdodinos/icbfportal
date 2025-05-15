@@ -1,0 +1,27 @@
+uuid: 7110c2f2-dced-43be-88c5-77fef24de7fe
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_attached_files
+    - node.type.sector_studies
+  module:
+    - file
+id: node.sector_studies.field_attached_files
+field_name: field_attached_files
+entity_type: node
+bundle: sector_studies
+label: Documentos
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'pdf doc docx xls xlsx ppt pptx zip xlm bak dwg'
+  max_filesize: ''
+  description_field: true
+field_type: file

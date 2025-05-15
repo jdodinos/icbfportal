@@ -1,0 +1,19 @@
+uuid: 76396313-207b-4fc1-adb9-701f81c63de7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_working_hours
+    - node.type.sede_local
+id: node.sede_local.field_working_hours
+field_name: field_working_hours
+entity_type: node
+bundle: sede_local
+label: 'Horario de Atención'
+description: 'Formato 12 horas: A.M. - P.M.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

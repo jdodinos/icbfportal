@@ -1,0 +1,14 @@
+uuid: ea1ff9a9-147c-4b76-b06d-4a221d20dd5b
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.contratacion
+  module:
+    - user
+id: user_remove_role_action.contratacion
+label: 'Elimina el rol Contratación al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: contratacion

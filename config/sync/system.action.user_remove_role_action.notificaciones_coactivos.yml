@@ -1,0 +1,14 @@
+uuid: f10b6c4d-1406-4b18-8535-d086680b8e07
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.notificaciones_coactivos
+  module:
+    - user
+id: user_remove_role_action.notificaciones_coactivos
+label: 'Elimina el rol Notificaciones Coactivos al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: notificaciones_coactivos

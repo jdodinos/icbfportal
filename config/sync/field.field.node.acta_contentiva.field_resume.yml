@@ -1,0 +1,22 @@
+uuid: 85acdf1e-974f-422c-89d0-a3f0766dc95a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resume
+    - node.type.acta_contentiva
+  module:
+    - text
+id: node.acta_contentiva.field_resume
+field_name: field_resume
+entity_type: node
+bundle: acta_contentiva
+label: Resumen
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

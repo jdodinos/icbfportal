@@ -1,0 +1,23 @@
+uuid: 3c73e375-d06c-4218-802c-031e8131838c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_priority
+    - taxonomy.vocabulary.programa_adopciones
+id: taxonomy_term.programa_adopciones.field_priority
+field_name: field_priority
+entity_type: taxonomy_term
+bundle: programa_adopciones
+label: Prioridad
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

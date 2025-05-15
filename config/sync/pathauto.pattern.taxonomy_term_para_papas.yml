@@ -1,0 +1,21 @@
+uuid: 00f863c3-25ca-4273-8a6b-dc449b69efaf
+langcode: es
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term_para_papas
+label: 'Término de taxonomía - Familias'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'familias-ser-papas/[term:name]'
+selection_criteria:
+  -
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      para_papas: para_papas
+selection_logic: and
+weight: 0
+relationships: {  }

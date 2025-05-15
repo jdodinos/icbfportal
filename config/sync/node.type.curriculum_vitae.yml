@@ -1,0 +1,30 @@
+uuid: 104e7e28-a1ea-4e54-8fa9-d04373ad3d0b
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: true
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Hoja de Vida'
+type: curriculum_vitae
+description: 'Empleos de Libre Nombramiento y Remoción - Gestión Humana'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

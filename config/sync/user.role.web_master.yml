@@ -1,0 +1,159 @@
+uuid: 29dede06-8ae3-4b98-9880-7c7a63091098
+langcode: es
+status: true
+dependencies:
+  config:
+    - filter.format.clean
+    - filter.format.filtered_html
+    - filter.format.full_html
+    - node.type.acta_contentiva
+    - node.type.agencies_adoptions_colombian
+    - node.type.announcement
+    - node.type.article
+    - node.type.banner_home
+    - node.type.blog
+    - node.type.curriculum_vitae
+    - node.type.document
+    - node.type.encargos
+    - node.type.evaluaci_n
+    - node.type.event_calendar
+    - node.type.forum
+    - node.type.hiring_process
+    - node.type.infografia_observatorio
+    - node.type.instituciones_adopciones
+    - node.type.local_shopping
+    - node.type.monitoreo_gesti_n
+    - node.type.multimedia
+    - node.type.news
+    - node.type.notifications
+    - node.type.page
+    - node.type.panel
+    - node.type.persona
+    - node.type.petition_rights
+    - node.type.poll
+    - node.type.process
+    - node.type.rendicion_de_cuentas
+    - node.type.sector_studies
+    - node.type.summon
+    - node.type.transparency
+    - node.type.webform
+  module:
+    - filter
+    - google_analytics
+    - google_analytics_counter
+    - image
+    - language
+    - node
+    - search
+    - system
+    - youtube
+id: web_master
+label: 'Web Master'
+weight: 70
+is_admin: null
+permissions:
+  - 'access content'
+  - 'access content overview'
+  - 'administer google analytics'
+  - 'administer google analytics counter'
+  - 'administer image styles'
+  - 'administer languages'
+  - 'administer youtube'
+  - 'create acta_contentiva content'
+  - 'create agencies_adoptions_colombian content'
+  - 'create announcement content'
+  - 'create article content'
+  - 'create banner_home content'
+  - 'create blog content'
+  - 'create curriculum_vitae content'
+  - 'create document content'
+  - 'create encargos content'
+  - 'create evaluaci_n content'
+  - 'create event_calendar content'
+  - 'create forum content'
+  - 'create hiring_process content'
+  - 'create infografia_observatorio content'
+  - 'create instituciones_adopciones content'
+  - 'create local_shopping content'
+  - 'create monitoreo_gesti_n content'
+  - 'create multimedia content'
+  - 'create news content'
+  - 'create notifications content'
+  - 'create page content'
+  - 'create panel content'
+  - 'create persona content'
+  - 'create petition_rights content'
+  - 'create poll content'
+  - 'create process content'
+  - 'create rendicion_de_cuentas content'
+  - 'create sector_studies content'
+  - 'create summon content'
+  - 'create transparency content'
+  - 'create webform content'
+  - 'delete own acta_contentiva content'
+  - 'delete own agencies_adoptions_colombian content'
+  - 'delete own announcement content'
+  - 'delete own article content'
+  - 'delete own banner_home content'
+  - 'delete own blog content'
+  - 'delete own curriculum_vitae content'
+  - 'delete own document content'
+  - 'delete own encargos content'
+  - 'delete own evaluaci_n content'
+  - 'delete own event_calendar content'
+  - 'delete own forum content'
+  - 'delete own hiring_process content'
+  - 'delete own infografia_observatorio content'
+  - 'delete own instituciones_adopciones content'
+  - 'delete own local_shopping content'
+  - 'delete own monitoreo_gesti_n content'
+  - 'delete own multimedia content'
+  - 'delete own news content'
+  - 'delete own notifications content'
+  - 'delete own page content'
+  - 'delete own panel content'
+  - 'delete own persona content'
+  - 'delete own petition_rights content'
+  - 'delete own poll content'
+  - 'delete own process content'
+  - 'delete own rendicion_de_cuentas content'
+  - 'delete own sector_studies content'
+  - 'delete own summon content'
+  - 'delete own transparency content'
+  - 'delete own webform content'
+  - 'edit own acta_contentiva content'
+  - 'edit own agencies_adoptions_colombian content'
+  - 'edit own announcement content'
+  - 'edit own article content'
+  - 'edit own banner_home content'
+  - 'edit own blog content'
+  - 'edit own curriculum_vitae content'
+  - 'edit own document content'
+  - 'edit own encargos content'
+  - 'edit own evaluaci_n content'
+  - 'edit own event_calendar content'
+  - 'edit own forum content'
+  - 'edit own hiring_process content'
+  - 'edit own infografia_observatorio content'
+  - 'edit own instituciones_adopciones content'
+  - 'edit own local_shopping content'
+  - 'edit own monitoreo_gesti_n content'
+  - 'edit own multimedia content'
+  - 'edit own news content'
+  - 'edit own notifications content'
+  - 'edit own page content'
+  - 'edit own panel content'
+  - 'edit own persona content'
+  - 'edit own petition_rights content'
+  - 'edit own poll content'
+  - 'edit own process content'
+  - 'edit own rendicion_de_cuentas content'
+  - 'edit own sector_studies content'
+  - 'edit own summon content'
+  - 'edit own transparency content'
+  - 'edit own webform content'
+  - 'search content'
+  - 'use text format clean'
+  - 'use text format filtered_html'
+  - 'use text format full_html'
+  - 'view own unpublished content'

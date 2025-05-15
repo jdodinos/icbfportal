@@ -1,0 +1,8 @@
+uuid: d1f78606-03b2-43c6-9a1e-be6d8ece9902
+langcode: en
+status: true
+dependencies: {  }
+id: menu-prueba1
+label: 'Menu ICBF'
+description: 'Menu principal de contenidos'
+locked: false

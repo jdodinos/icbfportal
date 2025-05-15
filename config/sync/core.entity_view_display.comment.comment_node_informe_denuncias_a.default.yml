@@ -1,0 +1,30 @@
+uuid: fadd5d3f-8e07-4ca3-a4af-f248944cc0e0
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_informe_denuncias_a
+    - field.field.comment.comment_node_informe_denuncias_a.comment_body
+  module:
+    - text
+id: comment.comment_node_informe_denuncias_a.default
+targetEntityType: comment
+bundle: comment_node_informe_denuncias_a
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

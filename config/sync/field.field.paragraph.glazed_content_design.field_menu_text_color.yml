@@ -1,0 +1,19 @@
+uuid: a59f5d43-d78b-4e78-9c30-1742784626c6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_menu_text_color
+    - paragraphs.paragraphs_type.glazed_content_design
+id: paragraph.glazed_content_design.field_menu_text_color
+field_name: field_menu_text_color
+entity_type: paragraph
+bundle: glazed_content_design
+label: 'Menu Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

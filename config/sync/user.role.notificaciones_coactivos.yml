@@ -1,0 +1,17 @@
+uuid: 3d84e2dd-5fca-4b4c-89af-588aa27d03f3
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.notifications
+  module:
+    - node
+    - system
+id: notificaciones_coactivos
+label: 'Notificaciones Coactivos'
+weight: 31
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'create notifications content'
+  - 'edit own notifications content'

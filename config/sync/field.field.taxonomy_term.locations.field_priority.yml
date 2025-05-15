@@ -1,0 +1,23 @@
+uuid: 0beb259e-c8bd-48bb-8c29-e6d8e2910d4b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_priority
+    - taxonomy.vocabulary.locations
+id: taxonomy_term.locations.field_priority
+field_name: field_priority
+entity_type: taxonomy_term
+bundle: locations
+label: Prioridad
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

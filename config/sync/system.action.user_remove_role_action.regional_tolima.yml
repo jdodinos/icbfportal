@@ -1,0 +1,14 @@
+uuid: 503fdfeb-6b1d-4841-bd70-d20f299721d9
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.regional_tolima
+  module:
+    - user
+id: user_remove_role_action.regional_tolima
+label: 'Elimina el rol Regional Tolima al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: regional_tolima

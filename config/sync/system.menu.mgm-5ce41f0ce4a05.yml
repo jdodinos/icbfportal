@@ -1,0 +1,8 @@
+uuid: 0e656c4a-38ef-4ce2-b9e8-7ddcf4ed9f53
+langcode: en
+status: true
+dependencies: {  }
+id: mgm-5ce41f0ce4a05
+label: 'Menu ADA'
+description: 'Menu micrositio adopciones'
+locked: false

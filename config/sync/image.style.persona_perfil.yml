@@ -1,0 +1,15 @@
+uuid: 1a22dc97-945f-4372-8e79-d964b060dff4
+langcode: es
+status: true
+dependencies: {  }
+name: persona_perfil
+label: 'Persona Perfil'
+effects:
+  bf01ebaf-f312-4377-abaa-ff21cb3376fa:
+    uuid: bf01ebaf-f312-4377-abaa-ff21cb3376fa
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 120
+      height: 120
+      anchor: center-center

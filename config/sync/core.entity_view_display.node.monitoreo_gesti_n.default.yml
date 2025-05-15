@@ -1,0 +1,102 @@
+uuid: 1d1e1cf9-49ec-42cd-919a-4de88753dfbf
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_monitoreo_gesti_n.default
+    - field.field.node.monitoreo_gesti_n.comment_node_monitoreo_gesti_n
+    - field.field.node.monitoreo_gesti_n.field_dae_year
+    - field.field.node.monitoreo_gesti_n.field_document
+    - field.field.node.monitoreo_gesti_n.field_file_categoria
+    - field.field.node.monitoreo_gesti_n.field_location
+    - field.field.node.monitoreo_gesti_n.field_metatag
+    - field.field.node.monitoreo_gesti_n.field_resume
+    - field.field.node.monitoreo_gesti_n.field_section
+    - field.field.node.monitoreo_gesti_n.field_trimester
+    - node.type.monitoreo_gesti_n
+  module:
+    - comment
+    - datetime
+    - file
+    - text
+    - user
+id: node.monitoreo_gesti_n.default
+targetEntityType: node
+bundle: monitoreo_gesti_n
+mode: default
+content:
+  comment_node_monitoreo_gesti_n:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_dae_year:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_document:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_file_categoria:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_location:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_resume:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_section:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_trimester:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_metatag: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

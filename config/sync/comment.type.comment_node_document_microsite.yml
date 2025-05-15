@@ -1,0 +1,8 @@
+uuid: 22714a1e-b169-4bb9-8969-e5b27c5c1538
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_document_microsite
+label: 'Documento de Micrositio comment'
+target_entity_type_id: node
+description: null

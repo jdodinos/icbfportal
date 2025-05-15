@@ -1,0 +1,11 @@
+global:
+  css:
+    theme:
+      css/custom-search.css: {}
+  js:
+    js/search-autocomplete.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/once
+    - jquery_ui_autocomplete/autocomplete

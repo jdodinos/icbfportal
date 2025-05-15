@@ -1,0 +1,15 @@
+uuid: ac112743-b639-4025-a324-93821170f61f
+langcode: es
+status: true
+dependencies: {  }
+name: 1145x265
+label: 1145x265
+effects:
+  7759d18b-8722-4516-a410-6a8fa66d0510:
+    uuid: 7759d18b-8722-4516-a410-6a8fa66d0510
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1145
+      height: 262
+      anchor: center-center

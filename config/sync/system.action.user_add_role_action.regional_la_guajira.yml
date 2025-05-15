@@ -1,0 +1,14 @@
+uuid: aa70e85d-ddcb-4339-90d0-eea952b4d537
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.regional_la_guajira
+  module:
+    - user
+id: user_add_role_action.regional_la_guajira
+label: 'Añade el rol Regional La Guajira al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: regional_la_guajira

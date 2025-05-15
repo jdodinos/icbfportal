@@ -1,0 +1,48 @@
+uuid: a1ceb31c-3ae9-44b1-b143-3162872dee3c
+langcode: es
+status: true
+dependencies:
+  config:
+    - filter.format.clean
+    - filter.format.full_html
+    - node.type.document
+    - node.type.documentos_contrataci_n
+    - node.type.hiring_process
+  module:
+    - field_permissions
+    - filter
+    - node
+    - publishcontent
+    - scheduler
+    - system
+    - view_unpublished
+id: contratacion
+label: Contratación
+weight: 11
+is_admin: null
+permissions:
+  - 'create document content'
+  - 'create documentos_contrataci_n content'
+  - 'create field_creation_date'
+  - 'create hiring_process content'
+  - 'delete any documentos_contrataci_n content'
+  - 'delete any hiring_process content'
+  - 'delete own documentos_contrataci_n content'
+  - 'delete own hiring_process content'
+  - 'edit any documentos_contrataci_n content'
+  - 'edit any hiring_process content'
+  - 'edit field_creation_date'
+  - 'edit own document content'
+  - 'edit own documentos_contrataci_n content'
+  - 'edit own field_creation_date'
+  - 'edit own hiring_process content'
+  - 'schedule publishing of nodes'
+  - 'unpublish editable content'
+  - 'use text format clean'
+  - 'use text format full_html'
+  - 'view any unpublished documentos_contrataci_n content'
+  - 'view field_creation_date'
+  - 'view own field_creation_date'
+  - 'view own unpublished content'
+  - 'view scheduled content'
+  - 'view the administration theme'

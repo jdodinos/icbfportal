@@ -1,0 +1,11 @@
+uuid: 068f4da5-7413-496a-82e1-bafcf3cd4b31
+langcode: es
+status: true
+dependencies:
+  module:
+    - votingapi
+id: vote.token
+label: Comodín
+description: ''
+targetEntityType: vote
+cache: true

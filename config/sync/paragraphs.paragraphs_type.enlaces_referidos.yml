@@ -1,0 +1,10 @@
+uuid: 7ec36c5c-3683-4728-91b3-37050fc74268
+langcode: es
+status: true
+dependencies: {  }
+id: enlaces_referidos
+label: 'Enlaces referidos'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from field_collection field_enlaces_referidos'
+behavior_plugins: {  }

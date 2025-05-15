@@ -1,0 +1,28 @@
+uuid: f1c005a1-b598-4619-8a2c-de124ca40e70
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file_categoria
+    - node.type.glosario
+    - taxonomy.vocabulary.file_category
+id: node.glosario.field_file_categoria
+field_name: field_file_categoria
+entity_type: node
+bundle: glosario
+label: 'Categoría de Contenido'
+description: 'Preguntas Frecuentes Relacionadas'
+required: true
+translatable: false
+default_value:
+  -
+    tid: '7178'
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      file_category: file_category
+    sort:
+      field: _none
+field_type: entity_reference

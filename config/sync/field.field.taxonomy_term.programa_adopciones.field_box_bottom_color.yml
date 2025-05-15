@@ -1,0 +1,21 @@
+uuid: 8fecd4d1-130f-4f3a-a975-a53d2bcc87a1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_box_bottom_color
+    - taxonomy.vocabulary.programa_adopciones
+  module:
+    - options
+id: taxonomy_term.programa_adopciones.field_box_bottom_color
+field_name: field_box_bottom_color
+entity_type: taxonomy_term
+bundle: programa_adopciones
+label: 'BOX Bottom Color'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

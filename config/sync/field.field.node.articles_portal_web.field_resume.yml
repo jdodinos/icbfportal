@@ -1,0 +1,22 @@
+uuid: 27925d68-d74c-4536-a03c-38d0e0f8caa4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resume
+    - node.type.articles_portal_web
+  module:
+    - text
+id: node.articles_portal_web.field_resume
+field_name: field_resume
+entity_type: node
+bundle: articles_portal_web
+label: Resumen
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

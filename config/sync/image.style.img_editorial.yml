@@ -1,0 +1,15 @@
+uuid: 55b64d58-f5fa-4dc9-8273-ec277f00c388
+langcode: es
+status: true
+dependencies: {  }
+name: img_editorial
+label: 'IMG Editorial'
+effects:
+  e680fa7f-9a90-4d40-8b62-874a3412b61c:
+    uuid: e680fa7f-9a90-4d40-8b62-874a3412b61c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 365
+      height: 182
+      anchor: center-center

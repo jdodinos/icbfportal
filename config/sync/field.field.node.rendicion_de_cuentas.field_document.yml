@@ -1,0 +1,27 @@
+uuid: 6d4c8615-8160-4aa7-b239-cb5196b405af
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document
+    - node.type.rendicion_de_cuentas
+  module:
+    - file
+id: node.rendicion_de_cuentas.field_document
+field_name: field_document
+entity_type: node
+bundle: rendicion_de_cuentas
+label: Documento
+description: 'Documento de informe, acta o registro de la mesa pública'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'txt pdf doc docx xls xlsx ppt pptx zip xlm'
+  max_filesize: 30mb
+  description_field: true
+field_type: file

@@ -1,0 +1,15 @@
+uuid: a3236eb3-fae4-4181-b2e4-b4aff66ee4fa
+langcode: es
+status: true
+dependencies: {  }
+name: home_400x365
+label: 'Home 400x365'
+effects:
+  fc39ad57-6f22-43cc-b5de-b6d43424f07a:
+    uuid: fc39ad57-6f22-43cc-b5de-b6d43424f07a
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 365
+      anchor: center-center

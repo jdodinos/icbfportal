@@ -1,0 +1,14 @@
+uuid: f1f26d94-5aed-409f-a53a-feb837d5bd75
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.administrar_datos_ninos_migrantes_venezolanos
+  module:
+    - user
+id: user_add_role_action.administrar_datos_ninos_migrantes_venezolanos
+label: 'Añade el rol Administrar Datos Niños Migrantes Venezolanos al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: administrar_datos_ninos_migrantes_venezolanos

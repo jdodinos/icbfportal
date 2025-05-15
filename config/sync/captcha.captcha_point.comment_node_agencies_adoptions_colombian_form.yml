@@ -1,0 +1,7 @@
+uuid: 706160d4-879d-445f-a48c-e4d1a7042fbc
+langcode: es
+status: true
+dependencies: {  }
+formId: comment_node_agencies_adoptions_colombian_form
+captchaType: captcha/default
+label: comment_node_agencies_adoptions_colombian_form

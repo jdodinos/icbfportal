@@ -1,0 +1,14 @@
+uuid: ab7353ad-a4e5-4393-a83f-d57c0ee1eba3
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.regional_antioquia
+  module:
+    - user
+id: user_remove_role_action.regional_antioquia
+label: 'Elimina el rol Regional Antioquia al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: regional_antioquia

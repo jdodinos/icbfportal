@@ -1,0 +1,14 @@
+uuid: 85944d97-04c2-4cb4-8fc3-378b8136ff83
+langcode: en
+status: true
+dependencies: {  }
+id: redirect_defensores
+label: 'Redirect Defensores'
+events:
+  -
+    event_name: rules_user_login
+description: ''
+tags: {  }
+config_version: '3'
+expression:
+  id: rules_rule

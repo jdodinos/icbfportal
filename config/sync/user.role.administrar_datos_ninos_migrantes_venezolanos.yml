@@ -1,0 +1,9 @@
+uuid: dfbb0898-acf1-4642-86ba-aa3b2e323cce
+langcode: es
+status: true
+dependencies: {  }
+id: administrar_datos_ninos_migrantes_venezolanos
+label: 'Administrar Datos Niños Migrantes Venezolanos'
+weight: 75
+is_admin: null
+permissions: {  }

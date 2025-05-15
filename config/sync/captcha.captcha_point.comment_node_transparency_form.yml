@@ -1,0 +1,7 @@
+uuid: 9125bee3-6ad7-4569-9b17-76576487e849
+langcode: es
+status: true
+dependencies: {  }
+formId: comment_node_transparency_form
+captchaType: captcha/default
+label: comment_node_transparency_form

@@ -1,0 +1,21 @@
+uuid: 179f3205-887b-468a-b237-a315c2b52c88
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_day_calendaro
+    - node.type.event_calendar
+  module:
+    - datetime
+id: node.event_calendar.field_date_day_calendaro
+field_name: field_date_day_calendaro
+entity_type: node
+bundle: event_calendar
+label: 'Fecha día'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

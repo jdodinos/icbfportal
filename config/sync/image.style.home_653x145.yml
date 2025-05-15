@@ -1,0 +1,15 @@
+uuid: 40066044-776e-4f2d-975b-326738de8471
+langcode: es
+status: true
+dependencies: {  }
+name: home_653x145
+label: 'Home 653x145'
+effects:
+  1ca92f36-a7ab-462a-95dc-09b5b946297a:
+    uuid: 1ca92f36-a7ab-462a-95dc-09b5b946297a
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 653
+      height: 145
+      anchor: center-center

@@ -1,0 +1,10 @@
+uuid: 3eeb553d-1d2d-4fb2-b4ab-3b011e939d00
+langcode: es
+status: true
+dependencies: {  }
+id: glazed_content_design
+label: 'Glazed content design'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from field_collection field_glazed_content_design'
+behavior_plugins: {  }

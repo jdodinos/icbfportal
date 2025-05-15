@@ -1,0 +1,24 @@
+uuid: efa34f84-9e30-4eed-ad09-44d853d7218b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.venta_de_bienes
+  module:
+    - text
+id: node.venta_de_bienes.body
+field_name: body
+entity_type: node
+bundle: venta_de_bienes
+label: 'Detalle de la Publicación'
+description: 'Información en extenso de la publicación.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

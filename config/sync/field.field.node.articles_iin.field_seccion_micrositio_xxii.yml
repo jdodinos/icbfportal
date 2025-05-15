@@ -1,0 +1,26 @@
+uuid: 05b9f47c-f2f8-4772-a23e-f4a8b0676079
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_seccion_micrositio_xxii
+    - node.type.articles_iin
+    - taxonomy.vocabulary.congreso_xxii
+id: node.articles_iin.field_seccion_micrositio_xxii
+field_name: field_seccion_micrositio_xxii
+entity_type: node
+bundle: articles_iin
+label: 'Seccion Micrositio XXII'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      congreso_xxii: congreso_xxii
+    sort:
+      field: _none
+field_type: entity_reference

@@ -1,0 +1,16 @@
+custom_solr_search.autocomplete:
+  path: '/custom-search/autocomplete'
+  defaults:
+    _controller: '\Drupal\custom_solr_search\Controller\SearchController::autocomplete'
+  requirements:
+    _permission: 'access content'
+  options:
+    _format: 'json'
+
+custom_solr_search.search_page:
+  path: '/buscador'
+  defaults:
+    _form: '\Drupal\custom_solr_search\Form\AdvancedSearchForm'
+    _title: 'Buscador'
+  requirements:
+    _permission: 'access content'

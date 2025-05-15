@@ -1,0 +1,33 @@
+uuid: ca1c9706-1f6c-4e6c-9a65-fa4b615cc848
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.comment_node_document_microsite
+    - node.type.document_microsite
+  module:
+    - comment
+id: node.document_microsite.comment_node_document_microsite
+field_name: comment_node_document_microsite
+entity_type: node
+bundle: document_microsite
+label: Comments
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    status: 1
+    cid: 0
+    last_comment_timestamp: 0
+    last_comment_name: null
+    last_comment_uid: 0
+    comment_count: 0
+default_value_callback: ''
+settings:
+  default_mode: 0
+  per_page: 10
+  anonymous: 0
+  form_location: false
+  preview: 0
+field_type: comment

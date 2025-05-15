@@ -1,0 +1,56 @@
+uuid: d48f483a-ae50-418b-a547-739acabe9b2b
+langcode: es
+status: true
+dependencies:
+  config:
+    - filter.format.clean
+    - filter.format.full_html
+    - node.type.articles_portal_web
+    - node.type.document
+    - node.type.local_shopping
+    - node.type.sector_studies
+    - node.type.transparency
+  module:
+    - field_permissions
+    - filter
+    - node
+    - publishcontent
+    - scheduler
+    - system
+id: abastecimiento
+label: Abastecimiento
+weight: 7
+is_admin: null
+permissions:
+  - 'access content'
+  - 'create articles_portal_web content'
+  - 'create document content'
+  - 'create field_creation_date'
+  - 'create local_shopping content'
+  - 'create sector_studies content'
+  - 'create transparency content'
+  - 'delete any local_shopping content'
+  - 'delete own document content'
+  - 'delete own local_shopping content'
+  - 'delete own sector_studies content'
+  - 'edit any articles_portal_web content'
+  - 'edit any document content'
+  - 'edit any local_shopping content'
+  - 'edit any sector_studies content'
+  - 'edit any transparency content'
+  - 'edit field_creation_date'
+  - 'edit own articles_portal_web content'
+  - 'edit own document content'
+  - 'edit own field_creation_date'
+  - 'edit own local_shopping content'
+  - 'edit own sector_studies content'
+  - 'edit own transparency content'
+  - 'schedule publishing of nodes'
+  - 'unpublish editable content'
+  - 'use text format clean'
+  - 'use text format full_html'
+  - 'view field_creation_date'
+  - 'view own field_creation_date'
+  - 'view own unpublished content'
+  - 'view scheduled content'
+  - 'view the administration theme'

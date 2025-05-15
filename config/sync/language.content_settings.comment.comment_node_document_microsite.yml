@@ -1,0 +1,11 @@
+uuid: 2cc063ff-b10a-4496-8338-fd201bb1be8a
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_document_microsite
+id: comment.comment_node_document_microsite
+target_entity_type_id: comment
+target_bundle: comment_node_document_microsite
+default_langcode: site_default
+language_alterable: false

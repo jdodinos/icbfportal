@@ -1,0 +1,8 @@
+uuid: 3c6c5b6a-08f0-4773-bb03-328e8945760f
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_documentos_contrata
+label: 'Documentos Contratación comment'
+target_entity_type_id: node
+description: null

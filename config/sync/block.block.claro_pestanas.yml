@@ -1,0 +1,20 @@
+uuid: a16ed7e6-bf15-4ab0-91a9-684e4b29b522
+langcode: es
+status: true
+dependencies:
+  theme:
+    - claro
+id: claro_pestanas
+theme: claro
+region: pre_content
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Pestañas
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

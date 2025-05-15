@@ -1,0 +1,22 @@
+uuid: ec57b5c2-6dd8-4ee4-b6c6-51da0e86ab60
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coverage_areas
+    - node.type.sede_local
+  module:
+    - text
+id: node.sede_local.field_coverage_areas
+field_name: field_coverage_areas
+entity_type: node
+bundle: sede_local
+label: 'Áreas de Cobertura'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

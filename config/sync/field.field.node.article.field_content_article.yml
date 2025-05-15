@@ -1,0 +1,22 @@
+uuid: 0419eacc-92f3-45bf-b354-a9520c9b0f99
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_article
+    - node.type.article
+  module:
+    - text
+id: node.article.field_content_article
+field_name: field_content_article
+entity_type: node
+bundle: article
+label: 'Contenido Artículo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

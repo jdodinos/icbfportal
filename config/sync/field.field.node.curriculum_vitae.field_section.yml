@@ -1,0 +1,28 @@
+uuid: 38def273-7cb0-4c57-a627-278de356f29d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section
+    - node.type.curriculum_vitae
+    - taxonomy.vocabulary.secctions
+id: node.curriculum_vitae.field_section
+field_name: field_section
+entity_type: node
+bundle: curriculum_vitae
+label: Sección
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    tid: '1238'
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      secctions: secctions
+    sort:
+      field: _none
+field_type: entity_reference

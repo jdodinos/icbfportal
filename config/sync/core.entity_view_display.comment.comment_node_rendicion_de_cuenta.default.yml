@@ -1,0 +1,30 @@
+uuid: d7ce61a1-be6a-4a7a-9d6c-3b81d987614a
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_rendicion_de_cuenta
+    - field.field.comment.comment_node_rendicion_de_cuenta.comment_body
+  module:
+    - text
+id: comment.comment_node_rendicion_de_cuenta.default
+targetEntityType: comment
+bundle: comment_node_rendicion_de_cuenta
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

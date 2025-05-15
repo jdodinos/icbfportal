@@ -1,0 +1,14 @@
+uuid: bc05e4a2-8bef-414c-bc60-7ce66748b9cf
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.regional_amazonas
+  module:
+    - user
+id: user_remove_role_action.regional_amazonas
+label: 'Elimina el rol Regional Amazonas al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: regional_amazonas

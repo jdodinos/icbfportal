@@ -1,0 +1,170 @@
+uuid: 84055c47-acd4-4223-b572-efb174b27914
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_multimedia.default
+    - field.field.node.multimedia.comment_node_multimedia
+    - field.field.node.multimedia.field_category_citizen
+    - field.field.node.multimedia.field_content
+    - field.field.node.multimedia.field_date
+    - field.field.node.multimedia.field_file_categoria
+    - field.field.node.multimedia.field_images
+    - field.field.node.multimedia.field_list_image
+    - field.field.node.multimedia.field_location
+    - field.field.node.multimedia.field_metatag
+    - field.field.node.multimedia.field_mmedia_type
+    - field.field.node.multimedia.field_priority
+    - field.field.node.multimedia.field_section
+    - field.field.node.multimedia.field_video
+    - field.field.node.multimedia.field_youtube
+    - node.type.multimedia
+  module:
+    - comment
+    - datetime
+    - image
+    - options
+    - text
+    - user
+    - video
+    - youtube
+id: node.multimedia.default
+targetEntityType: node
+bundle: multimedia
+mode: default
+content:
+  comment_node_multimedia:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_category_citizen:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_content:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_file_categoria:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_images:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_list_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_location:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_mmedia_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_priority:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_section:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_video:
+    type: video_player_list
+    label: above
+    settings:
+      controls: true
+      autoplay: false
+      loop: false
+      muted: false
+      width: '854'
+      height: '480'
+      preload: none
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_youtube:
+    type: youtube_video
+    label: above
+    settings:
+      youtube_size: 420x315
+      youtube_width: null
+      youtube_height: null
+      youtube_autoplay: false
+      youtube_mute: false
+      youtube_loop: false
+      youtube_controls: false
+      youtube_autohide: false
+      youtube_iv_load_policy: false
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_metatag: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

@@ -1,0 +1,46 @@
+uuid: bb2101ae-0ce9-4d24-9d49-18c298b8049a
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.acta_contentiva
+    - node.type.document
+    - node.type.documentos_de_normativa
+    - node.type.notifications
+  module:
+    - field_permissions
+    - node
+    - publishcontent
+    - scheduler
+    - system
+id: juridica
+label: Jurídica
+weight: 26
+is_admin: null
+permissions:
+  - 'create acta_contentiva content'
+  - 'create document content'
+  - 'create documentos_de_normativa content'
+  - 'create field_creation_date'
+  - 'create notifications content'
+  - 'delete any documentos_de_normativa content'
+  - 'delete own acta_contentiva content'
+  - 'delete own document content'
+  - 'delete own documentos_de_normativa content'
+  - 'delete own notifications content'
+  - 'edit any acta_contentiva content'
+  - 'edit any document content'
+  - 'edit any documentos_de_normativa content'
+  - 'edit any notifications content'
+  - 'edit field_creation_date'
+  - 'edit own acta_contentiva content'
+  - 'edit own document content'
+  - 'edit own documentos_de_normativa content'
+  - 'edit own field_creation_date'
+  - 'edit own notifications content'
+  - 'schedule publishing of nodes'
+  - 'unpublish editable content'
+  - 'view field_creation_date'
+  - 'view own field_creation_date'
+  - 'view scheduled content'
+  - 'view the administration theme'

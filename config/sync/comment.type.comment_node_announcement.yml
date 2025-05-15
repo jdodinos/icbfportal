@@ -1,0 +1,8 @@
+uuid: 7f878e54-7c22-473e-9532-79e86b5498ba
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_announcement
+label: 'Convocatoria comment'
+target_entity_type_id: node
+description: null

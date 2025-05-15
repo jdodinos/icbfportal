@@ -1,0 +1,22 @@
+uuid: 5f36d984-f9f3-4e21-8d20-d30f54b9ce04
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resume
+    - node.type.announcement
+  module:
+    - text
+id: node.announcement.field_resume
+field_name: field_resume
+entity_type: node
+bundle: announcement
+label: Resumen
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

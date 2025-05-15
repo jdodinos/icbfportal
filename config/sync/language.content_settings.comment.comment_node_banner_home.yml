@@ -1,0 +1,11 @@
+uuid: d579c9a0-9782-42eb-9717-42e7ef931cae
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_banner_home
+id: comment.comment_node_banner_home
+target_entity_type_id: comment
+target_bundle: comment_node_banner_home
+default_langcode: site_default
+language_alterable: false

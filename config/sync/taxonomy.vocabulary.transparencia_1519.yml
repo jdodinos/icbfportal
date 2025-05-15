@@ -1,0 +1,9 @@
+uuid: a2dcedb6-32b1-4c9d-b34e-8a3e58f077f2
+langcode: es
+status: true
+dependencies: {  }
+name: 'Transparencia 1519'
+vid: transparencia_1519
+description: 'menu resolucion 1519 de 2020'
+weight: 0
+new_revision: false

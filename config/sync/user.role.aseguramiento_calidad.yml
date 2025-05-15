@@ -1,0 +1,29 @@
+uuid: 80fdc019-9ca2-424a-8459-aa5c587af353
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.document
+  module:
+    - field_permissions
+    - node
+    - publishcontent
+    - scheduler
+    - system
+id: aseguramiento_calidad
+label: 'Aseguramiento Calidad'
+weight: 8
+is_admin: null
+permissions:
+  - 'create document content'
+  - 'create field_creation_date'
+  - 'edit any document content'
+  - 'edit field_creation_date'
+  - 'edit own document content'
+  - 'edit own field_creation_date'
+  - 'schedule publishing of nodes'
+  - 'unpublish editable content'
+  - 'view field_creation_date'
+  - 'view own field_creation_date'
+  - 'view scheduled content'
+  - 'view the administration theme'

@@ -1,0 +1,21 @@
+uuid: 62717a96-9f0a-4ad6-ac47-98f56b4bf380
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.infografia_observatorio
+  module:
+    - node
+    - panelizer
+id: observatorio_de_bienestar
+label: 'Observatorio de Bienestar'
+weight: 32
+is_admin: null
+permissions:
+  - 'administer panelizer node infografia_observatorio content'
+  - 'administer panelizer node infografia_observatorio layout'
+  - 'administer panelizer node page content'
+  - 'create infografia_observatorio content'
+  - 'delete own infografia_observatorio content'
+  - 'edit any infografia_observatorio content'
+  - 'edit own infografia_observatorio content'

@@ -1,0 +1,19 @@
+uuid: 2fb3d029-0abd-4a20-8cf6-e27637de3ad8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.isotope_example_color
+    - node.type.isotope_example
+id: node.isotope_example.isotope_example_color
+field_name: isotope_example_color
+entity_type: node
+bundle: isotope_example
+label: Color
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

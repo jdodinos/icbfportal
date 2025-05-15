@@ -1,0 +1,35 @@
+uuid: b2775caf-dbb7-4922-aea7-59f3e03f74fb
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.agencies_adoptions_colombian
+    - node.type.info_contexto
+    - node.type.instituciones_adopciones
+  module:
+    - node
+    - publishcontent
+    - scheduler
+    - system
+id: adopciones
+label: Adopciones
+weight: 6
+is_admin: null
+permissions:
+  - 'create agencies_adoptions_colombian content'
+  - 'create info_contexto content'
+  - 'create instituciones_adopciones content'
+  - 'delete any info_contexto content'
+  - 'delete own agencies_adoptions_colombian content'
+  - 'delete own info_contexto content'
+  - 'delete own instituciones_adopciones content'
+  - 'edit any agencies_adoptions_colombian content'
+  - 'edit any info_contexto content'
+  - 'edit any instituciones_adopciones content'
+  - 'edit own agencies_adoptions_colombian content'
+  - 'edit own info_contexto content'
+  - 'edit own instituciones_adopciones content'
+  - 'schedule publishing of nodes'
+  - 'unpublish editable content'
+  - 'view scheduled content'
+  - 'view the administration theme'

@@ -1,0 +1,23 @@
+uuid: c743f794-2409-4693-9991-95dcafccb470
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_priority
+    - node.type.enlaces_transparencia
+id: node.enlaces_transparencia.field_priority
+field_name: field_priority
+entity_type: node
+bundle: enlaces_transparencia
+label: Prioridad
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

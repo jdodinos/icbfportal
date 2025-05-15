@@ -1,0 +1,86 @@
+uuid: 55de6550-7866-4911-917b-393ddd50dd2d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.acta_contentiva.comment_node_acta_contentiva
+    - field.field.node.acta_contentiva.field_act_code
+    - field.field.node.acta_contentiva.field_category_citizen
+    - field.field.node.acta_contentiva.field_date
+    - field.field.node.acta_contentiva.field_metatag
+    - field.field.node.acta_contentiva.field_news_files
+    - field.field.node.acta_contentiva.field_resume
+    - field.field.node.acta_contentiva.field_section
+    - node.type.acta_contentiva
+  module:
+    - datetime
+    - file
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.acta_contentiva.default
+targetEntityType: node
+bundle: acta_contentiva
+mode: default
+content:
+  field_act_code:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_category_citizen:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_news_files:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_resume:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_section:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  comment_node_acta_contentiva: true
+  field_metatag: true
+  langcode: true
+  links: true
+  search_api_attachments: true
+  search_api_excerpt: true

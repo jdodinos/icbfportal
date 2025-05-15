@@ -1,0 +1,14 @@
+uuid: 224b659f-539c-4521-b90a-c051b03698c8
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.observatorio_de_bienestar
+  module:
+    - user
+id: user_remove_role_action.observatorio_de_bienestar
+label: 'Elimina el rol Observatorio de Bienestar al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: observatorio_de_bienestar

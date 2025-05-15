@@ -1,0 +1,14 @@
+uuid: 51b0ea5d-204b-459b-b88c-2ba8542e049d
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.informacion_transparencia
+  module:
+    - user
+id: user_add_role_action.informacion_transparencia
+label: 'Añade el rol Información Transparencia al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: informacion_transparencia

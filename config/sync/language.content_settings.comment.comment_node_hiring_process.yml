@@ -1,0 +1,11 @@
+uuid: 85c1788f-0889-4634-9ed1-cb2742901c21
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_hiring_process
+id: comment.comment_node_hiring_process
+target_entity_type_id: comment
+target_bundle: comment_node_hiring_process
+default_langcode: site_default
+language_alterable: false

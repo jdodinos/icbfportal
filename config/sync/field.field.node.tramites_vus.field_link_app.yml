@@ -1,0 +1,19 @@
+uuid: fe0ed4e9-3c07-43c3-b782-2f42ff4b7d30
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_app
+    - node.type.tramites_vus
+id: node.tramites_vus.field_link_app
+field_name: field_link_app
+entity_type: node
+bundle: tramites_vus
+label: 'Link Aplicación'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

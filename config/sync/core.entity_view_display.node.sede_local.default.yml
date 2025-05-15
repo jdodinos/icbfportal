@@ -1,0 +1,141 @@
+uuid: f7c36646-d49b-4168-a0b7-df0369a4a03b
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_sede_local.default
+    - field.field.node.sede_local.comment_node_sede_local
+    - field.field.node.sede_local.field_addres_local_offices
+    - field.field.node.sede_local.field_coverage_areas
+    - field.field.node.sede_local.field_latitud_y_longitud
+    - field.field.node.sede_local.field_list_image
+    - field.field.node.sede_local.field_local_staff_list
+    - field.field.node.sede_local.field_location_root
+    - field.field.node.sede_local.field_lugar
+    - field.field.node.sede_local.field_metatag
+    - field.field.node.sede_local.field_phone
+    - field.field.node.sede_local.field_place_type
+    - field.field.node.sede_local.field_telefono_verde
+    - field.field.node.sede_local.field_working_hours
+    - node.type.sede_local
+  module:
+    - comment
+    - entity_reference_revisions
+    - image
+    - options
+    - text
+    - user
+id: node.sede_local.default
+targetEntityType: node
+bundle: sede_local
+mode: default
+content:
+  comment_node_sede_local:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_addres_local_offices:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_coverage_areas:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_latitud_y_longitud:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_list_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_local_staff_list:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: full
+      link: ''
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_location_root:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_lugar:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_phone:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_place_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_telefono_verde:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_working_hours:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_metatag: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

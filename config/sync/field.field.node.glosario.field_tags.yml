@@ -1,0 +1,26 @@
+uuid: b727f1b4-3caf-4d55-b5ca-4a2f56c17299
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags
+    - node.type.glosario
+    - taxonomy.vocabulary.tags
+id: node.glosario.field_tags
+field_name: field_tags
+entity_type: node
+bundle: glosario
+label: Abecedario
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: _none
+field_type: entity_reference

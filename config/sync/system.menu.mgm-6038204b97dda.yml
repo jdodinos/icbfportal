@@ -1,0 +1,8 @@
+uuid: 05e4dbfe-6631-4f3c-b47f-f7dd1615bf94
+langcode: en
+status: true
+dependencies: {  }
+id: mgm-6038204b97dda
+label: 'Menu Transparencia 1519'
+description: 'side bar menu'
+locked: false

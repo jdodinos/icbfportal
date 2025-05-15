@@ -1,0 +1,21 @@
+uuid: 5dd42e55-ce91-4397-bebe-51180f462af3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.tramites_vus
+  module:
+    - metatag
+id: node.tramites_vus.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: tramites_vus
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

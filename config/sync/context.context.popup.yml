@@ -1,0 +1,48 @@
+uuid: fc404c4b-a0fe-4a40-8c4f-6ab77874ac9e
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:9142a378-c70b-47fd-be54-27d65abca5e9'
+  module:
+    - block_content
+    - system
+label: popup
+name: popup
+group: 'Mis Manos te Enseñan'
+description: ''
+requireAllConditions: false
+disabled: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: 97e8e8ba-9311-4235-b983-c7a171b78b4d
+    context_mapping: {  }
+    pages: '<front>'
+reactions:
+  blocks:
+    id: blocks
+    uuid: fc401849-720a-4d37-887c-d7f15b5ed243
+    blocks:
+      b9bbd05b-8cdc-4d2a-ae3b-65337234b4cd:
+        uuid: b9bbd05b-8cdc-4d2a-ae3b-65337234b4cd
+        id: 'block_content:9142a378-c70b-47fd-be54-27d65abca5e9'
+        label: popup
+        provider: block_content
+        label_display: '0'
+        region: footer
+        weight: '0'
+        custom_id: block_content_9142a378_c70b_47fd_be54_27d65abca5e9
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: popup
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+    include_default_blocks: 0
+    saved: false
+weight: 0

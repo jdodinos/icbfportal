@@ -1,0 +1,23 @@
+uuid: 0b3b10e9-9e07-43c1-8bba-ff5fd7bc8c72
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_book_year
+    - paragraphs.paragraphs_type.bookpost_group
+id: paragraph.bookpost_group.field_book_year
+field_name: field_book_year
+entity_type: paragraph
+bundle: bookpost_group
+label: 'Año de publicación'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

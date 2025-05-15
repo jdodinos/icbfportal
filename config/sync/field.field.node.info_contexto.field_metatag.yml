@@ -1,0 +1,21 @@
+uuid: 017d35a8-0d85-40d0-aab1-fbb4dedf96b2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.info_contexto
+  module:
+    - metatag
+id: node.info_contexto.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: info_contexto
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

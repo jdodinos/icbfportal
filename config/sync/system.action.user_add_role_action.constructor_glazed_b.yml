@@ -1,0 +1,14 @@
+uuid: 60efa596-f325-4cc9-81d7-8a16e101aa67
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.constructor_glazed_b
+  module:
+    - user
+id: user_add_role_action.constructor_glazed_b
+label: 'Añade el rol Constructor Glazed B al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: constructor_glazed_b

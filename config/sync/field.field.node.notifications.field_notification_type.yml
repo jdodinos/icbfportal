@@ -1,0 +1,26 @@
+uuid: ec385a58-a167-49bc-afbe-d420a883b764
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_notification_type
+    - node.type.notifications
+    - taxonomy.vocabulary.tipo_de_notificaci_n
+id: node.notifications.field_notification_type
+field_name: field_notification_type
+entity_type: node
+bundle: notifications
+label: 'Tipo de notificación'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      tipo_de_notificaci_n: tipo_de_notificaci_n
+    sort:
+      field: _none
+field_type: entity_reference

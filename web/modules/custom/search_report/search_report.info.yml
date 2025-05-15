@@ -1,0 +1,8 @@
+name: 'Reporte de busquedas'
+type: module
+description: 'Módulo personalizado para registrar y reportar las búsquedas realizadas con Search API Solr.'
+core_version_requirement: ^10
+package: 'Custom'
+dependencies:
+  - drupal:search_api
+  - drupal:search_api_solr

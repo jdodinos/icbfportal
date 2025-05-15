@@ -1,0 +1,19 @@
+uuid: 9fce4e31-07a5-41c7-ba5a-2af180dea01b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address_world
+    - node.type.instituciones_adopciones
+id: node.instituciones_adopciones.field_address_world
+field_name: field_address_world
+entity_type: node
+bundle: instituciones_adopciones
+label: 'Dirección de Contacto'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

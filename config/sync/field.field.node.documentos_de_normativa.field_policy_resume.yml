@@ -1,0 +1,22 @@
+uuid: 066b92ac-2139-46d0-8bff-13a33f270356
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_policy_resume
+    - node.type.documentos_de_normativa
+  module:
+    - text
+id: node.documentos_de_normativa.field_policy_resume
+field_name: field_policy_resume
+entity_type: node
+bundle: documentos_de_normativa
+label: 'Resumen del documento'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

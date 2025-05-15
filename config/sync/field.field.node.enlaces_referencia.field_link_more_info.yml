@@ -1,0 +1,19 @@
+uuid: 536e41c3-76c0-4e6e-8d5c-6812296a010a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_more_info
+    - node.type.enlaces_referencia
+id: node.enlaces_referencia.field_link_more_info
+field_name: field_link_more_info
+entity_type: node
+bundle: enlaces_referencia
+label: 'Link Relacionado'
+description: Hipervínculo
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

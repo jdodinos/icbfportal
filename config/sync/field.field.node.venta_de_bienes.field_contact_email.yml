@@ -1,0 +1,19 @@
+uuid: 91372bae-6b7d-48bb-b1fe-236e830c8847
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_email
+    - node.type.venta_de_bienes
+id: node.venta_de_bienes.field_contact_email
+field_name: field_contact_email
+entity_type: node
+bundle: venta_de_bienes
+label: 'Correo electrónico de contacto'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

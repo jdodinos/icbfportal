@@ -1,0 +1,28 @@
+uuid: a6a8e1b5-074b-4d15-9aef-fc775f090da0
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: true
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Informe Denuncias Anticorrupción'
+type: informe_denuncias_anticorrupcion
+description: 'Publicación de reporte, en cumplimiento del numeral 12 del Procedimiento para la Atención de Presuntos Actos de Corrupción.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,18 @@
+uuid: 49b974a3-d33a-4208-ac37-4446a6789f49
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.local_shopping
+id: node.local_shopping.title
+field_name: title
+entity_type: node
+bundle: local_shopping
+label: Título
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

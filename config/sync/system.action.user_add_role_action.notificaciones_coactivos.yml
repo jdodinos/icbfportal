@@ -1,0 +1,14 @@
+uuid: c5d0824f-4e3b-4439-ae30-5b309606e35a
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.notificaciones_coactivos
+  module:
+    - user
+id: user_add_role_action.notificaciones_coactivos
+label: 'Añade el rol Notificaciones Coactivos al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: notificaciones_coactivos

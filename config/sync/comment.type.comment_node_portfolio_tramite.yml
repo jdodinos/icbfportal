@@ -1,0 +1,8 @@
+uuid: 29a2e72a-f991-4c03-9f3a-584b4ed0a2a2
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_portfolio_tramite
+label: 'Portafolio Oferta Institucional comment'
+target_entity_type_id: node
+description: null

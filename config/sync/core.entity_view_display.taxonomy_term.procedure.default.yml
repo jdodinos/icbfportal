@@ -1,0 +1,148 @@
+uuid: 20950816-c939-4745-a5d8-7403c159232d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.procedure.field_category_citizen
+    - field.field.taxonomy_term.procedure.field_content
+    - field.field.taxonomy_term.procedure.field_header_infografia
+    - field.field.taxonomy_term.procedure.field_icon
+    - field.field.taxonomy_term.procedure.field_link_more_info
+    - field.field.taxonomy_term.procedure.field_link_nomasfilas
+    - field.field.taxonomy_term.procedure.field_link_videotutorial
+    - field.field.taxonomy_term.procedure.field_list_image
+    - field.field.taxonomy_term.procedure.field_metatag
+    - field.field.taxonomy_term.procedure.field_priority
+    - field.field.taxonomy_term.procedure.field_procedure_type
+    - field.field.taxonomy_term.procedure.field_related_procedures
+    - field.field.taxonomy_term.procedure.field_tags_de_tramite
+    - field.field.taxonomy_term.procedure.field_tooltip
+    - taxonomy.vocabulary.procedure
+  module:
+    - image
+    - text
+id: taxonomy_term.procedure.default
+targetEntityType: taxonomy_term
+bundle: procedure
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_category_citizen:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_header_infografia:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_icon:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_link_more_info:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_link_nomasfilas:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_link_videotutorial:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_list_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_priority:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_procedure_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_related_procedures:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_tags_de_tramite:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_tooltip:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  field_metatag: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

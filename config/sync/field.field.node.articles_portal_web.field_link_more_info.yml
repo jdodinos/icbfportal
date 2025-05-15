@@ -1,0 +1,19 @@
+uuid: 74141fdb-c84d-4c1b-b18b-55bb44d4dba6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_more_info
+    - node.type.articles_portal_web
+id: node.articles_portal_web.field_link_more_info
+field_name: field_link_more_info
+entity_type: node
+bundle: articles_portal_web
+label: 'Link Relacionado'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

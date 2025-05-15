@@ -1,0 +1,8 @@
+uuid: ebc706dd-9aba-4b64-b1ce-956bebbd3643
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_articulo_mis_manos_
+label: 'Artículo Mis Manos Te Enseñan comment'
+target_entity_type_id: node
+description: null

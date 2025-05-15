@@ -1,0 +1,20 @@
+uuid: a45c328e-550e-4be9-a0e7-ad4d81c84541
+langcode: es
+status: true
+dependencies:
+  module:
+    - comment
+    - node
+id: node.comment_node_sector_studies
+field_name: comment_node_sector_studies
+entity_type: node
+type: comment
+settings:
+  comment_type: comment_node_sector_studies
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

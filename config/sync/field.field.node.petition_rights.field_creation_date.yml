@@ -1,0 +1,21 @@
+uuid: f6e37dec-f22c-4576-83ff-8a0251062fd7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_creation_date
+    - node.type.petition_rights
+  module:
+    - datetime
+id: node.petition_rights.field_creation_date
+field_name: field_creation_date
+entity_type: node
+bundle: petition_rights
+label: 'Fecha fijación'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

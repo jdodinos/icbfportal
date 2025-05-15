@@ -1,0 +1,14 @@
+uuid: 020fb654-706b-443d-a203-155d3bce6820
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.migracion
+  module:
+    - user
+id: user_remove_role_action.migracion
+label: 'Elimina el rol migracion al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: migracion

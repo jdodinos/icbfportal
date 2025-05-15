@@ -1,0 +1,22 @@
+uuid: d48cf3ab-d558-441c-824d-745ba2da882c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_tooltip
+    - taxonomy.vocabulary.procedure
+  module:
+    - text
+id: taxonomy_term.procedure.field_tooltip
+field_name: field_tooltip
+entity_type: taxonomy_term
+bundle: procedure
+label: Tooltip
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

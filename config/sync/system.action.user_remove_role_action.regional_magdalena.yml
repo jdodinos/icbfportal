@@ -1,0 +1,14 @@
+uuid: f77b73a7-0970-4b88-beee-d3260975d862
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.regional_magdalena
+  module:
+    - user
+id: user_remove_role_action.regional_magdalena
+label: 'Elimina el rol Regional Magdalena al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: regional_magdalena

@@ -1,0 +1,140 @@
+uuid: 6f7ddc2e-cbc2-49d0-a8f0-cee098467429
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.informe_denuncias_anticorrupcion.comment_node_informe_denuncias_a
+    - field.field.node.informe_denuncias_anticorrupcion.field_closin_fact_date
+    - field.field.node.informe_denuncias_anticorrupcion.field_closing_fact_anticorruptio
+    - field.field.node.informe_denuncias_anticorrupcion.field_document
+    - field.field.node.informe_denuncias_anticorrupcion.field_location
+    - field.field.node.informe_denuncias_anticorrupcion.field_registration_date
+    - field.field.node.informe_denuncias_anticorrupcion.field_verify_fact_anticorruption
+    - node.type.informe_denuncias_anticorrupcion
+  module:
+    - comment
+    - datetime
+    - file
+    - path
+id: node.informe_denuncias_anticorrupcion.default
+targetEntityType: node
+bundle: informe_denuncias_anticorrupcion
+mode: default
+content:
+  comment_node_informe_denuncias_a:
+    type: comment_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_closin_fact_date:
+    type: datetime_default
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_closing_fact_anticorruptio:
+    type: entity_reference_autocomplete
+    weight: 4
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_document:
+    type: file_generic
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_location:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_registration_date:
+    type: datetime_default
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_verify_fact_anticorruption:
+    type: options_buttons
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  publish_on: true
+  unpublish_on: true

@@ -1,0 +1,21 @@
+uuid: 765a1b4b-4055-4da5-a44d-761512117163
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_label_range
+    - node.type.article
+  module:
+    - options
+id: node.article.field_label_range
+field_name: field_label_range
+entity_type: node
+bundle: article
+label: Edad
+description: 'Label que define el filtro por tagets'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

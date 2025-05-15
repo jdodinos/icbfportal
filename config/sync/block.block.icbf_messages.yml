@@ -1,0 +1,22 @@
+uuid: c7445e17-6549-408d-8205-d2f27182315d
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - icbf
+_core:
+  default_config_hash: lbU-xnsw6MnD07NfJ_paAQoSWB6zyvHrGQ-9Zkr55DQ
+id: icbf_messages
+theme: icbf
+region: content
+weight: -9
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Mensajes
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,14 @@
+uuid: 132fb954-bceb-4361-a9f7-9c387dac3c32
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.administrador_funcional_ajustado
+  module:
+    - user
+id: user_add_role_action.administrador_funcional_ajustado
+label: 'Añade el rol Administrador Funcional Ajustado al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: administrador_funcional_ajustado

@@ -1,0 +1,82 @@
+uuid: 9f9a8e7d-1ded-46a2-819a-3e746dedcaef
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_documento_multiple.default
+    - field.field.node.documento_multiple.body
+    - field.field.node.documento_multiple.comment_node_documento_multiple
+    - field.field.node.documento_multiple.field_archivo_principal
+    - field.field.node.documento_multiple.field_archivos_varios
+    - field.field.node.documento_multiple.field_file_categoria
+    - field.field.node.documento_multiple.field_metatag
+    - field.field.node.documento_multiple.field_section
+    - node.type.documento_multiple
+  module:
+    - comment
+    - file
+    - text
+    - user
+id: node.documento_multiple.default
+targetEntityType: node
+bundle: documento_multiple
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  comment_node_documento_multiple:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_archivo_principal:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_archivos_varios:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_file_categoria:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_section:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_metatag: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

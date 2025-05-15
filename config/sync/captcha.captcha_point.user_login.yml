@@ -1,0 +1,7 @@
+uuid: 577a5545-9fe4-4d25-8c22-29e5718e1d4a
+langcode: es
+status: true
+dependencies: {  }
+formId: user_login
+captchaType: captcha/Math
+label: user_login

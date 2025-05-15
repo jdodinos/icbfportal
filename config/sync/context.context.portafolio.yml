@@ -1,0 +1,48 @@
+uuid: 252dee44-0d65-441a-a60d-2d7c5b815b67
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:footer:757053c3-91b5-4003-8e39-e12a51d691bc'
+  module:
+    - block_content
+    - system
+label: portafolio
+name: portafolio
+group: 'Micrositio portafolio'
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: b252bad5-6074-4f4c-9596-42b91fa2c04f
+    context_mapping: {  }
+    pages: "/portafolio-de-servicios-icbf\r\n/portafolio-de-servicios-icbf/*"
+reactions:
+  blocks:
+    id: blocks
+    uuid: 9c8438f5-4739-4517-b74e-5046d24de74a
+    blocks:
+      c49b2cfb-3cfb-4a1e-b02f-ac1f061e2977:
+        uuid: c49b2cfb-3cfb-4a1e-b02f-ac1f061e2977
+        id: 'block_content:757053c3-91b5-4003-8e39-e12a51d691bc'
+        label: 'Widget Portafolio'
+        provider: block_content
+        label_display: '0'
+        region: content
+        weight: '0'
+        custom_id: block_content_757053c3_91b5_4003_8e39_e12a51d691bc
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: portafolio
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+    include_default_blocks: 0
+    saved: false
+weight: 0

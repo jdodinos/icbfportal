@@ -1,0 +1,19 @@
+uuid: 38011bca-9e2b-4991-9b9e-74a00adb9b86
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_seo_title
+    - taxonomy.vocabulary.mis_manos_te_ensenan
+id: taxonomy_term.mis_manos_te_ensenan.field_seo_title
+field_name: field_seo_title
+entity_type: taxonomy_term
+bundle: mis_manos_te_ensenan
+label: 'Título Presentación'
+description: 'título para listados y vistas'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

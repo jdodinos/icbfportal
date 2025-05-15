@@ -1,0 +1,263 @@
+uuid: 34d2ac3e-1047-46b2-8b7f-b178274412a9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.instituciones_adopciones.comment_node_instituciones_adopc
+    - field.field.node.instituciones_adopciones.field_address_col
+    - field.field.node.instituciones_adopciones.field_address_world
+    - field.field.node.instituciones_adopciones.field_board
+    - field.field.node.instituciones_adopciones.field_colombian_phone
+    - field.field.node.instituciones_adopciones.field_contact_email
+    - field.field.node.instituciones_adopciones.field_countries_adopt
+    - field.field.node.instituciones_adopciones.field_document
+    - field.field.node.instituciones_adopciones.field_email
+    - field.field.node.instituciones_adopciones.field_icon
+    - field.field.node.instituciones_adopciones.field_link_more_info
+    - field.field.node.instituciones_adopciones.field_lugar
+    - field.field.node.instituciones_adopciones.field_metatag
+    - field.field.node.instituciones_adopciones.field_phone
+    - field.field.node.instituciones_adopciones.field_representante_en_colombia
+    - image.style.thumbnail
+    - node.type.instituciones_adopciones
+  module:
+    - comment
+    - field_group
+    - file
+    - image
+    - metatag
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_international:
+      children:
+        - field_board
+        - field_phone
+        - field_countries_adopt
+        - field_address
+        - field_map_address
+        - field_email
+        - field_address_world
+        - field_link_more_info
+        - field_icon
+      label: Internacional
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: 'group-international field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+    group_national:
+      children:
+        - field_contact_email
+        - field_lugar
+        - field_representante_en_colombia
+        - field_colombian_phone
+        - field_colombian_address
+        - field_address_col
+      label: Nacional
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        classes: 'group-national field-group-fieldset'
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        formatter: collapsible
+id: node.instituciones_adopciones.default
+targetEntityType: node
+bundle: instituciones_adopciones
+mode: default
+content:
+  comment_node_instituciones_adopc:
+    type: comment_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_address_col:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 160
+      placeholder: ''
+    third_party_settings: {  }
+  field_address_world:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_board:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 1
+      placeholder: ''
+    third_party_settings: {  }
+  field_colombian_phone:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_contact_email:
+    type: email_default
+    weight: 6
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_countries_adopt:
+    type: options_select
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_document:
+    type: file_generic
+    weight: 3
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_email:
+    type: email_default
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_icon:
+    type: image_image
+    weight: 8
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_link_more_info:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_lugar:
+    type: entity_reference_autocomplete
+    weight: 8
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 121
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
+    third_party_settings: {  }
+  field_phone:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 255
+      placeholder: ''
+    third_party_settings: {  }
+  field_representante_en_colombia:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 255
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  publish_on: true
+  unpublish_on: true

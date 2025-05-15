@@ -69,4 +69,6 @@ web/libraries/svg-pan-zoom/
 web/libraries/tabby/
 web/libraries/tippyjs/
 
+config/sync/migrate_plus.*
+*README.txt
 *.Identifier

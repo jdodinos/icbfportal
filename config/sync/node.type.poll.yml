@@ -1,0 +1,30 @@
+uuid: 5b1676d4-4a78-40da-b9c6-0a74f188d3ce
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: true
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+name: Encuesta
+type: poll
+description: 'Una <em>encuesta</em> es una pregunta con un grupo de respuestas posibles. Una <em>encuesta</em>, una vez creada, proporciona automáticamente un sencillo contador del número de votos que ha recibido cada respuesta.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: true

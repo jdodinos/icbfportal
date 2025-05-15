@@ -1,0 +1,22 @@
+uuid: 09c7ef7d-ca6a-4a89-b2ff-025a7bdc4082
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_text_intro
+    - taxonomy.vocabulary.programa_adopciones
+  module:
+    - text
+id: taxonomy_term.programa_adopciones.field_text_intro
+field_name: field_text_intro
+entity_type: taxonomy_term
+bundle: programa_adopciones
+label: 'Slide titular'
+description: 'Slide inicial landing'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

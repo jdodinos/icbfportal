@@ -1,0 +1,9 @@
+uuid: 24cbca44-ee3a-41ce-abd5-89b640dd4473
+langcode: es
+status: true
+dependencies: {  }
+name: 'Mis manos te enseñan'
+vid: mis_manos_te_ensenan
+description: 'micrositio de campaña'
+weight: 0
+new_revision: false

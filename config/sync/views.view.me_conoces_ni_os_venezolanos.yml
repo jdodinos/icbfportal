@@ -1,0 +1,732 @@
+uuid: efc649f2-80ab-4f2e-b978-0785360953de
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_autoridad_1
+    - field.storage.node.field_correo_electronico_contact
+    - field.storage.node.field_edad
+    - field.storage.node.field_fotografia
+    - field.storage.node.field_nombre
+    - field.storage.node.field_regional
+    - field.storage.node.field_telefono
+    - node.type.datos_ni_os_migrantes
+  module:
+    - image
+    - node
+    - options
+    - text
+    - user
+id: me_conoces_ni_os_venezolanos
+label: 'Me conoces Niños Venezolanos'
+module: views
+description: ''
+tag: default
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Master
+    display_plugin: default
+    position: 1
+    display_options:
+      title: 'Me conoces Niños Venezolanos'
+      fields:
+        field_fotografia:
+          id: field_fotografia
+          table: node__field_fotografia
+          field: field_fotografia
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<center>{{ field_fotografia }}</center>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+            unwanted_characters: ''
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: fid
+          type: image
+          settings:
+            image_link: content
+            image_style: ''
+            field_formatter_class: ''
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_nombre:
+          id: field_nombre
+          table: node__field_nombre
+          field: field_nombre
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<center><div style="background-color:#FFF9ED;width: 80%;color:#C6D467;font-size: 15px;font-family: ''Montserrat'';height: 40px; "><b>{{ field_nombre }} </b></br></div></center>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+            unwanted_characters: ''
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: '<b> aaaaaaaaaaaaaaaa </b>'
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings:
+            field_formatter_class: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: true
+          ui_name: ''
+          delta_random: false
+        field_regional:
+          id: field_regional
+          table: node__field_regional
+          field: field_regional
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<center><div style="background-color:#FFF9ED;width: 80%;color:#C6D467;font-size: 11px;font-family: ''Montserrat'';color: darkgray;"><b>Regional {{ field_regional }} </b></div></center>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+            unwanted_characters: ''
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings:
+            field_formatter_class: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_edad:
+          id: field_edad
+          table: node__field_edad
+          field: field_edad
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<center><div style="background-color:#FFF9ED;width: 80%;color:#423E5D;font-size: 13px;font-family: ''Montserrat'';"><b>Edad</b><br>{{ field_edad }} años</div></center>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+            unwanted_characters: ''
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+            field_formatter_class: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_autoridad_1:
+          id: field_autoridad_1
+          table: node__field_autoridad_1
+          field: field_autoridad_1
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<center><div style="background-color:#FFF9ED;width: 80%;color:#423E5D;font-size: 13px;font-family: ''Montserrat'';"><b>Autoridad</b><br>{{ field_autoridad_1 }}</div></center>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+            unwanted_characters: ''
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings:
+            field_formatter_class: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_correo_electronico_contact:
+          id: field_correo_electronico_contact
+          table: node__field_correo_electronico_contact
+          field: field_correo_electronico_contact
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<center><div style="background-color:#FFF9ED;width: 80%;color:#423E5D;font-size: 13px;font-family: ''Montserrat'';"><b>Autoridad</b><br>{{ field_correo_electronico_contact }}</div></center>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+            unwanted_characters: ''
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: email
+          type: basic_string
+          settings: {  }
+          group_column: email
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_telefono:
+          id: field_telefono
+          table: node__field_telefono
+          field: field_telefono
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "<center><div style=\"background-color:#FFF9ED;width: 80%;color:#423E5D;font-size: 13px;font-family: 'Montserrat';background-image: url(https://i.ibb.co/KrkP3JM/pie.png);background-repeat: no-repeat;height: 58px;background-size: cover;\"><div style=\"background-color: #221F45;width: 36%;color: white;font-size: 10px;height: 19px;\"><b><span class=\"fa fa-cv-ext\"> </span> \r\n {{ field_telefono }}</b></div></div></center>"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+            unwanted_characters: ''
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings:
+            field_formatter_class: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+      pager:
+        type: full
+        options:
+          pagination_heading_level: h4
+          items_per_page: 10
+      exposed_form:
+        type: basic
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+        perm: 'access content'
+      cache:
+        type: none
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          plugin_id: date
+          order: DESC
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            datos_ni_os_migrantes: datos_ni_os_migrantes
+        field_nombre_value:
+          id: field_nombre_value
+          table: node__field_nombre
+          field: field_nombre_value
+          relationship: none
+          group_type: group
+          plugin_id: string
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_nombre_value_op
+            label: Nombre
+            description: ''
+            use_operator: false
+            operator: field_nombre_value_op
+            identifier: field_nombre_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            autocomplete_filter: 0
+            autocomplete_min_chars: '0'
+            autocomplete_items: '10'
+            autocomplete_field: ''
+            autocomplete_raw_suggestion: 1
+            autocomplete_raw_dropdown: 1
+            autocomplete_dependent: 0
+            operator_label: ''
+            limit_operators: 0
+            available_operators: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          ui_name: ''
+        field_regional_value:
+          id: field_regional_value
+          table: node__field_regional
+          field: field_regional_value
+          relationship: none
+          group_type: group
+          plugin_id: list_field
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_regional_value_op
+            label: Regional
+            description: ''
+            use_operator: false
+            operator: field_regional_value_op
+            identifier: field_regional_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+            operator_label: ''
+            limit_operators: 0
+            available_operators: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          ui_name: ''
+      style:
+        type: default
+        options:
+          grouping: {  }
+          alignment: horizontal
+          columns_horizontal: '3'
+          columns_vertical: '4'
+          clear_columns: 1
+          columns_xs: '12'
+          columns_sm: '4'
+          columns_md: '4'
+          columns_lg: '4'
+          column_class: ''
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
+      query:
+        type: views_query
+        options: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          label: ''
+          empty: false
+          ui_name: ''
+          content:
+            value: "<p><center><img src=\"https://www.icbf.gov.co/sites/default/files/banner_mesa_de_trabajo_1_1.jpg\" alt=\"\" title=\"\" style=\"\"></center>\r\n</p>\r\n\r\n<p>En el Instituto Colombiano de Bienestar Familiar ICBF continuamos garantizando el derecho de niñas, niños y adolescentes a tener una familia, por eso buscamos que las barreras de comunicación que se tienen con Venezuela no afecten la posibilidad de reintegrarlos a su medio familiar o redes de apoyo</p></br>\r\n</br></br>\r\n<div style=\"background-color: #d0e191\">\r\n<p>Por medio de esta página usted podrá encontrar información sobre su hija, hijo o familiar de nacionalidad venezolana que se encuentra bajo protección del ICBF, entidad colombiana encargada de la protección de niñas, niños y adolescentes.</p>\r\n<p>Es importante revisar de manera permanente este canal de comunicación, ya que la información se actualiza de manera constante.</br></br></p>\r\n</div>\r\n<p>Si entre los niños, niñas y adolescentes publicados reconoce a alguno como familiar o cuenta con información que pueda ser útil para lograr identificar a sus familiares, agradecemos comunicarse de manera inmediata al correo electrónico y teléfono que aparecen en la publicación.</p><br><br>\r\n\r\n"
+            format: full_html
+          tokenize: 0
+      display_extenders: {  }
+      style_plugin: views_bootstrap_grid_plugin_style
+      style_options:
+        grouping: {  }
+        alignment: horizontal
+        columns_horizontal: '3'
+        columns_vertical: '4'
+        clear_columns: 1
+        columns_xs: '12'
+        columns_sm: '4'
+        columns_md: '4'
+        columns_lg: '4'
+        column_class: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_autoridad_1'
+        - 'config:field.storage.node.field_correo_electronico_contact'
+        - 'config:field.storage.node.field_edad'
+        - 'config:field.storage.node.field_fotografia'
+        - 'config:field.storage.node.field_nombre'
+        - 'config:field.storage.node.field_regional'
+        - 'config:field.storage.node.field_telefono'
+  page:
+    id: page
+    display_title: Page
+    display_plugin: page
+    position: 2
+    display_options:
+      query:
+        type: views_query
+        options: {  }
+      display_extenders: {  }
+      path: me-conoces-venezolanos
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_autoridad_1'
+        - 'config:field.storage.node.field_correo_electronico_contact'
+        - 'config:field.storage.node.field_edad'
+        - 'config:field.storage.node.field_fotografia'
+        - 'config:field.storage.node.field_nombre'
+        - 'config:field.storage.node.field_regional'
+        - 'config:field.storage.node.field_telefono'
+  panel_pane_1:
+    id: panel_pane_1
+    display_title: 'Panel de contenido'
+    display_plugin: default
+    position: 3
+    display_options:
+      query:
+        type: views_query
+        options: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+      tags: {  }

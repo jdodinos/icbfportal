@@ -1,0 +1,11 @@
+uuid: 486f8f53-d216-42d1-b852-8a3ec8e6e579
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_webform
+id: comment.comment_node_webform
+target_entity_type_id: comment
+target_bundle: comment_node_webform
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,21 @@
+uuid: 69f0182a-07d6-49b2-8fcb-7f859cba7451
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_telefono_verde
+    - node.type.sede_local
+id: node.sede_local.field_telefono_verde
+field_name: field_telefono_verde
+entity_type: node
+bundle: sede_local
+label: 'Teléfono Verde'
+description: '¿El Punto de Atención - Centro Zonal cuenta con Teléfono Verde en sus instalaciones? Marque sí y sólo SI cuenta con esta función.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Si
+  off_label: 'No'
+field_type: boolean

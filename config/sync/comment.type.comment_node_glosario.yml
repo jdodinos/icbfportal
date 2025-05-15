@@ -1,0 +1,8 @@
+uuid: fb073b0e-0953-4ed5-a0ce-00ed802062df
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_glosario
+label: 'Glosario comment'
+target_entity_type_id: node
+description: null

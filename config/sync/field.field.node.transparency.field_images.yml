@@ -1,0 +1,35 @@
+uuid: 31935fdc-f195-490a-80c4-03d9f442adf6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_images
+    - node.type.transparency
+  module:
+    - image
+id: node.transparency.field_images
+field_name: field_images
+entity_type: node
+bundle: transparency
+label: 'Imagen(es) complementarias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image: 0
+  caption_field: false
+  caption_field_required: false
+field_type: image

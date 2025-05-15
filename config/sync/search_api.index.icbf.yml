@@ -1,0 +1,208 @@
+uuid: fd6d6cd1-c54a-47c5-b1d5-393b2b0f7e56
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - field.storage.node.field_archivo_principal
+    - field.storage.node.field_attachments
+    - field.storage.node.field_file_categoria
+    - search_api.server.icbf
+  module:
+    - file
+    - node
+    - search_api_attachments
+    - search_api_solr
+third_party_settings:
+  search_api_solr:
+    finalize: false
+    commit_before_finalize: false
+    commit_after_finalize: false
+    debug_finalize: false
+    highlighter:
+      maxAnalyzedChars: 51200
+      fragmenter: gap
+      usePhraseHighlighter: true
+      highlightMultiTerm: true
+      preserveMulti: false
+      regex:
+        slop: 0.5
+        pattern: blank
+        maxAnalyzedChars: 10000
+      highlight:
+        mergeContiguous: false
+        requireFieldMatch: false
+        snippets: 3
+        fragsize: 0
+    mlt:
+      mintf: 1
+      mindf: 1
+      maxdf: 0
+      maxdfpct: 0
+      minwl: 0
+      maxwl: 0
+      maxqt: 100
+      maxntp: 2000
+      boost: false
+      interestingTerms: none
+    term_modifiers:
+      slop: 3
+      fuzzy: 1
+      fuzzy_analyzer: true
+    advanced:
+      index_prefix: ''
+      collection: ''
+      timezone: ''
+    multilingual:
+      limit_to_content_language: false
+      include_language_independent: true
+      use_language_undefined_as_fallback_language: false
+      specific_languages:
+        en: '0'
+        es: '0'
+      use_universal_collation: true
+id: icbf
+name: icbf
+description: ''
+read_only: false
+field_settings:
+  auto_aggregated_fulltext_field:
+    label: 'Auto aggregated fulltext field'
+    property_path: auto_aggregated_fulltext_field
+    type: text
+  body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  field_archivo_principal:
+    label: 'Archivo Principal'
+    datasource_id: 'entity:node'
+    property_path: field_archivo_principal
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_archivo_principal
+  field_attachments:
+    label: 'Archivos adjuntos'
+    datasource_id: 'entity:node'
+    property_path: field_attachments
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_attachments
+  field_file_categoria:
+    label: 'Categoría de Contenido'
+    datasource_id: 'entity:node'
+    property_path: field_file_categoria
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_file_categoria
+  filemime:
+    label: 'Tipo MIME de archivo'
+    datasource_id: 'entity:file'
+    property_path: filemime
+    type: string
+    dependencies:
+      module:
+        - file
+  filename:
+    label: 'Nombre de archivo'
+    datasource_id: 'entity:file'
+    property_path: filename
+    type: string
+    dependencies:
+      module:
+        - file
+  node_grants:
+    label: 'Node access information'
+    property_path: search_api_node_grants
+    type: string
+    indexed_locked: true
+    type_locked: true
+    hidden: true
+  status:
+    label: Booleano
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
+  title:
+    label: Título
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - node
+  uid:
+    label: 'Referencia de entidad'
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
+  uri:
+    label: URI
+    datasource_id: 'entity:file'
+    property_path: uri
+    type: string
+    dependencies:
+      module:
+        - file
+  url:
+    label: URI
+    property_path: search_api_url
+    type: string
+    configuration:
+      absolute: true
+datasource_settings:
+  'entity:file': {  }
+  'entity:node':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  auto_aggregated_fulltext_field: {  }
+  content_access:
+    weights:
+      preprocess_query: -30
+  custom_value: {  }
+  entity_type: {  }
+  file_attachments:
+    excluded_extensions: 'pdf doc docx xlsx xls xml html'
+    number_indexed: 0
+    number_first_bytes: '1 MB'
+    max_filesize: '0'
+    excluded_private: 1
+    excluded_mimes: 'application/pdf application/msword application/vnd.openxmlformats-officedocument.wordprocessingml.document application/vnd.openxmlformats-officedocument.spreadsheetml.sheet application/vnd.ms-excel application/xml text/html'
+  language_with_fallback: {  }
+  rendered_item: {  }
+  solr_date_range:
+    weights:
+      preprocess_index: 0
+tracker_settings:
+  index_parallel:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  delete_on_fail: true
+  index_directly: true
+  track_changes_in_references: true
+server: icbf

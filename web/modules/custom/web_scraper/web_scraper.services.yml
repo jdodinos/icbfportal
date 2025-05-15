@@ -1,0 +1,7 @@
+services:
+  web_scraper.scraper:
+    class: Drupal\web_scraper\Service\WebScraper
+    arguments: ['@http_client', '@entity_type.manager', '@config.factory', '@messenger']
+  web_scraper.cron:
+    class: Drupal\web_scraper\Service\WebScraperCron
+    arguments: ['@web_scraper.scraper', '@config.factory', '@state']

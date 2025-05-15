@@ -1,0 +1,10 @@
+uuid: ce62d492-4596-41c7-91db-475a123da78a
+langcode: es
+status: true
+dependencies: {  }
+id: multimedia_collection
+label: 'Multimedia collection'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from field_collection field_multimedia_collection'
+behavior_plugins: {  }

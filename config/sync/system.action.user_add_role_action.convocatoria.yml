@@ -1,0 +1,14 @@
+uuid: 3234b326-e0cc-4093-96a5-60270381aa09
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.convocatoria
+  module:
+    - user
+id: user_add_role_action.convocatoria
+label: 'Añade el rol Convocatoria al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: convocatoria

@@ -1,0 +1,7 @@
+uuid: 29b79d4b-ab61-4347-8c31-b84b10f40bbc
+langcode: es
+status: true
+dependencies: {  }
+formId: webform_client_form_82732
+captchaType: recaptcha/reCAPTCHA
+label: webform_client_form_82732

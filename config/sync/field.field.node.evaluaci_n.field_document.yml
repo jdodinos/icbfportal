@@ -1,0 +1,27 @@
+uuid: a5c43dda-2924-487f-bb9e-3ef889cd7ee9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document
+    - node.type.evaluaci_n
+  module:
+    - file
+id: node.evaluaci_n.field_document
+field_name: field_document
+entity_type: node
+bundle: evaluaci_n
+label: Documento
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'pdf doc docx xls xlsx ppt pptx'
+  max_filesize: 30mb
+  description_field: true
+field_type: file

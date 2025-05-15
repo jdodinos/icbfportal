@@ -1,0 +1,19 @@
+uuid: 1d4f2db7-ac42-4de5-a5f2-2e9ba7e00d25
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_menu_background
+    - paragraphs.paragraphs_type.glazed_content_design
+id: paragraph.glazed_content_design.field_menu_background
+field_name: field_menu_background
+entity_type: paragraph
+bundle: glazed_content_design
+label: 'Menu Background'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

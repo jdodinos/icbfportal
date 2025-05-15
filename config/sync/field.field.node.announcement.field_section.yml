@@ -1,0 +1,28 @@
+uuid: 12beff6a-cf12-4ec8-b190-5754634202b6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section
+    - node.type.announcement
+    - taxonomy.vocabulary.secctions
+id: node.announcement.field_section
+field_name: field_section
+entity_type: node
+bundle: announcement
+label: Sección
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    tid: '1237'
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      secctions: secctions
+    sort:
+      field: _none
+field_type: entity_reference

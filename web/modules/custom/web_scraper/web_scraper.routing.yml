@@ -1,0 +1,15 @@
+web_scraper.config_form:
+  path: '/admin/config/search/web-scraper'
+  defaults:
+    _form: '\Drupal\web_scraper\Form\WebScraperConfigForm'
+    _title: 'Web Scraper Configuration'
+  requirements:
+    _permission: 'administer web scraper'
+
+web_scraper.scrape:
+  path: '/admin/config/search/web-scraper/scrape'
+  defaults:
+    _controller: '\Drupal\web_scraper\Controller\WebScraperController::scrape'
+    _title: 'Scrape Websites'
+  requirements:
+    _permission: 'administer web scraper'

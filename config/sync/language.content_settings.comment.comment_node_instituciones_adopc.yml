@@ -1,0 +1,11 @@
+uuid: 9628e404-09f7-4fe9-913f-b52167366135
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_instituciones_adopc
+id: comment.comment_node_instituciones_adopc
+target_entity_type_id: comment
+target_bundle: comment_node_instituciones_adopc
+default_langcode: site_default
+language_alterable: false

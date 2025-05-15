@@ -12,15 +12,6 @@ https://docs.docker.com/engine/install/ubuntu/
 #### Instalacion de DDev.
  https://ddev.readthedocs.io/en/stable/users/install/ddev-installation/#ddev-installation-linux
 
-*Una vez el sitio este descargado desde la terminal sigue estos pasos la primera vez para su configuración:*
-1. Ingresa al folder **d7_icbf**, este folder contiene el sitio Drupal 7 del portal web. `cd d7_icbf`
-2. Ejecuta el comando `ddev start` desde la terminal.
-3. Descarga el backup de la base de datos desde drive y colocala en la carpeta **d7_icbf**; Es el zip **Data2 de 1.12GB**, este tiene la base de datos de la **Intranet** y la del **Portal web** https://drive.google.com/drive/folders/1J0zibt-yrEFG4fPyBd-5CVR-avhROnMk
-4. Importa la base de datos a tu sitio `ddev import-db --file=./{nombredelbackup}`
-
-Despues de ejecutar **ddev start**, aparecerá un mensaje con las url del sitio web creado. Repite estos pasos para el sitio del Portal Web.
-
-
 ## Instalación del sitio Drupal 10.
 *Al llegar a este punto ya debes contar con **WSL2**, **Docker** y **DDev**
 Descarga el repositorio e ingresa al folder **icbfportal**, Sigue los siguientes pasos para instalar el sitio:*

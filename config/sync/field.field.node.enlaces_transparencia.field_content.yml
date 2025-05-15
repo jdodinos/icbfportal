@@ -1,0 +1,22 @@
+uuid: 7d5693dd-2744-4aa6-ac70-80519a0566a6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.enlaces_transparencia
+  module:
+    - text
+id: node.enlaces_transparencia.field_content
+field_name: field_content
+entity_type: node
+bundle: enlaces_transparencia
+label: Contenido
+description: 'Descripción general de contexto para el contenido que se referencia'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

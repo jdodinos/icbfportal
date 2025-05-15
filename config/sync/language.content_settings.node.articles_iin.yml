@@ -1,0 +1,16 @@
+uuid: bc578e00-e92c-4fb3-8d59-b89448d02de9
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.articles_iin
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: node.articles_iin
+target_entity_type_id: node
+target_bundle: articles_iin
+default_langcode: current_interface
+language_alterable: true

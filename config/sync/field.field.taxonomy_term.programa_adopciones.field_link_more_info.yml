@@ -1,0 +1,19 @@
+uuid: c946a444-eb19-4657-b76c-fc618c9fc30f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_link_more_info
+    - taxonomy.vocabulary.programa_adopciones
+id: taxonomy_term.programa_adopciones.field_link_more_info
+field_name: field_link_more_info
+entity_type: taxonomy_term
+bundle: programa_adopciones
+label: 'Link Relacionado'
+description: 'Link externo que referencia otros websites'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

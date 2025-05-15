@@ -1,0 +1,26 @@
+uuid: badca402-d708-4889-a32f-b700d80f48d3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_category_citizen
+    - node.type.acta_contentiva
+    - taxonomy.vocabulary.citizen_category
+id: node.acta_contentiva.field_category_citizen
+field_name: field_category_citizen
+entity_type: node
+bundle: acta_contentiva
+label: 'Categoría situación del ciudadano'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      citizen_category: citizen_category
+    sort:
+      field: _none
+field_type: entity_reference

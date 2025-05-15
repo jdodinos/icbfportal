@@ -1,0 +1,7 @@
+custom_solr_extractor.settings:
+  path: '/admin/config/search/custom-solr-extractor'
+  defaults:
+    _form: '\Drupal\custom_solr_extractor\Form\RoutesSettingsForm'
+    _title: 'Configuración de rutas para extracción Solr'
+  requirements:
+    _permission: 'access custom solr extractor'

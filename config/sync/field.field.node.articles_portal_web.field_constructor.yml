@@ -1,0 +1,22 @@
+uuid: 8aa50f0b-c284-4cf0-a6cc-e8a65420cfbd
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_constructor
+    - node.type.articles_portal_web
+  module:
+    - text
+id: node.articles_portal_web.field_constructor
+field_name: field_constructor
+entity_type: node
+bundle: articles_portal_web
+label: constructor
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

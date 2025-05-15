@@ -1,0 +1,22 @@
+uuid: c8c80250-ea2f-4e23-891e-15e388fd8b7c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resume
+    - node.type.evaluaci_n
+  module:
+    - text
+id: node.evaluaci_n.field_resume
+field_name: field_resume
+entity_type: node
+bundle: evaluaci_n
+label: Resumen
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

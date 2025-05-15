@@ -1,0 +1,58 @@
+uuid: 56680d7f-b767-4327-983a-5a8279b6c16b
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: paragraph.field_glazed_hide_regions
+field_name: field_glazed_hide_regions
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: navigation
+      label: Navigation
+    -
+      value: secondary_header
+      label: 'Secondary Header'
+    -
+      value: page_title
+      label: 'Page Title'
+    -
+      value: slider
+      label: 'Hero Region'
+    -
+      value: header
+      label: Header
+    -
+      value: content_top
+      label: 'Content Top'
+    -
+      value: content
+      label: Content
+    -
+      value: content_bottom
+      label: 'Content Bottom'
+    -
+      value: sidebar_first
+      label: Primary
+    -
+      value: sidebar_second
+      label: Secondary
+    -
+      value: footer
+      label: Footer
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

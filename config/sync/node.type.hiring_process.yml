@@ -1,0 +1,28 @@
+uuid: 511989cd-e995-4f8c-8c91-4fb46cbf4278
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: true
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Proceso Contratación'
+type: hiring_process
+description: 'Procesos Contractuales de: selección abreviada, licitación, subasta, mínima cuantía, concurso de méritos.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

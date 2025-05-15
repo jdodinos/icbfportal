@@ -1,0 +1,30 @@
+uuid: 083172dd-3e4a-43dc-80b3-3e7682d2671c
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_summon_sdg
+    - field.field.comment.comment_node_summon_sdg.comment_body
+  module:
+    - text
+id: comment.comment_node_summon_sdg.default
+targetEntityType: comment
+bundle: comment_node_summon_sdg
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

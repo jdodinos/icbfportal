@@ -1,0 +1,22 @@
+uuid: 2eda7023-0557-475b-ac2f-0abe0e516aaf
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.notifications
+  module:
+    - node
+    - publishcontent
+    - scheduler
+    - system
+id: regional_amazonas
+label: 'Regional Amazonas'
+weight: 36
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'create notifications content'
+  - 'edit own notifications content'
+  - 'schedule publishing of nodes'
+  - 'unpublish editable content'
+  - 'view scheduled content'

@@ -1,0 +1,20 @@
+uuid: a62e1074-e8b2-4414-8375-eab146622d4a
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - publishcontent
+    - scheduler
+    - system
+id: regional_arauca
+label: 'Regional Arauca'
+weight: 38
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'schedule publishing of nodes'
+  - 'unpublish editable content'
+  - 'view field_creation_date'
+  - 'view own field_creation_date'
+  - 'view scheduled content'

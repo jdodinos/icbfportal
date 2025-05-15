@@ -1,0 +1,24 @@
+uuid: 6678baa8-0abb-43aa-a1f9-6ced84c2009d
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.news
+  module:
+    - node
+    - publishcontent
+    - scheduler
+    - system
+id: noticias_compras_locales
+label: 'Noticias Compras Locales'
+weight: 30
+is_admin: null
+permissions:
+  - 'create news content'
+  - 'delete own news content'
+  - 'edit any news content'
+  - 'edit own news content'
+  - 'schedule publishing of nodes'
+  - 'unpublish editable content'
+  - 'view scheduled content'
+  - 'view the administration theme'

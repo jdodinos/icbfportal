@@ -1,0 +1,14 @@
+uuid: 4ca63e64-cbe8-4c22-960a-917ab0b6391b
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.administrar_datos_ninos_migrantes_venezolanos
+  module:
+    - user
+id: user_remove_role_action.administrar_datos_ninos_migrantes_venezolanos
+label: 'Elimina el rol Administrar Datos Niños Migrantes Venezolanos al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: administrar_datos_ninos_migrantes_venezolanos

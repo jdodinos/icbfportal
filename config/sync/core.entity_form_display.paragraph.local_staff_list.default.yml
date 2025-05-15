@@ -1,0 +1,59 @@
+uuid: 05971d60-cd05-4929-a1c8-9fed8b4525c4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.local_staff_list.field_coms_local_staff
+    - field.field.paragraph.local_staff_list.field_director_local_staff
+    - field.field.paragraph.local_staff_list.field_manager_local_staff
+    - field.field.paragraph.local_staff_list.field_responsible_staff
+    - field.field.paragraph.local_staff_list.field_secretary_local_staff
+    - paragraphs.paragraphs_type.local_staff_list
+id: paragraph.local_staff_list.default
+targetEntityType: paragraph
+bundle: local_staff_list
+mode: default
+content:
+  field_coms_local_staff:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_director_local_staff:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_manager_local_staff:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_responsible_staff:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_secretary_local_staff:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

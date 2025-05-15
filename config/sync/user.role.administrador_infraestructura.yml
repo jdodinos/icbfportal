@@ -1,0 +1,32 @@
+uuid: 06eb962e-a9a4-43e6-8b6a-7a34c7122ec5
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - publishcontent
+    - roleassign
+    - scheduler
+    - smtp
+    - statistics
+    - system
+id: administrador_infraestructura
+label: 'Administrador Infraestructura'
+weight: 4
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content'
+  - 'access content overview'
+  - 'access site reports'
+  - 'access user profiles'
+  - 'administer permissions'
+  - 'administer smtp module'
+  - 'administer users'
+  - 'assign roles'
+  - 'schedule publishing of nodes'
+  - 'unpublish editable content'
+  - 'view own unpublished content'
+  - 'view post access counter'
+  - 'view scheduled content'
+  - 'view the administration theme'

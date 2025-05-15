@@ -1,0 +1,26 @@
+uuid: 0f19ed6d-4132-429c-8ce8-db91e48063f0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section_tag
+    - node.type.news
+    - taxonomy.vocabulary.section_labels
+id: node.news.field_section_tag
+field_name: field_section_tag
+entity_type: node
+bundle: news
+label: Etiqueta
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      section_labels: section_labels
+    sort:
+      field: _none
+field_type: entity_reference

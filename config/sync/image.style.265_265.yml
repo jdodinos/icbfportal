@@ -1,0 +1,15 @@
+uuid: 0112d8ce-275c-445d-bb1e-b6112eecb329
+langcode: es
+status: true
+dependencies: {  }
+name: '265_265'
+label: '265*245'
+effects:
+  dee91bcd-666a-4ace-b938-4fd4ae55b54a:
+    uuid: dee91bcd-666a-4ace-b938-4fd4ae55b54a
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 265
+      height: 245
+      anchor: center-center

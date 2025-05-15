@@ -1,0 +1,46 @@
+uuid: 2569dc05-29f9-4655-90ec-296438d6a825
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_icon_label
+field_name: field_icon_label
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: pp-ico-a
+      label: Artículo
+    -
+      value: pp-ico-d
+      label: Destacado
+    -
+      value: pp-ico-i
+      label: Infografía
+    -
+      value: pp-ico-l
+      label: Libro
+    -
+      value: pp-ico-v
+      label: Video
+    -
+      value: pp-ico-f
+      label: Faq
+    -
+      value: pp-ico-t
+      label: Timeline
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,150 @@
+uuid: ef2821ed-6f18-4ca2-9da9-40be10f128f9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.documentos_contrataci_n.comment_node_documentos_contrata
+    - field.field.node.documentos_contrataci_n.field_date
+    - field.field.node.documentos_contrataci_n.field_document
+    - field.field.node.documentos_contrataci_n.field_documento_banco_oferentes
+    - field.field.node.documentos_contrataci_n.field_file_categoria
+    - field.field.node.documentos_contrataci_n.field_location
+    - field.field.node.documentos_contrataci_n.field_metatag
+    - field.field.node.documentos_contrataci_n.field_section
+    - node.type.documentos_contrataci_n
+  module:
+    - comment
+    - datetime
+    - file
+    - metatag
+    - path
+id: node.documentos_contrataci_n.default
+targetEntityType: node
+bundle: documentos_contrataci_n
+mode: default
+content:
+  comment_node_documentos_contrata:
+    type: comment_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_date:
+    type: datetime_default
+    weight: 44
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_document:
+    type: file_generic
+    weight: 42
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_documento_banco_oferentes:
+    type: file_generic
+    weight: 51
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_file_categoria:
+    type: entity_reference_autocomplete
+    weight: 50
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_location:
+    type: entity_reference_autocomplete
+    weight: 46
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 121
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
+    third_party_settings: {  }
+  field_section:
+    type: entity_reference_autocomplete
+    weight: 48
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  publish_on: true
+  unpublish_on: true

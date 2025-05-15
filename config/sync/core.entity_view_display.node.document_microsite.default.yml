@@ -1,0 +1,153 @@
+uuid: 6b6b329e-ae9a-4c40-bbf2-d55d62452750
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_document_microsite.default
+    - field.field.node.document_microsite.comment_node_document_microsite
+    - field.field.node.document_microsite.field_coverimg_msite
+    - field.field.node.document_microsite.field_creation_date
+    - field.field.node.document_microsite.field_date
+    - field.field.node.document_microsite.field_document_msite
+    - field.field.node.document_microsite.field_file_categoria
+    - field.field.node.document_microsite.field_file_priority
+    - field.field.node.document_microsite.field_infogral_msite
+    - field.field.node.document_microsite.field_metatag
+    - field.field.node.document_microsite.field_microsite_category
+    - field.field.node.document_microsite.field_proceso_sige
+    - field.field.node.document_microsite.field_section
+    - field.field.node.document_microsite.field_section_mte
+    - field.field.node.document_microsite.field_unpublish_date
+    - node.type.document_microsite
+  module:
+    - comment
+    - datetime
+    - file
+    - image
+    - options
+    - text
+    - user
+id: node.document_microsite.default
+targetEntityType: node
+bundle: document_microsite
+mode: default
+content:
+  comment_node_document_microsite:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_coverimg_msite:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_creation_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_document_msite:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_file_categoria:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_file_priority:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_infogral_msite:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_microsite_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_proceso_sige:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_section:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_section_mte:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_unpublish_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_metatag: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

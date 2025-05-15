@@ -1,0 +1,18 @@
+uuid: d813cea8-84f2-4071-ac41-af750d0f66a4
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.encargos
+id: node.encargos.title
+field_name: title
+entity_type: node
+bundle: encargos
+label: Título
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,14 @@
+uuid: fb1ff83d-b197-453e-bac5-ab3f77593898
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.editor_contenidos_vip_
+  module:
+    - user
+id: user_add_role_action.editor_contenidos_vip_
+label: 'Añade el rol Editor Contenidos (VIP) al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: editor_contenidos_vip_

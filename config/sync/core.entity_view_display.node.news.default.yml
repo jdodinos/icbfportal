@@ -1,0 +1,221 @@
+uuid: 3cf3dec5-a087-411b-8198-b77900620ce3
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_news.default
+    - field.field.node.news.comment_node_news
+    - field.field.node.news.field_attached_files
+    - field.field.node.news.field_category_citizen
+    - field.field.node.news.field_content
+    - field.field.node.news.field_date
+    - field.field.node.news.field_images
+    - field.field.node.news.field_list_image
+    - field.field.node.news.field_location
+    - field.field.node.news.field_lugar
+    - field.field.node.news.field_metatag
+    - field.field.node.news.field_multimedia
+    - field.field.node.news.field_multimedia_collection
+    - field.field.node.news.field_news_fijo
+    - field.field.node.news.field_priority
+    - field.field.node.news.field_rating_node
+    - field.field.node.news.field_relevant
+    - field.field.node.news.field_resume
+    - field.field.node.news.field_section
+    - field.field.node.news.field_section_tag
+    - field.field.node.news.field_youtube
+    - node.type.news
+  module:
+    - comment
+    - datetime
+    - entity_reference_revisions
+    - file
+    - fivestar
+    - image
+    - slick
+    - text
+    - user
+    - youtube
+id: node.news.default
+targetEntityType: node
+bundle: news
+mode: default
+content:
+  comment_node_news:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_attached_files:
+    type: file_table
+    label: inline
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_date:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_images:
+    type: slick_image
+    label: hidden
+    settings:
+      caption: {  }
+      optionset: default
+      link: ''
+      by_delta: -1
+      layout: ''
+      view_mode: ''
+      cache: 0
+      admin_uri: ''
+      use_lb: false
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: lazy
+      preload: false
+      responsive_image_style: ''
+      use_theme_field: false
+      box_style: ''
+      image_style: ''
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+      style: ''
+      skin: ''
+      overridables: {  }
+      optionset_thumbnail: ''
+      skin_thumbnail: ''
+      thumbnail_caption: ''
+      thumbnail_effect: ''
+      thumbnail_position: ''
+      override: false
+      skin_arrows: ''
+      skin_dots: ''
+      preserve_keys: false
+      visible_items: 0
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_list_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_location:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_lugar:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_multimedia:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_multimedia_collection:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: full
+      link: ''
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_rating_node:
+    type: fivestar_stars
+    label: above
+    settings:
+      text_format: average
+      display_format: average
+      fivestar_widget: basic
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_resume:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_section_tag:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_youtube:
+    type: youtube_video
+    label: hidden
+    settings:
+      youtube_size: 420x315
+      youtube_width: null
+      youtube_height: null
+      youtube_autoplay: false
+      youtube_mute: false
+      youtube_loop: false
+      youtube_controls: false
+      youtube_autohide: false
+      youtube_iv_load_policy: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_category_citizen: true
+  field_metatag: true
+  field_news_fijo: true
+  field_priority: true
+  field_relevant: true
+  field_section: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

@@ -1,0 +1,39 @@
+uuid: faf66acf-eafc-4866-b117-f3d711891368
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.children_defendant.field_children_fullname
+    - field.field.paragraph.children_defendant.field_citizen_id
+    - field.field.paragraph.children_defendant.field_document_type
+    - paragraphs.paragraphs_type.children_defendant
+id: paragraph.children_defendant.default
+targetEntityType: paragraph
+bundle: children_defendant
+mode: default
+content:
+  field_children_fullname:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_citizen_id:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 40
+      placeholder: ''
+    third_party_settings: {  }
+  field_document_type:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

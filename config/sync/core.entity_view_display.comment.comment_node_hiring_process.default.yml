@@ -1,0 +1,30 @@
+uuid: 224a542e-1f39-4141-900d-f151c3786521
+langcode: es
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_hiring_process
+    - field.field.comment.comment_node_hiring_process.comment_body
+  module:
+    - text
+id: comment.comment_node_hiring_process.default
+targetEntityType: comment
+bundle: comment_node_hiring_process
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

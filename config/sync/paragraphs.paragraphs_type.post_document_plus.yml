@@ -1,0 +1,10 @@
+uuid: f046c7f1-50ca-4086-8e3c-38681ed47e73
+langcode: es
+status: true
+dependencies: {  }
+id: post_document_plus
+label: 'Post document plus'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from field_collection field_post_document_plus'
+behavior_plugins: {  }

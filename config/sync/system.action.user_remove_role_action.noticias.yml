@@ -1,0 +1,14 @@
+uuid: fb5002cf-6449-4fb1-809b-5be7bc750639
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.noticias
+  module:
+    - user
+id: user_remove_role_action.noticias
+label: 'Elimina el rol Noticias al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: noticias

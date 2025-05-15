@@ -1,0 +1,25 @@
+uuid: 45fa70b8-1c24-4fa6-9755-c10cf1751808
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:4906baf8-999b-4482-8a4e-88445ab182f2'
+  module:
+    - block_content
+  theme:
+    - icbf
+id: icbf_menucontratacion
+theme: icbf
+region: hidden
+weight: 0
+provider: null
+plugin: 'block_content:4906baf8-999b-4482-8a4e-88445ab182f2'
+settings:
+  id: 'block_content:4906baf8-999b-4482-8a4e-88445ab182f2'
+  label: 'Menu contratacion'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

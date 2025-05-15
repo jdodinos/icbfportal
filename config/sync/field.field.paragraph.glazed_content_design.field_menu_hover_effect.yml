@@ -1,0 +1,21 @@
+uuid: 49c8821f-62e5-40a7-8be3-0fe4313d4ba4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_menu_hover_effect
+    - paragraphs.paragraphs_type.glazed_content_design
+  module:
+    - options
+id: paragraph.glazed_content_design.field_menu_hover_effect
+field_name: field_menu_hover_effect
+entity_type: paragraph
+bundle: glazed_content_design
+label: 'Hover Effect'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

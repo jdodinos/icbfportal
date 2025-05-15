@@ -1,0 +1,21 @@
+uuid: 9d7ae243-a6ee-4df0-a423-05a8064bee41
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.bot_n_home
+  module:
+    - metatag
+id: node.bot_n_home.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: bot_n_home
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

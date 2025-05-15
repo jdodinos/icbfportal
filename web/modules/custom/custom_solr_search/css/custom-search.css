@@ -1,0 +1,124 @@
+/* Wrapper general */
+.custom-search-form {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+/* Input de búsqueda */
+#search-input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  background: #fff url('/core/misc/search.svg') no-repeat right 1rem center;
+  background-size: 20px;
+}
+
+/* Botón de búsqueda avanzada */
+.toggle-advanced {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  background-color: #0074d9;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Filtros avanzados */
+.advanced-filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.advanced-filters .form-item {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.advanced-filters .form-item label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.advanced-filters .form-item input,
+.advanced-filters .form-item select {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.custom-search-form .form-submit {
+  margin-top: 1rem;
+  background-color: #28a745;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Resultados */
+.custom-results-container {
+  max-width: 960px;
+  margin: 2rem auto;
+}
+
+.results-count {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.search-result {
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+}
+
+.search-result h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  color: #28a745;
+}
+
+.search-result p {
+  margin-top: 0.5rem;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.result-meta {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.pagination-wrapper {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.no-results {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  padding: 2rem 0;
+}

@@ -1,0 +1,21 @@
+uuid: f6386592-70eb-4f03-b924-9df495532412
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node_encargos
+label: 'Contenido - Encargos'
+type: 'canonical_entities:node'
+pattern: 'gestion-transparencia/gestion-humana/encargos/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      encargos: encargos
+selection_logic: and
+weight: 0
+relationships: {  }

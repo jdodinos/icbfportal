@@ -1,0 +1,21 @@
+uuid: c5d511d2-7170-477b-b2d4-004e68c3a6cd
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.sede_local
+  module:
+    - metatag
+id: node.sede_local.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: sede_local
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

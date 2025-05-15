@@ -1,0 +1,27 @@
+uuid: 6a82bf10-5329-467f-8ebb-dc6d8ee32b87
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_multimedia
+    - node.type.document
+  module:
+    - file
+id: node.document.field_multimedia
+field_name: field_multimedia
+entity_type: node
+bundle: document
+label: 'Audio y/o Vídeo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: txt
+  max_filesize: ''
+  description_field: false
+field_type: file

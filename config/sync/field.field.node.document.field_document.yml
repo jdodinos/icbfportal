@@ -1,0 +1,27 @@
+uuid: 9094e44c-6253-412f-abf3-abf9b1468878
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document
+    - node.type.document
+  module:
+    - file
+id: node.document.field_document
+field_name: field_document
+entity_type: node
+bundle: document
+label: Documento
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'txt pdf doc xls xlsx xlsm docx ppt pptx pps ppsx png jpg jpge tiff gif zip rar msg xps mp4'
+  max_filesize: '120 MB'
+  description_field: true
+field_type: file

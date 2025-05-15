@@ -1,0 +1,28 @@
+uuid: 3d367ded-1791-4d5e-a532-3f24983a50d3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section
+    - node.type.infografia_observatorio
+    - taxonomy.vocabulary.secctions
+id: node.infografia_observatorio.field_section
+field_name: field_section
+entity_type: node
+bundle: infografia_observatorio
+label: Sección
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    tid: '6189'
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      secctions: secctions
+    sort:
+      field: _none
+field_type: entity_reference

@@ -1,0 +1,22 @@
+uuid: 2954b01b-0e64-4886-ae62-72c6cc19caaa
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_picture_credits
+    - taxonomy.vocabulary.locations
+  module:
+    - text
+id: taxonomy_term.locations.field_picture_credits
+field_name: field_picture_credits
+entity_type: taxonomy_term
+bundle: locations
+label: 'Pie de foto'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,76 @@
+uuid: c852a284-908b-42ec-8d40-91fa2bedd990
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_summon_sdg.default
+    - field.field.node.summon_sdg.comment_node_summon_sdg
+    - field.field.node.summon_sdg.field_creation_date
+    - field.field.node.summon_sdg.field_metatag
+    - field.field.node.summon_sdg.field_region_office
+    - field.field.node.summon_sdg.field_summoned_file2
+    - field.field.node.summon_sdg.field_unpublish_date
+    - node.type.summon_sdg
+  module:
+    - comment
+    - datetime
+    - file
+    - user
+id: node.summon_sdg.default
+targetEntityType: node
+bundle: summon_sdg
+mode: default
+content:
+  comment_node_summon_sdg:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_creation_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_region_office:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_summoned_file2:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_unpublish_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_metatag: true
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

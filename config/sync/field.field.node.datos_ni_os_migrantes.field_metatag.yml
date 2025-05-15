@@ -1,0 +1,21 @@
+uuid: 743c4a31-04c6-4b9f-8ff0-b56528081d2b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.datos_ni_os_migrantes
+  module:
+    - metatag
+id: node.datos_ni_os_migrantes.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: datos_ni_os_migrantes
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

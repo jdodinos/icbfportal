@@ -1,0 +1,8 @@
+uuid: 95f70caa-919e-4dca-b16d-f996934c6f4a
+langcode: es
+status: true
+dependencies: {  }
+id: comment_node_informe_denuncias_a
+label: 'Informe Denuncias Anticorrupción comment'
+target_entity_type_id: node
+description: null

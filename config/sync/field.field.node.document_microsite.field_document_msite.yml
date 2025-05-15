@@ -1,0 +1,27 @@
+uuid: 57e35312-f3ec-4573-a32c-b12732a78813
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document_msite
+    - node.type.document_microsite
+  module:
+    - file
+id: node.document_microsite.field_document_msite
+field_name: field_document_msite
+entity_type: node
+bundle: document_microsite
+label: 'Archivo Adjunto'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'txt pdf doc xls xlsx xlsm xlsmx docx ppt pptx pps ppsx png jpg jpeg tiff tif gif zip rar msg xps mp3 mp4 wmv mpeg pptm'
+  max_filesize: 100mb
+  description_field: true
+field_type: file
