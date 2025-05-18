@@ -385,7 +385,7 @@ display:
             field_link_url: '0'
           optionset: four_elements_slider
           class: ''
-          image: ''
+          image: field_list_image
           link: ''
           overlay: ''
           title: ''
@@ -1395,14 +1395,14 @@ display:
             field_link_url: '0'
           optionset: news_outstanding
           class: ''
-          image: ''
+          image: field_list_image
           link: ''
           overlay: ''
           title: ''
           vanilla: false
           layout: ''
           cache: 0
-          admin_uri: '/admin/structure/views/ajax/display/banners/block_7/style_options?_wrapper_format=drupal_ajax'
+          admin_uri: '/admin/structure/views/ajax/display/banners/block_10/style_options?_wrapper_format=drupal_ajax'
           grid: ''
           grid_medium: ''
           grid_small: ''
@@ -4825,7 +4825,7 @@ display:
             field_link_url: '0'
           optionset: news_outstanding
           class: ''
-          image: ''
+          image: field_list_image
           link: ''
           overlay: ''
           title: ''
@@ -8264,7 +8264,7 @@ display:
             field_list_image: '0'
           optionset: four_elements_slider
           class: ''
-          image: ''
+          image: field_list_image
           link: ''
           overlay: ''
           title: ''
@@ -8931,7 +8931,7 @@ display:
             field_link_url: '0'
           optionset: news_outstanding
           class: ''
-          image: ''
+          image: field_list_image
           link: ''
           overlay: ''
           title: ''
@@ -9367,14 +9367,14 @@ display:
             field_link_url: '0'
           optionset: clone_of_four_elements_slider
           class: ''
-          image: ''
+          image: field_list_image
           link: ''
           overlay: ''
           title: ''
           vanilla: false
           layout: ''
           cache: 0
-          admin_uri: '/admin/structure/views/ajax/display/banners/block_7/style_options?_wrapper_format=drupal_ajax'
+          admin_uri: '/admin/structure/views/ajax/display/banners/block_6/style_options?_wrapper_format=drupal_ajax'
           grid: ''
           grid_medium: ''
           grid_small: ''
@@ -9737,14 +9737,14 @@ display:
             field_link_url: '0'
           optionset: clone_of_four_elements_slider
           class: ''
-          image: ''
+          image: field_list_image
           link: ''
           overlay: ''
           title: ''
           vanilla: false
           layout: ''
           cache: 0
-          admin_uri: '/admin/structure/views/ajax/display/banners/block_6/style_options?_wrapper_format=drupal_ajax'
+          admin_uri: '/admin/structure/views/ajax/display/banners/block_7/style_options?_wrapper_format=drupal_ajax'
           grid: ''
           grid_medium: ''
           grid_small: ''
@@ -10089,14 +10089,14 @@ display:
             field_link_url: '0'
           optionset: news_outstanding
           class: ''
-          image: ''
+          image: field_list_image
           link: ''
           overlay: ''
           title: ''
           vanilla: false
           layout: ''
           cache: 0
-          admin_uri: '/admin/structure/views/ajax/display/banners/block_2/style_options?_wrapper_format=drupal_ajax'
+          admin_uri: '/admin/structure/views/ajax/display/banners/block_8/style_options?_wrapper_format=drupal_ajax'
           grid: ''
           grid_medium: ''
           grid_small: ''
@@ -10440,14 +10440,14 @@ display:
             field_link_url: '0'
           optionset: news_outstanding
           class: ''
-          image: ''
+          image: field_list_image
           link: ''
           overlay: ''
           title: ''
           vanilla: false
           layout: ''
           cache: 0
-          admin_uri: '/admin/structure/views/ajax/display/banners/block_7/style_options?_wrapper_format=drupal_ajax'
+          admin_uri: '/admin/structure/views/ajax/display/banners/block_9/style_options?_wrapper_format=drupal_ajax'
           grid: ''
           grid_medium: ''
           grid_small: ''
