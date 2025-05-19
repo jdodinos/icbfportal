@@ -4,10 +4,9 @@ status: true
 dependencies:
   content:
     - 'block_content:basic:044b59f1-6243-445c-ad6c-e643fcac01f7'
-    - 'block_content:basic:26fc010e-8815-415f-83b5-18c7bfbd9323'
     - 'block_content:basic:5087fe76-c2c6-4f68-904e-796aa99a91e3'
     - 'block_content:basic:528a0197-ca56-4d05-b68f-5d3aab9ac7ce'
-    - 'block_content:basic:5926667d-7d37-4b32-9c20-a4947954fe4d'
+    - 'block_content:basic:6b54a2b3-38bc-4776-a964-74eb188a19f0'
     - 'block_content:basic:b32da780-ad2d-4f3d-8a27-2340620d6d5c'
   module:
     - block_content
@@ -38,31 +37,13 @@ reactions:
         provider: tb_megamenu
         label_display: '0'
         region: nav_main
-        weight: '0'
+        weight: '-2'
         custom_id: tb_megamenu_menu_block_mgm_6049302480ef2
         theme: icbf
         css_class: ''
         unique: 0
         context_id: master
         context_mapping: {  }
-        third_party_settings: {  }
-      3708369f-4ff4-42ab-aa8d-940d631dc17b:
-        uuid: 3708369f-4ff4-42ab-aa8d-940d631dc17b
-        id: 'block_content:5926667d-7d37-4b32-9c20-a4947954fe4d'
-        label: 'Barra búsqueda'
-        provider: block_content
-        label_display: '0'
-        region: nav_main
-        weight: '1'
-        custom_id: block_content_5926667d_7d37_4b32_9c20_a4947954fe4d
-        theme: icbf
-        css_class: ''
-        unique: 0
-        context_id: master
-        context_mapping: {  }
-        status: true
-        info: ''
-        view_mode: full
         third_party_settings: {  }
       f6ffd70b-d6e9-4798-99a4-819099d64b51:
         uuid: f6ffd70b-d6e9-4798-99a4-819099d64b51
@@ -136,15 +117,15 @@ reactions:
         info: ''
         view_mode: full
         third_party_settings: {  }
-      fdff206f-1c28-4fb8-918d-e7144f1d1deb:
-        uuid: fdff206f-1c28-4fb8-918d-e7144f1d1deb
-        id: 'block_content:26fc010e-8815-415f-83b5-18c7bfbd9323'
-        label: 'Tawdis fixes'
+      9d7d35a8-dbfb-45d7-937a-2f3c5be07c49:
+        uuid: 9d7d35a8-dbfb-45d7-937a-2f3c5be07c49
+        id: 'block_content:6b54a2b3-38bc-4776-a964-74eb188a19f0'
+        label: 'Buscador ICBF Avanzado'
         provider: block_content
         label_display: '0'
-        region: footer
+        region: nav_main
         weight: '0'
-        custom_id: block_content_26fc010e_8815_415f_83b5_18c7bfbd9323
+        custom_id: block_content_6b54a2b3_38bc_4776_a964_74eb188a19f0
         theme: icbf
         css_class: ''
         unique: 0
