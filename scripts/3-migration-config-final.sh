@@ -6,8 +6,8 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
-drushcommand="ddev drush";
-# drushcommand='vendor/bin/drush';
+# drushcommand="ddev drush";
+drushcommand='vendor/bin/drush';
 
 oper='';
 if [ "$1" = "rollback" ]; then
@@ -65,7 +65,7 @@ for mig_key in "${migrationskey[@]}"; do
     migrationRollback "$mig_key"
   elif [ "$1" = "import" ]; then
     migrationReset "$mig_key"
-    migrationRollback "$mig_key"
+    # migrationRollback "$mig_key"
     migrationImport "$mig_key"
     migrationStatus "$mig_key"
   elif [ "$1" = "status" ]; then
