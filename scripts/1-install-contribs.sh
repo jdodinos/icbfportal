@@ -175,6 +175,7 @@ modules=(
   geofield_map
   quick_node_clone
   views_slideshow_cycle
+  menu_markup
 )
 
 for module_name in "${modules[@]}"; do
