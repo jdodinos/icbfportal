@@ -1,0 +1,99 @@
+uuid: b18268ae-db37-4d5c-93f2-9e08901a74ad
+langcode: es
+status: true
+dependencies: {  }
+name: node_summon
+label: 'node summon validation'
+entity_type: node
+bundle: summon
+field_validation_rules:
+  5389b99e-f5f6-43f5-a38c-fc0c4f206b2c:
+    id: regex_field_validation_rule
+    title: address
+    data:
+      setting: '/^[0-9ñÑA-zÀ-ÿ\-\#\s]{0,250}$/'
+    weight: 1
+    uuid: 5389b99e-f5f6-43f5-a38c-fc0c4f206b2c
+    field_name: field_summoned_address
+    column: value
+    error_message: 'El campo [current-field:field-name] no debe ser mayor a 250 caracteres y solo acepta caracteres alfanuméricos'
+    roles: {  }
+    condition:
+      field: ''
+      operator: ''
+      value: ''
+  47fae007-9493-4253-9cfb-882652d8e628:
+    id: regex_field_validation_rule
+    title: name
+    data:
+      setting: '/^[A-zÀ-ÿ\s]{1,100}$/'
+    weight: 2
+    uuid: 47fae007-9493-4253-9cfb-882652d8e628
+    field_name: field_officer_name
+    column: value
+    error_message: 'El campo [current-field:field-name] solo acepta caracteres de la A a la Z y máximo 100 caracteres'
+    roles: {  }
+    condition:
+      field: ''
+      operator: ''
+      value: ''
+  3253c9e7-65b0-4198-b1b4-04cfd875476d:
+    id: regex_field_validation_rule
+    title: number
+    data:
+      setting: '/^[0-9]{0,20}$/'
+    weight: 3
+    uuid: 3253c9e7-65b0-4198-b1b4-04cfd875476d
+    field_name: field_act_number
+    column: value
+    error_message: 'El campo Número auto solo acepta máximo 20 caracteres, deben ser numéricos'
+    roles: {  }
+    condition:
+      field: ''
+      operator: ''
+      value: ''
+  7d7b50a2-c373-4d12-ac2f-b488d9c07daa:
+    id: regex_field_validation_rule
+    title: numebrsim_
+    data:
+      setting: '/^[0-9]{0,20}$/'
+    weight: 4
+    uuid: 7d7b50a2-c373-4d12-ac2f-b488d9c07daa
+    field_name: field_sim_number
+    column: value
+    error_message: 'El campo # Radicado SIM no debe ser mayor a 20 caracteres y sólo acepta números'
+    roles: {  }
+    condition:
+      field: ''
+      operator: ''
+      value: ''
+  2184c437-f5ca-4f6b-9367-3e86607718b7:
+    id: regex_field_validation_rule
+    title: 'Numero de audiencia'
+    data:
+      setting: '/^[0-9ñA-zÀ-ÿ\s]{0,250}$/'
+    weight: 5
+    uuid: 2184c437-f5ca-4f6b-9367-3e86607718b7
+    field_name: field_legal_resolution
+    column: value
+    error_message: 'El campo Nombre de la Audiencia  sólo acepta caracteres alfanuméricos y 250 caracteres como máximo'
+    roles: {  }
+    condition:
+      field: ''
+      operator: ''
+      value: ''
+  63fd1ba9-b5a5-4e51-9271-2ffb10879a7f:
+    id: regex_field_validation_rule
+    title: numerosim
+    data:
+      setting: '/^[0-9]{0,20}$/'
+    weight: 6
+    uuid: 63fd1ba9-b5a5-4e51-9271-2ffb10879a7f
+    field_name: field_sim_number
+    column: value
+    error_message: 'El campo # Radicado SIM no debe ser mayor a 20 caracteres y sólo acepta números'
+    roles: {  }
+    condition:
+      field: ''
+      operator: ''
+      value: ''
