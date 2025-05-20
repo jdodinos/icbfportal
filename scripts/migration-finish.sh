@@ -43,10 +43,7 @@ if [ -n "$2" ]; then
 else
   migrationskey=(
     # Despues de migrar contenidos
-    upgrade_d7_views_migration
-    # upgrade_d7_google_analytics_user_settings
-      upgrade_d7_megamenu_menus
-    upgrade_d7_megamenu_links
+    upgrade_d7_google_analytics_user_settings
   )
 fi
 
