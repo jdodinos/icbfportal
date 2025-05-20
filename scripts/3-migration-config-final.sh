@@ -51,11 +51,10 @@ if [ -n "$2" ]; then
   migrationskey=("$2")
 else
   migrationskey=(
-    # upgrade_d7_file
-    # upgrade_d7_file_private
+    upgrade_d7_file
+    upgrade_d7_file_private
     upgrade_d7_views_migration
     upgrade_d7_megamenu_menus
-    upgrade_d7_megamenu_links
   )
 fi
 
