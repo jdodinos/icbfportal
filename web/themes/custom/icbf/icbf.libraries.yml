@@ -6,4 +6,4 @@ global-styling:
   js:
     js/script.js: {}
   dependencies:
-    - bootstrap5/bootstrap
+    - core/jquery
