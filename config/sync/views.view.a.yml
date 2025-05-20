@@ -2,8 +2,16 @@ uuid: 4dcefd1c-03f7-4d3d-afef-59d4a7077496
 langcode: es
 status: true
 dependencies:
+  config:
+    - taxonomy.vocabulary.file_category
+    - taxonomy.vocabulary.secctions
+  content:
+    - 'taxonomy_term:file_category:0b53c8c2-4460-4d21-970f-e5e67882d033'
+    - 'taxonomy_term:file_category:c0afb8bb-ccfc-49c9-95b9-281f8e8ff605'
   module:
     - node
+    - taxonomy
+    - views_bootstrap
 id: a
 label: 'Adopciones (Documentos SAPI)'
 module: views
@@ -145,10 +153,116 @@ display:
       tags: {  }
   block:
     id: block
-    display_title: Formulario
+    display_title: Master
     display_plugin: block
     position: 1
     display_options:
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 1
+      filters:
+        field_file_categoria_target_id:
+          id: field_file_categoria_target_id
+          table: node__field_file_categoria
+          field: field_file_categoria_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            - 7040
+            - 7041
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: file_category
+          type: textfield
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_section_target_id:
+          id: field_section_target_id
+          table: node__field_section
+          field: field_section_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: empty
+          value: {  }
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: secctions
+          type: textfield
+          hierarchy: false
+          limit: true
+          error_message: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        pager: false
+        filters: false
+        filter_groups: false
       display_description: ''
       display_extenders:
         metatag_display_extender:
@@ -168,8 +282,138 @@ display:
     position: 1
     display_options:
       title: 'Adopciones statistic'
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
+      filters:
+        field_file_categoria_target_id:
+          id: field_file_categoria_target_id
+          table: node__field_file_categoria
+          field: field_file_categoria_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            - 7040
+            - 7041
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: file_category
+          type: textfield
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_section_target_id:
+          id: field_section_target_id
+          table: node__field_section
+          field: field_section_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: empty
+          value: {  }
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: secctions
+          type: textfield
+          hierarchy: false
+          limit: true
+          error_message: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: views_bootstrap_list_group
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          panels: 0
+          title_field: ''
+      row:
+        type: fields
+        options: {  }
       defaults:
         title: false
+        style: false
+        row: false
+        sorts: false
+        filters: false
+        filter_groups: false
       display_description: ''
       display_extenders:
         metatag_display_extender:
