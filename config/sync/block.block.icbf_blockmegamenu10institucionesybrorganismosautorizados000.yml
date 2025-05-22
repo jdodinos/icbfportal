@@ -1,0 +1,25 @@
+uuid: 9940cc6b-9bd2-4ef9-ba6d-8e97e2366a31
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:68e5e492-b3fa-4fea-8492-54343c38f89d'
+  module:
+    - block_content
+  theme:
+    - icbf
+id: icbf_blockmegamenu10institucionesybrorganismosautorizados000
+theme: icbf
+region: hidden
+weight: 8
+provider: null
+plugin: 'block_content:68e5e492-b3fa-4fea-8492-54343c38f89d'
+settings:
+  id: 'block_content:68e5e492-b3fa-4fea-8492-54343c38f89d'
+  label: 'Block megamenu - 10 Instituciones y<br>organismos autorizados 0 0 0'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

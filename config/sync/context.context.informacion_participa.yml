@@ -3,7 +3,7 @@ langcode: es
 status: true
 dependencies:
   content:
-    - 'block_content:footer:e22aa941-75b9-4b6b-9974-71bafadb22db'
+    - 'block_content:footer:eb2b6982-a3f6-4d89-ad90-ce4d0e6bb16d'
   module:
     - block_content
     - system
@@ -25,15 +25,15 @@ reactions:
     id: blocks
     uuid: 68642561-84ff-421a-8ca1-5dc71a257630
     blocks:
-      cbf6a307-a0c6-4123-b636-5e5ecda05e6b:
-        uuid: cbf6a307-a0c6-4123-b636-5e5ecda05e6b
-        id: 'block_content:e22aa941-75b9-4b6b-9974-71bafadb22db'
+      c8f2ae79-625e-4f30-85bd-925b6fcf0fd1:
+        uuid: c8f2ae79-625e-4f30-85bd-925b6fcf0fd1
+        id: 'block_content:eb2b6982-a3f6-4d89-ad90-ce4d0e6bb16d'
         label: 'Menú Participa'
         provider: block_content
         label_display: '0'
         region: feature
         weight: '0'
-        custom_id: block_content_e22aa941_75b9_4b6b_9974_71bafadb22db
+        custom_id: block_content_eb2b6982_a3f6_4d89_ad90_ce4d0e6bb16d
         theme: icbf
         css_class: ''
         unique: 0

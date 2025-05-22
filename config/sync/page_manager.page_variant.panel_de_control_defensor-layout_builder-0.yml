@@ -6,10 +6,7 @@ dependencies:
     - page_manager.page.panel_de_control_defensor
     - views.view.citaciones
     - views.view.usuarios
-  content:
-    - 'block_content:footer:4b0fab58-793e-41f9-8fe6-11898b40dc31'
   module:
-    - block_content
     - bootstrap_layouts
     - views
 id: panel_de_control_defensor-layout_builder-0
@@ -40,21 +37,7 @@ variant_settings:
               col-sm-12: col-sm-12
             add_region_classes: 1
             attributes: ''
-      components:
-        bfedfb57-35e6-42f0-9383-65535531f330:
-          uuid: bfedfb57-35e6-42f0-9383-65535531f330
-          region: main
-          configuration:
-            id: 'block_content:4b0fab58-793e-41f9-8fe6-11898b40dc31'
-            label: 'Menú Panel de Control Citaciones'
-            label_display: '0'
-            provider: block_content
-            status: true
-            info: ''
-            view_mode: full
-            context_mapping: {  }
-          weight: 0
-          additional: {  }
+      components: {  }
       third_party_settings: {  }
     -
       layout_id: bs_2col
