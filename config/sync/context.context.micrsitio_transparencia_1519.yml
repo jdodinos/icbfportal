@@ -3,7 +3,7 @@ langcode: es
 status: true
 dependencies:
   content:
-    - 'block_content:basic:cec192a3-629f-4af1-ad55-fb4d341c94d2'
+    - 'block_content:basic:0d23a974-182d-4b82-b340-7f871db4afd5'
   module:
     - block_content
     - system
@@ -25,14 +25,15 @@ reactions:
     id: blocks
     uuid: 12cd0e7b-cd51-4fc8-8887-f1841c7758f9
     blocks:
-      9db2b3c2-64fc-402e-a3db-aaddec36e541:
-        uuid: 9db2b3c2-64fc-402e-a3db-aaddec36e541
-        id: 'block_content:cec192a3-629f-4af1-ad55-fb4d341c94d2'
+      87978c1e-81bb-460e-9b68-d1f50c3c0fcd:
+        uuid: 87978c1e-81bb-460e-9b68-d1f50c3c0fcd
+        id: 'block_content:0d23a974-182d-4b82-b340-7f871db4afd5'
         label: 'Titular Transparencia 1519'
         provider: block_content
         label_display: '0'
         region: content
-        custom_id: block_content_cec192a3_629f_4af1_ad55_fb4d341c94d2
+        weight: '0'
+        custom_id: block_content_0d23a974_182d_4b82_b340_7f871db4afd5
         theme: icbf
         css_class: ''
         unique: 0
@@ -42,5 +43,6 @@ reactions:
         info: ''
         view_mode: full
         third_party_settings: {  }
+    include_default_blocks: 1
     saved: false
 weight: 0

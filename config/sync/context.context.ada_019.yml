@@ -3,11 +3,11 @@ langcode: es
 status: true
 dependencies:
   content:
-    - 'block_content:basic:044b59f1-6243-445c-ad6c-e643fcac01f7'
-    - 'block_content:basic:5087fe76-c2c6-4f68-904e-796aa99a91e3'
-    - 'block_content:basic:528a0197-ca56-4d05-b68f-5d3aab9ac7ce'
-    - 'block_content:basic:b32da780-ad2d-4f3d-8a27-2340620d6d5c'
-    - 'block_content:footer:81df3ad9-d439-4cd5-afd5-d2264afb4c5f'
+    - 'block_content:basic:306d71b1-8c6a-44b6-9c63-41eecd10a216'
+    - 'block_content:basic:3731656c-3f12-4308-a0e8-47782413eab1'
+    - 'block_content:basic:4beded73-8324-49f2-8438-d520af056eec'
+    - 'block_content:basic:9dd6a42d-0f4b-4989-86b7-6405bb91e534'
+    - 'block_content:footer:0353550b-434b-40a8-939d-cb3b7cc3b730'
   module:
     - block_content
     - system
@@ -39,15 +39,15 @@ reactions:
     id: blocks
     uuid: 8dcd1c7d-0a09-4c9f-9ab0-baeb03665b5a
     blocks:
-      32c9c818-bde7-4f42-82eb-5bd406a44ec6:
-        uuid: 32c9c818-bde7-4f42-82eb-5bd406a44ec6
-        id: 'block_content:b32da780-ad2d-4f3d-8a27-2340620d6d5c'
+      195eab2c-1561-4c93-8a84-5b40e93af116:
+        uuid: 195eab2c-1561-4c93-8a84-5b40e93af116
+        id: 'block_content:4beded73-8324-49f2-8438-d520af056eec'
         label: 'GOVCO 1519'
         provider: block_content
         label_display: '0'
         region: header
-        weight: '-1'
-        custom_id: block_content_b32da780_ad2d_4f3d_8a27_2340620d6d5c
+        weight: '-2'
+        custom_id: block_content_4beded73_8324_49f2_8438_d520af056eec
         theme: icbf
         css_class: ''
         unique: 0
@@ -57,15 +57,15 @@ reactions:
         info: ''
         view_mode: full
         third_party_settings: {  }
-      fb2a98cb-0240-4fd1-868b-1790323c6c65:
-        uuid: fb2a98cb-0240-4fd1-868b-1790323c6c65
-        id: 'block_content:044b59f1-6243-445c-ad6c-e643fcac01f7'
+      e8b3bcc9-490b-400c-bf59-9dd2b022d06d:
+        uuid: e8b3bcc9-490b-400c-bf59-9dd2b022d06d
+        id: 'block_content:3731656c-3f12-4308-a0e8-47782413eab1'
         label: 'TOP 1519 ICBF'
         provider: block_content
         label_display: '0'
         region: header
-        weight: '0'
-        custom_id: block_content_044b59f1_6243_445c_ad6c_e643fcac01f7
+        weight: '-1'
+        custom_id: block_content_3731656c_3f12_4308_a0e8_47782413eab1
         theme: icbf
         css_class: ''
         unique: 0
@@ -75,15 +75,15 @@ reactions:
         info: ''
         view_mode: full
         third_party_settings: {  }
-      be0bfe5d-8130-4082-8ce8-1923b60c3cea:
-        uuid: be0bfe5d-8130-4082-8ce8-1923b60c3cea
-        id: 'block_content:81df3ad9-d439-4cd5-afd5-d2264afb4c5f'
+      afbe1790-615e-4f84-adbd-c188d73c88c8:
+        uuid: afbe1790-615e-4f84-adbd-c188d73c88c8
+        id: 'block_content:0353550b-434b-40a8-939d-cb3b7cc3b730'
         label: 'TOP ADA'
         provider: block_content
         label_display: '0'
         region: header
-        weight: '1'
-        custom_id: block_content_81df3ad9_d439_4cd5_afd5_d2264afb4c5f
+        weight: '0'
+        custom_id: block_content_0353550b_434b_40a8_939d_cb3b7cc3b730
         theme: icbf
         css_class: ''
         unique: 0
@@ -93,14 +93,14 @@ reactions:
         info: ''
         view_mode: full
         third_party_settings: {  }
-      47108dd3-3d3b-4c85-a652-f8d1f67248fa:
-        uuid: 47108dd3-3d3b-4c85-a652-f8d1f67248fa
+      4b52ed68-bea7-48aa-a558-f3c6d07662c9:
+        uuid: 4b52ed68-bea7-48aa-a558-f3c6d07662c9
         id: 'tb_megamenu_menu_block:mgm-5ce41f0ce4a05'
         label: 'Menu ADA'
         provider: tb_megamenu
         label_display: '0'
         region: header
-        weight: '2'
+        weight: '1'
         custom_id: tb_megamenu_menu_block_mgm_5ce41f0ce4a05
         theme: icbf
         css_class: ''
@@ -108,15 +108,15 @@ reactions:
         context_id: ada_019
         context_mapping: {  }
         third_party_settings: {  }
-      babce853-13aa-4271-934a-9970fe44d384:
-        uuid: babce853-13aa-4271-934a-9970fe44d384
-        id: 'block_content:528a0197-ca56-4d05-b68f-5d3aab9ac7ce'
+      05d0246f-9fe1-4082-8853-d961c549e907:
+        uuid: 05d0246f-9fe1-4082-8853-d961c549e907
+        id: 'block_content:9dd6a42d-0f4b-4989-86b7-6405bb91e534'
         label: 'Footer 1519 -1'
         provider: block_content
         label_display: '0'
         region: footer
-        weight: '-2'
-        custom_id: block_content_528a0197_ca56_4d05_b68f_5d3aab9ac7ce
+        weight: '0'
+        custom_id: block_content_9dd6a42d_0f4b_4989_86b7_6405bb91e534
         theme: icbf
         css_class: ''
         unique: 0
@@ -126,15 +126,15 @@ reactions:
         info: ''
         view_mode: full
         third_party_settings: {  }
-      1b3c236f-f61d-4b38-b40e-f9c3486a94ac:
-        uuid: 1b3c236f-f61d-4b38-b40e-f9c3486a94ac
-        id: 'block_content:5087fe76-c2c6-4f68-904e-796aa99a91e3'
+      950f9060-d827-44f2-90c8-5d7d7985d59e:
+        uuid: 950f9060-d827-44f2-90c8-5d7d7985d59e
+        id: 'block_content:306d71b1-8c6a-44b6-9c63-41eecd10a216'
         label: 'Footer GOVCO'
         provider: block_content
         label_display: '0'
         region: footer
-        weight: '-1'
-        custom_id: block_content_5087fe76_c2c6_4f68_904e_796aa99a91e3
+        weight: '0'
+        custom_id: block_content_306d71b1_8c6a_44b6_9c63_41eecd10a216
         theme: icbf
         css_class: ''
         unique: 0

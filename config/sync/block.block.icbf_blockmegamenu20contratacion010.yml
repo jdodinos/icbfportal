@@ -1,0 +1,25 @@
+uuid: c1dd339c-d292-4889-9e43-8d0e194aed10
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e1ff5494-61e0-442f-ae2b-29c773737bdc'
+  module:
+    - block_content
+  theme:
+    - icbf
+id: icbf_blockmegamenu20contratacion010
+theme: icbf
+region: hidden
+weight: 2
+provider: null
+plugin: 'block_content:e1ff5494-61e0-442f-ae2b-29c773737bdc'
+settings:
+  id: 'block_content:e1ff5494-61e0-442f-ae2b-29c773737bdc'
+  label: 'Block megamenu - 20 Contratación 0 1 0'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

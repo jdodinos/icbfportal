@@ -3,7 +3,7 @@ langcode: es
 status: true
 dependencies:
   content:
-    - 'block_content:footer:7d5bf3ed-6455-4f2c-8560-d336c8f7d193'
+    - 'block_content:footer:2375db9a-3b72-4f6c-9bce-66db9b34b62d'
   module:
     - block_content
     - system
@@ -25,15 +25,15 @@ reactions:
     id: blocks
     uuid: 8ca0c061-f999-433f-a45f-60b6f1a8e4c2
     blocks:
-      2eb6b605-f613-44f6-9087-824491ea94d0:
-        uuid: 2eb6b605-f613-44f6-9087-824491ea94d0
-        id: 'block_content:7d5bf3ed-6455-4f2c-8560-d336c8f7d193'
+      8d91a33a-ce95-44c5-ab72-c204fbd46390:
+        uuid: 8d91a33a-ce95-44c5-ab72-c204fbd46390
+        id: 'block_content:2375db9a-3b72-4f6c-9bce-66db9b34b62d'
         label: 'Asistencia Login'
         provider: block_content
         label_display: '0'
         region: content
         weight: '0'
-        custom_id: block_content_7d5bf3ed_6455_4f2c_8560_d336c8f7d193
+        custom_id: block_content_2375db9a_3b72_4f6c_9bce_66db9b34b62d
         theme: icbf
         css_class: ''
         unique: 0

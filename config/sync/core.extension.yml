@@ -122,6 +122,7 @@ module:
   menu_item_extras: 0
   menu_link_attributes: 0
   menu_link_content: 0
+  menu_markup: 0
   menu_ui: 0
   metatag: 0
   metatag_facebook: 0

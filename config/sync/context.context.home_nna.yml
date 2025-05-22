@@ -3,7 +3,7 @@ langcode: es
 status: true
 dependencies:
   content:
-    - 'block_content:footer:b3a0cdcf-2570-4f29-9db4-0ba314d039ea'
+    - 'block_content:footer:497dcd84-cc75-465f-bf04-1b5b17611dfd'
   module:
     - block_content
     - system
@@ -25,15 +25,15 @@ reactions:
     id: blocks
     uuid: 8869e7d2-69ed-41e5-a896-fd29ff8f5d6f
     blocks:
-      a1757ef8-af31-4ac8-a51f-c103f6b24d27:
-        uuid: a1757ef8-af31-4ac8-a51f-c103f6b24d27
-        id: 'block_content:b3a0cdcf-2570-4f29-9db4-0ba314d039ea'
+      84b9d5ee-ba75-45ad-94c9-2937723e4c77:
+        uuid: 84b9d5ee-ba75-45ad-94c9-2937723e4c77
+        id: 'block_content:497dcd84-cc75-465f-bf04-1b5b17611dfd'
         label: 'HOME - Top ID019'
         provider: block_content
         label_display: '0'
         region: footer
         weight: '0'
-        custom_id: block_content_b3a0cdcf_2570_4f29_9db4_0ba314d039ea
+        custom_id: block_content_497dcd84_cc75_465f_bf04_1b5b17611dfd
         theme: icbf
         css_class: ''
         unique: 0

@@ -10,7 +10,7 @@ custom_solr_search.autocomplete:
 custom_solr_search.search_page:
   path: '/buscador'
   defaults:
-    _form: '\Drupal\custom_solr_search\Form\AdvancedSearchForm'
+    _controller: '\Drupal\custom_solr_search\Controller\SearchPageController::renderSearchPage'
     _title: 'Buscador'
   requirements:
     _permission: 'access content'

@@ -1,0 +1,25 @@
+uuid: 57955cfa-0b82-4298-bbed-904e24adc209
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b432d2ce-dd1a-420d-90c4-91dac4daf363'
+  module:
+    - block_content
+  theme:
+    - icbf
+id: icbf_blockmegamenu20noticias010
+theme: icbf
+region: hidden
+weight: 5
+provider: null
+plugin: 'block_content:b432d2ce-dd1a-420d-90c4-91dac4daf363'
+settings:
+  id: 'block_content:b432d2ce-dd1a-420d-90c4-91dac4daf363'
+  label: 'Block megamenu - 20 Noticias 0 1 0'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
