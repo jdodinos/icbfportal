@@ -63,6 +63,7 @@
         "drupal/admin_toolbar": "^3.5",
         "drupal/adminimal_admin_toolbar": "^2.0",
         "drupal/advagg": "^6.0@alpha",
+        "drupal/asset_injector": "^2.21",
         "drupal/auto_entitylabel": "^3.4",
         "drupal/autologout": "^2.0",
         "drupal/better_exposed_filters": "^7.0",

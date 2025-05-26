@@ -1,22 +1,21 @@
-uuid: a2c4f179-28ac-4a79-91dc-cb643294ff70
+uuid: 2ad69d36-12f2-4bc7-9d58-22d5d2a60326
 langcode: es
 status: true
 dependencies:
   content:
-    - 'block_content:footer:fb3f5863-b027-4dd4-9d80-cb487d0a0120'
+    - 'block_content:footer:ae308f99-081f-4df1-8ee4-c1e2a3240448'
   module:
-    - block_class
     - block_content
   theme:
     - icbf
 id: icbf_micrositiosmisionalesmenu
 theme: icbf
 region: hidden
-weight: 0
+weight: -11
 provider: null
-plugin: 'block_content:fb3f5863-b027-4dd4-9d80-cb487d0a0120'
+plugin: 'block_content:ae308f99-081f-4df1-8ee4-c1e2a3240448'
 settings:
-  id: 'block_content:fb3f5863-b027-4dd4-9d80-cb487d0a0120'
+  id: 'block_content:ae308f99-081f-4df1-8ee4-c1e2a3240448'
   label: 'MICROSITIOS MISIONALES MENU'
   label_display: '0'
   provider: block_content

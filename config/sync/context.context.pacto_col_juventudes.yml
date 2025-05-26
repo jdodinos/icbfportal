@@ -3,9 +3,9 @@ langcode: es
 status: true
 dependencies:
   content:
-    - 'block_content:basic:5087fe76-c2c6-4f68-904e-796aa99a91e3'
-    - 'block_content:basic:528a0197-ca56-4d05-b68f-5d3aab9ac7ce'
-    - 'block_content:basic:b32da780-ad2d-4f3d-8a27-2340620d6d5c'
+    - 'block_content:basic:306d71b1-8c6a-44b6-9c63-41eecd10a216'
+    - 'block_content:basic:4beded73-8324-49f2-8438-d520af056eec'
+    - 'block_content:basic:9dd6a42d-0f4b-4989-86b7-6405bb91e534'
   module:
     - block_content
     - system
@@ -27,15 +27,15 @@ reactions:
     id: blocks
     uuid: 6c4f7543-b16d-4adb-8ac9-ccaddefda3fb
     blocks:
-      7425bbf7-6af4-45c8-bdf5-2c16b4252aba:
-        uuid: 7425bbf7-6af4-45c8-bdf5-2c16b4252aba
-        id: 'block_content:b32da780-ad2d-4f3d-8a27-2340620d6d5c'
+      2e90c626-e497-4c08-a226-b5e2dc9a6a58:
+        uuid: 2e90c626-e497-4c08-a226-b5e2dc9a6a58
+        id: 'block_content:4beded73-8324-49f2-8438-d520af056eec'
         label: 'GOVCO 1519'
         provider: block_content
         label_display: '0'
         region: header
         weight: '0'
-        custom_id: block_content_b32da780_ad2d_4f3d_8a27_2340620d6d5c
+        custom_id: block_content_4beded73_8324_49f2_8438_d520af056eec
         theme: icbf
         css_class: ''
         unique: 0
@@ -45,47 +45,15 @@ reactions:
         info: ''
         view_mode: full
         third_party_settings: {  }
-      dff228dd-25e7-4d4c-a55e-8cdfb58a3ef2:
-        uuid: dff228dd-25e7-4d4c-a55e-8cdfb58a3ef2
-        id: system_breadcrumb_block
-        label: 'Enlaces de ayuda a la navegación'
-        provider: system
-        label_display: '0'
-        region: breadcrumb
-        weight: '0'
-        custom_id: system_breadcrumb_block
-        theme: icbf
-        css_class: ''
-        unique: 0
-        context_id: pacto_col_juventudes
-        context_mapping: {  }
-        third_party_settings: {  }
-      244b84e8-bf4f-4226-8dbe-17295c10eb14:
-        uuid: 244b84e8-bf4f-4226-8dbe-17295c10eb14
-        id: local_tasks_block
-        label: Pestañas
-        provider: core
-        label_display: '0'
-        region: feature
-        weight: '0'
-        custom_id: local_tasks_block
-        theme: icbf
-        css_class: ''
-        unique: 0
-        context_id: pacto_col_juventudes
-        context_mapping: {  }
-        primary: 1
-        secondary: 1
-        third_party_settings: {  }
-      adb566c9-0d9f-47af-a9d2-cd5df4d16785:
-        uuid: adb566c9-0d9f-47af-a9d2-cd5df4d16785
-        id: 'block_content:528a0197-ca56-4d05-b68f-5d3aab9ac7ce'
+      120585bf-fe54-43c3-aee7-a0866b1a093b:
+        uuid: 120585bf-fe54-43c3-aee7-a0866b1a093b
+        id: 'block_content:9dd6a42d-0f4b-4989-86b7-6405bb91e534'
         label: 'Footer 1519 -1'
         provider: block_content
         label_display: '0'
         region: footer
-        weight: '-2'
-        custom_id: block_content_528a0197_ca56_4d05_b68f_5d3aab9ac7ce
+        weight: '0'
+        custom_id: block_content_9dd6a42d_0f4b_4989_86b7_6405bb91e534
         theme: icbf
         css_class: ''
         unique: 0
@@ -95,15 +63,15 @@ reactions:
         info: ''
         view_mode: full
         third_party_settings: {  }
-      d96a7884-88d6-4f3f-996c-5d56dedccaa6:
-        uuid: d96a7884-88d6-4f3f-996c-5d56dedccaa6
-        id: 'block_content:5087fe76-c2c6-4f68-904e-796aa99a91e3'
+      abfada6d-bdf4-4427-918d-b043b57369ec:
+        uuid: abfada6d-bdf4-4427-918d-b043b57369ec
+        id: 'block_content:306d71b1-8c6a-44b6-9c63-41eecd10a216'
         label: 'Footer GOVCO'
         provider: block_content
         label_display: '0'
         region: footer
-        weight: '-1'
-        custom_id: block_content_5087fe76_c2c6_4f68_904e_796aa99a91e3
+        weight: '0'
+        custom_id: block_content_306d71b1_8c6a_44b6_9c63_41eecd10a216
         theme: icbf
         css_class: ''
         unique: 0
@@ -113,6 +81,6 @@ reactions:
         info: ''
         view_mode: full
         third_party_settings: {  }
-    include_default_blocks: 0
+    include_default_blocks: 1
     saved: false
 weight: 0

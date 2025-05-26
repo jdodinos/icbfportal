@@ -1,0 +1,25 @@
+uuid: 067c42e4-4327-4f8b-bbfd-7a8eda64021b
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d3e91f8d-2df6-450e-8714-938b22678148'
+  module:
+    - block_content
+  theme:
+    - icbf
+id: icbf_blockmegamenu20programasbryestrategias020
+theme: icbf
+region: hidden
+weight: -13
+provider: null
+plugin: 'block_content:d3e91f8d-2df6-450e-8714-938b22678148'
+settings:
+  id: 'block_content:d3e91f8d-2df6-450e-8714-938b22678148'
+  label: 'Block megamenu - 20 Programas<br>y Estrategias 0 2 0'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

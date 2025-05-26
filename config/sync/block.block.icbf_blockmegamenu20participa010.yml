@@ -1,0 +1,25 @@
+uuid: 86274c27-bded-4f04-b77d-9d92fd13c4da
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:1e17619a-29c6-42dc-b114-6d363202b053'
+  module:
+    - block_content
+  theme:
+    - icbf
+id: icbf_blockmegamenu20participa010
+theme: icbf
+region: hidden
+weight: -1
+provider: null
+plugin: 'block_content:1e17619a-29c6-42dc-b114-6d363202b053'
+settings:
+  id: 'block_content:1e17619a-29c6-42dc-b114-6d363202b053'
+  label: 'Block megamenu - 20 Participa 0 1 0'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
