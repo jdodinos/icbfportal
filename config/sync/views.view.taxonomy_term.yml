@@ -11,7 +11,7 @@ dependencies:
 _core:
   default_config_hash: KejdxDJQmx8SaO-t83OVekLw6ar4ldjmsJMGcotGxnQ
 id: taxonomy_term
-label: 'Taxonomy term'
+label: 'Término de taxonomía'
 module: taxonomy
 description: "A view to emulate Drupal core's handling of taxonomy/term."
 tag: default

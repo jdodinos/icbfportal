@@ -176,6 +176,7 @@ module:
   roleassign: 0
   rules: 0
   scheduler: 0
+  scheduler_rules_integration: 0
   search: 0
   search404: 0
   search_api: 0
