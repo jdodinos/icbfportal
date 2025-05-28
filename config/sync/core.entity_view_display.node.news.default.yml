@@ -3,7 +3,6 @@ langcode: es
 status: true
 dependencies:
   config:
-    - core.base_field_override.node.news.title
     - core.entity_view_display.comment.comment_node_news.default
     - field.field.node.news.comment_node_news
     - field.field.node.news.field_attached_files
@@ -27,6 +26,7 @@ dependencies:
     - field.field.node.news.field_youtube
     - node.type.news
     - views.view.banners
+    - views.view.content
     - views.view.news
     - views.view.news_related_content
   content:
@@ -85,44 +85,6 @@ third_party_settings:
           context_visibility: {  }
           context_all_must_pass: 1
         components:
-          159a5298-aa3b-4ec9-a385-f6e205b5934d:
-            uuid: 159a5298-aa3b-4ec9-a385-f6e205b5934d
-            region: right
-            configuration:
-              id: 'views_block:banners-block_25'
-              label: 'Actividades de Bienestar'
-              label_display: visible
-              provider: views
-              context_mapping: {  }
-              views_label: 'Actividades de Bienestar'
-              items_per_page: none
-            weight: 1
-            additional:
-              context_visibility: {  }
-              context_all_must_pass: 1
-          6e7861c2-ae0d-449f-98c4-dd870517d5bd:
-            uuid: 6e7861c2-ae0d-449f-98c4-dd870517d5bd
-            region: left
-            configuration:
-              id: 'field_block:node:news:title'
-              label: Título
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: string
-                label: hidden
-                settings:
-                  link_to_entity: false
-                third_party_settings:
-                  field_formatter_class:
-                    class: ''
-            weight: 0
-            additional:
-              context_visibility: {  }
-              context_all_must_pass: 1
           7dce0ac1-87da-4cec-badc-5f7b220b6bdd:
             uuid: 7dce0ac1-87da-4cec-badc-5f7b220b6bdd
             region: left
@@ -142,7 +104,7 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: ''
-            weight: 1
+            weight: 2
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
@@ -166,7 +128,7 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: ''
-            weight: 2
+            weight: 3
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
@@ -182,7 +144,7 @@ third_party_settings:
               info: ''
               view_mode: full
               context_mapping: {  }
-            weight: 3
+            weight: 4
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
@@ -204,7 +166,7 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: ''
-            weight: 5
+            weight: 6
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
@@ -227,7 +189,7 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: ''
-            weight: 6
+            weight: 7
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
@@ -249,7 +211,7 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: ''
-            weight: 7
+            weight: 8
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
@@ -280,7 +242,7 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: ''
-            weight: 8
+            weight: 9
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
@@ -342,7 +304,7 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: ''
-            weight: 9
+            weight: 10
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
@@ -365,7 +327,7 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: ''
-            weight: 10
+            weight: 11
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
@@ -380,7 +342,7 @@ third_party_settings:
               context_mapping: {  }
               views_label: ''
               items_per_page: none
-            weight: 11
+            weight: 12
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
@@ -395,7 +357,7 @@ third_party_settings:
               context_mapping: {  }
               views_label: ''
               items_per_page: none
-            weight: 4
+            weight: 5
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
@@ -409,6 +371,36 @@ third_party_settings:
               provider: views
               context_mapping: {  }
               views_label: 'Más noticias'
+              items_per_page: none
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          679391a3-8e9b-4bcd-b1a2-6cc0dfc0ac14:
+            uuid: 679391a3-8e9b-4bcd-b1a2-6cc0dfc0ac14
+            region: right
+            configuration:
+              id: 'views_block:banners-block_22'
+              label: 'Actividades de Bienestar'
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: 'Actividades de Bienestar'
+              items_per_page: none
+            weight: 2
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          9b36ef08-f6e2-4646-a085-3c6c314e0e67:
+            uuid: 9b36ef08-f6e2-4646-a085-3c6c314e0e67
+            region: left
+            configuration:
+              id: 'views_block:content-block_content_title'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
               items_per_page: none
             weight: 0
             additional:

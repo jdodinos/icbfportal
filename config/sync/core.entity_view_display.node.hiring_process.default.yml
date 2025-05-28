@@ -16,13 +16,238 @@ dependencies:
     - field.field.node.hiring_process.field_metatag
     - field.field.node.hiring_process.field_process_object
     - node.type.hiring_process
+    - views.view.content
   module:
+    - bootstrap_layouts
     - comment
     - datetime
     - file
+    - layout_builder
     - link
+    - panelizer
     - text
     - user
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: bs_1col
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            main:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-12: col-sm-12
+                col-md-12: col-md-12
+                col-lg-12: col-lg-12
+              add_region_classes: 1
+              attributes: ''
+          context_visibility: {  }
+          context_all_must_pass: 1
+        components:
+          83d7f6b1-ed83-4a85-bd17-dfe68b95a5bc:
+            uuid: 83d7f6b1-ed83-4a85-bd17-dfe68b95a5bc
+            region: main
+            configuration:
+              id: 'views_block:content-block_content_title'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+        third_party_settings: {  }
+      -
+        layout_id: bs_2col
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            left:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-6: col-sm-6
+                col-md-6: col-md-6
+                col-lg-6: col-lg-6
+              add_region_classes: 1
+              attributes: ''
+            right:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-6: col-sm-6
+                col-md-6: col-md-6
+                col-lg-6: col-lg-6
+              add_region_classes: 1
+              attributes: ''
+          context_visibility: {  }
+          context_all_must_pass: 1
+        components:
+          e2e3e2f2-4cce-4754-9877-ce6f6369d5e1:
+            uuid: e2e3e2f2-4cce-4754-9877-ce6f6369d5e1
+            region: left
+            configuration:
+              id: 'field_block:node:hiring_process:field_process_object'
+              label: 'Objeto del proceso'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          061509ca-911f-4a88-ba15-1aa7bde430f8:
+            uuid: 061509ca-911f-4a88-ba15-1aa7bde430f8
+            region: left
+            configuration:
+              id: 'field_block:node:hiring_process:field_location'
+              label: Ubicación
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 1
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          89689fe4-c8cb-4e65-a0f8-4041a8df39fa:
+            uuid: 89689fe4-c8cb-4e65-a0f8-4041a8df39fa
+            region: left
+            configuration:
+              id: 'field_block:node:hiring_process:field_contact_email'
+              label: 'Correo electrónico de contacto'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: email_mailto
+                label: inline
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 2
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          4fc8c995-8dde-40c1-8e22-02ff02d6c59a:
+            uuid: 4fc8c995-8dde-40c1-8e22-02ff02d6c59a
+            region: left
+            configuration:
+              id: 'field_block:node:hiring_process:field_dae_year'
+              label: 'Año de publicación'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: datetime_default
+                label: hidden
+                settings:
+                  timezone_override: ''
+                  format_type: medium
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 3
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          2ac70f04-d90f-450a-8cc6-0158d282daac:
+            uuid: 2ac70f04-d90f-450a-8cc6-0158d282daac
+            region: right
+            configuration:
+              id: 'field_block:node:hiring_process:field_document'
+              label: Documento
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: file_table
+                label: hidden
+                settings:
+                  use_description_as_link_text: true
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          ea85645f-f116-4612-aba8-1793b4fc24e2:
+            uuid: ea85645f-f116-4612-aba8-1793b4fc24e2
+            region: left
+            configuration:
+              id: 'field_block:node:hiring_process:field_aditional_info'
+              label: 'Información Adicional'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 4
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+        third_party_settings: {  }
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.hiring_process.default
 targetEntityType: node
 bundle: hiring_process

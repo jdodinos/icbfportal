@@ -19,13 +19,310 @@ dependencies:
     - field.field.node.persona.field_photo
     - field.field.node.persona.field_section
     - node.type.persona
+    - views.view.content
   module:
+    - bootstrap_layouts
     - comment
     - file
     - image
+    - layout_builder
     - options
+    - panelizer
     - text
     - user
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: bs_2col
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            left:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-4: col-sm-4
+                col-md-4: col-md-4
+                col-lg-4: col-lg-4
+              add_region_classes: 1
+              attributes: ''
+            right:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-8: col-sm-8
+                col-md-8: col-md-8
+                col-lg-8: col-lg-8
+              add_region_classes: 1
+              attributes: ''
+          context_visibility: {  }
+          context_all_must_pass: 1
+        components:
+          4636e816-7ec8-4235-8726-5369acd63b73:
+            uuid: 4636e816-7ec8-4235-8726-5369acd63b73
+            region: left
+            configuration:
+              id: 'field_block:node:persona:field_photo'
+              label: Fotografía
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: colorbox
+                label: hidden
+                settings:
+                  colorbox_image_style: ''
+                  colorbox_gallery: post
+                  colorbox_gallery_custom: ''
+                  colorbox_caption: auto
+                  colorbox_caption_custom: ''
+                  colorbox_node_style: ''
+                  colorbox_node_style_first: ''
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          61ef2633-9665-4a18-8542-3a3d248e78ff:
+            uuid: 61ef2633-9665-4a18-8542-3a3d248e78ff
+            region: right
+            configuration:
+              id: 'field_block:node:persona:field_content_profile'
+              label: 'Perfil Profesional:'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 1
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          e083c7b6-5858-4f41-9c2d-33721fb74f2d:
+            uuid: e083c7b6-5858-4f41-9c2d-33721fb74f2d
+            region: right
+            configuration:
+              id: 'field_block:node:persona:field_cv'
+              label: 'Hoja de Vida'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: file_default
+                label: hidden
+                settings:
+                  use_description_as_link_text: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 2
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          f465e747-0499-4975-ae70-1d2aa95c6e43:
+            uuid: f465e747-0499-4975-ae70-1d2aa95c6e43
+            region: right
+            configuration:
+              id: 'field_block:node:persona:field_attached_files'
+              label: Documentos
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: file_default
+                label: above
+                settings:
+                  use_description_as_link_text: true
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 3
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          948b3ae3-3b91-41db-b8df-4be24f10c9e4:
+            uuid: 948b3ae3-3b91-41db-b8df-4be24f10c9e4
+            region: right
+            configuration:
+              id: 'field_block:node:persona:field_person_position'
+              label: 'Cargo:'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: list_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 4
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          168ae0b1-9ee0-444a-a63f-652fcf85d210:
+            uuid: 168ae0b1-9ee0-444a-a63f-652fcf85d210
+            region: right
+            configuration:
+              id: 'field_block:node:persona:field_person_code'
+              label: 'Código:'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 5
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          8dc58b32-9470-4f77-afa8-72f16710741f:
+            uuid: 8dc58b32-9470-4f77-afa8-72f16710741f
+            region: right
+            configuration:
+              id: 'field_block:node:persona:field_email'
+              label: 'Correo Electrónico:'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: basic_string
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 6
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          19ac9be0-3afe-4885-951b-f8333a1b312d:
+            uuid: 19ac9be0-3afe-4885-951b-f8333a1b312d
+            region: right
+            configuration:
+              id: 'field_block:node:persona:field_person_degree'
+              label: 'Grado:'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 8
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          7ea35a91-1fac-4369-8caf-1f9615bb0cd8:
+            uuid: 7ea35a91-1fac-4369-8caf-1f9615bb0cd8
+            region: right
+            configuration:
+              id: 'field_block:node:persona:field_person_area'
+              label: 'Área:'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 7
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          bbaf1c02-60a8-428b-8e50-4eefd53683aa:
+            uuid: bbaf1c02-60a8-428b-8e50-4eefd53683aa
+            region: right
+            configuration:
+              id: 'field_block:node:persona:field_person_extension'
+              label: 'No. Extensión:'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 9
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          81c1dd4c-8b93-4f80-a8fb-79bb00a8f4b4:
+            uuid: 81c1dd4c-8b93-4f80-a8fb-79bb00a8f4b4
+            region: right
+            configuration:
+              id: 'views_block:content-block_content_title'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+        third_party_settings: {  }
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.persona.default
 targetEntityType: node
 bundle: persona
