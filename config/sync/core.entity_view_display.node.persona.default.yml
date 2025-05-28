@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.persona.field_photo
     - field.field.node.persona.field_section
     - node.type.persona
+    - views.view.content
   module:
     - bootstrap_layouts
     - comment
@@ -29,6 +30,7 @@ dependencies:
     - panelizer
     - text
     - user
+    - views
 third_party_settings:
   layout_builder:
     enabled: true
@@ -114,7 +116,7 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: ''
-            weight: 0
+            weight: 1
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
@@ -137,7 +139,7 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: ''
-            weight: 1
+            weight: 2
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
@@ -160,7 +162,7 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: ''
-            weight: 2
+            weight: 3
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
@@ -182,7 +184,7 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: ''
-            weight: 3
+            weight: 4
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
@@ -205,7 +207,7 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: ''
-            weight: 4
+            weight: 5
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
@@ -227,7 +229,7 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: ''
-            weight: 5
+            weight: 6
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
@@ -250,7 +252,7 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: ''
-            weight: 7
+            weight: 8
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
@@ -273,7 +275,7 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: ''
-            weight: 6
+            weight: 7
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
@@ -296,7 +298,22 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: ''
-            weight: 8
+            weight: 9
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          81c1dd4c-8b93-4f80-a8fb-79bb00a8f4b4:
+            uuid: 81c1dd4c-8b93-4f80-a8fb-79bb00a8f4b4
+            region: right
+            configuration:
+              id: 'views_block:content-block_content_title'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
