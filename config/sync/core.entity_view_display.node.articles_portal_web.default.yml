@@ -3,6 +3,7 @@ langcode: es
 status: true
 dependencies:
   config:
+    - core.base_field_override.node.articles_portal_web.title
     - core.entity_view_display.comment.comment_node_articles_portal_web.default
     - field.field.node.articles_portal_web.comment_node_articles_portal_web
     - field.field.node.articles_portal_web.field_constructor
@@ -30,14 +31,286 @@ dependencies:
     - field.field.node.articles_portal_web.field_youtube
     - node.type.articles_portal_web
   module:
+    - bootstrap_layouts
     - comment
     - datetime
     - file
     - image
+    - layout_builder
     - options
+    - panelizer
     - text
     - user
     - youtube
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: bs_4col
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            first:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-2: col-sm-2
+                col-md-2: col-md-2
+                col-lg-2: col-lg-2
+                hidden-xs: hidden-xs
+                visible-sm: visible-sm
+                visible-md: visible-md
+                visible-lg: visible-lg
+              add_region_classes: 1
+              attributes: ''
+            second:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-5: col-sm-5
+                col-md-5: col-md-5
+                col-lg-5: col-lg-5
+              add_region_classes: 1
+              attributes: ''
+            third:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-3: col-sm-3
+                col-md-3: col-md-3
+                col-lg-3: col-lg-3
+              add_region_classes: 1
+              attributes: ''
+            fourth:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-2: col-sm-2
+                col-md-2: col-md-2
+                col-lg-2: col-lg-2
+                hidden-xs: hidden-xs
+                visible-sm: visible-sm
+                visible-md: visible-md
+                visible-lg: visible-lg
+              add_region_classes: 1
+              attributes: ''
+          context_visibility: {  }
+          context_all_must_pass: 1
+        components:
+          75ebd3d2-2ce4-41eb-a232-8052dd1752a6:
+            uuid: 75ebd3d2-2ce4-41eb-a232-8052dd1752a6
+            region: second
+            configuration:
+              id: 'field_block:node:articles_portal_web:field_list_image'
+              label: 'Imagen Listado'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          7d96bbdc-fb88-475e-a6c0-310d5c9b091c:
+            uuid: 7d96bbdc-fb88-475e-a6c0-310d5c9b091c
+            region: second
+            configuration:
+              id: 'field_block:node:articles_portal_web:field_youtube'
+              label: Youtube
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: youtube_video
+                label: hidden
+                settings:
+                  youtube_size: responsive
+                  youtube_width: ''
+                  youtube_height: ''
+                  youtube_autoplay: false
+                  youtube_mute: false
+                  youtube_loop: false
+                  youtube_controls: false
+                  youtube_autohide: false
+                  youtube_iv_load_policy: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 1
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          4ee777b0-39f8-4a86-9e78-83d2301d48b0:
+            uuid: 4ee777b0-39f8-4a86-9e78-83d2301d48b0
+            region: third
+            configuration:
+              id: 'field_block:node:articles_portal_web:field_date'
+              label: Fecha
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: datetime_default
+                label: hidden
+                settings:
+                  timezone_override: ''
+                  format_type: medium
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          39c0c731-9336-4108-bc85-030e3beabad1:
+            uuid: 39c0c731-9336-4108-bc85-030e3beabad1
+            region: third
+            configuration:
+              id: 'field_block:node:articles_portal_web:title'
+              label: Título
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 1
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          14775eab-40a8-4067-942b-96dcd4eeb0a9:
+            uuid: 14775eab-40a8-4067-942b-96dcd4eeb0a9
+            region: third
+            configuration:
+              id: 'field_block:node:articles_portal_web:field_resume'
+              label: Resumen
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 2
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          0ddc5b63-53e2-48f6-84b5-0a25f03ace19:
+            uuid: 0ddc5b63-53e2-48f6-84b5-0a25f03ace19
+            region: third
+            configuration:
+              id: 'field_block:node:articles_portal_web:field_document'
+              label: Documento
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: file_default
+                label: hidden
+                settings:
+                  use_description_as_link_text: true
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 3
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          7374ee0b-aae8-4b06-976e-1116fa696678:
+            uuid: 7374ee0b-aae8-4b06-976e-1116fa696678
+            region: third
+            configuration:
+              id: 'field_block:node:articles_portal_web:field_multimedia'
+              label: 'Audio y/o Vídeo'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: file_audio
+                label: hidden
+                settings:
+                  controls: false
+                  autoplay: false
+                  loop: false
+                  multiple_file_display_type: tags
+                third_party_settings:
+                  blazy:
+                    blazy: false
+                  field_formatter_class:
+                    class: ''
+            weight: 4
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          3bea0b90-9f02-4683-9b9d-b284f7402dda:
+            uuid: 3bea0b90-9f02-4683-9b9d-b284f7402dda
+            region: third
+            configuration:
+              id: 'field_block:node:articles_portal_web:field_introduction_text'
+              label: Introducción
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 5
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+        third_party_settings: {  }
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.articles_portal_web.default
 targetEntityType: node
 bundle: articles_portal_web
