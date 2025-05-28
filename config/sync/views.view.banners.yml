@@ -14,20 +14,20 @@ dependencies:
     - node.type.banner_home
     - taxonomy.vocabulary.file_category
   content:
-    - 'taxonomy_term:file_category:105ee1ee-28bf-433e-8c52-79ec0c314c57'
-    - 'taxonomy_term:file_category:219baa85-3a13-4446-bf5f-943c379d85cc'
-    - 'taxonomy_term:file_category:2a482075-5cd1-42de-90a7-9c88bebcb50c'
-    - 'taxonomy_term:file_category:2e74f240-8f6d-4f99-8b3e-9db1621de8c8'
-    - 'taxonomy_term:file_category:3113dadc-d0e4-4216-9a3a-6e2dc06cebc4'
-    - 'taxonomy_term:file_category:57280026-cc6c-47cd-acd0-09c2b9442498'
-    - 'taxonomy_term:file_category:6795ccf0-f254-47b5-959f-17bc36aa3bf4'
-    - 'taxonomy_term:file_category:79890a86-ba3d-4386-bfff-3fbee8c3030e'
-    - 'taxonomy_term:file_category:7bc60962-3dd9-4bd5-8bc0-c2603d52f0c7'
-    - 'taxonomy_term:file_category:993e5e2b-069a-441e-b00a-35b8034c71cf'
-    - 'taxonomy_term:file_category:99b879ca-29d4-4443-9f74-f0c994cb8130'
-    - 'taxonomy_term:file_category:d0d2a56c-312a-426a-bbcf-b8d26badfd4a'
-    - 'taxonomy_term:file_category:d4b0fee9-90bf-44c9-8568-1a6289cccf29'
-    - 'taxonomy_term:file_category:fbd87275-3d83-483b-951b-b4aa034de5e9'
+    - 'taxonomy_term:file_category:2a84612f-75be-4a0a-acbe-3053742d8777'
+    - 'taxonomy_term:file_category:3847e742-5d7b-4cfe-925c-14bb2da8f1d9'
+    - 'taxonomy_term:file_category:46be7310-f806-4566-8e22-bdaaef150923'
+    - 'taxonomy_term:file_category:46e5fc7e-5754-4bed-aab1-d80d01c55574'
+    - 'taxonomy_term:file_category:49021f4f-1662-4df8-b8e3-53d1da374d9d'
+    - 'taxonomy_term:file_category:575f61fc-7b28-46b1-a18e-e42c46e0dd20'
+    - 'taxonomy_term:file_category:5d8d20cb-a530-470c-b32a-a768a132e4e3'
+    - 'taxonomy_term:file_category:7ef236ac-c7f6-41ad-8d10-6ea4fda1c5a8'
+    - 'taxonomy_term:file_category:92f8eecb-34d0-46f6-80bd-922dc7c35416'
+    - 'taxonomy_term:file_category:b7ec33cc-8857-4a45-a907-ecc23c6ca421'
+    - 'taxonomy_term:file_category:b9ad3694-3eee-4325-89be-0247238d3af0'
+    - 'taxonomy_term:file_category:e1c1ea49-7db6-42c4-85ec-36c20c8a749c'
+    - 'taxonomy_term:file_category:ebf025b4-bb61-4b11-bd37-0bfc3467e36a'
+    - 'taxonomy_term:file_category:eca1eb8d-075a-4d80-afac-a61250a3500f'
   module:
     - colorbox
     - datetime
@@ -5671,6 +5671,69 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        field_list_image_1:
+          id: field_list_image_1
+          table: node__field_list_image
+          field: field_list_image
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image_url
+          settings:
+            image_style: ''
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         field_resume:
           id: field_resume
           table: node__field_resume
@@ -5904,17 +5967,6 @@ display:
           granularity: second
       arguments: {  }
       filters:
-        status:
-          id: status
-          table: node_field_data
-          field: status
-          entity_type: node
-          entity_field: status
-          plugin_id: boolean
-          value: '1'
-          group: 1
-          expose:
-            operator: ''
         type:
           id: type
           table: node_field_data
@@ -6016,22 +6068,48 @@ display:
         groups:
           1: AND
       style:
-        type: views_bootstrap_carousel
+        type: slick
         options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          interval: '16000'
-          navigation: 1
-          indicators: 1
-          pause: 1
-          wrap: 1
-          columns: '1'
-          breakpoints: md
-          display: fields
-          image: ''
+          caption:
+            edit_node: '0'
+            field_list_image_1: '0'
+            field_list_image: '0'
+            field_resume: '0'
+            title: '0'
+            field_link_url: '0'
+          optionset: clone_of_four_elements_slider
+          class: ''
+          image: field_list_image
+          link: ''
+          overlay: ''
           title: ''
-          description: ''
+          vanilla: false
+          layout: ''
+          cache: 0
+          admin_uri: '/admin/structure/views/ajax/display/banners/block_22/style_options?_wrapper_format=drupal_ajax'
+          grid: ''
+          grid_medium: ''
+          grid_small: ''
+          style: ''
+          skin: default
+          overridables:
+            arrows: '0'
+            autoplay: '0'
+            dots: '0'
+            draggable: '0'
+            infinite: '0'
+            mouseWheel: '0'
+            randomize: '0'
+            variableWidth: '0'
+          thumbnail: ''
+          optionset_thumbnail: ''
+          skin_thumbnail: ''
+          thumbnail_caption: ''
+          thumbnail_effect: ''
+          thumbnail_position: ''
+          override: false
+          preserve_keys: false
+          visible_items: null
       row:
         type: fields
         options:

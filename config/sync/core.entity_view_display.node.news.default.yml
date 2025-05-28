@@ -85,21 +85,6 @@ third_party_settings:
           context_visibility: {  }
           context_all_must_pass: 1
         components:
-          159a5298-aa3b-4ec9-a385-f6e205b5934d:
-            uuid: 159a5298-aa3b-4ec9-a385-f6e205b5934d
-            region: right
-            configuration:
-              id: 'views_block:banners-block_25'
-              label: 'Actividades de Bienestar'
-              label_display: visible
-              provider: views
-              context_mapping: {  }
-              views_label: 'Actividades de Bienestar'
-              items_per_page: none
-            weight: 1
-            additional:
-              context_visibility: {  }
-              context_all_must_pass: 1
           6e7861c2-ae0d-449f-98c4-dd870517d5bd:
             uuid: 6e7861c2-ae0d-449f-98c4-dd870517d5bd
             region: left
@@ -411,6 +396,21 @@ third_party_settings:
               views_label: 'Más noticias'
               items_per_page: none
             weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          679391a3-8e9b-4bcd-b1a2-6cc0dfc0ac14:
+            uuid: 679391a3-8e9b-4bcd-b1a2-6cc0dfc0ac14
+            region: right
+            configuration:
+              id: 'views_block:banners-block_22'
+              label: 'Actividades de Bienestar'
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: 'Actividades de Bienestar'
+              items_per_page: none
+            weight: 2
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
