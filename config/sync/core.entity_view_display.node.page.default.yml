@@ -19,8 +19,10 @@ dependencies:
     - field.field.node.page.field_youtube
     - node.type.page
   module:
+    - bootstrap_layouts
     - comment
     - file
+    - layout_builder
     - panelizer
     - text
     - user
@@ -31,6 +33,54 @@ third_party_settings:
     custom: false
     allow: false
     default: default
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: bs_1col
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            main:
+              wrapper: div
+              classes:
+                col-sm-12: col-sm-12
+              add_region_classes: 1
+              attributes: ''
+          context_visibility: {  }
+          context_all_must_pass: 1
+        components:
+          692d7fb8-d727-402a-b16f-7b5e25bf445b:
+            uuid: 692d7fb8-d727-402a-b16f-7b5e25bf445b
+            region: main
+            configuration:
+              id: 'field_block:node:page:field_content'
+              label: Contenido
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+        third_party_settings: {  }
 _core:
   default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
 id: node.page.default
