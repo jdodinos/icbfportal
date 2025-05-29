@@ -23,8 +23,26 @@ dependencies:
     - comment
     - file
     - image
+    - layout_builder
+    - panelizer
     - text
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_builder_blank
+        layout_settings:
+          label: ''
+        components: {  }
+        third_party_settings: {  }
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.tramites_vus.default
 targetEntityType: node
 bundle: tramites_vus

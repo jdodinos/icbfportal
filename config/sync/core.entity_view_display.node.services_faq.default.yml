@@ -18,14 +18,304 @@ dependencies:
     - field.field.node.services_faq.field_resume
     - field.field.node.services_faq.field_youtube
     - node.type.services_faq
+    - views.view.content
+  content:
+    - 'block_content:footer:a6390e76-a36d-49f2-954f-876128f2b70a'
+    - 'block_content:footer:c1f77770-eb4c-44b2-9dfe-22868d720d79'
   module:
+    - block_content
+    - bootstrap_layouts
     - comment
     - datetime
     - file
     - image
+    - layout_builder
+    - panelizer
     - text
     - user
+    - views
     - youtube
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: bs_2col_stacked
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            top:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-12: col-sm-12
+                col-md-12: col-md-12
+                col-lg-12: col-lg-12
+              add_region_classes: 1
+              attributes: ''
+            left:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-8: col-sm-8
+                col-md-8: col-md-8
+                col-lg-8: col-lg-8
+              add_region_classes: 1
+              attributes: ''
+            right:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-4: col-sm-4
+                col-md-4: col-md-4
+                col-lg-4: col-lg-4
+              add_region_classes: 1
+              attributes: ''
+            bottom:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-12: col-sm-12
+                col-md-12: col-md-12
+                col-lg-12: col-lg-12
+              add_region_classes: 1
+              attributes: ''
+          context_visibility: {  }
+          context_all_must_pass: 1
+        components:
+          f25d8aef-7234-43d9-9cb9-1d2f31b16203:
+            uuid: f25d8aef-7234-43d9-9cb9-1d2f31b16203
+            region: top
+            configuration:
+              id: 'field_block:node:services_faq:field_faq_code'
+              label: 'Código FAQ'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: inline
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          c5689a79-fe0b-4416-97c8-634436c62d24:
+            uuid: c5689a79-fe0b-4416-97c8-634436c62d24
+            region: left
+            configuration:
+              id: 'views_block:content-block_content_title'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          5377559f-758a-48ae-9e65-69762585a2d1:
+            uuid: 5377559f-758a-48ae-9e65-69762585a2d1
+            region: left
+            configuration:
+              id: 'field_block:node:services_faq:field_resume'
+              label: 'Respuesta escrita'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 2
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          6cddc639-5e90-4933-b4bf-49adef2715b8:
+            uuid: 6cddc639-5e90-4933-b4bf-49adef2715b8
+            region: left
+            configuration:
+              id: 'field_block:node:services_faq:field_link_more_info'
+              label: 'Información en Datos Abiertos'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 3
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          8a5aff7d-9433-4f71-ba17-a977d98ebffa:
+            uuid: 8a5aff7d-9433-4f71-ba17-a977d98ebffa
+            region: right
+            configuration:
+              id: 'field_block:node:services_faq:field_youtube'
+              label: 'Respuesta en lenguaje de señas'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: youtube_video
+                label: hidden
+                settings:
+                  youtube_size: responsive
+                  youtube_width: ''
+                  youtube_height: ''
+                  youtube_autoplay: false
+                  youtube_mute: false
+                  youtube_loop: false
+                  youtube_controls: false
+                  youtube_autohide: false
+                  youtube_iv_load_policy: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          14174355-2dab-4de7-bb2e-cd31b5aed21b:
+            uuid: 14174355-2dab-4de7-bb2e-cd31b5aed21b
+            region: right
+            configuration:
+              id: 'field_block:node:services_faq:field_multimedia'
+              label: 'Escuchar audio'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: file_audio
+                label: hidden
+                settings:
+                  controls: true
+                  autoplay: false
+                  loop: false
+                  multiple_file_display_type: tags
+                third_party_settings:
+                  blazy:
+                    blazy: false
+                  field_formatter_class:
+                    class: ''
+            weight: 1
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          caebd2e1-d08f-40bb-8d8d-681690c2eab8:
+            uuid: caebd2e1-d08f-40bb-8d8d-681690c2eab8
+            region: right
+            configuration:
+              id: 'field_block:node:services_faq:field_related_procedures'
+              label: 'Trámites relacionados'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 2
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          c19c481b-a3a0-467f-bb71-771468e73b27:
+            uuid: c19c481b-a3a0-467f-bb71-771468e73b27
+            region: bottom
+            configuration:
+              id: 'field_block:node:services_faq:field_faqs_related'
+              label: 'faqs relacionados'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          4d389652-a3bd-4c69-8618-4ec211a1e8da:
+            uuid: 4d389652-a3bd-4c69-8618-4ec211a1e8da
+            region: bottom
+            configuration:
+              id: 'block_content:c1f77770-eb4c-44b2-9dfe-22868d720d79'
+              label: 'FAQ- Compartir en redes'
+              label_display: '0'
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 1
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          76762825-3a21-4531-9298-f9d1db603e01:
+            uuid: 76762825-3a21-4531-9298-f9d1db603e01
+            region: bottom
+            configuration:
+              id: 'block_content:a6390e76-a36d-49f2-954f-876128f2b70a'
+              label: 'Consulta guiada - FAQs'
+              label_display: '0'
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 2
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+        third_party_settings: {  }
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.services_faq.default
 targetEntityType: node
 bundle: services_faq

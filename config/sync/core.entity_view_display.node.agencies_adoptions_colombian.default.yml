@@ -15,6 +15,8 @@ dependencies:
     - node.type.agencies_adoptions_colombian
   module:
     - field_formatter_class
+    - layout_builder
+    - layout_discovery
     - panelizer
     - user
 third_party_settings:
@@ -23,6 +25,104 @@ third_party_settings:
     custom: false
     allow: false
     default: default
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          36e92a5f-f5ce-49fa-9aea-3fc1518b3e55:
+            uuid: 36e92a5f-f5ce-49fa-9aea-3fc1518b3e55
+            region: content
+            configuration:
+              id: 'field_block:node:agencies_adoptions_colombian:field_representante_en_colombia'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: inline
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          881c8e25-d00d-4f5b-9d75-89f210a944a6:
+            uuid: 881c8e25-d00d-4f5b-9d75-89f210a944a6
+            region: content
+            configuration:
+              id: 'field_block:node:agencies_adoptions_colombian:field_email'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: email_mailto
+                label: inline
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          21e1a535-7c7f-4219-b089-8d5749d976e4:
+            uuid: 21e1a535-7c7f-4219-b089-8d5749d976e4
+            region: content
+            configuration:
+              id: 'field_block:node:agencies_adoptions_colombian:field_phone'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: inline
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          072a2a03-37f0-4ebd-bb99-44b3a74b6635:
+            uuid: 072a2a03-37f0-4ebd-bb99-44b3a74b6635
+            region: content
+            configuration:
+              id: 'field_block:node:agencies_adoptions_colombian:field_lugar'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 4
+            additional: {  }
+          a8135f46-3886-4926-88c6-06dbe132a9bb:
+            uuid: a8135f46-3886-4926-88c6-06dbe132a9bb
+            region: content
+            configuration:
+              id: 'field_block:node:agencies_adoptions_colombian:field_address_col'
+              label: 'Sede en Colombia'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: inline
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 3
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+        third_party_settings: {  }
 id: node.agencies_adoptions_colombian.default
 targetEntityType: node
 bundle: agencies_adoptions_colombian
