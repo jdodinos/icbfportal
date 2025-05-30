@@ -1,7 +1,9 @@
 uuid: c97f5373-9a71-487b-8737-3bac770ae18d
 langcode: es
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - node
 _core:
   default_config_hash: RCVWP-yHwxSNiQORMIabDgHMEVqOMW58w80BQgRFJ4k
 id: node_view
@@ -10,7 +12,14 @@ description: 'When enabled, this overrides the default Drupal behavior for displ
 use_admin_theme: false
 path: '/node/{node}'
 access_logic: and
-access_conditions: {  }
+access_conditions:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      sede_local: sede_local
 parameters:
   node:
     machine_name: node
