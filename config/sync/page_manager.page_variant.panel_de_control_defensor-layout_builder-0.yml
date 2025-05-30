@@ -54,15 +54,23 @@ variant_settings:
           left:
             wrapper: div
             classes:
+              col-xs-12: col-xs-12
               col-sm-4: col-sm-4
+              col-md-4: col-md-4
+              col-lg-4: col-lg-4
             add_region_classes: 1
             attributes: ''
           right:
             wrapper: div
             classes:
+              col-xs-12: col-xs-12
               col-sm-8: col-sm-8
+              col-md-8: col-md-8
+              col-lg-8: col-lg-8
             add_region_classes: 1
             attributes: ''
+        context_visibility: {  }
+        context_all_must_pass: 1
       components:
         9dada113-c8c6-4157-9da0-4bfe109e334e:
           uuid: 9dada113-c8c6-4157-9da0-4bfe109e334e

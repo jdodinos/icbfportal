@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.hiring_process.field_process_object
     - node.type.hiring_process
     - views.view.content
+    - views.view.documents
   module:
     - bootstrap_layouts
     - comment
@@ -186,10 +187,10 @@ third_party_settings:
                 view_mode: view_mode
               formatter:
                 type: datetime_default
-                label: hidden
+                label: inline
                 settings:
                   timezone_override: ''
-                  format_type: medium
+                  format_type: html_year
                 third_party_settings:
                   field_formatter_class:
                     class: ''
@@ -239,6 +240,21 @@ third_party_settings:
                   field_formatter_class:
                     class: ''
             weight: 4
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          03203931-b9cb-43e7-87d3-09af1cb83caa:
+            uuid: 03203931-b9cb-43e7-87d3-09af1cb83caa
+            region: right
+            configuration:
+              id: 'views_block:documents-block_7'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 1
             additional:
               context_visibility: {  }
               context_all_must_pass: 1

@@ -3,7 +3,6 @@ langcode: es
 status: true
 dependencies:
   config:
-    - core.base_field_override.node.articles_portal_web.title
     - core.entity_view_display.comment.comment_node_articles_portal_web.default
     - field.field.node.articles_portal_web.comment_node_articles_portal_web
     - field.field.node.articles_portal_web.field_constructor
@@ -30,6 +29,7 @@ dependencies:
     - field.field.node.articles_portal_web.field_subtitle
     - field.field.node.articles_portal_web.field_youtube
     - node.type.articles_portal_web
+    - views.view.content
   module:
     - bootstrap_layouts
     - comment
@@ -41,6 +41,7 @@ dependencies:
     - panelizer
     - text
     - user
+    - views
     - youtube
 third_party_settings:
   layout_builder:
@@ -179,34 +180,11 @@ third_party_settings:
                 label: hidden
                 settings:
                   timezone_override: ''
-                  format_type: medium
+                  format_type: olivero_medium
                 third_party_settings:
                   field_formatter_class:
                     class: ''
             weight: 0
-            additional:
-              context_visibility: {  }
-              context_all_must_pass: 1
-          39c0c731-9336-4108-bc85-030e3beabad1:
-            uuid: 39c0c731-9336-4108-bc85-030e3beabad1
-            region: third
-            configuration:
-              id: 'field_block:node:articles_portal_web:title'
-              label: Título
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: string
-                label: hidden
-                settings:
-                  link_to_entity: false
-                third_party_settings:
-                  field_formatter_class:
-                    class: ''
-            weight: 1
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
@@ -228,7 +206,7 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: ''
-            weight: 2
+            weight: 3
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
@@ -251,7 +229,7 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: ''
-            weight: 3
+            weight: 4
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
@@ -279,7 +257,7 @@ third_party_settings:
                     blazy: false
                   field_formatter_class:
                     class: ''
-            weight: 4
+            weight: 5
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
@@ -301,7 +279,22 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: ''
-            weight: 5
+            weight: 6
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          d756825c-0b8e-4411-928d-800c66132644:
+            uuid: d756825c-0b8e-4411-928d-800c66132644
+            region: third
+            configuration:
+              id: 'views_block:content-block_content_title'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 2
             additional:
               context_visibility: {  }
               context_all_must_pass: 1

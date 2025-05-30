@@ -19,13 +19,303 @@ dependencies:
     - field.field.node.evaluaci_n.field_sme_instrument
     - node.type.evaluaci_n
   module:
+    - bootstrap_layouts
     - comment
     - datetime
     - file
     - image
+    - layout_builder
     - options
+    - panelizer
     - text
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: bs_3col
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            left:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-4: col-sm-4
+                col-md-4: col-md-4
+                col-lg-4: col-lg-4
+              add_region_classes: 1
+              attributes: ''
+            middle:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-6: col-sm-6
+                col-md-6: col-md-6
+                col-lg-6: col-lg-6
+              add_region_classes: 1
+              attributes: ''
+            right:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-2: col-sm-2
+                col-md-2: col-md-2
+                col-lg-2: col-lg-2
+              add_region_classes: 1
+              attributes: ''
+          context_visibility: {  }
+          context_all_must_pass: 1
+        components:
+          d715c6cc-76d2-481d-a790-6272ad727541:
+            uuid: d715c6cc-76d2-481d-a790-6272ad727541
+            region: left
+            configuration:
+              id: 'field_block:node:evaluaci_n:field_list_image'
+              label: 'Imagen Listado'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: colorbox
+                label: hidden
+                settings:
+                  colorbox_image_style: ''
+                  colorbox_gallery: post
+                  colorbox_gallery_custom: ''
+                  colorbox_caption: auto
+                  colorbox_caption_custom: ''
+                  colorbox_node_style: ''
+                  colorbox_node_style_first: ''
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          c5942e8e-2a11-4b68-91ed-e357566ce5dc:
+            uuid: c5942e8e-2a11-4b68-91ed-e357566ce5dc
+            region: middle
+            configuration:
+              id: 'field_block:node:evaluaci_n:field_sme_author_org'
+              label: Autor/Entidad
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          2396a9a0-7102-4995-b166-8d1934544cea:
+            uuid: 2396a9a0-7102-4995-b166-8d1934544cea
+            region: middle
+            configuration:
+              id: 'field_block:node:evaluaci_n:field_sme_instrument'
+              label: Instrumentos
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 1
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          c3c4583b-3922-449d-a4c1-7b578145e002:
+            uuid: c3c4583b-3922-449d-a4c1-7b578145e002
+            region: middle
+            configuration:
+              id: 'field_block:node:evaluaci_n:field_sme_dictionary'
+              label: Diccionario
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: file_default
+                label: above
+                settings:
+                  use_description_as_link_text: true
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 2
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          69a772a4-e85f-4f58-804f-0ca4ece9ffee:
+            uuid: 69a772a4-e85f-4f58-804f-0ca4ece9ffee
+            region: middle
+            configuration:
+              id: 'field_block:node:evaluaci_n:field_sme_database1'
+              label: 'Base de Datos'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: file_default
+                label: above
+                settings:
+                  use_description_as_link_text: true
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 3
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          018f4c71-7330-4af5-8882-429c2d88d79e:
+            uuid: 018f4c71-7330-4af5-8882-429c2d88d79e
+            region: middle
+            configuration:
+              id: 'field_block:node:evaluaci_n:field_document'
+              label: Documento
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: file_default
+                label: above
+                settings:
+                  use_description_as_link_text: true
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 4
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          689fadc2-0039-4a27-b52a-d0bef11fea67:
+            uuid: 689fadc2-0039-4a27-b52a-d0bef11fea67
+            region: middle
+            configuration:
+              id: 'field_block:node:evaluaci_n:field_resume'
+              label: Resumen
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 5
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          a07a154d-f768-4614-a198-4262a7c7e46c:
+            uuid: a07a154d-f768-4614-a198-4262a7c7e46c
+            region: right
+            configuration:
+              id: 'field_block:node:evaluaci_n:field_file_categoria'
+              label: 'Categoría del archivo'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          862d6fef-f097-48ca-a57a-0b7124fcc5e9:
+            uuid: 862d6fef-f097-48ca-a57a-0b7124fcc5e9
+            region: right
+            configuration:
+              id: 'field_block:node:evaluaci_n:field_dae_year'
+              label: 'Año de Publicación'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: datetime_default
+                label: above
+                settings:
+                  timezone_override: ''
+                  format_type: html_year
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 1
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          db0ce4f1-b14b-431c-b611-302c655f4158:
+            uuid: db0ce4f1-b14b-431c-b611-302c655f4158
+            region: right
+            configuration:
+              id: 'field_block:node:evaluaci_n:field_file_priority'
+              label: Prioridad
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: list_default
+                label: above
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 2
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+        third_party_settings: {  }
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.evaluaci_n.default
 targetEntityType: node
 bundle: evaluaci_n
