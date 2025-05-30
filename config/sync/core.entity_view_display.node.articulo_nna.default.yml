@@ -3,6 +3,7 @@ langcode: es
 status: true
 dependencies:
   config:
+    - block_content.type.basic
     - core.entity_view_display.comment.comment_node_articulo_nna.default
     - field.field.node.articulo_nna.comment_node_articulo_nna
     - field.field.node.articulo_nna.field_date
@@ -21,15 +22,377 @@ dependencies:
     - field.field.node.articulo_nna.field_youtube
     - node.type.articulo_nna
   module:
+    - bootstrap_layouts
     - comment
     - datetime
     - file
     - image
+    - layout_builder
     - link
     - options
+    - panelizer
     - text
     - user
     - youtube
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: bs_2col
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            left:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-8: col-sm-8
+                col-md-8: col-md-8
+                col-lg-8: col-lg-8
+              add_region_classes: 1
+              attributes: ''
+            right:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-4: col-sm-4
+                col-md-4: col-md-4
+                col-lg-4: col-lg-4
+              add_region_classes: 1
+              attributes: ''
+          context_visibility: {  }
+          context_all_must_pass: 1
+        components:
+          359f042c-9d41-4796-a88f-8e0fbb8914cb:
+            uuid: 359f042c-9d41-4796-a88f-8e0fbb8914cb
+            region: left
+            configuration:
+              id: 'field_block:node:articulo_nna:field_youtube'
+              label: Youtube
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: youtube_video
+                label: hidden
+                settings:
+                  youtube_size: responsive
+                  youtube_width: ''
+                  youtube_height: ''
+                  youtube_autoplay: false
+                  youtube_mute: false
+                  youtube_loop: false
+                  youtube_controls: false
+                  youtube_autohide: false
+                  youtube_iv_load_policy: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          6ac68987-edbd-4d59-9822-2cf9af490974:
+            uuid: 6ac68987-edbd-4d59-9822-2cf9af490974
+            region: left
+            configuration:
+              id: 'field_block:node:articulo_nna:field_nna_post_image'
+              label: 'Imagen Presentación'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: colorbox
+                label: hidden
+                settings:
+                  colorbox_image_style: ''
+                  colorbox_gallery: post
+                  colorbox_gallery_custom: ''
+                  colorbox_caption: auto
+                  colorbox_caption_custom: ''
+                  colorbox_node_style: ''
+                  colorbox_node_style_first: ''
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 1
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          670c1f61-1645-4325-b424-5133a7fb1899:
+            uuid: 670c1f61-1645-4325-b424-5133a7fb1899
+            region: left
+            configuration:
+              id: 'field_block:node:articulo_nna:field_nna_audio_file'
+              label: Escucha
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: file_audio
+                label: hidden
+                settings:
+                  controls: true
+                  autoplay: false
+                  loop: false
+                  multiple_file_display_type: tags
+                third_party_settings:
+                  blazy:
+                    blazy: false
+                  field_formatter_class:
+                    class: ''
+            weight: 2
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          c5acf9ae-41ec-44f5-b5d5-72cea90073b5:
+            uuid: c5acf9ae-41ec-44f5-b5d5-72cea90073b5
+            region: left
+            configuration:
+              id: 'field_block:node:articulo_nna:field_nna_html_code'
+              label: 'Código Incrustado'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 3
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          e68d614b-80c5-4c4c-b3ba-167e4ac1fa1a:
+            uuid: e68d614b-80c5-4c4c-b3ba-167e4ac1fa1a
+            region: right
+            configuration:
+              id: 'field_block:node:articulo_nna:field_nna_post_label'
+              label: 'Label Artículo Niños'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: list_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          04d63de7-e94e-4964-9e63-803e5b721752:
+            uuid: 04d63de7-e94e-4964-9e63-803e5b721752
+            region: right
+            configuration:
+              id: 'field_block:node:articulo_nna:field_seo_title'
+              label: 'Título Presentación'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 1
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          0e96f68d-36b8-42b2-9b56-d6ef6a89c66b:
+            uuid: 0e96f68d-36b8-42b2-9b56-d6ef6a89c66b
+            region: right
+            configuration:
+              id: 'field_block:node:articulo_nna:field_introduction_text'
+              label: Introducción
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 2
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          e8adc666-2cf1-45fb-a3c9-c7bba9cc9600:
+            uuid: e8adc666-2cf1-45fb-a3c9-c7bba9cc9600
+            region: right
+            configuration:
+              id: 'field_block:node:articulo_nna:field_nna_docs'
+              label: 'Documentos para Niños'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: file_default
+                label: hidden
+                settings:
+                  use_description_as_link_text: true
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 3
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          f0712a0f-f861-4e97-87bf-ec6894ee9862:
+            uuid: f0712a0f-f861-4e97-87bf-ec6894ee9862
+            region: right
+            configuration:
+              id: 'field_block:node:articulo_nna:field_nna_link_out'
+              label: 'Enlace externo'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: link
+                label: hidden
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: '0'
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 5
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          05ee863b-1e63-4403-a506-c8217b42394d:
+            uuid: 05ee863b-1e63-4403-a506-c8217b42394d
+            region: right
+            configuration:
+              id: 'inline_block:basic'
+              label: Personalizado
+              label_display: '0'
+              provider: layout_builder
+              view_mode: full
+              context_mapping: {  }
+              block_id: 1901
+              block_revision_id: 236
+              block_serialized: null
+            weight: 4
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+        third_party_settings: {  }
+      -
+        layout_id: bs_3col
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            left:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-2: col-sm-2
+                col-md-2: col-md-2
+                col-lg-2: col-lg-2
+                visible-sm: visible-sm
+                visible-md: visible-md
+                visible-lg: visible-lg
+              add_region_classes: 1
+              attributes: ''
+            middle:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-8: col-sm-8
+                col-md-8: col-md-8
+                col-lg-8: col-lg-8
+              add_region_classes: 1
+              attributes: ''
+            right:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-2: col-sm-2
+                col-md-2: col-md-2
+                col-lg-2: col-lg-2
+                visible-sm: visible-sm
+                visible-md: visible-md
+                visible-lg: visible-lg
+              add_region_classes: 1
+              attributes: ''
+          context_visibility: {  }
+          context_all_must_pass: 1
+        components:
+          3b466fd4-17b4-4fd2-835a-d00b66f62599:
+            uuid: 3b466fd4-17b4-4fd2-835a-d00b66f62599
+            region: middle
+            configuration:
+              id: 'field_block:node:articulo_nna:field_nna_content'
+              label: 'Contenido para Niños'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+        third_party_settings: {  }
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.articulo_nna.default
 targetEntityType: node
 bundle: articulo_nna

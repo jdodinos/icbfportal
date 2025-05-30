@@ -24,15 +24,247 @@ dependencies:
     - field.field.node.articles_iin.field_seccion_micrositio_xxii
     - field.field.node.articles_iin.field_youtube
     - node.type.articles_iin
+    - views.view.content
   module:
+    - bootstrap_layouts
     - comment
     - datetime
     - file
     - image
+    - layout_builder
     - options
+    - panelizer
     - text
     - user
+    - views
     - youtube
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: bs_2col
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            left:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-4: col-sm-4
+                col-md-4: col-md-4
+                col-lg-4: col-lg-4
+              add_region_classes: 1
+              attributes: ''
+            right:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-8: col-sm-8
+                col-md-8: col-md-8
+                col-lg-8: col-lg-8
+              add_region_classes: 1
+              attributes: ''
+          context_visibility: {  }
+          context_all_must_pass: 1
+        components:
+          a25a477c-fd1a-4512-a3d5-befc7c28cdc0:
+            uuid: a25a477c-fd1a-4512-a3d5-befc7c28cdc0
+            region: left
+            configuration:
+              id: 'field_block:node:articles_iin:field_lugar'
+              label: Lugar
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          d34aa28f-ce7d-47f1-8f01-a59f38bdabef:
+            uuid: d34aa28f-ce7d-47f1-8f01-a59f38bdabef
+            region: right
+            configuration:
+              id: 'field_block:node:articles_iin:field_date'
+              label: Fecha
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: datetime_default
+                label: hidden
+                settings:
+                  timezone_override: ''
+                  format_type: olivero_medium
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+        third_party_settings: {  }
+      -
+        layout_id: bs_1col
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            main:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-12: col-sm-12
+                col-md-12: col-md-12
+                col-lg-12: col-lg-12
+              add_region_classes: 1
+              attributes: ''
+          context_visibility: {  }
+          context_all_must_pass: 1
+        components:
+          4404830d-1e6d-48ad-8060-224ff1467c44:
+            uuid: 4404830d-1e6d-48ad-8060-224ff1467c44
+            region: main
+            configuration:
+              id: 'field_block:node:articles_iin:field_profile_photo1'
+              label: 'Imagen de Perfil'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          5b598685-62b7-4b14-bfa6-c8b9ecb3b454:
+            uuid: 5b598685-62b7-4b14-bfa6-c8b9ecb3b454
+            region: main
+            configuration:
+              id: 'views_block:content-block_content_title'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 1
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          5f96ce71-1ab0-48a9-a4b9-668aae7a884d:
+            uuid: 5f96ce71-1ab0-48a9-a4b9-668aae7a884d
+            region: main
+            configuration:
+              id: 'field_block:node:articles_iin:field_list_image'
+              label: 'Imagen Listado'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 2
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          f64b606a-37cc-4934-a875-7c20a2e02568:
+            uuid: f64b606a-37cc-4934-a875-7c20a2e02568
+            region: main
+            configuration:
+              id: 'field_block:node:articles_iin:field_resume'
+              label: Resumen
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 3
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          4f49e97a-f49f-48d9-bd7c-78a162c5c634:
+            uuid: 4f49e97a-f49f-48d9-bd7c-78a162c5c634
+            region: main
+            configuration:
+              id: 'field_block:node:articles_iin:field_content_article'
+              label: 'Contenido Artículo'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 4
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+        third_party_settings: {  }
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.articles_iin.default
 targetEntityType: node
 bundle: articles_iin
