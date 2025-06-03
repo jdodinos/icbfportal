@@ -2,16 +2,12 @@ uuid: 50f1b73f-f9bb-4fe6-ba9b-de2bd273345f
 langcode: es
 status: true
 dependencies:
-  content:
-    - 'block_content:footer:db4db137-03df-4c9d-b3e5-c85771eb2585'
-  module:
-    - block_content
   theme:
     - icbf
 id: icbf_misionaleshome1519
 theme: icbf
 region: hidden
-weight: 0
+weight: 10
 provider: null
 plugin: 'block_content:db4db137-03df-4c9d-b3e5-c85771eb2585'
 settings:

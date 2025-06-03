@@ -1,0 +1,29 @@
+uuid: 1f6a7eb7-0bf3-47f9-af29-a310b30e4294
+langcode: es
+status: true
+dependencies:
+  config:
+    - page_manager.page.node_view
+  module:
+    - node
+id: node_view-layout_builder-0
+label: ' Puntos de Atención GRID'
+weight: 0
+variant: layout_builder
+variant_settings:
+  id: layout_builder
+  label: null
+  weight: 0
+  uuid: 0da0c0c4-6fd2-4e15-ab4f-a12df3b17446
+  sections: {  }
+page: node_view
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      sede_local: sede_local
+selection_logic: and
+static_context: {  }

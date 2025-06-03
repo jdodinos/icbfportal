@@ -6,7 +6,7 @@ dependencies:
     - page_manager.page.mesas_p_blicas
     - views.view.calendario_rendici_n
   content:
-    - 'block_content:footer:23b9b7d1-5a99-4afb-bcda-02b6fbef4c73'
+    - 'block_content:footer:756d901f-61d2-4aa0-add5-7bf5d2af4f39'
   module:
     - block_content
     - bootstrap_layouts
@@ -99,11 +99,11 @@ variant_settings:
             add_region_classes: 1
             attributes: ''
       components:
-        44a59168-6fb8-4ee1-ad85-94125dd013fc:
-          uuid: 44a59168-6fb8-4ee1-ad85-94125dd013fc
+        a9c97b14-8e80-4cea-b320-f77ae9be1b5a:
+          uuid: a9c97b14-8e80-4cea-b320-f77ae9be1b5a
           region: main
           configuration:
-            id: 'block_content:23b9b7d1-5a99-4afb-bcda-02b6fbef4c73'
+            id: 'block_content:756d901f-61d2-4aa0-add5-7bf5d2af4f39'
             label: 'Mapa de Colombia - Calendario MP'
             label_display: '0'
             provider: block_content

@@ -2,10 +2,7 @@ uuid: e38f71da-8a5d-4ee9-a6f2-1270f4860d50
 langcode: es
 status: true
 dependencies:
-  content:
-    - 'block_content:basic:6b54a2b3-38bc-4776-a964-74eb188a19f0'
   module:
-    - block_content
     - system
   theme:
     - icbf

@@ -3,9 +3,9 @@ langcode: es
 status: true
 dependencies:
   content:
-    - 'block_content:basic:6e5f4451-dbb9-4139-805b-f967b76f4efc'
-    - 'block_content:basic:8b6d014e-1a82-4784-87fa-8a2987a922bd'
-    - 'block_content:basic:9abb4dd8-cbd6-44ff-95bf-f6be4cbdf4c4'
+    - 'block_content:basic:5d3f5ce3-f769-41c5-80b2-ae95afedd805'
+    - 'block_content:basic:6043c59e-ba61-4362-a43d-92fff1944815'
+    - 'block_content:basic:e861f943-0a54-4fd1-8cab-cb56b01d3e84'
   module:
     - block_content
     - system
@@ -27,15 +27,15 @@ reactions:
     id: blocks
     uuid: 63e57a52-f88d-4be6-94cc-7cbf2b6b4416
     blocks:
-      8af54a9b-1a69-42e9-baa9-0f1610c4e4c8:
-        uuid: 8af54a9b-1a69-42e9-baa9-0f1610c4e4c8
-        id: 'block_content:9abb4dd8-cbd6-44ff-95bf-f6be4cbdf4c4'
+      0f5ee50b-1f38-44ca-bacc-3379ec04ff88:
+        uuid: 0f5ee50b-1f38-44ca-bacc-3379ec04ff88
+        id: 'block_content:6043c59e-ba61-4362-a43d-92fff1944815'
         label: 'Resultados de búsqueda ICBF'
         provider: block_content
         label_display: '0'
         region: content
         weight: '-1'
-        custom_id: block_content_9abb4dd8_cbd6_44ff_95bf_f6be4cbdf4c4
+        custom_id: block_content_6043c59e_ba61_4362_a43d_92fff1944815
         theme: icbf
         css_class: ''
         unique: 0
@@ -45,15 +45,15 @@ reactions:
         info: ''
         view_mode: full
         third_party_settings: {  }
-      57abd6ba-4061-4592-b386-de69913f07b9:
-        uuid: 57abd6ba-4061-4592-b386-de69913f07b9
-        id: 'block_content:6e5f4451-dbb9-4139-805b-f967b76f4efc'
+      e2885189-4c9a-4a75-b853-eee6575efae6:
+        uuid: e2885189-4c9a-4a75-b853-eee6575efae6
+        id: 'block_content:e861f943-0a54-4fd1-8cab-cb56b01d3e84'
         label: 'Encabezado redes sociales'
         provider: block_content
         label_display: '0'
         region: content
         weight: '0'
-        custom_id: block_content_6e5f4451_dbb9_4139_805b_f967b76f4efc
+        custom_id: block_content_e861f943_0a54_4fd1_8cab_cb56b01d3e84
         theme: icbf
         css_class: ''
         unique: 0
@@ -63,15 +63,15 @@ reactions:
         info: ''
         view_mode: full
         third_party_settings: {  }
-      ed91715d-4af7-4428-998f-671ae17e2804:
-        uuid: ed91715d-4af7-4428-998f-671ae17e2804
-        id: 'block_content:8b6d014e-1a82-4784-87fa-8a2987a922bd'
+      aa5cb696-016e-42e8-9152-a4643a4cd2af:
+        uuid: aa5cb696-016e-42e8-9152-a4643a4cd2af
+        id: 'block_content:5d3f5ce3-f769-41c5-80b2-ae95afedd805'
         label: 'Footer NNA'
         provider: block_content
         label_display: '0'
         region: content
         weight: '1'
-        custom_id: block_content_8b6d014e_1a82_4784_87fa_8a2987a922bd
+        custom_id: block_content_5d3f5ce3_f769_41c5_80b2_ae95afedd805
         theme: icbf
         css_class: ''
         unique: 0

@@ -3,9 +3,9 @@ langcode: es
 status: true
 dependencies:
   content:
-    - 'block_content:basic:5087fe76-c2c6-4f68-904e-796aa99a91e3'
-    - 'block_content:footer:7e4a907e-8bef-47b6-91cf-7018b89141b4'
-    - 'block_content:footer:b1e92a3c-ac1e-45d5-8476-efd12a4429c2'
+    - 'block_content:basic:306d71b1-8c6a-44b6-9c63-41eecd10a216'
+    - 'block_content:footer:69c23059-c3a4-4ca7-9972-e9ff05938bea'
+    - 'block_content:footer:c38487b6-37ba-41da-ad95-171ac4ee6496'
   module:
     - block_content
     - system
@@ -28,15 +28,15 @@ reactions:
     id: blocks
     uuid: fd59b909-128d-4c12-94bc-9b81fd569104
     blocks:
-      f997e282-9e44-4715-be79-d4c5440a554f:
-        uuid: f997e282-9e44-4715-be79-d4c5440a554f
-        id: 'block_content:7e4a907e-8bef-47b6-91cf-7018b89141b4'
+      4f5549cb-4f4c-49b3-9b2e-f4de92cdbe77:
+        uuid: 4f5549cb-4f4c-49b3-9b2e-f4de92cdbe77
+        id: 'block_content:c38487b6-37ba-41da-ad95-171ac4ee6496'
         label: 'Top Papás'
         provider: block_content
         label_display: '0'
         region: header
         weight: '-1'
-        custom_id: block_content_7e4a907e_8bef_47b6_91cf_7018b89141b4
+        custom_id: block_content_c38487b6_37ba_41da_ad95_171ac4ee6496
         theme: icbf
         css_class: ''
         unique: 0
@@ -46,44 +46,8 @@ reactions:
         info: ''
         view_mode: full
         third_party_settings: {  }
-      04680245-61ac-43ef-9d90-ce47841af2a0:
-        uuid: 04680245-61ac-43ef-9d90-ce47841af2a0
-        id: 'block_content:b1e92a3c-ac1e-45d5-8476-efd12a4429c2'
-        label: 'Footer Links Familias'
-        provider: block_content
-        label_display: '0'
-        region: footer
-        weight: '0'
-        custom_id: block_content_b1e92a3c_ac1e_45d5_8476_efd12a4429c2
-        theme: icbf
-        css_class: ''
-        unique: 0
-        context_id: para_papas
-        context_mapping: {  }
-        status: true
-        info: ''
-        view_mode: full
-        third_party_settings: {  }
-      d12e4a56-f00e-46bf-bbd1-ef242a9d9f83:
-        uuid: d12e4a56-f00e-46bf-bbd1-ef242a9d9f83
-        id: 'block_content:5087fe76-c2c6-4f68-904e-796aa99a91e3'
-        label: 'Footer GOVCO'
-        provider: block_content
-        label_display: '0'
-        region: footer
-        weight: '0'
-        custom_id: block_content_5087fe76_c2c6_4f68_904e_796aa99a91e3
-        theme: icbf
-        css_class: ''
-        unique: 0
-        context_id: para_papas
-        context_mapping: {  }
-        status: true
-        info: ''
-        view_mode: full
-        third_party_settings: {  }
-      6c943a0d-0f62-4dc9-9b98-105105a1ce08:
-        uuid: 6c943a0d-0f62-4dc9-9b98-105105a1ce08
+      6b007558-b459-4e47-a90f-8d5f3ab70211:
+        uuid: 6b007558-b459-4e47-a90f-8d5f3ab70211
         id: 'tb_megamenu_menu_block:mgm-5d3f4fe8cd42b'
         label: 'Menu familia'
         provider: tb_megamenu
@@ -96,6 +60,42 @@ reactions:
         unique: 0
         context_id: para_papas
         context_mapping: {  }
+        third_party_settings: {  }
+      c706cb3a-6f91-4fb1-ac58-1804521e7cbf:
+        uuid: c706cb3a-6f91-4fb1-ac58-1804521e7cbf
+        id: 'block_content:306d71b1-8c6a-44b6-9c63-41eecd10a216'
+        label: 'Footer GOVCO'
+        provider: block_content
+        label_display: '0'
+        region: footer
+        weight: '0'
+        custom_id: block_content_306d71b1_8c6a_44b6_9c63_41eecd10a216
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: para_papas
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+      46210f02-8481-4f4e-a32e-85bcac530e0f:
+        uuid: 46210f02-8481-4f4e-a32e-85bcac530e0f
+        id: 'block_content:69c23059-c3a4-4ca7-9972-e9ff05938bea'
+        label: 'Footer Links Familias'
+        provider: block_content
+        label_display: '0'
+        region: footer
+        weight: '0'
+        custom_id: block_content_69c23059_c3a4_4ca7_9972_e9ff05938bea
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: para_papas
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
         third_party_settings: {  }
     include_default_blocks: 0
     saved: false

@@ -1,0 +1,54 @@
+uuid: c1573ea4-1da4-42c6-a070-ca4ae7f59d97
+langcode: es
+status: true
+dependencies: {  }
+name: paragraph_summoned
+label: 'paragraph summoned validation'
+entity_type: paragraph
+bundle: summoned
+field_validation_rules:
+  f709a00a-ae0b-4aed-8520-e01b7463565e:
+    id: regex_field_validation_rule
+    title: citizen_id
+    data:
+      setting: '/^[0-9]{0,20}$/'
+    weight: 1
+    uuid: f709a00a-ae0b-4aed-8520-e01b7463565e
+    field_name: field_citizen_id
+    column: value
+    error_message: 'El campo [current-field:field-name] del citado(a) no debe ser mayor a 20 caracteres y sólo acepta números'
+    roles: {  }
+    condition:
+      field: ''
+      operator: ''
+      value: ''
+  9e7b2868-e044-41f1-9baa-26cf4a956cee:
+    id: regex_field_validation_rule
+    title: parentesco_otro
+    data:
+      setting: '/^[ÑñA-zÀ-ÿ\s]{1,250}$/'
+    weight: 2
+    uuid: 9e7b2868-e044-41f1-9baa-26cf4a956cee
+    field_name: field_other_kinship
+    column: value
+    error_message: 'El campo [current-field:field-name] solo acepta caracteres de la A a la Z'
+    roles: {  }
+    condition:
+      field: ''
+      operator: ''
+      value: ''
+  8b84203b-a2bf-40f5-8876-a2f047aaf2a5:
+    id: regex_field_validation_rule
+    title: summoned_name
+    data:
+      setting: '/^[ÑñA-zÀ-ÿ\s]{1,250}$/'
+    weight: 3
+    uuid: 8b84203b-a2bf-40f5-8876-a2f047aaf2a5
+    field_name: field_full_name
+    column: value
+    error_message: 'El campo [current-field:field-name] solo acepta caracteres de la A a la Z y máximo 250 caracteres'
+    roles: {  }
+    condition:
+      field: ''
+      operator: ''
+      value: ''

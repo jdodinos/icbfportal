@@ -1,0 +1,25 @@
+uuid: 099154c9-317b-4ac5-9ccb-65086c36c04d
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:502c203e-f29a-41f3-ba22-586e5d47dd68'
+  module:
+    - block_content
+  theme:
+    - icbf
+id: icbf_blockmegamenu20atencionyserviciosbralaciudadania100
+theme: icbf
+region: hidden
+weight: -8
+provider: null
+plugin: 'block_content:502c203e-f29a-41f3-ba22-586e5d47dd68'
+settings:
+  id: 'block_content:502c203e-f29a-41f3-ba22-586e5d47dd68'
+  label: 'Block megamenu - 20 Atención y Servicios<br>a la Ciudadanía 1 0 0'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

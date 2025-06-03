@@ -308,7 +308,7 @@ for mig_key in "${migrationskey[@]}"; do
     migrationRollback "$mig_key"
   elif [ "$1" = "import" ]; then
     migrationReset "$mig_key"
-    migrationRollback "$mig_key"
+    # migrationRollback "$mig_key"
     migrationImport "$mig_key"
     migrationStatus "$mig_key"
   elif [ "$1" = "status" ]; then

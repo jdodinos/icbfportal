@@ -6,10 +6,7 @@ dependencies:
     - page_manager.page.panel_de_control_defensor
     - views.view.citaciones
     - views.view.usuarios
-  content:
-    - 'block_content:footer:4b0fab58-793e-41f9-8fe6-11898b40dc31'
   module:
-    - block_content
     - bootstrap_layouts
     - views
 id: panel_de_control_defensor-layout_builder-0
@@ -40,21 +37,7 @@ variant_settings:
               col-sm-12: col-sm-12
             add_region_classes: 1
             attributes: ''
-      components:
-        bfedfb57-35e6-42f0-9383-65535531f330:
-          uuid: bfedfb57-35e6-42f0-9383-65535531f330
-          region: main
-          configuration:
-            id: 'block_content:4b0fab58-793e-41f9-8fe6-11898b40dc31'
-            label: 'Menú Panel de Control Citaciones'
-            label_display: '0'
-            provider: block_content
-            status: true
-            info: ''
-            view_mode: full
-            context_mapping: {  }
-          weight: 0
-          additional: {  }
+      components: {  }
       third_party_settings: {  }
     -
       layout_id: bs_2col
@@ -71,15 +54,23 @@ variant_settings:
           left:
             wrapper: div
             classes:
+              col-xs-12: col-xs-12
               col-sm-4: col-sm-4
+              col-md-4: col-md-4
+              col-lg-4: col-lg-4
             add_region_classes: 1
             attributes: ''
           right:
             wrapper: div
             classes:
+              col-xs-12: col-xs-12
               col-sm-8: col-sm-8
+              col-md-8: col-md-8
+              col-lg-8: col-lg-8
             add_region_classes: 1
             attributes: ''
+        context_visibility: {  }
+        context_all_must_pass: 1
       components:
         9dada113-c8c6-4157-9da0-4bfe109e334e:
           uuid: 9dada113-c8c6-4157-9da0-4bfe109e334e

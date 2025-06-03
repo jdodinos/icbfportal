@@ -1,0 +1,25 @@
+uuid: c02e77b5-9c03-4f7c-bbba-d8e599c4a116
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:6beb63b0-0da6-4be9-a7c8-3dee52ecdd8a'
+  module:
+    - block_content
+  theme:
+    - icbf
+id: icbf_blockmegamenu20elinstituto011
+theme: icbf
+region: hidden
+weight: -16
+provider: null
+plugin: 'block_content:6beb63b0-0da6-4be9-a7c8-3dee52ecdd8a'
+settings:
+  id: 'block_content:6beb63b0-0da6-4be9-a7c8-3dee52ecdd8a'
+  label: 'Block megamenu - 20 El Instituto 0 1 1'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

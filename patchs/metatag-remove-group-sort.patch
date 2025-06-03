@@ -1,143 +1,39 @@
-diff --git a/metatag.services.yml b/metatag.services.yml
-index 487d7367..ccf1bca7 100644
---- a/metatag.services.yml
-+++ b/metatag.services.yml
-@@ -26,6 +26,7 @@ services:
-       - '@request_stack'
-       - '@language_manager'
-       - '@config.factory'
-+      - '@cache.default'
- 
-   metatag.trimmer:
-     class: Drupal\metatag\MetatagTrimmer
 diff --git a/src/MetatagManager.php b/src/MetatagManager.php
-index 2d84bcb4..07fdca48 100644
+index 2d84bcb4..7a6b4983 100644
 --- a/src/MetatagManager.php
 +++ b/src/MetatagManager.php
-@@ -3,6 +3,7 @@
- namespace Drupal\metatag;
- 
- use Drupal\Component\Render\PlainTextOutput;
-+use Drupal\Core\Cache\CacheBackendInterface;
- use Drupal\Core\Config\ConfigFactoryInterface;
- use Drupal\Core\Entity\ContentEntityInterface;
- use Drupal\Core\Entity\EntityTypeManagerInterface;
-@@ -97,6 +98,11 @@ class MetatagManager implements MetatagManagerInterface {
-    */
-   protected $languageManager;
- 
-+  /**
-+   * @var \Drupal\Core\Cache\CacheBackendInterface
-+   */
-+  protected $cache;
+@@ -276,20 +276,20 @@ class MetatagManager implements MetatagManagerInterface {
+
+     // Sort the tags based on the group.
+     $sorted_tags = [];
+-    foreach ($this->sortedGroups() as $group_name => $group) {
+-      $tag_weight = $group['weight'] * 100;
+-
+-      // First, sort the tags within the group according to the original sort
+-      // order provided by the tag's definition.
+-      uasort($tags[$group_name], [
+-        'Drupal\Component\Utility\SortArray',
+-        'sortByWeightElement',
+-      ]);
+-      foreach ($tags[$group_name] as $tag_name => $tag_info) {
+-        $tag_info['weight'] = $tag_weight++;
+-        $sorted_tags[$tag_name] = $tag_info;
+-      }
+-    }
++    // foreach ($this->sortedGroups() as $group_name => $group) {
++    //   $tag_weight = $group['weight'] * 100;
 +
-   /**
-    * Caches processed strings, keyed by tag name.
-    *
-@@ -139,6 +145,7 @@ class MetatagManager implements MetatagManagerInterface {
-     RequestStack $requestStack,
-     LanguageManagerInterface $languageManager,
-     ConfigFactoryInterface $config_factory,
-+    CacheBackendInterface $cache,
-   ) {
-     $this->groupPluginManager = $groupPluginManager;
-     $this->tagPluginManager = $tagPluginManager;
-@@ -150,6 +157,7 @@ class MetatagManager implements MetatagManagerInterface {
-     $this->requestStack = $requestStack;
-     $this->languageManager = $languageManager;
-     $this->configFactory = $config_factory;
-+    $this->cache = $cache;
-   }
- 
-   /**
-@@ -265,8 +273,13 @@ class MetatagManager implements MetatagManagerInterface {
-    * {@inheritdoc}
-    */
-   public function sortedTags(): array {
--    $metatag_tags = $this->tagDefinitions();
-+    $cid = 'metatag_sourted_tags';
-+    // Check if the cache is available.
-+    if ($cache = $this->cache->get($cid)) {
-+      return $cache->data;
-+    }
- 
-+    $metatag_tags = $this->tagDefinitions();
-     // Pull the data from the definitions into a new array.
-     $tags = [];
-     foreach ($metatag_tags as $tag_name => $tag_info) {
-@@ -291,6 +304,7 @@ class MetatagManager implements MetatagManagerInterface {
-       }
-     }
- 
-+    $this->cache->set($cid, $sorted_tags, time() + 3600);
++    //   // First, sort the tags within the group according to the original sort
++    //   // order provided by the tag's definition.
++    //   uasort($tags[$group_name], [
++    //     'Drupal\Component\Utility\SortArray',
++    //     'sortByWeightElement',
++    //   ]);
++    //   foreach ($tags[$group_name] as $tag_name => $tag_info) {
++    //     $tag_info['weight'] = $tag_weight++;
++    //     $sorted_tags[$tag_name] = $tag_info;
++    //   }
++    // }
+
      return $sorted_tags;
    }
- 
-@@ -672,42 +686,41 @@ class MetatagManager implements MetatagManagerInterface {
-     $entity_identifier = '_none';
-     // Use the entity's language code, if one is defined.
-     $langcode = NULL;
-+
-     if ($entity) {
-       $langcode = $entity->language()->getId();
-       $entity_identifier = $entity->getEntityTypeId() . ':' . ($entity->uuid() ?? $entity->id()) . ':' . $langcode;
--    }
-+      if (!isset($this->processedTokenCache[$entity_identifier])) {
-+        $metatag_tags = $this->sortedTags();
-+        // Each element of the $values array is a tag with the tag plugin name as
-+        // the key.
-+        foreach ($tags as $tag_name => $value) {
-+          // Check to ensure there is a matching plugin.
-+          if (isset($metatag_tags[$tag_name])) {
-+            // Get an instance of the plugin.
-+            $tag = $this->tagPluginManager->createInstance($tag_name);
- 
--    if (!isset($this->processedTokenCache[$entity_identifier])) {
--      $metatag_tags = $this->sortedTags();
--
--      // Each element of the $values array is a tag with the tag plugin name as
--      // the key.
--      foreach ($tags as $tag_name => $value) {
--        // Check to ensure there is a matching plugin.
--        if (isset($metatag_tags[$tag_name])) {
--          // Get an instance of the plugin.
--          $tag = $this->tagPluginManager->createInstance($tag_name);
--
--          // Render any tokens in the value.
--          $token_replacements = [];
--          if ($entity) {
--            // @todo This needs a better way of discovering the context.
--            if ($entity instanceof ViewEntityInterface) {
--              // Views tokens require the ViewExecutable, not the config entity.
--              // @todo Can we move this into metatag_views somehow?
--              $token_replacements = ['view' => $entity->getExecutable()];
--            }
--            elseif ($entity instanceof ContentEntityInterface) {
--              $token_replacements = [$entity->getEntityTypeId() => $entity];
-+            // Render any tokens in the value.
-+            $token_replacements = [];
-+            if ($entity) {
-+              // @todo This needs a better way of discovering the context.
-+              if ($entity instanceof ViewEntityInterface) {
-+                // Views tokens require the ViewExecutable, not the config entity.
-+                // @todo Can we move this into metatag_views somehow?
-+                $token_replacements = ['view' => $entity->getExecutable()];
-+              }
-+              elseif ($entity instanceof ContentEntityInterface) {
-+                $token_replacements = [$entity->getEntityTypeId() => $entity];
-+              }
-             }
-+            $processed_value = $this->processTagValue($tag, $value, $token_replacements, TRUE, $langcode);
-+            $this->processedTokenCache[$entity_identifier][$tag_name] = $tag->multiple() ? explode($tag->getSeparator(), $processed_value) : $processed_value;
-           }
--          $processed_value = $this->processTagValue($tag, $value, $token_replacements, TRUE, $langcode);
--          $this->processedTokenCache[$entity_identifier][$tag_name] = $tag->multiple() ? explode($tag->getSeparator(), $processed_value) : $processed_value;
-         }
-       }
-     }
- 
--    return $this->processedTokenCache[$entity_identifier];
-+    return $this->processedTokenCache[$entity_identifier] ?? [];
-   }
- 
-   /**
