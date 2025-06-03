@@ -8,6 +8,7 @@ dependencies:
     - field.storage.node.field_list_image
     - field.storage.node.field_location
     - field.storage.node.field_lugar
+    - field.storage.node.field_section_tag
     - field.storage.node.field_youtube
     - image.style.carousel_noticias_home
     - image.style.medium
@@ -703,8 +704,10 @@ display:
         groups:
           1: AND
       defaults:
+        use_ajax: false
         filters: false
         filter_groups: false
+      use_ajax: true
       display_description: ''
       display_extenders:
         metatag_display_extender:
@@ -2009,6 +2012,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           fields:
+            - field_section_tag
             - field_lugar
             - field_date
             - title
@@ -2017,6 +2021,69 @@ display:
           classes: ''
           collapsible: true
           collapsed: false
+        field_section_tag:
+          id: field_section_tag
+          table: node__field_section_tag
+          field: field_section_tag
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         field_lugar:
           id: field_lugar
           table: node__field_lugar
@@ -2245,6 +2312,45 @@ display:
             field_identifier: ''
           exposed: false
           granularity: second
+      arguments:
+        field_section_tag_target_id:
+          id: field_section_tag_target_id
+          table: node__field_section_tag
+          field: field_section_tag_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: entity_target_id
+          default_action: 'not found'
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: taxonomy_tid
+          default_argument_options:
+            term_page: '0'
+            node: false
+            limit: false
+            vids: {  }
+            anyall: ','
+          summary_options:
+            base_path: ''
+            count: true
+            override: false
+            items_per_page: 25
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          not: false
       filters:
         type:
           id: type
@@ -2361,14 +2467,17 @@ display:
           hide_empty: false
       defaults:
         css_class: false
+        use_ajax: false
         pager: false
         style: false
         row: false
         fields: false
         sorts: false
+        arguments: false
         filters: false
         filter_groups: false
       css_class: ''
+      use_ajax: true
       display_description: ''
       display_extenders:
         metatag_display_extender:
@@ -2379,11 +2488,13 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - 'user.node_grants:view'
       tags:
         - 'config:field.storage.node.field_date'
         - 'config:field.storage.node.field_list_image'
         - 'config:field.storage.node.field_lugar'
+        - 'config:field.storage.node.field_section_tag'
         - 'config:field.storage.node.field_youtube'
   block_6:
     id: block_6
