@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --style=compressed dist/scss:dist/css",
-    "prefix": "npm run sass && postcss dist/css/**/*.css --use=autoprefixer --dir dist/css --map",
-    "build": "onchange \"dist/scss/**/*.scss\" -- npm run prefix"
+    "prefix": "postcss dist/css/**/*.css --use=autoprefixer --dir dist/css --map",
+    "build": "npm run sass && npm run prefix",
+    "watch": "onchange \"dist/scss/**/*.scss\" -- npm run build"
   },
   "browserslist": [
     "> 1%",

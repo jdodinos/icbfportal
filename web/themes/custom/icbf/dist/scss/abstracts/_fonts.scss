@@ -3,15 +3,24 @@ $fonts: "./../assets/fonts" !default;
 @font-face {
   font-family: "montserrat";
   src: url("./../assets/fonts/montserrat/Montserrat-Medium.ttf");
-  font-weight: normal;
+  font-weight: 500;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "montserrat";
+  src: url("./../assets/fonts/montserrat/Montserrat-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
 @font-face {
   font-family: "montserrat-regular";
   src: url("./../assets/fonts/montserrat/Montserrat-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Asap";
   src: url("./../assets/fonts/montserrat/Asap-Italic.ttf");

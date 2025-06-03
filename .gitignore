@@ -8,6 +8,8 @@ web/profiles/contrib/
 web/robots
 
 # Ignore sensitive information
+web/sites/default/services.local.yml
+web/sites/default/settings.local.php
 
 # Ignore Drupal's file directory
 web/sites/*/files
