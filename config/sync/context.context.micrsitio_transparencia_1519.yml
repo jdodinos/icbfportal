@@ -1,0 +1,48 @@
+uuid: b5a7a17b-75e6-428b-b8ad-cb78040f1232
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:0d23a974-182d-4b82-b340-7f871db4afd5'
+  module:
+    - block_content
+    - system
+label: micrsitio_transparencia_1519
+name: micrsitio_transparencia_1519
+group: 'Micrositio Transparencia 1519'
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: bf933ce5-2e46-415e-87b0-37a9d23960a6
+    context_mapping: {  }
+    pages: "/transparencia-y-acceso-informacion-publica-0\r\n/transparencia-y-acceso-informacion-publica/contratacion\r\n/transparencia-y-acceso-informacion-publica/datos-abiertos\r\n/transparencia-y-acceso-informacion-publica/informacion-de-la-entidad\r\n/transparencia-y-acceso-informacion-publica/informacion-especifica-grupos-interes\r\n/transparencia-y-acceso-informacion-publica/normativa\r\n/transparencia-y-acceso-informacion-publica/participa\r\n/transparencia-y-acceso-informacion-publica/planeacion-presupuesto-e-informes\r\n/transparencia-y-acceso-informacion-publica/reporte-informacion-especifica-entidad\r\n/transparencia-y-acceso-informacion-publica/tramites"
+reactions:
+  blocks:
+    id: blocks
+    uuid: 12cd0e7b-cd51-4fc8-8887-f1841c7758f9
+    blocks:
+      87978c1e-81bb-460e-9b68-d1f50c3c0fcd:
+        uuid: 87978c1e-81bb-460e-9b68-d1f50c3c0fcd
+        id: 'block_content:0d23a974-182d-4b82-b340-7f871db4afd5'
+        label: 'Titular Transparencia 1519'
+        provider: block_content
+        label_display: '0'
+        region: content
+        weight: '0'
+        custom_id: block_content_0d23a974_182d_4b82_b340_7f871db4afd5
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: micrsitio_transparencia_1519
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+    include_default_blocks: 1
+    saved: false
+weight: 0

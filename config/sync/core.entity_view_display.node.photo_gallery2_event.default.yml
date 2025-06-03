@@ -19,13 +19,183 @@ dependencies:
     - field.field.node.photo_gallery2_event.field_section_tag
     - field.field.node.photo_gallery2_event.field_video_02
     - node.type.photo_gallery2_event
+    - views.view.content
   module:
+    - bootstrap_layouts
     - comment
     - datetime
     - image
+    - layout_builder
+    - layout_discovery
     - options
+    - panelizer
     - text
     - user
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: bs_2col
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            left:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-8: col-sm-8
+                col-md-8: col-md-8
+                col-lg-8: col-lg-8
+              add_region_classes: 1
+              attributes: ''
+            right:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-4: col-sm-4
+                col-md-4: col-md-4
+                col-lg-4: col-lg-4
+              add_region_classes: 1
+              attributes: ''
+          context_visibility: {  }
+          context_all_must_pass: 1
+        components:
+          09b36113-e3b6-483f-8e50-9c2b134bc2cb:
+            uuid: 09b36113-e3b6-483f-8e50-9c2b134bc2cb
+            region: left
+            configuration:
+              id: 'field_block:node:photo_gallery2_event:field_photo'
+              label: 'Fotografía Portada'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          491b1310-95e7-456e-a729-216157765ebe:
+            uuid: 491b1310-95e7-456e-a729-216157765ebe
+            region: right
+            configuration:
+              id: 'field_block:node:photo_gallery2_event:field_resume'
+              label: Resumen
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 1
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          370b8135-13c7-42a0-a765-40ff14ce43f1:
+            uuid: 370b8135-13c7-42a0-a765-40ff14ce43f1
+            region: right
+            configuration:
+              id: 'field_block:node:photo_gallery2_event:field_video_02'
+              label: Video
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 2
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          3295a56c-798b-442a-9fb0-53eb8b7d7ec9:
+            uuid: 3295a56c-798b-442a-9fb0-53eb8b7d7ec9
+            region: right
+            configuration:
+              id: 'views_block:content-block_content_title'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          0fc026f2-57d1-4df9-833b-a82c2d7faae9:
+            uuid: 0fc026f2-57d1-4df9-833b-a82c2d7faae9
+            region: content
+            configuration:
+              id: 'field_block:node:photo_gallery2_event:field_images_gallery_event'
+              label: 'Imágenes de Galería'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: colorbox
+                label: hidden
+                settings:
+                  colorbox_image_style: ''
+                  colorbox_gallery: post
+                  colorbox_gallery_custom: ''
+                  colorbox_caption: auto
+                  colorbox_caption_custom: ''
+                  colorbox_node_style: ''
+                  colorbox_node_style_first: ''
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+        third_party_settings: {  }
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.photo_gallery2_event.default
 targetEntityType: node
 bundle: photo_gallery2_event

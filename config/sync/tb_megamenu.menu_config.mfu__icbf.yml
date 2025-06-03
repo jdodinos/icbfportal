@@ -1,0 +1,13 @@
+uuid: a67d9566-ba35-4194-9a1e-03c5405b5d8d
+langcode: es
+status: true
+dependencies:
+  theme:
+    - icbf
+  menu:
+    - mfu
+id: mfu__icbf
+menu: mfu
+theme: icbf
+block_config: '[]'
+menu_config: '[]'

@@ -1,0 +1,20 @@
+uuid: f76df2ee-a8b5-42b7-be53-7c555e4e8bfb
+langcode: es
+status: true
+dependencies:
+  theme:
+    - icbf
+id: icbf_pestanas
+theme: icbf
+region: content
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Pestañas
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

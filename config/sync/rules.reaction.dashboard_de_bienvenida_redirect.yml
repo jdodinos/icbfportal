@@ -1,5 +1,5 @@
 uuid: 4dc454a2-752d-43ee-ab1a-ccac755ae7ec
-langcode: en
+langcode: es
 status: true
 dependencies: {  }
 id: dashboard_de_bienvenida_redirect
@@ -27,11 +27,11 @@ expression:
         negate: true
         context_values:
           roles:
-            - Citaciones
-            - 'Defensor de Familia'
-          operation: any
+            - citaciones
+            - defensor_de_familia
+          operation: OR
         context_mapping:
-          user: account
+          user: '@user.current_user_context:current_user'
         context_processors:
           roles:
             rules_tokens: {  }

@@ -1,0 +1,25 @@
+uuid: f3f8cc6c-bee9-4da2-bb85-28a25b483618
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:ef8ff464-6862-4bd9-b9b2-48de5699b6c3'
+  module:
+    - block_content
+  theme:
+    - icbf
+id: icbf_blockmegamenu10solicituddebusquedabrdeorigenes000
+theme: icbf
+region: hidden
+weight: 9
+provider: null
+plugin: 'block_content:ef8ff464-6862-4bd9-b9b2-48de5699b6c3'
+settings:
+  id: 'block_content:ef8ff464-6862-4bd9-b9b2-48de5699b6c3'
+  label: 'Block megamenu - 10 Solicitud de Búsqueda<br>de Orígenes 0 0 0'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

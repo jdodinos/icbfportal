@@ -1,0 +1,83 @@
+uuid: f5f3740e-59df-4f2a-b372-0c0a69b72d54
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:5d3f5ce3-f769-41c5-80b2-ae95afedd805'
+    - 'block_content:basic:d183c94c-bf93-4411-9817-67ffe30be71d'
+  module:
+    - block_content
+    - system
+    - tb_megamenu
+label: ninos_ninas_adolescentes
+name: ninos_ninas_adolescentes
+group: 'Micrositio Niños Niñas y Adolescentes'
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: 966e062c-0baa-48ff-84cf-17b0fd4667e8
+    context_mapping: {  }
+    pages: "/ninos-y-ninas\r\n/ninos-y-ninas/*\r\n/adolescentes\r\n/adolescentes/*"
+reactions:
+  blocks:
+    id: blocks
+    uuid: fee2f3b6-245f-4d03-beeb-ffbaf6b20522
+    blocks:
+      8c97f443-248a-4313-812d-c07c5f48ca63:
+        uuid: 8c97f443-248a-4313-812d-c07c5f48ca63
+        id: 'block_content:d183c94c-bf93-4411-9817-67ffe30be71d'
+        label: 'TOP Niños y Niñas'
+        provider: block_content
+        label_display: '0'
+        region: header
+        weight: '-1'
+        custom_id: block_content_d183c94c_bf93_4411_9817_67ffe30be71d
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: ninos_ninas_adolescentes
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+      0c6f4a09-09bc-4206-9283-1569bc6489a8:
+        uuid: 0c6f4a09-09bc-4206-9283-1569bc6489a8
+        id: 'block_content:5d3f5ce3-f769-41c5-80b2-ae95afedd805'
+        label: 'Footer NNA'
+        provider: block_content
+        label_display: '0'
+        region: footer
+        weight: '0'
+        custom_id: block_content_5d3f5ce3_f769_41c5_80b2_ae95afedd805
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: ninos_ninas_adolescentes
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+      ff8d15dd-56b2-4c98-a5a1-e4b7ea8ad842:
+        uuid: ff8d15dd-56b2-4c98-a5a1-e4b7ea8ad842
+        id: 'tb_megamenu_menu_block:mgm-5e7a6aab9aad3'
+        label: 'Menu NNA'
+        provider: tb_megamenu
+        label_display: '0'
+        region: header
+        weight: '0'
+        custom_id: tb_megamenu_menu_block_mgm_5e7a6aab9aad3
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: ninos_ninas_adolescentes
+        context_mapping: {  }
+        third_party_settings: {  }
+    include_default_blocks: 1
+    saved: false
+weight: 0

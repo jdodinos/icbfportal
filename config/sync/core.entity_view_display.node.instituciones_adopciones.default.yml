@@ -19,20 +19,344 @@ dependencies:
     - field.field.node.instituciones_adopciones.field_phone
     - field.field.node.instituciones_adopciones.field_representante_en_colombia
     - node.type.instituciones_adopciones
+    - views.view.content
   module:
+    - bootstrap_layouts
     - field_formatter_class
     - file
     - image
+    - layout_builder
     - options
     - panelizer
     - text
     - user
+    - views
 third_party_settings:
   panelizer:
     enable: false
     custom: false
     allow: false
     default: default
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: bs_2col_stacked
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            top:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-12: col-sm-12
+                col-md-12: col-md-12
+                col-lg-12: col-lg-12
+              add_region_classes: 1
+              attributes: ''
+            left:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-6: col-sm-6
+                col-md-6: col-md-6
+                col-lg-6: col-lg-6
+              add_region_classes: 1
+              attributes: ''
+            right:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-6: col-sm-6
+                col-md-6: col-md-6
+                col-lg-6: col-lg-6
+              add_region_classes: 1
+              attributes: ''
+            bottom:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-12: col-sm-12
+                col-md-12: col-md-12
+                col-lg-12: col-lg-12
+              add_region_classes: 1
+              attributes: ''
+          context_visibility: {  }
+          context_all_must_pass: 1
+        components:
+          c99fb5c3-8ef2-4c90-bd09-6be795c15a3b:
+            uuid: c99fb5c3-8ef2-4c90-bd09-6be795c15a3b
+            region: top
+            configuration:
+              id: 'views_block:content-block_content_title'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          d44f0450-f4aa-42a5-b0f2-ff11198a5d5c:
+            uuid: d44f0450-f4aa-42a5-b0f2-ff11198a5d5c
+            region: left
+            configuration:
+              id: 'field_block:node:instituciones_adopciones:field_board'
+              label: 'Directores y/o Encargados'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: inline
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          a5b87f9a-7c47-48db-aad0-54bfe99ce9fe:
+            uuid: a5b87f9a-7c47-48db-aad0-54bfe99ce9fe
+            region: left
+            configuration:
+              id: 'field_block:node:instituciones_adopciones:field_phone'
+              label: Teléfonos
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: inline
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 3
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          fae4fb0a-4263-4f34-b8f2-601d36b92959:
+            uuid: fae4fb0a-4263-4f34-b8f2-601d36b92959
+            region: left
+            configuration:
+              id: 'field_block:node:instituciones_adopciones:field_address_world'
+              label: 'Dirección:'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: inline
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 4
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          cb6183bf-cff4-4b58-b42c-b53fecc32cca:
+            uuid: cb6183bf-cff4-4b58-b42c-b53fecc32cca
+            region: left
+            configuration:
+              id: 'field_block:node:instituciones_adopciones:field_countries_adopt'
+              label: País
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: list_default
+                label: inline
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 5
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          912856ad-4d23-4e20-a410-89e3ac50e0ce:
+            uuid: 912856ad-4d23-4e20-a410-89e3ac50e0ce
+            region: bottom
+            configuration:
+              id: 'field_block:node:instituciones_adopciones:field_representante_en_colombia'
+              label: 'Información de contacto en Colombia:'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          22153c38-3368-4bca-970e-0e65f5365f6e:
+            uuid: 22153c38-3368-4bca-970e-0e65f5365f6e
+            region: bottom
+            configuration:
+              id: 'field_block:node:instituciones_adopciones:field_contact_email'
+              label: 'Correo Electrónico'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: basic_string
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 2
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          9389f8d4-56dc-4aa0-986a-8a48063852d4:
+            uuid: 9389f8d4-56dc-4aa0-986a-8a48063852d4
+            region: left
+            configuration:
+              id: 'field_block:node:instituciones_adopciones:field_email'
+              label: 'Correo Electrónico'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: basic_string
+                label: inline
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 2
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          44dd2fff-c680-4902-8fe2-fb0c33c53ac9:
+            uuid: 44dd2fff-c680-4902-8fe2-fb0c33c53ac9
+            region: bottom
+            configuration:
+              id: 'field_block:node:instituciones_adopciones:field_colombian_phone'
+              label: 'Teléfonos en Colombia'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 3
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          dbde6d1a-e17a-43c5-b437-0221fdecf010:
+            uuid: dbde6d1a-e17a-43c5-b437-0221fdecf010
+            region: bottom
+            configuration:
+              id: 'field_block:node:instituciones_adopciones:field_lugar'
+              label: 'Ciudad en Colombia'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 4
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          f55d0eb2-12c6-4dde-9809-f3b3dfbccfa3:
+            uuid: f55d0eb2-12c6-4dde-9809-f3b3dfbccfa3
+            region: bottom
+            configuration:
+              id: 'field_block:node:instituciones_adopciones:field_address_col'
+              label: 'Sede en Colombia'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 5
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          9171ffda-50e7-4dcc-93cd-9fe3fcc98b9b:
+            uuid: 9171ffda-50e7-4dcc-93cd-9fe3fcc98b9b
+            region: bottom
+            configuration:
+              id: 'field_block:node:instituciones_adopciones:field_document'
+              label: 'Costos - Procesos de Adopción'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: file_table
+                label: hidden
+                settings:
+                  use_description_as_link_text: true
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 6
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+        third_party_settings: {  }
 id: node.instituciones_adopciones.default
 targetEntityType: node
 bundle: instituciones_adopciones

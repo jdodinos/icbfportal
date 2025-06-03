@@ -1,0 +1,86 @@
+uuid: 3913de88-c40e-48d4-8ddc-bb9f40ba23a7
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:5d3f5ce3-f769-41c5-80b2-ae95afedd805'
+    - 'block_content:basic:6043c59e-ba61-4362-a43d-92fff1944815'
+    - 'block_content:basic:e861f943-0a54-4fd1-8cab-cb56b01d3e84'
+  module:
+    - block_content
+    - system
+label: busqueda_creangel
+name: busqueda_creangel
+group: buscadorcreangel
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: 75c1f6c9-0d3a-44bf-a424-c7c01abe0572
+    context_mapping: {  }
+    pages: /buscador
+reactions:
+  blocks:
+    id: blocks
+    uuid: 63e57a52-f88d-4be6-94cc-7cbf2b6b4416
+    blocks:
+      0f5ee50b-1f38-44ca-bacc-3379ec04ff88:
+        uuid: 0f5ee50b-1f38-44ca-bacc-3379ec04ff88
+        id: 'block_content:6043c59e-ba61-4362-a43d-92fff1944815'
+        label: 'Resultados de búsqueda ICBF'
+        provider: block_content
+        label_display: '0'
+        region: content
+        weight: '-1'
+        custom_id: block_content_6043c59e_ba61_4362_a43d_92fff1944815
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: busqueda_creangel
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+      e2885189-4c9a-4a75-b853-eee6575efae6:
+        uuid: e2885189-4c9a-4a75-b853-eee6575efae6
+        id: 'block_content:e861f943-0a54-4fd1-8cab-cb56b01d3e84'
+        label: 'Encabezado redes sociales'
+        provider: block_content
+        label_display: '0'
+        region: content
+        weight: '0'
+        custom_id: block_content_e861f943_0a54_4fd1_8cab_cb56b01d3e84
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: busqueda_creangel
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+      aa5cb696-016e-42e8-9152-a4643a4cd2af:
+        uuid: aa5cb696-016e-42e8-9152-a4643a4cd2af
+        id: 'block_content:5d3f5ce3-f769-41c5-80b2-ae95afedd805'
+        label: 'Footer NNA'
+        provider: block_content
+        label_display: '0'
+        region: content
+        weight: '1'
+        custom_id: block_content_5d3f5ce3_f769_41c5_80b2_ae95afedd805
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: busqueda_creangel
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+    include_default_blocks: 0
+    saved: false
+weight: 0

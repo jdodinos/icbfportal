@@ -1,0 +1,12 @@
+uuid: 42136343-d196-462d-add6-8b3ecd1b5073
+langcode: es
+status: true
+dependencies: {  }
+id: mesas_p_blicas
+label: 'Mesas públicas'
+description: ''
+use_admin_theme: false
+path: /mesas-publicas/region
+access_logic: and
+access_conditions: {  }
+parameters: {  }

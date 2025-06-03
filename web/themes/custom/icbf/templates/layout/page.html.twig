@@ -79,6 +79,12 @@
            </div>
           </div>
 
+          {% if page.feature %}
+            <div class="featured">
+              {{ page.feature }}
+            </div>
+          {% endif %}
+
           <div class="row row-offcanvas row-offcanvas-left clearfix">
             <main{{ content_attributes }}>
               {{ page.content }}

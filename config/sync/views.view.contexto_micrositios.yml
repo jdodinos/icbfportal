@@ -11,6 +11,7 @@ dependencies:
     - node
     - text
     - user
+    - views_bootstrap
 id: contexto_micrositios
 label: 'ADA Contextos'
 module: views
@@ -692,14 +693,40 @@ display:
           breadcrumb_enable: 0
           breadcrumb: ''
           field_name: field_file_categoria
+      style:
+        type: views_bootstrap_grid
+        options:
+          grouping: {  }
+          alignment: horizontal
+          col_class_default: 1
+          col_class_custom: col-sm-6
+          row_class_default: 1
+          row_class_custom: ''
+          columns: '12'
+          col_xs: col-xs-6
+          col_sm: col-sm-6
+          col_md: col-md-6
+          col_lg: col-lg-3
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: true
       query:
         type: views_query
         options: {  }
       defaults:
+        style: false
+        row: false
         fields: false
         arguments: false
       display_description: 'content subpages'
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
     cache_metadata:
       max-age: -1
       contexts:

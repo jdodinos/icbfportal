@@ -43,9 +43,7 @@ if [ -n "$2" ]; then
 else
   migrationskey=(
     # Despues de migrar contenidos
-    upgrade_d7_views_migration
     # upgrade_d7_google_analytics_user_settings
-      upgrade_d7_megamenu_menus
     upgrade_d7_megamenu_links
   )
 fi
@@ -56,7 +54,7 @@ for mig_key in "${migrationskey[@]}"; do
     migrationRollback "$mig_key"
   elif [ "$1" = "import" ]; then
     migrationReset "$mig_key"
-    migrationRollback "$mig_key"
+    # migrationRollback "$mig_key"
     migrationImport "$mig_key"
     migrationStatus "$mig_key"
   elif [ "$1" = "status" ]; then

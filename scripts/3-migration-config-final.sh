@@ -6,8 +6,8 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
-drushcommand="ddev drush";
-# drushcommand='vendor/bin/drush';
+# drushcommand="ddev drush";
+drushcommand='vendor/bin/drush';
 
 oper='';
 if [ "$1" = "rollback" ]; then
@@ -51,11 +51,10 @@ if [ -n "$2" ]; then
   migrationskey=("$2")
 else
   migrationskey=(
-    # upgrade_d7_file
-    # upgrade_d7_file_private
+    upgrade_d7_file
+    upgrade_d7_file_private
     upgrade_d7_views_migration
     upgrade_d7_megamenu_menus
-    upgrade_d7_megamenu_links
   )
 fi
 
@@ -66,7 +65,7 @@ for mig_key in "${migrationskey[@]}"; do
     migrationRollback "$mig_key"
   elif [ "$1" = "import" ]; then
     migrationReset "$mig_key"
-    migrationRollback "$mig_key"
+    # migrationRollback "$mig_key"
     migrationImport "$mig_key"
     migrationStatus "$mig_key"
   elif [ "$1" = "status" ]; then

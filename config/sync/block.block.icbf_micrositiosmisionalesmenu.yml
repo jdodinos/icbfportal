@@ -1,0 +1,25 @@
+uuid: 2ad69d36-12f2-4bc7-9d58-22d5d2a60326
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:footer:ae308f99-081f-4df1-8ee4-c1e2a3240448'
+  module:
+    - block_content
+  theme:
+    - icbf
+id: icbf_micrositiosmisionalesmenu
+theme: icbf
+region: hidden
+weight: -11
+provider: null
+plugin: 'block_content:ae308f99-081f-4df1-8ee4-c1e2a3240448'
+settings:
+  id: 'block_content:ae308f99-081f-4df1-8ee4-c1e2a3240448'
+  label: 'MICROSITIOS MISIONALES MENU'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

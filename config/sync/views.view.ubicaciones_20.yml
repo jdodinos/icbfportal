@@ -1,6 +1,6 @@
 uuid: 8fa184b6-9aea-463c-a8ec-505544f40b2b
 langcode: es
-status: true
+status: false
 dependencies:
   config:
     - field.storage.node.field_addres_local_offices
@@ -11,8 +11,8 @@ dependencies:
     - image.style.local-box_photo
     - taxonomy.vocabulary.tipos_de_ubicaci_n
   content:
-    - 'taxonomy_term:tipos_de_ubicaci_n:aeb3c21b-e449-476c-8da8-ecbecb32e3bb'
-    - 'taxonomy_term:tipos_de_ubicaci_n:e4789b80-4135-41ff-8201-c7c420fac470'
+    - 'taxonomy_term:tipos_de_ubicaci_n:2c1072a1-9ee6-4d01-a5db-0b42d18605c7'
+    - 'taxonomy_term:tipos_de_ubicaci_n:f73f1e27-ad56-4235-b8c0-fdba5c9e2659'
   module:
     - image
     - node

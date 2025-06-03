@@ -31,7 +31,7 @@ web/sites/example.*
 *.gz
 database/*
 
-
+composer.lock
 .project
 .buildpath
 web/.csslintrc
@@ -75,3 +75,5 @@ web/libraries/tippyjs/
 config/sync/migrate_plus.*
 *README.txt
 *.Identifier
+
+migrationfiles/*
