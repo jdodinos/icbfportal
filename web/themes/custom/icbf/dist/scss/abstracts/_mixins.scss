@@ -1,0 +1,46 @@
+// En tu archivo SCSS, puedes definir el mixin así:
+@mixin btn-mm1-styles {
+  background-color: #fff;
+  border: 2px solid #0073ff;
+  border-radius: 30px;
+  color: #0073ff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12.6px;
+  font-weight: 500;
+  margin: 1em .5em 0 0;
+  padding: .3rem 1.3rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    background-color: #0073ff;
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+
+@mixin btn-mm2-styles {
+  background-color: #0073ff;
+  border: 2px solid #0073ff;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12.6px;
+  font-weight: 500;
+  margin: 1em .5em 0 0;
+  padding: .3rem 1.3rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    background-color: #eee;
+    color: #0073ff;
+    text-decoration: underline;
+  }
+}

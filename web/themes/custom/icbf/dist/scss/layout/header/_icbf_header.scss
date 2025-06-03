@@ -5,4 +5,84 @@
     font-family: var.$font-montserrat;
     letter-spacing: 0;
     opacity: 1;
+
+    .container {
+        max-width: initial;
+        width: 100%;
+
+        .he_govbar {
+            opacity: 1;
+            padding: 1px 15px 5px 5px;
+
+a {
+                display: block;
+
+img {
+                    height: 18px;
+                    margin-left: 5px;
+                    margin-top: 5px;
+                }
+            }
+        }
+
+        .he_govbtn {
+            background-color: #004686;
+            border-bottom-left-radius: .5em;
+            border-bottom-right-radius: .5em;
+            color: #fff;
+            padding: .2em .6em;
+            position: absolute;
+            right: 14px;
+            top: 0;
+            width: auto;
+            z-index: 100;
+
+            .top-linkx3 {
+                color: #fff;
+                float: left;
+                font-size: .7em;
+                font-weight: 500;
+                line-height: normal;
+                position: relative;
+                text-align: center;
+                top: .1em;
+                width: 69px;
+            }
+
+            .slidedown_accesibility {
+                -moz-border-radius: 4px;
+                -webkit-border-radius: 4px;
+                background-color: #fff;
+                border: #ccc solid 1px;
+                border-radius: 4px;
+                color: #000;
+                display: none;
+                min-width: 685px;
+                padding-bottom: 1em;
+                position: absolute;
+                right: 15px;
+                top: 40px;
+                width: 100%;
+                z-index: 100;
+                zoom: 1;
+            }
+        }
+    }
+}
+
+.top-1519contain {
+    display: flex;
+    margin: auto;
+    max-width: 1150px;
+    padding: .6rem 0 .6rem;
+    width: auto;
+
+    .main-logo {
+        float: left;
+        font-family: "object-fit:contain";
+        height: 80px;
+        object-fit: contain;
+        padding: 0;
+        width: auto;
+    }
 }
