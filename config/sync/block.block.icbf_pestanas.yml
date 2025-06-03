@@ -1,15 +1,13 @@
-uuid: 445cacb3-d9c4-4b97-9cf6-6d9e6799f5f4
+uuid: f76df2ee-a8b5-42b7-be53-7c555e4e8bfb
 langcode: es
 status: true
 dependencies:
   theme:
     - icbf
-_core:
-  default_config_hash: DwUwgcqTweB2vngQqkjGdWhCXMpHejMlJJhjGNnFpUw
-id: icbf_local_tasks
+id: icbf_pestanas
 theme: icbf
 region: content
-weight: -4
+weight: -5
 provider: null
 plugin: local_tasks_block
 settings:

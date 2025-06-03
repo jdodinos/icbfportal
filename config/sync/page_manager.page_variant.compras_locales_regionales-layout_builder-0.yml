@@ -1,0 +1,90 @@
+uuid: 6ddc918c-dae0-4a34-ac65-5b35f155364e
+langcode: es
+status: true
+dependencies:
+  config:
+    - page_manager.page.compras_locales_regionales
+    - views.view.local_shopping
+    - views.view.news
+  module:
+    - bootstrap_layouts
+    - views
+id: compras_locales_regionales-layout_builder-0
+label: 'Compras locales en Regiones'
+weight: 0
+variant: layout_builder
+variant_settings:
+  id: layout_builder
+  label: null
+  weight: 0
+  uuid: 90150bea-aaa3-4b76-a978-6d05db139c7b
+  sections:
+    -
+      layout_id: bs_1col
+      layout_settings:
+        label: ''
+        context_mapping: {  }
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+      components:
+        be32b510-5fa2-4df8-8d11-4575c6565d52:
+          uuid: be32b510-5fa2-4df8-8d11-4575c6565d52
+          region: main
+          configuration:
+            id: 'views_block:local_shopping-block_4'
+            label: ''
+            label_display: '0'
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 0
+          additional:
+            context_visibility: {  }
+            context_all_must_pass: 1
+        131cb8de-ecf2-4533-8ef8-96f420b3f5b1:
+          uuid: 131cb8de-ecf2-4533-8ef8-96f420b3f5b1
+          region: main
+          configuration:
+            id: 'views_block:local_shopping-block_2'
+            label: ''
+            label_display: '0'
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 2
+          additional:
+            context_visibility: {  }
+            context_all_must_pass: 1
+        5ab18ecf-296a-49ef-8465-e67df1a82673:
+          uuid: 5ab18ecf-296a-49ef-8465-e67df1a82673
+          region: main
+          configuration:
+            id: 'views_block:news-block_1'
+            label: ''
+            label_display: '0'
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 1
+          additional:
+            context_visibility: {  }
+            context_all_must_pass: 1
+      third_party_settings: {  }
+page: compras_locales_regionales
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

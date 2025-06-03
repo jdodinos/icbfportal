@@ -1,0 +1,89 @@
+uuid: 5ac8aa62-3c8d-4d8f-849f-c5008fa2b0d2
+langcode: es
+status: true
+dependencies: {  }
+id: tab_tendencias_y_regionales
+label: 'Tabs Noticias por TAGS'
+renderer: quick_tabs
+hide_empty_tabs: false
+default_tab: 0
+options:
+  bootstrap_tabs:
+    tabstyle: tabs
+    tabposition: basic
+    tabeffects:
+      fade: 0
+  quick_tabs:
+    ajax: false
+    class: ''
+    style: ''
+configuration_data:
+  -
+    title: Regionales
+    weight: 0
+    type: view_content
+    content:
+      view_content:
+        options:
+          vid: news
+          display: block_2
+          args: '5986'
+      block_content:
+        options:
+          bid: announce_block
+          block_title: ''
+          display_title: false
+      node_content:
+        options:
+          nid: ''
+          view_mode: full
+          hide_title: true
+      qtabs_content:
+        options:
+          machine_name: ''
+  -
+    title: Nacional
+    weight: 0
+    type: view_content
+    content:
+      view_content:
+        options:
+          vid: news
+          display: block_2
+          args: '5990'
+      block_content:
+        options:
+          bid: announce_block
+          block_title: ''
+          display_title: false
+      node_content:
+        options:
+          nid: ''
+          view_mode: full
+          hide_title: true
+      qtabs_content:
+        options:
+          machine_name: ''
+  -
+    title: Campaña
+    weight: 0
+    type: view_content
+    content:
+      view_content:
+        options:
+          vid: news
+          display: block_2
+          args: '5989'
+      block_content:
+        options:
+          bid: announce_block
+          block_title: ''
+          display_title: false
+      node_content:
+        options:
+          nid: ''
+          view_mode: full
+          hide_title: true
+      qtabs_content:
+        options:
+          machine_name: ''

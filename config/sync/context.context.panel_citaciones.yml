@@ -1,0 +1,48 @@
+uuid: 2e27a0f6-aebd-46fb-b05a-95fc34b5c4ca
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:footer:b8adb10c-8c2b-48b4-a6eb-02c4119ae6ee'
+  module:
+    - block_content
+    - system
+label: panel_citaciones
+name: panel_citaciones
+group: Citaciones
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: ed0c98bf-bb56-4fdc-8e37-e9b4b72f80e6
+    context_mapping: {  }
+    pages: "/citaciones/panel\r\n/citaciones/reportes\r\n/node/add/summon"
+reactions:
+  blocks:
+    id: blocks
+    uuid: fb312f7d-0b6a-41f8-a736-67e238a56760
+    blocks:
+      264815a0-78a7-4173-861b-f73f00432a0a:
+        uuid: 264815a0-78a7-4173-861b-f73f00432a0a
+        id: 'block_content:b8adb10c-8c2b-48b4-a6eb-02c4119ae6ee'
+        label: 'Menú Panel de Control Citaciones'
+        provider: block_content
+        label_display: '0'
+        region: feature
+        weight: '0'
+        custom_id: block_content_b8adb10c_8c2b_48b4_a6eb_02c4119ae6ee
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: panel_citaciones
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+    include_default_blocks: 0
+    saved: false
+weight: 0

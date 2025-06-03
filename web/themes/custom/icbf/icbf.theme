@@ -5,9 +5,57 @@
  * icbf theme file.
  */
 
- /**
-  * Implements hook_preprocess_HOOK().
-  */
- function icbf_preprocess_html(&$variables) {
-  //  dump($variables);
- }
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function icbf_preprocess_html(&$variables) {
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function icbf_preprocess_page(&$variables) {
+  // dump($variables);
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function icbf_preprocess_field(&$variables) {
+  $field_to_check = [
+    'field_content',
+    'field_video_02',
+    'field_builder',
+  ];
+  if (in_array($variables['field_name'], $field_to_check)) {
+    $items = &$variables['items'];
+    foreach ($items as &$item) {
+      if (is_null($item['content']['#format'])) {
+        $item['content']['#format'] = 'full_html';
+      }
+
+      if ($variables['field_name'] == 'field_builder' && isset($item['content']['#text'])) {
+        $html = $item['content']['#text'];
+        $item['content']['#text'] = icbf_files_directory_process($html);
+      }
+    }
+  }
+}
+
+/**
+ * Processes the HTML content to replace placeholders with actual values.
+ *
+ * @param string $html
+ *   The HTML content to process.
+ *
+ * @return string
+ *   The processed HTML content with placeholders replaced.
+ */
+function icbf_files_directory_process($html) {
+  $request = \Drupal::service('request_stack')->getCurrentRequest();
+  $base_url = $request->getSchemeAndHttpHost();
+  $public_files_path = \Drupal::config('system.file')->get('path.public') ?? 'sites/default/files';
+  $html = str_replace('-base-url-', $base_url, $html);
+  $html = str_replace('-files-directory-', $public_files_path, $html);
+  return $html;
+}

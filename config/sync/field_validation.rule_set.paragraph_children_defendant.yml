@@ -1,0 +1,39 @@
+uuid: b7fb8567-c991-4da6-b05f-b7376090e2bb
+langcode: es
+status: true
+dependencies: {  }
+name: paragraph_children_defendant
+label: 'paragraph children_defendant validation'
+entity_type: paragraph
+bundle: children_defendant
+field_validation_rules:
+  9f1aa7a0-d470-4ad3-8c67-5d2110f76a5c:
+    id: regex_field_validation_rule
+    title: children_id
+    data:
+      setting: '/^[0-9]{0,21}$/'
+    weight: 1
+    uuid: 9f1aa7a0-d470-4ad3-8c67-5d2110f76a5c
+    field_name: field_citizen_id
+    column: value
+    error_message: 'El campo [current-field:field-name] del niño(a) no debe ser mayor a 20 caracteres y sólo acepta números'
+    roles: {  }
+    condition:
+      field: ''
+      operator: ''
+      value: ''
+  8e802eb6-1db8-476e-8f2e-feba64b99022:
+    id: regex_field_validation_rule
+    title: 'Children name'
+    data:
+      setting: '/^[ÑñA-zÀ-ÿ\s]{1,250}$/'
+    weight: 2
+    uuid: 8e802eb6-1db8-476e-8f2e-feba64b99022
+    field_name: field_children_fullname
+    column: value
+    error_message: 'El campo [current-field:field-name] del niño(a) solo acepta caracteres de la A a la Z y máximo 250 caracteres'
+    roles: {  }
+    condition:
+      field: ''
+      operator: ''
+      value: ''

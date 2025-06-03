@@ -14,13 +14,268 @@ dependencies:
     - field.field.node.infografia_observatorio.field_resume
     - field.field.node.infografia_observatorio.field_section
     - node.type.infografia_observatorio
+  content:
+    - 'block_content:footer:82fbc4eb-d221-47b7-a51d-d43cfcf49af2'
   module:
+    - block_content
     - comment
     - datetime
     - file
     - image
+    - layout_builder
+    - layout_discovery
+    - panelizer
     - text
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          cb8cbfdf-2a29-44cf-bb9c-2d25bb89bc30:
+            uuid: cb8cbfdf-2a29-44cf-bb9c-2d25bb89bc30
+            region: content
+            configuration:
+              id: 'field_block:node:infografia_observatorio:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          bdff1d47-6c6e-43a8-90b0-fe7a06eea95c:
+            uuid: bdff1d47-6c6e-43a8-90b0-fe7a06eea95c
+            region: content
+            configuration:
+              id: 'block_content:82fbc4eb-d221-47b7-a51d-d43cfcf49af2'
+              label: 'Observatorio de Bienestar - top'
+              label_display: '0'
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+        third_party_settings: {  }
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+    displays:
+      default:
+        id: panels_variant
+        label: Master
+        weight: 0
+        uuid: 5b7f0f86-14ff-4c10-96fa-3fc40be983e0
+        blocks:
+          2fd4644a-8375-4261-b6fc-d568506fd843:
+            id: 'entity_field:node:uid'
+            label: 'Escrito por'
+            label_display: '0'
+            provider: ctools_block
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            formatter:
+              type: author
+              weight: 0
+              region: content
+              label: hidden
+              settings: {  }
+              third_party_settings: {  }
+            region: content
+            weight: 0
+            uuid: 2fd4644a-8375-4261-b6fc-d568506fd843
+          189f00ec-5a9f-412b-bcfa-0fcdc51f16e6:
+            id: 'entity_field:node:created'
+            label: 'Fecha de autoría'
+            label_display: '0'
+            provider: ctools_block
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            formatter:
+              type: timestamp
+              weight: 0
+              region: content
+              label: hidden
+              settings:
+                date_format: medium
+                custom_date_format: ''
+                timezone: ''
+                tooltip:
+                  date_format: long
+                  custom_date_format: ''
+                time_diff:
+                  enabled: false
+                  future_format: '@interval hence'
+                  past_format: '@interval ago'
+                  granularity: 2
+                  refresh: 60
+              third_party_settings: {  }
+            region: content
+            weight: 0
+            uuid: 189f00ec-5a9f-412b-bcfa-0fcdc51f16e6
+          d60436dc-1482-44e3-9554-44955364c5b7:
+            id: 'entity_field:node:body'
+            label: Body
+            label_display: '0'
+            provider: ctools_block
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            formatter:
+              type: text_default
+              weight: 0
+              label: hidden
+              settings: {  }
+              third_party_settings: {  }
+            region: content
+            weight: null
+            uuid: d60436dc-1482-44e3-9554-44955364c5b7
+          0531c017-8844-47a7-8ae9-4dd8eb6d701c:
+            id: 'entity_field:node:comment_node_infografia_observat'
+            label: Comments
+            label_display: '0'
+            provider: ctools_block
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            formatter:
+              type: comment_default
+              weight: 0
+              label: hidden
+              settings:
+                view_mode: default
+                pager_id: 0
+              third_party_settings: {  }
+            region: content
+            weight: null
+            uuid: 0531c017-8844-47a7-8ae9-4dd8eb6d701c
+          1d14ed6f-3a49-4c26-8c53-e779c98a11c3:
+            id: 'entity_field:node:field_date'
+            label: Fecha
+            label_display: '0'
+            provider: ctools_block
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            formatter:
+              type: datetime_default
+              weight: 0
+              label: hidden
+              settings:
+                timezone_override: ''
+                format_type: long
+              third_party_settings: {  }
+            region: content
+            weight: null
+            uuid: 1d14ed6f-3a49-4c26-8c53-e779c98a11c3
+          c28d9a1e-c3f6-4dc8-99af-ccb8f7fcd53c:
+            id: 'entity_field:node:field_document'
+            label: Documento
+            label_display: '0'
+            provider: ctools_block
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            formatter:
+              type: file_default
+              weight: 0
+              label: above
+              settings:
+                use_description_as_link_text: true
+              third_party_settings: {  }
+            region: content
+            weight: null
+            uuid: c28d9a1e-c3f6-4dc8-99af-ccb8f7fcd53c
+          2918bca8-e5f4-4f74-bf14-bae50bd5f68d:
+            id: 'entity_field:node:field_file_categoria'
+            label: 'Categoría del archivo'
+            label_display: '0'
+            provider: ctools_block
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            formatter:
+              type: entity_reference_label
+              weight: 0
+              label: hidden
+              settings:
+                link: true
+              third_party_settings: {  }
+            region: content
+            weight: null
+            uuid: 2918bca8-e5f4-4f74-bf14-bae50bd5f68d
+          9844aa31-d030-4f0f-b2a6-9f98eae4fdc1:
+            id: 'entity_field:node:field_list_image'
+            label: 'Imagen Listado'
+            label_display: '0'
+            provider: ctools_block
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            formatter:
+              type: image
+              weight: 0
+              label: above
+              settings:
+                image_link: ''
+                image_style: ''
+                image_loading:
+                  attribute: lazy
+              third_party_settings: {  }
+            region: content
+            weight: null
+            uuid: 9844aa31-d030-4f0f-b2a6-9f98eae4fdc1
+          079d59a7-1520-498d-b0bc-387b56816d56:
+            id: 'entity_field:node:field_resume'
+            label: Resumen
+            label_display: '0'
+            provider: ctools_block
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            formatter:
+              type: text_default
+              weight: 0
+              label: hidden
+              settings: {  }
+              third_party_settings: {  }
+            region: content
+            weight: null
+            uuid: 079d59a7-1520-498d-b0bc-387b56816d56
+          33be674d-96c6-4cc1-92ef-5b7743f18588:
+            id: 'entity_field:node:field_section'
+            label: Sección
+            label_display: '0'
+            provider: ctools_block
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            formatter:
+              type: entity_reference_label
+              weight: 0
+              label: hidden
+              settings:
+                link: true
+              third_party_settings: {  }
+            region: content
+            weight: null
+            uuid: 33be674d-96c6-4cc1-92ef-5b7743f18588
+        page_title: '[node:title]'
+        layout: layout_onecol
+        layout_settings: {  }
+        builder: ipe
+        storage_type: ''
+        storage_id: ''
+        css_classes: {  }
+        html_id: ''
+        css_styles: ''
+        pattern: panelizer
 id: node.infografia_observatorio.default
 targetEntityType: node
 bundle: infografia_observatorio

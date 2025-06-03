@@ -3,6 +3,7 @@ langcode: es
 status: true
 dependencies:
   config:
+    - block_content.type.basic
     - core.entity_view_display.comment.comment_node_glosario.default
     - field.field.node.glosario.comment_node_glosario
     - field.field.node.glosario.field_content
@@ -14,9 +15,164 @@ dependencies:
     - field.field.node.glosario.field_tooltip
     - node.type.glosario
   module:
+    - bootstrap_layouts
     - comment
+    - layout_builder
+    - panelizer
     - text
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: bs_2col
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            left:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-6: col-sm-6
+                col-md-6: col-md-6
+                col-lg-6: col-lg-6
+              add_region_classes: 1
+              attributes: ''
+            right:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-6: col-sm-6
+                col-md-6: col-md-6
+                col-lg-6: col-lg-6
+              add_region_classes: 1
+              attributes: ''
+          context_visibility: {  }
+          context_all_must_pass: 1
+        components:
+          7323460a-3e24-4176-affe-08d3aeae9d10:
+            uuid: 7323460a-3e24-4176-affe-08d3aeae9d10
+            region: left
+            configuration:
+              id: 'field_block:node:glosario:field_tags'
+              label: 'Abecedario:'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 1
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          28efa14a-d820-405b-a8ef-63f82dc095bf:
+            uuid: 28efa14a-d820-405b-a8ef-63f82dc095bf
+            region: right
+            configuration:
+              id: 'field_block:node:glosario:field_procedure'
+              label: 'Oferta Institucional de Referencia:'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          55560b79-7d37-44f4-b22c-1c4e0e8a969a:
+            uuid: 55560b79-7d37-44f4-b22c-1c4e0e8a969a
+            region: right
+            configuration:
+              id: 'field_block:node:glosario:field_file_categoria'
+              label: 'Preguntas Frecuentes de Referencia:'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 1
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          d9564db6-53f1-4fea-9771-d7e4c1c9a3ea:
+            uuid: d9564db6-53f1-4fea-9771-d7e4c1c9a3ea
+            region: left
+            configuration:
+              id: 'field_block:node:glosario:field_content'
+              label: 'Definición:'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          82f15376-7ab5-4c03-a272-0ecfeec03191:
+            uuid: 82f15376-7ab5-4c03-a272-0ecfeec03191
+            region: left
+            configuration:
+              id: 'inline_block:basic'
+              label: 'Link glosario de términos'
+              label_display: '0'
+              provider: layout_builder
+              view_mode: full
+              context_mapping: {  }
+              block_id: 1902
+              block_revision_id: 237
+              block_serialized: null
+            weight: 2
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+        third_party_settings: {  }
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.glosario.default
 targetEntityType: node
 bundle: glosario

@@ -23,10 +23,385 @@ dependencies:
     - field.field.node.articulo_mis_manos_te_ensenan.field_seo_title
     - field.field.node.articulo_mis_manos_te_ensenan.field_youtube
     - node.type.articulo_mis_manos_te_ensenan
+  content:
+    - 'block_content:footer:9e9deae2-d955-46aa-a6d9-fee989bfb16a'
   module:
+    - block_content
+    - bootstrap_layouts
     - comment
     - entity_reference_revisions
+    - layout_builder
+    - layout_discovery
+    - panelizer
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          7b6a3bdf-622e-4c34-b399-5c20b6d7b9c9:
+            uuid: 7b6a3bdf-622e-4c34-b399-5c20b6d7b9c9
+            region: content
+            configuration:
+              id: 'field_block:node:articulo_mis_manos_te_ensenan:field_imagen_top_mmte'
+              label: 'Imagen TOP Sección'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 3
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          a34f58dd-0be8-49cf-a537-18d9187bf3c9:
+            uuid: a34f58dd-0be8-49cf-a537-18d9187bf3c9
+            region: content
+            configuration:
+              id: 'block_content:9e9deae2-d955-46aa-a6d9-fee989bfb16a'
+              label: 'MENU mis manos te enseñan'
+              label_display: '0'
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 4
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          4203a84a-b4a4-4c0b-9eaf-eb7f5044c189:
+            uuid: 4203a84a-b4a4-4c0b-9eaf-eb7f5044c189
+            region: content
+            configuration:
+              id: 'field_block:node:articulo_mis_manos_te_ensenan:field_seo_title'
+              label: 'Título presentación'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 5
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+        third_party_settings: {  }
+      -
+        layout_id: bs_4col
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            first:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-2: col-sm-2
+                col-md-2: col-md-2
+                col-lg-2: col-lg-2
+                hidden-xs: hidden-xs
+                visible-sm: visible-sm
+                visible-md: visible-md
+                visible-lg: visible-lg
+              add_region_classes: 1
+              attributes: ''
+            second:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-4: col-sm-4
+                col-md-4: col-md-4
+                col-lg-4: col-lg-4
+              add_region_classes: 1
+              attributes: ''
+            third:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-4: col-sm-4
+                col-md-4: col-md-4
+                col-lg-4: col-lg-4
+              add_region_classes: 1
+              attributes: ''
+            fourth:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-2: col-sm-2
+                col-md-2: col-md-2
+                col-lg-2: col-lg-2
+                hidden-xs: hidden-xs
+                visible-sm: visible-sm
+                visible-md: visible-md
+                visible-lg: visible-lg
+              add_region_classes: 1
+              attributes: ''
+          context_visibility: {  }
+          context_all_must_pass: 1
+        components:
+          62de0295-9393-4c41-9c44-6a22f4652295:
+            uuid: 62de0295-9393-4c41-9c44-6a22f4652295
+            region: second
+            configuration:
+              id: 'field_block:node:articulo_mis_manos_te_ensenan:field_date'
+              label: Fecha
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: datetime_default
+                label: hidden
+                settings:
+                  timezone_override: ''
+                  format_type: olivero_medium
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          02a02852-abba-431b-b14f-1ff8e0009e2b:
+            uuid: 02a02852-abba-431b-b14f-1ff8e0009e2b
+            region: third
+            configuration:
+              id: 'field_block:node:articulo_mis_manos_te_ensenan:field_post_image_mte'
+              label: 'Imagen Principal'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+        third_party_settings: {  }
+      -
+        layout_id: bs_3col
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            left:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-2: col-sm-2
+                col-md-2: col-md-2
+                col-lg-2: col-lg-2
+                hidden-xs: hidden-xs
+                visible-sm: visible-sm
+                visible-md: visible-md
+                visible-lg: visible-lg
+              add_region_classes: 1
+              attributes: ''
+            middle:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-8: col-sm-8
+                col-md-8: col-md-8
+                col-lg-8: col-lg-8
+              add_region_classes: 1
+              attributes: ''
+            right:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-2: col-sm-2
+                col-md-2: col-md-2
+                col-lg-2: col-lg-2
+                hidden-xs: hidden-xs
+                visible-sm: visible-sm
+                visible-md: visible-md
+                visible-lg: visible-lg
+              add_region_classes: 1
+              attributes: ''
+          context_visibility: {  }
+          context_all_must_pass: 1
+        components:
+          8c1da236-6934-472d-b1fd-c5afb53d7e8c:
+            uuid: 8c1da236-6934-472d-b1fd-c5afb53d7e8c
+            region: middle
+            configuration:
+              id: 'field_block:node:articulo_mis_manos_te_ensenan:field_youtube'
+              label: 'Video en Youtube'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: youtube_video
+                label: hidden
+                settings:
+                  youtube_size: responsive
+                  youtube_width: ''
+                  youtube_height: ''
+                  youtube_autoplay: false
+                  youtube_mute: false
+                  youtube_loop: false
+                  youtube_controls: false
+                  youtube_autohide: false
+                  youtube_iv_load_policy: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          af69f331-8e7d-4839-9aad-c519fee7a42d:
+            uuid: af69f331-8e7d-4839-9aad-c519fee7a42d
+            region: middle
+            configuration:
+              id: 'field_block:node:articulo_mis_manos_te_ensenan:field_resume'
+              label: Resumen
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 1
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          1d6e8248-50a0-480f-ab30-f17173eb3afd:
+            uuid: 1d6e8248-50a0-480f-ab30-f17173eb3afd
+            region: middle
+            configuration:
+              id: 'field_block:node:articulo_mis_manos_te_ensenan:field_media_audio_mte'
+              label: 'Audio adjunto'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: file_audio
+                label: hidden
+                settings:
+                  controls: true
+                  autoplay: false
+                  loop: false
+                  multiple_file_display_type: tags
+                third_party_settings:
+                  blazy:
+                    blazy: false
+                  field_formatter_class:
+                    class: ''
+            weight: 2
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          6d860970-601d-457b-b58a-7f922a298594:
+            uuid: 6d860970-601d-457b-b58a-7f922a298594
+            region: middle
+            configuration:
+              id: 'field_block:node:articulo_mis_manos_te_ensenan:field_post_body_mte'
+              label: 'Contenido del Post'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 3
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          305b90b2-2980-4676-a513-1a4a503b4ece:
+            uuid: 305b90b2-2980-4676-a513-1a4a503b4ece
+            region: middle
+            configuration:
+              id: 'field_block:node:articulo_mis_manos_te_ensenan:field_document_mmte'
+              label: 'Documento adjunto'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: file_default
+                label: hidden
+                settings:
+                  use_description_as_link_text: true
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 4
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+        third_party_settings: {  }
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.articulo_mis_manos_te_ensenan.default
 targetEntityType: node
 bundle: articulo_mis_manos_te_ensenan

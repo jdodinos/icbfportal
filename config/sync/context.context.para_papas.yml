@@ -1,0 +1,102 @@
+uuid: ea8dbfcd-811a-4e08-8e2f-72ea2a255e5b
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:306d71b1-8c6a-44b6-9c63-41eecd10a216'
+    - 'block_content:footer:69c23059-c3a4-4ca7-9972-e9ff05938bea'
+    - 'block_content:footer:c38487b6-37ba-41da-ad95-171ac4ee6496'
+  module:
+    - block_content
+    - system
+    - tb_megamenu
+label: para_papas
+name: para_papas
+group: 'Micrositio Familias'
+description: ''
+requireAllConditions: false
+disabled: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: 9b2a67d9-f21f-4f1e-be86-15036789caf5
+    context_mapping: {  }
+    pages: ''
+reactions:
+  blocks:
+    id: blocks
+    uuid: fd59b909-128d-4c12-94bc-9b81fd569104
+    blocks:
+      4f5549cb-4f4c-49b3-9b2e-f4de92cdbe77:
+        uuid: 4f5549cb-4f4c-49b3-9b2e-f4de92cdbe77
+        id: 'block_content:c38487b6-37ba-41da-ad95-171ac4ee6496'
+        label: 'Top Papás'
+        provider: block_content
+        label_display: '0'
+        region: header
+        weight: '-1'
+        custom_id: block_content_c38487b6_37ba_41da_ad95_171ac4ee6496
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: para_papas
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+      6b007558-b459-4e47-a90f-8d5f3ab70211:
+        uuid: 6b007558-b459-4e47-a90f-8d5f3ab70211
+        id: 'tb_megamenu_menu_block:mgm-5d3f4fe8cd42b'
+        label: 'Menu familia'
+        provider: tb_megamenu
+        label_display: '0'
+        region: header
+        weight: '0'
+        custom_id: tb_megamenu_menu_block_mgm_5d3f4fe8cd42b
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: para_papas
+        context_mapping: {  }
+        third_party_settings: {  }
+      c706cb3a-6f91-4fb1-ac58-1804521e7cbf:
+        uuid: c706cb3a-6f91-4fb1-ac58-1804521e7cbf
+        id: 'block_content:306d71b1-8c6a-44b6-9c63-41eecd10a216'
+        label: 'Footer GOVCO'
+        provider: block_content
+        label_display: '0'
+        region: footer
+        weight: '0'
+        custom_id: block_content_306d71b1_8c6a_44b6_9c63_41eecd10a216
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: para_papas
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+      46210f02-8481-4f4e-a32e-85bcac530e0f:
+        uuid: 46210f02-8481-4f4e-a32e-85bcac530e0f
+        id: 'block_content:69c23059-c3a4-4ca7-9972-e9ff05938bea'
+        label: 'Footer Links Familias'
+        provider: block_content
+        label_display: '0'
+        region: footer
+        weight: '0'
+        custom_id: block_content_69c23059_c3a4_4ca7_9972_e9ff05938bea
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: para_papas
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+    include_default_blocks: 0
+    saved: false
+weight: 0

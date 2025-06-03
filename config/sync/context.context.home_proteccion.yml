@@ -1,0 +1,21 @@
+uuid: 6a270739-805e-4a5d-8118-f797d2fa31cd
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+label: home_proteccion
+name: home_proteccion
+group: 'Micrositio Protección'
+description: 'Bloques que se muestran el en Home de Protección'
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: fde86761-2db1-4dde-801f-d2419f47d167
+    context_mapping: {  }
+    pages: /programas-y-estrategias/proteccion/programa-de-adopciones
+reactions: {  }
+weight: 0

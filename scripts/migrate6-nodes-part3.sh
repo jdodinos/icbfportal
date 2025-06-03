@@ -43,7 +43,7 @@ migrationskey=(
 
 for mig_key in "${migrationskey[@]}"; do
   migrationReset "$mig_key"
-  migrationRollback "$mig_key"
+  # migrationRollback "$mig_key"
   migrationImport "$mig_key"
   migrationStatus "$mig_key"
 done

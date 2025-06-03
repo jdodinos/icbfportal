@@ -1,0 +1,86 @@
+uuid: 637b7b2b-8899-4478-91a1-9f807b46e6e6
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:306d71b1-8c6a-44b6-9c63-41eecd10a216'
+    - 'block_content:basic:4beded73-8324-49f2-8438-d520af056eec'
+    - 'block_content:basic:9dd6a42d-0f4b-4989-86b7-6405bb91e534'
+  module:
+    - block_content
+    - system
+label: pacto-col-juventudes
+name: pacto_col_juventudes
+group: null
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: b5355721-284a-40f2-9545-d86a6ad22707
+    context_mapping: {  }
+    pages: /pacto-colombia-con-las-juventudes
+reactions:
+  blocks:
+    id: blocks
+    uuid: 6c4f7543-b16d-4adb-8ac9-ccaddefda3fb
+    blocks:
+      2e90c626-e497-4c08-a226-b5e2dc9a6a58:
+        uuid: 2e90c626-e497-4c08-a226-b5e2dc9a6a58
+        id: 'block_content:4beded73-8324-49f2-8438-d520af056eec'
+        label: 'GOVCO 1519'
+        provider: block_content
+        label_display: '0'
+        region: header
+        weight: '0'
+        custom_id: block_content_4beded73_8324_49f2_8438_d520af056eec
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: pacto_col_juventudes
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+      120585bf-fe54-43c3-aee7-a0866b1a093b:
+        uuid: 120585bf-fe54-43c3-aee7-a0866b1a093b
+        id: 'block_content:9dd6a42d-0f4b-4989-86b7-6405bb91e534'
+        label: 'Footer 1519 -1'
+        provider: block_content
+        label_display: '0'
+        region: footer
+        weight: '0'
+        custom_id: block_content_9dd6a42d_0f4b_4989_86b7_6405bb91e534
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: pacto_col_juventudes
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+      abfada6d-bdf4-4427-918d-b043b57369ec:
+        uuid: abfada6d-bdf4-4427-918d-b043b57369ec
+        id: 'block_content:306d71b1-8c6a-44b6-9c63-41eecd10a216'
+        label: 'Footer GOVCO'
+        provider: block_content
+        label_display: '0'
+        region: footer
+        weight: '0'
+        custom_id: block_content_306d71b1_8c6a_44b6_9c63_41eecd10a216
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: pacto_col_juventudes
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+    include_default_blocks: 1
+    saved: false
+weight: 0

@@ -1,0 +1,149 @@
+uuid: 28fcfbb4-5d24-4dc3-b699-aee1f88bab32
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:306d71b1-8c6a-44b6-9c63-41eecd10a216'
+    - 'block_content:basic:3731656c-3f12-4308-a0e8-47782413eab1'
+    - 'block_content:basic:4beded73-8324-49f2-8438-d520af056eec'
+    - 'block_content:basic:9dd6a42d-0f4b-4989-86b7-6405bb91e534'
+    - 'block_content:footer:0353550b-434b-40a8-939d-cb3b7cc3b730'
+  module:
+    - block_content
+    - system
+    - taxonomy
+    - tb_megamenu
+label: ada_019
+name: ada_019
+group: 'Micrositio Adopciones ICBF'
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  'entity_bundle:taxonomy_term':
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 3afd4e70-a631-4fe7-b5bb-f7de32a251f8
+    context_mapping:
+      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+    bundles:
+      programa_adopciones: programa_adopciones
+  request_path:
+    id: request_path
+    negate: false
+    uuid: c11a5594-0a06-4faf-be81-68e4447d4ab5
+    context_mapping: {  }
+    pages: "/adopciones\r\n/programa-adopciones\r\n/programa-adopciones/*\r\n/adopciones/quienes-pueden-ser-adoptados\r\n/adopciones/quienes-pueden-ser-adoptados/lineamiento\r\n/adopciones/quienes-pueden-adoptar\r\n/adopciones/requisitos-basicos\r\n/adopciones/proceso-de-adopcion\r\n/adopciones/proceso-de-adopcion/etapa-administrativa\r\n/adopciones/proceso-de-adopcion/etapa-judicial\r\n/adopciones/proceso-de-adopcion/seguimiento\r\n/adopciones/paso-paso\r\n/adopciones/instituciones-y-organismos-autorizados\r\n/adopciones/instituciones-organismos/colombia\r\n/adopciones/instituciones-organismos/internacionales"
+reactions:
+  blocks:
+    id: blocks
+    uuid: 8dcd1c7d-0a09-4c9f-9ab0-baeb03665b5a
+    blocks:
+      195eab2c-1561-4c93-8a84-5b40e93af116:
+        uuid: 195eab2c-1561-4c93-8a84-5b40e93af116
+        id: 'block_content:4beded73-8324-49f2-8438-d520af056eec'
+        label: 'GOVCO 1519'
+        provider: block_content
+        label_display: '0'
+        region: header
+        weight: '-2'
+        custom_id: block_content_4beded73_8324_49f2_8438_d520af056eec
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: ada_019
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+      e8b3bcc9-490b-400c-bf59-9dd2b022d06d:
+        uuid: e8b3bcc9-490b-400c-bf59-9dd2b022d06d
+        id: 'block_content:3731656c-3f12-4308-a0e8-47782413eab1'
+        label: 'TOP 1519 ICBF'
+        provider: block_content
+        label_display: '0'
+        region: header
+        weight: '-1'
+        custom_id: block_content_3731656c_3f12_4308_a0e8_47782413eab1
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: ada_019
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+      afbe1790-615e-4f84-adbd-c188d73c88c8:
+        uuid: afbe1790-615e-4f84-adbd-c188d73c88c8
+        id: 'block_content:0353550b-434b-40a8-939d-cb3b7cc3b730'
+        label: 'TOP ADA'
+        provider: block_content
+        label_display: '0'
+        region: header
+        weight: '0'
+        custom_id: block_content_0353550b_434b_40a8_939d_cb3b7cc3b730
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: ada_019
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+      4b52ed68-bea7-48aa-a558-f3c6d07662c9:
+        uuid: 4b52ed68-bea7-48aa-a558-f3c6d07662c9
+        id: 'tb_megamenu_menu_block:mgm-5ce41f0ce4a05'
+        label: 'Menu ADA'
+        provider: tb_megamenu
+        label_display: '0'
+        region: header
+        weight: '1'
+        custom_id: tb_megamenu_menu_block_mgm_5ce41f0ce4a05
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: ada_019
+        context_mapping: {  }
+        third_party_settings: {  }
+      05d0246f-9fe1-4082-8853-d961c549e907:
+        uuid: 05d0246f-9fe1-4082-8853-d961c549e907
+        id: 'block_content:9dd6a42d-0f4b-4989-86b7-6405bb91e534'
+        label: 'Footer 1519 -1'
+        provider: block_content
+        label_display: '0'
+        region: footer
+        weight: '0'
+        custom_id: block_content_9dd6a42d_0f4b_4989_86b7_6405bb91e534
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: ada_019
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+      950f9060-d827-44f2-90c8-5d7d7985d59e:
+        uuid: 950f9060-d827-44f2-90c8-5d7d7985d59e
+        id: 'block_content:306d71b1-8c6a-44b6-9c63-41eecd10a216'
+        label: 'Footer GOVCO'
+        provider: block_content
+        label_display: '0'
+        region: footer
+        weight: '0'
+        custom_id: block_content_306d71b1_8c6a_44b6_9c63_41eecd10a216
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: ada_019
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+    include_default_blocks: 1
+    saved: false
+weight: 0

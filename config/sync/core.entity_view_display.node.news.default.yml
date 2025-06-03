@@ -25,17 +25,393 @@ dependencies:
     - field.field.node.news.field_section_tag
     - field.field.node.news.field_youtube
     - node.type.news
+    - views.view.banners
+    - views.view.content
+    - views.view.news
+    - views.view.news_related_content
+  content:
+    - 'block_content:footer:1aba5298-d15d-4ab0-ae0c-b02889ddedce'
   module:
+    - block_content
+    - bootstrap_layouts
     - comment
     - datetime
     - entity_reference_revisions
     - file
     - fivestar
     - image
+    - layout_builder
+    - panelizer
     - slick
     - text
     - user
+    - views
     - youtube
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: bs_2col
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            left:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-8: col-sm-8
+                col-md-8: col-md-8
+                col-lg-8: col-lg-8
+              add_region_classes: 1
+              attributes: ''
+            right:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-4: col-sm-4
+                col-md-4: col-md-4
+                col-lg-4: col-lg-4
+              add_region_classes: 1
+              attributes: ''
+          context_visibility: {  }
+          context_all_must_pass: 1
+        components:
+          7dce0ac1-87da-4cec-badc-5f7b220b6bdd:
+            uuid: 7dce0ac1-87da-4cec-badc-5f7b220b6bdd
+            region: left
+            configuration:
+              id: 'field_block:node:news:field_lugar'
+              label: Lugar
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 2
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          2443ff28-8557-4028-80ce-35e3170099bd:
+            uuid: 2443ff28-8557-4028-80ce-35e3170099bd
+            region: left
+            configuration:
+              id: 'field_block:node:news:field_date'
+              label: Fecha
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: datetime_default
+                label: hidden
+                settings:
+                  timezone_override: ''
+                  format_type: medium
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 3
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          1533f1a2-5749-4dc8-aa74-117f2ae52564:
+            uuid: 1533f1a2-5749-4dc8-aa74-117f2ae52564
+            region: left
+            configuration:
+              id: 'block_content:1aba5298-d15d-4ab0-ae0c-b02889ddedce'
+              label: 'Share Buttons o19'
+              label_display: '0'
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 4
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          e57cfc9b-03ef-4778-932d-ced45293bce5:
+            uuid: e57cfc9b-03ef-4778-932d-ced45293bce5
+            region: left
+            configuration:
+              id: 'field_block:node:news:field_resume'
+              label: Resumen
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 6
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          da66b3a8-9c5f-4323-b15b-bfd9d1bbd20f:
+            uuid: da66b3a8-9c5f-4323-b15b-bfd9d1bbd20f
+            region: left
+            configuration:
+              id: 'field_block:node:news:field_multimedia_collection'
+              label: 'Audio y/o Video'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 7
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          a8f54f39-71f0-4611-976d-6c714156d6e0:
+            uuid: a8f54f39-71f0-4611-976d-6c714156d6e0
+            region: left
+            configuration:
+              id: 'field_block:node:news:field_content'
+              label: Contenido
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 8
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          1728f553-34c0-46ac-a9db-2c2e219eff09:
+            uuid: 1728f553-34c0-46ac-a9db-2c2e219eff09
+            region: left
+            configuration:
+              id: 'field_block:node:news:field_youtube'
+              label: Youtube
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: youtube_video
+                label: hidden
+                settings:
+                  youtube_size: responsive
+                  youtube_width: ''
+                  youtube_height: ''
+                  youtube_autoplay: false
+                  youtube_mute: false
+                  youtube_loop: false
+                  youtube_controls: false
+                  youtube_autohide: false
+                  youtube_iv_load_policy: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 9
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          a60fc687-d355-4f07-a1ff-1f0d481e1e63:
+            uuid: a60fc687-d355-4f07-a1ff-1f0d481e1e63
+            region: left
+            configuration:
+              id: 'field_block:node:news:field_images'
+              label: 'Imagen(es) complementarias'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: slick_image
+                label: hidden
+                settings:
+                  caption:
+                    alt: '0'
+                    title: '0'
+                  optionset: default
+                  link: ''
+                  layout: ''
+                  cache: 0
+                  admin_uri: '/layout_builder/add/block/defaults/node.news.default/0/left/field_block%3Anode%3Anews%3Afield_images?_wrapper_format=drupal_dialog.off_canvas&ajax_form=1&_wrapper_format=drupal_ajax'
+                  background: false
+                  box_caption: ''
+                  box_caption_custom: ''
+                  loading: ''
+                  preload: false
+                  box_style: ''
+                  image_style: ''
+                  media_switch: ''
+                  ratio: ''
+                  thumbnail_style: ''
+                  grid: ''
+                  grid_medium: ''
+                  grid_small: ''
+                  style: nativegrid
+                  skin: ''
+                  overridables:
+                    arrows: '0'
+                    autoplay: '0'
+                    dots: '0'
+                    draggable: '0'
+                    infinite: '0'
+                    mouseWheel: '0'
+                    randomize: '0'
+                    variableWidth: '0'
+                  optionset_thumbnail: ''
+                  skin_thumbnail: ''
+                  thumbnail_caption: ''
+                  thumbnail_effect: ''
+                  thumbnail_position: ''
+                  override: false
+                  preserve_keys: false
+                  visible_items: null
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 10
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          61c7af6d-e5c9-4acc-9cd6-152eb770036f:
+            uuid: 61c7af6d-e5c9-4acc-9cd6-152eb770036f
+            region: left
+            configuration:
+              id: 'field_block:node:news:field_attached_files'
+              label: Documento
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: file_default
+                label: hidden
+                settings:
+                  use_description_as_link_text: true
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 11
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          05384cef-d715-49d4-a32f-f93b06e5393c:
+            uuid: 05384cef-d715-49d4-a32f-f93b06e5393c
+            region: left
+            configuration:
+              id: 'views_block:news-block_6'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 12
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          43b4d58c-ba63-417d-97df-a15c4ddf3a33:
+            uuid: 43b4d58c-ba63-417d-97df-a15c4ddf3a33
+            region: left
+            configuration:
+              id: 'views_block:news-block_7'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 5
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          9a693a76-1243-4175-bab1-6f9250605b0c:
+            uuid: 9a693a76-1243-4175-bab1-6f9250605b0c
+            region: right
+            configuration:
+              id: 'views_block:news_related_content-block_newscol'
+              label: 'Más noticias'
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: 'Más noticias'
+              items_per_page: none
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          679391a3-8e9b-4bcd-b1a2-6cc0dfc0ac14:
+            uuid: 679391a3-8e9b-4bcd-b1a2-6cc0dfc0ac14
+            region: right
+            configuration:
+              id: 'views_block:banners-block_22'
+              label: 'Actividades de Bienestar'
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: 'Actividades de Bienestar'
+              items_per_page: none
+            weight: 2
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          9b36ef08-f6e2-4646-a085-3c6c314e0e67:
+            uuid: 9b36ef08-f6e2-4646-a085-3c6c314e0e67
+            region: left
+            configuration:
+              id: 'views_block:content-block_content_title'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+        third_party_settings: {  }
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.news.default
 targetEntityType: node
 bundle: news

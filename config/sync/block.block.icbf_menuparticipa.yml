@@ -1,11 +1,10 @@
-uuid: eaf4ae2f-2516-4c70-b154-ebc348a01c29
+uuid: 3994e7a7-e52d-4d87-b26f-031a63af24e0
 langcode: es
 status: true
 dependencies:
   content:
-    - 'block_content:footer:e22aa941-75b9-4b6b-9974-71bafadb22db'
+    - 'block_content:footer:eb2b6982-a3f6-4d89-ad90-ce4d0e6bb16d'
   module:
-    - block_class
     - block_content
   theme:
     - icbf
@@ -14,9 +13,9 @@ theme: icbf
 region: hidden
 weight: 0
 provider: null
-plugin: 'block_content:e22aa941-75b9-4b6b-9974-71bafadb22db'
+plugin: 'block_content:eb2b6982-a3f6-4d89-ad90-ce4d0e6bb16d'
 settings:
-  id: 'block_content:e22aa941-75b9-4b6b-9974-71bafadb22db'
+  id: 'block_content:eb2b6982-a3f6-4d89-ad90-ce4d0e6bb16d'
   label: 'Menú Participa'
   label_display: '0'
   provider: block_content

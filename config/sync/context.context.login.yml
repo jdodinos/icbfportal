@@ -1,0 +1,48 @@
+uuid: 62b58590-5829-4dd0-bfa3-54aadb3190bb
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:footer:2375db9a-3b72-4f6c-9bce-66db9b34b62d'
+  module:
+    - block_content
+    - system
+label: login
+name: login
+group: null
+description: ''
+requireAllConditions: true
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: 211c6662-65c2-4b9f-bc48-1b92999df372
+    context_mapping: {  }
+    pages: /user/login
+reactions:
+  blocks:
+    id: blocks
+    uuid: 8ca0c061-f999-433f-a45f-60b6f1a8e4c2
+    blocks:
+      8d91a33a-ce95-44c5-ab72-c204fbd46390:
+        uuid: 8d91a33a-ce95-44c5-ab72-c204fbd46390
+        id: 'block_content:2375db9a-3b72-4f6c-9bce-66db9b34b62d'
+        label: 'Asistencia Login'
+        provider: block_content
+        label_display: '0'
+        region: content
+        weight: '0'
+        custom_id: block_content_2375db9a_3b72_4f6c_9bce_66db9b34b62d
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: login
+        context_mapping: {  }
+        status: true
+        info: ''
+        view_mode: full
+        third_party_settings: {  }
+    include_default_blocks: 1
+    saved: false
+weight: 0

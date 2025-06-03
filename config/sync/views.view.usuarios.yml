@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - user.role.administrador_icbf
+    - user.role.administrator
     - user.role.citaciones
     - user.role.defensor_de_familia
   module:
@@ -87,6 +88,7 @@ display:
         type: role
         options:
           role:
+            administrator: administrator
             administrador_icbf: administrador_icbf
             citaciones: citaciones
             defensor_de_familia: defensor_de_familia
@@ -243,7 +245,10 @@ display:
         type: views_query
         options: {  }
       display_description: ''
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
     cache_metadata:
       max-age: -1
       contexts:
