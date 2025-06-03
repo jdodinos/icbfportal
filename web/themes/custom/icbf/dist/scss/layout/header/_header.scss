@@ -1,6 +1,5 @@
 @use "../../abstracts/variables" as var;
 
-
 .navbar-default {
     background-color: var.$background-color !important;
     border: none;
@@ -20,25 +19,29 @@
 
 .header-social {
     margin: auto;
+
     ul {
         margin-bottom: 0;
         padding-left: 0;
+
         li {
             display: inline-block;
             padding: 0;
+
             .fa {
-                display: inline-block;
-                width: 32px;
-                height: 32px;
                 border-radius: 100%;
-                text-align: center;
-                line-height: 32px;
                 color: #fff;
+                display: inline-block;
                 font-size: 1.3em;
+                height: 32px;
+                line-height: 32px;
                 margin: 0 7px 0 0;
+                text-align: center;
+                width: 32px;
             }
         }
     }
+
     span {
         display: none;
     }
@@ -49,24 +52,28 @@
 }
 
 #top_menu {
-    font-size: 0.9em;
     background: #74bc4d;
+    font-size: 0.9em;
     height: 49px;
     padding: 8px 0;
+
     ul.menu li {
         float: left;
+
         a {
-            padding: 5px 8px;
             color: #fff;
+            padding: 5px 8px;
+
             &:hover {
                 color: none;
             }
         }
     }
+
     .btn-primary {
         background: #FFF;
-        color: var.$icbf_green;
         border: none;
+        color: var.$icbf_green;
     }
 }
 
@@ -80,19 +87,20 @@
 }
 
 .navbar {
-    position: relative;
-    min-height: none;
-    margin-bottom: 15px;
     border: none;
+    margin-bottom: 15px;
+    min-height: none;
+    position: relative;
 }
 
-#block-menu-menu-menu-superior .nav > li > a:hover,
-#block-menu-menu-menu-superior.nav > li > a:focus {
+#block-menu-menu-menu-superior .nav>li>a:hover,
+#block-menu-menu-menu-superior.nav>li>a:focus {
     background: none;
 }
 
 #accesibility {
     float: left;
+
     img {
         width: 33px;
     }
@@ -100,45 +108,52 @@
 
 #block-views-exp-sarnia-search-page {
     .views-exposed-widgets {
-        padding: 0;
         margin: 0;
-    }
-    .views-widget-filter-search_api_views_fulltext {
-        width: 100%;
         padding: 0;
+    }
+
+    .views-widget-filter-search_api_views_fulltext {
+        padding: 0;
+        width: 100%;
+
         input {
-            height: 33px;
-            border-top-right-radius: 0;
+            border: none;
+            border-bottom-left-radius: 50px;
             border-bottom-right-radius: 0;
             border-top-left-radius: 50px;
-            border-bottom-left-radius: 50px;
+            border-top-right-radius: 0;
             box-shadow: none;
-            border: none;
+            height: 33px;
         }
     }
+
     .btn {
         padding: 0;
     }
+
     input,
     select {
         background: #FFF;
     }
+
     form {
-        width: 76%;
         float: left;
         margin-right: 26px;
+        width: 76%;
     }
+
     .views-submit-button {
-        padding: 0;
         height: 33px;
+        padding: 0;
+
         .form-submit {
-            margin-top: 0;
             border: none;
-            height: 100%;
-            border-top-left-radius: 0;
             border-bottom-left-radius: 0;
-            border-top-right-radius: 50px;
             border-bottom-right-radius: 50px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 50px;
+            height: 100%;
+            margin-top: 0;
             width: 100%;
         }
     }
@@ -146,4 +161,11 @@
 
 #block-icbf-module-citizen-situation {
     margin-left: 0.5em;
+}
+
+.region-nav-main {
+    border-bottom: 2px solid #6db544;
+    display: block;
+    margin: 0 auto;
+    max-width: 1150px;
 }
