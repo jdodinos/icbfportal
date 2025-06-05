@@ -21,6 +21,7 @@ conditions:
       acta_contentiva: acta_contentiva
       agencies_adoptions_colombian: agencies_adoptions_colombian
       info_contexto: info_contexto
+      multimedia: multimedia
 reactions:
   blocks:
     id: blocks
