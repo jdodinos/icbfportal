@@ -244,6 +244,29 @@ third_party_settings:
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
+          5f2e5f3c-9935-47b4-b4bd-665fe77cf002:
+            uuid: 5f2e5f3c-9935-47b4-b4bd-665fe77cf002
+            region: main
+            configuration:
+              id: 'field_block:node:multimedia:field_section'
+              label: Sección
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 4
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
         third_party_settings: {  }
   panelizer:
     enable: false
