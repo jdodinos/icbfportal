@@ -1,0 +1,26 @@
+uuid: 841a856a-5797-41fb-9816-27a8ddcaccce
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:da6f4e50-6dd8-49b7-98a9-775f24efc25d'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - icbf
+id: icbf_blockmegamenu15hablemos140
+theme: icbf
+region: hidden
+weight: 0
+provider: null
+plugin: 'block_content:da6f4e50-6dd8-49b7-98a9-775f24efc25d'
+settings:
+  id: 'block_content:da6f4e50-6dd8-49b7-98a9-775f24efc25d'
+  label: 'Block megamenu - 15 Hablemos 1 4 0'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
