@@ -23,10 +23,14 @@ function icbf_preprocess_page(&$variables) {
  */
 function icbf_preprocess_field(&$variables) {
   $field_to_check = [
-    'field_content',
-    'field_video_02',
+    'body',
     'field_builder',
+    'field_content',
+    'field_landings_top',
+    'field_nnna_body',
+    'field_video_02',
   ];
+
   if (in_array($variables['field_name'], $field_to_check)) {
     $items = &$variables['items'];
     foreach ($items as &$item) {
@@ -34,7 +38,7 @@ function icbf_preprocess_field(&$variables) {
         $item['content']['#format'] = 'full_html';
       }
 
-      if ($variables['field_name'] == 'field_builder' && isset($item['content']['#text'])) {
+      if (isset($item['content']['#text'])) {
         $html = $item['content']['#text'];
         $item['content']['#text'] = icbf_files_directory_process($html);
       }
@@ -52,6 +56,10 @@ function icbf_preprocess_field(&$variables) {
  *   The processed HTML content with placeholders replaced.
  */
 function icbf_files_directory_process($html) {
+  if (strpos($html, '-base-url-') === FALSE && strpos($html, '-files-directory-') === FALSE) {
+    return $html;
+  }
+
   $request = \Drupal::service('request_stack')->getCurrentRequest();
   $base_url = $request->getSchemeAndHttpHost();
   $public_files_path = \Drupal::config('system.file')->get('path.public') ?? 'sites/default/files';
