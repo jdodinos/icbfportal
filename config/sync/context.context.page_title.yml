@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - node
+    - taxonomy
 label: 'Page title'
 name: page_title
 group: 'Sitio Principal ICBF'
@@ -20,8 +21,39 @@ conditions:
     bundles:
       acta_contentiva: acta_contentiva
       agencies_adoptions_colombian: agencies_adoptions_colombian
+      announcement: announcement
+      banner_home: banner_home
+      bot_n_home: bot_n_home
+      curriculum_vitae: curriculum_vitae
+      document: document
+      documentos_contrataci_n: documentos_contrataci_n
+      documentos_de_normativa: documentos_de_normativa
+      documento_de_convocatoria: documento_de_convocatoria
+      documento_en_construccion: documento_en_construccion
+      documento_multiple: documento_multiple
+      encargos: encargos
+      evaluaci_n: evaluaci_n
+      forum: forum
       info_contexto: info_contexto
+      isotope_example: isotope_example
+      local_shopping: local_shopping
+      monitoreo_gesti_n: monitoreo_gesti_n
       multimedia: multimedia
+      notifications: notifications
+      portfolio_tramite: portfolio_tramite
+      process: process
+      rendicion_de_cuentas: rendicion_de_cuentas
+      summon_sdg: summon_sdg
+      tramites_vus: tramites_vus
+      transparency: transparency
+  'entity_bundle:taxonomy_term':
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: b783edb7-1ba2-431f-bba4-80e1a5c90051
+    context_mapping:
+      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+    bundles:
+      ninos_ninas_y_adolescentes: ninos_ninas_y_adolescentes
 reactions:
   blocks:
     id: blocks

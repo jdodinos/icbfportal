@@ -152,29 +152,6 @@ third_party_settings:
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
-          fae4fb0a-4263-4f34-b8f2-601d36b92959:
-            uuid: fae4fb0a-4263-4f34-b8f2-601d36b92959
-            region: left
-            configuration:
-              id: 'field_block:node:instituciones_adopciones:field_address_world'
-              label: 'Dirección:'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: string
-                label: inline
-                settings:
-                  link_to_entity: false
-                third_party_settings:
-                  field_formatter_class:
-                    class: ''
-            weight: 4
-            additional:
-              context_visibility: {  }
-              context_all_must_pass: 1
           cb6183bf-cff4-4b58-b42c-b53fecc32cca:
             uuid: cb6183bf-cff4-4b58-b42c-b53fecc32cca
             region: left
@@ -307,29 +284,6 @@ third_party_settings:
                   field_formatter_class:
                     class: ''
             weight: 4
-            additional:
-              context_visibility: {  }
-              context_all_must_pass: 1
-          f55d0eb2-12c6-4dde-9809-f3b3dfbccfa3:
-            uuid: f55d0eb2-12c6-4dde-9809-f3b3dfbccfa3
-            region: bottom
-            configuration:
-              id: 'field_block:node:instituciones_adopciones:field_address_col'
-              label: 'Sede en Colombia'
-              label_display: visible
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: string
-                label: hidden
-                settings:
-                  link_to_entity: false
-                third_party_settings:
-                  field_formatter_class:
-                    class: ''
-            weight: 5
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
