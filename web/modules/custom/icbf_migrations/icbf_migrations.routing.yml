@@ -1,0 +1,9 @@
+icbf_migrations.panelizer_migration:
+  path: '/admin/icbf/panelizer-migration'
+  defaults:
+    _form: '\Drupal\icbf_migrations\Form\PanelizerMigrationForm'
+    _title: 'Panelizer Migration'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE

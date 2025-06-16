@@ -20,6 +20,7 @@ dependencies:
     - field.field.node.announcement.field_resume
     - field.field.node.announcement.field_section
     - field.field.node.announcement.field_subtitle
+    - field.field.node.announcement.layout_builder__layout
     - node.type.announcement
   module:
     - comment
@@ -288,5 +289,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
+  layout_builder__layout: true
   publish_on: true
   unpublish_on: true

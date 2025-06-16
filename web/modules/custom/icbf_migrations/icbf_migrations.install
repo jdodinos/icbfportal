@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function icbf_migrations_schema() {
+  $schema['panelizer_migration'] = [
+    'description' => 'Store the status for entities with defined structure un the Panelizer module.',
+    'fields' => [
+      'id' => [
+        'description' => 'Unique ID for the record',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'entity_id' => [
+        'description' => 'TheThe entity id.',
+        'type' => 'int',
+        'not null' => TRUE,
+      ],
+      'entity_type' => [
+        'description' => 'The entity type (e.g., node, user).',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ],
+      'status' => [
+        'description' => 'The migration status.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'data' => [
+        'description' => 'JSON data.',
+        'type' => 'text',
+        'not null' => FALSE,
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  return $schema;
+}
