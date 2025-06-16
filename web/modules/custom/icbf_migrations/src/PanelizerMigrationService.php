@@ -50,6 +50,9 @@ class PanelizerMigrationService {
     return $entities;
   }
 
+  /**
+   * The getPanelizerNodes function.
+   */
   public function getPanelizerNodes($table_to_return = ['node'], $nids = []) {
     $connection = Database::getConnection('default', 'migrate');
     $query = $connection->select('node', 'n');
@@ -81,6 +84,53 @@ class PanelizerMigrationService {
       $query->orderBy('pp.panel', 'ASC');
     }
 
+    return $query->execute()->fetchAll();
+  }
+
+  /**
+   * Fetches Panelizer vocabularies from the database.
+   *
+   * @param array $nids
+   *   An optional array of Ids to filter the results.
+   *
+   * @return \Drupal\Core\Database\StatementInterface
+   *   The database query result.
+   */
+  public function getPanelizerTerms($table_to_return = ['panelizer_entity'], $tids = []) {
+    $connection = Database::getConnection('default', 'migrate');
+    $query = $connection->select('panelizer_entity', 'pe');
+    $query->innerJoin('panels_display', 'pd', 'pe.did = pd.did');
+    $query->innerjoin('taxonomy_term_data', 'ttd', 'pe.entity_id = ttd.tid');
+    $query->innerJoin('taxonomy_vocabulary', 'tv', 'tv.vid = ttd.vid');
+    $query->condition('pe.did', 0, '<>');
+    $query->condition('pe.entity_type', 'taxonomy_term', '=');
+    $query->condition('pd.layout', 'onecol_page', '<>');
+    if (!empty($tids)) {
+      $query->condition('pe.entity_id', $tids, 'IN');
+    }
+
+    // if (in_array('node', $table_to_return)) {
+    //   $query->fields('n', ['nid', 'vid', 'title']);
+    //   $query->addField('n', 'type', 'entity_type');
+    //   $query->fields('pe', ['did']);
+    //   $query->orderBy('n.nid', 'ASC');
+    // }
+    if (in_array('panelizer_entity', $table_to_return)) {
+      $query->fields('pe');
+      $query->fields('ttd', ['name', 'vid']);
+      $query->addField('tv', 'name', 'vocabulary');
+      $query->orderBy('ttd.vid', 'ASC');
+    }
+    if (in_array('panels_display', $table_to_return)) {
+      $query->fields('pd');
+    }
+    if (in_array('panels_pane', $table_to_return)) {
+      $query->innerJoin('panels_pane', 'pp', 'pe.did = pp.did');
+      $query->fields('pp');
+      $query->orderBy('pp.position', 'ASC');
+      $query->orderBy('pp.panel', 'ASC');
+    }
+    // $query->range(0, 10);
     return $query->execute()->fetchAll();
   }
 
