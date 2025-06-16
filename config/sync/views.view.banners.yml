@@ -6975,9 +6975,9 @@ display:
           wrap: 1
           columns: '1'
           breakpoints: md
-          display: fields
-          image: ''
-          title: ''
+          display: content
+          image: field_list_image
+          title: field_resume
           description: ''
       row:
         type: fields
