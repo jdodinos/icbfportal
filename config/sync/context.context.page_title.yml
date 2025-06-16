@@ -1,0 +1,79 @@
+uuid: dfc72e83-5748-48ad-8df6-d9278d06b25e
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+label: 'Page title'
+name: page_title
+group: 'Sitio Principal ICBF'
+description: 'Título de la página'
+requireAllConditions: false
+disabled: false
+conditions:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 8e5382af-5cf4-4b74-af66-26abada9fa74
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      acta_contentiva: acta_contentiva
+      agencies_adoptions_colombian: agencies_adoptions_colombian
+      announcement: announcement
+      banner_home: banner_home
+      bot_n_home: bot_n_home
+      curriculum_vitae: curriculum_vitae
+      document: document
+      documentos_contrataci_n: documentos_contrataci_n
+      documentos_de_normativa: documentos_de_normativa
+      documento_de_convocatoria: documento_de_convocatoria
+      documento_en_construccion: documento_en_construccion
+      documento_multiple: documento_multiple
+      encargos: encargos
+      evaluaci_n: evaluaci_n
+      forum: forum
+      info_contexto: info_contexto
+      isotope_example: isotope_example
+      local_shopping: local_shopping
+      monitoreo_gesti_n: monitoreo_gesti_n
+      multimedia: multimedia
+      notifications: notifications
+      portfolio_tramite: portfolio_tramite
+      process: process
+      rendicion_de_cuentas: rendicion_de_cuentas
+      summon_sdg: summon_sdg
+      tramites_vus: tramites_vus
+      transparency: transparency
+  'entity_bundle:taxonomy_term':
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: b783edb7-1ba2-431f-bba4-80e1a5c90051
+    context_mapping:
+      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+    bundles:
+      ninos_ninas_y_adolescentes: ninos_ninas_y_adolescentes
+reactions:
+  blocks:
+    id: blocks
+    uuid: 61e3c8d8-bbe7-437f-b8bb-316e0ee5b4ab
+    blocks:
+      fa4f5fc2-b8ca-487b-a568-7b82ac3b112c:
+        uuid: fa4f5fc2-b8ca-487b-a568-7b82ac3b112c
+        id: page_title_block
+        label: 'Título de la página'
+        provider: core
+        label_display: '0'
+        region: feature
+        weight: '0'
+        custom_id: page_title_block
+        theme: icbf
+        css_class: ''
+        unique: 1
+        context_id: page_title
+        context_mapping: {  }
+        third_party_settings: {  }
+    include_default_blocks: 1
+    saved: false
+weight: 0

@@ -30,7 +30,7 @@ dependencies:
     - views_infinite_scroll
     - youtube
 id: articulos_mis_manos_micrositio
-label: articulos_mis_manos_micrositio
+label: 'Artículos Mis Manos Microstiio'
 module: views
 description: ''
 tag: ''

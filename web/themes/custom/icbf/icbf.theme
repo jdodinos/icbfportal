@@ -5,17 +5,48 @@
  * icbf theme file.
  */
 
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\node\NodeInterface;
+
 /**
  * Implements hook_preprocess_HOOK().
  */
 function icbf_preprocess_html(&$variables) {
+  // Add classes generics.
+  $current_path = \Drupal::service('path.current')->getPath();
+
+  // Add class node type.
+  if (isset($variables['node_type'])) {
+    $variables['attributes']['class'][] = 'node-type-' . $variables['node_type'];
+  }
+
+  foreach (\Drupal::routeMatch()->getParameters() as $param) {
+    if ($param instanceof EntityInterface) {
+      // Add class to Vocabularies.
+      if ($param instanceof Term) {
+        $vid = $param->vid->getString();
+        $variables['attributes']['class'][] = 'page-taxonomy-' . $vid;
+      }
+    }
+  }
+
+  if (\Drupal::service('path.matcher')->isFrontPage()) {
+    $variables['attributes']['class'][] = 'frontpage';
+  }
+
+  // Add classes to path alias.
+  $path_alias = \Drupal::service('path_alias.manager')->getAliasByPath($current_path);
+  $path_alias = 'page-' . ltrim($path_alias, '/');
+  $path_alias = strtolower($path_alias);
+  $variables['attributes']['class'][] = Html::cleanCssIdentifier($path_alias);
 }
 
 /**
  * Implements hook_preprocess_HOOK().
  */
 function icbf_preprocess_page(&$variables) {
-  // dump($variables);
 }
 
 /**
@@ -23,23 +54,27 @@ function icbf_preprocess_page(&$variables) {
  */
 function icbf_preprocess_field(&$variables) {
   $field_to_check = [
-    'field_content',
-    'field_video_02',
+    'body',
     'field_builder',
+    'field_content',
+    'field_landings_top',
+    'field_nnna_body',
+    'field_video_02',
   ];
-  if (in_array($variables['field_name'], $field_to_check)) {
+
+  // if (in_array($variables['field_name'], $field_to_check)) {
     $items = &$variables['items'];
     foreach ($items as &$item) {
-      if (is_null($item['content']['#format'])) {
-        $item['content']['#format'] = 'full_html';
+      if (isset($item['content']) && isset($item['content']['#format']) && is_null($item['content']['#format'])) {
+          $item['content']['#format'] = 'full_html';
       }
 
-      if ($variables['field_name'] == 'field_builder' && isset($item['content']['#text'])) {
+      if (isset($item['content']['#text'])) {
         $html = $item['content']['#text'];
         $item['content']['#text'] = icbf_files_directory_process($html);
       }
     }
-  }
+  // }
 }
 
 /**
@@ -52,6 +87,10 @@ function icbf_preprocess_field(&$variables) {
  *   The processed HTML content with placeholders replaced.
  */
 function icbf_files_directory_process($html) {
+  if (strpos($html, '-base-url-') === FALSE && strpos($html, '-files-directory-') === FALSE) {
+    return $html;
+  }
+
   $request = \Drupal::service('request_stack')->getCurrentRequest();
   $base_url = $request->getSchemeAndHttpHost();
   $public_files_path = \Drupal::config('system.file')->get('path.public') ?? 'sites/default/files';
