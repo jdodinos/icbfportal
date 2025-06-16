@@ -1,0 +1,4 @@
+services:
+  icbf_migrations.panelizer:
+    class: Drupal\icbf_migrations\PanelizerMigrationService
+    arguments: ["@database"]

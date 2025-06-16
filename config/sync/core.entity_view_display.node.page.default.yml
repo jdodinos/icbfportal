@@ -1,5 +1,5 @@
 uuid: 8d715508-9067-4de0-9f78-4308394f882c
-langcode: en
+langcode: es
 status: true
 dependencies:
   config:
@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.page.field_resume
     - field.field.node.page.field_section
     - field.field.node.page.field_youtube
+    - field.field.node.page.layout_builder__layout
     - node.type.page
   module:
     - bootstrap_layouts
@@ -35,7 +36,7 @@ third_party_settings:
     default: default
   layout_builder:
     enabled: true
-    allow_custom: false
+    allow_custom: true
     sections:
       -
         layout_id: bs_1col
@@ -157,5 +158,6 @@ hidden:
   field_resume: true
   field_section: true
   langcode: true
+  layout_builder__layout: true
   search_api_attachments: true
   search_api_excerpt: true
