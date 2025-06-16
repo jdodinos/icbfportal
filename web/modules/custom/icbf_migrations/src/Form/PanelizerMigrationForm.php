@@ -134,6 +134,44 @@ class PanelizerMigrationForm extends FormBase {
       '#type' => 'tableselect',
       '#header' => $header,
       '#options' => $options,
+      '#empty' => $this->t('No nodes found'),
+    ];
+
+
+    $result_terms = $this->panelizer->getPanelizerTerms();
+    $options_term = [];
+    foreach ($result_terms as $item) {
+      $term_id = $item->entity_id;
+      $term_name = $item->name;
+      $vocabulary = $item->vocabulary;
+      $url = Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $term_id]);
+      $link = Link::fromTextAndUrl($term_name, $url);
+      $data = $this->panelizer->validateEntity($term_id, 'taxonomy_term');
+      $status = 'Pendiente';
+      $messages = $this->t('No messages.');
+      if ($data) {
+        if ($data->status == 1) {
+          $status = 'Migrado';
+        }
+        elseif ($data->status == 2) {
+          $status = 'Con Observaciones';
+          $messages = json_decode($data->data, TRUE);
+          $messages = Markup::create(implode('<br>', $messages));
+        }
+      }
+
+      $options_term[$term_id] = [
+        'id' => $term_id,
+        'status' => $status,
+        'title' => $link,
+        'entity' => $vocabulary,
+        'messages' => $messages,
+      ];
+    }
+    $form['taxonomies']['tids'] = [
+      '#type' => 'tableselect',
+      '#header' => $header,
+      '#options' => $options_term,
       '#empty' => $this->t('No users found'),
     ];
 
@@ -309,7 +347,7 @@ class PanelizerMigrationForm extends FormBase {
                   $region = $section_regions[$position];
                   $block_plugin_id = NULL;
                   $label_display = FALSE;
-                  if ($configuration['override_title'] && $configuration['override_title_text']) {
+                  if (isset($configuration['override_title']) && $configuration['override_title'] && isset($configuration['override_title_text']) && $configuration['override_title_text']) {
                     $label_display = TRUE;
                   }
 
@@ -603,112 +641,8 @@ class PanelizerMigrationForm extends FormBase {
         # code...
         break;
     }
-  }
 
-  // /**
-  //  * Fetches Panelizer nodes from the database.
-  //  *
-  //  * @param array $nids
-  //  *   An optional array of node IDs to filter the results.
-  //  *
-  //  * @return \Drupal\Core\Database\StatementInterface
-  //  *   The database query result.
-  //  */
-  // private function getPanelizerNodes($table_to_return = ['node'], $nids = []) {
-  //   $connection = Database::getConnection('default', 'migrate');
-  //   $query = $connection->select('node', 'n');
-  //   $query->innerJoin('panelizer_entity', 'pe', 'n.vid = pe.revision_id');
-  //   $query->innerJoin('panels_display', 'pd', 'pe.did = pd.did');
-  //   $query->condition('pe.did', 0, '<>');
-  //   // $query->condition('pd.layout', 'onecol_page', '<>');
-  //   if (!empty($nids)) {
-  //     $query->condition('n.nid', $nids, 'IN');
-  //   }
-
-  //   if (in_array('node', $table_to_return)) {
-  //     $query->fields('n', ['nid', 'vid', 'title']);
-  //     $query->addField('n', 'type', 'entity_type');
-  //     $query->fields('pe', ['did']);
-  //     $query->orderBy('n.nid', 'ASC');
-  //   }
-  //   if (in_array('panelizer_entity', $table_to_return)) {
-  //     $query->fields('pe');
-  //   }
-  //   if (in_array('panels_display', $table_to_return)) {
-  //     $query->fields('pd');
-  //   }
-  //   if (in_array('panels_pane', $table_to_return)) {
-  //     $query->innerJoin('panels_pane', 'pp', 'pe.did = pp.did');
-  //     $query->fields('pp');
-  //     $query->orderBy('pp.position', 'ASC');
-  //     $query->orderBy('pp.panel', 'ASC');
-  //   }
-
-  //   return $query->execute()->fetchAll();
-  // }
-
-  /**
-   * Fetches Panelizer vocabularies from the database.
-   *
-   * @param array $nids
-   *   An optional array of Ids to filter the results.
-   *
-   * @return \Drupal\Core\Database\StatementInterface
-   *   The database query result.
-   */
-  private function getPanelizerTerms($table_to_return = ['panelizer_entity'], $tids = []) {
-    $connection = Database::getConnection('default', 'migrate');
-    $query = $connection->select('panelizer_entity', 'pe');
-    $query->innerJoin('panels_display', 'pd', 'pe.did = pd.did');
-    $query->condition('pe.did', 0, '<>');
-    $query->condition('pe.entity_type', 'taxonomy_term', '=');
-    // $query->condition('pd.layout', 'onecol_page', '<>');
-    if (!empty($tids)) {
-      $query->condition('pe.entity_id', $tids, 'IN');
-    }
-
-    // if (in_array('node', $table_to_return)) {
-    //   $query->fields('n', ['nid', 'vid', 'title']);
-    //   $query->addField('n', 'type', 'entity_type');
-    //   $query->fields('pe', ['did']);
-    //   $query->orderBy('n.nid', 'ASC');
-    // }
-    if (in_array('panelizer_entity', $table_to_return)) {
-      $query->fields('pe');
-    }
-    if (in_array('panels_display', $table_to_return)) {
-      $query->fields('pd');
-    }
-    if (in_array('panels_pane', $table_to_return)) {
-      $query->innerJoin('panels_pane', 'pp', 'pe.did = pp.did');
-      $query->fields('pp');
-      $query->orderBy('pp.position', 'ASC');
-      $query->orderBy('pp.panel', 'ASC');
-    }
-    $query->range(0, 10);
-    return $query->execute()->fetchAll();
-  }
-
-  /**
-   * Validates the entity before migration.
-   *
-   * @param int $entity_id
-   *   The entity ID to validate.
-   * @param string $entity_type
-   *   The entity type (e.g., node, user).
-   *
-   * @return bool
-   *   TRUE if the entity is valid for migration, FALSE otherwise.
-   */
-  private function validateEntity($entity_id, $entity_type) {
-    $query = \Drupal::database()->select('panelizer_migration', 'pm')
-      ->fields('pm')
-      ->condition('entity_id', $entity_id)
-      ->condition('entity_type', $entity_type)
-      ->execute()
-      ->fetchObject();
-
-    return $query ?? FALSE;
+    // die();
   }
 
 }
