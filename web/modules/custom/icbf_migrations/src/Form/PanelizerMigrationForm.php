@@ -200,69 +200,7 @@ class PanelizerMigrationForm extends FormBase {
         $nodes = $this->panelizer->getPanelizerNodes(['node'], $nids);
         $panels_display = $this->panelizer->getPanelizerNodes(['panels_display'], $nids);
         // Creamos las secciones (filas) de Layout Builder.
-        $sections = [];
-        foreach ($panels_display as $item) {
-          $sections[$item->did] = [];
-          $layout_settings = unserialize($item->layout_settings);
-
-          if (empty($layout_settings) || !isset($layout_settings['items'])) {
-            $layout_settings = [
-              "items" => [
-                "main" => [
-                  "type" => "row",
-                  "contains" => "column",
-                  "children" => ['main-row'],
-                  "parent" => NULL,
-                ],
-                "main-row" => [
-                  "type" => "row",
-                  "contains" => "region",
-                  "children" => ["center"],
-                  "parent" => 1,
-                ],
-                "center" => [
-                  "type" => "region",
-                  "title" => "Centrado",
-                  "width" => 100,
-                  "width_type" => "%",
-                  "parent" => "main-row",
-                ],
-              ],
-            ];
-          }
-
-          $main = $layout_settings['items']['main'];
-          foreach ($main['children'] as $region_name) {
-            foreach ($layout_settings['items'] as $item_name => $value) {
-              if ($item_name === $region_name) {
-                $num_children = count($value['children']);
-                switch ($num_children) {
-                  case 4:
-                    $section_type = 'layout_fourcol_section';
-                    break;
-
-                  case 3:
-                    $section_type = 'layout_threecol_section';
-                    break;
-
-                  case 2:
-                    $section_type = 'layout_twocol_section';
-                    break;
-
-                  default:
-                    $section_type = 'layout_onecol';
-                }
-
-                // Crear una sección (fila) con un layout de una columna.
-                $sections[$item->did][] = [
-                  'children' => $value['children'],
-                  'section_name' => $region_name,
-                  'section' => new Section($section_type),
-                ];
-              }
-            }
-          }
-        }
+        $sections = $this->panelizer->createLayoutSections($panels_display);
 
         foreach ($nodes as $node_value) {
           $result_messages = [];
@@ -272,20 +210,12 @@ class PanelizerMigrationForm extends FormBase {
           if (!$node) {
             continue;
           }
+          // Reset the Entity layout regions.
+          $this->panelizer->deleteLayoutSectionsForEntity($node);
           $node_type = $node->getType();
+
           // Ensure that Layout Builder is enabled and has the field.
           if ($node->hasField('layout_builder__layout')) {
-            /** @var \Drupal\layout_builder\Field\LayoutSectionItemList $layout_field */
-            $layout_field = $node->get('layout_builder__layout');
-            $count = count($layout_field);
-
-            // Delete all items in the layout field.
-            for ($i = $count - 1; $i >= 0; $i--) {
-              $layout_field->removeItem($i);
-            }
-            // Save the node.
-            $node->save();
-
             $did = $node_value->did;
             $section_node = $sections[$did];
             foreach ($section_node as $row) {
@@ -313,39 +243,13 @@ class PanelizerMigrationForm extends FormBase {
               foreach ($section_node as &$row) {
                 $field_configuration = [];
                 if (isset($row['children']) && in_array($panel, $row['children'])) {
+                  $block_plugin_id = NULL;
                   $provider = 'layout_builder';
 
                   $section_id = $row['section']->getLayoutId();
-                  switch ($section_id) {
-                    case 'layout_onecol':
-                      $section_regions = ['content'];
-                      break;
-
-                    case 'layout_twocol_section':
-                      $section_regions = ['first', 'second'];
-                      break;
-
-                    case 'layout_threecol_section':
-                      $section_regions = [
-                        'first',
-                        'second',
-                        'third',
-                      ];
-                      break;
-
-                    case 'layout_fourcol_section':
-                      $section_regions = [
-                        'first',
-                        'second',
-                        'third',
-                        'fourth',
-                      ];
-                      break;
-                  }
-
                   $position = array_search($panel, $row['children']);
-                  $region = $section_regions[$position];
-                  $block_plugin_id = NULL;
+                  $region = $this->panelizer->getRegionInSection($section_id, $position);
+
                   $label_display = FALSE;
                   if (isset($configuration['override_title']) && $configuration['override_title'] && isset($configuration['override_title_text']) && $configuration['override_title_text']) {
                     $label_display = TRUE;
@@ -372,18 +276,13 @@ class PanelizerMigrationForm extends FormBase {
                       break;
 
                     case 'node_title':
-                      $block_plugin_id = 'page_title_block';
-                      $field_configuration = [
-                        'id' => $block_plugin_id,
-                        'label' => 'Title page',
-                        'provider' => 'core',
-                        'label_display' => $label_display,
-                        'configuration' => [
-                          'id' => 'page_title_block',
-                          'label' => 'Title page',
-                          'provider' => 'core',
-                        ],
-                      ];
+                      $this->panelizer->createDefaultConfiguration(
+                        'page_title_block',
+                        'Title page',
+                        'core',
+                        $label_display,
+                      );
+                      $field_configuration = $this->panelizer->block_config;
                       break;
 
                     case 'node_links':
@@ -404,20 +303,19 @@ class PanelizerMigrationForm extends FormBase {
                           $label = "Views {$view_id} - Display {$displays[$display_id]['display_title']} - Display ID {$display_id}";
                           $block_plugin_id = "{$layout_field}:{$view_id}-{$display_id}";
                           $provider = 'views';
+                          $label = $configuration['override_title_text'] ?? $label;
 
-                          $field_configuration = [
-                            'id' => $block_plugin_id,
-                            'label' => $configuration['override_title_text'] ?? $label,
-                            'provider' => $provider,
-                            'label_display' => $label_display,
-                            'formatter' => [
-                              'override_title' => $configuration['override_title'],
-                              'override_title_text' => $configuration['override_title_text'],
-                              'override_title_heading' => $configuration['override_title_heading'],
-                            ],
-                          ];
+                          $this->panelizer->createDefaultConfiguration(
+                            $block_plugin_id,
+                            $label,
+                            $provider,
+                            $label_display,
+                          );
+                          $this->panelizer->addFormatterConfig($configuration);
+                          $field_configuration = $this->panelizer->block_config;
 
                           if (isset($configuration['args']) && !empty($configuration['args'])) {
+                            // $this->panelizer->addContextMappingConfig(['entity' => 'layout_builder.entity']);
                             dump('en views');
                             dump($configuration['args']);
                             dump($node);
@@ -467,10 +365,14 @@ class PanelizerMigrationForm extends FormBase {
                         ];
                         $provider = 'tb_megamenu';
                         $block_plugin_id = 'tb_megamenu_menu_block:' . $md_megamenus[$item->subtype] ?? $item->subtype;
-                        $field_configuration = [
-                          'id' => $block_plugin_id,
-                          'provider' => $provider,
-                        ];
+                        $this->panelizer->createDefaultConfiguration(
+                          $block_plugin_id,
+                          '',
+                          $provider,
+                          $label_display,
+                        );
+                        $this->panelizer->addFormatterConfig($configuration);
+                        $field_configuration = $this->panelizer->block_config;
                       }
                       if (strpos($item->subtype, 'facetapi') === 0) {
                         continue 2;
@@ -498,20 +400,17 @@ class PanelizerMigrationForm extends FormBase {
 
                         if (isset($block_uuid)) {
                           $block_plugin_id = "block_content:$block_uuid";
+                          $provider = 'block_content';
 
-                          $field_configuration = [
-                            'id' => $block_plugin_id,
-                            'label' => '',
-                            'provider' => 'block_content',
-                            'label_display' => $label_display,
-                            'context_mapping' => [],
-                            'formatter' => [
-                              'override_title' => $configuration['override_title'],
-                              'override_title_text' => $configuration['override_title_text'],
-                              'override_title_heading' => $configuration['override_title_heading'],
-                            ],
-                            'view_mode' => 'full',
-                          ];
+                          $this->panelizer->createDefaultConfiguration(
+                            $block_plugin_id,
+                            '',
+                            $provider,
+                            $label_display,
+                          );
+                          $this->panelizer->addFormatterConfig($configuration);
+                          $this->panelizer->addViewMode('full');
+                          $field_configuration = $this->panelizer->block_config;
                         }
                       }
 
@@ -528,28 +427,28 @@ class PanelizerMigrationForm extends FormBase {
                       break;
 
                     case 'node':
-                      // $configuration['nid'] = 303142;
-                      // $configuration['build_mode'] = 'full';
                       $node_referenced = \Drupal::entityTypeManager()->getStorage('node')
                         ->load($configuration['nid']);
                       if ($node_referenced) {
                         $block_plugin_id = 'node:' . $configuration['nid'];
-                        $field_configuration = [
-                          'id' => $block_plugin_id,
-                          'label' => $node_referenced->getTitle(),
-                          'label_display' => $label_display,
-                          'provider' => 'node',
-                          'links' => $configuration['links'] ?? 1,
-                          'leave_node_title' => $configuration['leave_node_title'] ?? 0,
-                          'build_mode' => $configuration['build_mode'] ?? 'full',
-                          'link_node_title' => $configuration['link_node_title'] ?? 0,
-                          'identifier' => $configuration['identifier'] ?? '',
-                          'content' => \Drupal::entityTypeManager()->getViewBuilder('node')
-                            ->view($node_referenced, $configuration['build_mode']),
-                          'context_mapping' => [
-                            'entity' => 'layout_builder.entity',
-                          ],
-                        ];
+                        $provider = 'node';
+                        $node_referenced_title = $node_referenced->getTitle();
+
+                        $this->panelizer->createDefaultConfiguration(
+                          $block_plugin_id,
+                          $node_referenced_title,
+                          $provider,
+                          $label_display,
+                        );
+                        $this->panelizer->addContextMappingConfig(['entity' => 'layout_builder.entity']);
+                        $field_configuration = $this->panelizer->block_config;
+                        $field_configuration['links'] = $configuration['links'] ?? 1;
+                        $field_configuration['leave_node_title'] = $configuration['leave_node_title'] ?? 0;
+                        $field_configuration['build_mode'] = $configuration['build_mode'] ?? 'full';
+                        $field_configuration['link_node_title'] = $configuration['link_node_title'] ?? 0;
+                        $field_configuration['identifier'] = $configuration['identifier'] ?? 1;
+                        $field_configuration['content'] = \Drupal::entityTypeManager()->getViewBuilder('node')
+                          ->view($node_referenced, $configuration['build_mode']);
                       }
                       else {
                         $result_messages[] = $this->t('Node with ID @nid not found.', ['@nid' => $configuration['nid']]);
@@ -569,16 +468,15 @@ class PanelizerMigrationForm extends FormBase {
 
                   if (isset($block_plugin_id)) {
                     if (empty($field_configuration)) {
-                      $field_configuration = [
-                        'id' => $block_plugin_id,
-                        'label' => $label,
-                        'provider' => $provider,
-                        'label_display' => $label_display,
-                        'context_mapping' => [
-                          'entity' => 'layout_builder.entity',
-                        ],
-                        'formatter' => $configuration,
-                      ];
+                      $this->panelizer->createDefaultConfiguration(
+                        $block_plugin_id,
+                        $label,
+                        $provider,
+                        $label_display,
+                      );
+                      $this->panelizer->addContextMappingConfig(['entity' => 'layout_builder.entity']);
+                      $this->panelizer->addFormatterConfig($configuration);
+                      $field_configuration = $this->panelizer->block_config;
                     }
 
                     // Create the layout builder component (item/block).
@@ -597,37 +495,7 @@ class PanelizerMigrationForm extends FormBase {
 
             // Save the node.
             $node->save();
-
-            // Save the record to have information about the migration.
-            $result = \Drupal::database()->select('panelizer_migration', 'pm')
-              ->fields('pm', ['id'])
-              ->condition('entity_id', $node_value->nid)
-              ->condition('entity_type', 'node')
-              ->execute()
-              ->fetchField();
-            $fields = [
-              'entity_id' => $node_value->nid,
-              'entity_type' => 'node',
-              'status' => 1,
-            ];
-            if (!empty($result_messages)) {
-              // Status 2 indicates that there were messages.
-              $fields['status'] = 2;
-              $fields['data'] = json_encode($result_messages);
-            }
-            if ($result) {
-              // Update the existing record.
-              \Drupal::database()->update('panelizer_migration')
-                ->fields($fields)
-                ->condition('id', $result)
-                ->execute();
-            }
-            else {
-              // Insert a new record.
-              \Drupal::database()->insert('panelizer_migration')
-                ->fields($fields)
-                ->execute();
-            }
+            $this->panelizer->insertNewLog($node->id(), 'node', $result_messages);
 
             // Add a message to the user.
             \Drupal::messenger()->addMessage(
@@ -638,11 +506,38 @@ class PanelizerMigrationForm extends FormBase {
         break;
 
       case 'taxonomy_term':
-        # code...
+        $tids = array_filter($form_state->getValue('tids'));
+        if (empty($tids)) {
+          \Drupal::messenger()->addError($this->t('No terms selected for migration.'));
+          return;
+        }
+        dump($tids);
+
+        $terms = $this->panelizer->getPanelizerTerms(['panelizer_entity'], $tids);
+        $panels_display = $this->panelizer->getPanelizerTerms(['panels_display'], $tids);
+        // Creamos las secciones (filas) de Layout Builder.
+        $sections = $this->panelizer->createLayoutSections($panels_display);
+        foreach ($terms as $term_value) {
+          $terms_messages = [];
+          dump($term_value);
+          dump($term_value->entity_id);
+          // Ensure that Layout Builder is enabled and customized.
+          $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')
+            ->load($term_value->entity_id);
+          if (!$term) {
+            continue;
+          }
+
+          // Reset the Entity layout regions.
+          $this->panelizer->deleteLayoutSectionsForEntity($term);
+          dump($term);
+        }
+        dump($panels_display);
+        dump($sections);
+        die();
         break;
     }
 
-    // die();
   }
 
 }
