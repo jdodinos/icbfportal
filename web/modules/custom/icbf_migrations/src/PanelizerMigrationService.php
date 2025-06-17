@@ -111,16 +111,11 @@ class PanelizerMigrationService {
       $query->condition('pe.entity_id', $tids, 'IN');
     }
 
-    // if (in_array('node', $table_to_return)) {
-    //   $query->fields('n', ['nid', 'vid', 'title']);
-    //   $query->addField('n', 'type', 'entity_type');
-    //   $query->fields('pe', ['did']);
-    //   $query->orderBy('n.nid', 'ASC');
-    // }
     if (in_array('panelizer_entity', $table_to_return)) {
       $query->fields('pe');
       $query->fields('ttd', ['name', 'vid']);
       $query->addField('tv', 'name', 'vocabulary');
+      $query->addField('tv', 'machine_name', ' voc_machine_name');
       $query->orderBy('ttd.vid', 'ASC');
     }
     if (in_array('panels_display', $table_to_return)) {
