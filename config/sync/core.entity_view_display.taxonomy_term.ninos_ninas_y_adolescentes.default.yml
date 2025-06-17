@@ -5,9 +5,74 @@ dependencies:
   config:
     - field.field.taxonomy_term.ninos_ninas_y_adolescentes.field_landings_top
     - field.field.taxonomy_term.ninos_ninas_y_adolescentes.field_nnna_body
+    - field.field.taxonomy_term.ninos_ninas_y_adolescentes.layout_builder__layout
     - taxonomy.vocabulary.ninos_ninas_y_adolescentes
   module:
+    - layout_builder
+    - layout_discovery
+    - panelizer
     - text
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          cd6633be-5857-4f23-84a9-7b66f159593e:
+            uuid: cd6633be-5857-4f23-84a9-7b66f159593e
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:ninos_ninas_y_adolescentes:description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          24c832bd-0511-4832-8bec-96444d4965a6:
+            uuid: 24c832bd-0511-4832-8bec-96444d4965a6
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:ninos_ninas_y_adolescentes:field_landings_top'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          7588dd89-5df9-4218-a3f5-2b48ace639f7:
+            uuid: 7588dd89-5df9-4218-a3f5-2b48ace639f7
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:ninos_ninas_y_adolescentes:field_nnna_body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: taxonomy_term.ninos_ninas_y_adolescentes.default
 targetEntityType: taxonomy_term
 bundle: ninos_ninas_y_adolescentes
@@ -36,5 +101,6 @@ content:
     region: content
 hidden:
   langcode: true
+  layout_builder__layout: true
   search_api_attachments: true
   search_api_excerpt: true
