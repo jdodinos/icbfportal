@@ -227,7 +227,13 @@ class PanelizerMigrationForm extends FormBase {
             $panels_id = $this->panelizer->getPanelizerNodes(['node', 'panels_pane'], [$node_value->nid]);
             foreach ($panels_id as $item) {
               $field_name = str_replace('node:', '', $item->subtype);
+              // Ignore the block if the node have not the field.
               if ($item->type == 'entity_field' && !$node->hasField($field_name)) {
+                continue;
+              }
+
+              // Ignore the hidden blocks.
+              if (!$item->shown) {
                 continue;
               }
 
@@ -315,21 +321,7 @@ class PanelizerMigrationForm extends FormBase {
                           $field_configuration = $this->panelizer->block_config;
 
                           if (isset($configuration['args']) && !empty($configuration['args'])) {
-                            // $this->panelizer->addContextMappingConfig(['entity' => 'layout_builder.entity']);
-                            // dump('en views');
-                            // dump($configuration['args']);
-                            // dump($node);
-                            $field_configuration['configuration'] = [
-                              'arguments' => [8154],
-                            ];
-                            // $field_configuration['context_mapping'] = [
-                            //   'argument_1' => 8154
-                            // ];
-                            dump($field_configuration);
-                            $result_messages[] = $this->t('Migrating view @view_id with display @display_id, Please review.', [
-                              '@view_id' => $view_id,
-                              '@display_id' => $display_id,
-                            ]);
+                            $field_configuration['arguments'] = explode('/', $configuration['args']);
                           }
 
                         }
@@ -479,6 +471,7 @@ class PanelizerMigrationForm extends FormBase {
                       $field_configuration = $this->panelizer->block_config;
                     }
 
+                    // dump($field_component);
                     // Create the layout builder component (item/block).
                     $field_component = new SectionComponent(
                       \Drupal::service('uuid')->generate(),
@@ -499,10 +492,11 @@ class PanelizerMigrationForm extends FormBase {
 
             // Add a message to the user.
             \Drupal::messenger()->addMessage(
-              $this->t('Node @nid has been migrated to Layout Builder.', ['@nid' => $node->id()])
+              $this->t('Node @nid @title has been migrated to Layout Builder.', ['@nid' => $node->id(), '@title' => $node->getTitle()])
             );
           }
         }
+        // die();
         break;
 
       case 'taxonomy_term':
@@ -511,7 +505,6 @@ class PanelizerMigrationForm extends FormBase {
           \Drupal::messenger()->addError($this->t('No terms selected for migration.'));
           return;
         }
-        // dump($tids);
 
         $terms = $this->panelizer->getPanelizerTerms(['panelizer_entity'], $tids);
         $panels_display = $this->panelizer->getPanelizerTerms(['panels_display'], $tids);
@@ -519,8 +512,6 @@ class PanelizerMigrationForm extends FormBase {
         $sections = $this->panelizer->createLayoutSections($panels_display);
         foreach ($terms as $term_value) {
           $result_messages = [];
-          // dump($term_value);
-          // dump($term_value->entity_id);
           // Ensure that Layout Builder is enabled and customized.
           $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')
             ->load($term_value->entity_id);
@@ -539,27 +530,20 @@ class PanelizerMigrationForm extends FormBase {
               $term->get('layout_builder__layout')->appendItem($row['section']);
             }
 
-
-
-
-
-
-
-
             // Add new sections to the node.
             $layout_field = $term->get(OverridesSectionStorage::FIELD_NAME);
-            // dump($layout_field);
-            // dump($term_value);
             $panels_id = $this->panelizer->getPanelizerTerms(['panelizer_entity', 'panels_pane'], [$term_value->entity_id]);
-            // dump('$panels_id');
-            // dump($panels_id);
             foreach ($panels_id as $item) {
               $field_name = str_replace('taxonomy_term:', '', $item->subtype);
+              // Ignore the block if the taxonomy have not the field.
               if ($item->type == 'entity_field' && !$term->hasField($field_name)) {
                 continue;
               }
-              // dump('$item');
-              // dump($item);
+
+              // Ignore the hidden blocks.
+              if (!$item->shown) {
+                continue;
+              }
 
               $did = $item->did;
               $panel = $item->panel;
@@ -643,24 +627,9 @@ class PanelizerMigrationForm extends FormBase {
                           );
                           $this->panelizer->addFormatterConfig($configuration);
                           $field_configuration = $this->panelizer->block_config;
-
                           if (isset($configuration['args']) && !empty($configuration['args'])) {
-                            // $this->panelizer->addContextMappingConfig(['entity' => 'layout_builder.entity']);
-                            // dump('en views');
-                            // dump($configuration['args']);
-                            $field_configuration['configuration'] = [
-                              'arguments' => [8154],
-                            ];
-                            // $field_configuration['context_mapping'] = [
-                            //   'argument_1' => 8154
-                            // ];
-                            dump($field_configuration);
-                            $result_messages[] = $this->t('Migrating view @view_id with display @display_id, Please review.', [
-                              '@view_id' => $view_id,
-                              '@display_id' => $display_id,
-                            ]);
+                            $field_configuration['arguments'] = explode('/', $configuration['args']);
                           }
-
                         }
                         else {
                           $result_messages[] = $this->t('Display @display_id not found in view @view_id.', [
@@ -830,41 +799,10 @@ class PanelizerMigrationForm extends FormBase {
             \Drupal::messenger()->addMessage(
               $this->t('Term @id has been migrated to Layout Builder.', ['@id' => $term->id()])
             );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// die();
           }
-          // dump($term);
         }
-        // dump($panels_display);
-        // dump($sections);
+
         break;
     }
 
