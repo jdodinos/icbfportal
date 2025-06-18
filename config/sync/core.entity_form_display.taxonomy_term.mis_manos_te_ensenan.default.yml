@@ -6,6 +6,7 @@ dependencies:
     - field.field.taxonomy_term.mis_manos_te_ensenan.field_body_views
     - field.field.taxonomy_term.mis_manos_te_ensenan.field_seo_title
     - field.field.taxonomy_term.mis_manos_te_ensenan.field_top_slide
+    - field.field.taxonomy_term.mis_manos_te_ensenan.layout_builder__layout
     - taxonomy.vocabulary.mis_manos_te_ensenan
   module:
     - path
@@ -81,5 +82,6 @@ content:
       display_label: true
     third_party_settings: {  }
 hidden:
+  layout_builder__layout: true
   publish_on: true
   unpublish_on: true
