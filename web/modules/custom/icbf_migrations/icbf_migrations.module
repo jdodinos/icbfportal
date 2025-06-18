@@ -3,6 +3,54 @@
 use Drupal\migrate\Row;
 use Drupal\migrate\Plugin\MigrateSourceInterface;
 use Drupal\migrate\Plugin\MigrationInterface;
+use Drupal\views\ViewExecutable;
+
+/**
+ * Implementa hook_block_view_alter().
+ */
+function icbf_migrations_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
+  if (empty($args[0])) {
+    $args = [];
+    // Get the arguments for nodes.
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node instanceof \Drupal\node\NodeInterface) {
+      $node_id = $node->id();
+      $layout_configs = \Drupal::database()->select('node__layout_builder__layout', 'nl')
+        ->fields('nl', ['layout_builder__layout_section'])
+        ->condition('entity_id', $node_id)
+        ->execute()->fetchAll();
+    }
+    else {
+      $term = \Drupal::routeMatch()->getParameter('taxonomy_term');
+      if ($term instanceof \Drupal\taxonomy\Entity\Term ) {
+        $term_id = $term->id();
+        $layout_configs = \Drupal::database()->select('taxonomy_term__layout_builder__layout', 'tl')
+          ->fields('tl', ['layout_builder__layout_section'])
+          ->condition('entity_id', $term_id)
+          ->execute()->fetchAll();
+      }
+    }
+
+    if (!empty($layout_configs)) {
+      foreach ($layout_configs as $layout_config) {
+        // @see Drupal\layout_builder\Section
+        $layout_config = reset($layout_config);
+        $layout_config = unserialize($layout_config);
+        $layout_components = $layout_config->getComponents();
+        foreach ($layout_components as $component) {
+          $component_config = $component->get('configuration');
+          if ($component_config['id'] == "views_block:{$view->id()}-{$display_id}") {
+            if (!empty($component_config['arguments'])) {
+              foreach ($component_config['arguments'] as $block_argument) {
+                $args[] = $block_argument;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 /**
 * Implements hook_prepare_row().
@@ -297,8 +345,6 @@ function icbf_migrations_migrate_prepare_row(Row $row, MigrateSourceInterface $s
         // 'calendar',
       ];
       if (in_array($source['name'], $views_id)) {
-        // dump($source['name']);
-        // dump($source);
       }
       else {
         return FALSE;
