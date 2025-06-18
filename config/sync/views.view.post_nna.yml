@@ -25,6 +25,7 @@ dependencies:
     - 'taxonomy_term:ninos_ninas_y_adolescentes:74cc2fcf-c271-4dfb-aac0-55b7db00c834'
     - 'taxonomy_term:ninos_ninas_y_adolescentes:7e74bcba-fdae-4a24-b44d-a37e72985da7'
     - 'taxonomy_term:ninos_ninas_y_adolescentes:89b2273d-4d72-4f96-8213-ab7bc750eb5c'
+    - 'taxonomy_term:ninos_ninas_y_adolescentes:a2222ba8-e1f8-463b-8828-8f7af5e619ed'
     - 'taxonomy_term:ninos_ninas_y_adolescentes:f2a6ea4c-9b7c-4a9f-b2f1-5abd07095db8'
   module:
     - image
@@ -3382,7 +3383,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"nna-gridcontain\">\r\n  <div class=\"nna-gridbox\">  \r\n\r\n     <div class=\"nna-boxlabel\">\r\n        <span class=\"nna-label {{ field_nna_post_label }}\">{{ field_nna_post_label_1 }}</span> \r\n     </div>\r\n     <div class=\"nna-gridimg\">{{ views_conditional_field }}</div>\r\n     <div class=\"nna-boxinfo\">\r\n         <a href=\"{{ view_node }}\" class=\"nna-boxtitle\" title=\"{{ title }}\">{{ field_seo_title }}</a>\r\n         <a class=\"nna-linkout\" title=\"clic para explorar\" href=\"{{ view_node }}\"><span class=\"fa fa-pluss\"></span> Explorar!</a>\r\n     </div>\r\n\r\n</div></div>"
+            text: "<div class=\"nna-gridcontain\">\r\n  <div class=\"nna-gridbox\">  \r\n\r\n     <div class=\"nna-boxlabel\">\r\n        <span class=\"nna-label {{ field_nna_post_label }}\">{{ field_nna_post_label_1 }}</span> \r\n     </div>\r\n     <div class=\"nna-gridimg\">{{ views_conditional_field }}</div>\r\n     <div class=\"nna-boxinfo\">\r\n         <a href=\"{{ view_node }}\" class=\"nna-boxtitle\" title=\"{{ title }}\">{{ field_seo_title }}</a>\r\n         <a class=\"nna-linkout\" title=\"clic para explorar\" href=\"{{ view_node }}\"><span class=\"fa fa-pluss\"></span> Explorar!</a>\r\n     </div>\r\n\r\n</div></div>\r\n{{ views_conditional_field }}"
             make_link: false
             path: ''
             absolute: false
@@ -6122,7 +6123,7 @@ display:
           plugin_id: taxonomy_index_tid
           operator: or
           value:
-            - 7636
+            - 7635
           group: 1
           exposed: false
           expose:
@@ -7834,7 +7835,7 @@ display:
           entity_type: node
           entity_field: created
           plugin_id: date
-          order: DESC
+          order: ASC
           expose:
             label: ''
             field_identifier: ''

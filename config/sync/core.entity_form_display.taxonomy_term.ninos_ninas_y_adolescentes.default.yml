@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.taxonomy_term.ninos_ninas_y_adolescentes.field_landings_top
     - field.field.taxonomy_term.ninos_ninas_y_adolescentes.field_nnna_body
+    - field.field.taxonomy_term.ninos_ninas_y_adolescentes.layout_builder__layout
     - taxonomy.vocabulary.ninos_ninas_y_adolescentes
   module:
     - path
@@ -72,5 +73,6 @@ content:
       display_label: true
     third_party_settings: {  }
 hidden:
+  layout_builder__layout: true
   publish_on: true
   unpublish_on: true

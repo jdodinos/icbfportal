@@ -6,9 +6,90 @@ dependencies:
     - field.field.taxonomy_term.mis_manos_te_ensenan.field_body_views
     - field.field.taxonomy_term.mis_manos_te_ensenan.field_seo_title
     - field.field.taxonomy_term.mis_manos_te_ensenan.field_top_slide
+    - field.field.taxonomy_term.mis_manos_te_ensenan.layout_builder__layout
     - taxonomy.vocabulary.mis_manos_te_ensenan
   module:
+    - layout_builder
+    - layout_discovery
+    - panelizer
     - text
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          a648a410-ed95-4cc0-8ad2-1153c8c4d061:
+            uuid: a648a410-ed95-4cc0-8ad2-1153c8c4d061
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:mis_manos_te_ensenan:description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          39854b6b-51ff-41cf-aad0-46611a42b9ac:
+            uuid: 39854b6b-51ff-41cf-aad0-46611a42b9ac
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:mis_manos_te_ensenan:field_seo_title'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          07eeaaa2-1dce-4210-826d-58c6d6e7e67c:
+            uuid: 07eeaaa2-1dce-4210-826d-58c6d6e7e67c
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:mis_manos_te_ensenan:field_top_slide'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          8c1d9c5c-8cf7-42b6-b4bb-e807026c2472:
+            uuid: 8c1d9c5c-8cf7-42b6-b4bb-e807026c2472
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:mis_manos_te_ensenan:field_body_views'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: taxonomy_term.mis_manos_te_ensenan.default
 targetEntityType: taxonomy_term
 bundle: mis_manos_te_ensenan
@@ -45,5 +126,6 @@ content:
     region: content
 hidden:
   langcode: true
+  layout_builder__layout: true
   search_api_attachments: true
   search_api_excerpt: true

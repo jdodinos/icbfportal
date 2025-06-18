@@ -1,0 +1,21 @@
+uuid: bdace8dd-dd84-4ae3-88a3-068c73a1f7ee
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.layout_builder__layout
+    - taxonomy.vocabulary.ninos_ninas_y_adolescentes
+  module:
+    - layout_builder
+id: taxonomy_term.ninos_ninas_y_adolescentes.layout_builder__layout
+field_name: layout_builder__layout
+entity_type: taxonomy_term
+bundle: ninos_ninas_y_adolescentes
+label: Diseño
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: layout_section
