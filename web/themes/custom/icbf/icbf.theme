@@ -64,8 +64,10 @@ function icbf_preprocess_field(&$variables) {
   // if (in_array($variables['field_name'], $field_to_check)) {
     $items = &$variables['items'];
     foreach ($items as &$item) {
-      if (isset($item['content']) && empty($item['content']['#format']) && is_null($item['content']['#format'])) {
+      if (isset($item['content'])) {
+        if (is_null($item['content']['#format'])) {
           $item['content']['#format'] = 'full_html';
+        }
       }
 
       if (isset($item['content']['#text'])) {
