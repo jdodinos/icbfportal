@@ -40,6 +40,7 @@ conditions:
       monitoreo_gesti_n: monitoreo_gesti_n
       multimedia: multimedia
       notifications: notifications
+      page: page
       portfolio_tramite: portfolio_tramite
       process: process
       rendicion_de_cuentas: rendicion_de_cuentas
@@ -54,6 +55,7 @@ conditions:
       taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
     bundles:
       ninos_ninas_y_adolescentes: ninos_ninas_y_adolescentes
+      secctions: secctions
 reactions:
   blocks:
     id: blocks

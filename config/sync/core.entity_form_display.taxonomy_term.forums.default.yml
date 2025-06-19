@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.taxonomy_term.forums.field_metatag
     - field.field.taxonomy_term.forums.forum_container
+    - field.field.taxonomy_term.forums.layout_builder__layout
     - taxonomy.vocabulary.forums
   module:
     - metatag
@@ -66,5 +67,6 @@ content:
     third_party_settings: {  }
 hidden:
   forum_container: true
+  layout_builder__layout: true
   publish_on: true
   unpublish_on: true

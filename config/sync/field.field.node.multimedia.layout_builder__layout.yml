@@ -1,0 +1,21 @@
+uuid: 3780fc1f-21d0-48f7-8bfd-7e94c07dd385
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.layout_builder__layout
+    - node.type.multimedia
+  module:
+    - layout_builder
+id: node.multimedia.layout_builder__layout
+field_name: layout_builder__layout
+entity_type: node
+bundle: multimedia
+label: Diseño
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: layout_section
