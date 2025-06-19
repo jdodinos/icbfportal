@@ -76,6 +76,8 @@ class PanelizerMigrationForm extends FormBase {
     ];
 
     $result = $this->panelizer->getPanelizerNodes();
+    $result_terms = $this->panelizer->getPanelizerTerms();
+
     $form['nodes'] = [
       '#type' => 'details',
       '#title' => 'Migrar Contenidos',
@@ -85,6 +87,12 @@ class PanelizerMigrationForm extends FormBase {
         ],
       ],
       '#open' => TRUE,
+      'summary' => [
+        '#type' => 'container',
+        '#prefix' => '<div>',
+        '#suffix' => '</div>',
+        '#markup' => $this->t('@count Contenidos', ['@count' => count($result)]),
+      ],
     ];
 
     $form['taxonomies'] = [
@@ -96,6 +104,12 @@ class PanelizerMigrationForm extends FormBase {
         ],
       ],
       '#open' => TRUE,
+      'summary' => [
+        '#type' => 'container',
+        '#prefix' => '<div>',
+        '#suffix' => '</div>',
+        '#markup' => $this->t('@count Contenidos', ['@count' => count($result_terms)]),
+      ],
     ];
 
     $this->panelizer;
@@ -137,8 +151,6 @@ class PanelizerMigrationForm extends FormBase {
       '#empty' => $this->t('No nodes found'),
     ];
 
-
-    $result_terms = $this->panelizer->getPanelizerTerms();
     $options_term = [];
     foreach ($result_terms as $item) {
       $term_id = $item->entity_id;

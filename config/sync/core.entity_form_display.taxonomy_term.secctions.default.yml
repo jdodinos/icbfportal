@@ -15,6 +15,7 @@ dependencies:
     - field.field.taxonomy_term.secctions.field_priority
     - field.field.taxonomy_term.secctions.field_related_procedures
     - field.field.taxonomy_term.secctions.field_taxonomy_image
+    - field.field.taxonomy_term.secctions.layout_builder__layout
     - taxonomy.vocabulary.secctions
   module:
     - field_group
@@ -233,5 +234,6 @@ content:
       display_label: true
     third_party_settings: {  }
 hidden:
+  layout_builder__layout: true
   publish_on: true
   unpublish_on: true
