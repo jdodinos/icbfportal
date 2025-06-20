@@ -1,0 +1,19 @@
+@use "../../abstracts/variables" as var;
+
+.internal-page {
+    &-header {
+        padding-bottom: 9px;
+        margin: 40px 0 20px;
+        border-bottom: 1px solid #eee;
+        
+        h1 {
+
+            font-size: 1.7em;
+            font-family: var.$font-asap-regular;
+            line-height: normal;
+            margin: 20px 0 10px;
+            color: var.$color-text-gray;
+
+        }
+    }
+}

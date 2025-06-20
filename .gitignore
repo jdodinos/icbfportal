@@ -10,6 +10,7 @@ web/robots
 # Ignore sensitive information
 web/sites/default/services.local.yml
 web/sites/default/settings.local.php
+web/sites/development.services.yml
 
 # Ignore Drupal's file directory
 web/sites/*/files
