@@ -1,0 +1,250 @@
+@use "../abstracts/variables" as var;
+
+.custom-title {
+    margin-bottom: 1em;
+
+    h1 {
+        font-family: var.$font-asap-regular;
+        font-size: 1.7em;
+        padding-bottom: 9px;
+        margin: 40px 0 20px;
+        border-bottom: 1px solid #eee;
+    }
+}
+
+.custom-date {
+    font-family: var.$font-montserrat;
+}
+
+.article-section {
+    .ctadit-icon {
+        max-width: 87%;
+    }
+}
+
+.block-field-blocknodecontacto-nacionaltitle {
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.block-field-blocknodecontacto-nacionaltitle span {
+    /* background-color: white; */
+    font-family: "Asap-Regular";
+    font-size: 1.7em;
+    /* padding-bottom: 9px; */
+}
+
+
+.bs-2col {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.bs-2col .bs-region--left {
+    padding: 0 15px;
+}
+
+#national-contact-l {
+    .img-fluid {
+        max-width: 85%;
+        height: auto;
+    }
+}
+
+#national-contact-R {
+
+    .field {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1em;
+    }
+
+    .field .field__item,
+    .field .field__label {
+        display: block;
+        font-size: 14px;
+        margin-top: 0;
+        font-family: var.$font-montserrat;
+    }
+
+    .field--label-inline .field__label {
+        &::after {
+            content: ":";
+        }
+    }
+
+    .field--name-body {
+        position: relative;
+        left: 50%;
+
+        @media (max-width: 1024px) {
+            left: 1%;
+        }
+
+        @media (max-width: 768px) {
+            left: 5%;
+        }
+    }
+
+}
+
+.national-contact {
+    font-family: var.$font-montserrat;
+
+    .contact-title {
+        margin-top: 0;
+        font-family: var.$font-asap-regular;
+
+        h1 {
+            font-size: 1.7em;
+            padding-bottom: 9px;
+            margin: 40px 0 20px;
+            border-bottom: 1px solid #eee;
+        }
+    }
+}
+
+.img-noticia-eje {
+    max-width: 80%;
+    margin: 0 !important;
+}
+
+.news-content {
+    margin-top: 2em;
+    border-top: 2px solid #ddd;
+}
+
+
+.custom-datetime {
+    font-family: var.$font-montserrat !important;
+}
+
+#custom-noticia-eje .custom-date {
+    display: flex;
+
+    .field__label,
+    .field__item {
+        font-family: var.$font-montserrat !important;
+    }
+}
+
+#custom-title {
+    font-family: var.$font-asap-regular;
+    font-size: 1.7em;
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee
+}
+
+#custom-content {
+    margin-top: 0;
+    font-family: var.$font-asap-regular;
+
+    .node--view-mode-full .field__label {
+        color: #555;
+        font-size: 14px;
+        font-family: var.$font-asap-regular;
+    }
+}
+
+.custom-date-text {
+    display: inline-flex;
+    font-family: var.$font-montserrat;
+
+    .field__label .field__item {
+        font-family: var.$font-montserrat !important;
+    }
+}
+
+.ms-content {
+    font-family: var.$font-montserrat-regular;
+
+    strong {
+        font-family: var.$font-asap-regular;
+    }
+}
+
+
+.cdit-titleh3v {
+    color: #0b8763;
+    font-family: var.$font-montserrat-regular;
+    font-size: 1.56em;
+    font-weight: 500;
+    padding: .5em 0;
+}
+
+.cdit-infob {
+    color: #333;
+    font-family: var.$font-montserrat-regular;
+    font-size: 1.07em;
+    font-weight: 400;
+    line-height: 1.65em;
+    padding: .5em;
+}
+
+.cdit-titleh3w {
+    color: #FFF;
+    font-family: var.$font-montserrat-regular;
+    font-weight: 500;
+    font-size: 1.56em;
+    padding: .5em 0;
+}
+
+.cdit-titleh4w {
+    color: #FFF;
+    font-family: var.$font-montserrat-regular;
+    font-size: 1.14em;
+    font-weight: 600;
+    padding: .5em 0;
+}
+
+.cdit-infow {
+    color: #FFF;
+    font-family: var.$font-montserrat-regular;
+    font-size: 1.07em;
+    font-weight: 400;
+    line-height: 1.65em;
+    padding: .5em;
+}
+
+.cdit-idh1v {
+    color: #5fa639;
+    font-family: var.$font-montserrat-regular;
+    font-size: 2.08em;
+    font-weight: 600;
+    line-height: normal;
+    margin: auto;
+    text-align: center;
+}
+
+.cdit-subth2blu {
+    color: #125e81;
+    font-family: var.$font-montserrat-regular;
+    font-size: 1.68em;
+    font-weight: 500;
+    line-height: normal;
+    margin: auto;
+    text-align: center;
+}
+
+.btn-lg {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+}
+
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    font-family: var.$font-montserrat-regular;
+}
+
+.btn-default:hover {
+    color: #333;
+    background-color: #e6e5e5;
+    border-color: #adadad;
+}

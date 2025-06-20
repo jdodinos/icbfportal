@@ -1,9 +1,0 @@
-@use "mixins" as abstracts;
-
-html body {
-
-  a.btn-mm1,
-  button.btn-mm1 {
-    @include abstracts.btn-mm1-styles;
-  }
-}

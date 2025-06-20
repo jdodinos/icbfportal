@@ -1,17 +1,41 @@
 // Default
-@use 'abstracts/variables';
-
 @forward "abstracts/mixins";
+
+
+
+@use 'abstracts/variables';
 @use 'abstracts/base';
 @use 'abstracts/fonts';
 @use 'abstracts/general';
-@use 'abstracts/buttons';
+
 
 @use 'layout/header/icbf_header';
-@use 'layout/header/awe_menu';
 @use 'layout/header/tb_mega_menu';
 @use 'layout/header/header';
-@use 'layout/footer/icbf_footer';
-@use 'layout/taxonomias/taxonomia';
 
-@use 'components/breadcrumb';
+@use 'layout/footer/footer';
+@use 'layout/navigation/pagination';
+
+@use 'components/notice';
+@use 'components/regional-acts';
+@use 'components/institutional-stationery';
+@use 'components/syndicate-publications';
+@use 'components/persons';
+@use 'components/document-internal';
+@use 'components/general-elements';
+@use 'components/default-documents';
+@use 'components/taxonomias/general-taxonomias';
+
+@use 'components/elements/breadcrumb';
+@use 'components/elements/custom-table';
+@use 'components/elements/page-general';
+@use 'components/elements/internal-page';
+@use 'components/elements/internal-news';
+@use 'components/elements/table-filter';
+@use 'components/elements/table-general';
+
+@use 'components/content-type/noticias';
+
+
+@use 'components/taxonomias/taxonomia';
+@use 'components/taxonomias/area';
