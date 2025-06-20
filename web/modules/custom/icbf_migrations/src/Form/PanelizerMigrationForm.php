@@ -311,128 +311,27 @@ class PanelizerMigrationForm extends FormBase {
                       break;
 
                     case 'views':
-                      $view_id = $item->subtype;
-                      $display_id = $configuration['display'];
-                      $view = View::load($view_id);
-                      if ($view) {
-                        $displays = $view->get('display');
-                        if (isset($displays[$display_id])) {
-                          $layout_field = 'views_block';
-                          $label = "Views {$view_id} - Display {$displays[$display_id]['display_title']} - Display ID {$display_id}";
-                          $block_plugin_id = "{$layout_field}:{$view_id}-{$display_id}";
-                          $provider = 'views';
-                          $label = $configuration['override_title_text'] ?? $label;
-
-                          $this->panelizer->createDefaultConfiguration(
-                            $block_plugin_id,
-                            $label,
-                            $provider,
-                            $label_display,
-                          );
-                          $this->panelizer->addFormatterConfig($configuration);
-                          $field_configuration = $this->panelizer->block_config;
-
-                          if (isset($configuration['args']) && !empty($configuration['args'])) {
-                            $field_configuration['arguments'] = explode('/', $configuration['args']);
-                          }
-
-                        }
-                        else {
-                          $result_messages[] = $this->t('Display @display_id not found in view @view_id.', [
-                            '@display_id' => $display_id,
-                            '@view_id' => $view_id,
-                          ]);
-                        }
-                      }
-                      else {
-                        $result_messages[] = $this->t('View @view_id not found.', ['@view_id' => $view_id]);
-                      }
+                      $block_result = $this->panelizer->addViewInBlock($item->subtype, $configuration);
+                      $field_configuration = $block_result['block'];
+                      $block_plugin_id = $field_configuration['id'];
+                      $result_messages = $block_result['messages'];
                       break;
 
                     case 'block':
-                      if (strpos($item->subtype, 'md_megamenu') === 0) {
-                        $md_megamenus = [
-                          'md_megamenu-2' => 'menu-prueba1',
-                          'md_megamenu-6' => 'men-compras-locales',
-                          'md_megamenu-7' => 'menu-transparencia',
-                          'md_megamenu-8' => 'mgm-5c775d3a74ba0',
-                          'md_megamenu-10' => 'mgm-5ce41f0ce4a05',
-                          'md_megamenu-11' => 'mgm-5d3f4fe8cd42b',
-                          'md_megamenu-12' => 'mgm-5da0e630d2a93',
-                          'md_megamenu-15' => 'mgm-5e7a6aab9aad3',
-                          'md_megamenu-16' => 'mgm-5edaba119f9a0',
-                          'md_megamenu-17' => 'mgm-5edfcfafa91eb',
-                          'md_megamenu-18' => 'mgm-5ee27f3730710',
-                          'md_megamenu-19' => 'mgm-6038204b97dda',
-                          'md_megamenu-20' => 'mgm-6049302480ef2',
-                          'md_megamenu-21' => 'mfu',
-                        ];
-                        $provider = 'tb_megamenu';
-                        $block_plugin_id = 'tb_megamenu_menu_block:' . $md_megamenus[$item->subtype] ?? $item->subtype;
-                        $this->panelizer->createDefaultConfiguration(
-                          $block_plugin_id,
-                          '',
-                          $provider,
-                          $label_display,
-                        );
-                        $this->panelizer->addFormatterConfig($configuration);
-                        $field_configuration = $this->panelizer->block_config;
-                      }
                       if (strpos($item->subtype, 'facetapi') === 0) {
                         continue 2;
                       }
-                      else {
-                        // Caso genérico para otros bloques.
-                        $position_explode = strpos($item->subtype, '-');
-                        $block_type = substr($item->subtype, 0, $position_explode);
-                        $block_id = substr($item->subtype, $position_explode + 1);
 
-                        if ($block_type == 'block') {
-                          $block_uuid = \Drupal::database()->select('block_content', 'b')
-                            ->fields('b', ['uuid'])
-                            ->condition('id', $block_id)
-                            ->execute()->fetchField();
-                        }
-                        if ($block_type == 'bean') {
-                          $block_title = str_replace('-', ' ', $block_id);
-                          $block_query = \Drupal::database()->select('block_content', 'b');
-                          $block_query->join('block_content_field_data', 'bcfd', 'b.id = bcfd.id');
-                          $block_query->fields('b', ['uuid'])
-                            ->condition('bcfd.info', $block_title);
-                          $block_uuid = $block_query->execute()->fetchField();
-                        }
-
-                        if (isset($block_uuid)) {
-                          $block_plugin_id = "block_content:$block_uuid";
-                          $provider = 'block_content';
-
-                          $this->panelizer->createDefaultConfiguration(
-                            $block_plugin_id,
-                            '',
-                            $provider,
-                            $label_display,
-                          );
-                          $this->panelizer->addFormatterConfig($configuration);
-                          $this->panelizer->addViewMode('full');
-                          $field_configuration = $this->panelizer->block_config;
-                        }
-                      }
-
-                      if (!isset($block_plugin_id)) {
-                        $block_plugin_id = $item->subtype;
-                      }
-
-                      // Verificar existencia del plugin.
-                      $plugin_manager = \Drupal::service('plugin.manager.block');
-                      if (!$plugin_manager->hasDefinition($block_plugin_id)) {
-                        $result_messages[] = $this->t('Block plugin ID @id not found.', ['@id' => $block_plugin_id]);
-                        break;
-                      }
+                      $block_result = $this->panelizer->addBlockContentInBlock($item->subtype, $configuration);
+                      $field_configuration = $block_result['block'];
+                      $block_plugin_id = $field_configuration['id'];
+                      $result_messages = $block_result['messages'];
                       break;
 
                     case 'node':
                       $node_referenced = \Drupal::entityTypeManager()->getStorage('node')
                         ->load($configuration['nid']);
+
                       if ($node_referenced) {
                         $block_plugin_id = 'node:' . $configuration['nid'];
                         $provider = 'node';
@@ -456,6 +355,39 @@ class PanelizerMigrationForm extends FormBase {
                       }
                       else {
                         $result_messages[] = $this->t('Node with ID @nid not found.', ['@nid' => $configuration['nid']]);
+                      }
+                      break;
+
+                    case 'panels_mini':
+                      $panels_mini_name = $item->subtype;
+                      $minipanel = $this->panelizer->getPanelsMiniData($panels_mini_name);
+
+                      foreach ($minipanel as $panel_block) {
+                        $panel_config = unserialize($panel_block->configuration);
+                        switch ($panel_block->type) {
+                          case 'views':
+                            $block_result = $this->panelizer->AddViewInBlock($panel_block->subtype, $panel_config);
+                            $field_configuration = $block_result['block'];
+                            $result_messages = array_merge($result_messages, $block_result['messages']);
+                            break;
+
+                          case 'block':
+                            $block_result = $this->panelizer->addBlockContentInBlock($panel_block->subtype, $panel_config);
+                            $field_configuration = $block_result['block'];
+                            $result_messages = array_merge($result_messages, $block_result['messages']);
+                            break;
+                        }
+
+                        if (isset($field_configuration)) {
+                          // Create the layout builder component (item/block).
+                          $field_component = new SectionComponent(
+                            \Drupal::service('uuid')->generate(),
+                            $region,
+                            $field_configuration
+                          );
+                          // Append the component to the section.
+                          $row['section']->appendComponent($field_component);
+                        }
                       }
                       break;
 
@@ -483,7 +415,6 @@ class PanelizerMigrationForm extends FormBase {
                       $field_configuration = $this->panelizer->block_config;
                     }
 
-                    // dump($field_component);
                     // Create the layout builder component (item/block).
                     $field_component = new SectionComponent(
                       \Drupal::service('uuid')->generate(),
@@ -619,121 +550,21 @@ class PanelizerMigrationForm extends FormBase {
                       break;
 
                     case 'views':
-                      $view_id = $item->subtype;
-                      $display_id = $configuration['display'];
-                      $view = View::load($view_id);
-                      if ($view) {
-                        $displays = $view->get('display');
-                        if (isset($displays[$display_id])) {
-                          $layout_field = 'views_block';
-                          $label = "Views {$view_id} - Display {$displays[$display_id]['display_title']} - Display ID {$display_id}";
-                          $block_plugin_id = "{$layout_field}:{$view_id}-{$display_id}";
-                          $provider = 'views';
-                          $label = $configuration['override_title_text'] ?? $label;
-
-                          $this->panelizer->createDefaultConfiguration(
-                            $block_plugin_id,
-                            $label,
-                            $provider,
-                            $label_display,
-                          );
-                          $this->panelizer->addFormatterConfig($configuration);
-                          $field_configuration = $this->panelizer->block_config;
-                          if (isset($configuration['args']) && !empty($configuration['args'])) {
-                            $field_configuration['arguments'] = explode('/', $configuration['args']);
-                          }
-                        }
-                        else {
-                          $result_messages[] = $this->t('Display @display_id not found in view @view_id.', [
-                            '@display_id' => $display_id,
-                            '@view_id' => $view_id,
-                          ]);
-                        }
-                      }
-                      else {
-                        $result_messages[] = $this->t('View @view_id not found.', ['@view_id' => $view_id]);
-                      }
+                      $block_result = $this->panelizer->addViewInBlock($item->subtype, $configuration);
+                      $field_configuration = $block_result['block'];
+                      $block_plugin_id = $field_configuration['id'];
+                      $result_messages = $block_result['messages'];
                       break;
 
                     case 'block':
-                      if (strpos($item->subtype, 'md_megamenu') === 0) {
-                        $md_megamenus = [
-                          'md_megamenu-2' => 'menu-prueba1',
-                          'md_megamenu-6' => 'men-compras-locales',
-                          'md_megamenu-7' => 'menu-transparencia',
-                          'md_megamenu-8' => 'mgm-5c775d3a74ba0',
-                          'md_megamenu-10' => 'mgm-5ce41f0ce4a05',
-                          'md_megamenu-11' => 'mgm-5d3f4fe8cd42b',
-                          'md_megamenu-12' => 'mgm-5da0e630d2a93',
-                          'md_megamenu-15' => 'mgm-5e7a6aab9aad3',
-                          'md_megamenu-16' => 'mgm-5edaba119f9a0',
-                          'md_megamenu-17' => 'mgm-5edfcfafa91eb',
-                          'md_megamenu-18' => 'mgm-5ee27f3730710',
-                          'md_megamenu-19' => 'mgm-6038204b97dda',
-                          'md_megamenu-20' => 'mgm-6049302480ef2',
-                          'md_megamenu-21' => 'mfu',
-                        ];
-                        $provider = 'tb_megamenu';
-                        $block_plugin_id = 'tb_megamenu_menu_block:' . $md_megamenus[$item->subtype] ?? $item->subtype;
-                        $this->panelizer->createDefaultConfiguration(
-                          $block_plugin_id,
-                          '',
-                          $provider,
-                          $label_display,
-                        );
-                        $this->panelizer->addFormatterConfig($configuration);
-                        $field_configuration = $this->panelizer->block_config;
-                      }
                       if (strpos($item->subtype, 'facetapi') === 0) {
                         continue 2;
                       }
-                      else {
-                        // Caso genérico para otros bloques.
-                        $position_explode = strpos($item->subtype, '-');
-                        $block_type = substr($item->subtype, 0, $position_explode);
-                        $block_id = substr($item->subtype, $position_explode + 1);
 
-                        if ($block_type == 'block') {
-                          $block_uuid = \Drupal::database()->select('block_content', 'b')
-                            ->fields('b', ['uuid'])
-                            ->condition('id', $block_id)
-                            ->execute()->fetchField();
-                        }
-                        if ($block_type == 'bean') {
-                          $block_title = str_replace('-', ' ', $block_id);
-                          $block_query = \Drupal::database()->select('block_content', 'b');
-                          $block_query->join('block_content_field_data', 'bcfd', 'b.id = bcfd.id');
-                          $block_query->fields('b', ['uuid'])
-                            ->condition('bcfd.info', $block_title);
-                          $block_uuid = $block_query->execute()->fetchField();
-                        }
-
-                        if (isset($block_uuid)) {
-                          $block_plugin_id = "block_content:$block_uuid";
-                          $provider = 'block_content';
-
-                          $this->panelizer->createDefaultConfiguration(
-                            $block_plugin_id,
-                            '',
-                            $provider,
-                            $label_display,
-                          );
-                          $this->panelizer->addFormatterConfig($configuration);
-                          $this->panelizer->addViewMode('full');
-                          $field_configuration = $this->panelizer->block_config;
-                        }
-                      }
-
-                      if (!isset($block_plugin_id)) {
-                        $block_plugin_id = $item->subtype;
-                      }
-
-                      // Verificar existencia del plugin.
-                      $plugin_manager = \Drupal::service('plugin.manager.block');
-                      if (!$plugin_manager->hasDefinition($block_plugin_id)) {
-                        $result_messages[] = $this->t('Block plugin ID @id not found.', ['@id' => $block_plugin_id]);
-                        break;
-                      }
+                      $block_result = $this->panelizer->addBlockContentInBlock($item->subtype, $configuration);
+                      $field_configuration = $block_result['block'];
+                      $block_plugin_id = $field_configuration['id'];
+                      $result_messages = $block_result['messages'];
                       break;
 
               //       case 'node':
@@ -764,6 +595,38 @@ class PanelizerMigrationForm extends FormBase {
               //           $result_messages[] = $this->t('Node with ID @nid not found.', ['@nid' => $configuration['nid']]);
               //         }
               //         break;
+
+                  case 'panels_mini':
+                    $panels_mini_name = $item->subtype;
+                    $minipanel = $this->panelizer->getPanelsMiniData($panels_mini_name);
+                    foreach ($minipanel as $panel_block) {
+                      $panel_config = unserialize($panel_block->configuration);
+                      switch ($panel_block->type) {
+                        case 'views':
+                          $block_result = $this->panelizer->AddViewInBlock($panel_block->subtype, $panel_config);
+                          $field_configuration = $block_result['block'];
+                          $result_messages = array_merge($result_messages, $block_result['messages']);
+                          break;
+
+                        case 'block':
+                          $block_result = $this->panelizer->addBlockContentInBlock($panel_block->subtype, $panel_config);
+                          $field_configuration = $block_result['block'];
+                          $result_messages = array_merge($result_messages, $block_result['messages']);
+                          break;
+                      }
+
+                      if (isset($field_configuration)) {
+                        // Create the layout builder component (item/block).
+                        $field_component = new SectionComponent(
+                          \Drupal::service('uuid')->generate(),
+                          $region,
+                          $field_configuration
+                        );
+                        // Append the component to the section.
+                        $row['section']->appendComponent($field_component);
+                      }
+                    }
+                    break;
 
                     default:
                       $result_messages[] = $this->t('Unknown type @type for panel @panel.', [
@@ -811,10 +674,10 @@ class PanelizerMigrationForm extends FormBase {
             \Drupal::messenger()->addMessage(
               $this->t('Term @id has been migrated to Layout Builder.', ['@id' => $term->id()])
             );
-// die();
           }
         }
 
+        // die();
         break;
     }
 

@@ -2394,9 +2394,38 @@ display:
           text: ''
           output_url_as_text: false
           absolute: false
+      sorts:
+        field_priority_value:
+          id: field_priority_value
+          table: node__field_priority
+          field: field_priority_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+        field_relevant_value:
+          id: field_relevant_value
+          table: node__field_relevant
+          field: field_relevant_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
       defaults:
         fields: false
+        sorts: false
       display_description: ''
+      exposed_block: true
       display_extenders:
         metatag_display_extender:
           metatags: {  }
