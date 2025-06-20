@@ -319,7 +319,9 @@ class PanelizerMigrationForm extends FormBase {
 
                     case 'block':
                       if (strpos($item->subtype, 'facetapi') === 0) {
-                        continue 2;
+                        $result_messages[] = $this->t('Subtype @subtype', [
+                          '@subtype' => $item->subtype,
+                        ]);
                       }
 
                       $block_result = $this->panelizer->addBlockContentInBlock($item->subtype, $configuration);
@@ -331,27 +333,40 @@ class PanelizerMigrationForm extends FormBase {
                     case 'node':
                       $node_referenced = \Drupal::entityTypeManager()->getStorage('node')
                         ->load($configuration['nid']);
-
                       if ($node_referenced) {
                         $block_plugin_id = 'node:' . $configuration['nid'];
-                        $provider = 'node';
-                        $node_referenced_title = $node_referenced->getTitle();
+                      //   $provider = 'node';
+                      //   $node_referenced_title = $node_referenced->getTitle();
 
-                        $this->panelizer->createDefaultConfiguration(
-                          $block_plugin_id,
-                          $node_referenced_title,
-                          $provider,
-                          $label_display,
-                        );
-                        $this->panelizer->addContextMappingConfig(['entity' => 'layout_builder.entity']);
-                        $field_configuration = $this->panelizer->block_config;
-                        $field_configuration['links'] = $configuration['links'] ?? 1;
-                        $field_configuration['leave_node_title'] = $configuration['leave_node_title'] ?? 0;
-                        $field_configuration['build_mode'] = $configuration['build_mode'] ?? 'full';
-                        $field_configuration['link_node_title'] = $configuration['link_node_title'] ?? 0;
-                        $field_configuration['identifier'] = $configuration['identifier'] ?? 1;
-                        $field_configuration['content'] = \Drupal::entityTypeManager()->getViewBuilder('node')
-                          ->view($node_referenced, $configuration['build_mode']);
+                      //   $this->panelizer->createDefaultConfiguration(
+                      //     $block_plugin_id,
+                      //     $node_referenced_title,
+                      //     $provider,
+                      //     $label_display,
+                      //   );
+                      //   $this->panelizer->addContextMappingConfig(['entity' => 'layout_builder.entity']);
+                      //   $field_configuration = $this->panelizer->block_config;
+                      //   $field_configuration['links'] = $configuration['links'] ?? 1;
+                      //   $field_configuration['leave_node_title'] = $configuration['leave_node_title'] ?? 0;
+                      //   $field_configuration['build_mode'] = $configuration['build_mode'] ?? 'full';
+                      //   $field_configuration['link_node_title'] = $configuration['link_node_title'] ?? 0;
+                      //   $field_configuration['identifier'] = $configuration['identifier'] ?? 1;
+                        // $field_configuration['content'] = \Drupal::entityTypeManager()->getViewBuilder('node')
+                        //   ->view($node_referenced, $configuration['build_mode']);
+                        $block_content_test = [
+                          '#type' => 'entity',
+                          '#entity_type' => 'node',
+                          '#entity' => \Drupal\node\Entity\Node::load(106258),
+                          '#view_mode' => 'full',
+                        ];
+                        $field_configuration = [
+                          'id' => 'inline_block:custom',
+                          'label' => 'Render nodo 106258',
+                          'provider' => 'layout_builder',
+                          'label_display' => false,
+                          'view_mode' => 'full',
+                          'content' => $block_content,
+                        ];
                       }
                       else {
                         $result_messages[] = $this->t('Node with ID @nid not found.', ['@nid' => $configuration['nid']]);
@@ -439,7 +454,6 @@ class PanelizerMigrationForm extends FormBase {
             );
           }
         }
-        // die();
         break;
 
       case 'taxonomy_term':
@@ -558,7 +572,9 @@ class PanelizerMigrationForm extends FormBase {
 
                     case 'block':
                       if (strpos($item->subtype, 'facetapi') === 0) {
-                        continue 2;
+                        $result_messages[] = $this->t('Subtype @subtype', [
+                          '@subtype' => $item->subtype,
+                        ]);
                       }
 
                       $block_result = $this->panelizer->addBlockContentInBlock($item->subtype, $configuration);
@@ -677,10 +693,9 @@ class PanelizerMigrationForm extends FormBase {
           }
         }
 
-        // die();
         break;
     }
-
+    // die();
   }
 
 }

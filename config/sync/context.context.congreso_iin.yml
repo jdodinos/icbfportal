@@ -36,7 +36,7 @@ reactions:
         provider: block_content
         label_display: '0'
         region: header
-        weight: '0'
+        weight: '-2'
         custom_id: block_content_e7909f14_d146_4043_9fd9_fdfbc230954d
         theme: icbf
         css_class: ''
@@ -54,7 +54,7 @@ reactions:
         provider: block_content
         label_display: '0'
         region: header
-        weight: '0'
+        weight: '-1'
         custom_id: block_content_abba0fd8_eb37_4306_9efd_7370fee9b223
         theme: icbf
         css_class: ''
