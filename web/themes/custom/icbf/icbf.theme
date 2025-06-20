@@ -78,57 +78,54 @@ function icbf_preprocess_field(&$variables) {
     }
   // }
 
-  $fields_with_views = ['field_faqs_related'];
-  if (in_array($variables['field_name'], $fields_with_views)) {
-    $items = &$variables['items'];
-    foreach ($items as &$item) {
-      if (isset($item['content']['#text'])) {
-        $html = $item['content']['#text'];
-        if (strpos($html, 'data-azb="az_view')) {
-          $explode_html = explode('</div>', $html);
-          foreach ($explode_html as $original_element) {
-            if (strpos($original_element, 'data-azb="az_view')) {
-              $original_element .= '</div>';
-              $element = trim($original_element);
 
-              // Check if there are contextual filters.
-              $filter = [];
-              $pos_contextual_filter = strpos($element, 'data-azat-contextual_filter');
-              if ($pos_contextual_filter) {
-                $string = substr($element, $pos_contextual_filter);
-                $string_array = explode('"', $string);
-                $filter = isset($string_array[1]) ? explode('/', $string_array[1]) : [];
-              }
+  $items = &$variables['items'];
+  foreach ($items as &$item) {
+    if (isset($item['content']['#text'])) {
+      $html = $item['content']['#text'];
+      if (strpos($html, 'data-azb="az_view')) {
+        $explode_html = explode('</div>', $html);
+        foreach ($explode_html as $original_element) {
+          if (strpos($original_element, 'data-azb="az_view')) {
+            $original_element .= '</div>';
+            $element = trim($original_element);
 
-              // Check if view data.
-              $view_data = [];
-              $pos_view_info = strpos($element, 'data-azb=');
-              if ($pos_contextual_filter) {
-                $string = substr($element, $pos_view_info);
-                $string_array = explode('"', $string);
-                $view_data = isset($string_array[1]) ? explode('-', $string_array[1]) : [];
+            // Check if there are contextual filters.
+            $filter = [];
+            $pos_contextual_filter = strpos($element, 'data-azat-contextual_filter');
+            if ($pos_contextual_filter) {
+              $string = substr($element, $pos_contextual_filter);
+              $string_array = explode('"', $string);
+              $filter = isset($string_array[1]) ? explode('/', $string_array[1]) : [];
+            }
 
-                if (isset($view_data[1]) && isset($view_data[2])) {
-                  $view = Views::getView($view_data[1]);
-                  if ($view) {
-                    $view->setDisplay($view_data[2]);
-                    $view->preExecute();
-                    $view->execute();
+            // Check if view data.
+            $view_data = [];
+            $pos_view_info = strpos($element, 'data-azb="az_view');
+            $string = substr($element, $pos_view_info);
+            $string_array = explode('"', $string);
+            $view_data = isset($string_array[1]) ? explode('-', $string_array[1]) : [];
+            if (isset($view_data[1]) && isset($view_data[2])) {
+              $view = Views::getView($view_data[1]);
+              if ($view) {
+                $view->setDisplay($view_data[2]);
 
-                    if (!empty($filter)) {
-                      $view->setArguments($filter);
-                    }
-
-                    // Render it
-                    $render_array = $view->render();
-                    $html_view = \Drupal::service('renderer')->renderRoot($render_array);
-                    $item['content']['#text'] = str_replace($original_element, $html_view, $html);
-                  }
+                if (!empty($filter)) {
+                  $view->setArguments($filter);
                 }
+                $view->preExecute();
+                $view->execute();
+
+                // Render it
+                $render_array = $view->render();
+                $html_view = \Drupal::service('renderer')->render($render_array);
+                $html = str_replace($original_element, $html_view, $html);
               }
             }
           }
         }
+
+        $item['content']['#text'] = $html;
       }
     }
   }

@@ -9,7 +9,7 @@ dependencies:
     - node.type.bot_n_home
     - taxonomy.vocabulary.secctions
   content:
-    - 'taxonomy_term:secctions:ee9eb115-5e55-44a6-95f5-45d92b74361c'
+    - 'taxonomy_term:secctions:31b62432-588e-4d22-98a4-bab12c4ed2d7'
   module:
     - datetime
     - image
@@ -1356,12 +1356,13 @@ display:
           field: field_btn_listnumber_value
           relationship: none
           group_type: group
+          admin_label: ''
           plugin_id: number_list_field
           default_action: empty
           exception:
             value: all
             title_enable: false
-            title: Todo
+            title: All
           title_enable: false
           title: ''
           default_argument_type: fixed
@@ -1384,9 +1385,6 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
-          ui_name: ''
-          breadcrumb_enable: 0
-          breadcrumb: ''
       filters:
         status:
           id: status
