@@ -102,7 +102,7 @@ function icbf_preprocess_field(&$variables) {
 
               // Check if view data.
               $view_data = [];
-              $pos_view_info = strpos($element, 'data-azb=');
+              $pos_view_info = strpos($element, 'data-azb="az_view');
               if ($pos_contextual_filter) {
                 $string = substr($element, $pos_view_info);
                 $string_array = explode('"', $string);
