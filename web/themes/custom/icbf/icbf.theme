@@ -61,12 +61,13 @@ function icbf_preprocess_field(&$variables) {
     'field_nnna_body',
     'field_video_02',
   ];
-
   // if (in_array($variables['field_name'], $field_to_check)) {
     $items = &$variables['items'];
     foreach ($items as &$item) {
-      if (isset($item['content']) && isset($item['content']['#format']) && is_null($item['content']['#format'])) {
+      if (isset($item['content'])) {
+        if (is_null($item['content']['#format'])) {
           $item['content']['#format'] = 'full_html';
+        }
       }
 
       if (isset($item['content']['#text'])) {
