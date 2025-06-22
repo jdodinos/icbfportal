@@ -10,6 +10,7 @@ dependencies:
   module:
     - block_content
     - system
+    - taxonomy
     - tb_megamenu
 label: congreso-iin
 name: congreso_iin
@@ -24,6 +25,14 @@ conditions:
     uuid: 2f2940ed-4a49-43dc-96ca-19d64fa0d2b8
     context_mapping: {  }
     pages: "/congreso-panamericano-xxii\r\n/congreso-panamericano-xxii/*"
+  'entity_bundle:taxonomy_term':
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 5bae0399-ad89-44e3-bcba-1a88e2886427
+    context_mapping:
+      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+    bundles:
+      congreso_xxii: congreso_xxii
 reactions:
   blocks:
     id: blocks
