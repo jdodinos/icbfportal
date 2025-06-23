@@ -6,6 +6,7 @@ use Drupal\Core\Database\Connection;
 use Drupal\Core\Database\Database;
 use Drupal\layout_builder\Section;
 use Drupal\views\Entity\View;
+use Drupal\block_content\Entity\BlockContent;
 
 /**
  * The Panelizer Migration Service class.
@@ -306,6 +307,36 @@ class PanelizerMigrationService {
     return [
       'block' => $this->block_config,
       'messages' => $messages,
+    ];
+  }
+
+  public function addCustomBlock($subtype, $configuration) {
+    $label_display = $this->validateLabelDisplay($configuration);
+    $block = BlockContent::create([
+      'type' => 'basic',
+      'info' => 'Bloque custom creado por Layout Builder',
+      'body' => [
+        'value' => $configuration['body'],
+        'format' => $configuration['format'],
+      ],
+    ]);
+    $block->save();
+
+    $block_plugin_id = 'inline_block:basic';
+    $label = $configuration['title'];
+    $provider = 'block_content';
+    $this->createDefaultConfiguration(
+      $block_plugin_id,
+      $label,
+      $provider,
+      $label_display,
+    );
+    $this->block_config['block_revision_id'] = $block->getRevisionId();
+    $this->block_config['block_serialized'] = NULL;
+
+    return [
+      'block' => $this->block_config,
+      'messages' => [],
     ];
   }
 

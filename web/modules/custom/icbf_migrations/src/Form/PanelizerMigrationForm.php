@@ -563,7 +563,7 @@ class PanelizerMigrationForm extends FormBase {
                       $block_plugin_id = "{$layout_field}:taxonomy_term:{$node_type}:{$field_name}";
                       break;
 
-                    case 'views':
+                    case 'views':;
                       $block_result = $this->panelizer->addViewInBlock($item->subtype, $configuration);
                       $field_configuration = $block_result['block'];
                       $block_plugin_id = $field_configuration['id'];
@@ -644,15 +644,19 @@ class PanelizerMigrationForm extends FormBase {
                     }
                     break;
 
-                    default:
-                      $result_messages[] = $this->t('Unknown type @type for panel @panel.', [
-                        '@type' => $type,
-                        '@panel' => $panel,
-                      ]);
-                      // dump('en default');
-                      // dump($item);
-                      // dump($configuration);
-                      break;
+                  case 'custom':
+                    $this->panelizer->addCustomBlock($item->subtype, $configuration);
+                    break;
+
+                  default:
+                    $result_messages[] = $this->t('Unknown type @type for panel @panel.', [
+                      '@type' => $type,
+                      '@panel' => $panel,
+                    ]);
+                    // dump('en default');
+                    // dump($item);
+                    // dump($configuration);
+                    break;
                   }
 
                   if (isset($block_plugin_id)) {
