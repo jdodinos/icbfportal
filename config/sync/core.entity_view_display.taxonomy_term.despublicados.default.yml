@@ -1,0 +1,60 @@
+uuid: 47dde350-fddf-4f10-b7db-04ba844f0610
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.despublicados.layout_builder__layout
+    - taxonomy.vocabulary.despublicados
+  module:
+    - layout_builder
+    - layout_discovery
+    - panelizer
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          75a58e0e-a2b5-427e-ac36-f48285b147ee:
+            uuid: 75a58e0e-a2b5-427e-ac36-f48285b147ee
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:despublicados:description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: taxonomy_term.despublicados.default
+targetEntityType: taxonomy_term
+bundle: despublicados
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  layout_builder__layout: true
+  search_api_attachments: true
+  search_api_excerpt: true

@@ -1,0 +1,60 @@
+uuid: 52e77972-8bce-447f-b4e6-d0db1d2d0a25
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.congreso_xxii.layout_builder__layout
+    - taxonomy.vocabulary.congreso_xxii
+  module:
+    - layout_builder
+    - layout_discovery
+    - panelizer
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          37a66ff8-8907-4a2a-810a-1aabba847b1a:
+            uuid: 37a66ff8-8907-4a2a-810a-1aabba847b1a
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:congreso_xxii:description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: taxonomy_term.congreso_xxii.default
+targetEntityType: taxonomy_term
+bundle: congreso_xxii
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  layout_builder__layout: true
+  search_api_attachments: true
+  search_api_excerpt: true

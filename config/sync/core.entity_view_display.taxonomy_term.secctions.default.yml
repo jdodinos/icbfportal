@@ -15,9 +15,74 @@ dependencies:
     - field.field.taxonomy_term.secctions.field_priority
     - field.field.taxonomy_term.secctions.field_related_procedures
     - field.field.taxonomy_term.secctions.field_taxonomy_image
+    - field.field.taxonomy_term.secctions.layout_builder__layout
     - taxonomy.vocabulary.secctions
   module:
+    - layout_builder
+    - layout_discovery
+    - panelizer
     - text
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          752b7997-41e1-48b8-8c44-8588a899a0e7:
+            uuid: 752b7997-41e1-48b8-8c44-8588a899a0e7
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:secctions:description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          ff97cc9f-f5be-4d5e-a261-51f0e3d774ee:
+            uuid: ff97cc9f-f5be-4d5e-a261-51f0e3d774ee
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:secctions:field_landings_top'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          553e5978-6c98-4f27-81a9-93848d5daab1:
+            uuid: 553e5978-6c98-4f27-81a9-93848d5daab1
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:secctions:field_content'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: taxonomy_term.secctions.default
 targetEntityType: taxonomy_term
 bundle: secctions
@@ -56,5 +121,6 @@ hidden:
   field_related_procedures: true
   field_taxonomy_image: true
   langcode: true
+  layout_builder__layout: true
   search_api_attachments: true
   search_api_excerpt: true

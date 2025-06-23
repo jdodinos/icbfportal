@@ -5,9 +5,44 @@ dependencies:
   config:
     - field.field.taxonomy_term.forums.field_metatag
     - field.field.taxonomy_term.forums.forum_container
+    - field.field.taxonomy_term.forums.layout_builder__layout
     - taxonomy.vocabulary.forums
   module:
+    - layout_builder
+    - layout_discovery
+    - panelizer
     - text
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          46e56236-f5e0-4a26-b48a-d4111cb653cc:
+            uuid: 46e56236-f5e0-4a26-b48a-d4111cb653cc
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:forums:description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 _core:
   default_config_hash: stc3UW9mGWKOU4zTosSDXyRkid8AYh_ME73FJeY4QNE
 id: taxonomy_term.forums.default
@@ -26,5 +61,6 @@ hidden:
   field_metatag: true
   forum_container: true
   langcode: true
+  layout_builder__layout: true
   search_api_attachments: true
   search_api_excerpt: true

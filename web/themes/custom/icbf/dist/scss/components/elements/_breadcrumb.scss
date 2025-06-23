@@ -1,0 +1,22 @@
+@use "../../abstracts/variables" as var;
+
+.breadcrumb {
+  background-color: transparent;
+  &-container {
+    display: flex;
+    gap: 1rem;
+    margin: auto;
+    width: 70%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 1180px;
+  }
+  &-title{
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: var.$Asap;
+  }
+}

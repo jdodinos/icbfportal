@@ -9,6 +9,7 @@ use Drupal\Component\Utility\Html;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\node\NodeInterface;
+use Drupal\views\Views;
 
 /**
  * Implements hook_preprocess_HOOK().
@@ -64,8 +65,10 @@ function icbf_preprocess_field(&$variables) {
   // if (in_array($variables['field_name'], $field_to_check)) {
     $items = &$variables['items'];
     foreach ($items as &$item) {
-      if (isset($item['content']) && empty($item['content']['#format']) && is_null($item['content']['#format'])) {
+      if (isset($item['content'])) {
+        if (is_null($item['content']['#format'])) {
           $item['content']['#format'] = 'full_html';
+        }
       }
 
       if (isset($item['content']['#text'])) {
@@ -74,6 +77,84 @@ function icbf_preprocess_field(&$variables) {
       }
     }
   // }
+
+
+  $items = &$variables['items'];
+  foreach ($items as &$item) {
+    if (isset($item['content']['#text'])) {
+      $html = $item['content']['#text'];
+      if (strpos($html, 'data-azb="az_view')) {
+        $explode_html = explode('</div>', $html);
+        foreach ($explode_html as $original_element) {
+          if (strpos($original_element, 'data-azb="az_view')) {
+            $original_element .= '</div>';
+            $element = trim($original_element);
+
+            // Check if there are contextual filters.
+            $filter = [];
+            $pos_contextual_filter = strpos($element, 'data-azat-contextual_filter');
+            if ($pos_contextual_filter) {
+              $string = substr($element, $pos_contextual_filter);
+              $string_array = explode('"', $string);
+              $filter = isset($string_array[1]) ? explode('/', $string_array[1]) : [];
+            }
+
+            // Check if view data.
+            $view_data = [];
+            $pos_view_info = strpos($element, 'data-azb="az_view');
+            $string = substr($element, $pos_view_info);
+            $string_array = explode('"', $string);
+            $view_data = isset($string_array[1]) ? explode('-', $string_array[1]) : [];
+            if (isset($view_data[1]) && isset($view_data[2])) {
+              $view = Views::getView($view_data[1]);
+              if ($view) {
+                $view->setDisplay($view_data[2]);
+
+                if (!empty($filter)) {
+                  $view->setArguments($filter);
+                }
+                $view->preExecute();
+                $view->execute();
+
+                // Render it
+                $render_array = $view->render();
+                $html_view = \Drupal::service('renderer')->render($render_array);
+                $html = str_replace($original_element, $html_view, $html);
+              }
+            }
+          }
+        }
+
+        $item['content']['#text'] = $html;
+      }
+    }
+  }
+}
+
+function icbf_preprocess_views_view_field(&$variables) {
+  if (isset($variables['field']->options['type']) && $variables['field']->options['type'] == 'video_player') {
+    $field_name = $variables['field']->options['field'];
+    $entity = $variables['row']->_entity;
+
+    if ($entity && $entity->hasField($field_name)) {
+      // @see Drupal\file\Entity\File.
+      $file = $entity->$field_name->entity;
+      if ($file && $file instanceof Drupal\file\Entity\File) {
+        $uri = $file->getFileUri();
+        $file_url_generator = \Drupal::service('file_url_generator');
+        $variables['video_url'] = $file_url_generator->generateAbsoluteString($file->getFileUri());
+      }
+    }
+  }
+}
+
+function icbf_theme_suggestions_views_view_field_alter(array &$suggestions, array $variables) {
+  $view = $variables['view'];
+  $display_id = $view->current_display;
+  $field = $variables['field']->field;
+
+
+  $suggestions[] = "views_view_field__{$view->id()}__{$display_id}__{$field}";
 }
 
 /**

@@ -10,6 +10,7 @@ dependencies:
   module:
     - block_content
     - system
+    - taxonomy
     - tb_megamenu
 label: congreso-iin
 name: congreso_iin
@@ -24,6 +25,14 @@ conditions:
     uuid: 2f2940ed-4a49-43dc-96ca-19d64fa0d2b8
     context_mapping: {  }
     pages: "/congreso-panamericano-xxii\r\n/congreso-panamericano-xxii/*"
+  'entity_bundle:taxonomy_term':
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 5bae0399-ad89-44e3-bcba-1a88e2886427
+    context_mapping:
+      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+    bundles:
+      congreso_xxii: congreso_xxii
 reactions:
   blocks:
     id: blocks
@@ -36,7 +45,7 @@ reactions:
         provider: block_content
         label_display: '0'
         region: header
-        weight: '0'
+        weight: '-2'
         custom_id: block_content_e7909f14_d146_4043_9fd9_fdfbc230954d
         theme: icbf
         css_class: ''
@@ -54,7 +63,7 @@ reactions:
         provider: block_content
         label_display: '0'
         region: header
-        weight: '0'
+        weight: '-1'
         custom_id: block_content_abba0fd8_eb37_4306_9efd_7370fee9b223
         theme: icbf
         css_class: ''
@@ -116,6 +125,6 @@ reactions:
         info: ''
         view_mode: full
         third_party_settings: {  }
-    include_default_blocks: 1
+    include_default_blocks: 0
     saved: false
 weight: 0

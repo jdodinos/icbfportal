@@ -1,0 +1,146 @@
+@use "../../abstracts/variables" as var;
+
+.node--type-news {
+    h1 {
+        color: var.$color-text-gray;
+        font-family: var.$font-montserrat;
+        font-size: 2em;
+        line-height: normal;
+        margin: 20px 0 10px;
+    }
+
+    .bs-region--left {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 15px;
+        font-family: var.$font-montserrat-regular;
+        line-height: 1.5em;
+
+        .block-block-content {}
+
+        .block-views-blockcontent-block-content-title {
+            width: 100%;
+        }
+
+        .block-field-blocknodenewsfield {
+
+            &-lugar {
+                align-self: center;
+
+                >div,
+                .field__item {
+                    padding: 0;
+                }
+            }
+
+            &-date {
+                align-self: center;
+                padding: 0 20px;
+
+                .field__item {
+                    padding: 0;
+                }
+            }
+
+            &-content{
+                .field__item {
+                    font-family: inherit;
+                    font-size: inherit;
+                }
+            }
+        }
+
+        .share-buttons {
+            display: flex;
+            list-style: none;
+            margin: .2em;
+            padding: 0;
+
+            li {
+                width: 25px;
+
+                a {
+                    border-radius: 100%;
+                    display: block;
+                    padding: 6px;
+                    width: 100%;
+
+                    img {
+                        display: block;
+                        filter: grayscale(100%);
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+
+        .field--name-field-resume{
+            margin: 0 0 1em;
+        }
+
+
+
+    }
+
+    .block-views-blocknews-related-content-block-newscol,
+    .block-views-blockbanners-block-22 {
+        h2 {
+            border-bottom: 2px solid #ddd;
+            font-family: var.$font-montserrat;
+            font-size: 1.2em;
+            line-height: normal;
+            padding-bottom: 3px;
+        }
+
+        .views-row {
+            border-bottom: 1px solid #ddd;
+            margin: .2em 0;
+            padding: 1em 0;
+
+            .views-field-field-list-image {
+                width: calc(100% / 12 * 4);
+
+                .field-content {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 0.5rem;
+                    padding-right: 0;
+
+                    img {
+                        border-radius: 5px;
+                    }
+                }
+            }
+
+            .views-field-fieldset {
+                width: calc(100% / 12 * 8);
+
+                .views-field-field-date {
+                    color: #258749;
+                    font-family: var.$font-montserrat-regular;
+                    font-size: 9.98px;
+                    margin-right: 5px;
+                    padding-right: 5px;
+
+                    time {
+                        border-left: 1px solid #999;
+                        color: #333;
+                        padding-left: 4px;
+                    }
+                }
+
+                .views-field-title {
+
+                    a {
+                        font-family: var.$font-montserrat-regular;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: normal;
+                        margin: 0 1px 4px;
+                        padding-top: .5em;
+                    }
+                }
+            }
+        }
+    }
+}
