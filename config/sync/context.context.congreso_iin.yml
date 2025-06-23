@@ -125,6 +125,6 @@ reactions:
         info: ''
         view_mode: full
         third_party_settings: {  }
-    include_default_blocks: 1
+    include_default_blocks: 0
     saved: false
 weight: 0
