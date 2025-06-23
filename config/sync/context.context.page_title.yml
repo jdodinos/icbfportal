@@ -54,6 +54,7 @@ conditions:
     context_mapping:
       taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
     bundles:
+      congreso_xxii: congreso_xxii
       ninos_ninas_y_adolescentes: ninos_ninas_y_adolescentes
       secctions: secctions
 reactions:

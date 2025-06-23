@@ -979,12 +979,17 @@ display:
           wrap: 1
           columns: '1'
           breakpoints: md
-          display: fields
-          image: field_list_image
-          title: ''
+          display: content
+          image: fieldset
+          title: fieldset_1
           description: ''
       row:
         type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
       query:
         type: views_query
         options:
@@ -4396,9 +4401,10 @@ display:
           output_url_as_text: false
           absolute: false
       pager:
-        type: none
+        type: some
         options:
-          offset: 0
+          offset: 1
+          items_per_page: 2
       sorts:
         field_date_value:
           id: field_date_value
@@ -4904,10 +4910,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: datetime_default
+          type: datetime_custom
           settings:
             timezone_override: ''
-            format_type: html_date
+            date_format: d/M/Y
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -5743,10 +5749,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: datetime_default
+          type: datetime_custom
           settings:
             timezone_override: ''
-            format_type: html_date
+            date_format: d/M/Y
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -6962,8 +6968,8 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        view_node_1:
-          id: view_node_1
+        view_node:
+          id: view_node
           table: node
           field: view_node
           relationship: none
@@ -7064,62 +7070,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-        fieldset:
-          id: fieldset
-          table: views
-          field: fieldset
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: fieldset
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          fields:
-            - field_list_image
-          wrapper: div
-          legend: 'Image Slide'
-          classes: ''
-          collapsible: false
-          collapsed: false
         field_list_image:
           id: field_list_image
           table: node__field_list_image
@@ -7186,6 +7136,61 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        fieldset:
+          id: fieldset
+          table: views
+          field: fieldset
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: fieldset
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          fields: {  }
+          wrapper: div
+          legend: 'Image Slide'
+          classes: ''
+          collapsible: false
+          collapsed: false
         fieldset_1:
           id: fieldset_1
           table: views
@@ -7359,10 +7364,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: datetime_default
+          type: datetime_custom
           settings:
             timezone_override: ''
-            format_type: html_date
+            date_format: Y/M/d
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -7615,9 +7620,37 @@ display:
             field_identifier: ''
           exposed: false
           granularity: second
+      style:
+        type: views_bootstrap_carousel
+        options:
+          grouping: {  }
+          row_class: carousel-item
+          default_row_class: true
+          interval: '5000'
+          navigation: 1
+          indicators: 1
+          pause: 1
+          wrap: 1
+          columns: '1'
+          breakpoints: md
+          display: content
+          image: field_list_image
+          title: ''
+          description: ''
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
       defaults:
+        css_class: false
+        style: false
+        row: false
         fields: false
         sorts: false
+      css_class: carousel-inner
       display_description: ''
       display_extenders:
         metatag_display_extender:
@@ -9329,10 +9362,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: datetime_default
+          type: datetime_custom
           settings:
             timezone_override: ''
-            format_type: html_date
+            date_format: d/M/Y
           group_column: value
           group_columns: {  }
           group_rows: true
