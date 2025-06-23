@@ -17,7 +17,7 @@ label: master
 name: master
 group: 'Sitio Principal ICBF'
 description: 'Layout para todas las páginas del Portal Web'
-requireAllConditions: false
+requireAllConditions: true
 disabled: false
 conditions:
   request_path:
