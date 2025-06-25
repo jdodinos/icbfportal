@@ -154,7 +154,10 @@ function icbf_preprocess_field(&$variables) {
             foreach ($string_array as $elem_value) {
               if (strpos($elem_value, 'az_block') !== FALSE) {
                 $block_id = str_replace('az_block-bean', '', $elem_value);
-                $block_info = trim(str_replace('-', ' ', $block_id));
+                $block_id = str_replace('---', '|+|', $block_id);
+                $block_id = str_replace('-', ' ', $block_id);
+                $block_info = trim(str_replace('|+|', ' - ', $block_id));
+
                 $blocks = \Drupal::entityTypeManager()
                   ->getStorage('block_content')
                   ->loadByProperties(['info' => $block_info]);
