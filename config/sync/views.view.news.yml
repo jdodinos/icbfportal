@@ -513,19 +513,23 @@ display:
         type: slick
         options:
           caption:
+            fieldset: fieldset
+            view_node: '0'
+            field_date: '0'
             field_list_image: '0'
+            field_lugar: '0'
             title: '0'
-            fieldset: '0'
+            fieldset_1: '0'
           optionset: news_outstanding
           class: ''
-          image: field_list_image
+          image: ''
           link: ''
           overlay: ''
           title: ''
           vanilla: false
           layout: ''
           cache: 0
-          admin_uri: '/admin/structure/views/ajax/display/news/block_8/style_options?_wrapper_format=drupal_ajax'
+          admin_uri: '/admin/structure/views/ajax/display/news/block_25/style_options?_wrapper_format=drupal_ajax'
           grid: ''
           grid_medium: ''
           grid_small: ''
@@ -4607,7 +4611,7 @@ display:
           offset: 0
           items_per_page: 4
       exposed_form:
-        type: basic
+        type: bef
         options:
           submit_button: Aplicar
           reset_button: false
@@ -4616,6 +4620,20 @@ display:
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
+          text_input_required: 'Seleccione cualquier filtro y pulse Aplicar para ver los resultados'
+          text_input_required_format: full_html
+          bef:
+            general:
+              autosubmit: false
+              autosubmit_exclude_textfield: false
+              autosubmit_textfield_delay: 500
+              autosubmit_textfield_minimum_length: 3
+              autosubmit_hide: false
+              input_required: false
+              allow_secondary: false
+              secondary_label: 'Opciones avanzadas'
+              secondary_open: false
+              reset_button_always_show: false
       sorts:
         field_news_fijo_value:
           id: field_news_fijo_value
@@ -4699,8 +4717,6 @@ display:
           operator: not
           value:
             - 8056
-            - 5987
-            - 8064
           group: 1
           exposed: false
           expose:
@@ -4787,7 +4803,6 @@ display:
           operator: or
           value:
             - 8084
-            - 1232
           group: 1
           exposed: false
           expose:
@@ -4831,7 +4846,7 @@ display:
         type: default
         options:
           grouping: {  }
-          row_class: ''
+          row_class: 'col-sm-3 col-sx-12'
           default_row_class: true
       row:
         type: fields
@@ -4927,62 +4942,6 @@ display:
           text: vista
           output_url_as_text: true
           absolute: false
-        fieldset_1:
-          id: fieldset_1
-          table: views
-          field: fieldset
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: fieldset
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          fields:
-            - field_list_image
-          wrapper: div
-          legend: IMG
-          classes: ''
-          collapsible: false
-          collapsed: false
         field_list_image:
           id: field_list_image
           table: node__field_list_image
@@ -4992,7 +4951,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: '<span class="slide-imgpp">{{ field_list_image }}</span>'
@@ -5179,7 +5138,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: true
             text: '<span class="news-place">{{ field_lugar }} </span> <span class="news-time-col">{{ field_date }}</span>'
@@ -5245,7 +5204,7 @@ display:
           entity_field: title
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: true
             text: "<a href=\"{{ view_node }}\" class=\"slide21\" title=\"clic para consultar noticia: {{ title }}\">{{ title }}</a>\r\n"
@@ -5299,6 +5258,55 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "  <div class=\"col-sm-9 col-xs-12 slide-imgh\">\r\n    {{ field_list_image }}\r\n  </div>\r\n  <div class=\"col-sm-3 col-xs-12 slide-id21\">\r\n    {{ field_date }}\r\n    {{ title }}\r\n  </div>"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
       pager:
         type: some
         options:
@@ -5398,13 +5406,37 @@ display:
         operator: AND
         groups:
           1: AND
+      style:
+        type: views_bootstrap_carousel
+        options:
+          grouping: {  }
+          row_class: carousel-item
+          default_row_class: true
+          interval: '5000'
+          navigation: 1
+          indicators: 1
+          pause: 1
+          wrap: 1
+          columns: '1'
+          breakpoints: md
+          display: content
+          image: field_list_image
+          title: ''
+          description: ''
+      row:
+        type: fields
+        options: {  }
       defaults:
+        css_class: false
         use_ajax: false
         pager: false
+        style: false
+        row: false
         fields: false
         arguments: false
         filters: false
         filter_groups: false
+      css_class: carousel-inner
       use_ajax: false
       display_description: 'Slide home ppal'
       display_extenders:

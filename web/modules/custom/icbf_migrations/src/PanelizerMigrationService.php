@@ -5,6 +5,8 @@ namespace Drupal\icbf_migrations;
 use Drupal\Core\Database\Connection;
 use Drupal\Core\Database\Database;
 use Drupal\layout_builder\Section;
+use Drupal\views\Entity\View;
+use Drupal\block_content\Entity\BlockContent;
 
 /**
  * The Panelizer Migration Service class.
@@ -131,6 +133,20 @@ class PanelizerMigrationService {
     return $query->execute()->fetchAll();
   }
 
+  /**
+   * Function to get Minipanels data.
+   */
+  public function getPanelsMiniData($panel_name) {
+    $connection = Database::getConnection('default', 'migrate');
+    $query = $connection->select('panels_mini', 'pm');
+    $query->innerJoin('panels_pane', 'pp', 'pm.did = pp.did');
+    $query->fields('pp');
+    $query->condition('pm.name', $panel_name);
+    $result = $query->execute()->fetchAll();
+
+    return $result;
+  }
+
   public function createLayoutSections($panels_display) {
     $sections = [];
     foreach ($panels_display as $item) {
@@ -252,6 +268,183 @@ class PanelizerMigrationService {
 
   public function addViewMode($view_mode) {
     $this->block_config['view_mode'] = $view_mode;
+  }
+
+  public function addViewInBlock($view_id, $configuration) {
+    $display_id = $configuration['display'];
+    $view = View::load($view_id);
+    $messages = [];
+    if ($view) {
+      $displays = $view->get('display');
+      if (isset($displays[$display_id])) {
+        $layout_field = 'views_block';
+        $label = "Views {$view_id} - Display {$displays[$display_id]['display_title']} - Display ID {$display_id}";
+        $block_plugin_id = "{$layout_field}:{$view_id}-{$display_id}";
+        $provider = 'views';
+        $label = $configuration['override_title_text'] ?? $label;
+        $label_display = $this->validateLabelDisplay($configuration);
+
+        $this->createDefaultConfiguration(
+          $block_plugin_id,
+          $label,
+          $provider,
+          $label_display,
+        );
+        $this->addFormatterConfig($configuration);
+
+        if (isset($configuration['args']) && !empty($configuration['args'])) {
+          $this->block_config['arguments'] = explode('/', $configuration['args']);
+        }
+      }
+      else {
+        $messages[] = "Display {$display_id} not found in view {$view_id}";
+      }
+    }
+    else {
+      $messages[] = "View {$view_id} not found";
+    }
+
+    return [
+      'block' => $this->block_config,
+      'messages' => $messages,
+    ];
+  }
+
+  public function addCustomBlock($subtype, $configuration, $name = '') {
+    $label_display = $this->validateLabelDisplay($configuration);
+    $block = BlockContent::create([
+      'type' => 'basic',
+      'info' => 'Bloque custom in Layout Builder ' . $name,
+      'body' => [
+        'value' => $configuration['body'],
+        'format' => $configuration['format'],
+      ],
+    ]);
+    $block->save();
+
+    $block_plugin_id = 'inline_block:basic';
+    $label = $configuration['title'];
+    $provider = 'block_content';
+    $this->createDefaultConfiguration(
+      $block_plugin_id,
+      $label,
+      $provider,
+      $label_display,
+    );
+    $this->block_config['block_revision_id'] = $block->getRevisionId();
+    $this->block_config['block_serialized'] = NULL;
+
+    return [
+      'block' => $this->block_config,
+      'messages' => [],
+    ];
+  }
+
+  public function addBlockContentInBlock($subtype, $configuration) {
+    $label_display = $this->validateLabelDisplay($configuration);
+    $messages = [];
+
+    if (strpos($subtype, 'md_megamenu') === 0) {
+      $md_megamenus = [
+        'md_megamenu-2' => 'menu-prueba1',
+        'md_megamenu-6' => 'men-compras-locales',
+        'md_megamenu-7' => 'menu-transparencia',
+        'md_megamenu-8' => 'mgm-5c775d3a74ba0',
+        'md_megamenu-10' => 'mgm-5ce41f0ce4a05',
+        'md_megamenu-11' => 'mgm-5d3f4fe8cd42b',
+        'md_megamenu-12' => 'mgm-5da0e630d2a93',
+        'md_megamenu-15' => 'mgm-5e7a6aab9aad3',
+        'md_megamenu-16' => 'mgm-5edaba119f9a0',
+        'md_megamenu-17' => 'mgm-5edfcfafa91eb',
+        'md_megamenu-18' => 'mgm-5ee27f3730710',
+        'md_megamenu-19' => 'mgm-6038204b97dda',
+        'md_megamenu-20' => 'mgm-6049302480ef2',
+        'md_megamenu-21' => 'mfu',
+      ];
+      $provider = 'tb_megamenu';
+      $block_plugin_id = 'tb_megamenu_menu_block:' . $md_megamenus[$subtype] ?? $subtype;
+      $this->createDefaultConfiguration(
+        $block_plugin_id,
+        '',
+        $provider,
+        $label_display,
+      );
+      $this->addFormatterConfig($configuration);
+    }
+    if (strpos($subtype, 'quicktabs') === 0) {
+      $provider = 'quicktabs';
+      $quicktab = explode('-', $subtype);
+      $block_plugin_id = 'quicktabs_block:' . $quicktab[1];
+      $this->createDefaultConfiguration(
+        $block_plugin_id,
+        '',
+        $provider,
+        $label_display,
+      );
+      $this->addFormatterConfig($configuration);
+    }
+    else {
+      // For all blocks.
+      $position_explode = strpos($subtype, '-');
+      $block_type = substr($subtype, 0, $position_explode);
+      $block_id = substr($subtype, $position_explode + 1);
+
+      if ($block_type == 'block') {
+        $block_uuid = $this->database->select('block_content', 'b')
+          ->fields('b', ['uuid'])
+          ->condition('id', $block_id)
+          ->execute()->fetchField();
+      }
+      elseif ($block_type == 'bean') {
+        $block_title = str_replace('---', '|+|', $block_id);
+        $block_title = str_replace('-', ' ', $block_title);
+        $block_title = str_replace('|+|', ' - ', $block_title);
+        $block_query = $this->database->select('block_content', 'b');
+        $block_query->join('block_content_field_data', 'bcfd', 'b.id = bcfd.id');
+        $block_query->fields('b', ['uuid'])
+          ->condition('bcfd.info', $block_title);
+        $block_uuid = $block_query->execute()->fetchField();
+      }
+
+      if (isset($block_uuid)) {
+        $block_plugin_id = "block_content:$block_uuid";
+        $provider = 'block_content';
+
+        $this->createDefaultConfiguration(
+          $block_plugin_id,
+          '',
+          $provider,
+          $label_display,
+        );
+        $this->addFormatterConfig($configuration);
+        $this->addViewMode('full');
+        $field_configuration = $this->block_config;
+      }
+    }
+
+    if (!isset($block_plugin_id)) {
+      $block_plugin_id = $subtype;
+    }
+
+    // Verificar existencia del plugin.
+    $plugin_manager = \Drupal::service('plugin.manager.block');
+    if (!$plugin_manager->hasDefinition($block_plugin_id)) {
+      $messages[] = "Block plugin ID {$block_plugin_id} not found.";
+    }
+
+    return [
+      'block' => $this->block_config,
+      'messages' => $messages,
+    ];
+  }
+
+  private function validateLabelDisplay($configuration) {
+    $label_display = FALSE;
+    if (isset($configuration['override_title']) && $configuration['override_title'] && isset($configuration['override_title_text']) && $configuration['override_title_text']) {
+      $label_display = TRUE;
+    }
+
+    return $label_display;
   }
 
   public function insertNewLog($entity_id, $entity_type, $messages = NULL) {

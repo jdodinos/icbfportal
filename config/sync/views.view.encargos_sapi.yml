@@ -846,6 +846,7 @@ display:
         filter_groups: false
       use_ajax: true
       display_description: ''
+      exposed_block: false
       display_extenders:
         metatag_display_extender:
           metatags: {  }
