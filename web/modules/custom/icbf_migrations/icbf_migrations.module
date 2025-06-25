@@ -6,6 +6,19 @@ use Drupal\migrate\Plugin\MigrationInterface;
 use Drupal\views\ViewExecutable;
 
 /**
+ * Implementa hook_preprocess_block().
+ */
+function icbf_preprocess_block(&$variables) {
+  if (isset($variables['elements']['#configuration']['formatter']['override_title'])) {
+    $label_display = $variables['elements']['#configuration']['label_display'];
+    $block_settings = $variables['elements']['#configuration']['formatter'];
+    if ($label_display && $block_settings['override_title']) {
+      $variables['label']['#markup'] = $block_settings['override_title_text'] ?? '';
+    }
+  }
+}
+
+/**
  * Implementa hook_block_view_alter().
  */
 function icbf_migrations_views_pre_view(ViewExecutable $view, $display_id, array &$args) {

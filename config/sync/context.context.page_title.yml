@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - node
+    - system
     - taxonomy
 label: 'Page title'
 name: page_title
@@ -57,6 +58,12 @@ conditions:
       congreso_xxii: congreso_xxii
       ninos_ninas_y_adolescentes: ninos_ninas_y_adolescentes
       secctions: secctions
+  request_path:
+    id: request_path
+    negate: true
+    uuid: cd1cd326-dae3-4aaa-9029-71a333316048
+    context_mapping: {  }
+    pages: '<front>'
 reactions:
   blocks:
     id: blocks

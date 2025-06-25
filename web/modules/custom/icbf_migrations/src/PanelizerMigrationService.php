@@ -310,11 +310,11 @@ class PanelizerMigrationService {
     ];
   }
 
-  public function addCustomBlock($subtype, $configuration) {
+  public function addCustomBlock($subtype, $configuration, $name = '') {
     $label_display = $this->validateLabelDisplay($configuration);
     $block = BlockContent::create([
       'type' => 'basic',
-      'info' => 'Bloque custom creado por Layout Builder',
+      'info' => 'Bloque custom in Layout Builder ' . $name,
       'body' => [
         'value' => $configuration['body'],
         'format' => $configuration['format'],
