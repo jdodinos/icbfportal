@@ -63,7 +63,7 @@ class PanelizerMigrationForm extends FormBase {
       '#attributes' => [
         'id' => 'entity-type',
       ],
-      '#default_value' => 'node',
+      '#default_value' => 'taxonomy_term',
     ];
 
     // Table structure.
@@ -314,7 +314,7 @@ class PanelizerMigrationForm extends FormBase {
                       $block_result = $this->panelizer->addViewInBlock($item->subtype, $configuration);
                       $field_configuration = $block_result['block'];
                       $block_plugin_id = $field_configuration['id'];
-                      $result_messages = $block_result['messages'];
+                      $result_messages = array_merge($result_messages, $block_result['messages']);
                       break;
 
                     case 'block':
@@ -327,7 +327,7 @@ class PanelizerMigrationForm extends FormBase {
                       $block_result = $this->panelizer->addBlockContentInBlock($item->subtype, $configuration);
                       $field_configuration = $block_result['block'];
                       $block_plugin_id = $field_configuration['id'];
-                      $result_messages = $block_result['messages'];
+                      $result_messages = array_merge($result_messages, $block_result['messages']);
                       break;
 
                     case 'node':
@@ -573,7 +573,7 @@ class PanelizerMigrationForm extends FormBase {
                       $block_result = $this->panelizer->addViewInBlock($item->subtype, $configuration);
                       $field_configuration = $block_result['block'];
                       $block_plugin_id = $field_configuration['id'];
-                      $result_messages = $block_result['messages'];
+                      $result_messages = array_merge($result_messages, $block_result['messages']);
                       break;
 
                     case 'block':
@@ -586,7 +586,7 @@ class PanelizerMigrationForm extends FormBase {
                       $block_result = $this->panelizer->addBlockContentInBlock($item->subtype, $configuration);
                       $field_configuration = $block_result['block'];
                       $block_plugin_id = $field_configuration['id'];
-                      $result_messages = $block_result['messages'];
+                      $result_messages = array_merge($result_messages, $block_result['messages']);
                       break;
 
                     case 'panels_mini':
