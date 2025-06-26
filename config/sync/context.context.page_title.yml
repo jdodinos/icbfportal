@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - node
+    - system
     - taxonomy
 label: 'Page title'
 name: page_title
@@ -40,6 +41,7 @@ conditions:
       monitoreo_gesti_n: monitoreo_gesti_n
       multimedia: multimedia
       notifications: notifications
+      page: page
       portfolio_tramite: portfolio_tramite
       process: process
       rendicion_de_cuentas: rendicion_de_cuentas
@@ -53,7 +55,15 @@ conditions:
     context_mapping:
       taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
     bundles:
+      congreso_xxii: congreso_xxii
       ninos_ninas_y_adolescentes: ninos_ninas_y_adolescentes
+      secctions: secctions
+  request_path:
+    id: request_path
+    negate: true
+    uuid: cd1cd326-dae3-4aaa-9029-71a333316048
+    context_mapping: {  }
+    pages: '<front>'
 reactions:
   blocks:
     id: blocks

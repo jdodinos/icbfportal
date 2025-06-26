@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.services_faq.field_youtube
     - node.type.services_faq
     - views.view.content
+    - webform.webform.webform_67009
   content:
     - 'block_content:footer:a6390e76-a36d-49f2-954f-876128f2b70a'
     - 'block_content:footer:c1f77770-eb4c-44b2-9dfe-22868d720d79'
@@ -34,6 +35,7 @@ dependencies:
     - text
     - user
     - views
+    - webform
     - youtube
 third_party_settings:
   layout_builder:
@@ -307,6 +309,23 @@ third_party_settings:
               view_mode: full
               context_mapping: {  }
             weight: 2
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          cb27f330-b59e-48d2-9928-b801b3f39275:
+            uuid: cb27f330-b59e-48d2-9928-b801b3f39275
+            region: left
+            configuration:
+              id: webform_block
+              label: 'Valoración de Contenido'
+              label_display: visible
+              provider: webform
+              context_mapping: {  }
+              webform_id: webform_67009
+              default_data: ''
+              redirect: false
+              lazy: false
+            weight: 4
             additional:
               context_visibility: {  }
               context_all_must_pass: 1

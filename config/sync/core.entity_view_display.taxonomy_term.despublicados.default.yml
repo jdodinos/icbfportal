@@ -1,12 +1,10 @@
-uuid: 3a425490-b64d-42c9-b5cc-59f0587c1245
-langcode: en
+uuid: 47dde350-fddf-4f10-b7db-04ba844f0610
+langcode: es
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.forums.field_metatag
-    - field.field.taxonomy_term.forums.forum_container
-    - field.field.taxonomy_term.forums.layout_builder__layout
-    - taxonomy.vocabulary.forums
+    - field.field.taxonomy_term.despublicados.layout_builder__layout
+    - taxonomy.vocabulary.despublicados
   module:
     - layout_builder
     - layout_discovery
@@ -22,17 +20,17 @@ third_party_settings:
         layout_settings:
           label: ''
         components:
-          46e56236-f5e0-4a26-b48a-d4111cb653cc:
-            uuid: 46e56236-f5e0-4a26-b48a-d4111cb653cc
+          75a58e0e-a2b5-427e-ac36-f48285b147ee:
+            uuid: 75a58e0e-a2b5-427e-ac36-f48285b147ee
             region: content
             configuration:
-              id: 'field_block:taxonomy_term:forums:description'
+              id: 'field_block:taxonomy_term:despublicados:description'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
               formatter:
                 type: text_default
-                label: above
+                label: hidden
                 settings: {  }
                 third_party_settings: {  }
             weight: 0
@@ -43,23 +41,19 @@ third_party_settings:
     custom: false
     allow: false
     default: default
-_core:
-  default_config_hash: stc3UW9mGWKOU4zTosSDXyRkid8AYh_ME73FJeY4QNE
-id: taxonomy_term.forums.default
+id: taxonomy_term.despublicados.default
 targetEntityType: taxonomy_term
-bundle: forums
+bundle: despublicados
 mode: default
 content:
   description:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content
 hidden:
-  field_metatag: true
-  forum_container: true
   langcode: true
   layout_builder__layout: true
   search_api_attachments: true

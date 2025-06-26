@@ -1988,7 +1988,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: video_player_list
+          type: video_player
           settings:
             controls: false
             autoplay: false

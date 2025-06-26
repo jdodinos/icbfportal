@@ -34,7 +34,7 @@ function icbf_migrations_views_pre_view(ViewExecutable $view, $display_id, array
     if (!empty($layout_configs)) {
       foreach ($layout_configs as $layout_config) {
         // @see Drupal\layout_builder\Section
-        $layout_config = reset($layout_config);
+        $layout_config = $layout_config->layout_builder__layout_section;
         $layout_config = unserialize($layout_config);
         $layout_components = $layout_config->getComponents();
         foreach ($layout_components as $component) {
