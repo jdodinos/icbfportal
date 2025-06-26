@@ -1,6 +1,7 @@
 global-styling:
   css:
     theme:
+      css/ninos-y-ninas.css: {}
       css/icbf.css: {}
       css/style.css: {}
       dist/css/main.css: {}

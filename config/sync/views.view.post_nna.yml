@@ -920,8 +920,17 @@ display:
           error_message: true
       style:
         type: default
+        options:
+          grouping: {  }
+          row_class: 'col-sm-4 col-xs-12'
+          default_row_class: false
       row:
         type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
       query:
         type: views_query
         options:
