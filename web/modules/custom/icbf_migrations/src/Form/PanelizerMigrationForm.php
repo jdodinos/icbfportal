@@ -63,7 +63,7 @@ class PanelizerMigrationForm extends FormBase {
       '#attributes' => [
         'id' => 'entity-type',
       ],
-      '#default_value' => 'node',
+      '#default_value' => 'taxonomy_term',
     ];
 
     // Table structure.
@@ -314,7 +314,7 @@ class PanelizerMigrationForm extends FormBase {
                       $block_result = $this->panelizer->addViewInBlock($item->subtype, $configuration);
                       $field_configuration = $block_result['block'];
                       $block_plugin_id = $field_configuration['id'];
-                      $result_messages = $block_result['messages'];
+                      $result_messages = array_merge($result_messages, $block_result['messages']);
                       break;
 
                     case 'block':
@@ -327,7 +327,7 @@ class PanelizerMigrationForm extends FormBase {
                       $block_result = $this->panelizer->addBlockContentInBlock($item->subtype, $configuration);
                       $field_configuration = $block_result['block'];
                       $block_plugin_id = $field_configuration['id'];
-                      $result_messages = $block_result['messages'];
+                      $result_messages = array_merge($result_messages, $block_result['messages']);
                       break;
 
                     case 'node':
@@ -406,7 +406,13 @@ class PanelizerMigrationForm extends FormBase {
                       }
                       break;
 
-                    default:
+                    case 'custom':
+                      $this->panelizer->addCustomBlock($item->subtype, $configuration, $item->name);
+                      $field_configuration = $block_result['block'];
+                      $block_plugin_id = $field_configuration['id'];
+                      break;
+
+                      default:
                       $result_messages[] = $this->t('Unknown type @type for panel @panel.', [
                         '@type' => $type,
                         '@panel' => $panel,
@@ -567,7 +573,7 @@ class PanelizerMigrationForm extends FormBase {
                       $block_result = $this->panelizer->addViewInBlock($item->subtype, $configuration);
                       $field_configuration = $block_result['block'];
                       $block_plugin_id = $field_configuration['id'];
-                      $result_messages = $block_result['messages'];
+                      $result_messages = array_merge($result_messages, $block_result['messages']);
                       break;
 
                     case 'block':
@@ -580,83 +586,56 @@ class PanelizerMigrationForm extends FormBase {
                       $block_result = $this->panelizer->addBlockContentInBlock($item->subtype, $configuration);
                       $field_configuration = $block_result['block'];
                       $block_plugin_id = $field_configuration['id'];
-                      $result_messages = $block_result['messages'];
+                      $result_messages = array_merge($result_messages, $block_result['messages']);
                       break;
 
-              //       case 'node':
-              //         $node_referenced = \Drupal::entityTypeManager()->getStorage('node')
-              //           ->load($configuration['nid']);
-              //         if ($node_referenced) {
-              //           $block_plugin_id = 'node:' . $configuration['nid'];
-              //           $provider = 'node';
-              //           $node_referenced_title = $node_referenced->getTitle();
+                    case 'panels_mini':
+                      $panels_mini_name = $item->subtype;
+                      $minipanel = $this->panelizer->getPanelsMiniData($panels_mini_name);
+                      foreach ($minipanel as $panel_block) {
+                        $panel_config = unserialize($panel_block->configuration);
+                        switch ($panel_block->type) {
+                          case 'views':
+                            $block_result = $this->panelizer->AddViewInBlock($panel_block->subtype, $panel_config);
+                            $field_configuration = $block_result['block'];
+                            $result_messages = array_merge($result_messages, $block_result['messages']);
+                            break;
 
-              //           $this->panelizer->createDefaultConfiguration(
-              //             $block_plugin_id,
-              //             $node_referenced_title,
-              //             $provider,
-              //             $label_display,
-              //           );
-              //           $this->panelizer->addContextMappingConfig(['entity' => 'layout_builder.entity']);
-              //           $field_configuration = $this->panelizer->block_config;
-              //           $field_configuration['links'] = $configuration['links'] ?? 1;
-              //           $field_configuration['leave_node_title'] = $configuration['leave_node_title'] ?? 0;
-              //           $field_configuration['build_mode'] = $configuration['build_mode'] ?? 'full';
-              //           $field_configuration['link_node_title'] = $configuration['link_node_title'] ?? 0;
-              //           $field_configuration['identifier'] = $configuration['identifier'] ?? 1;
-              //           $field_configuration['content'] = \Drupal::entityTypeManager()->getViewBuilder('node')
-              //             ->view($node_referenced, $configuration['build_mode']);
-              //         }
-              //         else {
-              //           $result_messages[] = $this->t('Node with ID @nid not found.', ['@nid' => $configuration['nid']]);
-              //         }
-              //         break;
+                          case 'block':
+                            $block_result = $this->panelizer->addBlockContentInBlock($panel_block->subtype, $panel_config);
+                            $field_configuration = $block_result['block'];
+                            $result_messages = array_merge($result_messages, $block_result['messages']);
+                            break;
+                        }
 
-                  case 'panels_mini':
-                    $panels_mini_name = $item->subtype;
-                    $minipanel = $this->panelizer->getPanelsMiniData($panels_mini_name);
-                    foreach ($minipanel as $panel_block) {
-                      $panel_config = unserialize($panel_block->configuration);
-                      switch ($panel_block->type) {
-                        case 'views':
-                          $block_result = $this->panelizer->AddViewInBlock($panel_block->subtype, $panel_config);
-                          $field_configuration = $block_result['block'];
-                          $result_messages = array_merge($result_messages, $block_result['messages']);
-                          break;
-
-                        case 'block':
-                          $block_result = $this->panelizer->addBlockContentInBlock($panel_block->subtype, $panel_config);
-                          $field_configuration = $block_result['block'];
-                          $result_messages = array_merge($result_messages, $block_result['messages']);
-                          break;
+                        if (isset($field_configuration)) {
+                          // Create the layout builder component (item/block).
+                          $field_component = new SectionComponent(
+                            \Drupal::service('uuid')->generate(),
+                            $region,
+                            $field_configuration
+                          );
+                          // Append the component to the section.
+                          $row['section']->appendComponent($field_component);
+                        }
                       }
+                      break;
 
-                      if (isset($field_configuration)) {
-                        // Create the layout builder component (item/block).
-                        $field_component = new SectionComponent(
-                          \Drupal::service('uuid')->generate(),
-                          $region,
-                          $field_configuration
-                        );
-                        // Append the component to the section.
-                        $row['section']->appendComponent($field_component);
-                      }
-                    }
-                    break;
+                    case 'custom':
+                      $block_result = $this->panelizer->addCustomBlock($item->subtype, $configuration);
+                      $field_configuration = $block_result['block'];
+                      $block_plugin_id = $field_configuration['id'];
+                      break;
 
-                  case 'custom':
-                    $this->panelizer->addCustomBlock($item->subtype, $configuration);
-                    break;
-
-                  default:
-                    $result_messages[] = $this->t('Unknown type @type for panel @panel.', [
-                      '@type' => $type,
-                      '@panel' => $panel,
-                    ]);
-                    // dump('en default');
-                    // dump($item);
-                    // dump($configuration);
-                    break;
+                    default:
+                      $result_messages[] = $this->t('Unknown type @type for panel @panel.', [
+                        '@type' => $type,
+                        '@panel' => $panel,
+                      ]);
+                      // dump('en default');
+                      // dump($item);
+                      // dump($configuration);
+                      break;
                   }
 
                   if (isset($block_plugin_id)) {

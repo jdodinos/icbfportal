@@ -74,6 +74,15 @@ function icbf_preprocess_field(&$variables) {
       if (isset($item['content']['#text'])) {
         $html = $item['content']['#text'];
         $item['content']['#text'] = icbf_files_directory_process($html);
+        if (strpos($html, 'glazed_builder')) {
+          $item_pos = strpos($html, '<link rel="stylesheet"');
+          $html2 = substr($html, $item_pos);
+          $html_close_pos = strpos($html2, '>');
+          $html_close = substr($html, $item_pos, $html_close_pos);
+          // dump($html2);
+          // dump($html_close);
+        //   # code...
+        }
       }
     }
   // }
@@ -83,6 +92,7 @@ function icbf_preprocess_field(&$variables) {
   foreach ($items as &$item) {
     if (isset($item['content']['#text'])) {
       $html = $item['content']['#text'];
+      // For views in Glazed Builder.
       if (strpos($html, 'data-azb="az_view')) {
         $explode_html = explode('</div>', $html);
         foreach ($explode_html as $original_element) {
@@ -127,6 +137,45 @@ function icbf_preprocess_field(&$variables) {
 
         $item['content']['#text'] = $html;
       }
+
+      // For blocks in Glazed Builder.
+      if (strpos($html, 'data-azb="az_block')) {
+        $explode_html = explode('</div>', $html);
+        foreach ($explode_html as $original_element) {
+          if (strpos($original_element, 'data-azb="az_block')) {
+            $original_element .= '</div>';
+            $element = trim($original_element);
+
+            // Check if view data.
+            $block_data = [];
+            $pos_block_info = strpos($element, 'data-azb="az_block');
+            $string = substr($element, $pos_block_info);
+            $string_array = explode('"', $string);
+            foreach ($string_array as $elem_value) {
+              if (strpos($elem_value, 'az_block') !== FALSE) {
+                $block_id = str_replace('az_block-bean', '', $elem_value);
+                $block_id = str_replace('---', '|+|', $block_id);
+                $block_id = str_replace('-', ' ', $block_id);
+                $block_info = trim(str_replace('|+|', ' - ', $block_id));
+
+                $blocks = \Drupal::entityTypeManager()
+                  ->getStorage('block_content')
+                  ->loadByProperties(['info' => $block_info]);
+                $block = reset($blocks);
+
+                if ($block) {
+                  $view_builder = \Drupal::entityTypeManager()->getViewBuilder('block_content');
+                  $render_array = $view_builder->view($block);
+                  $html_block = \Drupal::service('renderer')->renderRoot($render_array);
+                  $html = str_replace($original_element, $html_block, $html);
+                }
+              }
+            }
+          }
+        }
+
+        $item['content']['#text'] = $html;
+      }
     }
   }
 }
@@ -158,6 +207,19 @@ function icbf_theme_suggestions_views_view_field_alter(array &$suggestions, arra
 }
 
 /**
+ * Implementa hook_preprocess_block().
+ */
+function icbf_preprocess_block(&$variables) {
+  if (isset($variables['elements']['#configuration']['formatter']['override_title'])) {
+    $label_display = $variables['elements']['#configuration']['label_display'];
+    $block_settings = $variables['elements']['#configuration']['formatter'];
+    if ($label_display && $block_settings['override_title']) {
+      $variables['label']['#markup'] = $block_settings['override_title_text'] ?? '';
+    }
+  }
+}
+
+/**
  * Processes the HTML content to replace placeholders with actual values.
  *
  * @param string $html
@@ -177,4 +239,12 @@ function icbf_files_directory_process($html) {
   $html = str_replace('-base-url-', $base_url, $html);
   $html = str_replace('-files-directory-', $public_files_path, $html);
   return $html;
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function icbf_preprocess_tb_megamenu_item(&$variables) {
+  $link_title = Html::cleanCssIdentifier($variables['link']['title']);
+  $variables['attributes']['class'][] = 'item-link-' . strtolower($link_title);
 }
