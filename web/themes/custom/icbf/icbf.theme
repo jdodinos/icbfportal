@@ -240,3 +240,11 @@ function icbf_files_directory_process($html) {
   $html = str_replace('-files-directory-', $public_files_path, $html);
   return $html;
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function icbf_preprocess_tb_megamenu_item(&$variables) {
+  $link_title = Html::cleanCssIdentifier($variables['link']['title']);
+  $variables['attributes']['class'][] = 'item-link-' . strtolower($link_title);
+}
