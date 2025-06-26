@@ -1,0 +1,34 @@
+.page-item {
+  .page-link {
+    .visually-hidden {
+      display: none;
+    }
+  }
+
+  &.pager__item--next {
+    width: 100px;
+    .page-link {
+      &::before {
+        content: "Siguiente >";
+      }
+      > span[aria-hidden="true"] {
+        display: none;
+      }
+    }
+  }
+
+  &.pager__item--last {
+    width: 100px;
+    .page-link {
+      &::before {
+        content: "Última >";
+      }
+      > span[aria-hidden="true"] {
+        display: none;
+      }
+    }
+  }
+  &.disabled span {
+    height: 33px;
+   }
+}
