@@ -29,6 +29,7 @@ dependencies:
     - 'taxonomy_term:file_category:3a2d0f91-3b1b-4460-b776-337c8882b05d'
     - 'taxonomy_term:file_category:432464e5-da72-4907-949c-33b10124b0bc'
     - 'taxonomy_term:file_category:5c559702-e042-4f8e-90b9-aa45d2bb3f00'
+    - 'taxonomy_term:file_category:60224058-c923-44d8-949d-47379f02626e'
     - 'taxonomy_term:file_category:7ef236ac-c7f6-41ad-8d10-6ea4fda1c5a8'
     - 'taxonomy_term:file_category:89609f76-0834-4569-ba4d-268a7f780643'
     - 'taxonomy_term:file_category:8f01f662-dad1-4303-8e4e-51d2524fb72f'
@@ -809,6 +810,10 @@ display:
           error_message: true
       style:
         type: default
+        options:
+          grouping: {  }
+          row_class: 'col-sm-4 col-sx-12'
+          default_row_class: false
       row:
         type: fields
       query:
@@ -7935,7 +7940,7 @@ display:
         arguments: false
         filters: false
         filter_groups: false
-      css_class: 'col-sm-4 col-sx-12'
+      css_class: ''
       display_description: 'grid trasversales'
       display_extenders:
         metatag_display_extender:
@@ -15358,7 +15363,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -15819,7 +15824,7 @@ display:
           label: ''
           exclude: true
           alter:
-            alter_text: true
+            alter_text: false
             text: '<a class="id-1519c" href="https://proveedores.icbf.gov.co/" target="_blank" title="clic para acceder a la aplicación">{{ title }}</a>'
             make_link: false
             path: ''
@@ -16138,15 +16143,98 @@ display:
           group: 1
           expose:
             operator: ''
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
+        field_file_categoria_target_id:
+          id: field_file_categoria_target_id
+          table: node__field_file_categoria
+          field: field_file_categoria_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
           value:
-            articles_portal_web: articles_portal_web
+            - 7712
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: file_category
+          type: textfield
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_section_target_id:
+          id: field_section_target_id
+          table: node__field_section
+          field: field_section_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            - 1247
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: secctions
+          type: textfield
+          hierarchy: false
+          limit: true
+          error_message: true
       filter_groups:
         operator: AND
         groups:
