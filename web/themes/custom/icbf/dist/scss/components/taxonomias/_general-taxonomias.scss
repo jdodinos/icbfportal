@@ -1,0 +1,9 @@
+@use "../../abstracts/variables" as var;
+
+.generic-title {
+    font-family: var.$Asap;
+    font-size: 1.7em;
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+}

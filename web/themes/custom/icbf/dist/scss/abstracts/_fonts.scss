@@ -10,8 +10,23 @@ $fonts: "./../assets/fonts" !default;
 @font-face {
   font-family: "montserrat";
   src: url("./../assets/fonts/montserrat/Montserrat-Regular.ttf");
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url("./../assets/fonts/montserrat/Montserrat-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url("./../assets/fonts/montserrat/Montserrat-Bold.woff2") format('woff2');
+  font-weight: 700;
+  font-style: normal;
+
 }
 
 @font-face {
@@ -22,8 +37,52 @@ $fonts: "./../assets/fonts" !default;
 }
 
 @font-face {
+  font-family: "montserrat-light";
+  src: url("./../assets/fonts/montserrat/Montserrat-Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Asap";
-  src: url("./../assets/fonts/montserrat/Asap-Italic.ttf");
+  src: url("./../assets/fonts/asap/Asap-Italic.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Asap-Regular";
+  src: url("./../assets/fonts/asap/Asap-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Asap-Bold";
+  src: url("./../assets/fonts/asap/Asap-Bold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pe-icon-7-stroke';
+
+  src: url('./../assets/icons/Stroke/fonts/Pe-icon-7-stroke.eot');
+  src: url('./../assets/icons/Stroke/fonts/Pe-icon-7-stroke.eot?#iefix') format('embedded-opentype'),
+       url('./../assets/icons/Stroke/fonts/Pe-icon-7-stroke.woff') format('woff'),
+       url('./../assets/icons/Stroke/fonts/Pe-icon-7-stroke.ttf') format('truetype'),
+       url('./../assets/icons/Stroke/fonts/Pe-icon-7-stroke.svg#Pe-icon-7-stroke') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'et-line';
+  src: url('./../assets/icons/et-line/fonts/et-line.eot');
+  src: url('./../assets/icons/et-line/fonts/et-line.eot?#iefix') format('embedded-opentype'),
+       url('./../assets/icons/et-line/fonts/et-line.woff') format('woff'),
+       url('./../assets/icons/et-line/fonts/et-line.ttf') format('truetype'),
+       url('./../assets/icons/et-line/fonts/et-line.svg#et-line') format('svg');
   font-weight: normal;
   font-style: normal;
 }

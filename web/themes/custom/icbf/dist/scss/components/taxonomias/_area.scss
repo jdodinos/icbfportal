@@ -1,0 +1,93 @@
+@use "../../abstracts/variables" as var;
+
+.Taxonomia-area{
+   ul{
+     li{
+        font-size: 14px;
+        font-family: var.$font-montserrat-regular;
+     }
+   }
+   .stpe-outlinebutton{
+    text-transform: uppercase;
+    padding: 6px 28px;
+   }
+   .h1-word {
+        color: #FFF;
+        font-size: 2.16em;
+        font-weight: 600;
+        font-family: var.$font-montserrat;
+    }
+   .id-1519 {
+    font-family: var.$font-montserrat;
+    font-size: 1.2em;
+    h3{
+        color: #4b4b4b;
+        font-family: var.$font-montserrat;
+        font-size: 1.3em;
+        font-weight: 600;
+    }
+   }
+   .id-1519-h3{
+        display:block;
+        font-family: var.$font-montserrat;
+        font-size: 1.32em;
+        font-weight: 500;
+        line-height: normal;
+        word-break: break-word;
+    }
+    .id-1519-h4{
+        display:block;
+        font-family: var.$font-montserrat;
+        font-size: 1.12em;
+        font-weight: 500;
+        line-height: normal;
+        word-break: break-word;
+    }
+   .box-gral1519-2 {
+        background-color: #fefefe;
+        border: 1px solid #dddddd;
+        height: auto;
+        margin: 1em auto;
+        width: 100%;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -moz-transition: all .4s ease 0s;
+        -ms-transition: all .4s ease 0s;
+        -o-transition: all .4s ease 0s;
+        transition: all .4s ease 0s;
+        &:hover{
+            border: 1px solid #eee;
+            box-shadow: 0 0.4rem 1.3rem rgba(0,0,0,.3);
+            transform: translateY(-.2rem);
+        }
+    }
+    .contain-gral1519-2 {
+        display: inline-block;
+        padding: .5em;
+        width: auto;
+        .col-sm-3, .col-sm-9{
+            float: left;
+        }
+    }
+    .icon-gral1519-2 {
+        height: auto;
+        margin: .87em .1em;
+        width: 100%;
+    }
+    .btn-default{
+        background-color: white;
+        border-color: #8c8c8c;
+        width: 100%;
+        padding: 10px 16px;
+        font-size: 18px;
+        line-height: 1.3333333;
+        border-radius: 6px;
+        font-family: var.$font-montserrat-regular;
+        &:hover{
+            color: #333;
+            background-color: #d4d4d4;
+            border-color: #8c8c8c;
+        }
+    }
+}
