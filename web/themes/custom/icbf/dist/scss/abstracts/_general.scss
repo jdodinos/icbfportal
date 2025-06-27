@@ -1,78 +1,26 @@
 @use "variables" as var;
 
-a {
-  color: var.$link_color;
-  &:link {
-    color: var.$link_color;
-    text-decoration: none !important;
-  }
-  &.active {
-    color: var.$link_visited_color;
-    text-decoration: underline !important;
-  }
-  &:hover {
-    color: var.$link_visited_color;
-    text-decoration: underline !important;
-  }
-  &.btn-1519-1 {
-
-    background-color: var.$color-primary-blue;
-    border-radius: 30px;
-    border: 1px solid var.$color-primary-blue;
-    color: var.$color-primary-white;
-    display: inline-block;
-    font-family: var.$font-montserrat-regular;
-    font-weight: 600;
-    font-size: 12px;
-    margin: 0.2em 0.3em 0.4em 0;
-    padding: 0.2em 0.83em;
-    text-decoration: none;
-    transition: all 0.3s linear;
-    -webkit-transition: all 0.3s linear;
-    -moz-transition: all 0.3s linear;
-    -o-transition: all 0.3s linear;
-    &:hover {
-      background-color: var.$color-primary-white;
-      border: 1px solid var.$color-primary-blue;
-      color: var.$color-primary-blue;
-      text-decoration: underline;
-    }
-  }
-
-  &.btn-1519-2 {
-    background-color: var.$color-primary-white;
-    border-radius: 30px;
-    border: 1px solid var.$color-primary-blue;
-    color: var.$color-primary-blue;
-    display: inline-block;
-    font-family:  var.$font-montserrat-regular;
-    font-weight: 600;
-    font-size: 12px;
-    margin: 0.2em 0.3em 0.4em 0;
-    padding: 0.2em 0.83em;
-    text-decoration: none;
-    transition: all 0.3s linear;
-    -webkit-transition: all 0.3s linear;
-    -moz-transition: all 0.3s linear;
-    -o-transition: all 0.3s linear;
-    &:hover {
-      background-color: var.$color-primary-blue;
-      border: 1px solid var.$color-primary-blue;
-      color: var.$color-primary-white;
-      text-decoration: underline;
-    }
-  }
+.box-tag {
+  background-color: rgb(92 177 86 / 85%);
+  border-bottom-left-radius: .3em;
+  border-bottom-right-radius: .3em;
+  padding: 3px 5px;
+  position: absolute;
+  right: 2%;
+  top: 0;
 }
 
-button{
-  .carousel-control-next, .carousel-control-prev{
+button {
+
+  .carousel-control-next,
+  .carousel-control-prev {
     background: red;
-    width: 37px;
-    height: 37px;
     background-color: rgba(0, 0, 0, .2);
+    border-radius: 27px;
+    height: 37px;
     left: auto;
     right: 2%;
-    border-radius: 27px;
     top: 40%;
+    width: 37px;
   }
 }

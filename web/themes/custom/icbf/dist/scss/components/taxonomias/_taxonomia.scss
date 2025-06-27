@@ -15,7 +15,7 @@
 }
 
 #block-icbf-content {
-  width: 70%;
+  width: 100%;
   margin: auto;
   max-width: 1150px;
 }
@@ -100,4 +100,14 @@
     margin-bottom: 1em;
     padding-bottom: 0.5rem;
   }
+}
+
+.slick--skin--boxed>.slick__slider>.slick-list{
+  margin: 0;
+}
+.slick--skin--boxed-carousel .slide__content{
+  margin: 0;
+}
+.slick-arrow:before{
+  color: #929292;
 }

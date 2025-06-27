@@ -1,11 +1,19 @@
-global-styling:
+main-styling:
   css:
     theme:
-      css/ninos-y-ninas.css: {}
       css/icbf.css: {}
       css/style.css: {}
       dist/css/main.css: {}
   js:
     js/script.js: {}
+  dependencies:
+    - core/jquery
+
+ninos-y-ninas:
+  css:
+    theme:
+      css/ninos-y-ninas.css: {}
+  js:
+    js/ninos-y-ninas.js: {}
   dependencies:
     - core/jquery

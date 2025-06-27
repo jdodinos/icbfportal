@@ -210,11 +210,18 @@ function icbf_theme_suggestions_views_view_field_alter(array &$suggestions, arra
  * Implementa hook_preprocess_block().
  */
 function icbf_preprocess_block(&$variables) {
+  // Remove the title of the page title block on the front page.
+  if ($variables['plugin_id'] == 'page_title_block' && \Drupal::service('path.matcher')->isFrontPage()) {
+    $variables['content']['#title'] = '';
+  }
+
   if (isset($variables['elements']['#configuration']['formatter']['override_title'])) {
     $label_display = $variables['elements']['#configuration']['label_display'];
     $block_settings = $variables['elements']['#configuration']['formatter'];
     if ($label_display && $block_settings['override_title']) {
-      $variables['label']['#markup'] = $block_settings['override_title_text'] ?? '';
+      if (is_array($variables['label'])) {
+        $variables['label']['#markup'] = $block_settings['override_title_text'] ?? '';
+      }
     }
   }
 }
@@ -247,4 +254,22 @@ function icbf_files_directory_process($html) {
 function icbf_preprocess_tb_megamenu_item(&$variables) {
   $link_title = Html::cleanCssIdentifier($variables['link']['title']);
   $variables['attributes']['class'][] = 'item-link-' . strtolower($link_title);
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function icbf_page_attachments_alter(array &$attachments) {
+  $term = \Drupal::routeMatch()->getParameter('taxonomy_term');
+  if ($term && $term instanceof EntityInterface) {
+    $vocabulary = $term->bundle();
+
+    if ($vocabulary == 'ninos_ninas_y_adolescentes') {
+      $global_style_index = array_search('icbf/main-styling', $attachments['#attached']['library']);
+      if ($global_style_index !== FALSE) {
+        unset($attachments['#attached']['library'][$global_style_index]);
+      }
+      $attachments['#attached']['library'][] = 'icbf/ninos-y-ninas';
+    }
+  }
 }

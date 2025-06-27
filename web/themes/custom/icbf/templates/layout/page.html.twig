@@ -72,12 +72,14 @@
         <div id="main" class="{{ container }}">
           {{ page.featured_top }}
 
-          <div class="breadcrumb">
-           <div class="breadcrumb-container">
-             <p class="breadcrumb-title">{{ 'Usted está en: ' }}</p>
-             <div class="breadcrumb-content"> {{ page.breadcrumb }}</div>
-           </div>
-          </div>
+          {% if page.breadcrumb %}
+            <div class="breadcrumb">
+              <div class="breadcrumb-container">
+                <p class="breadcrumb-title">{{ 'Usted está en: ' }}</p>
+                <div class="breadcrumb-content"> {{ page.breadcrumb }}</div>
+              </div>
+            </div>
+          {% endif %}
 
           {% if page.feature %}
             <div class="featured">
