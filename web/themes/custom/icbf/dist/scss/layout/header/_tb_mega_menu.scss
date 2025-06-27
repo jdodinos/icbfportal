@@ -1,3 +1,4 @@
+@use "../../abstracts/variables" as var;
 @use "../../abstracts/mixins" as mixins;
 
 .sr-only{
@@ -222,7 +223,7 @@
   h2,
   h3 {
     color: #4b4b4b;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var.$font-montserrat;
     font-size: 15.4px;
     font-weight: 500;
     margin: 10px;
@@ -273,24 +274,6 @@
     margin: 0 0 0.5em;
     padding-left: 20px;
     position: relative;
-
-    a {
-      &::before {
-        background: url('/sites/default/files/menu_icon.png') no-repeat center;
-        background-size: contain;
-        border: 1px solid #c3e5d0;
-        border-radius: 4px;
-        clip: initial;
-        content: '';
-        font-size: 0;
-        height: 15px;
-        left: 0;
-        margin: 0;
-        padding: 8px;
-        position: absolute;
-        width: 15px;
-      }
-    }
 
     .sr-only__ {
       background: url('/sites/default/files/menu_icon.png') no-repeat center;
@@ -514,6 +497,7 @@
         .m20-cunt {
           display: flex;
           flex-wrap: wrap;
+          width: 100%;
 
           .m20-canal {
             display: flex;
@@ -523,14 +507,17 @@
             .m20-icon-c {
               margin: 0 auto;
               width: 38px;
+              float: initial;
             }
 
             .m20-info {
               flex: 1;
               font-size: 12px;
               max-height: 85px;
-              padding-top: 10px;
               word-break: break-word;
+              position: initial;
+              margin: 0 auto;
+              padding: 0 0 0 4px;
 
               br {
                 display: none;
@@ -541,6 +528,7 @@
                 font-weight: bold;
 
                 a {
+                  font-family: var.$font-montserrat;
                   font-size: 13px;
                   font-weight: bold;
                 }
@@ -548,9 +536,10 @@
 
               p {
                 margin: 0;
+                font-size: 12px;
 
                 a{
-                  font-size: 11px ;
+                  font-size: 11px;
                 }
               }
             }
@@ -746,6 +735,7 @@
           width: 100%;
         }
         .m20-link{
+          font-size: 12px;
           padding: 0;
           width: 100%;
         }
