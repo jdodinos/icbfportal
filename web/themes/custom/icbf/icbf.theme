@@ -210,6 +210,11 @@ function icbf_theme_suggestions_views_view_field_alter(array &$suggestions, arra
  * Implementa hook_preprocess_block().
  */
 function icbf_preprocess_block(&$variables) {
+  // Remove the title of the page title block on the front page.
+  if ($variables['plugin_id'] == 'page_title_block' && \Drupal::service('path.matcher')->isFrontPage()) {
+    $variables['content']['#title'] = '';
+  }
+
   if (isset($variables['elements']['#configuration']['formatter']['override_title'])) {
     $label_display = $variables['elements']['#configuration']['label_display'];
     $block_settings = $variables['elements']['#configuration']['formatter'];
