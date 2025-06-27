@@ -26158,10 +26158,10 @@ a.m20-ada img {
   background-color: #fff;
   border-radius: 30px;
   border: 2px solid #0073ff;
-  color: #0073ff !important;
+  color: #0073ff;
   cursor: pointer;
   display: inline-block;
-  font-size: .9em !important;
+  font-size: .9em;
   font-weight: 500;
   margin: 1em .5em 0 0;
   padding: .3rem 1.3rem;
@@ -26171,7 +26171,7 @@ a.m20-ada img {
 }
 
 .btn-mm1:hover {
-  color: #fff !important;
+  color: #fff;
   background-color: #0073ff;
   text-decoration: underline;
   box-shadow: 0 .1rem 1rem rgba(0, 0, 0, .1)
@@ -26181,10 +26181,10 @@ a.m20-ada img {
   background-color: #0073ff;
   border-radius: 30px;
   border: 2px solid #0073ff;
-  color: #fff !important;
+  color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-size: .9em !important;
+  font-size: .9em;
   font-weight: 500;
   margin: 1em .5em 0 0;
   padding: .3rem 1.3rem;
@@ -26194,7 +26194,7 @@ a.m20-ada img {
 }
 
 .btn-mm2:hover {
-  color: #0073ff !important;
+  color: #0073ff;
   background-color: #fff;
   border: 2px solid #0073ff;
   text-decoration: underline;

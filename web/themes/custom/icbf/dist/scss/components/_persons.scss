@@ -1,0 +1,32 @@
+@use "../abstracts/variables" as var;
+
+.person-content {
+    font-family: var.$font-montserrat-regular;
+
+    .person-title {
+        margin-bottom: 1em;
+
+        h1 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-family: var.$font-asap-regular;
+            color: var.$icbf_green;
+            font-size: 1.7em;
+        }
+    }
+
+    .person-more-info .field {
+        display: inline-flex;
+        margin-bottom: 1em;
+    }
+
+    .field__label {
+        font-weight: 800;
+        margin-right: 5px;
+        font-weight: bold;
+    }
+
+    .field__label::after {
+        content: ":";
+    }
+}
