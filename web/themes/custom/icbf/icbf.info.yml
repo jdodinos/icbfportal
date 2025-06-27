@@ -4,7 +4,7 @@ description: 'icbf subtheme based on Bootstrap 5 theme.'
 core_version_requirement: '^10.1 || ^11.0'
 'base theme': bootstrap5
 libraries:
-  - icbf/global-styling
+  - icbf/main-styling
 ckeditor_stylesheets:
   - css/style.css
 ckeditor5-stylesheets:
