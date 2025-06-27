@@ -207,6 +207,19 @@ function icbf_theme_suggestions_views_view_field_alter(array &$suggestions, arra
 }
 
 /**
+ * Implementa hook_preprocess_block().
+ */
+function icbf_preprocess_block(&$variables) {
+  if (isset($variables['elements']['#configuration']['formatter']['override_title'])) {
+    $label_display = $variables['elements']['#configuration']['label_display'];
+    $block_settings = $variables['elements']['#configuration']['formatter'];
+    if ($label_display && $block_settings['override_title']) {
+      $variables['label']['#markup'] = $block_settings['override_title_text'] ?? '';
+    }
+  }
+}
+
+/**
  * Processes the HTML content to replace placeholders with actual values.
  *
  * @param string $html
@@ -226,4 +239,12 @@ function icbf_files_directory_process($html) {
   $html = str_replace('-base-url-', $base_url, $html);
   $html = str_replace('-files-directory-', $public_files_path, $html);
   return $html;
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function icbf_preprocess_tb_megamenu_item(&$variables) {
+  $link_title = Html::cleanCssIdentifier($variables['link']['title']);
+  $variables['attributes']['class'][] = 'item-link-' . strtolower($link_title);
 }
