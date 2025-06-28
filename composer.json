@@ -301,6 +301,9 @@
             },
             "drupal/metatag": {
                 "Fix error when sort metetags": "./patchs/metatag-remove-group-sort.patch"
+            },
+            "drupal/core": {
+                "Video and audio in views": "./patchs/3224617_views_support_video_source_tag.patch"
             }
         },
         "merge-plugin": {

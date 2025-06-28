@@ -19955,9 +19955,20 @@ display:
         operator: AND
         groups:
           1: AND
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: 'col-sm-4 col-sx-12'
+          default_row_class: false
+      row:
+        type: fields
+        options: {  }
       defaults:
         title: false
         pager: false
+        style: false
+        row: false
         fields: false
         sorts: false
         filters: false
