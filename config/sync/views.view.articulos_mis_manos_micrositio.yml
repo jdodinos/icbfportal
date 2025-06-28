@@ -14786,10 +14786,10 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: input
+          click_sort_column: video_id
           type: youtube_video
           settings:
-            youtube_size: responsive
+            youtube_size: 450x315
             youtube_width: ''
             youtube_height: ''
             youtube_autoplay: false
@@ -14861,9 +14861,9 @@ display:
           condition: nem
           equalto: ''
           then: '{{ field_youtube }}'
-          then_translate: true
+          then_translate: false
           or: '{{ field_post_image_mte }}'
-          or_translate: true
+          or_translate: false
           strip_tags: false
         field_date:
           id: field_date
@@ -15067,7 +15067,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"mmte-boxgrid1\">\r\n  {{ views_conditional_field }}\r\n  {{ field_date }}\r\n  <div class=\"mte-gridinfo\">\r\n    {{ field_seo_title }}\r\n    {{ field_resume }}\r\n  </div>\r\n</div>"
+            text: "<div class=\"mmte-boxgrid1\">\r\n  {{ views_conditional_field }}\r\n  {{ field_youtube }}\r\n  <div class=\"mte-gridinfo\">\r\n    {{ field_seo_title }}\r\n    {{ field_resume }}\r\n  </div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -21591,7 +21591,7 @@ display:
           hide_alter_empty: true
           text: 'Leer artículo'
           output_url_as_text: true
-          absolute: false
+          absolute: true
         nid:
           id: nid
           table: node_field_data
@@ -21658,63 +21658,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        fieldset:
-          id: fieldset
-          table: views
-          field: fieldset
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: fieldset
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          fields:
-            - field_seo_title
-            - field_resume
-          wrapper: div
-          legend: ID
-          classes: 'col-sm-6 col-xs-12 slide-id-pp'
-          collapsible: false
-          collapsed: false
         field_seo_title:
           id: field_seo_title
           table: node__field_seo_title
@@ -21724,7 +21667,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: true
             text: '<h4><a href="{{ view_node }}" class="mte-titlegrid1" title="{{ field_seo_title }} ">{{ field_seo_title }}</a></h4>'
@@ -21787,7 +21730,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: true
             text: "<div class=\"mte-infogrid\">{{ field_resume }}</div>\r\n<a href=\"{{ view_node }}\" class=\"mte-btnslide\" title=\"leer artículo\">Ver artículo <span class=\"fa fa-plusblu\"></span></a>\r\n\r\n <div class=\"share-posts\"> Compartir <i class=\"fa fa-share-alt\" aria-hidden=\"true\"></i>\r\n            <span class=\"share-ptext\">\r\n<ul class=\"share-buttons\">\r\n  <li><a href=\"https://www.facebook.com/sharer/sharer.php?u={{ view_node }}&quote=\" title=\"Compartir en Facebook\" target=\"_blank\" onclick=\"window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;\"><img alt=\"Compartir en Facebook\" src=\"/sites/default/files/facebook_0.png\" /></a></li>\r\n  <li><a href=\"https://twitter.com/intent/tweet?source={{ view_node }}&text=:{{ view_node }}&via=ICBFColombia\" target=\"_blank\" title=\"Tweet\" onclick=\"window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;\"><img alt=\"Tweet\" src=\"/sites/default/files/twitter_0.png\" /></a></li>\r\n  <li><a href=\"mailto:?subject=&body=:{{ view_node }}\" target=\"_blank\" title=\"Enviar email\" onclick=\"window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;\"><img alt=\"Enviar email\" src=\"/sites/default/files/email_0.png\" /></a></li>\r\n</ul></span>\r\n        </div>"
@@ -21841,64 +21784,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        fieldset_1:
-          id: fieldset_1
-          table: views
-          field: fieldset
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: fieldset
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          fields:
-            - field_post_image_mte
-            - field_youtube
-            - views_conditional_field
-          wrapper: div
-          legend: IMG
-          classes: 'col-sm-6 col-xs-12'
-          collapsible: false
-          collapsed: false
         field_post_image_mte:
           id: field_post_image_mte
           table: node__field_post_image_mte
@@ -22045,7 +21930,7 @@ display:
           admin_label: ''
           plugin_id: views_conditional_field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -22093,6 +21978,55 @@ display:
           or: '{{ field_post_image_mte }}'
           or_translate: true
           strip_tags: false
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "<div class=\"col-sm-6 col-xs-12 slide-id-pp\">\r\n    {{ field_seo_title }}\r\n    {{ field_resume }}\r\n</div>\r\n<div class=\"col-sm-6 col-xs-12\">\r\n    {{ views_conditional_field }}\r\n</div>"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
         edit_node:
           id: edit_node
           table: node
@@ -22151,6 +22085,21 @@ display:
         options:
           offset: 0
           items_per_page: 3
+      sorts:
+        field_date_value:
+          id: field_date_value
+          table: node__field_date
+          field: field_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
       filters:
         status:
           id: status
@@ -22255,22 +22204,51 @@ display:
         groups:
           1: AND
       style:
-        type: views_bootstrap_carousel
+        type: slick
         options:
-          grouping: {  }
-          row_class: 'col-sm-6 col-sx-12'
-          default_row_class: false
-          interval: '5000'
-          navigation: 1
-          indicators: 1
-          pause: 1
-          wrap: 1
-          columns: '1'
-          breakpoints: md
-          display: content
+          caption:
+            view_node: '0'
+            edit_node: '0'
+            nid: '0'
+            field_post_image_mte: '0'
+            field_resume: '0'
+            field_seo_title: '0'
+            field_youtube: '0'
+            nothing: '0'
+            views_conditional_field: '0'
+          optionset: default
+          class: ''
           image: field_post_image_mte
+          link: ''
+          overlay: ''
           title: field_seo_title
-          description: ''
+          vanilla: true
+          layout: ''
+          cache: 0
+          admin_uri: '/admin/structure/views/ajax/display/articulos_mis_manos_micrositio/block_slidemte1/style_options?_wrapper_format=drupal_ajax'
+          grid: ''
+          grid_medium: ''
+          grid_small: ''
+          style: ''
+          skin: boxed-carousel
+          overridables:
+            arrows: '0'
+            autoplay: '0'
+            dots: '0'
+            draggable: '0'
+            infinite: '0'
+            mouseWheel: '0'
+            randomize: '0'
+            variableWidth: '0'
+          thumbnail: ''
+          optionset_thumbnail: ''
+          skin_thumbnail: ''
+          thumbnail_caption: ''
+          thumbnail_effect: ''
+          thumbnail_position: ''
+          override: false
+          preserve_keys: false
+          visible_items: null
       row:
         type: fields
         options:
@@ -22279,12 +22257,17 @@ display:
           separator: ''
           hide_empty: true
       defaults:
+        css_class: false
+        use_ajax: false
         pager: false
         style: false
         row: false
         fields: false
+        sorts: false
         filters: false
         filter_groups: false
+      css_class: mte-slborder1
+      use_ajax: true
       display_description: ''
       display_extenders:
         metatag_display_extender:
