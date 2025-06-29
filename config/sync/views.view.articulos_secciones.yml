@@ -1472,9 +1472,20 @@ display:
         operator: AND
         groups:
           1: AND
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: false
+      row:
+        type: fields
+        options: {  }
       defaults:
         title: false
         pager: false
+        style: false
+        row: false
         fields: false
         filters: false
         filter_groups: false
@@ -17548,7 +17559,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"left\">\r\n    {{ title }}\r\n</div>\r\n<div class=\"right\">\r\n    {{ field_introduction_text }}\r\n    {{ field_link_more_info }}\r\n    {{ field_document }}\r\n</div>\r\n<div class=\"bar-line\"></div>"
+            text: "<div class=\"col-xs-12 col-sm-4 views-fieldset\">\r\n    <h4 class=\"h4 word-gral\"><span>{{ title }}</span></h4>\r\n</div>\r\n<div class=\"col-xs-12 col-sm-8 views-fieldset\">\r\n    <div class=\"views-field views-field-field-introduction-text word-gral\">\r\n        <span class=\"field-content\">\r\n            {{ field_introduction_text }}\r\n        </span>\r\n   </div>\r\n    {{ field_link_more_info }}\r\n    {{ field_document }}\r\n</div>\r\n<div class=\"bar-line\"></div>"
             make_link: false
             path: ''
             absolute: false
