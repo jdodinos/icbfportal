@@ -9024,8 +9024,8 @@ display:
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_type: h3
+          element_wrapper_class: 'h3 word-gral'
           element_default_classes: true
           empty: ''
           hide_empty: false
@@ -9087,8 +9087,8 @@ display:
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_type: div
+          element_wrapper_class: word-gral
           element_default_classes: true
           empty: ''
           hide_empty: false
@@ -9432,9 +9432,14 @@ display:
           tab_fade: 0
       row:
         type: fields
-        options: {  }
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: true
       defaults:
         title: false
+        css_class: false
         pager: false
         style: false
         row: false
@@ -9442,6 +9447,7 @@ display:
         sorts: false
         filters: false
         filter_groups: false
+      css_class: 'he_back-cleargrey back-container'
       display_description: ''
       display_extenders:
         metatag_display_extender:
@@ -17279,62 +17285,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        fieldset_1:
-          id: fieldset_1
-          table: views
-          field: fieldset
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: fieldset
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          fields:
-            - title
-          wrapper: div
-          legend: Left
-          classes: ''
-          collapsible: false
-          collapsed: false
         title:
           id: title
           table: node_field_data
@@ -17344,7 +17294,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -17398,64 +17348,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        fieldset_2:
-          id: fieldset_2
-          table: views
-          field: fieldset
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: fieldset
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          fields:
-            - field_introduction_text
-            - field_link_more_info
-            - field_document
-          wrapper: div
-          legend: Right
-          classes: ''
-          collapsible: false
-          collapsed: false
         field_introduction_text:
           id: field_introduction_text
           table: node__field_introduction_text
@@ -17465,7 +17357,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -17527,7 +17419,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: true
             text: '<span><a href="[{{ field_link_more_info }}" title="clic para ampliar información" class="btn-1519-2">Más Información</a></span>'
@@ -17590,7 +17482,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -17656,7 +17548,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<div class="bar-line"></div>'
+            text: "<div class=\"left\">\r\n    {{ title }}\r\n</div>\r\n<div class=\"right\">\r\n    {{ field_introduction_text }}\r\n    {{ field_link_more_info }}\r\n    {{ field_document }}\r\n</div>\r\n<div class=\"bar-line\"></div>"
             make_link: false
             path: ''
             absolute: false
@@ -17746,7 +17638,18 @@ display:
           text: ''
           output_url_as_text: false
           absolute: false
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: false
+      row:
+        type: fields
+        options: {  }
       defaults:
+        style: false
+        row: false
         fields: false
       display_description: ''
       display_extenders:
