@@ -1988,15 +1988,15 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: video_player
+          type: video_player_list
           settings:
-            controls: false
+            controls: true
             autoplay: false
             loop: false
             muted: false
             width: '640'
             height: '360'
-            preload: none
+            preload: auto
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -2602,15 +2602,15 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: video_player
+          type: video_player_list
           settings:
-            controls: false
+            controls: true
             autoplay: false
             loop: false
             muted: false
             width: '384'
             height: '216'
-            preload: none
+            preload: auto
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -2884,8 +2884,19 @@ display:
         operator: AND
         groups:
           1: AND
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: 'col-sm-6 col-sx-12'
+          default_row_class: true
+      row:
+        type: fields
+        options: {  }
       defaults:
         pager: false
+        style: false
+        row: false
         fields: false
         sorts: false
         arguments: false
@@ -5518,7 +5529,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"wcenter\">\r\n  {{ views_conditional_field }}\r\n  <h4 class=\"word-gral\">{{ title }}</h4>\r\n</div>\r\n"
+            text: "<div class=\"wcenter\">\r\n  {{ field_youtube }}\r\n  <h4 class=\"word-gral\">{{ title }}</h4>\r\n</div>\r\n"
             make_link: false
             path: ''
             absolute: false

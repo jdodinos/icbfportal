@@ -1521,6 +1521,7 @@ display:
     display_plugin: block
     position: 3
     display_options:
+      title: 'Puntos de Atención'
       fields:
         nid:
           id: nid
@@ -2193,6 +2194,7 @@ display:
           1: AND
       defaults:
         access: false
+        title: false
         use_ajax: false
         pager: false
         exposed_form: false
