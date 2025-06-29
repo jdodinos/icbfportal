@@ -13,6 +13,7 @@ ninos-y-ninas:
   css:
     theme:
       css/ninos-y-ninas.css: {}
+      dist-ninos-y-ninas/css/main.css: {}
   js:
     js/ninos-y-ninas.js: {}
   dependencies:
