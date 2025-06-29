@@ -1,0 +1,43 @@
+.view-documents.view-display-id-block_2 {
+    blockquote {
+        display: none;
+    }
+    .view-content {
+        .pactColumn {
+            margin-bottom: 1.2em;
+            .views-field-field-list-image {
+                img {
+                    max-height: 250px;
+                    min-height: 250px;
+                    object-fit: contain;
+                    background: $images-background;
+                }
+            }
+            .views-field-title {
+                text-align: center;
+                margin-top: 0.5em;
+            }
+        }
+    }
+}
+.view-documents.view-display-id-block_3 {
+    blockquote {
+        display: none;
+    }
+    .view-content {
+        .eachColumn {
+            margin-bottom: 1.2em;
+            .views-field-field-list-image {
+                img {
+                    max-height: 300px;
+                    min-height: 300px;
+                    object-fit: contain;
+                }
+            }
+            .views-field-title {
+                text-align: center;
+                margin-top: 0.5em;
+            }
+        }
+    }
+}

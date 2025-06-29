@@ -1,0 +1,154 @@
+@use "../../abstracts/variables" as var;
+
+
+.page-taxonomy-ninos_ninas_y_adolescentes {
+
+    .logo-top-nna img {
+        width: auto;
+        height: 127px;
+        display: block;
+        margin: auto;
+    }
+
+
+    .tb-megamenu {
+        background-color: #fff;
+    }
+
+
+
+    .tb-megamenu .nav>.active>a {
+        color: #125e81;
+        background: var.$background-color;
+    }
+
+    .region.region-header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    ul.tb-megamenu-nav.nav.level-0.items-9 {
+        background-color: var.$background-color;
+        position: relative;
+        left: -15%;
+    }
+
+    .block-tb-megamenu {
+        margin-top: 2.3em;
+    }
+
+    .tb-megamenu .nav>li {
+        margin: .3em;
+        text-align: center;
+        border-radius: 15%;
+    }
+
+    .tb-megamenu .nav>li:hover {
+        text-decoration: underline;
+        transform: scale(1.2, 1.2);
+        transition: all .3s ease-out;
+    }
+
+    .tb-megamenu .nav>li>a {
+        color: var.$color-text-tb-nomral;
+        font-family: var.$font-montserrat-regular;
+
+        &:nth-child(1) {
+            font-weight: 500;
+            text-decoration: none;
+            margin-top: .8em;
+            border-radius: 22px;
+            border: 1px dashed #a0c11f;
+            padding: .2em .45em;
+            transition: all .2s ease;
+        }
+
+        &:hover {
+            text-decoration: underline;
+            color: #fff !important;
+            background: #a0c11f;
+            background: -webkit-linear-gradient(338deg, #a0c11f, #cddc39);
+            background: linear-gradient(338deg, #a0c11f, #cddc39);
+        }
+    }
+
+    .tb-megamenu .nav>li>a {
+        color: var.$color-text-tb-nomral;
+    }
+
+
+    .tb-megamenu .nav>li::before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        /* Alto de la imagen */
+        background-image: url('./../../../assets/imgs/nna-icbf-menuicons_01.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-right: 8px;
+        /* Espacio entre el icono y el texto */
+    }
+
+
+
+
+    .level-1 {
+        margin: .3em;
+        text-align: center;
+        border-radius: 15%;
+    }
+
+    .layout.layout--onecol {
+        width: 70%;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: var(--bs-gutter-x, 1rem);
+        /* Padding lateral por defecto */
+        padding-left: var(--bs-gutter-x, 1rem);
+
+
+        /* Breakpoints (igual que Bootstrap 5) */
+        @media (min-width: 576px) {
+
+            /* sm */
+            .layout.layout--onecol {
+                max-width: 540px;
+            }
+        }
+
+        @media (min-width: 768px) {
+
+            /* md */
+            .layout.layout--onecol {
+                max-width: 720px;
+            }
+        }
+
+        @media (min-width: 992px) {
+
+            /* lg */
+            .layout.layout--onecol {
+                max-width: 960px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+
+            /* xl */
+            .layout.layout--onecol {
+                max-width: 1140px;
+            }
+        }
+
+        @media (min-width: 1400px) {
+
+            /* xxl */
+            .layout.layout--onecol {
+                max-width: 1320px;
+            }
+        }
+
+    }
+}

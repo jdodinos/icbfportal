@@ -1,0 +1,91 @@
+.h2-title-home {
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    color: #55A032;
+}
+
+.txt-box {
+    text-align: center;
+    margin: auto;
+    width: 90%;
+}
+
+.box-default {
+    background-color: #FFF;
+    border-top: 1px solid #DDD;
+    border-left: 1px solid #DDD;
+    border-right: 1px solid #DDD;
+    border-bottom: 4px solid #00aca0;
+    border-radius: 4px;
+    min-height: 150px;
+    padding: 15px;
+    margin-bottom: 2em;
+    .h2-titlebox a {
+        color: #00aca0;
+        margin: 0 auto;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+    }
+    .h2-titlebox a:hover {
+        color: #f9b32a;
+        margin: 0 auto;
+        padding: 10px;
+        text-align: center;
+        text-decoration: underline;
+    }
+    a.btn-box {
+        border-radius: 4px;
+        border: 1px solid #DDD;
+        color: #00aca0;
+        display: inline-block;
+        font-size: 0.94em;
+        font-weight: bold;
+        line-height: 20px;
+        margin: 4px;
+        padding: 4px;
+        text-decoration: none;
+    }
+    a.btn-box:hover {
+        background-color: #f7f7f7;
+        border-radius: 4px;
+        border: 1px solid #00aca0;
+        display: inline-block;
+        font-size: 0.94em;
+        font-weight: bold;
+        line-height: 20px;
+        margin: 4px;
+        padding: 4px;
+        text-decoration: underline;
+    }
+}
+
+.box2 {
+    @include box-color(#7db93c);
+}
+
+.box3 {
+    @include box-color(#eab205);
+}
+
+.box4 {
+    @include box-color(#eb8c20);
+}
+
+.box5 {
+    @include box-color(#0563ab);
+}
+
+.box6 {
+    @include box-color(#c2c11d);
+}
+
+.box7 {
+    @include box-color(#0d8835);
+}
+
+.box8 {
+    @include box-color(#DDD);
+}

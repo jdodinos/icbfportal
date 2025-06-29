@@ -1,0 +1,148 @@
+.caja2 {
+    background-color: #FFF;
+    border-bottom: 4px solid #DDD;
+    border-radius: 4px;
+    border-top: 1px solid #DDD;
+    border-left: 1px solid #DDD;
+    border-right: 1px solid #DDD;
+    margin: 3em 0 2em;
+    padding: 5px 5px 2em;
+    .floating-image {
+        margin: -45px auto 0;
+        width: 75px;
+        display: block;
+    }
+}
+.caja3 {
+    background-color: #FFF;
+    border-radius: 4px;
+    border: 1px solid #DDD;
+    margin: 0 0px 2em;
+    overflow: hidden;
+    padding: 4px;
+    position: relative;
+    text-align: left;
+    height: auto;
+    min-height: 380px;
+    .right {
+        min-height: 76px;
+        padding-left: 70px;
+    }
+    .left {
+        float: left;
+        margin-right: 4px;
+    }
+    ul {
+        padding-left: 1em;
+    }
+}
+
+.caja4 {
+    background-color: #FFF;
+    border-bottom: 4px solid #DDD;
+    border-radius: 4px;
+    border-top: 1px solid #DDD;
+    border-left: 1px solid #DDD;
+    border-right: 1px solid #DDD;
+    margin: 0 0 2em;
+    padding: 5px 5px 1em;
+}
+.caja5 {
+    background-color: #F7F7F7;
+    border-radius: 4px;
+    border: #DDD 1px dotted;
+    color: #008bb9;
+    display: inline-block;
+    font-size: 0.9em;
+    font-weight: normal;
+    margin: 5px 0 2em 0;
+    padding: 10px;
+    width: 90%;
+    &:hover{
+        background-color: #FCFCFC;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border: 1px solid #7db93c;
+        color: #FFF !important;
+        display: inline-block;
+        font-size: 0.90em;
+        font-weight: normal;
+        margin: 1em 0;
+        padding: 10px;
+        text-decoration: underline;
+    }
+}
+.caja6 {
+    border-radius: 4px;
+    color: #008bb9;
+    display: inline-block;
+    font-size: 0.9em;
+    font-weight: normal;
+    margin: 5px 0 2em 0;
+    padding: 10px;
+    width: 90%;
+}
+.social-color-1 {
+    background: #29a9e1;
+}
+
+.social-color-2 {
+    background: #3b5a9a;
+}
+
+.social-color-6 {
+    background: #cb312e;
+}
+
+.social-color-5 {
+    background: #fba933;
+}
+
+.social-color-8 {
+    background: #613dc8;
+}
+
+.social-color-9 {
+    background: #ff0082;
+}
+.floating-social {
+    &>div {
+        display: inline-block;
+    }
+    .facebook-share {
+        .fa-circle {
+            &:before {
+                color: #3c579d;
+            }
+        }
+    }
+    .twitter-share {
+        .fa-circle {
+            &:before {
+                color: #5baaf4;
+            }
+        }
+    }
+    .instagram-share {
+        .fa-circle {
+            &:before {
+                color: #6920bb;
+            }
+        }
+    }
+    .fa-facebook {
+        &:before {
+            position: relative;
+            top: 13px;
+            left: 11px;
+        }
+    }
+    .fa-twitter {
+        &:before {
+            position: relative;
+            top: 13px;
+            left: 13px;
+        }
+    }
+}
