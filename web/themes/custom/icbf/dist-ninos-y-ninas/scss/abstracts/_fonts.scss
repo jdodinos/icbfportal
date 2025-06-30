@@ -37,6 +37,13 @@ $fonts: "./../assets/fonts" !default;
 }
 
 @font-face {
+  font-family: "Schoolbell";
+  src: url("./../assets/fonts/schoolbell/Schoolbell-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "montserrat-light";
   src: url("./../../assets/fonts/montserrat/Montserrat-Light.ttf");
   font-weight: normal;
@@ -64,12 +71,7 @@ $fonts: "./../assets/fonts" !default;
   font-style: normal;
 }
 
-@font-face {
-  font-family: "Schoolbell";
-  src: url("./../../assets/fonts/schoolbell/schoolbell-Regular.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 @font-face {
   font-family: 'Pe-icon-7-stroke';
