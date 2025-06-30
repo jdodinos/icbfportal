@@ -16,6 +16,13 @@
     }
 
 
+    .header {
+        width: 100% !important;
+        padding: 0;
+        background: url('/sites/default/files/fondo-abstracto-top.png');
+        background-size: cover;
+        background-position: center bottom;
+    }
 
     .tb-megamenu .nav>.active>a {
         color: #125e81;
@@ -78,20 +85,85 @@
     }
 
 
-    .tb-megamenu .nav>li::before {
+    .tb-megamenu .nav .item-link-inicio::before {
         content: "";
         display: inline-block;
-        width: 20px;
-        height: 20px;
-        /* Alto de la imagen */
-        background-image: url('./../../../assets/imgs/nna-icbf-menuicons_01.png');
+        width: 45px;
+        height: 45px;
         background-size: contain;
         background-repeat: no-repeat;
-        margin-right: 8px;
-        /* Espacio entre el icono y el texto */
+        background-image: url('./../../dist-ninos-y-ninas/assets/imgs/nna-icbf-menuicons_01.png');
     }
 
+    .tb-megamenu .nav .item-link-tus-tareas::before {
+        content: "";
+        display: inline-block;
+        width: 45px;
+        height: 45px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('./../../dist-ninos-y-ninas/assets/imgs/nna-icbf-menuicons_02.png');
+    }
 
+    .tb-megamenu .nav .item-link-para-ver::before {
+        content: "";
+        display: inline-block;
+        width: 49px;
+        height: 45px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('./../../dist-ninos-y-ninas/assets/imgs/nna-icbf-menuicons_07.png');
+    }
+
+    .tb-megamenu .nav .item-link-para-jugar::before {
+        content: "";
+        display: inline-block;
+        width: 49px;
+        height: 45px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('./../../dist-ninos-y-ninas/assets/imgs/nna-icbf-menuicons_05.png');
+    }
+
+    .tb-megamenu .nav .item-link-para-escuchar::before {
+        content: "";
+        display: inline-block;
+        width: 45px;
+        height: 45px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('./../../dist-ninos-y-ninas/assets/imgs/nna-icbf-menuicons_03.png');
+    }
+
+    .tb-megamenu .nav .item-link-para-leer::before {
+        content: "";
+        display: inline-block;
+        width: 55px;
+        height: 45px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('./../../dist-ninos-y-ninas/assets/imgs/nna-icbf-menuicons_06.png');
+    }
+
+    .tb-megamenu .nav .item-link-para-hacer::before {
+        content: "";
+        display: inline-block;
+        width: 45px;
+        height: 45px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('./../../dist-ninos-y-ninas/assets/imgs/nna-icbf-menuicons_04.png');
+    }
+
+    .tb-megamenu .nav .item-link-hablemos::before {
+        content: "";
+        display: inline-block;
+        width: 49px;
+        height: 45px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('./../../dist-ninos-y-ninas/assets/imgs/nna-icbf-menuicons_08.png');
+    }
 
 
     .level-1 {
