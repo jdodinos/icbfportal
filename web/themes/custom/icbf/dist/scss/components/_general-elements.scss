@@ -248,3 +248,37 @@
     background-color: #e6e5e5;
     border-color: #adadad;
 }
+
+
+.page-mensaje-confirmacion-whatsapp {
+
+
+    #block-page-title-block {
+        display: none;
+    }
+
+    .messages__list {
+        display: none;
+    }
+
+    .node--view-mode-full .field__item p {
+        margin: 0 0 10px;
+    }
+
+    p {
+        font-family: var.$font-montserrat-regular;
+        line-height: 1.6em;
+    }
+
+    .btn-primary {
+        font-size: 14px;
+        font-family: var.$font-montserrat-regular;
+        padding: 6px 12px;
+    }
+
+    .btn {
+        font-size: 14px;
+        font-family: var.$font-montserrat-regular;
+        padding: 6px 12px;
+    }
+}

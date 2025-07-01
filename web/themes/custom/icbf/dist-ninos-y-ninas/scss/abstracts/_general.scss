@@ -27,24 +27,25 @@ button {
 
 .describe-section {
   font-size: 1.7em;
-  font-family: var.$schoolbell, sans-serif;
+  font-family: var.$Schoolbell, sans-serif;
   color: #555;
   line-height: initial
 }
 
 .nna-postid {
   font-size: 2.7em;
-  font-family: var.$schoolbell, sans-serif;
+  font-family: var.$Schoolbell, sans-serif;
   color: #05358c;
   background: -webkit-linear-gradient(#1262d9, #05358c);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: initial
 }
 
 .nna-boxtitle {
   color: #05358c !important;
-  font-family: var.$schoolbell, sans-serif;
+  font-family: var.$Schoolbell, sans-serif;
   font-weight: 600;
   font-size: 1.63em;
   line-height: inherit;
