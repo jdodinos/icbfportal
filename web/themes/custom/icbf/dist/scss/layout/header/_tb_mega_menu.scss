@@ -5,6 +5,7 @@
   display: none;
 }
 
+
 .tb-megamenu {
   background-color: transparent;
   font-family: 'Montserrat', sans-serif;
@@ -47,6 +48,13 @@
   }
 
   .nav {
+
+    li.dropdown.open{
+      >.dropdown-toggle{
+        color: #0073ff;
+      }
+    }
+
     >li {
       max-width: 180px;
 
@@ -60,7 +68,7 @@
         }
 
         &:hover {
-          color: #0073ff;
+          color: #36c;
         }
       }
     }
@@ -101,7 +109,7 @@
 
     .tb-megamenu-item {
       &:nth-child(3) {
-        width: 112px;
+        width:120px;
       }
 
       &:nth-child(4) {
@@ -124,6 +132,7 @@
         padding: 0;
         text-decoration: none;
         white-space: normal;
+        line-height: 1.3em;
 
         &:hover,
         &.active-trail {
