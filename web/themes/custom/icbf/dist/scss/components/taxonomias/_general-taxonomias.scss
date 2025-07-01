@@ -17,6 +17,15 @@
         font-size: 18px;
     }
 
+    .view-content {
+        margin-bottom: 4rem;
+    }
+
+    .stpe-outlinebutton {
+        font-family: "Asap-Regular";
+        font-size: 14px;
+    }
+
     .profile-mov.profiletip,
     .cv-list-id {
         font-family: "Montserrat-regular";
@@ -61,5 +70,15 @@
         width: 150px;
         height: 150px;
         object-fit: cover;
+    }
+}
+
+.page-estructura-organica-icbf {
+    .word-gral p {
+        font-size: 14px;
+    }
+
+    .organic-chart {
+        margin-bottom: 4rem;
     }
 }
