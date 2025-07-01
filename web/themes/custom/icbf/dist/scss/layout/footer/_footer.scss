@@ -40,6 +40,7 @@ footer {
     position: relative;
     margin-left: -50vw;
     left: 50%;
+
   }
   .back-container {
     margin: auto;
@@ -66,6 +67,9 @@ footer {
       clear: both;
       display: block;
       margin-bottom: 1em;
+      font-size: 1.58em;
+      font-weight: 500;
+      
       @media screen and (max-width: 850px) {
         font-size: large;
       }
