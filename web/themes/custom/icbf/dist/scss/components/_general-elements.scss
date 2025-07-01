@@ -6,11 +6,51 @@
     margin: 1.5em auto
 }
 
+table {
+    --bs-table-bg: inherit !important;
+    background-color: transparent;
+}
 
 
+.block-views-blockdocuments-block-8 {
+    width: 70%;
+    margin: auto;
+
+    table {
+        border: 1px solid #dddddd;
+        color: #555;
+        font-family: 'Montserrat';
+    }
+
+    h2 {
+        font-family: 'Montserrat';
+        line-height: normal !important;
+    }
+
+    .views-field-field-document div {
+        color: #555;
+        font-family: 'Montserrat';
+    }
+
+    a {
+        font-family: 'Asap-Regular';
+    }
+
+}
+
+.page-estadisticas {
+    h2 {
+        font-family: var.$font-asap-regular;
+    }
+
+    .btn {
+        font-family: var.$font-montserrat-regular;
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
 
 .word-gral {
-    font-size: 18px;
     color: #6b6b6b;
     display: block;
     font-family: 'Montserrat', sans-serif;
