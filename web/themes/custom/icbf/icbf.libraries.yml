@@ -1,27 +1,20 @@
 main-styling:
   css:
     theme:
-      css/icbf.css: 
-        preprocess: false
-      css/style.css:
-        preprocess: false
-      dist/css/main.css:
-        preprocess: false
+      css/icbf.css: {}
+      css/style.css: {}
+      dist/css/main.css: {}
   js:
-    js/script.js: 
-      preprocess: false
+    js/script.js: {}
   dependencies:
     - core/jquery
 
 ninos-y-ninas:
   css:
     theme:
-      css/ninos-y-ninas.css: 
-        preprocess: false
-      dist-ninos-y-ninas/css/main.css: 
-        preprocess: false
+      css/ninos-y-ninas.css: {}
+      dist-ninos-y-ninas/css/main.css: {}
   js:
-    js/ninos-y-ninas.js: 
-        preprocess: false
+    js/ninos-y-ninas.js: {}
   dependencies:
     - core/jquery
