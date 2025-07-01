@@ -1,0 +1,33 @@
+@use "../../abstracts/variables" as var;
+
+
+.breadcrumb {
+
+  max-width: 1150px;
+  margin: 8px auto 0;
+
+  .breadcrumb-container {
+    display: flex;
+
+    .breadcrumb-title {
+      font-family: var.$font-asap-regular;
+      line-height: 1.56em;
+      margin-right: 1em;
+    }
+
+    .breadcrumb-content {
+      display: flex;
+
+      .breadcrumb-item {
+        font-family: var.$font-asap-regular;
+      }
+
+      .breadcrumb-item+.breadcrumb-item::before {
+        font-family: var.$font-asap-regular;
+        content: var(--bs-breadcrumb-divider, "»");
+      }
+    }
+
+  }
+
+}
