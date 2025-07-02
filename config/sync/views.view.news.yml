@@ -22,6 +22,7 @@ dependencies:
     - 'taxonomy_term:secctions:1c7b87b5-a5d0-4d3f-832b-5a213d4b7d3f'
     - 'taxonomy_term:secctions:31b62432-588e-4d22-98a4-bab12c4ed2d7'
     - 'taxonomy_term:secctions:dbfa09f0-4f72-441b-b317-880fbe8cd4f7'
+    - 'taxonomy_term:section_labels:027f6d9c-ecf9-41f7-a12d-c5a6f1866f82'
     - 'taxonomy_term:section_labels:2305fce7-ab97-48c0-acad-d248e29c4d6e'
     - 'taxonomy_term:section_labels:3bccc5e9-432f-49c9-afe4-2bc28fc62245'
     - 'taxonomy_term:section_labels:422388d7-854e-48b7-b7f3-2d57b451ffdb'
@@ -10577,7 +10578,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: datetime
-          order: ASC
+          order: DESC
           expose:
             label: ''
             field_identifier: ''
@@ -10635,8 +10636,9 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: taxonomy_index_tid
-          operator: or
+          operator: not
           value:
+            - 8084
             - 1232
           group: 1
           exposed: false
@@ -10686,6 +10688,7 @@ display:
             8060: 8060
             8061: 8061
             8059: 8059
+            8063: 8063
             8058: 8058
             8062: 8062
             7551: 7551
@@ -10735,7 +10738,7 @@ display:
         type: default
         options:
           grouping: {  }
-          row_class: ''
+          row_class: 'col-sm-4 col-sx-12'
           default_row_class: true
       row:
         type: fields

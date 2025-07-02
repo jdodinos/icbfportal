@@ -387,8 +387,15 @@ class PanelizerMigrationForm extends FormBase {
                             break;
 
                           case 'block':
-                            $block_result = $this->panelizer->addBlockContentInBlock($panel_block->subtype, $panel_config);
+                            if (strpos($item->subtype, 'facetapi') === 0) {
+                              $result_messages[] = $this->t('Subtype @subtype', [
+                                '@subtype' => $item->subtype,
+                              ]);
+                            }
+
+                            $block_result = $this->panelizer->addBlockContentInBlock($item->subtype, $configuration);
                             $field_configuration = $block_result['block'];
+                            $block_plugin_id = $field_configuration['id'];
                             $result_messages = array_merge($result_messages, $block_result['messages']);
                             break;
                         }
@@ -417,9 +424,6 @@ class PanelizerMigrationForm extends FormBase {
                         '@type' => $type,
                         '@panel' => $panel,
                       ]);
-                      // dump('en default');
-                      // dump($item);
-                      // dump($configuration);
                       break;
                   }
 
@@ -632,9 +636,6 @@ class PanelizerMigrationForm extends FormBase {
                         '@type' => $type,
                         '@panel' => $panel,
                       ]);
-                      // dump('en default');
-                      // dump($item);
-                      // dump($configuration);
                       break;
                   }
 
@@ -655,7 +656,7 @@ class PanelizerMigrationForm extends FormBase {
                     $field_component = new SectionComponent(
                       \Drupal::service('uuid')->generate(),
                       $region,
-                      $field_configuration
+                      $field_configuration,
                     );
                     // Append the component to the section.
                     $row['section']->appendComponent($field_component);
@@ -678,7 +679,6 @@ class PanelizerMigrationForm extends FormBase {
 
         break;
     }
-    // die();
   }
 
 }
