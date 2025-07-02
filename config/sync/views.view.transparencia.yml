@@ -1,56 +1,20 @@
-uuid: c4eb0bb5-8787-48ae-afb7-6ab8506f4397
+uuid: 9466f266-a853-4771-8933-5642f5f319a4
 langcode: es
 status: true
 dependencies:
   config:
-    - field.storage.node.field_document
-    - field.storage.node.field_documento_banco_oferentes
-    - field.storage.node.field_location
-    - node.type.documentos_contrataci_n
-    - taxonomy.vocabulary.file_category
-    - taxonomy.vocabulary.locations
-  content:
-    - 'taxonomy_term:file_category:18e610e3-dcc9-46c6-a17d-f4de44507423'
-    - 'taxonomy_term:locations:07fca03f-a703-47a9-841f-a4d3323816ef'
-    - 'taxonomy_term:locations:0dc0c69c-dd7c-4e49-a7b8-a039358226c9'
-    - 'taxonomy_term:locations:1c3690e4-59a1-40fe-893a-5c816caf851b'
-    - 'taxonomy_term:locations:1e70f965-4492-454c-bbc7-35d0959c59b8'
-    - 'taxonomy_term:locations:281f4f59-840f-49c4-89e7-2043d5f5f3d0'
-    - 'taxonomy_term:locations:313a6ab8-0172-4104-99d7-b0ab5286127d'
-    - 'taxonomy_term:locations:31bd8c9d-be84-43b1-b945-5ab9407a4a99'
-    - 'taxonomy_term:locations:4f7f50e5-87cd-4eff-aefd-68dddb489f86'
-    - 'taxonomy_term:locations:540a7d39-d188-4d42-901d-aa0fc1ade3b7'
-    - 'taxonomy_term:locations:5517b3f7-d717-464f-a5e5-82e1dbceb781'
-    - 'taxonomy_term:locations:58dded36-ba64-42fd-b381-aef8410e7a03'
-    - 'taxonomy_term:locations:5a23fed2-5df0-4869-9bca-5d14082d683e'
-    - 'taxonomy_term:locations:5e6de21c-a778-4a2f-be64-3ccd0aba78da'
-    - 'taxonomy_term:locations:602905c3-6c2f-458f-8a77-97057fb49611'
-    - 'taxonomy_term:locations:60671649-197e-42f4-90a9-617edd09c4d6'
-    - 'taxonomy_term:locations:70dbc2a1-bc21-4027-aad0-c602d4577d2d'
-    - 'taxonomy_term:locations:7b583490-5bfc-42ee-b6ee-2af8c4b03167'
-    - 'taxonomy_term:locations:83b9b6e1-387c-444e-aa21-4cb37ad5dd32'
-    - 'taxonomy_term:locations:84ad624b-4f0e-44d8-b20a-936f8ec52a6f'
-    - 'taxonomy_term:locations:84c91571-5901-4b7e-8316-18f25cf4ee08'
-    - 'taxonomy_term:locations:8a7a3ed0-b2a6-4e6b-8747-d497887c123c'
-    - 'taxonomy_term:locations:94547282-c3ae-4f32-8f42-67a758302392'
-    - 'taxonomy_term:locations:94d53775-c554-4846-871d-143a112dabff'
-    - 'taxonomy_term:locations:9c7f4bb7-2b41-4e8d-8977-5693acd1f349'
-    - 'taxonomy_term:locations:9ecd3fbe-ef74-480d-9e72-7175f862e9e6'
-    - 'taxonomy_term:locations:abc0bab6-0ca9-4675-966a-1ab67d848274'
-    - 'taxonomy_term:locations:bdf1c82c-882a-4427-89e3-3ba818dfb788'
-    - 'taxonomy_term:locations:cd6ff06f-85a0-4b7f-943d-ded7ccc3adbe'
-    - 'taxonomy_term:locations:de59b065-7588-4a87-9153-ccf082d08524'
-    - 'taxonomy_term:locations:ec3938fc-5463-40e0-8b3c-d1a3e44fc79f'
-    - 'taxonomy_term:locations:f08ededc-8a8f-4e7f-a280-a6d2e751e250'
-    - 'taxonomy_term:locations:f67aa7db-0e96-43af-b86a-77e3a72896c6'
+    - field.storage.node.field_date
+    - field.storage.node.field_documents_transparency
+    - field.storage.node.field_field_documents_trans_word
+    - node.type.transparency
   module:
     - better_exposed_filters
+    - datetime
     - file
     - node
-    - taxonomy
     - views_bootstrap
-id: documentos_de_contratacion
-label: 'Documentos Contratación (Documentos Contratación)'
+id: transparencia
+label: 'Transparencia (Transparencia SAPI)'
 module: views
 description: ''
 tag: ''
@@ -63,19 +27,17 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Documentos Contratación'
+      title: Transparencia
       fields:
-        nid:
-          id: nid
-          table: node_field_data
-          field: nid
+        field_date:
+          id: field_date
+          table: node__field_date
+          field: field_date
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: nid
           plugin_id: field
-          label: ''
+          label: Versión
           exclude: false
           alter:
             alter_text: false
@@ -108,19 +70,19 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_class: pull-right
           element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: number_integer
+          type: datetime_custom
           settings:
-            thousand_separator: ','
-            prefix_suffix: false
+            timezone_override: ''
+            date_format: d/M/Y
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -131,10 +93,10 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_document:
-          id: field_document
-          table: node__field_document
-          field: field_document
+        field_field_documents_trans_word:
+          id: field_field_documents_trans_word
+          table: node__field_field_documents_trans_word
+          field: field_field_documents_trans_word
           relationship: none
           group_type: group
           admin_label: ''
@@ -194,78 +156,13 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_location:
-          id: field_location
-          table: node__field_location
-          field: field_location
+        field_documents_transparency:
+          id: field_documents_transparency
+          table: node__field_documents_transparency
+          field: field_documents_transparency
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
-          label: ''
-          exclude: false
-          alter:
-            alter_text: true
-            text: '<div class="describet"><strong>Dirección Regional: </strong>{{ field_location }}</div>'
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: false
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: created
           plugin_id: field
           label: ''
           exclude: false
@@ -308,23 +205,11 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: timestamp
+          click_sort_column: target_id
+          type: file_default
           settings:
-            date_format: long
-            custom_date_format: ''
-            timezone: ''
-            tooltip:
-              date_format: long
-              custom_date_format: ''
-            time_diff:
-              enabled: false
-              future_format: '@interval hence'
-              past_format: '@interval ago'
-              granularity: 2
-              refresh: 60
-              description: ''
-          group_column: value
+            use_description_as_link_text: true
+          group_column: ''
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -334,6 +219,55 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: custom
+          label: ''
+          exclude: true
+          alter:
+            alter_text: true
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
         edit_node:
           id: edit_node
           table: node
@@ -384,7 +318,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          text: ''
+          text: Editar
           output_url_as_text: false
           absolute: false
       pager:
@@ -392,7 +326,7 @@ display:
         options:
           offset: 0
           pagination_heading_level: h4
-          items_per_page: 25
+          items_per_page: 20
           total_pages: null
           id: 0
           tags:
@@ -427,190 +361,166 @@ display:
         options: {  }
       empty: {  }
       sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
+        field_date_value:
+          id: field_date_value
+          table: node__field_date
+          field: field_date_value
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: created
-          plugin_id: date
+          plugin_id: datetime
           order: DESC
           expose:
             label: ''
             field_identifier: ''
           exposed: false
           granularity: second
-      arguments: {  }
-      filters:
-        status:
-          id: status
-          table: node_field_data
-          field: status
-          entity_type: node
-          entity_field: status
-          plugin_id: boolean
-          value: '1'
-          group: 1
-          expose:
-            operator: ''
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          value:
-            documentos_contrataci_n: documentos_contrataci_n
-      style:
-        type: views_bootstrap_list_group
-      row:
-        type: fields
-      query:
-        type: views_query
-        options:
-          query_comment: ''
-          disable_sql_rewrite: false
-          distinct: false
-          replica: false
-          query_tags: {  }
-          contextual_filters_or: false
-      relationships: {  }
-      header: {  }
-      footer: {  }
-      display_extenders: {  }
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url.query_args
-        - 'user.node_grants:view'
-      tags:
-        - 'config:field.storage.node.field_document'
-        - 'config:field.storage.node.field_location'
-  block:
-    id: block
-    display_title: 'Notificaciones y Avisos'
-    display_plugin: block
-    position: 1
-    display_options:
-      exposed_form:
-        type: bef
-        options:
-          submit_button: Aplicar
-          reset_button: false
-          reset_button_label: Restablecer
-          exposed_sorts_label: 'Ordenar por'
-          expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-          text_input_required: 'Seleccione cualquier filtro y pulse Aplicar para ver los resultados'
-          text_input_required_format: full_html
-          bef:
-            general:
-              autosubmit: false
-              autosubmit_exclude_textfield: false
-              autosubmit_textfield_delay: 500
-              autosubmit_textfield_minimum_length: 3
-              autosubmit_hide: false
-              input_required: false
-              allow_secondary: false
-              secondary_label: 'Opciones avanzadas'
-              secondary_open: false
-              reset_button_always_show: false
-            filter:
-              field_location_target_id:
-                plugin_id: bef
-                advanced:
-                  sort_options: false
-                  rewrite:
-                    filter_rewrite_values: ''
-                    filter_rewrite_values_key: false
-                  collapsible: false
-                  collapsible_disable_automatic_open: false
-                  is_secondary: false
-                  hide_label: false
-                select_all_none: false
-                select_all_none_nested: false
-                display_inline: false
-      filters:
-        status:
-          id: status
-          table: node_field_data
-          field: status
-          entity_type: node
-          entity_field: status
-          plugin_id: boolean
-          value: '1'
-          group: 1
-          expose:
-            operator: ''
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          value:
-            documentos_contrataci_n: documentos_contrataci_n
-        field_location_target_id:
-          id: field_location_target_id
-          table: node__field_location
-          field: field_location_target_id
+      arguments:
+        field_section_target_id:
+          id: field_section_target_id
+          table: node__field_section
+          field: field_section_target_id
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: taxonomy_index_tid
-          operator: or
+          plugin_id: entity_target_id
+          default_action: 'not found'
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: fixed
+          default_argument_options:
+            argument: ''
+          summary_options:
+            base_path: ''
+            count: true
+            override: false
+            items_per_page: 25
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          not: false
+        field_file_categoria_target_id:
+          id: field_file_categoria_target_id
+          table: node__field_file_categoria
+          field: field_file_categoria_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: entity_target_id
+          default_action: 'not found'
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: fixed
+          default_argument_options:
+            argument: ''
+          summary_options:
+            base_path: ''
+            count: true
+            override: false
+            items_per_page: 25
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          not: false
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          operator: in
           value:
-            6194: 6194
-            12: 12
-            6220: 6220
-            14: 14
-            15: 15
-            16: 16
-            17: 17
-            18: 18
-            6276: 6276
-            6280: 6280
-            21: 21
-            22: 22
-            23: 23
-            24: 24
-            25: 25
-            26: 26
-            27: 27
-            28: 28
-            29: 29
-            6348: 6348
-            30: 30
-            31: 31
-            32: 32
-            33: 33
-            34: 34
-            35: 35
-            36: 36
-            37: 37
-            38: 38
-            39: 39
-            40: 40
-            41: 41
+            transparency: transparency
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: string
+          operator: allwords
+          value: ''
           group: 1
           exposed: true
           expose:
-            operator_id: field_location_target_id_op
-            label: 'Filtrar por Ubicacvión'
+            operator_id: title_op
+            label: 'Búsqueda por texto completo'
             description: ''
             use_operator: false
-            operator: field_location_target_id_op
+            operator: title_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_location
+            identifier: title
             required: false
             remember: false
             multiple: false
@@ -694,7 +604,16 @@ display:
               transparencia_contenidos: '0'
               administrar_datos_ninos_migrantes_venezolanos: '0'
               eventos_calendario: '0'
-            reduce: true
+            placeholder: ''
+            autocomplete_filter: 0
+            autocomplete_min_chars: '0'
+            autocomplete_items: '10'
+            autocomplete_field: title
+            autocomplete_raw_suggestion: 1
+            autocomplete_raw_dropdown: 1
+            autocomplete_dependent: 0
+            autocomplete_contextual: 0
+            autocomplete_autosubmit: 0
           is_grouped: false
           group_info:
             label: ''
@@ -707,22 +626,47 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          reduce_duplicates: false
-          vid: locations
-          type: select
-          hierarchy: false
-          limit: true
-          error_message: true
       filter_groups:
         operator: AND
         groups:
           1: AND
-      defaults:
-        exposed_form: false
-        filters: false
-        filter_groups: false
+      style:
+        type: views_bootstrap_list_group
+      row:
+        type: fields
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags: {  }
+          contextual_filters_or: false
+      relationships: {  }
+      use_ajax: true
+      header: {  }
+      footer: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+      tags:
+        - 'config:field.storage.node.field_date'
+        - 'config:field.storage.node.field_documents_transparency'
+        - 'config:field.storage.node.field_field_documents_trans_word'
+  block:
+    id: block
+    display_title: 'Transparencia por tags (Version)'
+    display_plugin: block
+    position: 1
+    display_options:
       display_description: ''
-      exposed_block: true
       display_extenders:
         metatag_display_extender:
           metatags: {  }
@@ -736,26 +680,25 @@ display:
         - url.query_args
         - 'user.node_grants:view'
       tags:
-        - 'config:field.storage.node.field_document'
-        - 'config:field.storage.node.field_location'
-  block_bof:
-    id: block_bof
-    display_title: 'Banco Oferentes'
+        - 'config:field.storage.node.field_date'
+        - 'config:field.storage.node.field_documents_transparency'
+        - 'config:field.storage.node.field_field_documents_trans_word'
+  block_11:
+    id: block_11
+    display_title: '1 Archivo, sin título con fecha (aaaa)'
     display_plugin: block
     position: 1
     display_options:
       fields:
-        nid:
-          id: nid
-          table: node_field_data
-          field: nid
+        field_date:
+          id: field_date
+          table: node__field_date
+          field: field_date
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: nid
           plugin_id: field
-          label: ''
+          label: 'Año de publicación'
           exclude: false
           alter:
             alter_text: false
@@ -788,19 +731,19 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_class: pull-right
           element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: number_integer
+          type: datetime_custom
           settings:
-            thousand_separator: ','
-            prefix_suffix: false
+            timezone_override: ''
+            date_format: 'Y'
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -811,87 +754,10 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: created
-          plugin_id: field
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: timestamp
-          settings:
-            date_format: long
-            custom_date_format: ''
-            timezone: ''
-            tooltip:
-              date_format: long
-              custom_date_format: ''
-            time_diff:
-              enabled: false
-              future_format: '@interval hence'
-              past_format: '@interval ago'
-              granularity: 2
-              refresh: 60
-              description: ''
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        field_document:
-          id: field_document
-          table: node__field_document
-          field: field_document
+        field_field_documents_trans_word:
+          id: field_field_documents_trans_word
+          table: node__field_field_documents_trans_word
+          field: field_field_documents_trans_word
           relationship: none
           group_type: group
           admin_label: ''
@@ -951,10 +817,10 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_documento_banco_oferentes:
-          id: field_documento_banco_oferentes
-          table: node__field_documento_banco_oferentes
-          field: field_documento_banco_oferentes
+        field_documents_transparency:
+          id: field_documents_transparency
+          table: node__field_documents_transparency
+          field: field_documents_transparency
           relationship: none
           group_type: group
           admin_label: ''
@@ -1007,7 +873,7 @@ display:
           group_column: ''
           group_columns: {  }
           group_rows: true
-          delta_limit: 10
+          delta_limit: 0
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
@@ -1064,117 +930,68 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          text: ''
+          text: Editar
           output_url_as_text: false
           absolute: false
-      filters:
-        status:
-          id: status
-          table: node_field_data
-          field: status
-          entity_type: node
-          entity_field: status
-          plugin_id: boolean
-          value: '1'
-          group: 1
+      pager:
+        type: full
+        options:
+          offset: 0
+          pagination_heading_level: h4
+          items_per_page: 15
+          total_pages: null
+          id: 0
+          tags:
+            next: 'Siguiente >'
+            previous: '‹ Anterior'
+            first: '« Primero'
+            last: 'Último »'
           expose:
-            operator: ''
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          operator: in
-          value:
-            documentos_contrataci_n: documentos_contrataci_n
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-        field_file_categoria_target_id:
-          id: field_file_categoria_target_id
-          table: node__field_file_categoria
-          field: field_file_categoria_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: taxonomy_index_tid
-          operator: or
-          value:
-            - 7489
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          vid: file_category
-          type: textfield
-          hierarchy: false
-          limit: true
-          error_message: true
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
+            items_per_page: false
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- Todo -'
+            offset: false
+            offset_label: Desplazamiento
+          quantity: 9
+      exposed_form:
+        type: bef
+        options:
+          submit_button: Aplicar
+          reset_button: false
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Seleccione cualquier filtro y pulse Aplicar para ver los resultados'
+          text_input_required_format: full_html
+          bef:
+            general:
+              autosubmit: false
+              autosubmit_exclude_textfield: false
+              autosubmit_textfield_delay: 500
+              autosubmit_textfield_minimum_length: 3
+              autosubmit_hide: false
+              input_required: false
+              allow_secondary: false
+              secondary_label: 'Opciones avanzadas'
+              secondary_open: false
+              reset_button_always_show: false
+            filter:
+              title:
+                plugin_id: default
+                advanced:
+                  placeholder_text: ''
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+                  hide_label: false
       defaults:
+        pager: false
+        exposed_form: false
         fields: false
-        filters: false
-        filter_groups: false
       display_description: ''
       display_extenders:
         metatag_display_extender:
@@ -1185,8 +1002,10 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
         - 'user.node_grants:view'
       tags:
-        - 'config:field.storage.node.field_document'
-        - 'config:field.storage.node.field_documento_banco_oferentes'
+        - 'config:field.storage.node.field_date'
+        - 'config:field.storage.node.field_documents_transparency'
+        - 'config:field.storage.node.field_field_documents_trans_word'

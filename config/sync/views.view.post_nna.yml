@@ -1602,7 +1602,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"nna-gridcontain\">\r\n  <div class=\"nna-gridbox\">  \r\n\r\n     <div class=\"nna-boxlabel\">\r\n        <span class=\"nna-label {{ field_nna_post_label }}\">{{ field_nna_post_label_1 }}</span> \r\n     </div>\r\n     <div class=\"nna-gridimg\">{{ views_conditional_field }}</div>\r\n     <div class=\"nna-boxinfo\">\r\n         <a href=\"{{ view_node }}\" class=\"nna-boxtitle\" title=\"{{ title }}\">{{ field_seo_title }}</a>\r\n         <a class=\"nna-linkout\" title=\"clic para explorar\" href=\"{{ view_node }}\"><span class=\"fa fa-pluss\"></span> Explorar!</a>\r\n     </div>\r\n\r\n</div></div>"
+            text: "<div class=\"nna-gridcontain-a\">\r\n   <div class=\"nna-gridbox\">\r\n\r\n      <div class=\"nna-boxlabel\">\r\n         <span\r\n            class=\"nna-label {{ field_nna_post_label }}\">{{ field_nna_post_label_1 }}</span>\r\n      </div>\r\n      <div class=\"nna-gridimg\">{{ views_conditional_field }}</div>\r\n      <div class=\"nna-boxinfo\">\r\n         <a href=\"{{ view_node }}\" class=\"nna-boxtitle\"\r\n            title=\"{{ title }}\">{{ field_seo_title }}</a>\r\n         <br />\r\n         {{ field_introduction_text }}\r\n         <br /><a class=\"nna-linkout\" title=\"clic para explorar\"\r\n            href=\"{{ view_node }}\"><span class=\"fa fa-pluss\"></span> Explorar!</a>\r\n      </div>\r\n\r\n   </div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -2500,7 +2500,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"nna-gridcontain\">\r\n  <div class=\"nna-gridbox\">  \r\n\r\n     <div class=\"nna-boxlabel\">\r\n        <span class=\"nna-label {{ field_nna_post_label }}\">{{ field_nna_post_label_1 }}</span> \r\n     </div>\r\n     <div class=\"nna-gridimg\">{{ views_conditional_field }}</div>\r\n     <div class=\"nna-boxinfo\">\r\n         <a href=\"{{ view_node }}\" class=\"nna-boxtitle\" title=\"{{ title }}\">{{ field_seo_title }}</a>\r\n         <a class=\"nna-linkout\" title=\"clic para explorar\" href=\"{{ view_node }}\"><span class=\"fa fa-pluss\"></span> Explorar!</a>\r\n     </div>\r\n\r\n</div></div>"
+            text: "<div class=\"nna-gridcontain-g\">\r\n   <div class=\"nna-gridbox\">\r\n\r\n      <div class=\"nna-boxlabel\">\r\n         <span\r\n            class=\"nna-label {{ field_nna_post_label }}\">{{ field_nna_post_label_1 }}</span>\r\n      </div>\r\n      <div class=\"nna-gridimg\">{{ views_conditional_field }}</div>\r\n      <div class=\"nna-boxinfo\">\r\n         <a href=\"{{ view_node }}\" class=\"nna-boxtitle\"\r\n            title=\"{{ title }}\">{{ field_seo_title }}</a>\r\n         <br />\r\n         {{ field_introduction_text }}\r\n         <br /><a class=\"nna-linkout\" title=\"clic para explorar\"\r\n            href=\"{{ view_node }}\"><span class=\"fa fa-pluss\"></span> Explorar!</a>\r\n      </div>\r\n\r\n   </div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -4146,7 +4146,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"nna-gridcontain\">\r\n  <div class=\"nna-gridbox\">  \r\n\r\n     <div class=\"nna-boxlabel\">\r\n        <span class=\"nna-label {{ field_nna_post_label }}\">{{ field_nna_post_label_1 }}</span> \r\n     </div>\r\n     <div class=\"nna-gridimg\">{{ views_conditional_field }}</div>\r\n     <div class=\"nna-boxinfo\">\r\n         <a href=\"{{ view_node }}\" class=\"nna-boxtitle\" title=\"{{ title }}\">{{ field_seo_title }}</a>\r\n         <a class=\"nna-linkout\" title=\"clic para explorar\" href=\"{{ view_node }}\"><span class=\"fa fa-pluss\"></span> Explorar!</a>\r\n     </div>\r\n\r\n</div></div>"
+            text: "<div class=\"nna-gridcontain-e\">\r\n   <div class=\"nna-gridbox\">\r\n\r\n      <div class=\"nna-boxlabel\">\r\n         <span\r\n            class=\"nna-label {{ field_nna_post_label }}\">{{ field_nna_post_label_1 }}</span>\r\n      </div>\r\n      <div class=\"nna-gridimg\">{{ views_conditional_field }}</div>\r\n      <div class=\"nna-boxinfo\">\r\n         <a href=\"{{ view_node }}\" class=\"nna-boxtitle\"\r\n            title=\"{{ title }}\">{{ field_seo_title }}</a>\r\n         <br />\r\n         {{ field_introduction_text }}\r\n         <br /><a class=\"nna-linkout\" title=\"clic para explorar\"\r\n            href=\"{{ view_node }}\"><span class=\"fa fa-pluss\"></span> Explorar!</a>\r\n      </div>\r\n\r\n   </div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -5044,7 +5044,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"nna-gridcontain\">\r\n  <div class=\"nna-gridbox\">  \r\n\r\n     <div class=\"nna-boxlabel\">\r\n        <span class=\"nna-label {{ field_nna_post_label }}\">{{ field_nna_post_label_1 }}</span> \r\n     </div>\r\n     <div class=\"nna-gridimg\">{{ views_conditional_field }}</div>\r\n     <div class=\"nna-boxinfo\">\r\n         <a href=\"{{ view_node }}\" class=\"nna-boxtitle\" title=\"{{ title }}\">{{ field_seo_title }}</a>\r\n         <a class=\"nna-linkout\" title=\"clic para explorar\" href=\"{{ view_node }}\"><span class=\"fa fa-pluss\"></span> Explorar!</a>\r\n     </div>\r\n\r\n</div></div>"
+            text: "<div class=\"nna-gridcontain-p\">\r\n   <div class=\"nna-gridbox\">\r\n\r\n      <div class=\"nna-boxlabel\">\r\n         <span\r\n            class=\"nna-label {{ field_nna_post_label }}\">{{ field_nna_post_label_1 }}</span>\r\n      </div>\r\n      <div class=\"nna-gridimg\">{{ views_conditional_field }}</div>\r\n      <div class=\"nna-boxinfo\">\r\n         <a href=\"{{ view_node }}\" class=\"nna-boxtitle\"\r\n            title=\"{{ title }}\">{{ field_seo_title }}</a>\r\n         <br />\r\n         {{ field_introduction_text }}\r\n         <br /><a class=\"nna-linkout\" title=\"clic para explorar\"\r\n            href=\"{{ view_node }}\"><span class=\"fa fa-pluss\"></span> Explorar!</a>\r\n      </div>\r\n\r\n   </div>\r\n</div>\r\n"
             make_link: false
             path: ''
             absolute: false
@@ -5942,7 +5942,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"nna-gridcontain\">\r\n  <div class=\"nna-gridbox\">  \r\n\r\n     <div class=\"nna-boxlabel\">\r\n        <span class=\"nna-label {{ field_nna_post_label }}\">{{ field_nna_post_label_1 }}</span> \r\n     </div>\r\n     <div class=\"nna-gridimg\">{{ views_conditional_field }}</div>\r\n     <div class=\"nna-boxinfo\">\r\n         <a href=\"{{ view_node }}\" class=\"nna-boxtitle\" title=\"{{ title }}\">{{ field_seo_title }}</a>\r\n         <a class=\"nna-linkout\" title=\"clic para explorar\" href=\"{{ view_node }}\"><span class=\"fa fa-pluss\"></span> Explorar!</a>\r\n     </div>\r\n\r\n</div></div>"
+            text: "<div class=\"nna-gridcontain-l\">\r\n   <div class=\"nna-gridbox\">\r\n\r\n      <div class=\"nna-boxlabel\">\r\n         <span\r\n            class=\"nna-label {{ field_nna_post_label }}\">{{ field_nna_post_label }}</span>\r\n      </div>\r\n      <div class=\"nna-gridimg\">{{ views_conditional_field }}</div>\r\n      <div class=\"nna-boxinfo\">\r\n         <a href=\"{{ view_node }}\" class=\"nna-boxtitle\"\r\n            title=\"{{ title }}\">{{ field_seo_title }}</a>\r\n         <br />\r\n         {{ field_introduction_text }}\r\n         <br /><a class=\"nna-linkout\" title=\"clic para explorar\"\r\n            href=\"{{ view_node }}\"><span class=\"fa fa-pluss\"></span> Explorar!</a>\r\n      </div>\r\n\r\n   </div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -7738,7 +7738,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"nna-gridcontain\">\r\n  <div class=\"nna-gridbox\">  \r\n\r\n     <div class=\"nna-boxlabel\">\r\n        <span class=\"nna-label {{ field_nna_post_label }}\">{{ field_nna_post_label_1 }}</span> \r\n     </div>\r\n     <div class=\"nna-gridimg\">{{ views_conditional_field }}</div>\r\n     <div class=\"nna-boxinfo\">\r\n         <a href=\"{{ view_node }}\" class=\"nna-boxtitle\" title=\"{{ title }}\">{{ field_seo_title }}</a>\r\n         <a class=\"nna-linkout\" title=\"clic para explorar\" href=\"{{ view_node }}\"><span class=\"fa fa-pluss\"></span> Explorar!</a>\r\n     </div>\r\n\r\n</div></div>"
+            text: "<div class=\"nna-gridcontain-v\">\r\n   <div class=\"nna-gridbox\">\r\n\r\n      <div class=\"nna-boxlabel\">\r\n         <span\r\n            class=\"nna-label {{ field_nna_post_label }}\">{{ field_nna_post_label_1 }}</span>\r\n      </div>\r\n      <div class=\"nna-gridimg\">{{ views_conditional_field }}</div>\r\n      <div class=\"nna-boxinfo\">\r\n         <a href=\"{{ view_node }}\" class=\"nna-boxtitle\"\r\n            title=\"[title]\">{{ field_seo_title }}</a>\r\n         <br />\r\n         {{ field_introduction_text }}\r\n         <br /><a class=\"nna-linkout\" title=\"clic para explorar\"\r\n            href=\"{{ view_node }}\"><span class=\"fa fa-pluss\"></span> Explorar!</a>\r\n      </div>\r\n\r\n   </div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
