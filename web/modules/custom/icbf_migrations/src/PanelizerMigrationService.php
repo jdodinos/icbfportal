@@ -201,9 +201,15 @@ class PanelizerMigrationService {
                 $section_type = 'layout_onecol';
             }
 
+            $children_info = [];
+            foreach ($value['children'] as $child) {
+              $children_info[$child] = $layout_settings['items'][$child] ?? [];
+            }
+
             // Crear una sección (fila) con un layout de una columna.
             $sections[$item->did][] = [
               'children' => $value['children'],
+              'children_info' => $children_info,
               'section_name' => $region_name,
               'section' => new Section($section_type),
             ];
