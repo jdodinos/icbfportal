@@ -220,6 +220,12 @@ function icbf_preprocess_field(&$variables) {
   }
 }
 
+function icbf_preprocess_layout(&$variables) {
+  if (isset($variables['attributes']['class'][2])) {
+    unset($variables['attributes']['class'][2]);
+  }
+}
+
 function icbf_preprocess_views_view_field(&$variables) {
   if (isset($variables['field']->options['type']) && $variables['field']->options['type'] == 'video_player') {
     $field_name = $variables['field']->options['field'];
