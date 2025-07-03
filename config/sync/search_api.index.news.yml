@@ -211,6 +211,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_location
+  field_location_1:
+    label: Ubicación
+    datasource_id: 'entity:node'
+    property_path: field_location
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_location
   field_lugar:
     label: Lugar
     datasource_id: 'entity:node'

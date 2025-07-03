@@ -15,7 +15,7 @@ dependencies:
     - search_api
     - views_bootstrap
 id: documentos_de_contratacion_sapi
-label: 'Procesos de Contratación SAPI'
+label: 'Documentos Contratación SAPI'
 module: views
 description: ''
 tag: ''
