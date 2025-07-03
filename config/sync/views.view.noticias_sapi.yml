@@ -1,0 +1,1568 @@
+uuid: 8e50a582-4b92-4f98-8a7c-acba6d7e2f9c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - field.storage.node.field_list_image
+    - field.storage.node.field_lugar
+    - field.storage.node.field_resume
+    - field.storage.node.field_section_tag
+    - search_api.index.news
+    - taxonomy.vocabulary.secctions
+    - taxonomy.vocabulary.section_labels
+  content:
+    - 'taxonomy_term:secctions:1c7b87b5-a5d0-4d3f-832b-5a213d4b7d3f'
+    - 'taxonomy_term:secctions:31b62432-588e-4d22-98a4-bab12c4ed2d7'
+    - 'taxonomy_term:section_labels:027f6d9c-ecf9-41f7-a12d-c5a6f1866f82'
+    - 'taxonomy_term:section_labels:2305fce7-ab97-48c0-acad-d248e29c4d6e'
+    - 'taxonomy_term:section_labels:422388d7-854e-48b7-b7f3-2d57b451ffdb'
+    - 'taxonomy_term:section_labels:59287f39-afcf-435c-8b10-272b4e601120'
+    - 'taxonomy_term:section_labels:5e268627-d48a-4d7a-b5c1-cd2b2928934e'
+    - 'taxonomy_term:section_labels:6e0fab13-e006-48ad-90bc-7e4e05cbf56d'
+    - 'taxonomy_term:section_labels:8150d30f-c749-4f47-ad2b-2248bab8c6f7'
+    - 'taxonomy_term:section_labels:abdf2635-bd99-418a-beb3-a204405888a7'
+    - 'taxonomy_term:section_labels:f61b50c4-d67a-40fe-8a8c-386b95c046cc'
+    - 'taxonomy_term:section_labels:f7972e6c-44fc-45fb-b762-423c6b2b5c47'
+  module:
+    - better_exposed_filters
+    - datetime
+    - facets_exposed_filters
+    - image
+    - search_api
+    - text
+id: noticias_sapi
+label: 'Noticias SAPI'
+module: views
+description: ''
+tag: ''
+base_table: search_api_index_news
+base_field: search_api_id
+display:
+  default:
+    id: default
+    display_title: Default
+    display_plugin: default
+    position: 0
+    display_options:
+      title: 'Noticias SAPI'
+      fields:
+        nid:
+          id: nid
+          table: search_api_datasource_news_entity_node
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: search_api_field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ','
+            prefix_suffix: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_numeric
+          fallback_options:
+            set_precision: false
+            precision: 0
+            decimal: .
+            separator: ','
+            format_plural: false
+            format_plural_string: !!binary MQNAY291bnQ=
+            prefix: ''
+            suffix: ''
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            format_plural_values:
+              - '1'
+              - '@count'
+        field_section_tag:
+          id: field_section_tag
+          table: search_api_datasource_news_entity_node
+          field: field_section_tag
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: search_api_field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_entity
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            display_methods:
+              actas_contentivas_type:
+                display_method: label
+              announcement_status:
+                display_method: label
+              citizen_category:
+                display_method: label
+                view_mode: default
+              congreso_xxii:
+                display_method: label
+                view_mode: default
+              convocatorias_gesti_n_humana:
+                display_method: label
+              departments_municipalities:
+                display_method: label
+              dependencies:
+                display_method: label
+              despublicados:
+                display_method: label
+                view_mode: default
+              entidad_titular:
+                display_method: label
+              event_calendar_status:
+                display_method: label
+              eventos:
+                display_method: label
+              eventos_agenda:
+                display_method: label
+              file_category:
+                display_method: label
+              forums:
+                display_method: label
+                view_mode: default
+              hiring_process_category:
+                display_method: label
+              hiring_process_type:
+                display_method: label
+              locations:
+                display_method: label
+                view_mode: default
+              media_folders:
+                display_method: label
+              menu_childhood:
+                display_method: label
+              menu_observatory:
+                display_method: label
+              menu_transparency:
+                display_method: label
+              migrantes:
+                display_method: label
+              mis_manos_te_ensenan:
+                display_method: label
+                view_mode: default
+              ninos_ninas_y_adolescentes:
+                display_method: label
+                view_mode: default
+              normativa:
+                display_method: label
+              para_papas:
+                display_method: label
+                view_mode: default
+              periodicity:
+                display_method: label
+              petition_rights_status:
+                display_method: label
+              procedure:
+                display_method: label
+                view_mode: default
+              procedure_type:
+                display_method: label
+              programa_adopciones:
+                display_method: label
+                view_mode: default
+              secctions:
+                display_method: label
+                view_mode: default
+              section_labels:
+                display_method: label
+              sige:
+                display_method: label
+              sige_process_type:
+                display_method: label
+                view_mode: default
+              tags:
+                display_method: label
+              tags_tr_mites:
+                display_method: label
+              tipo_de_notificaci_n:
+                display_method: label
+              tipos_de_ubicaci_n:
+                display_method: label
+              transparencia_1519:
+                display_method: label
+              trd_regional:
+                display_method: label
+        search_api_url:
+          id: search_api_url
+          table: search_api_index_news
+          field: search_api_url
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          use_highlighting: false
+          multi_type: separator
+          multi_separator: ', '
+        field_list_image:
+          id: field_list_image
+          table: search_api_datasource_news_entity_node
+          field: field_list_image
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: search_api_field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_link: content
+            image_style: ''
+            image_loading:
+              attribute: lazy
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+        field_lugar:
+          id: field_lugar
+          table: search_api_datasource_news_entity_node
+          field: field_lugar
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: search_api_field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_entity
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            display_methods:
+              actas_contentivas_type:
+                display_method: label
+              announcement_status:
+                display_method: label
+              citizen_category:
+                display_method: label
+                view_mode: default
+              congreso_xxii:
+                display_method: label
+                view_mode: default
+              convocatorias_gesti_n_humana:
+                display_method: label
+              departments_municipalities:
+                display_method: label
+              dependencies:
+                display_method: label
+              despublicados:
+                display_method: label
+                view_mode: default
+              entidad_titular:
+                display_method: label
+              event_calendar_status:
+                display_method: label
+              eventos:
+                display_method: label
+              eventos_agenda:
+                display_method: label
+              file_category:
+                display_method: label
+              forums:
+                display_method: label
+                view_mode: default
+              hiring_process_category:
+                display_method: label
+              hiring_process_type:
+                display_method: label
+              locations:
+                display_method: label
+                view_mode: default
+              media_folders:
+                display_method: label
+              menu_childhood:
+                display_method: label
+              menu_observatory:
+                display_method: label
+              menu_transparency:
+                display_method: label
+              migrantes:
+                display_method: label
+              mis_manos_te_ensenan:
+                display_method: label
+                view_mode: default
+              ninos_ninas_y_adolescentes:
+                display_method: label
+                view_mode: default
+              normativa:
+                display_method: label
+              para_papas:
+                display_method: label
+                view_mode: default
+              periodicity:
+                display_method: label
+              petition_rights_status:
+                display_method: label
+              procedure:
+                display_method: label
+                view_mode: default
+              procedure_type:
+                display_method: label
+              programa_adopciones:
+                display_method: label
+                view_mode: default
+              secctions:
+                display_method: label
+                view_mode: default
+              section_labels:
+                display_method: label
+              sige:
+                display_method: label
+              sige_process_type:
+                display_method: label
+                view_mode: default
+              tags:
+                display_method: label
+              tags_tr_mites:
+                display_method: label
+              tipo_de_notificaci_n:
+                display_method: label
+              tipos_de_ubicaci_n:
+                display_method: label
+              transparencia_1519:
+                display_method: label
+              trd_regional:
+                display_method: label
+        field_date:
+          id: field_date
+          table: search_api_datasource_news_entity_node
+          field: field_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: search_api_field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: true
+            text: "<div>\r\n   <span class=\"news-place-col\">{{ field_lugar }}</span> <span class=\"news-time-col\">{{ field_date }}</span>\r\n</div>"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_default
+          settings:
+            timezone_override: ''
+            format_type: olivero_medium
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+        title:
+          id: title
+          table: search_api_datasource_news_entity_node
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: search_api_field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: true
+            text: '<h3><a href="{{ search_api_url }}" class="news-intitle" title="consultar noticia: {{ title }} ">{{ title }} </a></h3>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+        field_resume:
+          id: field_resume
+          table: search_api_datasource_news_entity_node
+          field: field_resume
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: search_api_field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: true
+            text: '<div class="news-int-lead">{{ field_resume }}</div>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 186
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: true
+            preserve_tags: ''
+            html: true
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_text
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            filter_type: xss
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "<div class=\"news-intbox\">\r\n    <div class=\"box-tag [field_section_tag]\">{{ field_section_tag }}</div>\r\n    {{ field_list_image }}\r\n\r\n    <div class=\"news-intbox-info\">\r\n        {{ field_date }} {{ title }} {{ field_resume }}\r\n\r\n        <div class=\"share-bottom\">\r\n            <ul class=\"share-buttons\">\r\n                <li>\r\n                    <a href=\"https://www.facebook.com/sharer/sharer.php?u={{ search_api_url }}&quote=\" title=\"Compartir\" target=\"_blank\"\r\n                        onclick=\"window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;\">\r\n                        <img alt=\"Compartir en Facebook\" src=\"/sites/default/files/facebook_0.png\" />\r\n                    </a>\r\n                </li>\r\n                <li>\r\n                    <a href=\"https://twitter.com/intent/tweet?source={{ search_api_url }}&text=:{{ search_api_url }}&via=ICBFColombia\" target=\"_blank\" title=\"Tweet\" onclick=\"window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;\">\r\n                        <img alt=\"Tweet\" src=\"/sites/default/files/twitter_0.png\" />\r\n                    </a>\r\n                </li>\r\n                <li>\r\n                    <a href=\"mailto:?subject=&body=:{{ search_api_url }}\" target=\"_blank\" title=\"Enviar email\" onclick=\"window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;\">\r\n                        <img alt=\"Enviar email\" src=\"/sites/default/files/email_0.png\" />\r\n                    </a>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+      pager:
+        type: full
+        options:
+          offset: 0
+          pagination_heading_level: h4
+          items_per_page: 30
+          total_pages: null
+          id: 0
+          tags:
+            next: 'Siguiente >'
+            previous: '‹ Anterior'
+            first: '« Primero'
+            last: 'Último »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- Todo -'
+            offset: false
+            offset_label: Desplazamiento
+          quantity: 9
+      exposed_form:
+        type: bef
+        options:
+          submit_button: Aplicar
+          reset_button: false
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Seleccione cualquier filtro y pulse Aplicar para ver los resultados'
+          text_input_required_format: full_html
+          bef:
+            general:
+              autosubmit: false
+              autosubmit_exclude_textfield: false
+              autosubmit_textfield_delay: 500
+              autosubmit_textfield_minimum_length: 3
+              autosubmit_hide: false
+              input_required: false
+              allow_secondary: false
+              secondary_label: 'Opciones avanzadas'
+              secondary_open: false
+              reset_button_always_show: false
+            filter:
+              facets_name:
+                plugin_id: bef
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+                  hide_label: false
+                select_all_none: true
+                select_all_none_nested: false
+                display_inline: false
+              facets_field_date:
+                plugin_id: bef
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: false
+                  collapsible_disable_automatic_open: true
+                  is_secondary: false
+                  hide_label: false
+                select_all_none: false
+                select_all_none_nested: false
+                display_inline: false
+      access:
+        type: none
+        options: {  }
+      cache:
+        type: search_api_none
+        options: {  }
+      empty: {  }
+      sorts:
+        field_date:
+          id: field_date
+          table: search_api_index_news
+          field: field_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+      arguments: {  }
+      filters:
+        type:
+          id: type
+          table: search_api_index_news
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_options
+          operator: or
+          value:
+            news: news
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+        field_section:
+          id: field_section
+          table: search_api_index_news
+          field: field_section
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_term
+          operator: not
+          value:
+            - 8084
+            - 1232
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: secctions
+          type: textfield
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_section_tag:
+          id: field_section_tag
+          table: search_api_index_news
+          field: field_section_tag
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_term
+          operator: not
+          value:
+            8060: 8060
+            8061: 8061
+            8059: 8059
+            8063: 8063
+            8058: 8058
+            8062: 8062
+            8064: 8064
+            7551: 7551
+            7553: 7553
+            7427: 7427
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: section_labels
+          type: select
+          hierarchy: true
+          limit: true
+          error_message: true
+        facets_field_date:
+          id: facets_field_date
+          table: search_api_index_news
+          field: facets_field_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: facets_filter
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Filtrar por fecha de publicación'
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_date
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              0: '0'
+              anonymous: '0'
+              administrador_funcional: '0'
+              content_editor: '0'
+              administrator: '0'
+              administrador_icbf: '0'
+              administrador_infraestructura: '0'
+              admin_webforms: '0'
+              adopciones: '0'
+              abastecimiento: '0'
+              aseguramiento_calidad: '0'
+              citaciones: '0'
+              comunicaciones: '0'
+              contratacion: '0'
+              contratacion_regionales: '0'
+              convocatoria: '0'
+              constructor_glazed_b: '0'
+              defensor_de_familia: '0'
+              documentos: '0'
+              documentos_micrositiios: '0'
+              editor_contenidos_vip_: '0'
+              editor_transparencia: '0'
+              editor_micrositios: '0'
+              editor_ninos_y_ninas: '0'
+              encargos: '0'
+              evaluacion: '0'
+              gestion_humana: '0'
+              informacion_transparencia: '0'
+              juridica: '0'
+              planeacion: '0'
+              mejoramiento_sige: '0'
+              noticias: '0'
+              noticias_compras_locales: '0'
+              notificaciones_coactivos: '0'
+              observatorio_de_bienestar: '0'
+              servicios_docs_derechos_peticion_puntos_atencion_: '0'
+              servicios_portafolio_: '0'
+              sede_direccion_general: '0'
+              regional_amazonas: '0'
+              regional_antioquia: '0'
+              regional_arauca: '0'
+              regional_atlantico: '0'
+              regional_bogota: '0'
+              regional_boyaca: '0'
+              regional_bolivar: '0'
+              regional_caldas: '0'
+              regional_caqueta: '0'
+              regional_casanare: '0'
+              regional_cauca: '0'
+              regional_cesar: '0'
+              regional_choco: '0'
+              regional_cordoba: '0'
+              regional_cundinamarca: '0'
+              regional_la_guajira: '0'
+              regional_guainia: '0'
+              regional_guaviare: '0'
+              regional_huila: '0'
+              regional_magdalena: '0'
+              regional_meta: '0'
+              regional_narino: '0'
+              regional_norte_de_santander: '0'
+              regional_putumayo: '0'
+              regional_quindio: '0'
+              regional_risaralda: '0'
+              regional_san_andres: '0'
+              regional_santander: '0'
+              regional_sucre: '0'
+              regional_tolima: '0'
+              regional_valle: '0'
+              regional_vaupes: '0'
+              regional_vichada: '0'
+              migracion: '0'
+              web_master: '0'
+              rendicion_de_cuentas: '0'
+              rol_1: '0'
+              administrador_funcional_ajustado: '0'
+              transparencia_contenidos: '0'
+              administrar_datos_ninos_migrantes_venezolanos: '0'
+              eventos_calendario: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          hierarchy: true
+          label_display: visible
+          facet:
+            query_operator: or
+            min_count: 1
+            show_numbers: true
+            processor_configs:
+              hide_non_narrowing_result_processor:
+                weights:
+                  build: 40
+                settings: {  }
+              hierarchy_processor:
+                weights:
+                  build: 100
+                settings: {  }
+              date_item:
+                weights:
+                  build: 35
+                settings:
+                  date_display: actual_date
+                  granularity: '6'
+                  hierarchy: 1
+                  date_format: ''
+              list_item:
+                weights:
+                  build: 5
+                settings: {  }
+              raw_value_widget_order:
+                weights:
+                  sort: 50
+                settings:
+                  sort: DESC
+            hierarchy: date_items
+            expand_hierarchy: 0
+        facets_field_section_tag:
+          id: facets_field_section_tag
+          table: search_api_index_news
+          field: facets_field_section_tag
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: facets_filter
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Filtrar por tipo'
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_section_tag
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrador_funcional: '0'
+              content_editor: '0'
+              administrator: '0'
+              administrador_icbf: '0'
+              administrador_infraestructura: '0'
+              admin_webforms: '0'
+              adopciones: '0'
+              abastecimiento: '0'
+              aseguramiento_calidad: '0'
+              citaciones: '0'
+              comunicaciones: '0'
+              contratacion: '0'
+              contratacion_regionales: '0'
+              convocatoria: '0'
+              constructor_glazed_b: '0'
+              defensor_de_familia: '0'
+              documentos: '0'
+              documentos_micrositiios: '0'
+              editor_contenidos_vip_: '0'
+              editor_transparencia: '0'
+              editor_micrositios: '0'
+              editor_ninos_y_ninas: '0'
+              encargos: '0'
+              evaluacion: '0'
+              gestion_humana: '0'
+              informacion_transparencia: '0'
+              juridica: '0'
+              planeacion: '0'
+              mejoramiento_sige: '0'
+              noticias: '0'
+              noticias_compras_locales: '0'
+              notificaciones_coactivos: '0'
+              observatorio_de_bienestar: '0'
+              servicios_docs_derechos_peticion_puntos_atencion_: '0'
+              servicios_portafolio_: '0'
+              sede_direccion_general: '0'
+              regional_amazonas: '0'
+              regional_antioquia: '0'
+              regional_arauca: '0'
+              regional_atlantico: '0'
+              regional_bogota: '0'
+              regional_boyaca: '0'
+              regional_bolivar: '0'
+              regional_caldas: '0'
+              regional_caqueta: '0'
+              regional_casanare: '0'
+              regional_cauca: '0'
+              regional_cesar: '0'
+              regional_choco: '0'
+              regional_cordoba: '0'
+              regional_cundinamarca: '0'
+              regional_la_guajira: '0'
+              regional_guainia: '0'
+              regional_guaviare: '0'
+              regional_huila: '0'
+              regional_magdalena: '0'
+              regional_meta: '0'
+              regional_narino: '0'
+              regional_norte_de_santander: '0'
+              regional_putumayo: '0'
+              regional_quindio: '0'
+              regional_risaralda: '0'
+              regional_san_andres: '0'
+              regional_santander: '0'
+              regional_sucre: '0'
+              regional_tolima: '0'
+              regional_valle: '0'
+              regional_vaupes: '0'
+              regional_vichada: '0'
+              migracion: '0'
+              web_master: '0'
+              rendicion_de_cuentas: '0'
+              rol_1: '0'
+              administrador_funcional_ajustado: '0'
+              transparencia_contenidos: '0'
+              administrar_datos_ninos_migrantes_venezolanos: '0'
+              eventos_calendario: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          hierarchy: false
+          label_display: visible
+          facet:
+            query_operator: or
+            min_count: 1
+            show_numbers: true
+            processor_configs:
+              translate_entity:
+                weights:
+                  build: 5
+                settings: {  }
+        facets_locality:
+          id: facets_locality
+          table: search_api_index_news
+          field: facets_locality
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: facets_filter
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Filtrar por ubicación'
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: locality
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrador_funcional: '0'
+              content_editor: '0'
+              administrator: '0'
+              administrador_icbf: '0'
+              administrador_infraestructura: '0'
+              admin_webforms: '0'
+              adopciones: '0'
+              abastecimiento: '0'
+              aseguramiento_calidad: '0'
+              citaciones: '0'
+              comunicaciones: '0'
+              contratacion: '0'
+              contratacion_regionales: '0'
+              convocatoria: '0'
+              constructor_glazed_b: '0'
+              defensor_de_familia: '0'
+              documentos: '0'
+              documentos_micrositiios: '0'
+              editor_contenidos_vip_: '0'
+              editor_transparencia: '0'
+              editor_micrositios: '0'
+              editor_ninos_y_ninas: '0'
+              encargos: '0'
+              evaluacion: '0'
+              gestion_humana: '0'
+              informacion_transparencia: '0'
+              juridica: '0'
+              planeacion: '0'
+              mejoramiento_sige: '0'
+              noticias: '0'
+              noticias_compras_locales: '0'
+              notificaciones_coactivos: '0'
+              observatorio_de_bienestar: '0'
+              servicios_docs_derechos_peticion_puntos_atencion_: '0'
+              servicios_portafolio_: '0'
+              sede_direccion_general: '0'
+              regional_amazonas: '0'
+              regional_antioquia: '0'
+              regional_arauca: '0'
+              regional_atlantico: '0'
+              regional_bogota: '0'
+              regional_boyaca: '0'
+              regional_bolivar: '0'
+              regional_caldas: '0'
+              regional_caqueta: '0'
+              regional_casanare: '0'
+              regional_cauca: '0'
+              regional_cesar: '0'
+              regional_choco: '0'
+              regional_cordoba: '0'
+              regional_cundinamarca: '0'
+              regional_la_guajira: '0'
+              regional_guainia: '0'
+              regional_guaviare: '0'
+              regional_huila: '0'
+              regional_magdalena: '0'
+              regional_meta: '0'
+              regional_narino: '0'
+              regional_norte_de_santander: '0'
+              regional_putumayo: '0'
+              regional_quindio: '0'
+              regional_risaralda: '0'
+              regional_san_andres: '0'
+              regional_santander: '0'
+              regional_sucre: '0'
+              regional_tolima: '0'
+              regional_valle: '0'
+              regional_vaupes: '0'
+              regional_vichada: '0'
+              migracion: '0'
+              web_master: '0'
+              rendicion_de_cuentas: '0'
+              rol_1: '0'
+              administrador_funcional_ajustado: '0'
+              transparencia_contenidos: '0'
+              administrar_datos_ninos_migrantes_venezolanos: '0'
+              eventos_calendario: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          hierarchy: true
+          label_display: visible
+          facet:
+            query_operator: or
+            min_count: 1
+            show_numbers: true
+            processor_configs:
+              hierarchy_processor:
+                weights:
+                  build: 100
+                settings: {  }
+            hierarchy: date_items
+            expand_hierarchy: 0
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: 'col-sm-4 col-sx-12'
+          default_row_class: true
+      row:
+        type: fields
+      query:
+        type: search_api_query
+        options:
+          bypass_access: false
+          skip_access: false
+          preserve_facet_query_args: false
+          query_tags: {  }
+          contextual_filters_or: false
+      relationships: {  }
+      use_ajax: true
+      header: {  }
+      footer: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+      tags:
+        - 'config:field.storage.node.field_date'
+        - 'config:field.storage.node.field_list_image'
+        - 'config:field.storage.node.field_lugar'
+        - 'config:field.storage.node.field_resume'
+        - 'config:field.storage.node.field_section_tag'
+        - 'config:search_api.index.news'
+        - 'search_api_list:news'
+  block_newslist:
+    id: block_newslist
+    display_title: 'Interna NEWS LIST'
+    display_plugin: block
+    position: 1
+    display_options:
+      display_description: ''
+      display_extenders:
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+      tags:
+        - 'config:field.storage.node.field_date'
+        - 'config:field.storage.node.field_list_image'
+        - 'config:field.storage.node.field_lugar'
+        - 'config:field.storage.node.field_resume'
+        - 'config:field.storage.node.field_section_tag'
+        - 'config:search_api.index.news'
+        - 'search_api_list:news'

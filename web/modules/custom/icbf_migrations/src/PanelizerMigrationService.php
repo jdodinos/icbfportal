@@ -14,6 +14,7 @@ use Drupal\block_content\Entity\BlockContent;
 class PanelizerMigrationService {
   private $secondDatabase = 'migrate';
   public $block_config;
+  public $panelizer = FALSE;
 
   /**
    *
@@ -278,12 +279,16 @@ class PanelizerMigrationService {
 
   public function addViewInBlock($view_id, $configuration) {
     $display_id = $configuration['display'];
+    if ($view_id == 'news' && $display_id == 'block_newslist') {
+      $view_id = 'noticias_sapi';
+    }
     $view = View::load($view_id);
     $messages = [];
     if ($view) {
       if (strpos($display_id, 'page_') === 0) {
         $display_id = 'block_' . $display_id;
       }
+
       $displays = $view->get('display');
       if (isset($displays[$display_id])) {
         $layout_field = 'views_block';

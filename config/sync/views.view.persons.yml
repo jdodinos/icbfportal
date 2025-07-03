@@ -50,7 +50,6 @@ dependencies:
     - 'taxonomy_term:dependencies:5a5e2e0f-3639-45f7-9dcf-6be83eb8f27a'
     - 'taxonomy_term:dependencies:5c3e2554-3cef-46d6-9fa7-7011f15c4b74'
     - 'taxonomy_term:dependencies:61c17a26-a8dd-4d33-8d0d-f955bbe4c444'
-    - 'taxonomy_term:dependencies:6421d802-d1f4-42ab-b33c-6ee0080f1f0a'
     - 'taxonomy_term:dependencies:6698c69c-2ce8-42b5-b8b3-d03dc0ec05aa'
     - 'taxonomy_term:dependencies:69185b8f-d1ab-403a-8085-33611bd3bbe4'
     - 'taxonomy_term:dependencies:6a083eb6-7195-40ce-b36a-72e0200a1bfa'
@@ -77,7 +76,6 @@ dependencies:
     - 'taxonomy_term:dependencies:b5862365-fe47-4a38-bb08-e4b59505e5a3'
     - 'taxonomy_term:dependencies:ba55705a-54a0-41e1-bb3e-e984ed733273'
     - 'taxonomy_term:dependencies:c494b032-b92f-401c-8601-82a1d62e195b'
-    - 'taxonomy_term:dependencies:c5f8b0c5-bc8e-4526-acbc-4fd6ec57b899'
     - 'taxonomy_term:dependencies:c72f82e3-29df-4ee0-bf8d-1da99b7cd18c'
     - 'taxonomy_term:dependencies:cd3bc549-753d-47a3-8165-665ce920900d'
     - 'taxonomy_term:dependencies:d5e1e27d-a981-4b70-90d7-dd0c13596712'
@@ -5686,49 +5684,21 @@ display:
           text: Editar
           output_url_as_text: false
           absolute: false
-      filters:
-        type:
-          id: type
-          table: node_field_data
-          field: type
+      sorts:
+        field_file_priority_value:
+          id: field_file_priority_value
+          table: node__field_file_priority
+          field: field_file_priority_value
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          operator: in
-          value:
-            persona: persona
-          group: 1
-          exposed: false
+          plugin_id: standard
+          order: DESC
           expose:
-            operator_id: ''
             label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            field_identifier: ''
+          exposed: false
+      filters:
         field_person_position_value:
           id: field_person_position_value
           table: node__field_person_position
@@ -5957,6 +5927,7 @@ display:
         style: false
         row: false
         fields: false
+        sorts: false
         filters: false
         filter_groups: false
       display_description: 'responsive view'
@@ -8883,45 +8854,7 @@ display:
           admin_label: ''
           plugin_id: taxonomy_index_tid
           operator: or
-          value:
-            6429: 6429
-            6132: 6132
-            6136: 6136
-            6134: 6134
-            6131: 6131
-            7747: 7747
-            6142: 6142
-            6442: 6442
-            6138: 6138
-            6135: 6135
-            6444: 6444
-            6133: 6133
-            6152: 6152
-            6150: 6150
-            6149: 6149
-            6147: 6147
-            6146: 6146
-            6137: 6137
-            6148: 6148
-            6441: 6441
-            6445: 6445
-            6446: 6446
-            6433: 6433
-            6436: 6436
-            6430: 6430
-            6141: 6141
-            6437: 6437
-            6431: 6431
-            6434: 6434
-            6140: 6140
-            7748: 7748
-            6143: 6143
-            6440: 6440
-            6439: 6439
-            6144: 6144
-            6438: 6438
-            6435: 6435
-            6432: 6432
+          value: {  }
           group: 1
           exposed: true
           expose:
@@ -9016,7 +8949,7 @@ display:
               transparencia_contenidos: '0'
               administrar_datos_ninos_migrantes_venezolanos: '0'
               eventos_calendario: '0'
-            reduce: true
+            reduce: false
           is_grouped: false
           group_info:
             label: ''
@@ -9032,7 +8965,7 @@ display:
           reduce_duplicates: false
           vid: dependencies
           type: select
-          hierarchy: false
+          hierarchy: true
           limit: true
           error_message: true
       filter_groups:

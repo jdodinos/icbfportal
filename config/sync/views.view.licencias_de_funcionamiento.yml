@@ -346,7 +346,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Aplicar
+          submit_button: Consultar
           reset_button: false
           reset_button_label: Restablecer
           exposed_sorts_label: 'Ordenar por'
