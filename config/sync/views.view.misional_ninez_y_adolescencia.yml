@@ -4129,7 +4129,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-sm-3\">\r\n    {{ field_list_image}}\r\n</div>\r\n<div class=\"col-sm-9\">\r\n  {{ title }}\r\n{{ field_resume }}\r\n{{ field_introduction_text }}\r\n</div>"
+            text: "<div class=\"col-sm-3\">\r\n    {{ field_list_image}}\r\n</div>\r\n<div class=\"col-sm-9\">\r\n<h4 class=\"views-field views-field-title n-item-title\"><span class=\"field-content\">{{ title }}</span></h4>\r\n<div class=\"views-field views-field-field-resume\"><span class=\"field-content\">{{ field_resume }}</span></div>\r\n    <div class=\"views-field views-field-field-introduction-text\"><span class=\"field-content\"><a data-toggle=\"collapse\" href=\"#infl7\" class=\"btn-plus\">Mostrar </a>\r\n        <div class=\"collapse\" id=\"infl7\">\r\n            {{ field_introduction_text }}\r\n       </div>\r\n    </span></div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -6152,7 +6152,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-sm-3\">\r\n    {{ field_list_image}}\r\n</div>\r\n<div class=\"col-sm-9\">\r\n  {{ title }}\r\n{{ field_resume }}\r\n{{ field_introduction_text }}\r\n</div>"
+            text: "<div class=\"col-sm-3\">\r\n    {{ field_list_image}}\r\n</div>\r\n<div class=\"col-sm-9\">\r\n<h4 class=\"views-field views-field-title n-item-title\"><span class=\"field-content\">{{ title }}</span></h4>\r\n<div class=\"views-field views-field-field-resume\"><span class=\"field-content\">{{ field_resume }}</span></div>\r\n    <div class=\"views-field views-field-field-introduction-text\"><span class=\"field-content\"><a data-toggle=\"collapse\" href=\"#infl7\" class=\"btn-plus\">Mostrar </a>\r\n        <div class=\"collapse\" id=\"infl7\">\r\n            {{ field_introduction_text }}\r\n       </div>\r\n    </span></div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -11915,7 +11915,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-sm-3\">\r\n    {{ field_list_image}}\r\n</div>\r\n<div class=\"col-sm-9\">\r\n  {{ title }}\r\n{{ field_resume }}\r\n{{ field_introduction_text }}\r\n</div>"
+            text: "<div class=\"col-sm-3\">\r\n    {{ field_list_image}}\r\n</div>\r\n<div class=\"col-sm-9\">\r\n    <h4 class=\"views-field views-field-title n-item-title\"><span class=\"field-content\">{{ title }}</span></h4>\r\n    <div class=\"views-field views-field-field-resume\"><span class=\"field-content\">{{ field_resume }}</span></div>\r\n    <div class=\"views-field views-field-field-introduction-text\"><span class=\"field-content\"><a data-toggle=\"collapse\" href=\"#infl7\" class=\"btn-plus\">Mostrar </a>\r\n        <div class=\"collapse\" id=\"infl7\">\r\n            {{ field_introduction_text }}\r\n       </div>\r\n    </span></div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
