@@ -199,6 +199,7 @@ class PanelizerMigrationForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
+    $debug = FALSE;
     $entity_type = $form_state->getValue('entity_type');
 
     switch ($entity_type) {
@@ -678,6 +679,10 @@ class PanelizerMigrationForm extends FormBase {
         }
 
         break;
+    }
+
+    if ($debug || $this->panelizer->debug) {
+      die();
     }
   }
 
