@@ -1,17 +1,7 @@
 @use "../abstracts/variables" as var;
 
 
-//prueba de font por libreria -> 
 
-i.pe.pe-7s-monitor:before {
-    font-style: normal;
-    font-family: 'Pe-icon-7-stroke';
-    content: "\e634";
-    display: inline-block;
-    margin-right: 5px;
-    /* font-size: 20px; */
-    /* color: #000; */
-}
 
 .block-page-title-block {
     max-width: 1150px;

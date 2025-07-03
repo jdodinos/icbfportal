@@ -4,6 +4,10 @@
   width: 70%;
   margin: auto;
 
+  .f-introtop {
+    border-bottom: 0;
+  }
+
   h1 {
     font-family: var.$font-montserrat;
     padding-bottom: 9px;
@@ -127,12 +131,6 @@
     .content-landbox{
       .col-sm-5{
 
-        color: #123d14;
-        font-size: 1.42em;
-        font-weight: 500;
-        font-family: 'Montserrat', sans-serif;
-        line-height: normal;
-
         .youtube-container{
           margin: .7em 0;
         }
@@ -165,8 +163,6 @@
   .view-misional-ninez-y-adolescencia{
 
     .view-content{
-      display: flex;
-      flex-wrap: wrap;
     }
 
     .bottm-line{
@@ -174,5 +170,22 @@
     }
 
   }
+
+  .block-views-blockmisional-ninez-y-adolescencia-block-vdoinf{
+    .views-field-title{
+      color: #6b6b6b;
+      display: block;
+      font-family: 'montserrat';
+      font-weight: 500;
+      line-height: initial;
+      font-size: 15.4px;
+      padding: 1.2em 0;
+      word-break: break-word;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  
   
 }

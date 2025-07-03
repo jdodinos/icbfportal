@@ -8,6 +8,12 @@
     border-bottom: 1px solid #eee;
 }
 
+.page-programas-y-estrategias-proteccion-2023 {
+    .az-element .az-text h1 {
+        display: none;
+    }
+}
+
 .page-el-instituto-funcionarios-directivos-funcionarios-directivos-regionales,
 .page-el-instituto-funcionarios-directivos {
     font-family: "Montserrat-regular";
@@ -15,6 +21,12 @@
     h2 {
         font-family: "Montserrat";
         font-size: 18px;
+    }
+
+
+    .form-actions {
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
     .view-content {
@@ -59,9 +71,14 @@
     input#edit-submit-persons {
         width: 65px;
         height: 30px;
-        margin-top: -1.8rem;
+        margin-top: -3rem;
         position: absolute;
         font-size: 13px;
+        background: #31b0d5;
+        border: 1px solid #31b0d5;
+    }
+
+    .btn {
         background: #31b0d5;
         border: 1px solid #31b0d5;
     }

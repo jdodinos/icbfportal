@@ -10915,9 +10915,9 @@ display:
           click_sort_column: input
           type: youtube_video
           settings:
-            youtube_size: responsive
-            youtube_width: ''
-            youtube_height: ''
+            youtube_size: custom
+            youtube_width: 350px
+            youtube_height: 450px
             youtube_autoplay: false
             youtube_mute: false
             youtube_loop: false
