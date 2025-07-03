@@ -282,6 +282,9 @@ class PanelizerMigrationService {
     if ($view_id == 'news' && $display_id == 'block_newslist') {
       $view_id = 'noticias_sapi';
     }
+    if ($view_id == 'documentos_de_contratacion' && $display_id == 'block') {
+      $view_id = 'documentos_de_contratacion_sapi';
+    }
     $view = View::load($view_id);
     $messages = [];
     if ($view) {

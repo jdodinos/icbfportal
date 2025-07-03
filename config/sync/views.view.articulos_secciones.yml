@@ -10943,7 +10943,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -11072,7 +11072,7 @@ display:
           admin_label: ''
           plugin_id: views_conditional_field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''

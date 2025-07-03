@@ -1,6 +1,18 @@
 @use "../abstracts/variables" as var;
 
 
+//prueba de font por libreria -> 
+
+i.pe.pe-7s-monitor:before {
+    font-style: normal;
+    font-family: 'Pe-icon-7-stroke';
+    content: "\e634";
+    display: inline-block;
+    margin-right: 5px;
+    /* font-size: 20px; */
+    /* color: #000; */
+}
+
 .block-page-title-block {
     max-width: 1150px;
     margin: 1.5em auto
@@ -47,6 +59,25 @@ table {
         font-family: var.$font-montserrat-regular;
         font-size: 14px;
         padding: 6px 12px;
+    }
+}
+
+.page-proveedores-icbf-0 {
+    .views-field.views-field-field-introduction-text {
+        font-family: var.$font-montserrat-regular;
+    }
+}
+
+.page-es-hora-de-cambiar {
+    p {
+        font-family: var.$font-montserrat-regular;
+    }
+
+    h3 {
+        font-family: var.$font-asap-regular;
+        font-size: 1.2em;
+        font-weight: 500;
+        line-height: 1.1;
     }
 }
 

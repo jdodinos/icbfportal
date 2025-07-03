@@ -62,14 +62,14 @@ footer {
       font-family: var.$font-montserrat;
       font-size: 1.58em;
       font-weight: 500;
-      padding: 2rem 0 2.3rem;
-      border-bottom: 1px solid #e1f5e8;
+      padding: 0;
+      border-bottom: 0;
       clear: both;
       display: block;
-      margin-bottom: 1em;
+      margin: 0 0 0.33em;
       font-size: 1.58em;
       font-weight: 500;
-      
+
       @media screen and (max-width: 850px) {
         font-size: large;
       }
