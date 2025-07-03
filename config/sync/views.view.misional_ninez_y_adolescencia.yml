@@ -16,6 +16,7 @@ dependencies:
     - field.storage.node.field_youtube
     - image.style.home-slidep
     - image.style.large
+    - image.style.thumbnail
     - node.type.articles_portal_web
     - taxonomy.vocabulary.file_category
     - taxonomy.vocabulary.secctions
@@ -5937,7 +5938,7 @@ display:
           type: image
           settings:
             image_link: ''
-            image_style: home-slidep
+            image_style: thumbnail
             image_loading:
               attribute: lazy
           group_column: ''

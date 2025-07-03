@@ -285,6 +285,9 @@ class PanelizerMigrationService {
     if ($view_id == 'documentos_de_contratacion' && $display_id == 'block') {
       $view_id = 'documentos_de_contratacion_sapi';
     }
+    if ($view_id == 'licencias_de_funcionamiento' && $display_id == 'block') {
+      $view_id = 'licencias_de_funcionamiento_sapi';
+    }
     $view = View::load($view_id);
     $messages = [];
     if ($view) {

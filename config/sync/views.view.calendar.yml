@@ -657,9 +657,9 @@ display:
         sorts: false
       use_ajax: true
       display_description: 'block 2021'
-      use_more: false
+      use_more: true
       use_more_always: true
-      use_more_text: more
+      use_more_text: 'más eventos'
       display_extenders:
         metatag_display_extender:
           metatags: {  }
