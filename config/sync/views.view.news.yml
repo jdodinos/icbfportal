@@ -6420,11 +6420,11 @@ display:
           style: ''
           skin: boxed-carousel
           overridables:
-            arrows: '0'
+            arrows: arrows
+            dots: dots
+            draggable: draggable
+            infinite: infinite
             autoplay: '0'
-            dots: '0'
-            draggable: '0'
-            infinite: '0'
             mouseWheel: '0'
             randomize: '0'
             variableWidth: '0'
@@ -6434,7 +6434,7 @@ display:
           thumbnail_caption: ''
           thumbnail_effect: ''
           thumbnail_position: ''
-          override: false
+          override: true
           preserve_keys: false
           visible_items: null
       row:
