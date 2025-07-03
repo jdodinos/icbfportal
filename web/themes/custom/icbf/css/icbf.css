@@ -19020,10 +19020,10 @@ ul.share-buttons .sr-only {
 a.id-m {
   background-color: rgba(0, 0, 0, .46);
   bottom: 3.6em;
-  color: #fff !important;
+  color: #fff;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: .8em !important;
+  font-size: .8em;
   padding: .2em .4em .2em .5em;
   position: relative;
   transition: all .2s linear;

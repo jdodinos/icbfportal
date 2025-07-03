@@ -10424,7 +10424,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"content-landbox\">\r\n  <div class=\"bar-line\"></div>\r\n  <div class=\"col-sm-5 col-xs-12\">\r\n    {{ title }}\r\n    {{ views_conditional_field }}\r\n  </div>\r\n  <div class=\"col-sm-7 col-xs-12 marginbtext\">\r\n    {{ field_resume }}\r\n    {{ field_introduction_text }}\r\n    {{ field_link_more_info }}\r\n  </div>\r\n</div>"
+            text: "<div class=\"content-landbox\">\r\n  <div class=\"bar-line\"></div>\r\n  <div class=\"col-sm-5 col-xs-12\">\r\n<div class=\"views-field views-field-title word-h3title\"><span class=\"field-content\">{{ title }}</span></div>\r\n    {{ views_conditional_field }}\r\n  </div>\r\n  <div class=\"col-sm-7 col-xs-12 marginbtext\">\r\n    {{ field_resume }}\r\n    {{ field_introduction_text }}\r\n    {{ field_link_more_info }}\r\n  </div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -10915,9 +10915,9 @@ display:
           click_sort_column: input
           type: youtube_video
           settings:
-            youtube_size: responsive
-            youtube_width: ''
-            youtube_height: ''
+            youtube_size: custom
+            youtube_width: 350px
+            youtube_height: 450px
             youtube_autoplay: false
             youtube_mute: false
             youtube_loop: false
