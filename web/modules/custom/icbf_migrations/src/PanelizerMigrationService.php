@@ -14,6 +14,7 @@ use Drupal\block_content\Entity\BlockContent;
 class PanelizerMigrationService {
   private $secondDatabase = 'migrate';
   public $block_config;
+  public $panelizer = FALSE;
 
   /**
    *
@@ -278,9 +279,19 @@ class PanelizerMigrationService {
 
   public function addViewInBlock($view_id, $configuration) {
     $display_id = $configuration['display'];
+    if ($view_id == 'news' && $display_id == 'block_newslist') {
+      $view_id = 'noticias_sapi';
+    }
+    if ($view_id == 'documentos_de_contratacion' && $display_id == 'block') {
+      $view_id = 'documentos_de_contratacion_sapi';
+    }
     $view = View::load($view_id);
     $messages = [];
     if ($view) {
+      if (strpos($display_id, 'page_') === 0) {
+        $display_id = 'block_' . $display_id;
+      }
+
       $displays = $view->get('display');
       if (isset($displays[$display_id])) {
         $layout_field = 'views_block';
@@ -403,8 +414,17 @@ class PanelizerMigrationService {
       }
       elseif ($block_type == 'bean') {
         $block_title = str_replace('---', '|+|', $block_id);
+        if (strpos($block_id, '--') !== FALSE) {
+          $block_title = str_replace('--', '+|', $block_id);
+        }
+
         $block_title = str_replace('-', ' ', $block_title);
         $block_title = str_replace('|+|', ' - ', $block_title);
+        $block_title = str_replace('+|', '- ', $block_title);
+        // Caso muy particular de un bloque de páginas.
+        if ($block_id == 'paginas-internas-primera-infanci') {
+          $block_title = 'Páginas internas Primera Infancia';
+        }
         $block_query = $this->database->select('block_content', 'b');
         $block_query->join('block_content_field_data', 'bcfd', 'b.id = bcfd.id');
         $block_query->fields('b', ['uuid'])

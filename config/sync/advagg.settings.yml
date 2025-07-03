@@ -2,7 +2,7 @@ _core:
   default_config_hash: Vi3b7DLLNw5X1UX9XG8mnU-ysvyNgdyvAasxV9yck3I
 css:
   brotli: false
-  combine_media: false
+  combine_media: null
   fix_type: false
   preserve_external: false
 dns_prefetch: false
@@ -13,7 +13,7 @@ path:
     force_https: false
 cache_level: 2
 cron_frequency: 900
-enabled: true
+enabled: false
 global_counter: 0
 immutable: true
 js:
