@@ -12,11 +12,13 @@ dependencies:
     - field.storage.node.field_telefono
     - node.type.datos_ni_os_migrantes
   module:
+    - blazy
     - image
     - node
     - options
     - text
     - user
+    - views_bootstrap
 id: me_conoces_ni_os_venezolanos
 label: 'Me conoces Niños Venezolanos'
 module: views
@@ -106,12 +108,13 @@ display:
           field: field_nombre
           relationship: none
           group_type: group
+          admin_label: ''
           plugin_id: field
           label: ''
           exclude: false
           alter:
-            alter_text: true
-            text: '<center><div style="background-color:#FFF9ED;width: 80%;color:#C6D467;font-size: 15px;font-family: ''Montserrat'';height: 40px; "><b>{{ field_nombre }} </b></br></div></center>'
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -144,15 +147,15 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: false
+          element_default_classes: true
           empty: '<b> aaaaaaaaaaaaaaaa </b>'
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: text_default
+          type: blazy_oembed
           settings:
-            field_formatter_class: ''
+            link_to_entity: 0
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -691,10 +694,53 @@ display:
     display_plugin: page
     position: 2
     display_options:
+      sorts:
+        created_1:
+          id: created_1
+          table: taxonomy_index
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
+      style:
+        type: views_bootstrap_grid
+        options:
+          grouping: {  }
+          alignment: horizontal
+          col_class_default: 1
+          col_class_custom: ''
+          row_class_default: 1
+          row_class_custom: ''
+          columns: '12'
+          col_xs: col-xs-12
+          col_sm: col-sm-4
+          col_md: col-md-4
+          col_lg: col-lg-4
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
       query:
         type: views_query
         options: {  }
-      display_extenders: {  }
+      defaults:
+        style: false
+        row: false
+        sorts: false
+      display_extenders:
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
       path: me-conoces-venezolanos
     cache_metadata:
       max-age: -1
@@ -719,14 +765,87 @@ display:
     display_plugin: default
     position: 3
     display_options:
+      title: 'Me conoces Niños Venezolanos'
+      fields:
+        field_fotografia:
+          id: field_fotografia
+          table: node__field_fotografia
+          field: field_fotografia
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<center>{{ field_fotografia }}</center>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_link: content
+            image_style: ''
+            image_loading:
+              attribute: lazy
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
       query:
         type: views_query
         options: {  }
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
     cache_metadata:
       max-age: -1
       contexts:
+        - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
         - 'user.node_grants:view'
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_fotografia'
