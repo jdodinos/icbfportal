@@ -23,6 +23,7 @@
 
     .view-display-id-block_agenda21{
         .view-content{
+            margin: 0 0 14px;
             .views-row{
                 align-items: center;
                 display: flex;
@@ -48,6 +49,21 @@
                     flex: 1;
                     line-height: 1.3em;
                 }
+            }
+        }
+
+        .more-link{
+            font-family: 'montserrat';
+            border-radius: 30px;
+            border: 2px solid #0073ff;
+            font-size: .95em;
+            left: 26.7%;
+            padding: .3em .7em;
+            position: absolute;
+            text-align: right;
+            a{
+                color: #0073ff;
+                text-decoration: none;
             }
         }
     }
