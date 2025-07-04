@@ -285,9 +285,15 @@ class PanelizerMigrationService {
     if ($view_id == 'documentos_de_contratacion' && $display_id == 'block') {
       $view_id = 'documentos_de_contratacion_sapi';
     }
-    if ($view_id == 'licencias_de_funcionamiento' && $display_id == 'block') {
-      $view_id = 'licencias_de_funcionamiento_sapi';
+    if ($view_id == 'licencias_de_funcionamiento') {
+      if ($display_id == 'block' || $display_id == 'block_1' || $display_id == 'block_2') {
+        $view_id = 'licencias_de_funcionamiento_sapi';
+      }
     }
+    if ($view_id == 'curriculum_vitae' && $display_id == 'block_2') {
+      $view_id = 'curriculum_vitae_sapi';
+    }
+
     $view = View::load($view_id);
     $messages = [];
     if ($view) {
