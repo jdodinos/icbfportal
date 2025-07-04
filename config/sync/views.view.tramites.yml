@@ -7351,7 +7351,7 @@ display:
             offset_label: Desplazamiento
           views_infinite_scroll:
             button_text: 'Cargar más'
-            automatically_load_content: false
+            automatically_load_content: true
             initially_load_all_pages: false
       sorts:
         field_priority_value:

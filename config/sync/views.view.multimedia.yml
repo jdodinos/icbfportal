@@ -5870,7 +5870,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -6255,8 +6255,19 @@ display:
         operator: AND
         groups:
           1: AND
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: 'col-sm-6 col-xs-6'
+          default_row_class: true
+      row:
+        type: fields
+        options: {  }
       defaults:
         pager: false
+        style: false
+        row: false
         fields: false
         sorts: false
         arguments: false
