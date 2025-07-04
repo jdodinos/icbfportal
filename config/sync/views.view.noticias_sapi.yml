@@ -1215,7 +1215,7 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          hierarchy: true
+          hierarchy: false
           label_display: visible
           facet:
             query_operator: or
@@ -1225,10 +1225,6 @@ display:
               hide_non_narrowing_result_processor:
                 weights:
                   build: 40
-                settings: {  }
-              hierarchy_processor:
-                weights:
-                  build: 100
                 settings: {  }
               date_item:
                 weights:
@@ -1247,8 +1243,6 @@ display:
                   sort: 50
                 settings:
                   sort: DESC
-            hierarchy: date_items
-            expand_hierarchy: 0
         facets_field_section_tag:
           id: facets_field_section_tag
           table: search_api_index_news
@@ -1526,6 +1520,7 @@ display:
           query_tags: {  }
           contextual_filters_or: false
       relationships: {  }
+      css_class: row
       use_ajax: true
       header: {  }
       footer: {  }
