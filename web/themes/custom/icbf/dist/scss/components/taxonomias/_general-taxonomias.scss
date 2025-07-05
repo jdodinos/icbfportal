@@ -9,6 +9,51 @@
 }
 
 
+
+.page-transparencia-y-acceso-informacion-publica {
+    h1.page-header {
+        display: none;
+    }
+
+    .field--name-body .bar-line {
+        display: none;
+    }
+
+    .layout__region--first {
+        margin: 2rem 1rem;
+        width: 40%;
+    }
+
+    .layout__region--second {
+        width: 60%;
+    }
+
+    .layout--unecol-section {
+        display: flex;
+        margin: 2rem auto;
+
+        @media(max-width: 910px) {
+            display: grid;
+        }
+    }
+
+    video {
+        width: 100% !important;
+        object-fit: cover !important;
+    }
+}
+
+
+.page-programas-y-estrategias-nutricion {
+    .page-header {
+        display: none;
+    }
+
+    h1 {
+        border-bottom: 0px solid #eee;
+    }
+}
+
 .page-aseguramiento-la-calidad-1 {
     .he_back-cleargrey {
         margin-bottom: 2%;
