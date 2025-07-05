@@ -349,8 +349,10 @@ class PanelizerMigrationService {
     if ($view_id == 'notifications_pc' && $display_id == 'block') {
       $view_id = 'notifications_pc_sapi';
     }
-    if ($view_id == 'documents' && $display_id == 'block_9') {
-      $view_id = 'documents_sapi';
+    if ($view_id == 'documents') {
+      if ($display_id == 'block' || $display_id == 'block_9' || $display_id == 'block_10') {
+        $view_id = 'documents_sapi';
+      }
     }
 
     $view = View::load($view_id);
