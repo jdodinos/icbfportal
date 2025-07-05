@@ -4562,7 +4562,7 @@ display:
           click_sort_column: target_id
           type: file_default
           settings:
-            use_description_as_link_text: false
+            use_description_as_link_text: true
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -4645,6 +4645,9 @@ display:
             items_per_page_options_all_label: '- Todo -'
             offset: false
             offset_label: Desplazamiento
+      cache:
+        type: none
+        options: {  }
       sorts:
         field_date_value:
           id: field_date_value
@@ -4763,6 +4766,51 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        field_section_target_id:
+          id: field_section_target_id
+          table: node__field_section
+          field: field_section_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: 'not empty'
+          value: {  }
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: secctions
+          type: textfield
+          hierarchy: false
+          limit: true
+          error_message: true
       filter_groups:
         operator: AND
         groups:
@@ -4781,9 +4829,7 @@ display:
           columns:
             nid: nid
             field_section: field_section
-            field_file_categoria: field_file_categoria
             field_document: field_document
-            field_date: field_date
             edit_node: edit_node
           info:
             nid:
@@ -4798,19 +4844,7 @@ display:
               separator: ''
               empty_column: 0
               responsive: ''
-            field_file_categoria:
-              align: ''
-              separator: ''
-              empty_column: 0
-              responsive: ''
             field_document:
-              sortable: 0
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: 0
-              responsive: ''
-            field_date:
               sortable: 0
               default_sort_order: asc
               align: ''
@@ -4836,6 +4870,7 @@ display:
         type: fields
         options: {  }
       defaults:
+        cache: false
         pager: false
         style: false
         row: false
