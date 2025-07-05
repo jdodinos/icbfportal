@@ -1121,7 +1121,7 @@ display:
             identifier: field_date
             required: false
             remember: false
-            multiple: true
+            multiple: false
             remember_roles:
               authenticated: authenticated
               0: '0'
@@ -1269,6 +1269,7 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+              0: '0'
               anonymous: '0'
               administrador_funcional: '0'
               content_editor: '0'
@@ -1396,6 +1397,7 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+              0: '0'
               anonymous: '0'
               administrador_funcional: '0'
               content_editor: '0'

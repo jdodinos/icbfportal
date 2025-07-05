@@ -1325,6 +1325,11 @@ display:
                   granularity: '6'
                   hierarchy: 0
                   date_format: ''
+              raw_value_widget_order:
+                weights:
+                  sort: 50
+                settings:
+                  sort: DESC
         facets_field_location:
           id: facets_field_location
           table: search_api_index_documentos_sapi
@@ -1452,6 +1457,11 @@ display:
                 weights:
                   build: 5
                 settings: {  }
+              raw_value_widget_order:
+                weights:
+                  sort: 50
+                settings:
+                  sort: ASC
       filter_groups:
         operator: AND
         groups:
@@ -2354,6 +2364,11 @@ display:
                   granularity: '6'
                   hierarchy: 0
                   date_format: ''
+              raw_value_widget_order:
+                weights:
+                  sort: 50
+                settings:
+                  sort: DESC
         facets_field_location:
           id: facets_field_location
           table: search_api_index_documentos_sapi
@@ -2481,6 +2496,11 @@ display:
                 weights:
                   build: 5
                 settings: {  }
+              raw_value_widget_order:
+                weights:
+                  sort: 50
+                settings:
+                  sort: ASC
       filter_groups:
         operator: AND
         groups:
@@ -3536,6 +3556,11 @@ display:
                   granularity: '6'
                   hierarchy: 0
                   date_format: ''
+              raw_value_widget_order:
+                weights:
+                  sort: 50
+                settings:
+                  sort: DESC
         facets_field_location:
           id: facets_field_location
           table: search_api_index_documentos_sapi
@@ -3663,6 +3688,11 @@ display:
                 weights:
                   build: 5
                 settings: {  }
+              raw_value_widget_order:
+                weights:
+                  sort: 50
+                settings:
+                  sort: ASC
       filter_groups:
         operator: AND
         groups:

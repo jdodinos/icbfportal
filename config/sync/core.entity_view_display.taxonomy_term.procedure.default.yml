@@ -20,7 +20,56 @@ dependencies:
     - taxonomy.vocabulary.procedure
   module:
     - image
+    - layout_builder
+    - layout_discovery
+    - panelizer
     - text
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          1ebe2c00-f344-48a0-96da-8accac2d1634:
+            uuid: 1ebe2c00-f344-48a0-96da-8accac2d1634
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:procedure:field_header_infografia'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          95a97d0e-77e1-459c-acc7-b4411cf3f1bf:
+            uuid: 95a97d0e-77e1-459c-acc7-b4411cf3f1bf
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:procedure:field_content'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: taxonomy_term.procedure.default
 targetEntityType: taxonomy_term
 bundle: procedure
