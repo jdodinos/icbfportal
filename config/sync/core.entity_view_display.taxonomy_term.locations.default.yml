@@ -3,6 +3,7 @@ langcode: es
 status: true
 dependencies:
   config:
+    - block_content.type.basic
     - field.field.taxonomy_term.locations.field_address
     - field.field.taxonomy_term.locations.field_board
     - field.field.taxonomy_term.locations.field_contact_email
@@ -20,7 +21,43 @@ dependencies:
     - field.field.taxonomy_term.locations.field_working_hours
     - taxonomy.vocabulary.locations
   module:
+    - layout_builder
+    - layout_discovery
+    - panelizer
     - text
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          a03b2e2b-32f9-41b1-b6d2-f3c6105772fc:
+            uuid: a03b2e2b-32f9-41b1-b6d2-f3c6105772fc
+            region: content
+            configuration:
+              id: 'inline_block:basic'
+              label: 'Mensaje página de ubicaciones'
+              label_display: '0'
+              provider: layout_builder
+              view_mode: full
+              context_mapping: {  }
+              block_id: 2957
+              block_revision_id: 1292
+              block_serialized: null
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+        third_party_settings: {  }
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: taxonomy_term.locations.default
 targetEntityType: taxonomy_term
 bundle: locations

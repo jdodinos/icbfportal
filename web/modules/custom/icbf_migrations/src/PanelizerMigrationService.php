@@ -222,6 +222,47 @@ class PanelizerMigrationService {
     return $sections;
   }
 
+  public function searchSectionInLayout($panel_name, $panels_display) {
+    $position = [];
+    foreach ($panels_display as $item) {
+      $layout_settings = unserialize($item->layout_settings);
+      if ($layout_settings['items'][$panel_name]['parent'] == 'main') {
+        $position = [
+          'panel_name' => $panel_name,
+          'section_name' => $panel_name,
+        ];
+        break;
+      }
+      else {
+        $parent_name = $layout_settings['items'][$panel_name]['parent'];
+        if ($layout_settings['items'][$parent_name]['parent'] == 'main') {
+          $position = $parent_name;
+          $position = [
+            'panel_name' => $panel_name,
+            'section_name' => $parent_name,
+          ];
+          break;
+        }
+        else {
+          $position = ['panel_name' => $parent_name];
+          $parent_name = $layout_settings['items'][$parent_name]['parent'];
+          if ($layout_settings['items'][$parent_name]['parent'] == 'main') {
+            $position['section_name'] = $parent_name;
+          }
+          else {
+            $position = ['panel_name' => $parent_name];
+            $parent_name = $layout_settings['items'][$parent_name]['parent'];
+            if ($layout_settings['items'][$parent_name]['parent'] == 'main') {
+              $position['section_name'] = $parent_name;
+            }
+          }
+        }
+      }
+    }
+
+    return $position;
+  }
+
   public function deleteLayoutSectionsForEntity($entity) {
     // Ensure that Layout Builder is enabled and has the field.
     if ($entity->hasField('layout_builder__layout')) {
@@ -278,6 +319,7 @@ class PanelizerMigrationService {
   }
 
   public function addViewInBlock($view_id, $configuration) {
+    $this->block_config = [];
     $display_id = $configuration['display'];
     if ($view_id == 'news' && $display_id == 'block_newslist') {
       $view_id = 'noticias_sapi';
@@ -337,6 +379,7 @@ class PanelizerMigrationService {
   }
 
   public function addCustomBlock($subtype, $configuration, $name = '') {
+    $this->block_config = [];
     $label_display = $this->validateLabelDisplay($configuration);
     $block = BlockContent::create([
       'type' => 'basic',
@@ -367,6 +410,7 @@ class PanelizerMigrationService {
   }
 
   public function addBlockContentInBlock($subtype, $configuration) {
+    $this->block_config = [];
     $label_display = $this->validateLabelDisplay($configuration);
     $messages = [];
 
@@ -414,7 +458,6 @@ class PanelizerMigrationService {
       $position_explode = strpos($subtype, '-');
       $block_type = substr($subtype, 0, $position_explode);
       $block_id = substr($subtype, $position_explode + 1);
-
       if ($block_type == 'block') {
         $block_uuid = $this->database->select('block_content', 'b')
           ->fields('b', ['uuid'])

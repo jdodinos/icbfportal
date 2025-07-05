@@ -515,6 +515,8 @@ class PanelizerMigrationForm extends FormBase {
 
               $did = $item->did;
               $panel = $item->panel;
+              $position_data = $this->panelizer->searchSectionInLayout($panel, $panels_display);
+
               $type = $item->type;
               $voc_machine_name = $item->voc_machine_name;
               $section_node = $sections[$did];
@@ -525,18 +527,19 @@ class PanelizerMigrationForm extends FormBase {
 
               foreach ($section_node as &$row) {
                 $field_configuration = [];
-                if (isset($row['children']) && in_array($panel, $row['children'])) {
+                if (isset($row['children']) && in_array($position_data['panel_name'], $row['children'])) {
                   $block_plugin_id = NULL;
                   $provider = 'layout_builder';
 
                   $section_id = $row['section']->getLayoutId();
-                  $position = array_search($panel, $row['children']);
+                  $position = array_search($position_data['panel_name'], $row['children']);
                   $region = $this->panelizer->getRegionInSection($section_id, $position);
 
                   $label_display = FALSE;
                   if (isset($configuration['override_title']) && $configuration['override_title'] && isset($configuration['override_title_text']) && $configuration['override_title_text']) {
                     $label_display = TRUE;
                   }
+
                   switch ($type) {
                     case 'entity_field':
                     case 'node_body':

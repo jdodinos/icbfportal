@@ -129,7 +129,7 @@ function icbf_preprocess_field(&$variables) {
                 // Render it
                 $render_array = $view->render();
                 $html_view = \Drupal::service('renderer')->render($render_array);
-                $html = str_replace($original_element, $html_view, $html);
+                $html = str_replace('</div>', $html_view . '</div>', $html);
               }
             }
           }
@@ -222,6 +222,7 @@ function icbf_preprocess_field(&$variables) {
 
 function icbf_preprocess_layout(&$variables) {
   if (isset($variables['attributes']['class'][2])) {
+    $variables['attributes']['class'][1] = 'layout--unecol-section';
     unset($variables['attributes']['class'][2]);
   }
 }
