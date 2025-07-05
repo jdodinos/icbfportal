@@ -346,6 +346,12 @@ class PanelizerMigrationService {
     if ($view_id == 'curriculum_vitae' && $display_id == 'block_2') {
       $view_id = 'curriculum_vitae_sapi';
     }
+    if ($view_id == 'notifications_pc' && $display_id == 'block') {
+      $view_id = 'notifications_pc_sapi';
+    }
+    if ($view_id == 'documents' && $display_id == 'block_9') {
+      $view_id = 'documents_sapi';
+    }
 
     $view = View::load($view_id);
     $messages = [];
