@@ -79,9 +79,6 @@ function icbf_preprocess_field(&$variables) {
           $html2 = substr($html, $item_pos);
           $html_close_pos = strpos($html2, '>');
           $html_close = substr($html, $item_pos, $html_close_pos);
-          // dump($html2);
-          // dump($html_close);
-        //   # code...
         }
       }
     }
@@ -95,10 +92,11 @@ function icbf_preprocess_field(&$variables) {
       // For views in Glazed Builder.
       if (strpos($html, 'data-azb="az_view')) {
         $explode_html = explode('</div>', $html);
-        foreach ($explode_html as $original_element) {
+        foreach ($explode_html as &$original_element) {
           if (strpos($original_element, 'data-azb="az_view')) {
-            $original_element .= '</div>';
-            $element = trim($original_element);
+            $last_div_pos = strrpos($original_element, '<div');
+            $element = substr($original_element, $last_div_pos);
+            $element = trim($element);
 
             // Check if there are contextual filters.
             $filter = [];
@@ -129,12 +127,15 @@ function icbf_preprocess_field(&$variables) {
                 // Render it
                 $render_array = $view->render();
                 $html_view = \Drupal::service('renderer')->render($render_array);
-                $html = str_replace('</div>', $html_view . '</div>', $html);
+                $original_element = str_replace($element, $html_view, $original_element);
               }
             }
           }
+
+          $original_element .= '</div>';
         }
 
+        $html = implode('', $explode_html);
         $item['content']['#text'] = $html;
       }
 
