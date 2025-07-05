@@ -11,8 +11,10 @@ dependencies:
     - taxonomy.vocabulary.file_category
     - taxonomy.vocabulary.secctions
   content:
+    - 'taxonomy_term:file_category:4fa21771-8a02-433b-948c-3672645e35e2'
     - 'taxonomy_term:file_category:ff36e9ac-b587-4fbd-870a-2eb95e75e7d8'
     - 'taxonomy_term:secctions:3171b05d-5e44-4eb7-839f-442937480611'
+    - 'taxonomy_term:secctions:c70cc5dc-e4e7-4ff5-80ba-2eca1cdd0ccf'
   module:
     - better_exposed_filters
     - datetime
@@ -1161,7 +1163,7 @@ display:
           plugin_id: search_api_term
           operator: or
           value:
-            - 6166
+            - 6180
           group: 1
           exposed: false
           expose:
@@ -1207,6 +1209,7 @@ display:
           plugin_id: search_api_term
           operator: or
           value:
+            - 6716
             - 6715
           group: 1
           exposed: false
@@ -1503,6 +1506,20 @@ display:
                 select_all_none: false
                 select_all_none_nested: false
                 display_inline: false
+      sorts:
+        created:
+          id: created
+          table: search_api_index_documentos_sapi
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
       filters:
         field_file_categoria:
           id: field_file_categoria
@@ -1776,6 +1793,7 @@ display:
           1: AND
       defaults:
         exposed_form: false
+        sorts: false
         filters: false
         filter_groups: false
       display_description: 'notificaciones info juridica'
