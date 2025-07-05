@@ -1,77 +1,91 @@
-.node--type-page{
+.page-inicio {
 
-    .h1,.h2,.h3, h1, h2, h3 {
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
+    .node--type-page {
 
-    .block-views-blocknews-block-25{
-        margin: 1em 0 2em;
-    }
-    
-    .view-display-id-block_btnx5{
-        max-width: 220px;
-    }
-
-    .block-block-content5712aaa6-336a-4df9-b947-c66cd32d67fe{
-        .field--name-field-builder{
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
+        .h1,
+        .h2,
+        .h3,
+        h1,
+        h2,
+        h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
         }
-    }
 
-    .view-display-id-block_agenda21{
-        .view-content{
-            margin: 0 0 14px;
-            .views-row{
-                align-items: center;
+        .block-views-blocknews-block-25 {
+            margin: 1em 0 2em;
+        }
+
+        .view-display-id-block_btnx5 {
+            max-width: 220px;
+        }
+
+        .block-block-content5712aaa6-336a-4df9-b947-c66cd32d67fe {
+            .field--name-field-builder {
                 display: flex;
-                .views-field-event-calendar-date{
-                    color: #69f;
-                    float: left;
-                    font-family: 'Montserrat', sans-serif;
-                    font-size: 2em;
-                    font-weight: 500;
-                    line-height: normal;
-                    margin: 0 .5em 0 0;
-                    text-align: right;
-                    width: 30%;
-                    line-height: 1.3em;
-                    .field-content{
-                        line-height: 1.1em;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+
+        .view-display-id-block_agenda21 {
+            .view-content {
+                margin: 0 0 14px;
+
+                .views-row {
+                    align-items: center;
+                    display: flex;
+
+                    .views-field-event-calendar-date {
+                        color: #69f;
+                        float: left;
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 2em;
+                        font-weight: 500;
+                        line-height: normal;
+                        margin: 0 .5em 0 0;
+                        text-align: right;
+                        width: 30%;
+                        line-height: 1.3em;
+
+                        .field-content {
+                            line-height: 1.1em;
+                        }
+                    }
+
+                    .views-field-nothing {
+                        border-left: 1px solid #69f;
+                        display: flex;
+                        padding-left: .6em;
+                        flex: 1;
+                        line-height: 1.3em;
                     }
                 }
-                .views-field-nothing{
-                    border-left: 1px solid #69f;
-                    display: flex;
-                    padding-left: .6em;
-                    flex: 1;
-                    line-height: 1.3em;
+            }
+
+            .more-link {
+                font-family: 'montserrat';
+                border-radius: 30px;
+                border: 2px solid #0073ff;
+                font-size: .95em;
+                left: 26.7%;
+                padding: .3em .7em;
+                position: absolute;
+                text-align: right;
+
+                a {
+                    color: #0073ff;
+                    text-decoration: none;
                 }
             }
         }
 
-        .more-link{
-            font-family: 'montserrat';
-            border-radius: 30px;
-            border: 2px solid #0073ff;
-            font-size: .95em;
-            left: 26.7%;
-            padding: .3em .7em;
-            position: absolute;
-            text-align: right;
-            a{
-                color: #0073ff;
-                text-decoration: none;
+        .layout__region--content {
+            .block-block-content {
+                margin: 0 0 2em;
             }
         }
-    }
 
-    .layout__region--content{
-        .block-block-content{
-            margin: 0 0 2em;
-        }
     }
 
 }
