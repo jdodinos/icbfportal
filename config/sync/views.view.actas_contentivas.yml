@@ -357,8 +357,8 @@ display:
       exposed_form:
         type: bef
         options:
-          submit_button: Aplicar
-          reset_button: false
+          submit_button: Consultar
+          reset_button: true
           reset_button_label: Restablecer
           exposed_sorts_label: 'Ordenar por'
           expose_sort_order: true
@@ -378,6 +378,31 @@ display:
               secondary_label: 'Opciones avanzadas'
               secondary_open: false
               reset_button_always_show: false
+            sort:
+              plugin_id: default
+              advanced:
+                combine: false
+                combine_rewrite: ''
+                reset: false
+                reset_label: ''
+                collapsible: false
+                collapsible_label: 'Opciones de ordenación'
+                is_secondary: false
+            filter:
+              field_date_value:
+                plugin_id: default
+                advanced:
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+                  hide_label: false
+              field_date_value_1:
+                plugin_id: default
+                advanced:
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+                  hide_label: false
       access:
         type: none
         options: {  }

@@ -226,28 +226,24 @@ class PanelizerMigrationService {
     $position = [];
     foreach ($panels_display as $item) {
       $layout_settings = unserialize($item->layout_settings);
-      if ($layout_settings['items'][$panel_name]['parent'] == 'main') {
-        $position = [
-          'panel_name' => $panel_name,
-          'section_name' => $panel_name,
-        ];
-        break;
-      }
-      else {
-        $parent_name = $layout_settings['items'][$panel_name]['parent'];
-        if ($layout_settings['items'][$parent_name]['parent'] == 'main') {
-          $position = $parent_name;
+
+      if ($layout_settings) {
+        if ($layout_settings['items'][$panel_name]['parent'] == 'main') {
           $position = [
             'panel_name' => $panel_name,
-            'section_name' => $parent_name,
+            'section_name' => $panel_name,
           ];
           break;
         }
         else {
-          $position = ['panel_name' => $parent_name];
-          $parent_name = $layout_settings['items'][$parent_name]['parent'];
+          $parent_name = $layout_settings['items'][$panel_name]['parent'];
           if ($layout_settings['items'][$parent_name]['parent'] == 'main') {
-            $position['section_name'] = $parent_name;
+            $position = $parent_name;
+            $position = [
+              'panel_name' => $panel_name,
+              'section_name' => $parent_name,
+            ];
+            break;
           }
           else {
             $position = ['panel_name' => $parent_name];
@@ -255,8 +251,23 @@ class PanelizerMigrationService {
             if ($layout_settings['items'][$parent_name]['parent'] == 'main') {
               $position['section_name'] = $parent_name;
             }
+            else {
+              $position = ['panel_name' => $parent_name];
+              $parent_name = $layout_settings['items'][$parent_name]['parent'];
+              if ($layout_settings['items'][$parent_name]['parent'] == 'main') {
+                $position['section_name'] = $parent_name;
+              }
+            }
           }
         }
+      }
+      else {
+        // If the layout settings are not available, we assume the panel is in
+        // the main section.
+        $position = [
+          'panel_name' => $panel_name,
+          'section_name' => 'main-row',
+        ];
       }
     }
 
@@ -334,6 +345,14 @@ class PanelizerMigrationService {
     }
     if ($view_id == 'curriculum_vitae' && $display_id == 'block_2') {
       $view_id = 'curriculum_vitae_sapi';
+    }
+    if ($view_id == 'notifications_pc' && $display_id == 'block') {
+      $view_id = 'notifications_pc_sapi';
+    }
+    if ($view_id == 'documents') {
+      if ($display_id == 'block' || $display_id == 'block_9' || $display_id == 'block_10') {
+        $view_id = 'documents_sapi';
+      }
     }
 
     $view = View::load($view_id);
