@@ -1,0 +1,47 @@
+uuid: a6471fd4-39e2-4612-8317-ce8eb8978569
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.actas_contentivas
+  module:
+    - system
+    - views
+label: searchapi
+name: actas_contentivas
+group: null
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: 60aea893-1011-4d58-bbaf-034c5c846e85
+    context_mapping: {  }
+    pages: /taxonomy/term/1244
+reactions:
+  blocks:
+    id: blocks
+    uuid: 9b3c3ba5-3e16-4444-8edd-1767782bc414
+    blocks:
+      cdb139ef-311f-41f0-ad3b-6c2e8269e1a6:
+        uuid: cdb139ef-311f-41f0-ad3b-6c2e8269e1a6
+        id: 'views_block:actas_contentivas-block'
+        label: ''
+        provider: views
+        label_display: '0'
+        region: content
+        weight: '0'
+        custom_id: views_block_actas_contentivas_block
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: actas_contentivas
+        context_mapping: {  }
+        views_label: ''
+        items_per_page: none
+        third_party_settings: {  }
+    include_default_blocks: 0
+    saved: false
+weight: 0
