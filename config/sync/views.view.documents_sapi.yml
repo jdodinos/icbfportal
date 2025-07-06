@@ -2496,7 +2496,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: Fecha
+            label: 'Filtrar por Fecha de Publicación'
             description: ''
             use_operator: false
             operator: ''
@@ -2508,6 +2508,7 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+              0: '0'
               anonymous: '0'
               administrador_funcional: '0'
               content_editor: '0'
