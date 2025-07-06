@@ -9,6 +9,139 @@
 }
 
 
+.page-aseguramiento-la-calidad-1 {
+    .view-documents {
+        width: 85%;
+        margin: auto;
+
+        @media (max-width: var.$media_tablet) {
+            width: 100%;
+        }
+    }
+}
+
+
+.page-cartelera-virtual-icbf {
+
+    .field--label-above,
+    .field--type-entity-reference {
+        display: none;
+    }
+}
+
+
+.page-atencion-y-servicios-ciudadania-carta-trato-digno-ciudadania {
+    hr {
+        margin: 1rem auto;
+        opacity: inherit;
+        border-top: 2px solid #006ba5 !important;
+    }
+}
+
+.page-atencion-y-servicios-ciudadania-carta-trato-digno-ciudadania {
+    hr {
+        margin: 1rem auto;
+        opacity: inherit;
+        border-top: 2px solid #006ba5 !important;
+    }
+}
+
+.page-aseguramiento-la-calidad-licencias-de-funcionamiento-0 {
+    .view-filters {
+        margin-top: 2.5rem;
+        width: 25%;
+        float: left;
+
+        input.form-text {
+            font-size: 14px;
+            font-family: var.$font-montserrat-regular;
+        }
+
+        select.form-select {
+            font-family: var.$font-montserrat-regular;
+            font-size: 13px;
+        }
+
+        label {
+            cursor: pointer;
+        }
+
+        .js-form-type-select.form-type-select,
+        .js-form-type-textfield {
+            width: 90%;
+            margin: 0.5rem;
+
+            label {
+                font-family: var.$font-montserrat-regular;
+                color: #555;
+                font-weight: 500;
+            }
+        }
+
+        .fieldgroup {
+            font-family: var.$font-montserrat-regular;
+            width: 90%;
+            margin: 0.5rem;
+        }
+
+        span.fieldset-legend {
+            font-family: var.$font-montserrat-regular;
+            color: #555;
+            font-weight: 500;
+        }
+
+
+        table {
+            width: 75%;
+            float: left;
+
+            thead th {
+                color: #555 !important;
+                font-family: var.$font-montserrat-regular;
+            }
+
+            tbody {
+                font-family: var.$font-montserrat-regular;
+                font-size: 14px;
+
+                td {
+                    color: #555;
+                }
+            }
+        }
+
+        .form-radios {
+            margin-left: 1rem;
+
+            label {
+                color: #1996d0;
+                font-family: var.$font-montserrat-regular !important;
+                font-weight: 400 !important;
+            }
+
+            .js-form-item.form-item.js-form-type-radio.form-type-radio {
+                margin: 0.5rem 0;
+                font-size: 13px;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: #1996d0;
+                    cursor: pointer;
+                }
+            }
+
+        }
+
+        legend {
+            border-bottom: 0px solid #e5e5e5 !important;
+
+            span {
+                font-family: 'montserrat';
+                color: #555;
+            }
+        }
+    }
+}
 
 .page-transparencia-y-acceso-informacion-publica {
     h1.page-header {
@@ -43,8 +176,41 @@
     }
 }
 
+.page-programas-y-estrategias {
+    .az-element.az-row.row.back-container.az-row--sm.az-row--equal-height {
+        margin: auto;
+    }
+
+    span.file.file--mime-application-pdf.file--application-pdf {
+        display: flex;
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        white-space: normal;
+    }
+
+    .file {
+        background-position: left top !important;
+    }
+}
+
 
 .page-programas-y-estrategias-nutricion {
+
+    .block-field-blocktaxonomy-termsecctionsfield-docs {
+        display: none;
+    }
+
+    .az-ctnr.container {
+        z-index: 0;
+        position: relative;
+    }
+
+    .view-id-articulos_secciones {
+        z-index: 2;
+        position: relative;
+    }
+
     .page-header {
         display: none;
     }

@@ -82,3 +82,99 @@ h3 {
   font-style: normal;
   font-weight: normal;
 }
+
+// css -> tabla de estilos
+
+.view-filters {
+  margin-top: 2.5rem;
+  width: 25%;
+  float: left;
+
+  input.form-text {
+    font-size: 14px;
+    font-family: 'montserrat';
+  }
+
+  select.form-select {
+    font-family: 'montserrat';
+    font-size: 13px;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  .js-form-type-select.form-type-select,
+  .js-form-type-textfield {
+    width: 90%;
+    margin: 0.5rem;
+
+    label {
+      font-family: 'montserrat';
+      color: #555;
+      font-weight: 500;
+    }
+  }
+
+  .fieldgroup {
+    font-family: "Montserrat-regular";
+    width: 90%;
+    margin: 0.5rem;
+  }
+
+  span.fieldset-legend {
+    font-family: "Montserrat";
+    color: #555;
+    font-weight: 500;
+  }
+}
+
+table {
+  width: 75%;
+  float: left;
+
+  thead th {
+    color: #555 !important;
+    font-family: 'montserrat';
+  }
+
+  tbody {
+    font-family: 'montserrat';
+    font-size: 14px;
+
+    td {
+      color: #555;
+    }
+  }
+}
+
+.form-radios {
+  margin-left: 1rem;
+
+  label {
+    color: #1996d0;
+    font-family: 'montserrat' !important;
+    font-weight: 400;
+  }
+
+  .js-form-item.form-item.js-form-type-radio.form-type-radio {
+    margin: 0.5rem 0;
+    font-size: 13px;
+
+    &:hover {
+      text-decoration: underline;
+      color: #1996d0;
+      cursor: pointer;
+    }
+  }
+
+}
+
+legend {
+  border-bottom: 0px solid #e5e5e5 !important;
+
+  span {
+    font-family: 'montserrat';
+    color: #555;
+  }
+}
