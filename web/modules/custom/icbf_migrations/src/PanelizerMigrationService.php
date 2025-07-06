@@ -350,9 +350,15 @@ class PanelizerMigrationService {
       $view_id = 'notifications_pc_sapi';
     }
     if ($view_id == 'documents') {
-      if ($display_id == 'block' || $display_id == 'block_9' || $display_id == 'block_10') {
+      if ($display_id == 'block' || $display_id == 'block_9' || $display_id == 'block_10' || $display_id == 'block_11') {
         $view_id = 'documents_sapi';
       }
+    }
+    if ($view_id == 'right_of_petition' && $display_id == 'block_vista5dias') {
+      $view_id = 'right_of_petition_sapi';
+    }
+    if ($view_id == 'documentos_servicios' && $display_id == 'block_5') {
+      $view_id = 'documentos_servicios_sapi';
     }
 
     $view = View::load($view_id);
