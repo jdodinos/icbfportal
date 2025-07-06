@@ -333,6 +333,13 @@ table {
 
 .page-mensaje-confirmacion-whatsapp {
 
+    .layout.layout--onecol {
+        margin: 2rem 0;
+    }
+
+    .az-element.az-ctnr.az-column.col-sm-12 {
+        padding: 0;
+    }
 
     #block-page-title-block {
         display: none;
