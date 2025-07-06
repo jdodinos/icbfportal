@@ -8,6 +8,56 @@
     border-bottom: 1px solid #eee;
 }
 
+.page-informacion-juridica-informe-trimestral-de-procesos-judiciales {
+
+    .az-element .az-text a {
+        font-size: 1.2em;
+        font-family: 'Asap-Regular';
+    }
+
+    .view-filters {
+        margin-top: 0;
+    }
+
+    li.list-group-item {
+        padding: 10px 15px;
+        background-color: #fff;
+        border: solid #ddd;
+        border-width: 1px;
+    }
+
+    span.field-content a {
+        font-size: 14px;
+        font-family: 'Montserrat-Regular';
+    }
+
+}
+
+.page-informacion-juridica-notificaciones-y-otras-publicaciones {
+    .table {
+        margin-top: 2.5em;
+        width: 75%;
+
+        @media (max-width: var.$media_tablet) {
+            width: 100%;
+        }
+    }
+}
+
+.page-informacion-juridica-informe-trimestral-de-procesos-judiciales {
+
+    .view-filters {
+        margin-top: 0;
+    }
+
+    li.list-group-item {
+        position: relative;
+        margin-bottom: -1px;
+        background-color: #fff;
+        padding: 10px 15px;
+        border: 2px solid #ddd;
+    }
+}
 
 .page-aseguramiento-la-calidad-1 {
     .view-documents {
