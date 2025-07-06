@@ -52,6 +52,37 @@ third_party_settings:
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
+          4e286ba3-4165-4a8d-b277-84dab98cc6a7:
+            uuid: 4e286ba3-4165-4a8d-b277-84dab98cc6a7
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:locations:description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          8d61d17a-2361-4864-8652-6488762ce022:
+            uuid: 8d61d17a-2361-4864-8652-6488762ce022
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:locations:field_location_root'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
         third_party_settings: {  }
   panelizer:
     enable: false
