@@ -26,42 +26,48 @@
                 justify-content: center;
                 flex-wrap: wrap;
             }
-        }
-
-        /*bloque - alineacion de imagenes*/
-        .az-ctnr{
-            display: flex;
-            #hgepm7aq{
+            /*bloque - alineacion de imagenes*/
+            .clearfix  #c0yykzfk .az-ctnr{
                 display: flex;
-                .owl-carousel{
-                    display: flex !important;
-                    .owl-wrapper-outer{
-                        display: flex;
-                        .owl-wrapper{
-                            width: 226px !important;
+                #hgepm7aq{
+                    display: flex;
+                    .owl-carousel{
+                        display: flex !important;
+                        .owl-wrapper-outer{
+                            display: flex;
+                            .owl-wrapper{
+                                width: 226px !important;
+                            }
                         }
                     }
+        
                 }
-    
             }
         }
+
+        
 
 
 
         /**/
-        .layout .layout__region--content .block:first-child .clearfix{
+        .block-block-content1ccf4938-7d27-40c0-aaa5-fe1ccbed9da6:first-child .clearfix{
             display: flex;
             flex-wrap: wrap; /*cuando este en pantallas celular bajar los elementos de forma vertical*/
             
-            > .az-element:first-child{
+            > .az-row:first-child{
                 flex: 1 1 42%;
                 width: 100%;
                 min-width: 42%;
                 margin-bottom: 12px;
 
-                > .az-element:first-child{
+                > .az-ctnr:first-child{
+                    display: block;
                     width: 100%;
                 }
+            }
+
+            .az-ctnr:first-child{
+                display: block;
             }
         }
 
