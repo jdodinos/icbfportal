@@ -28,6 +28,46 @@
             }
         }
 
+        /*bloque - alineacion de imagenes*/
+        .az-ctnr{
+            display: flex;
+            #hgepm7aq{
+                display: flex;
+                .owl-carousel{
+                    display: flex !important;
+                    .owl-wrapper-outer{
+                        display: flex;
+                        .owl-wrapper{
+                            width: 226px !important;
+                        }
+                    }
+                }
+    
+            }
+        }
+
+
+
+        /**/
+        .layout .layout__region--content .block:first-child .clearfix{
+            display: flex;
+            flex-wrap: wrap; /*cuando este en pantallas celular bajar los elementos de forma vertical*/
+            
+            > .az-element:first-child{
+                flex: 1 1 42%;
+                width: 100%;
+                min-width: 42%;
+                margin-bottom: 12px;
+
+                > .az-element:first-child{
+                    width: 100%;
+                }
+            }
+        }
+
+
+
+
         .view-display-id-block_agenda21 {
             .view-content {
                 margin: 0 0 14px;
@@ -72,6 +112,7 @@
                 padding: .3em .7em;
                 position: absolute;
                 text-align: right;
+                margin-left: 7%;
 
                 a {
                     color: #0073ff;
