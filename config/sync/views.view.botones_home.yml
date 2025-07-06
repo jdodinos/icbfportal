@@ -15,7 +15,6 @@ dependencies:
     - image
     - node
     - options
-    - slick_views
     - taxonomy
     - text
     - user
@@ -1411,48 +1410,11 @@ display:
         groups:
           1: AND
       style:
-        type: slick
+        type: default
         options:
-          caption:
-            field_enlace: '0'
-            edit_node: '0'
-            field_btn_bann_image: '0'
-            field_btn_listnumber: '0'
-            title: '0'
-            nothing: '0'
-          optionset: default
-          class: ''
-          image: field_btn_bann_image
-          link: ''
-          overlay: ''
-          title: ''
-          vanilla: true
-          layout: ''
-          cache: 0
-          admin_uri: '/admin/structure/views/ajax/display/botones_home/block_btnx5/style_options?_wrapper_format=drupal_ajax'
-          grid: ''
-          grid_medium: ''
-          grid_small: ''
-          style: ''
-          skin: boxed-carousel
-          overridables:
-            arrows: '0'
-            autoplay: '0'
-            dots: '0'
-            draggable: '0'
-            infinite: '0'
-            mouseWheel: '0'
-            randomize: '0'
-            variableWidth: '0'
-          thumbnail: ''
-          optionset_thumbnail: ''
-          skin_thumbnail: ''
-          thumbnail_caption: ''
-          thumbnail_effect: ''
-          thumbnail_position: ''
-          override: false
-          preserve_keys: false
-          visible_items: null
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
       row:
         type: fields
         options: {  }
