@@ -11,9 +11,13 @@ dependencies:
     - taxonomy.vocabulary.tipos_de_ubicaci_n
   content:
     - 'taxonomy_term:tipos_de_ubicaci_n:2c1072a1-9ee6-4d01-a5db-0b42d18605c7'
+    - 'taxonomy_term:tipos_de_ubicaci_n:2dc2e05d-9dc4-43ad-af91-e25890e36f2b'
+    - 'taxonomy_term:tipos_de_ubicaci_n:6892dc9f-c9e9-42f9-976b-a06158b30caa'
+    - 'taxonomy_term:tipos_de_ubicaci_n:d46b1903-55de-461f-91ae-8e2573ad8595'
     - 'taxonomy_term:tipos_de_ubicaci_n:db023ae9-d34b-4dd4-9422-2c90c4f1fc31'
     - 'taxonomy_term:tipos_de_ubicaci_n:eb4b3597-ab4b-416d-8bd1-8a27f419ef27'
     - 'taxonomy_term:tipos_de_ubicaci_n:f73f1e27-ad56-4235-b8c0-fdba5c9e2659'
+    - 'taxonomy_term:tipos_de_ubicaci_n:f92e5a36-f459-404c-89f0-ecd0ee504322'
   module:
     - better_exposed_filters
     - image
@@ -654,8 +658,8 @@ display:
             group_items: {  }
           reduce_duplicates: false
           vid: tipos_de_ubicaci_n
-          type: shs
-          hierarchy: false
+          type: select
+          hierarchy: true
           limit: true
           error_message: true
       style:
@@ -844,7 +848,7 @@ display:
             offset_label: Desplazamiento
           views_infinite_scroll:
             button_text: 'Cargar más'
-            automatically_load_content: false
+            automatically_load_content: true
             initially_load_all_pages: false
       arguments:
         field_location_root_target_id:
@@ -881,6 +885,73 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        field_place_type_target_id:
+          id: field_place_type_target_id
+          table: node__field_place_type
+          field: field_place_type_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            6947: 6947
+            7556: 7556
+            6946: 6946
+            6948: 6948
+            6953: 6953
+            6950: 6950
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: tipos_de_ubicaci_n
+          type: select
+          hierarchy: true
+          limit: true
+          error_message: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
         type: html_list
         options:
@@ -895,11 +966,15 @@ display:
         options: {  }
       defaults:
         title: false
+        use_ajax: false
         pager: false
         style: false
         row: false
         fields: false
         arguments: false
+        filters: false
+        filter_groups: false
+      use_ajax: true
       display_description: ''
       display_extenders:
         metatag_display_extender:
@@ -1423,7 +1498,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"local-box\">\r\n\r\n  <div class=\"local-photo\">{{ field_list_image }}</div>\r\n  <a class=\"local-czbtn\" href=\"{{ view_node }}\"\r\n    alt=\"clic para ampliar información del punto de atención\"><span\r\n      class=\"fa fa-arrowfor\"></span></a>\r\n  <h3 class=\"local-id\">{{ title }}</h3>\r\n\r\n  <div class=\"local-box-line\"></div>\r\n\r\n  <div class=\"local-ref\">\r\n    <div><span class=\"fa fa-clocko\"></span> Horario de Atención:</div>\r\n    <div class=\"local-col2\">{{ field_working_hours }}</div>\r\n  </div>\r\n\r\n  <div class=\"local-ref\">\r\n    <div><span class=\"fa fa-tphone\"></span> Teléfonos:</div>\r\n    <div class=\"local-col2\">{{ field_phone }}</div>\r\n  </div>\r\n\r\n  <div class=\"local-ref\">\r\n    <div><span class=\"fa fa-pin\"></span> Dirección:</div>\r\n    <div class=\"local-col2\">{{ field_addres_local_offices }}</div>\r\n  </div>\r\n</div> "
+            text: "<div class=\"local-box\">\r\n\r\n<div class=\"local-photo\">{{ field_list_image }}</div>\r\n <a class=\"local-czbtn\" href=\"{{ view_node }}\" alt=\"clic para ampliar información del punto de atención\"><span class=\"fa fa-arrowfor\"></span></a>\r\n<h3 class=\"local-id\">{{ title }}</h3>\r\n\r\n<div class=\"local-box-line\"></div>\r\n\r\n<div class=\"local-ref\">\r\n    <div><span class=\"fa fa-clocko\"></span> Horario de Atención:</div>\r\n    <div class=\"local-col2\">{{ field_working_hours }}</div>\r\n</div>\r\n\r\n<div class=\"local-ref\">\r\n    <div><span class=\"fa fa-tphone\"></span> Teléfonos:</div>\r\n    <div class=\"local-col2\">{{ field_phone }}</div>\r\n</div>\r\n\r\n<div class=\"local-ref\">\r\n <div><span class=\"fa fa-pin\"></span>  Dirección:</div>\r\n <div class=\"local-col2\">{{ field_addres_local_offices }}</div>\r\n</div>\r\n\r\n</div> "
             make_link: false
             path: ''
             absolute: false
@@ -1460,6 +1535,30 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
+      exposed_form:
+        type: bef
+        options:
+          submit_button: Aplicar
+          reset_button: false
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Seleccione cualquier filtro y pulse Aplicar para ver los resultados'
+          text_input_required_format: full_html
+          bef:
+            general:
+              autosubmit: false
+              autosubmit_exclude_textfield: false
+              autosubmit_textfield_delay: 500
+              autosubmit_textfield_minimum_length: 3
+              autosubmit_hide: false
+              input_required: false
+              allow_secondary: false
+              secondary_label: 'Opciones avanzadas'
+              secondary_open: false
+              reset_button_always_show: false
       arguments:
         field_location_root_target_id:
           id: field_location_root_target_id
@@ -1495,9 +1594,102 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        field_place_type_target_id:
+          id: field_place_type_target_id
+          table: node__field_place_type
+          field: field_place_type_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            6947: 6947
+            7556: 7556
+            6946: 6946
+            6948: 6948
+            6953: 6953
+            6950: 6950
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: tipos_de_ubicaci_n
+          type: select
+          hierarchy: true
+          limit: true
+          error_message: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: col-sm-4
+          default_row_class: true
+      row:
+        type: fields
+        options: {  }
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: true
+          replica: false
+          query_tags: {  }
+          contextual_filters_or: false
       defaults:
+        query: false
+        use_ajax: false
+        exposed_form: false
+        style: false
+        row: false
         fields: false
         arguments: false
+        filters: false
+        filter_groups: false
+      use_ajax: true
       display_description: ''
       display_extenders:
         metatag_display_extender:
@@ -2192,12 +2384,23 @@ display:
         operator: AND
         groups:
           1: AND
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+      row:
+        type: fields
+        options: {  }
       defaults:
         access: false
         title: false
         use_ajax: false
         pager: false
         exposed_form: false
+        style: false
+        row: false
         fields: false
         arguments: false
         filters: false
