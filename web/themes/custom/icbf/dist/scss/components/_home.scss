@@ -26,7 +26,68 @@
                 justify-content: center;
                 flex-wrap: wrap;
             }
+            /*bloque - alineacion de imagenes*/
+            .clearfix  #c0yykzfk .az-ctnr{
+                display: flex;
+                #hgepm7aq{
+                    display: flex;
+                    .owl-carousel{
+                        display: flex !important;
+                        .owl-wrapper-outer{
+                            display: flex;
+                            .owl-wrapper{
+                                width: 226px !important;
+                            }
+                        }
+                    }
+        
+                }
+            }
         }
+
+        
+
+
+
+        /**/
+        .block-block-content1ccf4938-7d27-40c0-aaa5-fe1ccbed9da6:first-child .clearfix{
+            display: flex;
+            flex-wrap: wrap; /*cuando este en pantallas celular bajar los elementos de forma vertical*/
+            
+            > .az-row:first-child{
+                flex: 1 1 42%;
+                width: 100%;
+                min-width: 42%;
+                margin-bottom: 12px;
+
+                > .az-ctnr:first-child{
+                    display: block;
+                    width: 100%;
+                }
+            }
+
+            .az-ctnr:first-child{
+                display: block;
+            }
+        }
+
+
+        /**/
+        /*
+        .block-block-content3abef451-5926-498a-a45a-ab5cd18c203d{
+
+            width: 100%;
+            .clearfix{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+        }*/
+        
+
+
+
 
         .view-display-id-block_agenda21 {
             .view-content {
@@ -72,6 +133,7 @@
                 padding: .3em .7em;
                 position: absolute;
                 text-align: right;
+                margin-left: 7%;
 
                 a {
                     color: #0073ff;
