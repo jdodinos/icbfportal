@@ -328,18 +328,21 @@
         padding: 1.2em 0;
     }
 
-    span.field-content {
-        font-size: 18px;
-        padding: 1.2em 0;
-        font-weight: 500;
+    .views-field .views-field-title {
+        span.field-content {
+            font-size: 18px;
+            padding: 1.2em 0;
+            font-weight: 500;
+        }
     }
 
-    .h4 {
+    .h4 span {
         font-size: 18px;
     }
 
     span.field-content p {
         font-size: 14px;
+        font-family: var.$font-montserrat-regular;
     }
 
     .he-back-cleargrey {
