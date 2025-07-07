@@ -12,8 +12,8 @@ dependencies:
     - taxonomy.vocabulary.file_category
     - taxonomy.vocabulary.secctions
   content:
-    - 'taxonomy_term:file_category:190a0bcf-231b-4c81-bfd6-214ce9068cf7'
-    - 'taxonomy_term:file_category:49f832cf-b228-4f06-88be-2085872c4fc4'
+    - 'taxonomy_term:file_category:d0b9ee12-860a-4f7c-b41a-ac97595be82d'
+    - 'taxonomy_term:file_category:e1544022-bc0c-4cbd-b4f6-0af1d9d3cc3a'
   module:
     - datetime
     - file
@@ -678,6 +678,9 @@ display:
     position: 1
     display_options:
       enabled: true
+      defaults:
+        css_class: false
+      css_class: test-clase
       display_description: 'Link al documento (Archivo)'
       display_extenders:
         metatag_display_extender:
