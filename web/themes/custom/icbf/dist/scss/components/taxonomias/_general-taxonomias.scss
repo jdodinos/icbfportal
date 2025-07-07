@@ -8,11 +8,52 @@
     border-bottom: 1px solid #eee;
 }
 
+
+.page-id-8011 h1 {
+    border-bottom: 1px solid #e7e7e7 !important;
+}
+
+
+
+
 .page-informacion-juridica-informe-trimestral-de-procesos-judiciales {
+
+
+    nav.pager {
+        .pager__item.is-actiFe {
+            font-family: var.$font-montserrat-regular;
+            font-weight: 400;
+        }
+
+        .pager_item.pager_item--next a span {
+            font-size: 0;
+
+            &::before {
+                content: "Siguiente >";
+                font-size: 14px;
+            }
+        }
+
+        .pager_item.pager_item--previous a span {
+            font-size: 0;
+
+            &::before {
+                content: "< Anterior";
+                font-size: 14px;
+            }
+        }
+
+        .pager_item.pageritem--next a,
+        .pager_item--previous a {
+            height: 32px !important;
+        }
+    }
+
+
 
     .az-element .az-text a {
         font-size: 1.2em;
-        font-family: 'Asap-Regular';
+        font-family: var.$font-asap-regular;
     }
 
     .view-filters {
@@ -53,6 +94,11 @@
 
 
 .page-aseguramiento-la-calidad-1 {
+
+    .he_back-cleargrey {
+        margin-bottom: 2%;
+    }
+
     .view-documents {
         width: 85%;
         margin: auto;
@@ -90,6 +136,36 @@
 }
 
 .page-aseguramiento-la-calidad-licencias-de-funcionamiento-0 {
+
+    .pager {
+        position: relative;
+        top: -400px;
+        left: 38%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        width: fit-content;
+        margin: 0 auto;
+        z-index: 1;
+    }
+
+    table {
+        width: 75%;
+    }
+
+
+    @media (max-width: 768px) {
+        .pager {
+            top: 0;
+
+            left: 0;
+            transform: none;
+            width: 100%;
+            justify-content: center;
+            padding: 1rem 0;
+        }
+    }
+
     .view-filters {
         margin-top: 2.5rem;
         width: 25%;
@@ -263,11 +339,6 @@
     }
 }
 
-.page-aseguramiento-la-calidad-1 {
-    .he_back-cleargrey {
-        margin-bottom: 2%;
-    }
-}
 
 .page-programas-y-estrategias-direccion-snbf {
     .block-page-title-block {
