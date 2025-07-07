@@ -12,14 +12,17 @@ dependencies:
     - field.field.taxonomy_term.secctions.field_metatag
     - field.field.taxonomy_term.secctions.field_microsite_info_category
     - field.field.taxonomy_term.secctions.field_multimedia_complement
+    - field.field.taxonomy_term.secctions.field_path_class
     - field.field.taxonomy_term.secctions.field_priority
     - field.field.taxonomy_term.secctions.field_related_procedures
     - field.field.taxonomy_term.secctions.field_taxonomy_image
     - field.field.taxonomy_term.secctions.layout_builder__layout
+    - image.style.thumbnail
     - taxonomy.vocabulary.secctions
   module:
     - field_group
     - file
+    - image
     - metatag
     - path
     - term_reference_tree
@@ -28,9 +31,9 @@ third_party_settings:
   field_group:
     group_top_microsites:
       children:
-        - field_landings_top
         - name
         - description
+        - field_landings_top
       label: 'TOP sección'
       region: content
       parent_name: ''
@@ -47,9 +50,9 @@ third_party_settings:
       children:
         - field_content
         - field_docs
-        - field_multimedia_complement
-        - field_taxonomy_image
         - field_icon
+        - field_taxonomy_image
+        - field_multimedia_complement
       label: 'BODY sección'
       region: content
       parent_name: ''
@@ -64,13 +67,13 @@ third_party_settings:
         formatter: collapsible
     group_links_microsites:
       children:
+        - field_microsite_info_category
         - field_category_citizen
         - field_related_procedures
-        - field_microsite_info_category
       label: 'Relaciones de Sección'
       region: content
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: fieldset
       format_settings:
         classes: 'group-links-microsites field-group-fieldset'
@@ -83,12 +86,12 @@ third_party_settings:
       children:
         - field_priority
         - field_link_more_info
-        - metatags
         - path
+        - field_path_class
       label: 'Bottom sección'
       region: content
       parent_name: ''
-      weight: 13
+      weight: 5
       format_type: fieldset
       format_settings:
         classes: 'group-bottom-landings field-group-fieldset'
@@ -103,11 +106,11 @@ bundle: secctions
 mode: default
 content:
   description:
-    type: text_textfield
+    type: text_textarea
     weight: 0
     region: content
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
   field_category_citizen:
@@ -137,11 +140,12 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
   field_icon:
-    type: file_generic
+    type: image_image
     weight: 4
     region: content
     settings:
       progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
   field_landings_top:
     type: text_textarea
@@ -161,7 +165,7 @@ content:
     third_party_settings: {  }
   field_metatag:
     type: metatag_firehose
-    weight: 102
+    weight: 8
     region: content
     settings:
       sidebar: true
@@ -180,6 +184,14 @@ content:
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
+  field_path_class:
+    type: string_textfield
+    weight: 18
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_priority:
     type: number
     weight: 15
@@ -194,11 +206,12 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_taxonomy_image:
-    type: file_generic
+    type: image_image
     weight: 5
     region: content
     settings:
       progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
   langcode:
     type: language_select
@@ -208,7 +221,7 @@ content:
       include_locked: true
     third_party_settings: {  }
   menu:
-    weight: 10
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -222,13 +235,13 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 100
+    weight: 7
     region: content
     settings:
       display_label: true
