@@ -758,7 +758,7 @@ display:
         type: bef
         options:
           submit_button: Aplicar
-          reset_button: false
+          reset_button: true
           reset_button_label: Restablecer
           exposed_sorts_label: 'Ordenar por'
           expose_sort_order: true
@@ -1915,7 +1915,8 @@ display:
             group_items: {  }
           parse_mode: terms
           min_length: null
-          fields: {  }
+          fields:
+            - title
         facets_field_creation_date:
           id: facets_field_creation_date
           table: search_api_index_curriculum_vitae
