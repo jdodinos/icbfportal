@@ -1348,7 +1348,7 @@ display:
               1: {  }
               2: {  }
               3: {  }
-          parse_mode: direct
+          parse_mode: terms
           min_length: 3
           fields:
             - description
@@ -2424,7 +2424,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: search_api_fulltext
-          operator: or
+          operator: and
           value: ''
           group: 1
           exposed: true
@@ -2545,7 +2545,7 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          parse_mode: direct
+          parse_mode: terms
           min_length: 3
           fields:
             - filename
@@ -3620,7 +3620,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: search_api_fulltext
-          operator: or
+          operator: and
           value: ''
           group: 1
           exposed: true
