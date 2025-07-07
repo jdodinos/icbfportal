@@ -178,3 +178,19 @@ legend {
     color: #555;
   }
 }
+
+
+.pagination {
+  .page-link {
+    border-radius: 0 !important;
+  }
+
+  .page-item.pager_item--next a,
+  .page-item.pager_item--last a {
+    width: 105px;
+  }
+
+  li.page-item.disabled span {
+    height: 31px;
+  }
+}
