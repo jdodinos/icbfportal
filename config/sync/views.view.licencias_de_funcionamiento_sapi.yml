@@ -408,7 +408,7 @@ display:
         type: bef
         options:
           submit_button: Aplicar
-          reset_button: false
+          reset_button: true
           reset_button_label: Restablecer
           exposed_sorts_label: 'Ordenar por'
           expose_sort_order: true
@@ -433,6 +433,17 @@ display:
                 plugin_id: default
                 advanced:
                   placeholder_text: ''
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+                  hide_label: false
+              field_location:
+                plugin_id: default
+                advanced:
+                  sort_options: false
                   rewrite:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
