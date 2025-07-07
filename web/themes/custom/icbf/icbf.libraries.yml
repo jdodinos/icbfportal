@@ -8,6 +8,8 @@ main-styling:
     js/script.js: {}
   dependencies:
     - core/jquery
+    - core/drupal
+    - icbf/owl
 
 ninos-y-ninas:
   css:
@@ -18,3 +20,17 @@ ninos-y-ninas:
     js/ninos-y-ninas.js: {}
   dependencies:
     - core/jquery
+    - core/drupal
+    - icbf/owl
+
+owl:
+  css:
+    theme:
+      libraries/owl/owl.carousel.css: {}
+      libraries/owl/owl.theme.css: {}
+      libraries/owl/owl.transitions.css: {}
+  js:
+    libraries/owl/owl.carousel.js: {}
+  dependencies:
+    - core/jquery
+    - core/once

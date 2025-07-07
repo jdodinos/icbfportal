@@ -12,6 +12,7 @@ dependencies:
     - field.field.taxonomy_term.secctions.field_metatag
     - field.field.taxonomy_term.secctions.field_microsite_info_category
     - field.field.taxonomy_term.secctions.field_multimedia_complement
+    - field.field.taxonomy_term.secctions.field_path_class
     - field.field.taxonomy_term.secctions.field_priority
     - field.field.taxonomy_term.secctions.field_related_procedures
     - field.field.taxonomy_term.secctions.field_taxonomy_image
@@ -47,6 +48,22 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 2
             additional: {  }
+          74a58618-c0d7-42b5-a197-abee25565a0b:
+            uuid: 74a58618-c0d7-42b5-a197-abee25565a0b
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:secctions:field_path_class'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
         third_party_settings: {  }
   panelizer:
     enable: false
@@ -78,6 +95,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_path_class:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
   field_category_citizen: true
