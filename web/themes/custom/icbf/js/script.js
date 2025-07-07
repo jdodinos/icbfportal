@@ -1,7 +1,6 @@
 $ = jQuery;
 
 
-
 (function ($, Drupal) {
   Drupal.behaviors.icbfTheme = {
     attach: function (context, settings) {
@@ -25,7 +24,7 @@ $ = jQuery;
       $(".owl-carousel").owlCarousel({
         items: 1,
         singleItem: true,
-        itemsScaleUp : true,
+        itemsScaleUp: true,
         slideSpeed: 500,
         autoPlay: 5000,
         stopOnHover: true
@@ -33,4 +32,5 @@ $ = jQuery;
     }
   };
 })(jQuery, Drupal);
+
 
