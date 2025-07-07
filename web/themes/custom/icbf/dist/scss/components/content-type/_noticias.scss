@@ -143,6 +143,38 @@
             }
         }
     }
+
+
+    /*---STYLES - PAGINAS INTERNAS ---*/
+    
+    .view-display-id-block_7{
+
+        .field-content{
+            
+            .img-fluid {
+                max-width: 28%;/*para pantallas pequeñas*/
+                }
+            @media (min-width: 768px) {
+                .img-fluid {
+                    max-width: 60%;
+                }
+            }
+
+        }
+
+    }
+
+    /*alineación de elementos del bloque con titulo "Instituto Colombiano de Bienestar Familiar - ICBF Comunicaciones"*/
+    .block-views-blocknews-block-6{
+        .view-content{
+            strong{
+                display: block;
+            }
+        }
+    }
+
+
+
 }
 
 .page-noticias{
@@ -209,12 +241,12 @@
 
         .page-item:first-child{
             .page-link{
-                border-radius: 5px 0px 0px 5px;
+                border-radius: 5px 0px 0px 5px !important;
             }
         }
         .page-item:last-child{
             .page-link{
-                border-radius: 0px 5px 5px 0px;
+                border-radius: 0px 5px 5px 0px !important;
             }
         }
         
