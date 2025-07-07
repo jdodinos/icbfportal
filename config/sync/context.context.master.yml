@@ -34,6 +34,7 @@ conditions:
       taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
     bundles:
       congreso_xxii: congreso_xxii
+      programa_adopciones: programa_adopciones
 reactions:
   blocks:
     id: blocks
