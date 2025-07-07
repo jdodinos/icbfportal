@@ -383,3 +383,44 @@
         margin-bottom: 4rem;
     }
 }
+
+.page-ventanilla-tramites-y-servicios {
+  .view-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .view-content > .views-row {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 calc(33.333% - 16px);
+    max-width: calc(33.333% - 16px);
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 6px;
+    min-height: 400px;
+    overflow: hidden;
+  }
+
+  .vus-id {
+    padding: 0;
+  }
+
+  // 📱 Móviles (menos de 768px)
+  @media (max-width: 767px) {
+    .view-content > .views-row {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+
+  // 📱 Tablets (768px a 991px)
+  @media (min-width: 768px) and (max-width: 991px) {
+    .view-content > .views-row {
+      flex: 1 1 calc(50% - 16px);
+      max-width: calc(50% - 16px);
+    }
+  }
+}
