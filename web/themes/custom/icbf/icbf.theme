@@ -29,6 +29,16 @@ function icbf_preprocess_html(&$variables) {
       if ($param instanceof Term) {
         $vid = $param->vid->getString();
         $variables['attributes']['class'][] = 'page-taxonomy-' . $vid;
+        $variables['attributes']['class'][] = 'page-id-' . $param->id();
+
+        if ($param->hasField('field_path_class') && !$param->get('field_path_class')->isEmpty()) {
+          $raw_class = $param->field_path_class->value;
+          // Trim whitespace, convert to lowercase, and sanitize it as a valid CSS class.
+          $sanitized_class = Html::cleanCssIdentifier(strtolower(trim($raw_class)));
+
+          $variables['attributes']['class'][] = "page-{$sanitized_class}";
+          $variables['attributes']['class'][] = $sanitized_class;
+        }
       }
     }
   }
