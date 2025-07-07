@@ -1,15 +1,15 @@
-uuid: 0281629d-6051-4c46-8a89-59886cdb6197
+uuid: 9a88867b-006e-4aa9-98b0-8e10a13c22d6
 langcode: es
 status: true
 dependencies:
   config:
-    - field.storage.node.field_creation_date
-    - field.storage.node.field_document
+    - field.storage.node.field_announcement_id
+    - field.storage.node.field_announcement_label
+    - field.storage.node.field_attached_files
+    - field.storage.node.field_call_type
+    - field.storage.node.field_date
+    - field.storage.node.field_label_alert
     - field.storage.node.field_location
-    - field.storage.node.field_notification_type
-    - field.storage.node.field_process_code
-    - field.storage.node.field_receiver
-    - field.storage.node.field_resume
     - field.storage.node.field_section
     - search_api.server.database_local
   module:
@@ -64,37 +64,59 @@ third_party_settings:
         en: '0'
         es: '0'
       use_universal_collation: false
-id: notifications_pc
-name: 'Notificaciones SAPI'
+id: convocatorias
+name: 'Convocatorias SAPI'
 description: ''
 read_only: false
 field_settings:
-  fid:
-    label: 'Documento » Archivo » ID del archivo'
+  description:
+    label: 'Documentos » Descripción'
     datasource_id: 'entity:node'
-    property_path: 'field_document:entity:fid'
+    property_path: 'field_attached_files:description'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_attached_files
+  field_announcement_id:
+    label: 'Código de Convocatoria'
+    datasource_id: 'entity:node'
+    property_path: field_announcement_id
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_announcement_id
+  field_announcement_label:
+    label: 'Estado de Convocatoria'
+    datasource_id: 'entity:node'
+    property_path: field_announcement_label
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_announcement_label
+  field_call_type:
+    label: 'Tipo de Convocatoria'
+    datasource_id: 'entity:node'
+    property_path: field_call_type
     type: integer
     dependencies:
       config:
-        - field.storage.node.field_document
-      module:
-        - file
-  field_creation_date:
-    label: 'Fecha fijación'
+        - field.storage.node.field_call_type
+  field_date:
+    label: Fecha
     datasource_id: 'entity:node'
-    property_path: field_creation_date
+    property_path: field_date
     type: date
     dependencies:
       config:
-        - field.storage.node.field_creation_date
-  field_document:
-    label: Documento
+        - field.storage.node.field_date
+  field_label_alert:
+    label: 'Estado actual para Alerta'
     datasource_id: 'entity:node'
-    property_path: field_document
-    type: integer
+    property_path: field_label_alert
+    type: string
     dependencies:
       config:
-        - field.storage.node.field_document
+        - field.storage.node.field_label_alert
   field_location:
     label: Ubicación
     datasource_id: 'entity:node'
@@ -103,38 +125,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_location
-  field_notification_type:
-    label: 'Tipo de notificación'
-    datasource_id: 'entity:node'
-    property_path: field_notification_type
-    type: integer
-    dependencies:
-      config:
-        - field.storage.node.field_notification_type
-  field_process_code:
-    label: 'Código del proceso'
-    datasource_id: 'entity:node'
-    property_path: field_process_code
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_process_code
-  field_receiver:
-    label: Destinatario
-    datasource_id: 'entity:node'
-    property_path: field_receiver
-    type: text
-    dependencies:
-      config:
-        - field.storage.node.field_receiver
-  field_resume:
-    label: Descripción
-    datasource_id: 'entity:node'
-    property_path: field_resume
-    type: text
-    dependencies:
-      config:
-        - field.storage.node.field_resume
   field_section:
     label: Sección
     datasource_id: 'entity:node'
@@ -143,36 +133,24 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_section
-  filemime:
-    label: 'Documento » Archivo » Tipo MIME de archivo'
-    datasource_id: 'entity:node'
-    property_path: 'field_document:entity:filemime'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_document
-      module:
-        - file
   filename:
-    label: 'Documento » Archivo » Nombre de archivo'
+    label: 'Documentos » Archivo » Nombre de archivo'
     datasource_id: 'entity:node'
-    property_path: 'field_document:entity:filename'
-    type: string
+    property_path: 'field_attached_files:entity:filename'
+    type: text
     dependencies:
       config:
-        - field.storage.node.field_document
+        - field.storage.node.field_attached_files
       module:
         - file
-  filesize:
-    label: 'Documento » Archivo » Tamaño de archivo'
+  nid:
+    label: ID
     datasource_id: 'entity:node'
-    property_path: 'field_document:entity:filesize'
+    property_path: nid
     type: integer
     dependencies:
-      config:
-        - field.storage.node.field_document
       module:
-        - file
+        - node
   status:
     label: Publicado
     datasource_id: 'entity:node'
@@ -185,34 +163,16 @@ field_settings:
     label: Título
     datasource_id: 'entity:node'
     property_path: title
-    type: string
+    type: text
     dependencies:
       module:
         - node
-  type:
-    label: 'Tipo de contenido'
-    datasource_id: 'entity:node'
-    property_path: type
-    type: string
-    dependencies:
-      module:
-        - node
-  uri:
-    label: 'Documento » Archivo » URI'
-    datasource_id: 'entity:node'
-    property_path: 'field_document:entity:uri'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_document
-      module:
-        - file
 datasource_settings:
   'entity:node':
     bundles:
       default: false
       selected:
-        - notifications
+        - announcement
     languages:
       default: false
       selected:
@@ -229,14 +189,12 @@ processor_settings:
       preprocess_query: -10
     all_fields: false
     fields:
-      - field_process_code
-      - field_receiver
-      - field_resume
-      - filemime
+      - description
+      - field_announcement_id
+      - field_announcement_label
+      - field_label_alert
       - filename
       - title
-      - type
-      - uri
     ignorable: "['¿¡!?,.:;]"
     ignorable_classes:
       - Pc
@@ -252,14 +210,12 @@ processor_settings:
       preprocess_query: -20
     all_fields: false
     fields:
-      - field_process_code
-      - field_receiver
-      - field_resume
-      - filemime
+      - description
+      - field_announcement_id
+      - field_announcement_label
+      - field_label_alert
       - filename
       - title
-      - type
-      - uri
   language_with_fallback: {  }
   rendered_item: {  }
   solr_date_range:
