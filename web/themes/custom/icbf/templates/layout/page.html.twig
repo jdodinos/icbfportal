@@ -72,6 +72,12 @@
         <div id="main" class="{{ container }}">
           {{ page.featured_top }}
 
+          {% if page.pre_breadcrumb %}
+            <div class="pre-breadcrumb">
+              {{ page.pre_breadcrumb }}
+            </div>
+          {% endif %}
+
           {% if page.breadcrumb %}
             <div class="breadcrumb">
               <div class="breadcrumb-container">
@@ -80,6 +86,7 @@
               </div>
             </div>
           {% endif %}
+
 
           {% if page.feature %}
             <div class="featured">

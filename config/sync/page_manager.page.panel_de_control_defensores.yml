@@ -1,11 +1,11 @@
-uuid: 92c1b724-7eb9-499c-910d-5c58d2e5509c
+uuid: d582981c-8309-4b2c-b590-ed6f49047f49
 langcode: es
 status: true
 dependencies:
   module:
     - user
-id: panel_de_control_defensor
-label: 'Panel de Control Defensor'
+id: panel_de_control_defensores
+label: 'Panel de Control Defensores'
 description: ''
 use_admin_theme: false
 path: /citaciones/panel
@@ -17,6 +17,7 @@ access_conditions:
     context_mapping:
       user: '@user.current_user_context:current_user'
     roles:
+      administrador_funcional: administrador_funcional
       administrator: administrator
       administrador_icbf: administrador_icbf
       citaciones: citaciones
