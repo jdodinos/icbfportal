@@ -11,7 +11,7 @@ dependencies:
     - field.storage.node.field_receiver
     - field.storage.node.field_resume
     - field.storage.node.field_section
-    - search_api.server.database_local
+    - search_api.server.icbf
   module:
     - file
     - node
@@ -273,4 +273,4 @@ options:
   delete_on_fail: true
   index_directly: true
   track_changes_in_references: true
-server: database_local
+server: icbf

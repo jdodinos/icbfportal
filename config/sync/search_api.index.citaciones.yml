@@ -24,7 +24,7 @@ dependencies:
     - field.storage.paragraph.field_full_name
     - field.storage.paragraph.field_kinship
     - field.storage.paragraph.field_other_kinship
-    - search_api.server.database_local
+    - search_api.server.icbf
   module:
     - node
     - paragraphs
@@ -431,4 +431,4 @@ options:
   delete_on_fail: true
   index_directly: true
   track_changes_in_references: true
-server: database_local
+server: icbf
