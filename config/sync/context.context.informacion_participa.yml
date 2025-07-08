@@ -31,7 +31,7 @@ reactions:
         label: 'Menú Participa'
         provider: block_content
         label_display: '0'
-        region: feature
+        region: pre_breadcrumb
         weight: '0'
         custom_id: block_content_eb2b6982_a3f6_4d89_ad90_ce4d0e6bb16d
         theme: icbf
