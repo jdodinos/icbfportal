@@ -1,0 +1,182 @@
+uuid: 61494d53-fc36-4508-853c-27f5b4f17d2c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_creation_date
+    - field.storage.node.field_document
+    - field.storage.node.field_section
+    - field.storage.node.field_tipo_de_encargo
+    - field.storage.node.field_unpublish_date
+    - search_api.server.database_local
+  module:
+    - file
+    - node
+    - search_api_solr
+third_party_settings:
+  search_api_solr:
+    finalize: false
+    commit_before_finalize: false
+    commit_after_finalize: false
+    debug_finalize: false
+    highlighter:
+      maxAnalyzedChars: 51200
+      fragmenter: gap
+      usePhraseHighlighter: true
+      highlightMultiTerm: true
+      preserveMulti: false
+      regex:
+        slop: 0.5
+        pattern: blank
+        maxAnalyzedChars: 10000
+      highlight:
+        mergeContiguous: false
+        requireFieldMatch: false
+        snippets: 3
+        fragsize: 0
+    mlt:
+      mintf: 1
+      mindf: 1
+      maxdf: 0
+      maxdfpct: 0
+      minwl: 0
+      maxwl: 0
+      maxqt: 100
+      maxntp: 2000
+      boost: false
+      interestingTerms: none
+    term_modifiers:
+      slop: 3
+      fuzzy: 1
+      fuzzy_analyzer: true
+    advanced:
+      index_prefix: ''
+      collection: ''
+      timezone: ''
+    multilingual:
+      limit_to_content_language: false
+      include_language_independent: true
+      use_language_undefined_as_fallback_language: false
+      specific_languages:
+        en: '0'
+        es: '0'
+      use_universal_collation: false
+id: encargos_sapi
+name: 'Encargos SAPI'
+description: ''
+read_only: false
+field_settings:
+  fid:
+    label: 'Documento » Archivo » ID del archivo'
+    datasource_id: 'entity:node'
+    property_path: 'field_document:entity:fid'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_document
+      module:
+        - file
+  field_creation_date:
+    label: 'Fecha fijación'
+    datasource_id: 'entity:node'
+    property_path: field_creation_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_creation_date
+  field_document:
+    label: Documento
+    datasource_id: 'entity:node'
+    property_path: field_document
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_document
+  field_section:
+    label: Sección
+    datasource_id: 'entity:node'
+    property_path: field_section
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_section
+  field_tipo_de_encargo:
+    label: 'Tipo de encargo'
+    datasource_id: 'entity:node'
+    property_path: field_tipo_de_encargo
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_tipo_de_encargo
+  field_unpublish_date:
+    label: 'Fecha desfijación'
+    datasource_id: 'entity:node'
+    property_path: field_unpublish_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_unpublish_date
+  filename:
+    label: 'Documento » Archivo » Nombre de archivo'
+    datasource_id: 'entity:node'
+    property_path: 'field_document:entity:filename'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_document
+      module:
+        - file
+  nid:
+    label: ID
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+    dependencies:
+      module:
+        - node
+  title:
+    label: Título
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    dependencies:
+      module:
+        - node
+  uri:
+    label: 'Documento » Archivo » URI'
+    datasource_id: 'entity:node'
+    property_path: 'field_document:entity:uri'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_document
+      module:
+        - file
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - encargos
+    languages:
+      default: false
+      selected:
+        - es
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  auto_aggregated_fulltext_field: {  }
+  custom_value: {  }
+  entity_type: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+  solr_date_range: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  delete_on_fail: true
+  index_directly: true
+  track_changes_in_references: true
+server: database_local
