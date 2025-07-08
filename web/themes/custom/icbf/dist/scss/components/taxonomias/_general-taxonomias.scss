@@ -1,16 +1,16 @@
 @use "../../abstracts/variables" as var;
 
 .generic-title {
-    font-family: var.$Asap;
-    font-size: 1.7em;
-    padding-bottom: 9px;
-    margin: 40px 0 20px;
-    border-bottom: 1px solid #eee;
+  font-family: var.$Asap;
+  font-size: 1.7em;
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #eee;
 }
 
 
 .page-id-8011 h1 {
-    border-bottom: 1px solid #e7e7e7 !important;
+  border-bottom: 1px solid #e7e7e7 !important;
 }
 
 
@@ -19,75 +19,75 @@
 .page-informacion-juridica-informe-trimestral-de-procesos-judiciales {
 
 
-    nav.pager {
-        .pager__item.is-actiFe {
-            font-family: var.$font-montserrat-regular;
-            font-weight: 400;
-        }
-
-        .pager_item.pager_item--next a span {
-            font-size: 0;
-
-            &::before {
-                content: "Siguiente >";
-                font-size: 14px;
-            }
-        }
-
-        .pager_item.pager_item--previous a span {
-            font-size: 0;
-
-            &::before {
-                content: "< Anterior";
-                font-size: 14px;
-            }
-        }
-
-        .pager_item.pageritem--next a,
-        .pager_item--previous a {
-            height: 32px !important;
-        }
+  nav.pager {
+    .pager__item.is-actiFe {
+      font-family: var.$font-montserrat-regular;
+      font-weight: 400;
     }
 
+    .pager_item.pager_item--next a span {
+      font-size: 0;
 
-
-    .az-element .az-text a {
-        font-size: 1.2em;
-        font-family: var.$font-asap-regular;
-    }
-
-    .view-filters {
-        margin-top: 0;
-    }
-
-    li.list-group-item {
-        padding: 10px 15px;
-        background-color: #fff;
-        border: solid #ddd;
-        border-width: 1px;
-    }
-
-    span.field-content a {
+      &::before {
+        content: "Siguiente >";
         font-size: 14px;
-        font-family: var.$font-montserrat-regular;
+      }
     }
+
+    .pager_item.pager_item--previous a span {
+      font-size: 0;
+
+      &::before {
+        content: "< Anterior";
+        font-size: 14px;
+      }
+    }
+
+    .pager_item.pageritem--next a,
+    .pager_item--previous a {
+      height: 32px !important;
+    }
+  }
+
+
+
+  .az-element .az-text a {
+    font-size: 1.2em;
+    font-family: var.$font-asap-regular;
+  }
+
+  .view-filters {
+    margin-top: 0;
+  }
+
+  li.list-group-item {
+    padding: 10px 15px;
+    background-color: #fff;
+    border: solid #ddd;
+    border-width: 1px;
+  }
+
+  span.field-content a {
+    font-size: 14px;
+    font-family: var.$font-montserrat-regular;
+  }
 
 }
 
 .page-informacion-juridica-notificaciones-y-otras-publicaciones {
-    .table {
-        margin-top: 2.5em;
-        width: 75%;
+  .table {
+    margin-top: 2.5em;
+    width: 75%;
 
-        @media (max-width: var.$media_tablet) {
-            width: 100%;
-        }
+    @media (max-width: var.$media_tablet) {
+      width: 100%;
     }
+  }
 
-    span.field-content a {
-        font-size: 14px;
-        font-family: var.$font-montserrat-regular;
-    }
+  span.field-content a {
+    font-size: 14px;
+    font-family: var.$font-montserrat-regular;
+  }
 
 }
 
@@ -95,365 +95,392 @@
 
 .page-aseguramiento-la-calidad-1 {
 
-    .he_back-cleargrey {
-        margin-bottom: 2%;
-    }
+  .he_back-cleargrey {
+    margin-bottom: 2%;
+  }
 
-    .view-documents {
-        width: 85%;
-        margin: auto;
+  .view-documents {
+    width: 85%;
+    margin: auto;
 
-        @media (max-width: var.$media_tablet) {
-            width: 100%;
-        }
+    @media (max-width: var.$media_tablet) {
+      width: 100%;
     }
+  }
 }
 
 
 .page-cartelera-virtual-icbf {
 
-    .field--label-above,
-    .field--type-entity-reference {
-        display: none;
-    }
+  .field--label-above,
+  .field--type-entity-reference {
+    display: none;
+  }
 }
 
 
 .page-atencion-y-servicios-ciudadania-carta-trato-digno-ciudadania {
-    hr {
-        margin: 1rem auto;
-        opacity: inherit;
-        border-top: 2px solid #006ba5 !important;
-    }
+  hr {
+    margin: 1rem auto;
+    opacity: inherit;
+    border-top: 2px solid #006ba5 !important;
+  }
 }
 
 .page-atencion-y-servicios-ciudadania-carta-trato-digno-ciudadania {
-    hr {
-        margin: 1rem auto;
-        opacity: inherit;
-        border-top: 2px solid #006ba5 !important;
-    }
+  hr {
+    margin: 1rem auto;
+    opacity: inherit;
+    border-top: 2px solid #006ba5 !important;
+  }
 }
 
 
 
 .page-transparencia-y-acceso-informacion-publica {
-    h1.page-header {
-        display: none;
-    }
+  h1.page-header {
+    display: none;
+  }
 
-    .field--name-body .bar-line {
-        display: none;
-    }
+  .field--name-body .bar-line {
+    display: none;
+  }
 
-    .layout__region--first {
-        margin: 2rem 1rem;
-        width: 40%;
-    }
+  .layout__region--first {
+    margin: 2rem 1rem;
+    width: 40%;
+  }
 
-    .layout__region--second {
-        width: 60%;
-    }
+  .layout__region--second {
+    width: 60%;
+  }
 
-    .layout--unecol-section {
-        display: flex;
-        margin: 2rem auto;
+  .layout--unecol-section {
+    display: flex;
+    margin: 2rem auto;
 
-        @media(max-width: 910px) {
-            display: grid;
-        }
+    @media(max-width: 910px) {
+      display: grid;
     }
+  }
 
-    video {
-        width: 100% !important;
-        object-fit: cover !important;
-    }
+  video {
+    width: 100% !important;
+    object-fit: cover !important;
+  }
 }
 
 .page-programas-y-estrategias {
-    .az-element.az-row.row.back-container.az-row--sm.az-row--equal-height {
-        margin: auto;
-    }
+  .az-element.az-row.row.back-container.az-row--sm.az-row--equal-height {
+    margin: auto;
+  }
 
-    span.file.file--mime-application-pdf.file--application-pdf {
-        display: flex;
-        max-width: 100%;
-        overflow-wrap: break-word;
-        word-break: break-word;
-        white-space: normal;
-    }
+  span.file.file--mime-application-pdf.file--application-pdf {
+    display: flex;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+  }
 
-    .file {
-        background-position: left top !important;
-    }
+  .file {
+    background-position: left top !important;
+  }
 }
 
 
 .page-programas-y-estrategias-nutricion {
 
-    .block-field-blocktaxonomy-termsecctionsfield-docs {
-        display: none;
-    }
+  .block-field-blocktaxonomy-termsecctionsfield-docs {
+    display: none;
+  }
 
-    .az-ctnr.container {
-        z-index: 0;
-        position: relative;
-    }
+  .az-ctnr.container {
+    z-index: 0;
+    position: relative;
+  }
 
-    .view-id-articulos_secciones {
-        z-index: 2;
-        position: relative;
-    }
+  .view-id-articulos_secciones {
+    z-index: 2;
+    position: relative;
+  }
 
-    .page-header {
-        display: none;
-    }
+  .page-header {
+    display: none;
+  }
 
-    h1 {
-        border-bottom: 0px solid #eee;
-    }
+  h1 {
+    border-bottom: 0px solid #eee;
+  }
 }
 
 
 .page-programas-y-estrategias-direccion-snbf {
-    .block-page-title-block {
-        display: none;
-    }
+  .block-page-title-block {
+    display: none;
+  }
 }
 
 .page-gestion-humana-manual-de-funciones-0 {
 
-    .block-views.block-views-blockdocumentos-g-humana-block-7 h2 {
-        font-size: 1.2em;
-    }
+  .block-views.block-views-blockdocumentos-g-humana-block-7 h2 {
+    font-size: 1.2em;
+  }
 
 
-    .views-field.views-field-nid {
-        display: none;
-    }
+  .views-field.views-field-nid {
+    display: none;
+  }
 
-    h4 {
-        font-size: 1.2em;
-        font-family: 'Asap-Regular';
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
+  h4 {
+    font-size: 1.2em;
+    font-family: 'Asap-Regular';
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
 
-    li.list-group-item {
-        padding: 10px 15px;
-        background-color: #fff;
-        border: solid #ddd;
-        border-width: 1px 1px;
-    }
+  li.list-group-item {
+    padding: 10px 15px;
+    background-color: #fff;
+    border: solid #ddd;
+    border-width: 1px 1px;
+  }
 }
 
 
 .page-gestion-humana-convocatorias-cnsc {
 
-    .file {
-        padding-left: 0;
-    }
+  .file {
+    padding-left: 0;
+  }
 
-    .field--name-field-docs {
-        display: none;
-    }
+  .field--name-field-docs {
+    display: none;
+  }
 }
 
 .page-instituto {
 
-    .h3 span {
-        font-size: 24px;
-    }
+  .h3 span {
+    font-size: 24px;
+  }
 
-    .view-display-id-block_misvis {
-        padding: 1.5em;
-        background-color: #f7f7f7;
-    }
+  .view-display-id-block_misvis {
+    padding: 1.5em;
+    background-color: #f7f7f7;
+  }
 
-    .views-field.views-field-title {
-        padding: 1.2em 0;
-    }
+  .views-field.views-field-title {
+    padding: 1.2em 0;
+  }
 
-    .views-field .views-field-title {
-        span.field-content {
-            font-size: 18px;
-            padding: 1.2em 0;
-            font-weight: 500;
-        }
+  .views-field .views-field-title {
+    span.field-content {
+      font-size: 18px;
+      padding: 1.2em 0;
+      font-weight: 500;
     }
+  }
 
-    .h4 span {
-        font-size: 18px;
-    }
+  .h4 span {
+    font-size: 18px;
+  }
 
-    span.field-content p {
-        font-size: 14px;
-        font-family: var.$font-montserrat-regular;
-    }
+  span.field-content p {
+    font-size: 14px;
+    font-family: var.$font-montserrat-regular;
+  }
 
-    .he-back-cleargrey {
-        background-color: #f7f7f7;
-        display: inline-block;
-        margin: auto;
-        padding: 1.5em !important;
-    }
+  .he-back-cleargrey {
+    background-color: #f7f7f7;
+    display: inline-block;
+    margin: auto;
+    padding: 1.5em !important;
+  }
 }
 
 .page-programas-y-estrategias-proteccion-2023 {
-    .az-element .az-text h1 {
-        display: none;
-    }
+  .az-element .az-text h1 {
+    display: none;
+  }
 }
 
 .page-el-instituto-funcionarios-directivos-funcionarios-directivos-regionales,
 .page-el-instituto-funcionarios-directivos {
+  font-family: "Montserrat-regular";
+
+  h2 {
+    font-family: "Montserrat";
+    font-size: 18px;
+  }
+
+
+  .form-actions {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .view-content {
+    margin-bottom: 4rem;
+  }
+
+  .stpe-outlinebutton {
+    font-family: "Asap-Regular";
+    font-size: 14px;
+  }
+
+  .profile-mov.profiletip,
+  .cv-list-id {
     font-family: "Montserrat-regular";
+    color: #555;
+  }
 
-    h2 {
-        font-family: "Montserrat";
-        font-size: 18px;
-    }
+  span {
+    color: #555;
+  }
 
+  a:not([href]):not([class]),
+  a:not([href]):not([class]):hover {
+    color: #1996d0;
+  }
 
-    .form-actions {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
+  .block-field-blocktaxonomy-termsecctionsfield-content {
+    margin: 3rem auto;
+  }
 
-    .view-content {
-        margin-bottom: 4rem;
-    }
-
-    .stpe-outlinebutton {
-        font-family: "Asap-Regular";
-        font-size: 14px;
-    }
-
-    .profile-mov.profiletip,
-    .cv-list-id {
-        font-family: "Montserrat-regular";
-        color: #555;
-    }
-
-    span {
-        color: #555;
-    }
-
-    a:not([href]):not([class]),
-    a:not([href]):not([class]):hover {
-        color: #1996d0;
-    }
-
-    .block-field-blocktaxonomy-termsecctionsfield-content {
-        margin: 3rem auto;
-    }
-
-    .list-group-item+.list-group-item {
-        border-top-width: 1px;
-    }
+  .list-group-item+.list-group-item {
+    border-top-width: 1px;
+  }
 
 
-    .form--inline.clearfix {
-        display: flex;
-        align-items: end;
-        margin: 1rem auto 2rem auto;
-    }
+  .form--inline.clearfix {
+    display: flex;
+    align-items: end;
+    margin: 1rem auto 2rem auto;
+  }
 
-    input#edit-submit-persons {
-        width: 65px;
-        height: 30px;
-        margin-top: -3rem;
-        position: absolute;
-        font-size: 13px;
-        background: #31b0d5;
-        border: 1px solid #31b0d5;
-    }
+  input#edit-submit-persons {
+    width: 65px;
+    height: 30px;
+    margin-top: -3rem;
+    position: absolute;
+    font-size: 13px;
+    background: #31b0d5;
+    border: 1px solid #31b0d5;
+  }
 
-    .btn {
-        background: #31b0d5;
-        border: 1px solid #31b0d5;
-    }
+  .btn {
+    background: #31b0d5;
+    border: 1px solid #31b0d5;
+  }
 
-    li.list-group-item img {
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-    }
+  li.list-group-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
 }
 
 .page-estructura-organica-icbf {
-    .word-gral p {
-        font-size: 14px;
-    }
+  .word-gral p {
+    font-size: 14px;
+  }
 
-    .organic-chart {
-        margin-bottom: 4rem;
-    }
+  .organic-chart {
+    margin-bottom: 4rem;
+  }
 }
 
 .page-ventanilla-tramites-y-servicios {
-    .view-content {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: stretch;
-        gap: 16px;
+  .view-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .view-content > .views-row {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 calc(33.333% - 16px);
+    max-width: calc(33.333% - 16px);
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 6px;
+    min-height: 400px;
+    overflow: hidden;
+  }
+
+  .vus-id {
+    padding: 0;
+  }
+
+  // 📱 Móviles (menos de 768px)
+  @media (max-width: 767px) {
+    .view-content > .views-row {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+
+  // 📱 Tablets (768px a 991px)
+  @media (min-width: 768px) and (max-width: 991px) {
+    .view-content > .views-row {
+      flex: 1 1 calc(50% - 16px);
+      max-width: calc(50% - 16px);
+    }
+  }
+
+  .block-views-blockvus-block > h2,
+  .block-views-blockvus-block-sisnfo > h2 {
+    color: #6b6b6b;
+    display: block;
+    font-family: var(--font-montserrat-regular); // Si usas CSS variables
+    line-height: initial;
+    margin: auto;
+    padding: 1.2em 0;
+    word-break: break-word;
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+
+  .block-views-blockvus-block > div,
+  .block-views-blockvus-block-sisnfo > div {
+    color: #6b6b6b;
+  }
+
+  div [data-az-id="0t6xo7no"] {
+    margin-left: 9em!important;
+    margin-right: 12rem!important;
+  }
+
+  div [data-az-id="0t6xo7no"] ul{
+    padding-left: 4rem!important;
+  }
+
+  .block-block-content10c34486-0c32-4f30-ad34-5ef00f2081ce{
+    h3{
+      font-size: 1.2em;
     }
 
-    .view-content>.views-row {
-        display: flex;
-        flex-direction: column;
-        flex: 1 1 calc(33.333% - 16px);
-        max-width: calc(33.333% - 16px);
-        box-sizing: border-box;
-        background: #fff;
-        border-radius: 6px;
-        min-height: 400px;
-        overflow: hidden;
+    .az-ctnr{
+      margin-left: 7vw;
+      margin-right: 7vw;
     }
 
-    .vus-id {
-        padding: 0;
-    }
-
-    // 📱 Móviles (menos de 768px)
-    @media (max-width: 767px) {
-        .view-content>.views-row {
-            flex: 1 1 100%;
-            max-width: 100%;
+    .word-msintro{
+      ul{
+        padding-left: 40px ;
+      }
+      li {
+        max-width: 90%;/*para pantallas pequeñas*/
+      }
+      @media (min-width: 573px) {
+        li {
+          max-width: 80%;
         }
+      }
     }
-
-    // 📱 Tablets (768px a 991px)
-    @media (min-width: 768px) and (max-width: 991px) {
-        .view-content>.views-row {
-            flex: 1 1 calc(50% - 16px);
-            max-width: calc(50% - 16px);
-        }
-    }
-
-    .block-block-content10c34486-0c32-4f30-ad34-5ef00f2081ce{
-        h3{
-            font-size: 1.2em;
-        }
-
-        .az-ctnr{
-            margin-left: 7vw;
-            margin-right: 7vw;
-        }
-
-        .word-msintro{
-            ul{
-                padding-left: 40px ;
-            }
-            li {
-                max-width: 90%;/*para pantallas pequeñas*/
-            }
-            @media (min-width: 573px) {
-                li {
-                    max-width: 80%;
-                }
-            }
-        }
-    }
+  }
 
 }
