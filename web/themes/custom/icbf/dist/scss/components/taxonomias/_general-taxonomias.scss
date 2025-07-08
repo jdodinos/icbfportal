@@ -430,4 +430,30 @@
             max-width: calc(50% - 16px);
         }
     }
+
+    .block-block-content10c34486-0c32-4f30-ad34-5ef00f2081ce{
+        h3{
+            font-size: 1.2em;
+        }
+
+        .az-ctnr{
+            margin-left: 7vw;
+            margin-right: 7vw;
+        }
+
+        .word-msintro{
+            ul{
+                padding-left: 40px ;
+            }
+            li {
+                max-width: 90%;/*para pantallas pequeñas*/
+            }
+            @media (min-width: 573px) {
+                li {
+                    max-width: 80%;
+                }
+            }
+        }
+    }
+
 }
