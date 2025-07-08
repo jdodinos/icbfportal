@@ -14,6 +14,8 @@
 }
 
 
+
+
 .page-informacion-juridica-informe-trimestral-de-procesos-judiciales {
 
 
@@ -46,6 +48,7 @@
       height: 32px !important;
     }
   }
+
 
 
   .az-element .az-text a {
@@ -89,6 +92,7 @@
 }
 
 
+
 .page-aseguramiento-la-calidad-1 {
 
   .he_back-cleargrey {
@@ -130,6 +134,7 @@
     border-top: 2px solid #006ba5 !important;
   }
 }
+
 
 
 .page-transparencia-y-acceso-informacion-publica {
@@ -343,7 +348,7 @@
     margin: 3rem auto;
   }
 
-  .list-group-item + .list-group-item {
+  .list-group-item+.list-group-item {
     border-top-width: 1px;
   }
 
@@ -451,6 +456,31 @@
 
   div [data-az-id="0t6xo7no"] ul{
     padding-left: 4rem!important;
+  }
+
+  .block-block-content10c34486-0c32-4f30-ad34-5ef00f2081ce{
+    h3{
+      font-size: 1.2em;
+    }
+
+    .az-ctnr{
+      margin-left: 7vw;
+      margin-right: 7vw;
+    }
+
+    .word-msintro{
+      ul{
+        padding-left: 40px ;
+      }
+      li {
+        max-width: 90%;/*para pantallas pequeñas*/
+      }
+      @media (min-width: 573px) {
+        li {
+          max-width: 80%;
+        }
+      }
+    }
   }
 
 }
