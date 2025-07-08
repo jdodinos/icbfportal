@@ -3,12 +3,14 @@ langcode: es
 status: true
 dependencies:
   config:
+    - user.role.administrador_funcional
     - user.role.administrador_icbf
     - user.role.administrator
     - user.role.citaciones
     - user.role.defensor_de_familia
   module:
     - user
+    - views_bootstrap
 id: usuarios
 label: Usuarios
 module: views
@@ -88,6 +90,7 @@ display:
         type: role
         options:
           role:
+            administrador_funcional: administrador_funcional
             administrator: administrator
             administrador_icbf: administrador_icbf
             citaciones: citaciones
@@ -168,16 +171,16 @@ display:
           reduce_duplicates: false
           ui_name: ''
       style:
-        type: default
+        type: views_bootstrap_table
         options:
           grouping: {  }
           row_class: ''
           default_row_class: true
-          row_class_special: 1
           override: 1
           sticky: 1
           caption: ''
           summary: ''
+          description: ''
           columns:
             name: name
           info:
@@ -187,6 +190,7 @@ display:
               align: ''
               separator: ''
               empty_column: 0
+              responsive: ''
           default: '-1'
           empty_table: 0
           responsive: 0
