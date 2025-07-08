@@ -26,10 +26,16 @@
 
             &-lugar {
                 align-self: center;
-
-                >div,
-                .field__item {
-                    padding: 0;
+                /*formato de estilos para el fiel item de las paginas internas*/
+                >div{
+                    .field__item { 
+                        color: #258749;
+                        border-right: 0.5px solid #6c757d;
+                        padding-right: 3px;
+                    }
+                }
+                >div .field__item::after{
+                    content: ",";
                 }
             }
 
@@ -75,7 +81,16 @@
         }
 
         .field--name-field-resume{
+            padding-top: 15px;
+            border-top: 2px solid #6c757d42;
             margin: 0 0 1em;
+        }
+
+        .block-field-blocknodenewsfield-content{
+            .field__item{
+                padding-bottom: 10px;
+                border-bottom: 2px solid #6c757d42;
+            }
         }
 
 
@@ -150,13 +165,13 @@
     .view-display-id-block_7{
 
         .field-content{
-            
+
             .img-fluid {
-                max-width: 28%;/*para pantallas pequeñas*/
+                max-width: 88vw;/*para pantallas pequeñas*/
                 }
-            @media (min-width: 768px) {
+            @media (min-width: 573px) {
                 .img-fluid {
-                    max-width: 60%;
+                    max-width: 50vw;
                 }
             }
 
@@ -166,6 +181,7 @@
 
     /*alineación de elementos del bloque con titulo "Instituto Colombiano de Bienestar Familiar - ICBF Comunicaciones"*/
     .block-views-blocknews-block-6{
+        margin-top: 10px;
         .view-content{
             strong{
                 display: block;
@@ -176,6 +192,16 @@
 
 
 }
+
+/**/
+.node-type-news{
+    .block-page-title-block, #block-icbf-content .node__meta {
+        display: none;
+    }
+}
+
+
+
 
 .page-noticias{
 
