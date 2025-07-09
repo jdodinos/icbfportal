@@ -1,5 +1,8 @@
+@use "../../abstracts/variables" as var;
+
 .page-id-1249,
 .page-id-1250,
+.page-id-1245,
 .page-id-6904 {
     .view-filters {
         grid-row: 1 / span 2;
@@ -116,4 +119,45 @@
             margin: 0 4rem;
         }
     }
+}
+
+
+.page-id-6715,
+.page-id-6716 {
+
+
+    nav.pager {
+        .pager__item.is-actiFe {
+            font-family: var.$font-montserrat-regular;
+            font-weight: 400;
+        }
+
+        .pager__item.is-active {
+            font-weight: 400;
+        }
+
+        .pager_item.pager_item--next a span {
+            font-size: 0;
+
+            &::before {
+                content: "Siguiente >";
+                font-size: 14px;
+            }
+        }
+
+        .pager_item.pager_item--previous a span {
+            font-size: 0;
+
+            &::before {
+                content: "< Anterior";
+                font-size: 14px;
+            }
+        }
+
+        .pager_item.pageritem--next a,
+        .pager_item--previous a {
+            height: 32px !important;
+        }
+    }
+
 }
