@@ -14,14 +14,25 @@
 }
 
 
-
-general taxonomies .page-id-1211 {
+.page-id-1211 {
     .az-element.az-image.text-center {
         z-index: -1;
         position: unset;
     }
 
     .az-element {
+        position: unset;
+    }
+}
+
+
+.page-id-1211 {
+    .az-element {
+        position: unset !important;
+    }
+
+    .az-element.az-image.text-center {
+        z-index: -1;
         position: unset;
     }
 }
@@ -110,39 +121,6 @@ general taxonomies .page-id-1211 {
 
 
 .page-informacion-juridica-informe-trimestral-de-procesos-judiciales {
-
-
-    nav.pager {
-        .pager__item.is-actiFe {
-            font-family: var.$font-montserrat-regular;
-            font-weight: 400;
-        }
-
-        .pager_item.pager_item--next a span {
-            font-size: 0;
-
-            &::before {
-                content: "Siguiente >";
-                font-size: 14px;
-            }
-        }
-
-        .pager_item.pager_item--previous a span {
-            font-size: 0;
-
-            &::before {
-                content: "< Anterior";
-                font-size: 14px;
-            }
-        }
-
-        .pager_item.pageritem--next a,
-        .pager_item--previous a {
-            height: 32px !important;
-        }
-    }
-
-
 
     .az-element .az-text a {
         font-size: 1.2em;
