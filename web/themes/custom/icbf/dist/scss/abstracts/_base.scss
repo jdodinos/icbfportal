@@ -96,7 +96,7 @@ h3 {
   }
 
   select.form-select {
-    font-family: 'montserrat';
+    font-family: var.$font-montserrat-regular;
     font-size: 13px;
   }
 
@@ -129,7 +129,7 @@ h3 {
   }
 }
 
-table {
+.table {
   width: 75%;
   float: left;
 

@@ -19,7 +19,7 @@ conditions:
     negate: false
     uuid: a93d0b84-809d-4969-a622-87320b83a66d
     context_mapping: {  }
-    pages: "/participa/diagnostico-e-identificacion-de-problemas\r\n/participa/planeacion-y-presupuesto-participativo\r\n/participa/consulta-ciudadana\r\n/participa/colaboracion-e-innovacion\r\n/participa/control-social\r\n/participacion-para-el-diagnostico-e-identificacion-de-problemas"
+    pages: "/participa/diagnostico-e-identificacion-de-problemas\r\n/participa/planeacion-y-presupuesto-participativo\r\n/participa/consulta-ciudadana\r\n/participa/colaboracion-e-innovacion\r\n/participa/control-social\r\n/participacion-para-el-diagnostico-e-identificacion-de-problemas\r\n/node/152097\r\n/node/152269\r\n/node/152271\r\n/node/152276"
 reactions:
   blocks:
     id: blocks
@@ -31,7 +31,7 @@ reactions:
         label: 'Menú Participa'
         provider: block_content
         label_display: '0'
-        region: feature
+        region: pre_breadcrumb
         weight: '0'
         custom_id: block_content_eb2b6982_a3f6_4d89_ad90_ce4d0e6bb16d
         theme: icbf

@@ -360,6 +360,9 @@ class PanelizerMigrationService {
     if ($view_id == 'documentos_servicios' && $display_id == 'block_5') {
       $view_id = 'documentos_servicios_sapi';
     }
+    if ($view_id == 'vacancies' && $display_id == 'block_cpdr') {
+      $view_id = 'vacancies_sapi';
+    }
 
     $view = View::load($view_id);
     $messages = [];

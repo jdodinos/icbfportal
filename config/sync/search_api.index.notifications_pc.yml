@@ -11,7 +11,7 @@ dependencies:
     - field.storage.node.field_receiver
     - field.storage.node.field_resume
     - field.storage.node.field_section
-    - search_api.server.database_local
+    - search_api.server.icbf
   module:
     - file
     - node
@@ -123,7 +123,7 @@ field_settings:
     label: Destinatario
     datasource_id: 'entity:node'
     property_path: field_receiver
-    type: string
+    type: text
     dependencies:
       config:
         - field.storage.node.field_receiver
@@ -223,9 +223,48 @@ processor_settings:
   auto_aggregated_fulltext_field: {  }
   custom_value: {  }
   entity_type: {  }
+  ignore_character:
+    weights:
+      preprocess_index: -10
+      preprocess_query: -10
+    all_fields: false
+    fields:
+      - field_process_code
+      - field_receiver
+      - field_resume
+      - filemime
+      - filename
+      - title
+      - type
+      - uri
+    ignorable: "['¿¡!?,.:;]"
+    ignorable_classes:
+      - Pc
+      - Pd
+      - Pe
+      - Pf
+      - Pi
+      - Po
+      - Ps
+  ignorecase:
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+    all_fields: false
+    fields:
+      - field_process_code
+      - field_receiver
+      - field_resume
+      - filemime
+      - filename
+      - title
+      - type
+      - uri
   language_with_fallback: {  }
   rendered_item: {  }
-  solr_date_range: {  }
+  solr_date_range:
+    weights:
+      preprocess_index: 0
 tracker_settings:
   default:
     indexing_order: fifo
@@ -234,4 +273,4 @@ options:
   delete_on_fail: true
   index_directly: true
   track_changes_in_references: true
-server: database_local
+server: icbf

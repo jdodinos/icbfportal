@@ -71,6 +71,22 @@
             }
         }
 
+        /*Programas y Estrategias (mejora de presentación)*/
+        .block-block-content3abef451-5926-498a-a45a-ab5cd18c203d{
+            width: 100%;
+            
+            .clearfix{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                #o8mu6sng{
+                    margin: 0;
+                    position: initial;
+                }
+            }
+
+        }
 
 
 
@@ -135,4 +151,45 @@
 
     }
 
+
+    .site-footer{
+        .block-block-content9dd6a42d-0f4b-4989-86b7-6405bb91e534{
+            .field__item{
+                .back-container{
+                    .hspace{
+                        height: 13px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+
+/*PUNTOS DE ATENCIÓN - pagina interna del home*/
+.page-puntos-de-atencion-icbf-1{
+    .node__content{
+        .layout__region--second:first-child{
+            .block-views-blockpuntos-de-atencion-block-coberts{
+                display: flex;
+            }
+        }
+
+        .block-views-blockpuntos-de-atencion-block-drlist{
+
+            .local-list-right {
+                max-width: 88vw;/*para pantallas pequeñas*/
+            }
+            @media (min-width: 573px) {
+                .local-list-right {
+                    max-width: 40%;
+                }
+            }
+        }
+        
+    }
 }

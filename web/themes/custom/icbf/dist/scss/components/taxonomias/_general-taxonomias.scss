@@ -8,11 +8,145 @@
     border-bottom: 1px solid #eee;
 }
 
+
+.page-id-8011 h1 {
+    border-bottom: 1px solid #e7e7e7 !important;
+}
+
+
+
+general taxonomies .page-id-1211 {
+    .az-element.az-image.text-center {
+        z-index: -1;
+        position: unset;
+    }
+
+    .az-element {
+        position: unset;
+    }
+}
+
+.page-id-1232 {
+    .id-1519 h1 {
+        display: none;
+    }
+
+    .az-element.az-row.row.back-container.az-row--sm.az-row--equal-height {
+        margin: auto;
+    }
+
+    .slick.blazy.slick--view.slick--view--news.slick--view--news--default.slick--view--news-default-default.slick--skin--fullwidth.slick--optionset--news-outstanding.is-blazy.slick--initialized {
+        display: none;
+    }
+}
+
+
+.page-id-1244 {
+
+    #main {
+        max-width: 1115px;
+        margin: auto;
+    }
+
+    .view-filters .js-form-type-select.form-type-select label,
+    .view-filters .js-form-type-textfield label {
+
+        font-family: var.$font-asap-regular;
+        color: #555;
+        font-weight: 500;
+    }
+
+    .form--inline.clearfix {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+
+        @media (max-width: var.$media_tablet) {
+            flex-wrap: wrap;
+        }
+    }
+
+    .table {
+        width: 100%;
+
+        thead th {
+            color: #555 !important;
+            font-family: var.$font-asap-regular;
+        }
+
+        tbody {
+            font-family: var.$font-asap-regular;
+        }
+    }
+
+    .view-filters {
+        margin-bottom: 2.5rem;
+        width: 100%;
+    }
+
+    .view-filters label {
+        font-family: 'Asap-Regular';
+        font-weight: 400;
+    }
+
+    select.form-select {
+        font-family: var.$font-asap-regular;
+        font-size: 13px;
+    }
+
+    .view.view-actas-contentivas.view-id-actas_contentivas {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn {
+        font-family: var.$font-asap-regular;
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc;
+    }
+}
+
+
+
 .page-informacion-juridica-informe-trimestral-de-procesos-judiciales {
+
+
+    nav.pager {
+        .pager__item.is-actiFe {
+            font-family: var.$font-montserrat-regular;
+            font-weight: 400;
+        }
+
+        .pager_item.pager_item--next a span {
+            font-size: 0;
+
+            &::before {
+                content: "Siguiente >";
+                font-size: 14px;
+            }
+        }
+
+        .pager_item.pager_item--previous a span {
+            font-size: 0;
+
+            &::before {
+                content: "< Anterior";
+                font-size: 14px;
+            }
+        }
+
+        .pager_item.pageritem--next a,
+        .pager_item--previous a {
+            height: 32px !important;
+        }
+    }
+
+
 
     .az-element .az-text a {
         font-size: 1.2em;
-        font-family: 'Asap-Regular';
+        font-family: var.$font-asap-regular;
     }
 
     .view-filters {
@@ -52,7 +186,14 @@
 
 
 
+
+
 .page-aseguramiento-la-calidad-1 {
+
+    .he_back-cleargrey {
+        margin-bottom: 2%;
+    }
+
     .view-documents {
         width: 85%;
         margin: auto;
@@ -89,102 +230,7 @@
     }
 }
 
-.page-aseguramiento-la-calidad-licencias-de-funcionamiento-0 {
-    .view-filters {
-        margin-top: 2.5rem;
-        width: 25%;
-        float: left;
 
-        input.form-text {
-            font-size: 14px;
-            font-family: var.$font-montserrat-regular;
-        }
-
-        select.form-select {
-            font-family: var.$font-montserrat-regular;
-            font-size: 13px;
-        }
-
-        label {
-            cursor: pointer;
-        }
-
-        .js-form-type-select.form-type-select,
-        .js-form-type-textfield {
-            width: 90%;
-            margin: 0.5rem;
-
-            label {
-                font-family: var.$font-montserrat-regular;
-                color: #555;
-                font-weight: 500;
-            }
-        }
-
-        .fieldgroup {
-            font-family: var.$font-montserrat-regular;
-            width: 90%;
-            margin: 0.5rem;
-        }
-
-        span.fieldset-legend {
-            font-family: var.$font-montserrat-regular;
-            color: #555;
-            font-weight: 500;
-        }
-
-
-        table {
-            width: 75%;
-            float: left;
-
-            thead th {
-                color: #555 !important;
-                font-family: var.$font-montserrat-regular;
-            }
-
-            tbody {
-                font-family: var.$font-montserrat-regular;
-                font-size: 14px;
-
-                td {
-                    color: #555;
-                }
-            }
-        }
-
-        .form-radios {
-            margin-left: 1rem;
-
-            label {
-                color: #1996d0;
-                font-family: var.$font-montserrat-regular !important;
-                font-weight: 400 !important;
-            }
-
-            .js-form-item.form-item.js-form-type-radio.form-type-radio {
-                margin: 0.5rem 0;
-                font-size: 13px;
-
-                &:hover {
-                    text-decoration: underline;
-                    color: #1996d0;
-                    cursor: pointer;
-                }
-            }
-
-        }
-
-        legend {
-            border-bottom: 0px solid #e5e5e5 !important;
-
-            span {
-                font-family: var.$font-montserrat-regular;
-                color: #555;
-            }
-        }
-    }
-}
 
 .page-transparencia-y-acceso-informacion-publica {
     h1.page-header {
@@ -263,11 +309,6 @@
     }
 }
 
-.page-aseguramiento-la-calidad-1 {
-    .he_back-cleargrey {
-        margin-bottom: 2%;
-    }
-}
 
 .page-programas-y-estrategias-direccion-snbf {
     .block-page-title-block {
@@ -484,4 +525,60 @@
             max-width: calc(50% - 16px);
         }
     }
+
+    .block-views-blockvus-block>h2,
+    .block-views-blockvus-block-sisnfo>h2 {
+        color: #6b6b6b;
+        display: block;
+        font-family: var(--font-montserrat-regular); // Si usas CSS variables
+        line-height: initial;
+        margin: auto;
+        padding: 1.2em 0;
+        word-break: break-word;
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+
+    .block-views-blockvus-block>div,
+    .block-views-blockvus-block-sisnfo>div {
+        color: #6b6b6b;
+    }
+
+    div [data-az-id="0t6xo7no"] {
+        margin-left: 9em !important;
+        margin-right: 12rem !important;
+    }
+
+    div [data-az-id="0t6xo7no"] ul {
+        padding-left: 4rem !important;
+    }
+
+    .block-block-content10c34486-0c32-4f30-ad34-5ef00f2081ce {
+        h3 {
+            font-size: 1.2em;
+        }
+
+        .az-ctnr {
+            margin-left: 7vw;
+            margin-right: 7vw;
+        }
+
+        .word-msintro {
+            ul {
+                padding-left: 40px;
+            }
+
+            li {
+                max-width: 90%;
+                /*para pantallas pequeñas*/
+            }
+
+            @media (min-width: 573px) {
+                li {
+                    max-width: 80%;
+                }
+            }
+        }
+    }
+
 }
