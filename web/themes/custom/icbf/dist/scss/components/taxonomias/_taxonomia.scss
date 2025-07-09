@@ -222,7 +222,13 @@
   .word-gral h3 {
     font-size: 1.38em;
     font-weight: 500;
-    font-family: var.$font-montserrat-regular;
+    font-family: var.$font-montserrat;
+  }
+
+  .word-gral h4{
+    font-size: 1.32em;
+    font-weight: 500;
+    font-family: var.$font-montserrat;
   }
 
   h1, h2, h3, h4 {
@@ -252,6 +258,10 @@
   }
   #dxt79nkh{
     margin-bottom: 3em;
+  }
+
+  .page-header{
+    font-family: var.$font-montserrat-regular;
   }
 
 }
