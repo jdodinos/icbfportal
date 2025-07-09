@@ -281,14 +281,76 @@
     #block-icbf-content{
         /*Columna de filtros ubicada a la izquirda de la subpagina noticias*/
         .view-filters{
+            /*Entorno local*/
             .views-exposed-form{
                 .js-form-item:first-child{
                     label{
-                        margin-bottom: 40px;
+                        margin-bottom: 35px;
                     }
                 } 
             }
+            /*Entorno de desarrollo*/
+            .js-form-item:first-child{
+                .fieldset-wrapper{
+                    padding-top: 35px;
+                }
+
+            }
+            /*Entorno de desarrollo CHECKS CAMBIADOS*/
+            .form-radios{
+                input[type=checkbox], input[type=radio] {
+                    appearance: none;
+                    width: 13px;
+                    height: 13px;
+                    border: 1px solid #555;
+                    border-radius: 3px;
+                    margin: 0 4px 0 0 !important;
+                }
+            }
             
+        }
+
+        .view-content{
+            .views-field{
+                .box-tag.Nacional {
+                    color: white;
+                    background-color: rgb(2 122 88/90%);
+                }
+                .box-tag.Regional{
+                    color: white;
+                    background-color: rgb(92 177 86/85%);
+                }
+                .box-tag.Destacado, .box-tag.BETTO{
+                    color: white;
+                    background-color: rgb(27 161 165 / 90%);
+                }
+                .box-tag.Misional{
+                    color: white;
+                    background-color: rgb(118 182 42/90%);
+                }
+                .box-tag.Comunicado{
+                    color: white;
+                    background-color: rgb(0 98 41/90%);
+                }
+                .box-tag.Especiales{
+                    color: white;
+                    background-color: rgb(25 155 219/90%);
+                }
+
+                $solo-etiquetas: BETTO, Pólvora, BNOPI;
+                .box-tag {
+                    @each $etiqueta in $solo-etiquetas {
+                        &.#{$etiqueta} {
+                        &:not(.Destacado):not(.Importante):not(.Secundario) {
+                            display: none;
+                        }
+                        }
+                    }
+                }
+
+                
+                
+            }
         }
 
 
