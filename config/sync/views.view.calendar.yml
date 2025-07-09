@@ -2967,7 +2967,7 @@ display:
           defaultDate: ''
           start: event_calendar_date
           end: ''
-          title: field_event_tag_dg
+          title: field_event_tag
           left_buttons: 'prev,next today'
           right_buttons: dayGridMonth
           default_view: dayGridMonth
@@ -4350,6 +4350,11 @@ display:
           text: Editar
           output_url_as_text: false
           absolute: false
+        event_calendar_date_1:
+          id: event_calendar_date_1
+          table: node__event_calendar_date
+          field: event_calendar_date
+          plugin_id: field
       pager:
         type: none
         options:
