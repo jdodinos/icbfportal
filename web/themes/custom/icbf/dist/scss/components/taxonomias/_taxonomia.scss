@@ -196,7 +196,14 @@
   }
 }
 
-.page-consulta-ciudadana-1{
+.page-consulta-ciudadana-1,
+.page-planeacion-y-presupuesto-participativo,
+.page-participacion-para-el-diagnostico-e-identificacion-de-problemas,
+.page-colaboracion-e-innovacion-0,
+.page-control-social-0,
+.page-participa-colaboracion-e-innovacion,
+.page-canal-interacción-deliberatoria-pc,
+.page-participa-consulta-ciudadana{
   #main{
     max-width: 1150px;
     margin: 0 auto;
@@ -226,7 +233,6 @@
     font-weight: 600;
   }
 
-  a.btn,
   a.btn.stpe-outlinebutton {
     font-family: inherit !important;
     font-weight: 400 !important;
@@ -243,5 +249,86 @@
   a.btn.stpe-outlinebutton:hover {
     background-color: #333 !important;
     color: #fff !important;
+  }
+  #dxt79nkh{
+    margin-bottom: 3em;
+  }
+
+}
+
+.page-atencion-y-servicios-ciudadania-linea-anticorrupcion-icbf{
+  .featured{
+    display: none;
+  }
+  .row-offcanvas{
+    padding-top: 1rem;
+  }
+  div [data-az-id="8pnqiakl"] {
+    flex: 0 0 auto;
+    width: 37.66666667%; /* 5/12 */
+  }
+
+  div [data-az-id="3snb96cf"] {
+    flex: 0 0 auto;
+    width: 48.666667%;
+  }
+}
+
+
+.page-contratacion-notificaciones-y-avisos  {
+  .list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #555;
+  }
+  .list-group-item:first-child {
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+  }
+}
+
+.page-contratacion-venta-de-acciones-no-inscritas-en-bolsa{
+  .table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+  }
+
+
+
+  tr {
+    padding: 8px;
+    line-height: 1.428571429;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+  }
+
+  tr:nth-child(n+2):nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+
+  tr:nth-child(n+2):nth-child(even) {
+    background-color: #ffffff;
+  }
+
+
+  .view-filters {
+    margin-top: 2.5rem;
+    width: 110%;
+    float: left;
+  }
+  .form--inline .form-actions{
+    padding-top: 26px;
+    margin-left: 6px;
+  }
+  #edit-submit-hiring-process {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+  }
+  table{
+    width: 100%;
   }
 }

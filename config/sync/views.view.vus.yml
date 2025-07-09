@@ -1611,7 +1611,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: "<div class=\"tags-right\">\r\n  <i class=\"fa fa-tag\" aria-hidden=\"true\"></i>\r\n  Tipo<span class=\"tagtext\">{{ field_procedure_type }}</span>\r\n</div>\r\n"
+            text: '{{ field_procedure_type }}'
             make_link: false
             path: ''
             absolute: false
@@ -1737,7 +1737,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"box-vus\">\r\n  <div class=\"vus-photo\">{{ field_list_image }}</div>\r\n\r\n  <div class=\"vus-info\">\r\n    <div class=\"vus-icon-center\">\r\n      <div class=\"tipv\">{{ field_icon }}<span\r\n          class=\"tipvtext\">{{ field_tooltip }}</span></div>\r\n    </div>\r\n    <div class=\"vus-id\">{{ title }}</div>\r\n\r\n    <div class=\"vus-content\">\r\n      <div class=\"vus-ref\">{{ field_link_app }}</div>\r\n      <div class=\"vus-ref\">{{ field_document }}</div>\r\n      <div class=\"vus-ref\">{{ field_link_nomasfilas }}</div>\r\n      <div class=\"vus-ref\">{{ field_link_more_info }}</div>\r\n    </div>\r\n\r\n    <div class=\"b-right\">{{ field_procedure_type }} {{ field_link_portfolio_dsya }}\r\n      {{ field_link_videotutorial }}</div>\r\n\r\n  </div>\r\n  </div>"
+            text: "<div class=\"box-vus\">\r\n  <div class=\"vus-photo\">{{ field_list_image }}</div>\r\n\r\n  <div class=\"vus-info\">\r\n    <div class=\"vus-icon-center\">\r\n      <div class=\"tipv\">{{ field_icon }}<span\r\n          class=\"tipvtext\">{{ field_tooltip }}</span></div>\r\n    </div>\r\n    <div class=\"vus-id\">{{ title }}</div>\r\n\r\n    <div class=\"vus-content\">\r\n      <div class=\"vus-ref\">{{ field_link_app }}</div>\r\n      <div class=\"vus-ref\">{{ field_document }}</div>\r\n      <div class=\"vus-ref\">{{ field_link_nomasfilas }}</div>\r\n      <div class=\"vus-ref\">{{ field_link_more_info }}</div>\r\n    </div>\r\n\r\n    <div class=\"b-right\">\r\n<div class=\"tags-right\">\r\n  <i class=\"fa fa-tag\" aria-hidden=\"true\"></i>\r\n  Tipo<span class=\"tagtext\">{{ field_procedure_type }}</span>\r\n</div>\r\n {{ field_link_portfolio_dsya }}\r\n      {{ field_link_videotutorial }}</div>\r\n\r\n  </div>\r\n  </div>"
             make_link: false
             path: ''
             absolute: false

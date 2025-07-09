@@ -25,6 +25,17 @@ h1, h2, h3, h4{
     color: #444;
 }
 
+.tb-megamenu .nav>li>a:focus{
+  background-color: inherit !important;
+  color: inherit !important;
+}
+
+body .tb-megamenu .nav>.active>a,
+body .tb-megamenu .nav>.active>a:focus{
+  background-color: inherit;
+  color: inherit;
+}
+
 
 .tb-megamenu {
   background-color: transparent;
@@ -158,6 +169,9 @@ h1, h2, h3, h4{
         &.active-trail {
           background-color: transparent;
           text-decoration: none;
+        }
+        &:visited{
+          color: #004686;
         }
       }
 

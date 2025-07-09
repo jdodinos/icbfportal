@@ -13,6 +13,11 @@ $ = jQuery;
         $parent.find('.tab-pane').removeClass(active_class);
         $parent.find(tabId).addClass(active_class);
       });
+
+      $('.view-id-calendar.view-display-id-block_page_6 .view-content').slick({
+        infinite: false,
+        initialSlide: 0
+      });
     }
   }
 })(jQuery, Drupal);
@@ -32,5 +37,4 @@ $ = jQuery;
     }
   };
 })(jQuery, Drupal);
-
 

@@ -26,6 +26,7 @@
 @use 'components/general-elements';
 @use 'components/default-documents';
 @use 'components/taxonomias/general-taxonomias';
+@use 'components/adoptions';
 
 @use 'components/elements/breadcrumb';
 @use 'components/elements/custom-table';
@@ -34,6 +35,7 @@
 @use 'components/elements/internal-news';
 @use 'components/elements/table-filter';
 @use 'components/elements/table-general';
+@use 'components/elements/page-table';
 
 @use 'components/home';
 @use 'components/content-type/noticias';
