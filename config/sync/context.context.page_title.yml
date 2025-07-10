@@ -63,7 +63,7 @@ conditions:
     negate: true
     uuid: cd1cd326-dae3-4aaa-9029-71a333316048
     context_mapping: {  }
-    pages: '<front>'
+    pages: "<front>\r\n/programa-adopciones\r\n/taxonomy/term/7439"
 reactions:
   blocks:
     id: blocks
