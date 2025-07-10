@@ -10,6 +10,10 @@
 
 .page-cartelera-virtual-control-interno-disciplinario {
 
+    .list-group-item {
+        color: #555555;
+    }
+
     .field--name-field-content {
         .field__label {
             font-family: var.$font-montserrat;
@@ -30,15 +34,16 @@
     .views-field.views-field-field-creation-date,
     .views-field.views-field-field-unpublish-date {
         font-family: var.$font-montserrat-regular;
-        display: inline-flex;
-        justify-content: space-between;
+        display: flex;
+        justify-content: flex-start;
     }
 
     .views-field.views-field-field-infogral-msite {
         font-family: var.$font-montserrat-regular;
     }
 
-    span.views-label.views-label-field-creation-date {
+    span.views-label.views-label-field-creation-date,
+    span.views-label.views-label-field-unpublish-date {
         margin-right: .2em;
     }
 }
@@ -280,34 +285,38 @@
 }
 
 
-.page-rendicion-de-cuentas-icbf{
-    .block-block-content64ad3cc9-b82f-4c9f-9ddd-73c4e859fba4{
-        #bf4gltmr{
+.page-rendicion-de-cuentas-icbf {
+    .block-block-content64ad3cc9-b82f-4c9f-9ddd-73c4e859fba4 {
+        #bf4gltmr {
             display: flex;
             width: 100%;
             margin: 0 auto;
             position: initial;
 
-            >.az-ctnr:first-child{
-                max-width: 90vw;/*para pantallas pequeñas*/
+            >.az-ctnr:first-child {
+                max-width: 90vw;
+                /*para pantallas pequeñas*/
             }
+
             @media (min-width: 768px) {
-                >.az-ctnr:first-child{
+                >.az-ctnr:first-child {
                     max-width: 67%;
                 }
             }
-            
 
-            >.az-element{
-                max-width: 90vw;/*para pantallas pequeñas*/
+
+            >.az-element {
+                max-width: 90vw;
+                /*para pantallas pequeñas*/
             }
+
             @media (min-width: 768px) {
-                >.az-element{
+                >.az-element {
                     max-width: 33%;
                 }
             }
 
-            .box-h245{
+            .box-h245 {
                 margin: 0;
             }
         }
@@ -315,26 +324,28 @@
 }
 
 
-.page-programas-y-estrategias-direccion-de-familias-y-comunidades{
+.page-programas-y-estrategias-direccion-de-familias-y-comunidades {
 
-    #block-icbf-content{
-        .content{
-            >div:nth-child(2){
+    #block-icbf-content {
+        .content {
+            >div:nth-child(2) {
                 margin: 4px auto;
                 display: inline-block;
                 border-top: 1px solid #00000024;
                 padding-top: 1.5em;
 
-                .block-views-blockmisional-ninez-y-adolescencia-block-2fyc{
-                    #quicktabs-misional-ninez-y-adolescencia{
-                        .item-list{
+                .block-views-blockmisional-ninez-y-adolescencia-block-2fyc {
+                    #quicktabs-misional-ninez-y-adolescencia {
+                        .item-list {
                             display: flex;
                             justify-content: center;
                         }
                     }
-                    
-                    .quicktabs-tabpage{//#quicktabs-tabpage-misional-ninez-y-adolescencia-0, #quicktabs-tabpage-misional-ninez-y-adolescencia-0{
-                        .views-field-field-subtitle{
+
+                    .quicktabs-tabpage {
+
+                        //#quicktabs-tabpage-misional-ninez-y-adolescencia-0, #quicktabs-tabpage-misional-ninez-y-adolescencia-0{
+                        .views-field-field-subtitle {
                             color: #407021;
                             font-size: 1.4em;
                             font-weight: 600;
@@ -344,17 +355,19 @@
                 }
             }
 
-            >div:nth-child(3){
-                .block-views-blockmisional-ninez-y-adolescencia-block-3fyc{
-                    #quicktabs-misional-ninez-y-adolescencia{
-                        .item-list{
+            >div:nth-child(3) {
+                .block-views-blockmisional-ninez-y-adolescencia-block-3fyc {
+                    #quicktabs-misional-ninez-y-adolescencia {
+                        .item-list {
                             display: flex;
                             justify-content: center;
                         }
                     }
-                    
-                    .quicktabs-tabpage{//#quicktabs-tabpage-misional-ninez-y-adolescencia-0, #quicktabs-tabpage-misional-ninez-y-adolescencia-0{
-                        .views-field-field-subtitle{
+
+                    .quicktabs-tabpage {
+
+                        //#quicktabs-tabpage-misional-ninez-y-adolescencia-0, #quicktabs-tabpage-misional-ninez-y-adolescencia-0{
+                        .views-field-field-subtitle {
                             color: #407021;
                             font-size: 1.4em;
                             font-weight: 600;
