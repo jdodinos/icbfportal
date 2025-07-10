@@ -121,6 +121,35 @@
     }
 }
 
+.page-id-1274,
+.page-id-1237,
+.page-cartelera-virtual-control-interno-disciplinario {
+    li.list-group-item {
+        padding: 10px 15px;
+        background-color: #fff;
+        border: solid #ddd;
+        border-width: 1px 1px;
+    }
+}
+
+
+.page-id-1237 {
+    .view-filters .js-form-type-textfield label {
+        font-size: 1.27em;
+        font-weight: 500;
+        color: #006229;
+        font-family: var.$font-montserrat, sans-serif;
+    }
+
+    .fieldset-legend,
+    .js-form-item-search-api-fulltext label,
+    h5 {
+        font-size: 1.27em;
+        font-weight: 500;
+        color: #006229;
+        font-family: var.$font-montserrat, sans-serif;
+    }
+}
 
 .page-id-6715,
 .page-id-6716 {
@@ -140,6 +169,16 @@
         }
 
         .pager_item.pager_item--next a span {
+            font-size: 0;
+
+            &::before {
+                content: "Siguiente >";
+                font-size: 14px;
+            }
+        }
+
+
+        .pager_item.pager_item--next span {
             font-size: 0;
 
             &::before {

@@ -11,6 +11,7 @@ main-styling:
     - core/jquery
     - core/drupal
     - icbf/owl
+    - slick/slick
 
 ninos-y-ninas:
   css:

@@ -8,6 +8,40 @@
     border-bottom: 1px solid #eee;
 }
 
+.page-cartelera-virtual-control-interno-disciplinario {
+
+    .field--name-field-content {
+        .field__label {
+            font-family: var.$font-montserrat;
+            font-weight: 700;
+            margin: 1em 0 !important;
+        }
+
+        .field__item {
+            display: none;
+        }
+    }
+
+    span.views-label.views-label-field-document-msite {
+        font-family: var.$font-asap-regular;
+    }
+
+
+    .views-field.views-field-field-creation-date,
+    .views-field.views-field-field-unpublish-date {
+        font-family: var.$font-montserrat-regular;
+        display: inline-flex;
+        justify-content: space-between;
+    }
+
+    .views-field.views-field-field-infogral-msite {
+        font-family: var.$font-montserrat-regular;
+    }
+
+    span.views-label.views-label-field-creation-date {
+        margin-right: .2em;
+    }
+}
 
 .page-id-7739 {
     .f-introtop {
@@ -98,20 +132,59 @@
         margin: auto;
     }
 
+    .js-form-item.form-item.js-form-type-textfield.form-type-textfield.js-form-item-title.form-item-title {
+        margin-top: 2.8%;
+    }
+
+    .js-form-item.form-item.js-form-type-textfield.form-type-textfield.js-form-item-title.form-item-title:hover::after {
+        position: absolute;
+        content: url('/sites/default/files/v9_buscar_menu.gif');
+        width: 100px;
+        height: auto;
+        transform: scale(.26);
+        left: -2em;
+        right: auto;
+        top: 4em;
+        bottom: 13em;
+    }
+
+    // .view-filters input.form-text:hover::after {
+    //     position: absolute;
+    //     content: url(https://www.icbf.gov.co/sites/default/files/v9_buscar_menu.gif);
+    //     width: 100px;
+    //     height: auto;
+    //     transform: scale(.26);
+    //     left: -3em;
+    //     right: auto;
+    //     top: 4em;
+    //     bottom: 1em;
+    // }
+
     .view-filters .js-form-type-select.form-type-select label,
     .view-filters .js-form-type-textfield label {
 
         font-family: var.$font-asap-regular;
         color: #555;
-        font-weight: 500;
+        font-weight: 800;
+    }
+
+    .form--inline .form-actions {
+        min-height: 15vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
     }
 
     .form--inline.clearfix {
+        height: 12vh;
         display: flex;
         align-items: center;
         flex-wrap: nowrap;
 
+
         @media (max-width: var.$media_tablet) {
+            height: auto;
             flex-wrap: wrap;
         }
     }
@@ -136,7 +209,7 @@
 
     .view-filters label {
         font-family: 'Asap-Regular';
-        font-weight: 400;
+        font-weight: 800;
     }
 
     select.form-select {
@@ -154,7 +227,19 @@
         color: #333;
         background-color: #fff;
         border-color: #ccc;
+        margin-top: 30%;
+
+        &:hover {
+            color: #333;
+            background-color: #e6e5e5;
+            border-color: #adadad;
+        }
+
+        @media (max-width: var.$media_tablet) {
+            margin-top: 0;
+        }
     }
+
 }
 
 .page-id-7739 {
@@ -368,24 +453,27 @@
         display: none;
     }
 }
-.page-programas-y-estrategias-direccion-de-adolescencia-y-juventud{
 
-    .view-misional-ninez-y-adolescencia{
-        .views-field-title, span{
+.page-programas-y-estrategias-direccion-de-adolescencia-y-juventud {
+
+    .view-misional-ninez-y-adolescencia {
+
+        .views-field-title,
+        span {
             margin: 0;
             text-align: center;
             background-color: white;
         }
     }
 
-    .layout{
-        h2{
+    .layout {
+        h2 {
             padding: 1em 0 1em 0;
             margin: 0 auto;
         }
 
-        .block-views-blockmisional-ninez-y-adolescencia-block-vdonna{
-            .field-content{
+        .block-views-blockmisional-ninez-y-adolescencia-block-vdonna {
+            .field-content {
                 margin: 0 auto;
                 background-color: white;
                 display: flex;
@@ -403,18 +491,21 @@
     }
 
 
-    .layout:nth-child(n+5), .layout:nth-child(4) h2{
+    .layout:nth-child(n+5),
+    .layout:nth-child(4) h2 {
         background-color: #f5f5f5;
     }
 
-    .layout:last-child{
+    .layout:last-child {
         background-color: rgb(255, 255, 255);
     }
 
-    .n-ltrasversals{
+    .n-ltrasversals {
         background-color: rgb(255, 255, 255);
-        max-width: 90vw;/*para pantallas pequeñas*/
+        max-width: 90vw;
+        /*para pantallas pequeñas*/
         margin: 2%;
+
         /*el titulo no esta dentro de una etiqueta aparte*/
         /*para el titulo estilo h4*/
         .col-sm-9 {
@@ -423,18 +514,20 @@
             font-weight: 600;
             margin-top: 1em;
         }
+
         /*para el parrafo*/
-        .col-sm-9 > p:first-child {
+        .col-sm-9>p:first-child {
             padding-top: 1em;
             font-weight: normal;
             line-height: normal;
         }
     }
+
     @media (min-width: 768px) {
-        .n-ltrasversals{
+        .n-ltrasversals {
             max-width: 46%;
-            }
-    } 
+        }
+    }
 }
 
 
@@ -661,8 +754,8 @@
         font-weight: 600;
     }
 
-    .block-views-blockvus-block{
-        h2{
+    .block-views-blockvus-block {
+        h2 {
             padding: 30px 0 10px 0;
         }
     }
