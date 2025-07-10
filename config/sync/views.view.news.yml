@@ -6400,7 +6400,7 @@ display:
             title: '0'
             fieldset: '0'
             nothing: '0'
-          optionset: clone_of_four_elements_slider
+          optionset: elements_slider_news_home
           class: ''
           image: field_list_image
           link: ''
@@ -6417,10 +6417,10 @@ display:
           skin: boxed-carousel
           overridables:
             arrows: arrows
+            autoplay: autoplay
             dots: dots
             draggable: draggable
             infinite: infinite
-            autoplay: '0'
             mouseWheel: '0'
             randomize: '0'
             variableWidth: '0'
