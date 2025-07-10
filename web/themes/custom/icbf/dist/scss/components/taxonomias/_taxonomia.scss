@@ -222,7 +222,13 @@
   .word-gral h3 {
     font-size: 1.38em;
     font-weight: 500;
-    font-family: var.$font-montserrat-regular;
+    font-family: var.$font-montserrat;
+  }
+
+  .word-gral h4{
+    font-size: 1.32em;
+    font-weight: 500;
+    font-family: var.$font-montserrat;
   }
 
   h1, h2, h3, h4 {
@@ -254,6 +260,10 @@
     margin-bottom: 3em;
   }
 
+  .page-header{
+    font-family: var.$font-montserrat-regular;
+  }
+
 }
 
 .page-atencion-y-servicios-ciudadania-linea-anticorrupcion-icbf{
@@ -272,10 +282,31 @@
     flex: 0 0 auto;
     width: 48.666667%;
   }
+  .list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #555;
+  }
+
+  div.views-element-container > h2{
+    margin-left: 25%;
+  }
+
+  .describet {
+    font-size: .9em;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    margin-left: 20px;
+  }
+
 }
 
 
-.page-contratacion-notificaciones-y-avisos  {
+.page-contratacion-notificaciones-y-avisos{
   .list-group-item {
     position: relative;
     display: block;
@@ -295,8 +326,6 @@
   .table-striped>tbody>tr:nth-of-type(odd) {
     background-color: #f9f9f9;
   }
-
-
 
   tr {
     padding: 8px;
@@ -330,5 +359,22 @@
   }
   table{
     width: 100%;
+  }
+}
+
+
+.page-atencion-y-servicios-ciudadania-informes-pqrs{
+  tbody{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #555;
+  }
+}
+
+.page-contratacion{
+  .view-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
   }
 }

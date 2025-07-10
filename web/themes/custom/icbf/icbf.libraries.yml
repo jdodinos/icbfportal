@@ -6,6 +6,7 @@ main-styling:
       dist/css/main.css: {}
   js:
     js/script.js: {}
+    js/colabs.js: {}
   dependencies:
     - core/jquery
     - core/drupal

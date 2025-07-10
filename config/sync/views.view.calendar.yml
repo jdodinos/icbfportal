@@ -2967,7 +2967,7 @@ display:
           defaultDate: ''
           start: event_calendar_date
           end: ''
-          title: field_event_tag_dg
+          title: field_event_tag
           left_buttons: 'prev,next today'
           right_buttons: dayGridMonth
           default_view: dayGridMonth
@@ -3863,6 +3863,138 @@ display:
     position: 3
     display_options:
       fields:
+        event_calendar_date_1:
+          id: event_calendar_date_1
+          table: node__event_calendar_date
+          field: event_calendar_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: daterange_custom
+          settings:
+            timezone_override: ''
+            date_format: Y-m-d
+            from_to: start_date
+            separator: '-'
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        event_calendar_date_2:
+          id: event_calendar_date_2
+          table: node__event_calendar_date
+          field: event_calendar_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: daterange_default
+          settings:
+            timezone_override: ''
+            format_type: olivero_medium
+            from_to: start_date
+            separator: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         nid:
           id: nid
           table: node_field_data
@@ -4260,7 +4392,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"calendaro-boxday\">\r\n  <div class=\"col-sm-4 calendaro-right\">\r\n    {{ event_calendar_date }}\r\n  </div>\r\n  <div class=\"col-sm-8 calendaro-col2\">\r\n    {{ title }}\r\n    {{ body }}\r\n    {{ field_event_tag }}\r\n    {{ field_event_tag_dg }}\r\n  </div>\r\n</div>"
+            text: "<div class=\"calendaro-boxday\" data-event-date=\"{{ event_calendar_date_1 }}\">\r\n  <div class=\"col-sm-4 calendaro-right\">\r\n      <h2 class=\"views-field views-field-event-calendar-date calendaro-number\">\r\n          <div class=\"field-content\">\r\n                {{ event_calendar_date }}\r\n          </div>\r\n      </h2>\r\n  </div>\r\n  <div class=\"col-sm-8 calendaro-col2\">\r\n    {{ title }}\r\n    {{ body }}\r\n    {{ field_event_tag }}\r\n    {{ field_event_tag_dg }}\r\n  </div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -4445,6 +4577,51 @@ display:
           hierarchy: false
           limit: true
           error_message: true
+        event_calendar_date_value:
+          id: event_calendar_date_value
+          table: node__event_calendar_date
+          field: event_calendar_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: '-1 year'
+            type: offset
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
       filter_groups:
         operator: AND
         groups:
@@ -4454,9 +4631,9 @@ display:
         options:
           grouping:
             -
-              field: event_calendar_date
-              rendered: true
-              rendered_strip: false
+              field: event_calendar_date_2
+              rendered: false
+              rendered_strip: true
           row_class: ''
           default_row_class: true
           panels: 0

@@ -22,6 +22,7 @@ dependencies:
     - 'taxonomy_term:locations:281f4f59-840f-49c4-89e7-2043d5f5f3d0'
     - 'taxonomy_term:locations:313a6ab8-0172-4104-99d7-b0ab5286127d'
     - 'taxonomy_term:locations:31bd8c9d-be84-43b1-b945-5ab9407a4a99'
+    - 'taxonomy_term:locations:40276d98-6b65-43f0-a903-f5d92a728d4b'
     - 'taxonomy_term:locations:4f7f50e5-87cd-4eff-aefd-68dddb489f86'
     - 'taxonomy_term:locations:540a7d39-d188-4d42-901d-aa0fc1ade3b7'
     - 'taxonomy_term:locations:5517b3f7-d717-464f-a5e5-82e1dbceb781'
@@ -1363,6 +1364,7 @@ display:
           plugin_id: search_api_term
           operator: or
           value:
+            6901: 6901
             6194: 6194
             12: 12
             6220: 6220
