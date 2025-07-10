@@ -171,7 +171,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<img>&nbsp;<a href="{{ field_news_files }}" title="{{ title }}" class="file-url">{{ title }}</a>'
+            text: "<img src=\"/themes/contrib/bootstrap5/images/icons/application-pdf.png\">\r\n<a href=\"{{ field_news_files }}\" data-once=\"views-ajax\">{{ title }}</a>"
             make_link: false
             path: ''
             absolute: false
@@ -338,7 +338,7 @@ display:
           type: datetime_custom
           settings:
             timezone_override: ''
-            date_format: M
+            date_format: F
           group_column: value
           group_columns: {  }
           group_rows: true

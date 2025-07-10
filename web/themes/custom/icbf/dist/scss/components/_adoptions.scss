@@ -43,6 +43,7 @@ $border-color_1: #fff;
 
     .tb-megamenu .tb-megamenu-nav>li.dropdown:hover>.tb-megamenu-submenu{
         width: 400px;
+        border-radius: 6px;
     }
     
     .tb-megamenu .dropdown:nth-child(7) .row-fluid:nth-child(1) .mega-col-nav:nth-child(1),
@@ -441,6 +442,11 @@ $border-color_1: #fff;
         }
 
         a {
+            
+            &:not([href]):not([class]), &:not([href]):not([class]):hover {
+                color: #1996d0;
+            }
+
             img {
                 transition: top .5s ease-out;
             }
