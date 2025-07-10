@@ -331,18 +331,18 @@
     background-color: #f9f9f9;
   }
 
-  tr {
+  tbody tr {
     padding: 8px;
     line-height: 1.428571429;
     vertical-align: top;
     border-top: 1px solid #ddd;
   }
 
-  tr:nth-child(n+2):nth-child(odd) {
+  tbody tr:nth-child(n+1):nth-child(odd) {
     background-color: #f9f9f9;
   }
 
-  tr:nth-child(n+2):nth-child(even) {
+  tr:nth-child(n+1):nth-child(even) {
     background-color: #ffffff;
   }
 
