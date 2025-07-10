@@ -17,6 +17,7 @@ regions:
   pre_breadcrumb: PRE Breadcrumb
   breadcrumb: Breadcrumbs
   feature: Feature
+  precontent: 'PRE content'
   content: 'Main content'
   sidebar_first: 'Sidebar first'
   sidebar_second: 'Sidebar second'

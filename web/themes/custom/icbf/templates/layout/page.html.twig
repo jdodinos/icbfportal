@@ -94,6 +94,12 @@
             </div>
           {% endif %}
 
+            {% if page.precontent %}
+              <div class="precontent">
+                {{ page.precontent }}
+              </div>
+            {% endif %}
+
           <div class="row row-offcanvas row-offcanvas-left clearfix">
             <main{{ content_attributes }}>
               {{ page.content }}

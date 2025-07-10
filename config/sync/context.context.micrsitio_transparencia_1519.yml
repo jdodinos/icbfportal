@@ -31,7 +31,7 @@ reactions:
         label: 'Titular Transparencia 1519'
         provider: block_content
         label_display: '0'
-        region: content
+        region: precontent
         weight: '0'
         custom_id: block_content_0d23a974_182d_4b82_b340_7f871db4afd5
         theme: icbf
