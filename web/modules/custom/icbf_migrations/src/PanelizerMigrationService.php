@@ -332,38 +332,7 @@ class PanelizerMigrationService {
   public function addViewInBlock($view_id, $configuration) {
     $this->block_config = [];
     $display_id = $configuration['display'];
-    if ($view_id == 'news' && $display_id == 'block_newslist') {
-      $view_id = 'noticias_sapi';
-    }
-    if ($view_id == 'documentos_de_contratacion' && $display_id == 'block') {
-      $view_id = 'documentos_de_contratacion_sapi';
-    }
-    if ($view_id == 'licencias_de_funcionamiento') {
-      if ($display_id == 'block' || $display_id == 'block_1' || $display_id == 'block_2') {
-        $view_id = 'licencias_de_funcionamiento_sapi';
-      }
-    }
-    if ($view_id == 'curriculum_vitae' && $display_id == 'block_2') {
-      $view_id = 'curriculum_vitae_sapi';
-    }
-    if ($view_id == 'notifications_pc' && $display_id == 'block') {
-      $view_id = 'notifications_pc_sapi';
-    }
-    if ($view_id == 'documents') {
-      if ($display_id == 'block' || $display_id == 'block_9' || $display_id == 'block_10' || $display_id == 'block_11') {
-        $view_id = 'documents_sapi';
-      }
-    }
-    if ($view_id == 'right_of_petition' && $display_id == 'block_vista5dias') {
-      $view_id = 'right_of_petition_sapi';
-    }
-    if ($view_id == 'documentos_servicios' && $display_id == 'block_5') {
-      $view_id = 'documentos_servicios_sapi';
-    }
-    if ($view_id == 'vacancies' && $display_id == 'block_cpdr') {
-      $view_id = 'vacancies_sapi';
-    }
-
+    $view_id = $this->checkingViewId($view_id, $display_id);
     $view = View::load($view_id);
     $messages = [];
     if ($view) {
@@ -613,6 +582,72 @@ class PanelizerMigrationService {
       ->fetchObject();
 
     return $query ?? FALSE;
+  }
+
+  private function checkingViewId($view_id, $display_id) {
+    switch ($view_id) {
+      case 'news':
+        if ($display_id == 'block_newslist') {
+          $view_id = 'noticias_sapi';
+        }
+        break;
+
+      case 'documentos_de_contratacion':
+        if ($display_id == 'block') {
+          $view_id = 'documentos_de_contratacion_sapi';
+        }
+        break;
+
+      case 'licencias_de_funcionamiento':
+        if ($display_id == 'block' || $display_id == 'block_1' || $display_id == 'block_2') {
+          $view_id = 'licencias_de_funcionamiento_sapi';
+        }
+        break;
+
+      case 'curriculum_vitae':
+        if ($display_id == 'block_2') {
+          $view_id = 'curriculum_vitae_sapi';
+        }
+        break;
+
+      case 'notifications_pc':
+        if ($display_id == 'block') {
+          $view_id = 'notifications_pc_sapi';
+        }
+        break;
+
+      case 'right_of_petition':
+        if ($display_id == 'block_vista5dias') {
+          $view_id = 'right_of_petition_sapi';
+        }
+        break;
+
+      case 'documentos_servicios':
+        if ($display_id == 'block_5') {
+          $view_id = 'documentos_servicios_sapi';
+        }
+        break;
+
+      case 'vacancies':
+        if ($display_id == 'block_cpdr') {
+          $view_id = 'vacancies_sapi';
+        }
+        break;
+
+      case 'encargos_sapi':
+        if ($display_id == 'block') {
+          $view_id = 'encargos_sapi_solr';
+        }
+        break;
+
+      case 'documents':
+        if ($display_id == 'block' || $display_id == 'block_9' || $display_id == 'block_10' || $display_id == 'block_11') {
+          $view_id = 'documents_sapi';
+        }
+        break;
+    }
+
+    return $view_id;
   }
 
 }
