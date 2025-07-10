@@ -222,17 +222,21 @@
   .word-gral h3 {
     font-size: 1.38em;
     font-weight: 500;
-    font-family: var.$font-montserrat;
+    font-family: var.$font-montserrat!important;
   }
 
   .word-gral h4{
     font-size: 1.32em;
     font-weight: 500;
-    font-family: var.$font-montserrat;
+    font-family: var.$font-montserrat!important;
   }
 
   h1, h2, h3, h4 {
-    font-family: var.$font-asap-regular;
+    font-family: var.$font-asap-regular!important;
+  }
+
+  #id-1519 h1{
+    font-family: var.$font-montserrat-regular!important;
   }
 
   .word-gral strong {
