@@ -8,11 +8,11 @@ dependencies:
     - taxonomy.vocabulary.file_category
     - taxonomy.vocabulary.secctions
   content:
-    - 'taxonomy_term:file_category:0b53c8c2-4460-4d21-970f-e5e67882d033'
-    - 'taxonomy_term:file_category:a28981e4-57ac-412a-8037-75a25460ee8f'
-    - 'taxonomy_term:file_category:bb99f86a-7c78-47e7-955d-0b8414ec3ea6'
-    - 'taxonomy_term:file_category:c0afb8bb-ccfc-49c9-95b9-281f8e8ff605'
-    - 'taxonomy_term:secctions:29dbe207-6241-47eb-880f-ee3ac34a6edd'
+    - 'taxonomy_term:file_category:3978d0f3-82e8-4117-b8ca-c0c06131ec14'
+    - 'taxonomy_term:file_category:51c5a88d-e52e-445b-bd40-fcfeaf4a15b4'
+    - 'taxonomy_term:file_category:950dc63b-d5e6-4e7b-8374-7aade6a1ef36'
+    - 'taxonomy_term:file_category:be6b14b6-1cc9-4ffb-9853-2f80a714310d'
+    - 'taxonomy_term:secctions:369b03eb-20a9-4a28-867e-c225440a4483'
   module:
     - file
     - node
@@ -803,6 +803,70 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      fields:
+        field_document:
+          id: field_document
+          table: node__field_document
+          field: field_document
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: file_default
+          settings:
+            use_description_as_link_text: true
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
       pager:
         type: some
         options:
@@ -907,6 +971,7 @@ display:
           1: AND
       defaults:
         pager: false
+        fields: false
         filters: false
         filter_groups: false
       display_description: ''
@@ -920,4 +985,5 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - 'user.node_grants:view'
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_document'
