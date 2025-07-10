@@ -18,6 +18,45 @@ $ = jQuery;
         infinite: false,
         initialSlide: 0
       });
+
+      // Función recalcular submenu Adopciones
+      function recalcularSubmenus() {
+        const dropdownItems = document.querySelectorAll('.page-id-7439 .tb-megamenu .tb-megamenu-nav > li.dropdown');
+
+        dropdownItems.forEach(function (item) {
+          const submenu = item.querySelector('.tb-megamenu-submenu');
+          if (!submenu) return;
+
+          // Reset de estilos anteriores
+          submenu.style.left = '';
+          submenu.style.right = '';
+          submenu.style.position = 'absolute';
+
+          // Calcular posición y ajustes
+          const itemRect = item.getBoundingClientRect();
+          let viewportWidth = window.innerWidth;
+          if (viewportWidth > 1150) {
+            viewportWidth = 1150;
+          }
+
+          const submenuWidth = submenu.offsetWidth || 400;
+          const projectedRight = itemRect.left + submenuWidth;
+
+          if (projectedRight > viewportWidth) {
+            submenu.style.left = 'initial';
+            submenu.style.right = '0';
+          } else {
+            submenu.style.left = item.offsetLeft + 'px';
+            submenu.style.right = 'initial';
+          }
+        });
+      }
+
+      recalcularSubmenus()
+      document.addEventListener('DOMContentLoaded', recalcularSubmenus);
+      window.addEventListener('resize', recalcularSubmenus);
+
+
     }
   }
 })(jQuery, Drupal);

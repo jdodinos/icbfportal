@@ -15,6 +15,7 @@ dependencies:
     - file
     - search_api
     - user
+    - views_bootstrap
 id: citaciones
 label: 'Citaciones (Citaciones SAPI)'
 module: views
@@ -1826,9 +1827,9 @@ display:
                 weights:
                   build: 5
                 settings: {  }
-              raw_value_widget_order:
+              display_value_widget_order:
                 weights:
-                  sort: 50
+                  sort: 40
                 settings:
                   sort: ASC
         facets_field_unpublish_date:
@@ -1962,6 +1963,11 @@ display:
                   granularity: '5'
                   hierarchy: 0
                   date_format: 'M Y'
+              raw_value_widget_order:
+                weights:
+                  sort: 50
+                settings:
+                  sort: DESC
         facets_field_creation_date:
           id: facets_field_creation_date
           table: search_api_index_citaciones
@@ -2093,6 +2099,11 @@ display:
                   granularity: '5'
                   hierarchy: 0
                   date_format: 'M Y'
+              raw_value_widget_order:
+                weights:
+                  sort: 50
+                settings:
+                  sort: DESC
         field_creation_date:
           id: field_creation_date
           table: search_api_index_citaciones
@@ -2101,7 +2112,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: search_api_date
-          operator: '>='
+          operator: '<='
           value:
             min: ''
             max: ''
@@ -2142,8 +2153,70 @@ display:
         operator: AND
         groups:
           1: AND
+      style:
+        type: views_bootstrap_table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          override: 1
+          sticky: 0
+          caption: ''
+          summary: ''
+          description: ''
+          columns:
+            nid: nid
+            title: title
+            field_creation_date: field_creation_date
+            nothing: nothing
+            field_summoned_file2: field_summoned_file2
+            field_summoned_file: field_summoned_file
+          info:
+            nid:
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            title:
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            field_creation_date:
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            nothing:
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            field_summoned_file2:
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            field_summoned_file:
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+          default: '-1'
+          empty_table: 0
+          responsive: 0
+          bootstrap_styles:
+            striped: 0
+            bordered: 0
+            hover: 0
+            condensed: 0
+      row:
+        type: fields
+        options: {  }
       defaults:
         access: false
+        style: false
+        row: false
         fields: false
         sorts: false
         filters: false
