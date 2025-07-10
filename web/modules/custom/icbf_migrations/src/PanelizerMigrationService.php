@@ -505,6 +505,12 @@ class PanelizerMigrationService {
         if ($block_id == 'paginas-internas-primera-infanci') {
           $block_title = 'Páginas internas Primera Infancia';
         }
+        elseif ($block_id == '1519---directos-servicios-ciudad') {
+          $block_title = 'Servicios Ciudadania - 1519-1';
+        }
+        elseif ($block_id == 'servicios-pqr---1519-3') {
+          $block_title = 'Servicios PQR - 1519-3';
+        }
         $block_query = $this->database->select('block_content', 'b');
         $block_query->join('block_content_field_data', 'bcfd', 'b.id = bcfd.id');
         $block_query->fields('b', ['uuid'])

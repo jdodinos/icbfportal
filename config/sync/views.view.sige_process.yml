@@ -455,7 +455,7 @@ display:
               autosubmit_textfield_minimum_length: 3
               autosubmit_hide: false
               input_required: false
-              allow_secondary: false
+              allow_secondary: true
               secondary_label: 'Opciones avanzadas'
               secondary_open: false
               reset_button_always_show: false
