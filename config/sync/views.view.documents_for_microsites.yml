@@ -3320,7 +3320,7 @@ display:
           type: datetime_default
           settings:
             timezone_override: ''
-            format_type: html_date
+            format_type: olivero_medium
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -3384,7 +3384,7 @@ display:
           type: datetime_default
           settings:
             timezone_override: ''
-            format_type: html_date
+            format_type: olivero_medium
           group_column: value
           group_columns: {  }
           group_rows: true
