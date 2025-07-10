@@ -21,7 +21,7 @@ $ = jQuery;
 
       // Función recalcular submenu Adopciones
       function recalcularSubmenus() {
-        const dropdownItems = document.querySelectorAll('.tb-megamenu .tb-megamenu-nav > li.dropdown');
+        const dropdownItems = document.querySelectorAll('.page-id-7439 .tb-megamenu .tb-megamenu-nav > li.dropdown');
 
         dropdownItems.forEach(function (item) {
           const submenu = item.querySelector('.tb-megamenu-submenu');

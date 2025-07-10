@@ -45,6 +45,14 @@ body .tb-megamenu .nav>.active>a:focus{
   font-weight: 400;
   position: relative;
 
+  .nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
+    background-color: transparent;
+  }
+  
+  .row{
+    margin-left: 0;
+  }
+
   .dropdown-toggle {
     white-space: normal;
 
@@ -165,6 +173,7 @@ body .tb-megamenu .nav>.active>a:focus{
         white-space: normal;
         line-height: 1.3em;
 
+
         &:hover,
         &.active-trail {
           background-color: transparent;
@@ -172,6 +181,9 @@ body .tb-megamenu .nav>.active>a:focus{
         }
         &:visited{
           color: #004686;
+        }
+        &:hover{
+          color: #0073ff;
         }
       }
 
