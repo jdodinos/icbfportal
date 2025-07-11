@@ -601,13 +601,31 @@
 
 .page-programas-y-estrategias-direccion-de-adolescencia-y-juventud {
 
+    div#main-wrapper {
+        padding: 0 0.5em;
+    }
+
     .view-misional-ninez-y-adolescencia {
 
-        .views-field-title,
-        span {
-            margin: 0;
-            text-align: center;
-            background-color: white;
+        .bottm-line{
+            span, .field-content{
+                display: flex;
+                flex-wrap: wrap;
+
+                >div{
+                    width: 90vw;
+                }
+                @media (min-width: 768px) {
+                    >div:first-child {
+                        flex: 0 0 auto;
+                        width: 58.33333333%;
+                    }
+                    >div:nth-child(2) {
+                        flex: 0 0 auto;
+                        width: 41.66666667%;
+                    }
+                }
+            }
         }
     }
 
@@ -616,29 +634,55 @@
             padding: 1em 0 1em 0;
             margin: 0 auto;
         }
+    }
 
-        .block-views-blockmisional-ninez-y-adolescencia-block-vdonna {
-            .field-content {
-                margin: 0 auto;
-                background-color: white;
+    .layout:nth-child(n+4):nth-child(-n+6),
+    .layout:nth-child(4) h2 {
+        background-color: #f5f5f5;
+
+        .n-ltrasversals {
+            box-shadow: 0.1px 0.1px 3px #80808075;
+        }
+    }
+    /*
+    .layout:nth-child(n+3):nth-child(-n+6){
+        .view-misional-ninez-y-adolescencia{
+            >div {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+    }*/
+
+
+
+
+    .layout:nth-child(7){
+        //Estilos para el titulo "Así es el trabajo con la niñez y la adolescencia en los territorios"
+        .views-field-title {
+            display: inline-block;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+
+            span, .field-content{
                 display: flex;
                 font-weight: 500;
-                margin-top: 1em;
-                font-size: 14px;
+                margin: 0.5em 0;
+                font-size: 0.6em;
                 color: #6b6b6b;
-                padding: 18px;
                 width: 100%;
                 justify-content: center;
             }
         }
 
-
-    }
-
-
-    .layout:nth-child(n+5),
-    .layout:nth-child(4) h2 {
-        background-color: #f5f5f5;
+        .views-field-field-youtube{
+            display: block;
+            padding: 0 1em;
+            margin: 0 auto;
+            background-color: white;
+        }
     }
 
     .layout:last-child {
@@ -647,6 +691,7 @@
 
     .n-ltrasversals {
         background-color: rgb(255, 255, 255);
+        width: 100%;
         max-width: 90vw;
         /*para pantallas pequeñas*/
         margin: 2%;
@@ -658,6 +703,18 @@
             font-size: 1.15em;
             font-weight: 600;
             margin-top: 1em;
+            text-align: left;
+            width: 90vw;
+
+            div.collapse {
+                font-weight: normal;
+                
+            }
+        }
+        @media (min-width: 768px) {
+            .col-sm-9 {
+                max-width: 75%;
+            }
         }
 
         /*para el parrafo*/
@@ -673,6 +730,8 @@
             max-width: 46%;
         }
     }
+
+
 }
 
 
@@ -950,10 +1009,31 @@
 }
 
 
-/*
-.page-portafolio-de-servicios-icbf{
-    .word-gral{
+.page-contratacion{
+    #block-icbf-content{
+        .layout:last-child{
+            .field--name-field-content{
+                >.az-element{
+                    >.az-ctnr{
+                        display:flex;
 
+                        >.az-element:nth-child(1){
+                            width: 66%;
+                        }
+                        >.az-element:nth-child(2){
+                            width: 33%;
+                            a{
+                                word-break: break-all;
+                                white-space: normal;
+                                display: inline-block;
+                            }
+                        }
+                        >.az-element:nth-child(3){
+                            width: 33%;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
-*/
