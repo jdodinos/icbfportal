@@ -157,9 +157,10 @@ input#edit-field-location-all {
   accent-color: #007BFF;
 }
 
+
 .form-radios {
   margin-left: 1rem;
-  color: #1996d0;
+  accent-color: #007BFF;
 
   label {
     color: #1996d0;
@@ -170,6 +171,7 @@ input#edit-field-location-all {
   .js-form-item.form-item.js-form-type-radio.form-type-radio {
     margin: 0.5rem 0;
     font-size: 13px;
+    accent-color: #007BFF;
 
     &:hover {
       text-decoration: underline;
