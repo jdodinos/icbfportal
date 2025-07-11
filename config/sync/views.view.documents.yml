@@ -7,8 +7,8 @@ dependencies:
     - field.storage.node.field_dae_year
     - field.storage.node.field_date
     - field.storage.node.field_document
-    - field.storage.node.field_external_file_url
     - field.storage.node.field_file_categoria
+    - field.storage.node.field_images
     - field.storage.node.field_list_image
     - field.storage.node.field_location
     - field.storage.node.field_section
@@ -102,7 +102,6 @@ dependencies:
     - datetime
     - file
     - image
-    - link
     - node
     - taxonomy
     - text
@@ -3802,10 +3801,72 @@ display:
     position: 25
     display_options:
       fields:
-        field_list_image:
-          id: field_list_image
-          table: node__field_list_image
-          field: field_list_image
+        field_document:
+          id: field_document
+          table: node__field_document
+          field: field_document
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: file_url_plain
+          settings: {  }
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_images:
+          id: field_images
+          table: node__field_images
+          field: field_images
           relationship: none
           group_type: group
           admin_label: ''
@@ -3815,8 +3876,8 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
-            path: '{{ field_document }}'
+            make_link: false
+            path: ''
             absolute: false
             external: false
             replace_spaces: false
@@ -3854,14 +3915,14 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_link: ''
+            image_link: file
             image_style: ''
             image_loading:
               attribute: lazy
           group_column: ''
           group_columns: {  }
           group_rows: true
-          delta_limit: 0
+          delta_limit: 6
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
@@ -3922,73 +3983,6 @@ display:
           settings:
             link_to_entity: false
           group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        field_external_file_url:
-          id: field_external_file_url
-          table: node__field_external_file_url
-          field: field_external_file_url
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: uri
-          type: link
-          settings:
-            trim_length: 80
-            url_only: false
-            url_plain: false
-            rel: '0'
-            target: '0'
-          group_column: ''
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -4184,8 +4178,8 @@ display:
         - 'user.node_grants:view'
       tags:
         - 'config:field.storage.node.field_content'
-        - 'config:field.storage.node.field_external_file_url'
-        - 'config:field.storage.node.field_list_image'
+        - 'config:field.storage.node.field_document'
+        - 'config:field.storage.node.field_images'
   block_18:
     id: block_18
     display_title: 'Caracterizacion Peticionarios'
