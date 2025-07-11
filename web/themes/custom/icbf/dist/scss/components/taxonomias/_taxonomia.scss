@@ -268,6 +268,12 @@
     font-family: var.$font-montserrat-regular;
   }
 
+  #n9clt176 {
+    display: block;
+    height: auto;
+  }
+
+
 }
 
 .page-atencion-y-servicios-ciudadania-linea-anticorrupcion-icbf{
@@ -373,6 +379,20 @@
     border: 1px solid #ddd;
     color: #555;
   }
+  tr>td.views-field > h4{
+    font-size: 14px;
+    font-family: var.$font-asap-regular!important;
+  }
+
+  .page-header{
+    display: none;
+  }
+
+  fieldset > legend{
+    margin-bottom: 12%;
+    font-size: 20px;
+    margin-left: 7%;
+  }
 }
 
 .page-contratacion{
@@ -380,5 +400,15 @@
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
+  }
+}
+
+.page-atencion-y-servicios-ciudadania-publicaciones-derecho-de-peticion-ley-1755-2015{
+  .view-content{
+    margin-bottom: 6%;
+  }
+
+  .view-filters{
+    margin-top: -8.5rem;
   }
 }
