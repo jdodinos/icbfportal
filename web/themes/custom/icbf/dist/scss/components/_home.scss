@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as var;
+
 .page-inicio {
 
     .node--type-page {
@@ -173,6 +175,8 @@
 /*PUNTOS DE ATENCIÓN - pagina interna del home*/
 .page-puntos-de-atencion-icbf-1{
     .node__content{
+
+        font-family: var.$font-montserrat-regular;
 
         .layout--unecol-section{
             display: flex;
