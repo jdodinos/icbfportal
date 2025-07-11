@@ -299,7 +299,7 @@
     margin-bottom: -1px;
     background-color: #fff;
     border: 1px solid #ddd;
-    color: #555;
+    color: #555 !important;
   }
 
   div.views-element-container > h2{
@@ -324,7 +324,7 @@
     margin-bottom: -1px;
     background-color: #fff;
     border: 1px solid #ddd;
-    color: #555;
+    color: #555 !important;
   }
   .list-group-item:first-child {
     border-top-right-radius: 4px;
