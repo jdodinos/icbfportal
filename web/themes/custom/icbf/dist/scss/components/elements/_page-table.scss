@@ -269,12 +269,21 @@
 }
 
 .page-citaciones {
+
+    .view-filters {
+        width: 100%;
+    }
+
     ul {
         padding-left: 0rem;
     }
 
     li {
         display: block;
+    }
+
+    .view {
+        grid-template-rows: .5fr .1fr;
     }
 
     .table thead th {
