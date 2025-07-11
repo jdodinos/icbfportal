@@ -4,19 +4,23 @@ footer {
   margin: 0;
   padding: 0 !important;
   max-width: 100% !important;
-  &.border-top{
+
+  &.border-top {
     border-top: 0 solid #FFFCCC !important;
   }
-  .he_back-cleargrey{
+
+  .he_back-cleargrey {
     background: #f8f8f8;
   }
+
   .m20-link {
     clear: both;
     margin-bottom: .26em;
     margin-left: .1em;
     font-family: var.$font-montserrat-regular;
     line-height: 1.56em;
-   }
+  }
+
   .col-sm-4.col-xs-12.wcenter {
     float: left;
     position: relative;
@@ -24,6 +28,7 @@ footer {
     padding-left: 15px;
     padding-right: 15px;
   }
+
   .col-sm-6.col-xs-12.id-1519 {
     float: left;
     position: relative;
@@ -31,7 +36,9 @@ footer {
     padding-left: 15px;
     padding-right: 15px;
   }
+
   .he_back-clearblue {
+    margin-top: 2em;
     background-color: #f5f9ff;
     display: block;
     font-family: var.$font-montserrat;
@@ -40,14 +47,15 @@ footer {
     position: relative;
     margin-left: -50vw;
     left: 50%;
-
   }
+
   .back-container {
     margin: auto;
     max-width: 1130px;
     padding: 0.5rem;
     width: auto;
-    .col-sm-6.col-xs-12{
+
+    .col-sm-6.col-xs-12 {
       float: left;
       position: relative;
       min-height: 1px;
@@ -55,8 +63,10 @@ footer {
       padding-right: 15px;
     }
   }
+
   .id-1519 {
     font-family: var.$font-montserrat;
+
     h2 {
       color: #4b4b4b;
       font-family: var.$font-montserrat;
@@ -74,6 +84,7 @@ footer {
         font-size: large;
       }
     }
+
     p {
       font-family: var.$font-montserrat-regular;
       font-size: 1em;
@@ -81,6 +92,7 @@ footer {
       line-height: normal;
       color: var.$color-text-gray;
     }
+
     .btn-1519-1 {
       background-color: #0073ff;
       border-radius: 30px;
@@ -92,6 +104,7 @@ footer {
       font-weight: 600;
       margin: 0.2em 0.3em 0.4em 0;
       padding: 0.2em 0.83em;
+
       &:hover {
         background-color: #fff;
         border: 2px solid #0073ff;
@@ -100,14 +113,17 @@ footer {
       }
     }
   }
+
   .hspace {
     clear: both;
     display: block;
     height: 8px;
   }
+
   .wcenter {
     margin: auto;
     text-align: center;
+
     @media (max-width: 767px) {
       float: inherit !important;
     }
@@ -115,12 +131,14 @@ footer {
     .he-footinfo {
       color: #4b4b4b;
       display: block;
+
       h4 {
         font-family: var.$font-montserrat;
         font-size: 1.23em;
         font-weight: 500;
         line-height: normal;
       }
+
       p {
         font-family: var.$font-montserrat-regular;
         font-size: 1em;
@@ -132,6 +150,7 @@ footer {
     .he-footimg {
       margin: auto;
       display: inline-block;
+
       img {
         width: auto;
         height: 57px;
@@ -139,6 +158,7 @@ footer {
       }
     }
   }
+
   .he_footerg {
     background: #36c 0% 0% no-repeat padding-box;
     color: #fff;
@@ -149,13 +169,16 @@ footer {
     letter-spacing: 0;
     opacity: 1;
     padding: 2em 0 1em;
+
     .he_footermarg {
       margin: auto;
       float: left;
       display: flex;
+
       @media (max-width: 1199px) {
         display: inline;
       }
+
       .col-lg-2,
       .col-lg-4,
       .col-lg-6 {
@@ -165,36 +188,43 @@ footer {
         }
       }
     }
+
     p {
       font-family: var.$font-montserrat;
     }
+
     h4 {
       font-family: var.$font-montserrat;
       font-size: 1.3em;
       font-weight: 700;
       line-height: normal;
     }
+
     a {
       color: #fff;
       text-decoration: none;
       font-weight: 600 !important;
+
       &:hover {
         font-weight: 700;
         color: #FFFCCC;
         text-decoration: underline;
       }
     }
+
     .split {
       border-right: 1px solid #fff;
       border-left: 1px solid #fff;
       padding: 12px;
       max-width: 450px;
+
       @media (max-width: 1199px) {
         border-right: 0;
         border-left: 0;
         border-bottom: 1px solid #fff;
         border-top: 1px solid #fff;
       }
+
       @media (max-width: 991px) {
         border-right: 0;
         border-left: 0;
@@ -202,17 +232,22 @@ footer {
         border-top: 0;
       }
     }
+
     .no-split {
       padding: 12px;
     }
+
     .logos {
       text-align: center;
+
       @media (max-width: 991px) {
         display: none;
       }
     }
+
     .no-split.split-top.screen-md-sm.logos_movil {
       display: none;
+
       @media (max-width: 991px) {
         border-top: 1px solid #fff;
         align-items: self-end;
@@ -220,38 +255,46 @@ footer {
         justify-content: space-evenly;
       }
     }
+
     .logog {
       margin-bottom: 16px;
+
       img {
         height: auto;
         width: 150px;
       }
     }
+
     .logo_cog img {
       height: auto;
       width: 45px;
       padding-bottom: 10px;
     }
   }
-  .he_footer_redesg{
+
+  .he_footer_redesg {
     list-style: none;
     margin: 0;
     padding-left: 0.5rem;
-    .he_footer_socialgov{
+
+    .he_footer_socialgov {
       display: inline-block;
       padding: .5em .3em !important;
       margin: .3em .2em;
       text-align: center;
-      &:hover{
+
+      &:hover {
         background-color: #024a9c;
         text-decoration: none !important;
       }
     }
-    .fa_text{
+
+    .fa_text {
       font-family: var.$font-montserrat-regular;
       font-size: 1em;
       font-weight: 600;
     }
+
     .fa-twitg:before {
       content: "\f099";
       border-radius: 50%;
@@ -262,6 +305,7 @@ footer {
       text-align: center;
       box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.5);
     }
+
     .fa-instagrmg:before {
       content: "\f16d";
       border-radius: 50%;
@@ -272,6 +316,7 @@ footer {
       text-align: center;
       box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.5);
     }
+
     .fa-faceg:before {
       content: "\f09a";
       border-radius: 50%;
@@ -282,6 +327,7 @@ footer {
       text-align: center;
       box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.5);
     }
+
     .fa-youtbg:before {
       content: "\f167";
       border-radius: 50%;
@@ -293,21 +339,26 @@ footer {
       box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.5);
     }
   }
-  .he_gov_list{
+
+  .he_gov_list {
     list-style: none;
     padding-left: 1rem;
   }
+
   .block-bean-footer3 {
     text-align: center;
     font-family: var.$font-asap-regular;
+
     .container {
       display: flex;
       align-items: center;
       padding: 0.8em 0;
+
       @media (max-width: 991px) {
         display: inline;
         padding: 1em 0;
       }
+
       .col-sm-6 {
         @media (max-width: 991px) {
           width: 90%;
@@ -320,5 +371,5 @@ footer {
 }
 
 .he_footerg ul.he_gov_list li {
-    margin-left: 0;
+  margin-left: 0;
 }
