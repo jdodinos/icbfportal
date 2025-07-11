@@ -1816,13 +1816,17 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          hierarchy: false
+          hierarchy: true
           label_display: visible
           facet:
             query_operator: or
             min_count: 1
             show_numbers: true
             processor_configs:
+              hierarchy_processor:
+                weights:
+                  build: 100
+                settings: {  }
               translate_entity:
                 weights:
                   build: 5
@@ -1832,6 +1836,8 @@ display:
                   sort: 40
                 settings:
                   sort: ASC
+            hierarchy: taxonomy
+            expand_hierarchy: 0
         facets_field_unpublish_date:
           id: facets_field_unpublish_date
           table: search_api_index_citaciones

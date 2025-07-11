@@ -663,7 +663,7 @@ display:
           hierarchy: false
           label_display: visible
           facet:
-            query_operator: or
+            query_operator: and
             min_count: 1
             show_numbers: true
             processor_configs:
@@ -679,9 +679,14 @@ display:
                 weights:
                   build: 50
                 settings:
-                  exclude: ''
-                  regex: 0
+                  exclude: '^(Centro Zonal|Unidad Local|Dirección)\b.*'
+                  regex: 1
                   invert: 0
+              display_value_widget_order:
+                weights:
+                  sort: 40
+                settings:
+                  sort: ASC
         field_document:
           id: field_document
           table: search_api_index_hiring_process

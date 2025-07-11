@@ -1,29 +1,29 @@
-uuid: c946b587-77a0-45e8-8fab-71e6e55d946a
+uuid: de680a72-8336-46e0-a71c-e94e34e8c152
 langcode: es
 status: true
 dependencies:
   config:
-    - field.storage.node.field_creation_date
-    - field.storage.node.field_document
+    - field.storage.node.field_dae_year
     - field.storage.node.field_location
-    - field.storage.node.field_notification_type
-    - field.storage.node.field_receiver
-    - field.storage.node.field_resume
-    - search_api.index.notifications_pc
+    - field.storage.node.field_process_object
+    - search_api.index.hiring_process
+    - taxonomy.vocabulary.hiring_process_category
+  content:
+    - 'taxonomy_term:hiring_process_category:c65ad6d8-e759-4278-8e9c-60d525fe3323'
+    - 'taxonomy_term:hiring_process_category:cc9364fd-3f57-4c5e-ac4d-ead1b0ad3e9b'
   module:
     - better_exposed_filters
     - datetime
     - facets_exposed_filters
-    - file
     - search_api
     - text
     - views_bootstrap
-id: notifications_pc_sapi
-label: 'Notificaciones PC SAPI'
+id: hiring_process_sapi
+label: 'Procesos de Contratación SAPI'
 module: views
 description: ''
 tag: ''
-base_table: search_api_index_notifications_pc
+base_table: search_api_index_hiring_process
 base_field: search_api_id
 display:
   default:
@@ -32,19 +32,19 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Notificaciones - PC'
+      title: 'Procesos de Contratación'
       fields:
-        field_document:
-          id: field_document
-          table: search_api_datasource_notifications_pc_entity_node
-          field: field_document
+        field_dae_year:
+          id: field_dae_year
+          table: search_api_datasource_hiring_process_entity_node
+          field: field_dae_year
           relationship: none
           group_type: group
           admin_label: ''
           entity_type: node
           plugin_id: search_api_field
-          label: 'URL (indexed)'
-          exclude: true
+          label: 'Fecha de publicación'
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -84,81 +84,12 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: file_url_plain
-          settings: {  }
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
-        field_document_1:
-          id: field_document_1
-          table: search_api_datasource_notifications_pc_entity_node
-          field: field_document
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          plugin_id: search_api_field
-          label: Documento
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: true
-            path: '{{ field_document }}'
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: file_default
+          click_sort_column: value
+          type: datetime_default
           settings:
-            use_description_as_link_text: true
-          group_column: ''
+            timezone_override: ''
+            format_type: html_year
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -177,14 +108,14 @@ display:
             multi_separator: ', '
         title:
           id: title
-          table: search_api_datasource_notifications_pc_entity_node
+          table: search_api_datasource_hiring_process_entity_node
           field: title
           relationship: none
           group_type: group
           admin_label: ''
           entity_type: node
           plugin_id: search_api_field
-          label: Nombre
+          label: Proceso
           exclude: false
           alter:
             alter_text: false
@@ -228,7 +159,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: false
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -246,257 +177,20 @@ display:
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
-        field_notification_type:
-          id: field_notification_type
-          table: search_api_datasource_notifications_pc_entity_node
-          field: field_notification_type
+        field_process_object:
+          id: field_process_object
+          table: search_api_datasource_hiring_process_entity_node
+          field: field_process_object
           relationship: none
           group_type: group
           admin_label: ''
           entity_type: node
           plugin_id: search_api_field
-          label: 'Tipo de notificación'
+          label: 'Objeto del proceso'
           exclude: false
           alter:
             alter_text: false
             text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: false
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api_entity
-          fallback_options:
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
-            display_methods:
-              actas_contentivas_type:
-                display_method: label
-              announcement_status:
-                display_method: label
-              citizen_category:
-                display_method: label
-                view_mode: default
-              congreso_xxii:
-                display_method: label
-                view_mode: default
-              convocatorias_gesti_n_humana:
-                display_method: label
-              departments_municipalities:
-                display_method: label
-              dependencies:
-                display_method: label
-              despublicados:
-                display_method: label
-                view_mode: default
-              entidad_titular:
-                display_method: label
-              event_calendar_status:
-                display_method: label
-              eventos:
-                display_method: label
-              eventos_agenda:
-                display_method: label
-              file_category:
-                display_method: label
-              forums:
-                display_method: label
-                view_mode: default
-              hiring_process_category:
-                display_method: label
-              hiring_process_type:
-                display_method: label
-              locations:
-                display_method: label
-                view_mode: default
-              media_folders:
-                display_method: label
-              menu_childhood:
-                display_method: label
-              menu_observatory:
-                display_method: label
-              menu_transparency:
-                display_method: label
-              migrantes:
-                display_method: label
-              mis_manos_te_ensenan:
-                display_method: label
-                view_mode: default
-              ninos_ninas_y_adolescentes:
-                display_method: label
-                view_mode: default
-              normativa:
-                display_method: label
-              para_papas:
-                display_method: label
-                view_mode: default
-              periodicity:
-                display_method: label
-              petition_rights_status:
-                display_method: label
-              procedure:
-                display_method: label
-                view_mode: default
-              procedure_type:
-                display_method: label
-              programa_adopciones:
-                display_method: label
-                view_mode: default
-              secctions:
-                display_method: label
-                view_mode: default
-              section_labels:
-                display_method: label
-              sige:
-                display_method: label
-              sige_process_type:
-                display_method: label
-                view_mode: default
-              tags:
-                display_method: label
-              tags_tr_mites:
-                display_method: label
-              tipo_de_notificaci_n:
-                display_method: label
-              tipos_de_ubicaci_n:
-                display_method: label
-              transparencia_1519:
-                display_method: label
-              trd_regional:
-                display_method: label
-        field_receiver:
-          id: field_receiver
-          table: search_api_datasource_notifications_pc_entity_node
-          field: field_receiver
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          plugin_id: search_api_field
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
-        field_resume:
-          id: field_resume
-          table: search_api_datasource_notifications_pc_entity_node
-          field: field_resume
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          plugin_id: search_api_field
-          label: Destinatario
-          exclude: false
-          alter:
-            alter_text: true
-            text: "<h3>{{ field_receiver }} </h3>\r\n<div>{{ field_document_1 }} <br/>\r\n{{ field_resume }} </div>"
             make_link: false
             path: ''
             absolute: false
@@ -545,7 +239,7 @@ display:
           delta_first_last: false
           multi_type: separator
           separator: ', '
-          field_api_classes: false
+          field_api_classes: true
           field_rendering: true
           fallback_handler: search_api_text
           fallback_options:
@@ -554,81 +248,9 @@ display:
             multi_type: separator
             multi_separator: ', '
             filter_type: xss
-        field_creation_date:
-          id: field_creation_date
-          table: search_api_datasource_notifications_pc_entity_node
-          field: field_creation_date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          plugin_id: search_api_field
-          label: 'Fecha fijación'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: datetime_default
-          settings:
-            timezone_override: ''
-            format_type: long
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
         field_location:
           id: field_location
-          table: search_api_datasource_notifications_pc_entity_node
+          table: search_api_datasource_hiring_process_entity_node
           field: field_location
           relationship: none
           group_type: group
@@ -797,7 +419,7 @@ display:
         options:
           offset: 0
           pagination_heading_level: h4
-          items_per_page: 30
+          items_per_page: 15
           total_pages: null
           id: 0
           tags:
@@ -832,10 +454,10 @@ display:
         options: {  }
       empty: {  }
       sorts:
-        field_creation_date:
-          id: field_creation_date
-          table: search_api_index_notifications_pc
-          field: field_creation_date
+        field_dae_year:
+          id: field_dae_year
+          table: search_api_index_hiring_process
+          field: field_dae_year
           relationship: none
           group_type: group
           admin_label: ''
@@ -849,7 +471,7 @@ display:
       filters:
         status:
           id: status
-          table: search_api_index_notifications_pc
+          table: search_api_index_hiring_process
           field: status
           relationship: none
           group_type: group
@@ -887,7 +509,7 @@ display:
             group_items: {  }
         type:
           id: type
-          table: search_api_index_notifications_pc
+          table: search_api_index_hiring_process
           field: type
           relationship: none
           group_type: group
@@ -895,7 +517,7 @@ display:
           plugin_id: search_api_options
           operator: or
           value:
-            notifications: notifications
+            hiring_process: hiring_process
           group: 1
           exposed: false
           expose:
@@ -926,6 +548,56 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
+        field_hiring_process_category:
+          id: field_hiring_process_category
+          table: search_api_index_hiring_process
+          field: field_hiring_process_category
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_term
+          operator: or
+          value:
+            - 6916
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: hiring_process_category
+          type: textfield
+          hierarchy: false
+          limit: true
+          error_message: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
         type: views_bootstrap_table
       row:
@@ -939,6 +611,7 @@ display:
           query_tags: {  }
           contextual_filters_or: false
       relationships: {  }
+      use_ajax: true
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -950,172 +623,807 @@ display:
         - url.query_args
         - 'user.node_grants:view'
       tags:
-        - 'config:field.storage.node.field_creation_date'
-        - 'config:field.storage.node.field_document'
+        - 'config:field.storage.node.field_dae_year'
         - 'config:field.storage.node.field_location'
-        - 'config:field.storage.node.field_notification_type'
-        - 'config:field.storage.node.field_receiver'
-        - 'config:field.storage.node.field_resume'
-        - 'config:search_api.index.notifications_pc'
-        - 'search_api_list:notifications_pc'
+        - 'config:field.storage.node.field_process_object'
+        - 'config:search_api.index.hiring_process'
+        - 'search_api_list:hiring_process'
   block:
     id: block
-    display_title: Block
+    display_title: 'Régimen especial'
+    display_plugin: block
+    position: 1
+    display_options:
+      exposed_form:
+        type: bef
+        options:
+          submit_button: Aplicar
+          reset_button: true
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Seleccione cualquier filtro y pulse Aplicar para ver los resultados'
+          text_input_required_format: full_html
+          bef:
+            general:
+              autosubmit: true
+              autosubmit_exclude_textfield: true
+              autosubmit_textfield_delay: 500
+              autosubmit_textfield_minimum_length: 3
+              autosubmit_hide: true
+              input_required: false
+              allow_secondary: false
+              secondary_label: 'Opciones avanzadas'
+              secondary_open: false
+              reset_button_always_show: false
+            filter:
+              search_api_fulltext:
+                plugin_id: default
+                advanced:
+                  placeholder_text: ''
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+                  hide_label: false
+              facets_field_dae_year:
+                plugin_id: bef
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+                  hide_label: false
+                select_all_none: false
+                select_all_none_nested: false
+                display_inline: false
+              facets_field_location:
+                plugin_id: bef
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+                  hide_label: false
+                select_all_none: false
+                select_all_none_nested: false
+                display_inline: false
+              facets_field_hiring_type_process:
+                plugin_id: bef
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+                  hide_label: false
+                select_all_none: false
+                select_all_none_nested: false
+                display_inline: false
+      filters:
+        status:
+          id: status
+          table: search_api_index_hiring_process
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_boolean
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        type:
+          id: type
+          table: search_api_index_hiring_process
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_options
+          operator: or
+          value:
+            hiring_process: hiring_process
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+        field_hiring_process_category:
+          id: field_hiring_process_category
+          table: search_api_index_hiring_process
+          field: field_hiring_process_category
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_term
+          operator: or
+          value:
+            - 6916
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: hiring_process_category
+          type: textfield
+          hierarchy: false
+          limit: true
+          error_message: true
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_hiring_process
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_fulltext
+          operator: or
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: search_api_fulltext_op
+            label: 'Buscar por palabra clave:'
+            description: ''
+            use_operator: false
+            operator: search_api_fulltext_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: search_api_fulltext
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrador_funcional: '0'
+              content_editor: '0'
+              administrator: '0'
+              administrador_icbf: '0'
+              administrador_infraestructura: '0'
+              admin_webforms: '0'
+              adopciones: '0'
+              abastecimiento: '0'
+              aseguramiento_calidad: '0'
+              citaciones: '0'
+              comunicaciones: '0'
+              contratacion: '0'
+              contratacion_regionales: '0'
+              convocatoria: '0'
+              constructor_glazed_b: '0'
+              defensor_de_familia: '0'
+              documentos: '0'
+              documentos_micrositiios: '0'
+              editor_contenidos_vip_: '0'
+              editor_transparencia: '0'
+              editor_micrositios: '0'
+              editor_ninos_y_ninas: '0'
+              encargos: '0'
+              evaluacion: '0'
+              gestion_humana: '0'
+              informacion_transparencia: '0'
+              juridica: '0'
+              planeacion: '0'
+              mejoramiento_sige: '0'
+              noticias: '0'
+              noticias_compras_locales: '0'
+              notificaciones_coactivos: '0'
+              observatorio_de_bienestar: '0'
+              servicios_docs_derechos_peticion_puntos_atencion_: '0'
+              servicios_portafolio_: '0'
+              sede_direccion_general: '0'
+              regional_amazonas: '0'
+              regional_antioquia: '0'
+              regional_arauca: '0'
+              regional_atlantico: '0'
+              regional_bogota: '0'
+              regional_boyaca: '0'
+              regional_bolivar: '0'
+              regional_caldas: '0'
+              regional_caqueta: '0'
+              regional_casanare: '0'
+              regional_cauca: '0'
+              regional_cesar: '0'
+              regional_choco: '0'
+              regional_cordoba: '0'
+              regional_cundinamarca: '0'
+              regional_la_guajira: '0'
+              regional_guainia: '0'
+              regional_guaviare: '0'
+              regional_huila: '0'
+              regional_magdalena: '0'
+              regional_meta: '0'
+              regional_narino: '0'
+              regional_norte_de_santander: '0'
+              regional_putumayo: '0'
+              regional_quindio: '0'
+              regional_risaralda: '0'
+              regional_san_andres: '0'
+              regional_santander: '0'
+              regional_sucre: '0'
+              regional_tolima: '0'
+              regional_valle: '0'
+              regional_vaupes: '0'
+              regional_vichada: '0'
+              migracion: '0'
+              web_master: '0'
+              rendicion_de_cuentas: '0'
+              rol_1: '0'
+              administrador_funcional_ajustado: '0'
+              transparencia_contenidos: '0'
+              administrar_datos_ninos_migrantes_venezolanos: '0'
+              eventos_calendario: '0'
+            expose_fields: false
+            placeholder: ''
+            searched_fields_id: search_api_fulltext_searched_fields
+            value_maxlength: 128
+            autocomplete_filter: 0
+            autocomplete_min_chars: '0'
+            autocomplete_items: '10'
+            autocomplete_field: ''
+            autocomplete_raw_suggestion: 1
+            autocomplete_raw_dropdown: 1
+            autocomplete_dependent: 0
+            autocomplete_contextual: 0
+            autocomplete_autosubmit: 0
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          parse_mode: terms
+          min_length: 3
+          fields:
+            - field_contact_email
+            - field_process_object
+            - filename
+            - title
+        facets_field_hiring_type_process:
+          id: facets_field_hiring_type_process
+          table: search_api_index_hiring_process
+          field: facets_field_hiring_type_process
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: facets_filter
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Filtrar por Tipo de Proceso:'
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_hiring_type_process
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrador_funcional: '0'
+              content_editor: '0'
+              administrator: '0'
+              administrador_icbf: '0'
+              administrador_infraestructura: '0'
+              admin_webforms: '0'
+              adopciones: '0'
+              abastecimiento: '0'
+              aseguramiento_calidad: '0'
+              citaciones: '0'
+              comunicaciones: '0'
+              contratacion: '0'
+              contratacion_regionales: '0'
+              convocatoria: '0'
+              constructor_glazed_b: '0'
+              defensor_de_familia: '0'
+              documentos: '0'
+              documentos_micrositiios: '0'
+              editor_contenidos_vip_: '0'
+              editor_transparencia: '0'
+              editor_micrositios: '0'
+              editor_ninos_y_ninas: '0'
+              encargos: '0'
+              evaluacion: '0'
+              gestion_humana: '0'
+              informacion_transparencia: '0'
+              juridica: '0'
+              planeacion: '0'
+              mejoramiento_sige: '0'
+              noticias: '0'
+              noticias_compras_locales: '0'
+              notificaciones_coactivos: '0'
+              observatorio_de_bienestar: '0'
+              servicios_docs_derechos_peticion_puntos_atencion_: '0'
+              servicios_portafolio_: '0'
+              sede_direccion_general: '0'
+              regional_amazonas: '0'
+              regional_antioquia: '0'
+              regional_arauca: '0'
+              regional_atlantico: '0'
+              regional_bogota: '0'
+              regional_boyaca: '0'
+              regional_bolivar: '0'
+              regional_caldas: '0'
+              regional_caqueta: '0'
+              regional_casanare: '0'
+              regional_cauca: '0'
+              regional_cesar: '0'
+              regional_choco: '0'
+              regional_cordoba: '0'
+              regional_cundinamarca: '0'
+              regional_la_guajira: '0'
+              regional_guainia: '0'
+              regional_guaviare: '0'
+              regional_huila: '0'
+              regional_magdalena: '0'
+              regional_meta: '0'
+              regional_narino: '0'
+              regional_norte_de_santander: '0'
+              regional_putumayo: '0'
+              regional_quindio: '0'
+              regional_risaralda: '0'
+              regional_san_andres: '0'
+              regional_santander: '0'
+              regional_sucre: '0'
+              regional_tolima: '0'
+              regional_valle: '0'
+              regional_vaupes: '0'
+              regional_vichada: '0'
+              migracion: '0'
+              web_master: '0'
+              rendicion_de_cuentas: '0'
+              rol_1: '0'
+              administrador_funcional_ajustado: '0'
+              transparencia_contenidos: '0'
+              administrar_datos_ninos_migrantes_venezolanos: '0'
+              eventos_calendario: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          hierarchy: false
+          label_display: visible
+          facet:
+            query_operator: and
+            min_count: 1
+            show_numbers: true
+            processor_configs:
+              translate_entity:
+                weights:
+                  build: 5
+                settings: {  }
+              display_value_widget_order:
+                weights:
+                  sort: 40
+                settings:
+                  sort: ASC
+        facets_field_dae_year:
+          id: facets_field_dae_year
+          table: search_api_index_hiring_process
+          field: facets_field_dae_year
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: facets_filter
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Filtrar por Fecha de Publicación:'
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_dae_year
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              0: '0'
+              anonymous: '0'
+              administrador_funcional: '0'
+              content_editor: '0'
+              administrator: '0'
+              administrador_icbf: '0'
+              administrador_infraestructura: '0'
+              admin_webforms: '0'
+              adopciones: '0'
+              abastecimiento: '0'
+              aseguramiento_calidad: '0'
+              citaciones: '0'
+              comunicaciones: '0'
+              contratacion: '0'
+              contratacion_regionales: '0'
+              convocatoria: '0'
+              constructor_glazed_b: '0'
+              defensor_de_familia: '0'
+              documentos: '0'
+              documentos_micrositiios: '0'
+              editor_contenidos_vip_: '0'
+              editor_transparencia: '0'
+              editor_micrositios: '0'
+              editor_ninos_y_ninas: '0'
+              encargos: '0'
+              evaluacion: '0'
+              gestion_humana: '0'
+              informacion_transparencia: '0'
+              juridica: '0'
+              planeacion: '0'
+              mejoramiento_sige: '0'
+              noticias: '0'
+              noticias_compras_locales: '0'
+              notificaciones_coactivos: '0'
+              observatorio_de_bienestar: '0'
+              servicios_docs_derechos_peticion_puntos_atencion_: '0'
+              servicios_portafolio_: '0'
+              sede_direccion_general: '0'
+              regional_amazonas: '0'
+              regional_antioquia: '0'
+              regional_arauca: '0'
+              regional_atlantico: '0'
+              regional_bogota: '0'
+              regional_boyaca: '0'
+              regional_bolivar: '0'
+              regional_caldas: '0'
+              regional_caqueta: '0'
+              regional_casanare: '0'
+              regional_cauca: '0'
+              regional_cesar: '0'
+              regional_choco: '0'
+              regional_cordoba: '0'
+              regional_cundinamarca: '0'
+              regional_la_guajira: '0'
+              regional_guainia: '0'
+              regional_guaviare: '0'
+              regional_huila: '0'
+              regional_magdalena: '0'
+              regional_meta: '0'
+              regional_narino: '0'
+              regional_norte_de_santander: '0'
+              regional_putumayo: '0'
+              regional_quindio: '0'
+              regional_risaralda: '0'
+              regional_san_andres: '0'
+              regional_santander: '0'
+              regional_sucre: '0'
+              regional_tolima: '0'
+              regional_valle: '0'
+              regional_vaupes: '0'
+              regional_vichada: '0'
+              migracion: '0'
+              web_master: '0'
+              rendicion_de_cuentas: '0'
+              rol_1: '0'
+              administrador_funcional_ajustado: '0'
+              transparencia_contenidos: '0'
+              administrar_datos_ninos_migrantes_venezolanos: '0'
+              eventos_calendario: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          hierarchy: false
+          label_display: visible
+          facet:
+            query_operator: and
+            min_count: 1
+            show_numbers: true
+            processor_configs:
+              date_item:
+                weights:
+                  build: 35
+                settings:
+                  date_display: actual_date
+                  granularity: '6'
+                  hierarchy: 0
+                  date_format: ''
+              raw_value_widget_order:
+                weights:
+                  sort: 50
+                settings:
+                  sort: DESC
+        facets_field_location:
+          id: facets_field_location
+          table: search_api_index_hiring_process
+          field: facets_field_location
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: facets_filter
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Filtrar por Ubicación:'
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_location
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              0: '0'
+              anonymous: '0'
+              administrador_funcional: '0'
+              content_editor: '0'
+              administrator: '0'
+              administrador_icbf: '0'
+              administrador_infraestructura: '0'
+              admin_webforms: '0'
+              adopciones: '0'
+              abastecimiento: '0'
+              aseguramiento_calidad: '0'
+              citaciones: '0'
+              comunicaciones: '0'
+              contratacion: '0'
+              contratacion_regionales: '0'
+              convocatoria: '0'
+              constructor_glazed_b: '0'
+              defensor_de_familia: '0'
+              documentos: '0'
+              documentos_micrositiios: '0'
+              editor_contenidos_vip_: '0'
+              editor_transparencia: '0'
+              editor_micrositios: '0'
+              editor_ninos_y_ninas: '0'
+              encargos: '0'
+              evaluacion: '0'
+              gestion_humana: '0'
+              informacion_transparencia: '0'
+              juridica: '0'
+              planeacion: '0'
+              mejoramiento_sige: '0'
+              noticias: '0'
+              noticias_compras_locales: '0'
+              notificaciones_coactivos: '0'
+              observatorio_de_bienestar: '0'
+              servicios_docs_derechos_peticion_puntos_atencion_: '0'
+              servicios_portafolio_: '0'
+              sede_direccion_general: '0'
+              regional_amazonas: '0'
+              regional_antioquia: '0'
+              regional_arauca: '0'
+              regional_atlantico: '0'
+              regional_bogota: '0'
+              regional_boyaca: '0'
+              regional_bolivar: '0'
+              regional_caldas: '0'
+              regional_caqueta: '0'
+              regional_casanare: '0'
+              regional_cauca: '0'
+              regional_cesar: '0'
+              regional_choco: '0'
+              regional_cordoba: '0'
+              regional_cundinamarca: '0'
+              regional_la_guajira: '0'
+              regional_guainia: '0'
+              regional_guaviare: '0'
+              regional_huila: '0'
+              regional_magdalena: '0'
+              regional_meta: '0'
+              regional_narino: '0'
+              regional_norte_de_santander: '0'
+              regional_putumayo: '0'
+              regional_quindio: '0'
+              regional_risaralda: '0'
+              regional_san_andres: '0'
+              regional_santander: '0'
+              regional_sucre: '0'
+              regional_tolima: '0'
+              regional_valle: '0'
+              regional_vaupes: '0'
+              regional_vichada: '0'
+              migracion: '0'
+              web_master: '0'
+              rendicion_de_cuentas: '0'
+              rol_1: '0'
+              administrador_funcional_ajustado: '0'
+              transparencia_contenidos: '0'
+              administrar_datos_ninos_migrantes_venezolanos: '0'
+              eventos_calendario: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          hierarchy: false
+          label_display: visible
+          facet:
+            query_operator: and
+            min_count: 1
+            show_numbers: true
+            processor_configs:
+              translate_entity:
+                weights:
+                  build: 5
+                settings: {  }
+              exclude_specified_items:
+                weights:
+                  build: 50
+                settings:
+                  exclude: '^(Centro Zonal|Unidad Local)\b.*'
+                  regex: 1
+                  invert: 0
+              display_value_widget_order:
+                weights:
+                  sort: 40
+                settings:
+                  sort: ASC
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        exposed_form: false
+        filters: false
+        filter_groups: false
+      display_description: ''
+      display_extenders:
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+      tags:
+        - 'config:field.storage.node.field_dae_year'
+        - 'config:field.storage.node.field_location'
+        - 'config:field.storage.node.field_process_object'
+        - 'config:search_api.index.hiring_process'
+        - 'search_api_list:hiring_process'
+  block_1:
+    id: block_1
+    display_title: 'Aviso de convocatoria'
     display_plugin: block
     position: 1
     display_options:
       fields:
-        field_document:
-          id: field_document
-          table: search_api_datasource_notifications_pc_entity_node
-          field: field_document
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          plugin_id: search_api_field
-          label: 'URL (indexed)'
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: file_url_plain
-          settings: {  }
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
-        field_document_1:
-          id: field_document_1
-          table: search_api_datasource_notifications_pc_entity_node
-          field: field_document
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          plugin_id: search_api_field
-          label: Documento
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: true
-            path: '{{ field_document }}'
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: file_default
-          settings:
-            use_description_as_link_text: true
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
         title:
           id: title
-          table: search_api_datasource_notifications_pc_entity_node
+          table: search_api_datasource_hiring_process_entity_node
           field: title
           relationship: none
           group_type: group
           admin_label: ''
           entity_type: node
           plugin_id: search_api_field
-          label: Nombre
+          label: Proceso
           exclude: false
           alter:
             alter_text: false
@@ -1159,7 +1467,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: false
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -1177,257 +1485,20 @@ display:
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
-        field_notification_type:
-          id: field_notification_type
-          table: search_api_datasource_notifications_pc_entity_node
-          field: field_notification_type
+        field_process_object:
+          id: field_process_object
+          table: search_api_datasource_hiring_process_entity_node
+          field: field_process_object
           relationship: none
           group_type: group
           admin_label: ''
           entity_type: node
           plugin_id: search_api_field
-          label: 'Tipo de notificación'
+          label: 'Objeto del proceso'
           exclude: false
           alter:
             alter_text: false
             text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: false
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api_entity
-          fallback_options:
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
-            display_methods:
-              actas_contentivas_type:
-                display_method: label
-              announcement_status:
-                display_method: label
-              citizen_category:
-                display_method: label
-                view_mode: default
-              congreso_xxii:
-                display_method: label
-                view_mode: default
-              convocatorias_gesti_n_humana:
-                display_method: label
-              departments_municipalities:
-                display_method: label
-              dependencies:
-                display_method: label
-              despublicados:
-                display_method: label
-                view_mode: default
-              entidad_titular:
-                display_method: label
-              event_calendar_status:
-                display_method: label
-              eventos:
-                display_method: label
-              eventos_agenda:
-                display_method: label
-              file_category:
-                display_method: label
-              forums:
-                display_method: label
-                view_mode: default
-              hiring_process_category:
-                display_method: label
-              hiring_process_type:
-                display_method: label
-              locations:
-                display_method: label
-                view_mode: default
-              media_folders:
-                display_method: label
-              menu_childhood:
-                display_method: label
-              menu_observatory:
-                display_method: label
-              menu_transparency:
-                display_method: label
-              migrantes:
-                display_method: label
-              mis_manos_te_ensenan:
-                display_method: label
-                view_mode: default
-              ninos_ninas_y_adolescentes:
-                display_method: label
-                view_mode: default
-              normativa:
-                display_method: label
-              para_papas:
-                display_method: label
-                view_mode: default
-              periodicity:
-                display_method: label
-              petition_rights_status:
-                display_method: label
-              procedure:
-                display_method: label
-                view_mode: default
-              procedure_type:
-                display_method: label
-              programa_adopciones:
-                display_method: label
-                view_mode: default
-              secctions:
-                display_method: label
-                view_mode: default
-              section_labels:
-                display_method: label
-              sige:
-                display_method: label
-              sige_process_type:
-                display_method: label
-                view_mode: default
-              tags:
-                display_method: label
-              tags_tr_mites:
-                display_method: label
-              tipo_de_notificaci_n:
-                display_method: label
-              tipos_de_ubicaci_n:
-                display_method: label
-              transparencia_1519:
-                display_method: label
-              trd_regional:
-                display_method: label
-        field_receiver:
-          id: field_receiver
-          table: search_api_datasource_notifications_pc_entity_node
-          field: field_receiver
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          plugin_id: search_api_field
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
-        field_resume:
-          id: field_resume
-          table: search_api_datasource_notifications_pc_entity_node
-          field: field_resume
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          plugin_id: search_api_field
-          label: Destinatario
-          exclude: false
-          alter:
-            alter_text: true
-            text: "<h3>{{ field_receiver }} </h3>\r\n<div>{{ field_document_1 }} <br/>\r\n{{ field_resume }} </div>"
             make_link: false
             path: ''
             absolute: false
@@ -1476,7 +1547,7 @@ display:
           delta_first_last: false
           multi_type: separator
           separator: ', '
-          field_api_classes: false
+          field_api_classes: true
           field_rendering: true
           fallback_handler: search_api_text
           fallback_options:
@@ -1485,81 +1556,9 @@ display:
             multi_type: separator
             multi_separator: ', '
             filter_type: xss
-        field_creation_date:
-          id: field_creation_date
-          table: search_api_datasource_notifications_pc_entity_node
-          field: field_creation_date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          plugin_id: search_api_field
-          label: 'Fecha fijación'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: datetime_default
-          settings:
-            timezone_override: ''
-            format_type: long
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
         field_location:
           id: field_location
-          table: search_api_datasource_notifications_pc_entity_node
+          table: search_api_datasource_hiring_process_entity_node
           field: field_location
           relationship: none
           group_type: group
@@ -1723,6 +1722,78 @@ display:
                 display_method: label
               trd_regional:
                 display_method: label
+        field_dae_year:
+          id: field_dae_year
+          table: search_api_datasource_hiring_process_entity_node
+          field: field_dae_year
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: search_api_field
+          label: 'Fecha de publicación'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_default
+          settings:
+            timezone_override: ''
+            format_type: html_year
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
       exposed_form:
         type: bef
         options:
@@ -1759,7 +1830,7 @@ display:
                   collapsible_disable_automatic_open: false
                   is_secondary: false
                   hide_label: false
-              facets_field_notification_type:
+              facets_field_hiring_type_process:
                 plugin_id: bef
                 advanced:
                   rewrite:
@@ -1772,7 +1843,7 @@ display:
                 select_all_none: false
                 select_all_none_nested: false
                 display_inline: false
-              facets_field_creation_date:
+              facets_field_dae_year:
                 plugin_id: bef
                 advanced:
                   rewrite:
@@ -1801,7 +1872,7 @@ display:
       filters:
         status:
           id: status
-          table: search_api_index_notifications_pc
+          table: search_api_index_hiring_process
           field: status
           relationship: none
           group_type: group
@@ -1839,7 +1910,7 @@ display:
             group_items: {  }
         type:
           id: type
-          table: search_api_index_notifications_pc
+          table: search_api_index_hiring_process
           field: type
           relationship: none
           group_type: group
@@ -1847,7 +1918,7 @@ display:
           plugin_id: search_api_options
           operator: or
           value:
-            notifications: notifications
+            hiring_process: hiring_process
           group: 1
           exposed: false
           expose:
@@ -1878,21 +1949,67 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
+        field_hiring_process_category:
+          id: field_hiring_process_category
+          table: search_api_index_hiring_process
+          field: field_hiring_process_category
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_term
+          operator: or
+          value:
+            - 6917
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: hiring_process_category
+          type: textfield
+          hierarchy: false
+          limit: true
+          error_message: true
         search_api_fulltext:
           id: search_api_fulltext
-          table: search_api_index_notifications_pc
+          table: search_api_index_hiring_process
           field: search_api_fulltext
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: search_api_fulltext
-          operator: and
+          operator: or
           value: ''
           group: 1
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: Destinatario
+            label: 'Buscar por palabra clave'
             description: ''
             use_operator: false
             operator: search_api_fulltext_op
@@ -2010,11 +2127,14 @@ display:
           parse_mode: terms
           min_length: 3
           fields:
-            - field_receiver
-        facets_field_notification_type:
-          id: facets_field_notification_type
-          table: search_api_index_notifications_pc
-          field: facets_field_notification_type
+            - field_contact_email
+            - field_process_object
+            - filename
+            - title
+        facets_field_hiring_type_process:
+          id: facets_field_hiring_type_process
+          table: search_api_index_hiring_process
+          field: facets_field_hiring_type_process
           relationship: none
           group_type: group
           admin_label: ''
@@ -2025,19 +2145,18 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: 'Tipo de notificación'
+            label: 'Filtrar por Tipo de Proceso de Contratación:'
             description: ''
             use_operator: false
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_notification_type
+            identifier: field_hiring_type_process
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-              0: '0'
               anonymous: '0'
               administrador_funcional: '0'
               content_editor: '0'
@@ -2144,10 +2263,10 @@ display:
                   sort: 40
                 settings:
                   sort: ASC
-        facets_field_creation_date:
-          id: facets_field_creation_date
-          table: search_api_index_notifications_pc
-          field: facets_field_creation_date
+        facets_field_dae_year:
+          id: facets_field_dae_year
+          table: search_api_index_hiring_process
+          field: facets_field_dae_year
           relationship: none
           group_type: group
           admin_label: ''
@@ -2158,19 +2277,18 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: 'Fecha de Publicación'
+            label: 'Filtrar por fecha de publicación:'
             description: ''
             use_operator: false
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_creation_date
+            identifier: field_dae_year
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-              0: '0'
               anonymous: '0'
               administrador_funcional: '0'
               content_editor: '0'
@@ -2264,7 +2382,7 @@ display:
           hierarchy: false
           label_display: visible
           facet:
-            query_operator: or
+            query_operator: and
             min_count: 1
             show_numbers: true
             processor_configs:
@@ -2276,14 +2394,14 @@ display:
                   granularity: '6'
                   hierarchy: 0
                   date_format: ''
-              count_widget_order:
+              raw_value_widget_order:
                 weights:
-                  sort: 30
+                  sort: 50
                 settings:
                   sort: DESC
         facets_field_location:
           id: facets_field_location
-          table: search_api_index_notifications_pc
+          table: search_api_index_hiring_process
           field: facets_field_location
           relationship: none
           group_type: group
@@ -2295,7 +2413,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: Ubicación
+            label: 'Filtrar por Ubicación:'
             description: ''
             use_operator: false
             operator: ''
@@ -2397,39 +2515,38 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          hierarchy: true
+          hierarchy: false
           label_display: visible
           facet:
-            query_operator: or
+            query_operator: and
             min_count: 1
             show_numbers: true
             processor_configs:
-              hierarchy_processor:
-                weights:
-                  build: 100
-                settings: {  }
               translate_entity:
                 weights:
                   build: 5
                 settings: {  }
+              exclude_specified_items:
+                weights:
+                  build: 50
+                settings:
+                  exclude: '^(Centro Zonal|Unidad Loca)\b.*'
+                  regex: 1
+                  invert: 0
               display_value_widget_order:
                 weights:
                   sort: 40
                 settings:
                   sort: ASC
-            hierarchy: taxonomy
-            expand_hierarchy: 0
       filter_groups:
         operator: AND
         groups:
           1: AND
       defaults:
-        use_ajax: false
         exposed_form: false
         fields: false
         filters: false
         filter_groups: false
-      use_ajax: true
       display_description: ''
       display_extenders:
         metatag_display_extender:
@@ -2444,14 +2561,11 @@ display:
         - url.query_args
         - 'user.node_grants:view'
       tags:
-        - 'config:field.storage.node.field_creation_date'
-        - 'config:field.storage.node.field_document'
+        - 'config:field.storage.node.field_dae_year'
         - 'config:field.storage.node.field_location'
-        - 'config:field.storage.node.field_notification_type'
-        - 'config:field.storage.node.field_receiver'
-        - 'config:field.storage.node.field_resume'
-        - 'config:search_api.index.notifications_pc'
-        - 'search_api_list:notifications_pc'
+        - 'config:field.storage.node.field_process_object'
+        - 'config:search_api.index.hiring_process'
+        - 'search_api_list:hiring_process'
   block_master:
     id: block_master
     display_title: Master
@@ -2471,11 +2585,8 @@ display:
         - url.query_args
         - 'user.node_grants:view'
       tags:
-        - 'config:field.storage.node.field_creation_date'
-        - 'config:field.storage.node.field_document'
+        - 'config:field.storage.node.field_dae_year'
         - 'config:field.storage.node.field_location'
-        - 'config:field.storage.node.field_notification_type'
-        - 'config:field.storage.node.field_receiver'
-        - 'config:field.storage.node.field_resume'
-        - 'config:search_api.index.notifications_pc'
-        - 'search_api_list:notifications_pc'
+        - 'config:field.storage.node.field_process_object'
+        - 'config:search_api.index.hiring_process'
+        - 'search_api_list:hiring_process'
