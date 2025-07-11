@@ -234,13 +234,6 @@
     font-family: var.$font-montserrat !important;
   }
 
-  h1,
-  h2,
-  h3,
-  h4 {
-    font-family: var.$font-asap-regular !important;
-  }
-
   #id-1519 h1 {
     font-family: var.$font-montserrat-regular !important;
   }
@@ -280,6 +273,15 @@
     height: auto;
   }
 
+  a, a:link {
+    color: #1996d0;
+    text-decoration: none !important;
+  }
+
+  a.active, a:hover {
+    color: #125e81;
+    text-decoration: underline !important;
+  }
 
 }
 

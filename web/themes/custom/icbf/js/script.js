@@ -82,9 +82,6 @@ $ = jQuery;
 //se añade funcionalkidad global para el uso de collapse
 $(document).ready(function () {
   // Mostrar el panel al cargar correctamente usando Bootstrap
-  if ($('body').hasClass('page-participacion-para-el-diagnostico-e-identificacion-de-problemas')) {
-    $('#n9clt176').collapse('show');
-  }
 
   $('[data-toggle="collapse"]').click(function (e) {
     const target = $(this).attr('href');
@@ -106,58 +103,3 @@ $(document).ready(function () {
   });
 });
 
-(function () {
-  if (location.host !== "icbfportal.ddev.site") return;
-
-  const baseUrl = "https://www.icbf.gov.co";
-  const relativePath = "/sites/default/files/";
-  const fullPath = baseUrl + relativePath;
-
-  const oldHost = "https://icbfportal.ddev.site/sites/default/files";
-  const newHost = "https://portalpruebas2.icbf.gov.co/sites/default/files";
-
-  const attributes = ["src", "href"];
-
-  function updateAttributes(root = document) {
-    attributes.forEach(attr => {
-      const elements = root.querySelectorAll(`[${attr}]`);
-      elements.forEach(el => {
-        const value = el.getAttribute(attr);
-        if (value && value.startsWith(relativePath)) {
-          el.setAttribute(attr, value.replace(relativePath, fullPath));
-        }
-      });
-    });
-
-    // Reemplazo de contenido hardcoded en innerHTML
-    if (root === document) {
-      document.body.innerHTML = document.body.innerHTML.replaceAll(oldHost, newHost);
-    } else {
-      // Evita reemplazo completo del DOM si root es un nodo parcial
-      root.querySelectorAll("*").forEach(el => {
-        if (el.innerHTML && el.innerHTML.includes(oldHost)) {
-          el.innerHTML = el.innerHTML.replaceAll(oldHost, newHost);
-        }
-      });
-    }
-  }
-
-  // Ejecuta inmediatamente
-  updateAttributes();
-
-  // Observa cambios dinámicos en el DOM
-  const observer = new MutationObserver(mutations => {
-    mutations.forEach(mutation => {
-      mutation.addedNodes.forEach(node => {
-        if (node.nodeType === 1) { // ELEMENT_NODE
-          updateAttributes(node);
-        }
-      });
-    });
-  });
-
-  observer.observe(document.body, {
-    childList: true,
-    subtree: true,
-  });
-})();
