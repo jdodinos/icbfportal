@@ -3149,9 +3149,8 @@ display:
           columns:
             nid: nid
             field_document: field_document
+            field_content: field_content
             edit_node: edit_node
-            field_date: field_date
-            field_dae_year: field_dae_year
           info:
             nid:
               sortable: 0
@@ -3167,21 +3166,14 @@ display:
               separator: ''
               empty_column: 0
               responsive: ''
+            field_content:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
             edit_node:
-              sortable: 0
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: 0
-              responsive: ''
-            field_date:
-              sortable: 0
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: 0
-              responsive: ''
-            field_dae_year:
               sortable: 0
               default_sort_order: asc
               align: ''
@@ -3192,7 +3184,7 @@ display:
           empty_table: 0
           responsive: 0
           bootstrap_styles:
-            striped: 0
+            striped: striped
             bordered: 0
             hover: 0
             condensed: 0
