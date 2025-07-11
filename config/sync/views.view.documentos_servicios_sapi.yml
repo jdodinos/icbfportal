@@ -717,26 +717,32 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          hierarchy: false
+          hierarchy: true
           label_display: visible
           facet:
-            query_operator: or
+            query_operator: and
             min_count: 1
             show_numbers: true
             processor_configs:
+              hierarchy_processor:
+                weights:
+                  build: 100
+                settings: {  }
               date_item:
                 weights:
                   build: 35
                 settings:
                   date_display: actual_date
                   granularity: '6'
-                  hierarchy: 0
+                  hierarchy: 1
                   date_format: ''
               raw_value_widget_order:
                 weights:
                   sort: 50
                 settings:
                   sort: DESC
+            hierarchy: date_items
+            expand_hierarchy: 1
       filter_groups:
         operator: AND
         groups:
