@@ -289,43 +289,81 @@
 }
 
 
-.page-rendicion-de-cuentas-icbf {
-    .block-block-content64ad3cc9-b82f-4c9f-9ddd-73c4e859fba4 {
-        #bf4gltmr {
+.page-rendicion-de-cuentas-icbf{
+    .block-block-content64ad3cc9-b82f-4c9f-9ddd-73c4e859fba4{
+        #bf4gltmr{
             display: flex;
+            flex-wrap: wrap;
             width: 100%;
             margin: 0 auto;
             position: initial;
 
-            >.az-ctnr:first-child {
-                max-width: 90vw;
-                /*para pantallas pequeñas*/
+            >.az-ctnr:first-child{
+                max-width: 90vw;/*para pantallas pequeñas*/
             }
-
             @media (min-width: 768px) {
-                >.az-ctnr:first-child {
+                >.az-ctnr:first-child{
                     max-width: 67%;
                 }
             }
+            
 
-
-            >.az-element {
-                max-width: 90vw;
-                /*para pantallas pequeñas*/
+            >.az-element{
+                width: 90vw;/*para pantallas pequeñas*/
             }
-
             @media (min-width: 768px) {
-                >.az-element {
-                    max-width: 33%;
+                >.az-element{
+                    width: 33%;
                 }
             }
 
-            .box-h245 {
+            .box-h245{
                 margin: 0;
             }
         }
     }
+
+    .content{
+        >.layout:nth-child(2){
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1em;
+
+            .view-id-menu_lista_regionales{
+                .row{
+                    display: grid;
+
+                    .views-field-name {
+                        width: max-content;
+                    }
+                }
+            }
+
+            .block-block-content756d901f-61d2-4aa0-add5-7bf5d2af4f39{
+                padding: 0 1em;
+            }
+
+            .layout__region--first{
+                max-width: 90vw;/*para pantallas pequeñas*/
+            }
+            @media (min-width: 768px) {
+                .layout__region--first{
+                    max-width: 30%;
+                }
+            }
+
+            .layout__region--second{
+                max-width: 90vw;/*para pantallas pequeñas*/
+            }
+            @media (min-width: 768px) {
+                .layout__region--second{
+                    max-width: 70%;
+                }
+            } 
+        }
+    }
 }
+
 
 
 .page-programas-y-estrategias-direccion-de-familias-y-comunidades {

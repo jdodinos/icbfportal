@@ -3,6 +3,7 @@ langcode: es
 status: true
 dependencies:
   config:
+    - field.storage.node.field_contact_email
     - field.storage.node.field_creation_date
     - field.storage.node.field_dae_year
     - field.storage.node.field_date
@@ -81,6 +82,22 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_document
+  field_contact_email:
+    label: 'Correo electrónico de contacto'
+    datasource_id: 'entity:node'
+    property_path: field_contact_email
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_contact_email
+  field_contact_email_1:
+    label: 'Correo electrónico de contacto'
+    datasource_id: 'entity:node'
+    property_path: field_contact_email
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_contact_email
   field_creation_date:
     label: 'Fecha fijación'
     datasource_id: 'entity:node'
@@ -181,7 +198,7 @@ field_settings:
     label: 'Documento » Archivo » Nombre de archivo'
     datasource_id: 'entity:node'
     property_path: 'field_document:entity:filename'
-    type: string
+    type: text
     dependencies:
       config:
         - field.storage.node.field_document
@@ -207,7 +224,7 @@ field_settings:
     label: Título
     datasource_id: 'entity:node'
     property_path: title
-    type: string
+    type: text
     dependencies:
       module:
         - node

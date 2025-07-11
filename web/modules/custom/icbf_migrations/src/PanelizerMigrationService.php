@@ -640,6 +640,12 @@ class PanelizerMigrationService {
         }
         break;
 
+      case 'hiring_process':
+        if ($display_id == 'block' || $display_id == 'block_1') {
+          $view_id = 'hiring_process_sapi';
+        }
+        break;
+
       case 'documents':
         if ($display_id == 'block' || $display_id == 'block_9' || $display_id == 'block_10' || $display_id == 'block_11') {
           $view_id = 'documents_sapi';
