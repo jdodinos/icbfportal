@@ -1,0 +1,114 @@
+@use "../abstracts/variables" as var;
+
+.page-programas-y-estrategias-primera-infancia-cuentame{
+
+    
+    .line-vo, .bar-line {
+        border-top: 1px solid #8095f7;
+        border-bottom: 0;
+    }
+
+    .vocabulary-secctions{
+
+        .tb-megamenu{
+            .tb-megamenu-nav{
+                display: flex;
+                flex-direction: column;
+                .tb-megamenu-item{
+                    margin-left: 0;
+                    margin-right: 0;
+                    margin-bottom: .5em;
+                    padding: 0;
+                    width: 100%;
+                    position: relative;
+                    a{
+                        background-color: #fcfcfc;
+                        border-radius: 4px;
+                        color: #004686;
+                        font-weight: 400;
+                        line-height: 18px;
+                        padding: 10px;
+                        text-decoration: none;
+                        font-family: var.$font-montserrat;
+                        font-size: 12.6px;
+
+                        .caret{
+                            border-top: 0.4em solid transparent;
+                            border-bottom: 0.4em solid transparent;
+                            border-left: 0.4em solid black;
+                        }
+                    }
+
+                    &.active-trail{
+                        a{
+                            border: 1px solid #3cb371 !important;
+                        }
+                    }
+
+                    .tb-megamenu-submenu{
+                        top: 0;
+                        left: 100%;
+                        width: 400px;
+                        padding: 0;
+                        border-left: 2px solid #009688;
+                        .mega-dropdown-inner{
+                            .tb-megamenu-row.row-fluid{
+                                display: flex;
+                                .tb-megamenu-column{
+                                    width: 100%;
+                                    .tb-megamenu-subnav{
+                                        .tb-megamenu-item{
+                                            position: relative;
+                                            margin: 0;
+                                            border-bottom: 1px solid rgb(238, 238, 238);
+
+                                            a{
+                                                color: #333;
+                                                font-size: 14px;
+                                                line-height: 21.84px;
+        
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        video {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            display: block;
+        }
+
+        > .content{
+            > .layout--unecol-section{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+
+                .layout__region--first{
+                    width: calc(100% / 12 * 2);
+                    @media (max-width: 992px){
+                        width: 100%;
+                    }
+                }
+                .layout__region--second{
+                    width: calc(100% / 12 * 10);
+                    @media (max-width: 992px){
+                        width: 100%;
+                    }
+                }
+                .layout__region--third{
+                    width: calc(100% / 12 * 5);
+                    @media (max-width: 992px){
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
