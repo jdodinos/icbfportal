@@ -225,6 +225,14 @@
 
 .page-noticias{
 
+    .layout:nth-child(2){
+        .block-views-blocknoticias-sapi-block-newslist{
+            .view-header{
+                margin-left: 16.6666666667%;
+            }
+        }
+    }
+
     .view-display-id-block_newslist{
 
         @media (max-width: 720px){
@@ -304,10 +312,11 @@
         /*Columna de filtros ubicada a la izquirda de la subpagina noticias*/
         .view-filters{
             /*Entorno local*/
+            margin-top: 0;
             .views-exposed-form{
                 .js-form-item:first-child{
                     label{
-                        margin-bottom: 35px;
+                        margin: -1.5em;
                     }
                 } 
             }
