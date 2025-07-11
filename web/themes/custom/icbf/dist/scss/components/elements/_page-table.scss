@@ -3,11 +3,11 @@
 .page-id-1249,
 .page-id-1250,
 .page-id-1245,
-.page-id-6904 {
+.page-id-6904,
+.page-citaciones {
     .view-filters {
         grid-row: 1 / span 2;
         grid-column: 1;
-        width: 100% !important;
         margin-top: 0;
 
         input.form-text {
@@ -121,14 +121,36 @@
     }
 }
 
+.page-id-1245 {
+    ul {
+        padding-left: 0rem;
+    }
+
+    li {
+        display: block;
+    }
+
+    .view-filters {
+        width: 11vw;
+
+        @media (max-width: var.$media_tablet) {
+            width: 40vw;
+        }
+    }
+
+
+}
+
 .page-id-1274,
 .page-id-1237,
+.page-id-1238,
 .page-cartelera-virtual-control-interno-disciplinario {
     li.list-group-item {
         padding: 10px 15px;
         background-color: #fff;
         border: solid #ddd;
-        border-width: 1px 1px;
+        border-width: 2px 1px;
+        margin-bottom: 0px;
     }
 }
 
@@ -148,6 +170,25 @@
         font-weight: 500;
         color: #006229;
         font-family: var.$font-montserrat, sans-serif;
+    }
+}
+
+.page-id-1238 {
+    .view-content {
+        float: left;
+        width: 75%;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        @media(max-width: var.$media_tablet) {
+            width: 100%;
+        }
+    }
+}
+
+.page-id-1240 {
+    .layout__region.layout__region--second {
+        margin-bottom: 1.5em;
     }
 }
 
@@ -212,6 +253,35 @@
     }
 
     a {
+        font-family: var.$font-montserrat-regular;
+        font-size: 14px;
+    }
+
+    .page-item.pager__item--next {
+        width: auto;
+    }
+
+    .table {
+        margin: auto;
+        width: 83.33333333%;
+        float: none;
+    }
+}
+
+.page-citaciones {
+    ul {
+        padding-left: 0rem;
+    }
+
+    li {
+        display: block;
+    }
+
+    .table thead th {
+        font-family: var.$font-asap-regular;
+    }
+
+    .table tbody {
         font-family: var.$font-asap-regular;
         font-size: 14px;
     }
