@@ -309,11 +309,11 @@
         /*Columna de filtros ubicada a la izquirda de la subpagina noticias*/
         .view-filters{
             /*Entorno local*/
-            margin-top: 0;
+            margin-top: -3.5em;
             .views-exposed-form{
                 .js-form-item:first-child{
                     label{
-                        margin: -1.5em;
+                        margin: 0.5em;
                     }
                 } 
             }
