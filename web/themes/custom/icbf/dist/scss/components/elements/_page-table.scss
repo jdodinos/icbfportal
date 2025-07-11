@@ -138,7 +138,9 @@
         }
     }
 
-
+    .view {
+        grid-template-rows: .5fr;
+    }
 }
 
 .page-id-1274,
@@ -146,10 +148,12 @@
 .page-id-1238,
 .page-cartelera-virtual-control-interno-disciplinario {
     li.list-group-item {
+        color: #555555 !important;
         padding: 10px 15px;
         background-color: #fff;
         border: solid #ddd;
         border-width: 1px 1px;
+        color: #555 !important;
     }
 }
 
@@ -173,6 +177,12 @@
 }
 
 .page-id-1238 {
+
+    h4 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
     .view-content {
         float: left;
         width: 75%;
@@ -249,9 +259,11 @@
     h3 {
         margin-top: 0;
         margin-bottom: 0;
+        font-size: 14px;
+        font-family: 'montserrat-Regular';
     }
 
-    a {
+    .file--application-pdf a {
         font-family: var.$font-montserrat-regular;
         font-size: 14px;
     }
@@ -260,9 +272,13 @@
         width: auto;
     }
 
-    .table {
-        margin: auto;
+    .views-element-container.contextual-region.block.block-views.block-views-blockdocumentos-servicios-block-4 {
         width: 83.33333333%;
+        margin: auto;
+    }
+
+    .table {
+        width: 100%;
         float: none;
     }
 }
@@ -271,6 +287,14 @@
 
     .view-filters {
         width: 100%;
+    }
+
+    .form-checkboxes.bef-checkboxes {
+        margin-left: 2rem;
+    }
+
+    label.option {
+        color: #1996d0;
     }
 
     ul {

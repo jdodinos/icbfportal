@@ -84,6 +84,7 @@
     font-size: 14px;
     font-family: "Asap";
     color: var.$color-text-gray;
+
     p {
       margin: 0;
     }
@@ -106,40 +107,45 @@
   }
 }
 
-.slick--skin--boxed>.slick__slider>.slick-list{
+.slick--skin--boxed>.slick__slider>.slick-list {
   margin: 0;
 }
-.slick--skin--boxed-carousel .slide__content{
+
+.slick--skin--boxed-carousel .slide__content {
   margin: 0;
 }
-.slick-arrow:before{
+
+.slick-arrow:before {
   color: #929292;
 }
-.page-taxonomy-secctions{
+
+.page-taxonomy-secctions {
   font-family: 'montserrat';
 
-  .view-id-articulos_secciones{
-    .content-landbox{
-      .col-sm-5{
+  .view-id-articulos_secciones {
+    .content-landbox {
+      .col-sm-5 {
 
-        .youtube-container{
+        .youtube-container {
           margin: .7em 0;
         }
       }
-      .col-sm-7{
+
+      .col-sm-7 {
         font-size: 12.46px;
         line-height: 17.0702px;
       }
 
-      .youtube-container--responsive{
+      .youtube-container--responsive {
         position: relative;
         width: 100%;
-        padding-bottom: 56.25%; /* 16:9 ratio */
+        padding-bottom: 56.25%;
+        /* 16:9 ratio */
         height: 0;
         overflow: hidden;
         max-width: 100%;
 
-        iframe{
+        iframe {
           position: absolute;
           top: 0;
           left: 0;
@@ -151,19 +157,14 @@
     }
   }
 
-  .view-misional-ninez-y-adolescencia{
-
-    .view-content{
-    }
-
-    .bottm-line{
+  .view-misional-ninez-y-adolescencia {
+    .bottm-line {
       border: 0;
     }
-
   }
 
-  .block-views-blockmisional-ninez-y-adolescencia-block-vdoinf{
-    .views-field-title{
+  .block-views-blockmisional-ninez-y-adolescencia-block-vdoinf {
+    .views-field-title {
       color: #6b6b6b;
       display: block;
       font-family: 'montserrat';
@@ -177,15 +178,15 @@
     }
   }
 
-  .block-views-blockmisional-ninez-y-adolescencia-block-2ayj{
+  .block-views-blockmisional-ninez-y-adolescencia-block-2ayj {
     max-width: 920px;
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
   }
 
-  .view-misional-ninez-y-adolescencia{
-    .views-field-title{
+  .view-misional-ninez-y-adolescencia {
+    .views-field-title {
       color: #333;
       font-family: 'Montserrat', sans-serif;
       font-size: 1.7em;
@@ -203,18 +204,20 @@
 .page-control-social-0,
 .page-participa-colaboracion-e-innovacion,
 .page-canal-interacción-deliberatoria-pc,
-.page-participa-consulta-ciudadana{
-  #main{
+.page-participa-consulta-ciudadana {
+  #main {
     max-width: 1150px;
     margin: 0 auto;
     padding: 0 1rem;
   }
+
   .btn-primary {
     color: #fff;
-    background-color: #337ab7!important;
-    border-color: #2e6da4!important;
+    background-color: #337ab7 !important;
+    border-color: #2e6da4 !important;
   }
-  .row{
+
+  .row {
     margin: 0 auto;
     padding: 0 1rem;
   }
@@ -222,18 +225,17 @@
   .word-gral h3 {
     font-size: 1.38em;
     font-weight: 500;
-    font-family: var.$font-montserrat!important;
+    font-family: var.$font-montserrat !important;
   }
 
-  .word-gral h4{
+  .word-gral h4 {
     font-size: 1.32em;
     font-weight: 500;
-    font-family: var.$font-montserrat!important;
+    font-family: var.$font-montserrat !important;
   }
 
-
-  #id-1519 h1{
-    font-family: var.$font-montserrat-regular!important;
+  #id-1519 h1 {
+    font-family: var.$font-montserrat-regular !important;
   }
 
   .word-gral strong {
@@ -257,11 +259,12 @@
     background-color: #333 !important;
     color: #fff !important;
   }
-  #dxt79nkh{
+
+  #dxt79nkh {
     margin-bottom: 3em;
   }
 
-  .page-header{
+  .page-header {
     font-family: var.$font-montserrat-regular;
   }
 
@@ -270,29 +273,38 @@
     height: auto;
   }
 
-  a:visited {
-    color: #125e81;
+  a, a:link {
+    color: #1996d0;
+    text-decoration: none !important;
   }
 
+  a.active, a:hover {
+    color: #125e81;
+    text-decoration: underline !important;
+  }
 
 }
 
-.page-atencion-y-servicios-ciudadania-linea-anticorrupcion-icbf{
-  .featured{
+.page-atencion-y-servicios-ciudadania-linea-anticorrupcion-icbf {
+  .featured {
     display: none;
   }
-  .row-offcanvas{
+
+  .row-offcanvas {
     padding-top: 1rem;
   }
+
   div [data-az-id="8pnqiakl"] {
     flex: 0 0 auto;
-    width: 37.66666667%; /* 5/12 */
+    width: 37.66666667%;
+    /* 5/12 */
   }
 
   div [data-az-id="3snb96cf"] {
     flex: 0 0 auto;
     width: 48.666667%;
   }
+
   .list-group-item {
     position: relative;
     display: block;
@@ -300,10 +312,10 @@
     margin-bottom: -1px;
     background-color: #fff;
     border: 1px solid #ddd;
-    color: #555;
+    color: #555 !important;
   }
 
-  div.views-element-container > h2{
+  div.views-element-container>h2 {
     margin-left: 25%;
   }
 
@@ -317,7 +329,7 @@
 }
 
 
-.page-contratacion-notificaciones-y-avisos{
+.page-contratacion-notificaciones-y-avisos {
   .list-group-item {
     position: relative;
     display: block;
@@ -325,15 +337,16 @@
     margin-bottom: -1px;
     background-color: #fff;
     border: 1px solid #ddd;
-    color: #555;
+    color: #555 !important;
   }
+
   .list-group-item:first-child {
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
   }
 }
 
-.page-contratacion-venta-de-acciones-no-inscritas-en-bolsa{
+.page-contratacion-venta-de-acciones-no-inscritas-en-bolsa {
   .table-striped>tbody>tr:nth-of-type(odd) {
     background-color: #f9f9f9;
   }
@@ -359,44 +372,49 @@
     width: 110%;
     float: left;
   }
-  .form--inline .form-actions{
+
+  .form--inline .form-actions {
     padding-top: 26px;
     margin-left: 6px;
   }
-  #edit-submit-hiring-process, #edit-submit-hiring-process--AfVS7ZEvleI, #edit-reset-hiring-process--_tV04Q0Ne3o {
-    color: #fff!important;
-    background-color: #5bc0de!important;
-    border-color: #46b8da!important;
+
+  .btn-primary {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+
   }
-  table{
+
+  table {
     width: 100%;
   }
 }
 
 
-.page-atencion-y-servicios-ciudadania-informes-pqrs{
-  tbody{
+.page-atencion-y-servicios-ciudadania-informes-pqrs {
+  tbody {
     background-color: #fff;
     border: 1px solid #ddd;
     color: #555;
   }
-  tr>td.views-field > h4{
+
+  tr>td.views-field>h4 {
     font-size: 14px;
-    font-family: var.$font-asap-regular!important;
+    font-family: var.$font-asap-regular !important;
   }
 
-  .page-header{
+  .page-header {
     display: none;
   }
 
-  fieldset > legend{
+  fieldset>legend {
     margin-bottom: 12%;
     font-size: 20px;
     margin-left: 7%;
   }
 }
 
-.page-contratacion{
+.page-contratacion {
   .view-content {
     display: flex;
     flex-wrap: wrap;
@@ -404,12 +422,12 @@
   }
 }
 
-.page-atencion-y-servicios-ciudadania-publicaciones-derecho-de-peticion-ley-1755-2015{
-  .view-content{
+.page-atencion-y-servicios-ciudadania-publicaciones-derecho-de-peticion-ley-1755-2015 {
+  .view-content {
     margin-bottom: 6%;
   }
 
-  .view-filters{
+  .view-filters {
     margin-top: -8.5rem;
   }
 }

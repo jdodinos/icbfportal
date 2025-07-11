@@ -1838,10 +1838,10 @@ display:
                   sort: ASC
             hierarchy: taxonomy
             expand_hierarchy: 0
-        facets_field_unpublish_date:
-          id: facets_field_unpublish_date
+        facets_field_creation_date:
+          id: facets_field_creation_date
           table: search_api_index_citaciones
-          field: facets_field_unpublish_date
+          field: facets_field_creation_date
           relationship: none
           group_type: group
           admin_label: ''
@@ -1852,13 +1852,13 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: 'Filtrar por fecha desfijación:'
+            label: 'Filtrar por fecha fijación:'
             description: ''
             use_operator: false
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_unpublish_date
+            identifier: field_creation_date
             required: false
             remember: false
             multiple: false
@@ -1974,10 +1974,10 @@ display:
                   sort: 50
                 settings:
                   sort: DESC
-        facets_field_creation_date:
-          id: facets_field_creation_date
+        facets_field_unpublish_date:
+          id: facets_field_unpublish_date
           table: search_api_index_citaciones
-          field: facets_field_creation_date
+          field: facets_field_unpublish_date
           relationship: none
           group_type: group
           admin_label: ''
@@ -1988,13 +1988,13 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: 'Filtrar por fecha fijación:'
+            label: 'Filtrar por fecha desfijación:'
             description: ''
             use_operator: false
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_creation_date
+            identifier: field_unpublish_date
             required: false
             remember: false
             multiple: false
