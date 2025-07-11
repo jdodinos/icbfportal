@@ -1371,10 +1371,10 @@ display:
                 weights:
                   build: 5
                 settings: {  }
-        facets_locality:
-          id: facets_locality
+        facets_field_lugar:
+          id: facets_field_lugar
           table: search_api_index_news
-          field: facets_locality
+          field: facets_field_lugar
           relationship: none
           group_type: group
           admin_label: ''
@@ -1391,7 +1391,7 @@ display:
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-            identifier: locality
+            identifier: field_lugar
             required: false
             remember: false
             multiple: false
@@ -1499,7 +1499,21 @@ display:
                 weights:
                   build: 100
                 settings: {  }
-            hierarchy: date_items
+              translate_entity:
+                weights:
+                  build: 5
+                settings: {  }
+              display_value_widget_order:
+                weights:
+                  sort: 40
+                settings:
+                  sort: ASC
+              count_widget_order:
+                weights:
+                  sort: 30
+                settings:
+                  sort: DESC
+            hierarchy: taxonomy
             expand_hierarchy: 0
       filter_groups:
         operator: AND
