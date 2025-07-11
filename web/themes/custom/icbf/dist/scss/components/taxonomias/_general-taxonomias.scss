@@ -1009,10 +1009,31 @@
 }
 
 
-/*
-.page-portafolio-de-servicios-icbf{
-    .word-gral{
+.page-contratacion{
+    #block-icbf-content{
+        .layout:last-child{
+            .field--name-field-content{
+                >.az-element{
+                    >.az-ctnr{
+                        display:flex;
 
+                        >.az-element:nth-child(1){
+                            width: 66%;
+                        }
+                        >.az-element:nth-child(2){
+                            width: 33%;
+                            a{
+                                word-break: break-all;
+                                white-space: normal;
+                                display: inline-block;
+                            }
+                        }
+                        >.az-element:nth-child(3){
+                            width: 33%;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
-*/
