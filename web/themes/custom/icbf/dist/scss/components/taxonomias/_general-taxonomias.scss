@@ -290,40 +290,72 @@
 
 
 .page-rendicion-de-cuentas-icbf{
-    .block-block-content64ad3cc9-b82f-4c9f-9ddd-73c4e859fba4{
-        #bf4gltmr{
-            display: flex;
-            flex-wrap: wrap;
-            width: 100%;
-            margin: 0 auto;
-            position: initial;
+    
+    .content{
+        >.layout:first-child{
+            .block-block-content64ad3cc9-b82f-4c9f-9ddd-73c4e859fba4{
+                #bf4gltmr{
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    margin: 0 auto;
+                    position: initial;
+        
+                    >.az-ctnr:first-child{
+                        max-width: 90vw;/*para pantallas pequeñas*/
+                        text-align: justify;
+                        >.az-element:first-child{
+                            >.az-element{
+                                width: 100%;
 
-            >.az-ctnr:first-child{
-                max-width: 90vw;/*para pantallas pequeñas*/
-            }
-            @media (min-width: 768px) {
-                >.az-ctnr:first-child{
-                    max-width: 67%;
+                                #y4orv7oj{
+                                    a:visited {
+                                        color: #1996d0;
+                                    }
+                                }
+
+                                h3{
+                                    color: #6b6b6b;
+                                    display: block;
+                                    font-family: 'Montserrat', sans-serif;
+                                    line-height: initial;
+                                    margin: auto;
+                                    padding: 1.2em 0;
+                                    word-break: break-word;
+                                    font-size: 24px;
+                                }
+
+                                .item-list{
+                                    ul{
+                                        margin: 0 0 0.75em 1.5em;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    @media (min-width: 768px) {
+                        >.az-ctnr:first-child{
+                            max-width: 67%;
+                        }
+                    }
+                    
+        
+                    >.az-element{
+                        width: 90vw;/*para pantallas pequeñas*/
+                    }
+                    @media (min-width: 768px) {
+                        >.az-element{
+                            width: 33%;
+                        }
+                    }
+        
+                    .box-h245{
+                        margin: 0;
+                    }
                 }
-            }
-            
-
-            >.az-element{
-                width: 90vw;/*para pantallas pequeñas*/
-            }
-            @media (min-width: 768px) {
-                >.az-element{
-                    width: 33%;
-                }
-            }
-
-            .box-h245{
-                margin: 0;
             }
         }
-    }
 
-    .content{
         >.layout:nth-child(2){
             display: flex;
             flex-wrap: wrap;
