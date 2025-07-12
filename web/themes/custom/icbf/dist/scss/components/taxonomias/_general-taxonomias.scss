@@ -307,11 +307,11 @@
                         >.az-element:first-child{
                             >.az-element{
                                 width: 100%;
-
-                                #y4orv7oj{
-                                    a:visited {
-                                        color: #1996d0;
-                                    }
+                                a:visited {
+                                    color: #1996d0 !important;
+                                }
+                                a:hover{
+                                    color: #125e81 !important;
                                 }
 
                                 h3{
@@ -325,11 +325,9 @@
                                     font-size: 24px;
                                 }
 
-                                .item-list{
-                                    ul{
-                                        margin: 0 0 0.75em 1.5em;
-                                    }
-                                }
+                            }
+                            .item-list{
+                                margin: 0 0 0.75em 1.5em !important;
                             }
                         }
                     }
@@ -1066,6 +1064,43 @@
                     }
                 }
             }
+        }
+    }
+}
+
+
+.page-atencion-y-servicios-ciudadania{
+    #block-icbf-content{
+        .layout:first-child{
+            h1{
+                display: none;
+            }
+        }
+
+        .layout:nth-child(3){
+            #by885n4f{
+                a:hover {
+                    color: #125e81;
+                    text-decoration: underline !important;
+                }
+                a:visited{
+                    color: #1996d0;
+                }
+            }
+
+        }
+    }
+}
+
+.page-circulo-de-opinion-de-los-ninas-y-ninas-usuarios-de-los-servicios-de-primera-infancia-regional{
+    .node__content{
+        >div{
+            font-style: normal;
+        }
+
+        .img-fluid {
+            width: 100%;
+            height: auto;
         }
     }
 }
