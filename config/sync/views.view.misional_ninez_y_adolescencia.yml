@@ -4543,7 +4543,7 @@ display:
           type: image
           settings:
             image_link: ''
-            image_style: ''
+            image_style: large
             image_loading:
               attribute: lazy
           group_column: ''
@@ -4757,7 +4757,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-sm-3\">\r\n  {{ field_list_image}}\r\n</div>\r\n<div class=\"col-sm-9\">\r\n  {{ title }}\r\n  {{ field_resume }}\r\n  {{ field_introduction_text }}\r\n</div>\r\n"
+            text: "<div class=\"col-sm-3\">\r\n  {{ field_list_image}}\r\n</div>\r\n<div class=\"col-sm-9\">\r\n<h4 class=\"views-field views-field-title n-item-title\"><span class=\"field-content\">{{ title }}</span></h4>\r\n  {{ field_resume }}\r\n  {{ field_introduction_text }}\r\n</div>\r\n"
             make_link: false
             path: ''
             absolute: false
@@ -6780,7 +6780,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-sm-3\">\r\n  {{ field_list_image}}\r\n</div>\r\n<div class=\"col-sm-9\">\r\n  {{ title }}\r\n  {{ field_resume }}\r\n  {{ field_introduction_text }}\r\n</div>\r\n"
+            text: "<div class=\"col-sm-3\">\r\n  {{ field_list_image}}\r\n</div>\r\n<div class=\"col-sm-9\">\r\n<h4 class=\"views-field views-field-title n-item-title\"><span class=\"field-content\">{{ title }}</span></h4>\r\n  {{ field_resume }}\r\n  {{ field_introduction_text }}\r\n</div>\r\n"
             make_link: false
             path: ''
             absolute: false
@@ -7407,7 +7407,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-sm-3\">\r\n  {{ field_list_image}}\r\n</div>\r\n<div class=\"col-sm-9\">\r\n  {{ title }}\r\n  {{ field_resume }}\r\n  {{ field_introduction_text }}\r\n</div>\r\n"
+            text: "<div class=\"col-sm-3\">\r\n  {{ field_list_image}}\r\n</div>\r\n<div class=\"col-sm-9\">\r\n<h4 class=\"views-field views-field-title n-item-title\"><span class=\"field-content\">{{ title }}</span></h4>\r\n  {{ field_resume }}\r\n  {{ field_introduction_text }}\r\n</div>\r\n"
             make_link: false
             path: ''
             absolute: false
@@ -8034,7 +8034,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col-sm-3\">\r\n  {{ field_list_image}}\r\n</div>\r\n<div class=\"col-sm-9\">\r\n  {{ title }}\r\n  {{ field_resume }}\r\n  {{ field_introduction_text }}\r\n</div>\r\n"
+            text: "<div class=\"col-sm-3\">\r\n  {{ field_list_image}}\r\n</div>\r\n<div class=\"col-sm-9\">\r\n<h4 class=\"views-field views-field-title n-item-title\"><span class=\"field-content\">{{ title }}</span></h4>\r\n  {{ field_resume }}\r\n  {{ field_introduction_text }}\r\n</div>\r\n"
             make_link: false
             path: ''
             absolute: false
