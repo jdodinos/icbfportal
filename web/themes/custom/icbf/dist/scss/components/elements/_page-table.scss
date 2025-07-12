@@ -176,6 +176,7 @@
 }
 
 
+
 .page-id-1237,
 .page-id-1253 {
 
@@ -184,6 +185,13 @@
     }
 
     .view-filters .js-form-type-textfield label {
+        font-size: 1.27em;
+        font-weight: 500;
+        color: #006229;
+        font-family: var.$font-montserrat, sans-serif;
+    }
+
+    .view-filters span.fieldset-legend {
         font-size: 1.27em;
         font-weight: 500;
         color: #006229;
@@ -319,6 +327,12 @@
     .table {
         width: 100%;
         float: none;
+    }
+}
+
+.page-id-7052 {
+    .table {
+        float: right;
     }
 }
 

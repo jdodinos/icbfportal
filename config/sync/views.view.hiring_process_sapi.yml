@@ -600,6 +600,49 @@ display:
           1: AND
       style:
         type: views_bootstrap_table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          override: 1
+          sticky: 0
+          caption: ''
+          summary: ''
+          description: ''
+          columns:
+            field_dae_year: field_dae_year
+            title: title
+            field_process_object: field_process_object
+            field_location: field_location
+          info:
+            field_dae_year:
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            title:
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            field_process_object:
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            field_location:
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+          default: '-1'
+          empty_table: 0
+          responsive: 0
+          bootstrap_styles:
+            striped: striped
+            bordered: 0
+            hover: 0
+            condensed: 0
       row:
         type: fields
       query:
