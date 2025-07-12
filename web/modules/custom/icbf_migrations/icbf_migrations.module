@@ -11,7 +11,6 @@ use Drupal\Core\Cache\Cache;
  */
 function icbf_migrations_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
   if (empty($args[0])) {
-    $args = [];
     // Get the arguments for nodes.
     $node = \Drupal::routeMatch()->getParameter('node');
     if ($node instanceof \Drupal\node\NodeInterface) {
@@ -31,27 +30,28 @@ function icbf_migrations_views_pre_view(ViewExecutable $view, $display_id, array
           ->execute()->fetchAll();
       }
     }
-
     if (!empty($layout_configs)) {
       $cid = 'views_processed';
       $cache_data = \Drupal::cache()->get($cid)->data ?? [];
+
       foreach ($layout_configs as $layout_config) {
         // @see Drupal\layout_builder\Section
         $layout_config = $layout_config->layout_builder__layout_section;
         $layout_config = unserialize($layout_config);
         $layout_components = $layout_config->getComponents();
         foreach ($layout_components as $comp_uuid => $component) {
+          $args = [];
           $component_config = $component->get('configuration');
           if ($component_config['id'] == "views_block:{$view->id()}-{$display_id}") {
             if (!in_array($comp_uuid, $cache_data)) {
-              $cache_data[$comp_uuid] = $comp_uuid;
-              \Drupal::cache()->set($cid, $cache_data, time() + 60);
               if (!empty($component_config['arguments'])) {
+                $cache_data[$comp_uuid] = $comp_uuid;
+                \Drupal::cache()->set($cid, $cache_data, time() + 10);
                 foreach ($component_config['arguments'] as $block_argument) {
                   $args[] = $block_argument;
                 }
               }
-              break;
+              break 2;
             }
           }
         }
