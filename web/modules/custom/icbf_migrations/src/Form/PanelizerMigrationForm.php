@@ -515,6 +515,9 @@ class PanelizerMigrationForm extends FormBase {
 
               $did = $item->did;
               $panel = $item->panel;
+              if ($term_value->entity_id == 1208) {
+                $panel = 'center';
+              }
               $position_data = $this->panelizer->searchSectionInLayout($panel, $panels_display);
 
               $type = $item->type;
@@ -524,8 +527,12 @@ class PanelizerMigrationForm extends FormBase {
               if (isset($configuration['formatter']) && $configuration['formatter'] == 'text_glazed_builder') {
                 $configuration['formatter'] = 'text_default';
               }
-
               foreach ($section_node as &$row) {
+                if ($term_value->entity_id == 1208) {
+                  $row['children'] = [
+                    'center',
+                  ];
+                }
                 $field_configuration = [];
                 if (isset($row['children']) && in_array($position_data['panel_name'], $row['children'])) {
                   $block_plugin_id = NULL;
@@ -655,7 +662,6 @@ class PanelizerMigrationForm extends FormBase {
                       $this->panelizer->addFormatterConfig($configuration);
                       $field_configuration = $this->panelizer->block_config;
                     }
-
                     // Create the layout builder component (item/block).
                     $field_component = new SectionComponent(
                       \Drupal::service('uuid')->generate(),
