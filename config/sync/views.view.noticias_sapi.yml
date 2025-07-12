@@ -878,7 +878,7 @@ display:
         type: bef
         options:
           submit_button: Aplicar
-          reset_button: false
+          reset_button: true
           reset_button_label: Restablecer
           exposed_sorts_label: 'Ordenar por'
           expose_sort_order: true
@@ -922,7 +922,7 @@ display:
                   collapsible_disable_automatic_open: false
                   is_secondary: false
                   hide_label: false
-              facets_locality:
+              facets_field_lugar:
                 plugin_id: default
                 advanced:
                   rewrite:
