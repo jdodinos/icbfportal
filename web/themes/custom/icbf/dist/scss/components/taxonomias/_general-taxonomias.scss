@@ -404,12 +404,10 @@
         }
 
         >.layout:last-child{
-            #f8tpbcm4{
-                >.az-ctnr:first-child{
-                    >.az-element:nth-child(3){
-                        .describet{
-                            margin-left: 0;
-                        }
+            .az-ctnr{
+                >.az-element:nth-child(3){
+                    .describet{
+                        margin-left: 0;
                     }
                 }
             }
