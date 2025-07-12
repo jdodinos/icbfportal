@@ -2400,7 +2400,7 @@ display:
           hierarchy: true
           label_display: visible
           facet:
-            query_operator: or
+            query_operator: and
             min_count: 1
             show_numbers: true
             processor_configs:
