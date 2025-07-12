@@ -480,6 +480,9 @@ class PanelizerMigrationService {
         elseif ($block_id == 'servicios-pqr---1519-3') {
           $block_title = 'Servicios PQR - 1519-3';
         }
+        elseif ($block_id == 'titulo-micrositio') {
+          $block_title = 'Observatorio de Bienestar - top';
+        }
         $block_query = $this->database->select('block_content', 'b');
         $block_query->join('block_content_field_data', 'bcfd', 'b.id = bcfd.id');
         $block_query->fields('b', ['uuid'])
