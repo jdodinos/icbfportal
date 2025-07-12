@@ -304,6 +304,8 @@
                     >.az-ctnr:first-child{
                         max-width: 90vw;/*para pantallas pequeñas*/
                         text-align: justify;
+                        padding: 0 1.5em;
+
                         >.az-element:first-child{
                             >.az-element{
                                 width: 100%;
@@ -391,8 +393,30 @@
                 }
             } 
         }
+
+        >.layout:nth-child(3){
+            .slick__arrow{
+                >button:first-child {
+                    margin-left: 20px;
+                }
+            }
+
+        }
+
+        >.layout:last-child{
+            #f8tpbcm4{
+                >.az-ctnr:first-child{
+                    >.az-element:nth-child(3){
+                        .describet{
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
+
 
 
 
@@ -666,7 +690,26 @@
         }
     }
 
-    .layout:nth-child(n+4):nth-child(-n+6),
+    .layout:nth-child(2){
+        .view-misional-ninez-y-adolescencia{
+            .bottm-line:first-child{
+                border-bottom: 2px solid #eee;
+                margin-bottom: 1em;
+                .views-field-title{
+                    span, .field-content{
+                        text-align: center;
+                        display: contents;
+                    }
+                }
+            }
+            .bottm-line:nth-child(2){
+                border-bottom: 2px solid #eee;
+                margin-bottom: 1em;
+            }
+        }
+    }
+
+    .layout:nth-child(n+5):nth-child(-n+7),
     .layout:nth-child(4) h2 {
         background-color: #f5f5f5;
 
@@ -763,6 +806,10 @@
 
 
 }
+
+
+
+
 
 
 .page-gestion-humana-manual-de-funciones-0 {
@@ -1095,6 +1142,8 @@
         }
     }
 }
+
+
 
 .page-circulo-de-opinion-de-los-ninas-y-ninas-usuarios-de-los-servicios-de-primera-infancia-regional{
     .node__content{
