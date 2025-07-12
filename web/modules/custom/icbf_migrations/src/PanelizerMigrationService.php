@@ -227,7 +227,7 @@ class PanelizerMigrationService {
     foreach ($panels_display as $item) {
       $layout_settings = unserialize($item->layout_settings);
 
-      if ($layout_settings) {
+      if ($layout_settings && isset($layout_settings['items'][$panel_name])) {
         if ($layout_settings['items'][$panel_name]['parent'] == 'main') {
           $position = [
             'panel_name' => $panel_name,
