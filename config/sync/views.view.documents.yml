@@ -46,6 +46,7 @@ dependencies:
     - 'taxonomy_term:file_category:be3bd2fb-4096-4ef1-89f2-dd95cc1e4279'
     - 'taxonomy_term:file_category:be8d1c43-185b-4ce9-9a32-0613c6f01881'
     - 'taxonomy_term:file_category:c0ba92df-7809-408b-94c5-80373550e4e7'
+    - 'taxonomy_term:file_category:d0b9ee12-860a-4f7c-b41a-ac97595be82d'
     - 'taxonomy_term:file_category:e1544022-bc0c-4cbd-b4f6-0af1d9d3cc3a'
     - 'taxonomy_term:file_category:eb6574af-4e69-44a0-b893-bddbee85b693'
     - 'taxonomy_term:file_category:ed8f05d5-5029-45a7-8149-f516af7756c4'
@@ -614,7 +615,7 @@ display:
     id: block_10
     display_title: 'informe trimestral'
     display_plugin: block
-    position: 5
+    position: 8
     display_options:
       fields:
         nid:
@@ -1153,7 +1154,7 @@ display:
     id: block_11
     display_title: 'Informe PQRDS'
     display_plugin: block
-    position: 5
+    position: 9
     display_options:
       fields:
         nid:
@@ -1691,7 +1692,7 @@ display:
     id: block_12
     display_title: 'informe satisfaccion'
     display_plugin: block
-    position: 5
+    position: 10
     display_options:
       fields:
         nid:
@@ -2118,7 +2119,7 @@ display:
     id: block_13
     display_title: 'normativa suit'
     display_plugin: block
-    position: 7
+    position: 11
     display_options:
       fields:
         nid:
@@ -2556,7 +2557,7 @@ display:
     id: block_14
     display_title: RPC-procedimiento
     display_plugin: block
-    position: 5
+    position: 12
     display_options:
       fields:
         nid:
@@ -3042,7 +3043,7 @@ display:
     id: block_15
     display_title: Cuentame
     display_plugin: block
-    position: 8
+    position: 28
     display_options:
       fields:
         nid:
@@ -3444,7 +3445,7 @@ display:
     id: block_16
     display_title: 'Direccionamiento ERegionales'
     display_plugin: block
-    position: 8
+    position: 29
     display_options:
       fields:
         nid:
@@ -3798,7 +3799,7 @@ display:
     id: block_17
     display_title: 'Publicaciones y Boletines'
     display_plugin: block
-    position: 25
+    position: 13
     display_options:
       fields:
         field_document:
@@ -4184,7 +4185,7 @@ display:
     id: block_18
     display_title: 'Caracterizacion Peticionarios'
     display_plugin: block
-    position: 5
+    position: 14
     display_options:
       fields:
         nid:
@@ -4784,7 +4785,7 @@ display:
     id: block_19
     display_title: 'directorio contratistas'
     display_plugin: block
-    position: 5
+    position: 15
     display_options:
       fields:
         nid:
@@ -4861,7 +4862,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: Sección
+          label: ''
           exclude: true
           alter:
             alter_text: false
@@ -4894,7 +4895,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -4924,10 +4925,10 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: Documento
+          label: ''
           exclude: true
           alter:
-            alter_text: true
+            alter_text: false
             text: "<div>\r\n<h4>{{ field_document }} </h4>\r\n{{ field_content }}</div>"
             make_link: false
             path: ''
@@ -4957,7 +4958,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -4990,8 +4991,8 @@ display:
           label: Documento
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "<h3>{{ field_document }}</h3>\r\n{{ field_content }} "
             make_link: false
             path: ''
             absolute: false
@@ -5094,7 +5095,7 @@ display:
           type: datetime_default
           settings:
             timezone_override: ''
-            format_type: medium
+            format_type: long
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -5689,7 +5690,7 @@ display:
     id: block_20
     display_title: 'Boletin Vive ICBF'
     display_plugin: block
-    position: 7
+    position: 16
     display_options:
       fields:
         field_document:
@@ -6021,7 +6022,7 @@ display:
     id: block_22
     display_title: 'Normativa AC'
     display_plugin: block
-    position: 8
+    position: 17
     display_options:
       fields:
         nid:
@@ -6562,7 +6563,7 @@ display:
     id: block_23
     display_title: OCC
     display_plugin: block
-    position: 8
+    position: 30
     display_options:
       fields:
         nid:
@@ -6853,7 +6854,7 @@ display:
     id: block_24
     display_title: 'Manual de contratación'
     display_plugin: block
-    position: 7
+    position: 18
     display_options:
       fields:
         nid:
@@ -7243,7 +7244,7 @@ display:
     id: block_25
     display_title: 'Manual de contratación (Relacionados)'
     display_plugin: block
-    position: 7
+    position: 19
     display_options:
       fields:
         nid:
@@ -7594,7 +7595,7 @@ display:
     id: block_27
     display_title: 'Docs XXII Congreso'
     display_plugin: block
-    position: 7
+    position: 31
     display_options:
       fields:
         nid:
@@ -8041,7 +8042,7 @@ display:
     id: block_28
     display_title: 'Derechos y Responsabilidades'
     display_plugin: block
-    position: 5
+    position: 20
     display_options:
       fields:
         nid:
@@ -8422,7 +8423,7 @@ display:
     id: block_29
     display_title: 'Publicaciones 1'
     display_plugin: block
-    position: 1
+    position: 21
     display_options:
       fields:
         field_document:
@@ -9092,7 +9093,7 @@ display:
     id: block_30
     display_title: 'resolciones sige'
     display_plugin: block
-    position: 5
+    position: 27
     display_options:
       fields:
         nid:
@@ -9520,7 +9521,7 @@ display:
     id: block_32
     display_title: SNBF
     display_plugin: block
-    position: 5
+    position: 22
     display_options:
       fields:
         nid:
@@ -9948,7 +9949,7 @@ display:
     id: block_33
     display_title: 'Gaba -2'
     display_plugin: block
-    position: 1
+    position: 23
     display_options:
       fields:
         field_document:
@@ -10464,7 +10465,7 @@ display:
     id: block_34
     display_title: 'Gaba +2'
     display_plugin: block
-    position: 1
+    position: 24
     display_options:
       fields:
         field_document:
@@ -10980,7 +10981,7 @@ display:
     id: block_35
     display_title: 'SNBF multiple'
     display_plugin: block
-    position: 5
+    position: 32
     display_options:
       fields:
         nid:
@@ -11332,7 +11333,7 @@ display:
     id: block_36
     display_title: 'Registro inhabilidades'
     display_plugin: block
-    position: 5
+    position: 33
     display_options:
       fields:
         field_document:
@@ -11713,7 +11714,7 @@ display:
     id: block_38
     display_title: 'Abastecimiento EAS'
     display_plugin: block
-    position: 5
+    position: 34
     display_options:
       fields:
         field_document:
@@ -12786,7 +12787,7 @@ display:
     id: block_40
     display_title: 'Abastecimiento EAS xls'
     display_plugin: block
-    position: 5
+    position: 35
     display_options:
       fields:
         field_document:
@@ -13202,7 +13203,7 @@ display:
     id: block_42
     display_title: 'SNBF convocatoria'
     display_plugin: block
-    position: 5
+    position: 36
     display_options:
       fields:
         nid:
@@ -13692,11 +13693,493 @@ display:
         - 'config:field.storage.node.field_content'
         - 'config:field.storage.node.field_date'
         - 'config:field.storage.node.field_document'
+  block_44:
+    id: block_44
+    display_title: 'Boletin x1 Observ'
+    display_plugin: block
+    position: 36
+    display_options:
+      fields:
+        field_document:
+          id: field_document
+          table: node__field_document
+          field: field_document
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: "<div>\r\n<h4>{{ field_document }} </h4>\r\n{{ field_content }}</div>"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: file_url_plain
+          settings: {  }
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_date:
+          id: field_date
+          table: node__field_date
+          field: field_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: Fecha
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_custom
+          settings:
+            timezone_override: ''
+            date_format: d/M/Y
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_list_image:
+          id: field_list_image
+          table: node__field_list_image
+          field: field_list_image
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: true
+            path: '{{ field_document }}'
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_link: ''
+            image_style: medium
+            image_loading:
+              attribute: lazy
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: true
+            path: '{{ field_document }}'
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "<div class=\"id-1519 rdp-contain\">\r\n<div class=\"col-sm-3 col-xs-2\">\r\n   {{ field_list_image }} \r\n</div>\r\n\r\n<div class=\"col-sm-9 col-xs-10\">\r\n{{ field_date }}\r\n<h5>{{ title }}</h5>\r\n</div>\r\n </div>"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+        edit_node:
+          id: edit_node
+          table: node
+          field: edit_node
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: entity_link_edit
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: ''
+          output_url_as_text: false
+          absolute: false
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 1
+      sorts:
+        field_date_value:
+          id: field_date_value
+          table: node__field_date
+          field: field_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
+      arguments: {  }
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        field_file_categoria_target_id:
+          id: field_file_categoria_target_id
+          table: node__field_file_categoria
+          field: field_file_categoria_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            - 7023
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: file_category
+          type: textfield
+          hierarchy: false
+          limit: true
+          error_message: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        pager: false
+        style: false
+        row: false
+        fields: false
+        sorts: false
+        arguments: false
+        filters: false
+        filter_groups: false
+      display_description: 'docs observatorio'
+      display_extenders:
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+      tags:
+        - 'config:field.storage.node.field_date'
+        - 'config:field.storage.node.field_document'
+        - 'config:field.storage.node.field_list_image'
   block_45:
     id: block_45
     display_title: Coronavirus
     display_plugin: block
-    position: 8
+    position: 37
     display_options:
       fields:
         field_document:
@@ -14464,7 +14947,7 @@ display:
     id: block_6
     display_title: ENSIN
     display_plugin: block
-    position: 1
+    position: 25
     display_options:
       fields:
         field_document:
@@ -15181,7 +15664,7 @@ display:
     id: block_8
     display_title: 'Info Juridica'
     display_plugin: block
-    position: 8
+    position: 26
     display_options:
       fields:
         nid:
@@ -15598,7 +16081,7 @@ display:
     id: block_9
     display_title: 'Notificaciones Juridica'
     display_plugin: block
-    position: 5
+    position: 7
     display_options:
       fields:
         nid:
