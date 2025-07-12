@@ -847,8 +847,8 @@ display:
             offset: false
             offset_label: Desplazamiento
           views_infinite_scroll:
-            button_text: 'Cargar más'
-            automatically_load_content: true
+            button_text: 'Mostrar más'
+            automatically_load_content: false
             initially_load_all_pages: false
       arguments:
         field_location_root_target_id:
@@ -968,6 +968,9 @@ display:
         title: false
         use_ajax: false
         pager: false
+        use_more: false
+        use_more_always: false
+        use_more_text: false
         style: false
         row: false
         fields: false
@@ -976,6 +979,9 @@ display:
         filter_groups: false
       use_ajax: true
       display_description: ''
+      use_more: true
+      use_more_always: false
+      use_more_text: 'Mostrar más'
       display_extenders:
         metatag_display_extender:
           metatags: {  }

@@ -227,7 +227,7 @@ class PanelizerMigrationService {
     foreach ($panels_display as $item) {
       $layout_settings = unserialize($item->layout_settings);
 
-      if ($layout_settings) {
+      if ($layout_settings && isset($layout_settings['items'][$panel_name])) {
         if ($layout_settings['items'][$panel_name]['parent'] == 'main') {
           $position = [
             'panel_name' => $panel_name,
@@ -479,6 +479,9 @@ class PanelizerMigrationService {
         }
         elseif ($block_id == 'servicios-pqr---1519-3') {
           $block_title = 'Servicios PQR - 1519-3';
+        }
+        elseif ($block_id == 'titulo-micrositio') {
+          $block_title = 'Observatorio de Bienestar - top';
         }
         $block_query = $this->database->select('block_content', 'b');
         $block_query->join('block_content_field_data', 'bcfd', 'b.id = bcfd.id');

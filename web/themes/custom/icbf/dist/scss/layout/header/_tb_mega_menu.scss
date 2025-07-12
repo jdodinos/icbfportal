@@ -45,6 +45,14 @@ body .tb-megamenu .nav>.active>a:focus{
   font-weight: 400;
   position: relative;
 
+  a.id-m2{
+    font-size: 11px !important;
+  }
+
+  .az-ctnr.container{
+    width: auto !important;
+  }
+
   .nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
     background-color: transparent;
   }
