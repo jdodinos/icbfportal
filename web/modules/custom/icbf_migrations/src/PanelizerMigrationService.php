@@ -626,7 +626,7 @@ class PanelizerMigrationService {
         break;
 
       case 'documentos_servicios':
-        if ($display_id == 'block_5') {
+        if ($display_id == 'block_5' || $display_id == 'block_11') {
           $view_id = 'documentos_servicios_sapi';
         }
         break;

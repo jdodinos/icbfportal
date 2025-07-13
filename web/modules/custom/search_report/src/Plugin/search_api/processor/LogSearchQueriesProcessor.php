@@ -5,19 +5,20 @@ namespace Drupal\search_report\Plugin\search_api\processor;
 use Drupal\search_api\Processor\ProcessorPluginBase;
 use Drupal\search_api\Query\QueryInterface;
 use Drupal\Core\Database\Connection;
+use Drupal\search_api\Annotation\SearchApiProcessor; 
 use Symfony\Component\DependencyInjection\ContainerInterface;
-
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 /**
  * @SearchApiProcessor(
  *   id = "log_search_queries_processor",
  *   label = @Translation("Log Search Queries Processor"),
  *   description = @Translation("Registra las búsquedas realizadas en una tabla personalizada."),
  *   stages = {
- *     "pre_query" = 0
+ *     "preprocess_query" = 0
  *   }
  * )
  */
-class LogSearchQueriesProcessor extends ProcessorPluginBase {
+class LogSearchQueriesProcessor extends ProcessorPluginBase implements ContainerFactoryPluginInterface{
 
   /**
    * La conexión a base de datos.
@@ -35,13 +36,35 @@ class LogSearchQueriesProcessor extends ProcessorPluginBase {
     $instance->connection = $container->get('database');
     return $instance;
   }
+ public function __construct(array $configuration, $plugin_id, $plugin_definition, Connection $connection) {
+    // Llamamos al constructor padre para que ProcessorPluginBase configure lo básico.
+    parent::__construct($configuration, $plugin_id, $plugin_definition);
 
+    // Guardamos la conexión en la propiedad para poder usarla en preprocessSearchQuery().
+    $this->connection = $connection;
+  }
+
+  /**
+   * {@inheritdoc}
+   *
+   * Este método se encarga de “inyectar” la conexión a la base de datos
+   * desde el contenedor de servicios de Drupal.
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    // Crea la instancia con el constructor definido arriba, pasándole 'database'.
+    return new static(
+      $configuration,
+      $plugin_id,
+      $plugin_definition,
+      $container->get('database')
+    );
+  }
   /**
    * {@inheritdoc}
    *
    * Se ejecuta antes de que la búsqueda se envíe a Solr (stages.pre_query).
    */
-  public function preSearch(QueryInterface $query) {
+  public function preprocessSearchQuery(QueryInterface $query) {
     // Obtener el término de búsqueda.
     // Nota: la propiedad "keys" del query puede variar según cómo se realice la búsqueda en tu configuración.
     $search_keys = $query->getKeys();
@@ -63,12 +86,14 @@ class LogSearchQueriesProcessor extends ProcessorPluginBase {
     if (!empty($search_term)) {
       $this->connection->insert('search_log')
         ->fields([
-          'search_term' => $search_term,
-          'results_count' => 0,     // Ajustar después si fuera necesario.
-          'created' => \Drupal::time()->getRequestTime(),
+          'term' => $search_term,
+	  'results_count' => 0,
+     	  'response_time' => 0,	  // Ajustar después si fuera necesario.
+	  'timestamp' => \Drupal::time()->getRequestTime(),
         ])
         ->execute();
     }
   }
 
 }
+

@@ -41,6 +41,7 @@
   border: 1px solid #dcdcdc;
   border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  position: relative;
 }
 
 .advanced-filters .form-item {
@@ -121,4 +122,59 @@
   color: #888;
   font-style: italic;
   padding: 2rem 0;
+}
+div#block-icbf-minimalsolrsearchblock h2 {
+	    display: none;
+    }
+
+    div#block-icbf-minimalsolrsearchblock {
+	        display: flex;
+		    justify-content: end;
+		        width: 20%;
+			    position: absolute;
+			        right: 0;
+				    margin: -80px 0 0 0;
+}
+#block-icbf-customsolrsearchblock h2{
+	display:none;
+}
+
+
+#custom-solr-advanced-search-form{
+  position: relative;
+}
+
+input#botonBuscar {
+    padding: 5px;
+    position: absolute;
+    right: 0;
+    top: 55px;
+    background: transparent;
+}
+
+input#filtro_avanzado {
+    position: absolute;
+    right: 0px;
+    padding: 0;
+    background: transparent;
+    color: #28a745;
+    top:85px;
+}
+
+.advanced-close-wrapper {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  cursor:pointer;
+  font-size: 18px;
+}
+div.advanced-close-wrapper > small{
+position: absolute;
+font-size: 10px;
+left: -6px;
+}
+div#edit-actions {
+    grid-row: 4;
+    grid-column: 1 / 3;
+    text-align: center;
 }
