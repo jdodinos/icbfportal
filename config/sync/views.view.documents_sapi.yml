@@ -515,8 +515,8 @@ display:
           total_pages: null
           id: 0
           tags:
-            next: ››
-            previous: ‹‹
+            next: 'Siguiente >'
+            previous: '‹ Anterior'
           expose:
             items_per_page: false
             items_per_page_label: 'Elementos por página'
@@ -1732,7 +1732,7 @@ display:
           entity_type: node
           plugin_id: search_api_field
           label: Tipo
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -1897,7 +1897,7 @@ display:
           admin_label: ''
           entity_type: node
           plugin_id: search_api_field
-          label: ''
+          label: Documento
           exclude: false
           alter:
             alter_text: true
@@ -2248,7 +2248,7 @@ display:
           hierarchy: false
           label_display: visible
           facet:
-            query_operator: or
+            query_operator: and
             min_count: 1
             show_numbers: true
             processor_configs:
