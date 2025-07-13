@@ -1130,22 +1130,7 @@
 
 .page-contratacion{
     #block-icbf-content{
-        >.layout:nth-child(2){
-            .view-content{
-
-                .col-sm-4{
-                    max-width: 90vw; /*para pantallas pequeñas*/
-                }
-                @media (min-width: 576px) {
-                    .col-sm-4 {
-                        flex: 0 0 auto;
-                        width: 33.33333333%;
-                    }
-                }
-            }
-        }
-
-        >.layout:last-child{
+        .layout:last-child{
             .field--name-field-content{
                 >.az-element{
                     
@@ -1168,7 +1153,6 @@
                                                 background-color: #f9f9f9;
                                             }
                                         }
-
                                     }
                                 }
                             }
@@ -1230,6 +1214,7 @@
         }
     }
 }
+
 
 
 .page-atencion-y-servicios-ciudadania{
