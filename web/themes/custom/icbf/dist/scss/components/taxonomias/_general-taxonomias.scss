@@ -404,6 +404,7 @@
 
         >.layout:nth-child(3){
             .slick__arrow{
+                width: 70%;
                 >button:first-child {
                     margin-left: 20px;
                 }
@@ -546,6 +547,9 @@
                             }
                         }
 
+                        .quicktabs-main{
+                            display: inline-block;
+                        }
 
                         >.quicktabs-main{
                             .views-field-views-conditional-field{
