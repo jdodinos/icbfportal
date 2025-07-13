@@ -25,6 +25,17 @@ ninos-y-ninas:
     - core/drupal
     - icbf/owl
 
+mi-familia-universal:
+  css:
+    theme:
+      css/mifamiliauniversal.css: {}
+  js:
+    # js/ninos-y-ninas.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - icbf/owl
+
 owl:
   css:
     theme:
