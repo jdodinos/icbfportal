@@ -253,6 +253,63 @@ function icbf_preprocess_views_view_field(&$variables) {
       }
     }
   }
+
+  // Check if the current field being rendered is 'field_news_files'.
+  if ($variables['field']->field == 'field_news_files') {
+    // Get the ID of the current View and its display.
+    $view_id = $variables['view']->id();
+    $display_id = $variables['view']->current_display;
+
+    if ($view_id == 'actas_contentivas' && $display_id == 'block') {
+      // @see \Drupal\node\Entity\Node
+      $entity = $variables['row']->_entity;
+
+      // Replace the filename with the node title in the rendered field output.
+      $output = icbf_change_filename_by_title('field_news_files', $entity, $variables['output']);
+      $variables['output'] = [
+        '#markup' => $output
+      ];
+    }
+  }
+
+  // Check if the current field being rendered is 'field_document'.
+  if ($variables['field']->field == 'field_document') {
+    // Get the ID of the current View and its display.
+    $view_id = $variables['view']->id();
+    $display_id = $variables['view']->current_display;
+
+    if ($view_id == 'sige_process' && ($display_id == 'block_2' || $display_id == 'block_7')) {
+      // @see \Drupal\node\Entity\Node
+      $entity = $variables['row']->_entity;
+
+      // Replace the filename with the node title in the rendered field output.
+      $output = icbf_change_filename_by_title('field_document', $entity, $variables['output']);
+      $variables['output'] = [
+        '#markup' => $output
+      ];
+    }
+  }
+}
+
+/**
+ * The icbf_change_filename_by_title function
+ */
+function icbf_change_filename_by_title($field_name, $entity, $output) {
+  if ($entity->hasField($field_name) && !$entity->get($field_name)->isEmpty()) {
+    // @see \Drupal\file\Entity\File
+    $file = $entity->get($field_name)->entity;
+
+    // Ensure that the loaded entity is a valid File entity.
+    if ($file instanceof \Drupal\file\Entity\File) {
+      $title = $entity->getTitle();
+      $filename = $file->getFilename();
+
+      // Replace the filename with the node title in the rendered field output.
+      $output = str_replace(">{$filename}<", ">{$title}<", $output);
+    }
+
+    return $output;
+  }
 }
 
 function icbf_theme_suggestions_views_view_field_alter(array &$suggestions, array $variables) {
