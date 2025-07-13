@@ -6,7 +6,8 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Database\Connection;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-
+use Drupal\Core\Logger\RfcLogLevel;
+use Symfony\Component\HttpFoundation\Request;
 class SearchFilterForm extends FormBase {
 
   protected $database;
@@ -26,16 +27,20 @@ class SearchFilterForm extends FormBase {
   }
 
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['start_date'] = [
-      '#type' => 'date',
-      '#title' => $this->t('Fecha de Inicio'),
-      '#required' => TRUE,
-    ];
+	  $request = Request::createFromGlobals();
+	  $form['start_date'] = [
+      		'#type' => 'date',
+      		'#title' => $this->t('Fecha de Inicio'),
+		'#required' => TRUE,
+		'#default_value'=>$request->query->get("start"),	
+		
+    	  ];
 
     $form['end_date'] = [
       '#type' => 'date',
       '#title' => $this->t('Fecha de Fin'),
       '#required' => TRUE,
+      '#default_value'=>$request->query->get("end")
     ];
 
     $form['actions'] = [
@@ -54,18 +59,40 @@ class SearchFilterForm extends FormBase {
       '#submit' => ['::resetForm'],
     ];
 
-    if ($form_state->getValue('start_date')) {
-      $data = $this->getSearchData($form_state->getValue('start_date'), $form_state->getValue('end_date'));
-      $form['report'] = [
-        '#theme' => 'search_reports',
-        '#data' => $data,
-      ];
+    if ($request->query->get("start")) {
+	$data = $this->getSearchData($request->query->get("start"), $request->query->get("end"));
+	\Drupal::logger('search_report')->debug('<pre>DATA A TWIG: @data</pre>', [
+ 	   '@data' => print_r($data, TRUE),
+  	]);
+      	$form['report'] = [
+        	'#theme' => 'search_reports',
+        	'#data' => $data,
+      	];
     }
+    $values = $form_state->getValues();
+
+    // 2) Registra el dump de valores en dblog.
+    \Drupal::logger('search_report')->log(
+      RfcLogLevel::DEBUG,
+      '<pre>FormState values: @vals</pre>',
+      ['@vals' => print_r($values, TRUE)]
+    );
 
     return $form;
   }
 
-  public function submitForm(array &$form, FormStateInterface $form_state) {}
+  public function submitForm(array &$form, FormStateInterface $form_state) {
+  $start = $form_state->getValue('start');
+  $end   = $form_state->getValue('end');
+
+  // Redirige a la misma ruta, pero agregando ?start=YYYY-MM-DD&end=YYYY-MM-DD
+  $form_state->setRedirect('search_reports.dashboard', [], [
+    'query' => [
+      'start' => $start,
+      'end'   => $end,
+    ],
+  ]);
+  }
 
   public function resetForm(array &$form, FormStateInterface $form_state) {
     $form_state->setValues([]);
