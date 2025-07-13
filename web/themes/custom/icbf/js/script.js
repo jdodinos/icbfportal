@@ -16,7 +16,8 @@ $ = jQuery;
 
       $('.view-id-calendar.view-display-id-block_page_6 .view-content').slick({
         infinite: false,
-        initialSlide: 0
+        initialSlide: 0,
+        adaptiveHeight: true
       });
 
       // Función recalcular submenu Adopciones
