@@ -1,4 +1,5 @@
 @use "../../abstracts/variables" as var;
+@use 'sass:map';
 
 .generic-title {
     font-family: var.$Asap;
@@ -330,6 +331,13 @@
                             }
                             .item-list{
                                 margin: 0 0 0.75em 1.5em !important;
+                                ul{
+                                    li{
+                                        .views-field-field-file-categoria{
+                                            display: none;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -419,8 +427,16 @@
 
 
 .page-programas-y-estrategias-direccion-de-familias-y-comunidades {
+    $icons: (
+        1: (url: "https://www.icbf.gov.co/sites/default/files/familias-comunidades-icons_07.png", size: 57px),
+        2: (url: "https://www.icbf.gov.co/sites/default/files/familias-comunidades-icons_09.png", size: 37px),
+        3: (url: "https://www.icbf.gov.co/sites/default/files/familias-comunidades-icons_11.png", size: 55px),
+        4: (url: "https://www.icbf.gov.co/sites/default/files/fyc-icondoc1_03.png",  size: 55px)
+    );
 
     #block-icbf-content {
+
+
         .content {
             >div:nth-child(2) {
                 margin: 4px auto;
@@ -432,6 +448,43 @@
                         .item-list {
                             display: flex;
                             justify-content: center;
+
+                            ul {
+                                display: flex;
+                                flex-wrap: wrap;
+                                justify-content: center;
+                                @for $i from 1 through 3 {
+                                    li:nth-child(#{$i}) {
+                                        background-color: #cecece36;
+                                        padding: 8px;
+                                        $icon: map.get($icons, $i);
+                                        a::before {
+                                            background: url(map.get($icon, url)) center no-repeat !important;
+                                            background-size: map.get($icon, size) !important;
+                                            content: "";
+                                            display: block;
+                                            height: 55px;
+                                            margin: auto;
+                                            padding: 0;
+                                            width: 55px;
+                                        }
+                                        a{
+                                            color: #407021;
+                                        }
+                                        a:hover{
+                                            color: #fff;
+                                        }
+                                        a:focus, a:active {
+                                            outline: none;
+                                            box-shadow: none;
+                                        }
+                                    }
+                                }
+
+                                li:hover{
+                                    background-color: #407021;
+                                }
+                            }
                         }
                     }
 
@@ -454,6 +507,43 @@
                         .item-list {
                             display: flex;
                             justify-content: center;
+
+                            ul {
+                                display: flex;
+                                flex-wrap: wrap;
+                                justify-content: center;
+                                @for $i from 1 through 4 {
+                                    li:nth-child(#{$i}) {
+                                        background-color: #cecece36;
+                                        padding: 8px;
+                                        $icon: map.get($icons, $i);
+                                        a::before {
+                                            background: url(map.get($icon, url)) center no-repeat !important;
+                                            background-size: map.get($icon, size) !important;
+                                            content: "";
+                                            display: block;
+                                            height: 55px;
+                                            margin: auto;
+                                            padding: 0;
+                                            width: 55px;
+                                        }
+
+                                        a{
+                                            color: #407021;
+                                        }
+                                        a:hover{
+                                            color: #fff;
+                                        }
+                                        a:focus, a:active {
+                                            outline: none;
+                                            box-shadow: none;
+                                        }
+                                    }
+                                }
+                                li:hover{
+                                    background-color: #407021;
+                                }
+                            }
                         }
 
 
@@ -804,11 +894,14 @@
         /*para pantallas pequeñas*/
         margin: 2%;
 
-        h4 span, .n-item-title span{
-            color: #333333d1;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.7em;
-            font-weight: 600;
+        h4, .n-item-title, .views-field-title{
+            text-align: left !important;
+            span{
+                color: #333333d1;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 0.7em;
+                font-weight: 600;
+            }
         }
 
         /*el titulo no esta dentro de una etiqueta aparte*/
