@@ -643,6 +643,12 @@ class PanelizerMigrationService {
         }
         break;
 
+      case 'faqs_icbf':
+        if ($display_id == 'block_page_1' || $display_id == 'page_1') {
+          $view_id = 'faqs_icbf_sapi';
+        }
+        break;
+
       case 'hiring_process':
         if ($display_id == 'block' || $display_id == 'block_1') {
           $view_id = 'hiring_process_sapi';
