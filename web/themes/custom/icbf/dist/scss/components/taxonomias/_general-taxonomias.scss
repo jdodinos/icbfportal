@@ -443,6 +443,7 @@
                 margin: 4px auto;
                 display: inline-block;
                 border-top: 1px solid #00000024;
+                border-bottom: 1px solid #00000024;
 
                 .block-views-blockmisional-ninez-y-adolescencia-block-2fyc {
                     #quicktabs-misional-ninez-y-adolescencia {
@@ -458,6 +459,7 @@
                                     li:nth-child(#{$i}) {
                                         background-color: #cecece36;
                                         padding: 8px;
+                                        font-weight: 600;
                                         $icon: map.get($icons, $i);
                                         a::before {
                                             background: url(map.get($icon, url)) center no-repeat !important;
@@ -471,13 +473,16 @@
                                         }
                                         a{
                                             color: #407021;
+                                            text-decoration: underline;
                                         }
                                         a:hover{
                                             color: #fff;
+                                            text-decoration: underline;
                                         }
                                         a:focus, a:active {
                                             outline: none;
                                             box-shadow: none;
+                                            text-decoration: underline;
                                         }
                                     }
                                 }
@@ -516,6 +521,7 @@
                                 @for $i from 1 through 4 {
                                     li:nth-child(#{$i}) {
                                         background-color: #cecece36;
+                                        font-weight: 600;
                                         padding: 8px;
                                         $icon: map.get($icons, $i);
                                         a::before {
@@ -534,10 +540,12 @@
                                         }
                                         a:hover{
                                             color: #fff;
+                                            text-decoration: underline;
                                         }
                                         a:focus, a:active {
                                             outline: none;
                                             box-shadow: none;
+                                            text-decoration: underline;
                                         }
                                     }
                                 }
@@ -552,11 +560,13 @@
                         }
 
                         >.quicktabs-main{
-                            .views-field-views-conditional-field{
-                                ul li::before{
-                                    content: '\25CF';
-                                    margin-right: 6px;
-                                    font-size: 10px;
+                            .quicktabs-tabpage:first-child{
+                                .views-field-views-conditional-field{
+                                    ul li::before{
+                                        content: '\25CF';
+                                        margin-right: 6px;
+                                        font-size: 10px;
+                                    }
                                 }
                             }
                         }
@@ -598,6 +608,8 @@
                     padding: 1.2em 0;
                     word-break: break-word;
                     font-size: 1.1em;
+                    font-weight: 500;
+                    text-align: left;
                 }
             }
         }
