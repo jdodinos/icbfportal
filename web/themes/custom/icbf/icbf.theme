@@ -102,8 +102,6 @@ function icbf_preprocess_field(&$variables) {
       // For views in Glazed Builder.
       if (strpos($html, 'data-azb="az_view')) {
         $explode_html = explode('</div>', $html);
-        // dump(implode($explode_html));
-        // dump($explode_html);
         foreach ($explode_html as &$original_element) {
 
           if (strpos($original_element, 'data-azb="az_view')) {
@@ -146,29 +144,11 @@ function icbf_preprocess_field(&$variables) {
               }
             }
           }
-
-          if ($original_element == '') {
-            // dump('entro a original_element');
-            // dump($view->id());
-            // dump($view_data[2]);
-            $original_element = '</div>';
+          else {
+            $original_element .= '</div>';
           }
-          // dump($original_element);
-
-
-          //   // for ($i = 0; $i < $divs_number ; $i++) {
-          //     //   $original_element .= '</div>';
-          //     // }
-
-          //     // $new_html .= '</div>';
         }
-        // dump('--------------------');
-        // dump($explode_html);
-        // dump(implode($explode_html));
         $explode_html = implode('', $explode_html);
-
-          // $html = implode('', $explode_html);
-          // dump($explode_html);
         $item['content']['#text'] = str_replace($html, $explode_html, $item['content']['#text']);
       }
 
@@ -201,14 +181,27 @@ function icbf_preprocess_field(&$variables) {
                   $view_builder = \Drupal::entityTypeManager()->getViewBuilder('block_content');
                   $render_array = $view_builder->view($block);
                   $html_block = \Drupal::service('renderer')->renderRoot($render_array);
-                  $html = str_replace($original_element, $html_block, $html);
+                  $html_view = $element . $html_block . '</div>';
+                  $original_element = str_replace($element, $html_view, $original_element);
+                  // $html = str_replace($original_element, $html_block, $html);
+
+                  // // Render it.
+                  // $render_array = $view->render();
+                  // $html_view = \Drupal::service('renderer')->render($render_array);
+                  // $html_view = $element . $html_view . '</div>';
+                  // $original_element = str_replace($element, $html_view, $original_element);
                 }
               }
             }
           }
+
+          if ($original_element == '') {
+            $original_element = '</div>';
+          }
         }
 
-        $item['content']['#text'] = $html;
+        $explode_html = implode('', $explode_html);
+        $item['content']['#text'] = str_replace($html, $explode_html, $item['content']['#text']);
       }
 
       // For Iconsd in Glazed Builder.
