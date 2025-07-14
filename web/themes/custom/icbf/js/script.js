@@ -110,7 +110,7 @@ $(document).ready(function () {
 //funcionalidad en familias-y-comunidades al seleccionar iconos
 $(document).ready(function($) {
   // Seleccionamos el wrapper de quicktabs específico para esta página
-  var $wrapper = $('.page-id-7618 .quicktabs-wrapper');
+  var $wrapper = $('.page-id-7618 .content .layout:nth-child(3) .quicktabs-wrapper');
   
   if ($wrapper.length) {
     var $tabItems = $wrapper.find('.quicktabs-tabs li');
