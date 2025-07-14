@@ -102,7 +102,10 @@ function icbf_preprocess_field(&$variables) {
       // For views in Glazed Builder.
       if (strpos($html, 'data-azb="az_view')) {
         $explode_html = explode('</div>', $html);
+        // dump(implode($explode_html));
+        // dump($explode_html);
         foreach ($explode_html as &$original_element) {
+
           if (strpos($original_element, 'data-azb="az_view')) {
             $last_div_pos = strrpos($original_element, '<div');
             $element = substr($original_element, $last_div_pos);
@@ -134,19 +137,39 @@ function icbf_preprocess_field(&$variables) {
                 $view->preExecute();
                 $view->execute();
 
-                // Render it
+                // Render it.
                 $render_array = $view->render();
                 $html_view = \Drupal::service('renderer')->render($render_array);
+                $html_view = $element . $html_view . '</div>';
                 $original_element = str_replace($element, $html_view, $original_element);
+
               }
             }
           }
 
-          $original_element .= '</div>';
-        }
+          if ($original_element == '') {
+            // dump('entro a original_element');
+            // dump($view->id());
+            // dump($view_data[2]);
+            $original_element = '</div>';
+          }
+          // dump($original_element);
 
-        $html = implode('', $explode_html);
-        $item['content']['#text'] = $html;
+
+          //   // for ($i = 0; $i < $divs_number ; $i++) {
+          //     //   $original_element .= '</div>';
+          //     // }
+
+          //     // $new_html .= '</div>';
+        }
+        // dump('--------------------');
+        // dump($explode_html);
+        // dump(implode($explode_html));
+        $explode_html = implode('', $explode_html);
+
+          // $html = implode('', $explode_html);
+          // dump($explode_html);
+        $item['content']['#text'] = str_replace($html, $explode_html, $item['content']['#text']);
       }
 
       // For blocks in Glazed Builder.
