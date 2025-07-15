@@ -66,14 +66,9 @@ $ = jQuery;
 (function ($, Drupal) {
   Drupal.behaviors.owlInit = {
     attach: function (context, settings) {
-      $(".owl-carousel").owlCarousel({
-        items: 1,
-        singleItem: true,
-        itemsScaleUp: true,
-        slideSpeed: 500,
-        autoPlay: 5000,
-        stopOnHover: true
-      });
+      if (context === document) {
+        $(".icbf-owl-carousel .owl-wrapper").owlCarousel();
+      };
     }
   };
 })(jQuery, Drupal);
@@ -111,12 +106,12 @@ $(document).ready(function () {
 $(document).ready(function($) {
   // Seleccionamos el wrapper de quicktabs específico para esta página
   var $wrapper = $('.page-id-7618 .content .layout:nth-child(3) .quicktabs-wrapper');
-  
+
   if ($wrapper.length) {
     var $tabItems = $wrapper.find('.quicktabs-tabs li');
     var $tabLinks = $wrapper.find('.quicktabs-tabs li a');
     var $tabPages = $wrapper.find('.quicktabs-tabpage');
-    
+
     console.log('Elementos encontrados:', {
       wrapper: $wrapper.length,
       tabItems: $tabItems.length,
@@ -127,23 +122,23 @@ $(document).ready(function($) {
     // Función para cambiar pestaña
     function activateTab(index) {
       console.log("Activando pestaña (índice li):", index);
-      
+
       // Actualizar estado de las pestañas
       $tabItems
         .removeClass('active')
         .attr('aria-selected', 'false');
-      
+
       $tabItems.eq(index)
         .addClass('active')
         .attr('aria-selected', 'true');
-      
+
       // Actualizar contenido - Ocultar todos primero
       $tabPages.addClass('quicktabs-hide');
-      
+
       // Mostrar solo el contenido seleccionado
       $tabPages.eq(index).removeClass('quicktabs-hide');
     }
-    
+
     // Manejar clic en enlaces de pestañas
     $tabLinks.on('click', function(e) {
       e.preventDefault();
@@ -151,13 +146,13 @@ $(document).ready(function($) {
       console.log("Click en pestaña (índice li):", index, $(this).text());
       activateTab(index);
     });
-    
+
     // Inicialización - Forzar mostrar el primer tab al cargar
     $tabPages.addClass('quicktabs-hide'); // Ocultar todos primero
-    
+
     // Verificar si hay un tab activo
     var activeTab = $wrapper.find('.quicktabs-tabs li.active');
-    
+
     if (activeTab.length > 0) {
       var activeIndex = $tabItems.index(activeTab);
       console.log("Pestaña activa encontrada (índice li):", activeIndex);
