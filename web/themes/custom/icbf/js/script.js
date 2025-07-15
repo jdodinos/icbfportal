@@ -67,7 +67,7 @@ $ = jQuery;
   Drupal.behaviors.owlInit = {
     attach: function (context, settings) {
       if (context === document) {
-        $(".icbf-owl-carousel .owl-wrapper").owlCarousel();
+        $(".icbf-owl-carousel .icbf-owl-carousel-wrapper").owlCarousel();
       };
     }
   };
