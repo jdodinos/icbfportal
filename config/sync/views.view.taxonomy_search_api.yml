@@ -257,8 +257,26 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
+      style:
+        type: html_list
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          type: ul
+          wrapper_class: item-list
+          class: ''
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
       defaults:
         exposed_form: false
+        style: false
+        row: false
         arguments: false
       display_description: ''
       display_extenders:
@@ -421,7 +439,7 @@ display:
           admin_label: ''
           plugin_id: view
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
