@@ -1898,7 +1898,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: search_api_date
-          operator: '<='
+          operator: '>='
           value:
             min: ''
             max: ''
@@ -2319,17 +2319,13 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          hierarchy: true
+          hierarchy: false
           label_display: visible
           facet:
             query_operator: and
             min_count: 1
             show_numbers: true
             processor_configs:
-              hierarchy_processor:
-                weights:
-                  build: 100
-                settings: {  }
               translate_entity:
                 weights:
                   build: 5
@@ -2339,8 +2335,6 @@ display:
                   sort: 40
                 settings:
                   sort: ASC
-            hierarchy: taxonomy
-            expand_hierarchy: 0
       filter_groups:
         operator: AND
         groups:
