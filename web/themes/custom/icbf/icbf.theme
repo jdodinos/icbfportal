@@ -92,8 +92,13 @@ function icbf_preprocess_field(&$variables) {
         }
 
         if (strpos($item['content']['#text'], 'owl-carousel st-owl-theme') !== FALSE) {
-          $item['content']['#text'] = str_replace('owl-carousel st-owl-theme', 'icbf-owl-carousel', $item['content']['#text']);
-          $item['content']['#text'] = str_replace('owl-wrapper owl-origin', 'icbf-owl-carousel-wrapper', $item['content']['#text']);
+          $html_text = &$item['content']['#text'];
+          $html_text = str_replace('owl-carousel st-owl-theme', 'icbf-owl-carousel', $html_text);
+          $html_text = str_replace('owl-wrapper', 'icbf-owl-carousel-wrapper', $html_text);
+          // $html_text = str_replace('class="owl-item"', 'class="icbf-owl-item"', $html_text);
+          // Remover todos los atributos `style="..."`
+          $html_text = preg_replace('/\s*style="[^"]*"/i', '', $html_text);
+
         }
       }
     }

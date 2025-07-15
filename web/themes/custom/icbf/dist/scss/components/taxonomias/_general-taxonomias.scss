@@ -1123,6 +1123,58 @@
     }
 }
 
+
+
+.page-el-instituto-funcionarios-directivos-funcionarios-directivos-regionales{
+    #block-page-title-block, #block-icbf-content{
+        padding: 0 1.5em;
+    }
+
+    #block-icbf-content{
+        .block-field-blocktaxonomy-termsecctionsfield-content{
+            .az-ctnr{
+                margin: 0 auto;
+                .btn{
+                    background: #fff;
+                    border: 1px solid #333;
+                }
+    
+                .btn:focus, .btn:hover {
+                    box-shadow: none;
+                    font-weight: 400;
+                    background: #333;
+                    border: 1px solid #333;
+                    color: #fff;
+                }
+            }
+        }
+
+        .block-views-blockpersons-block-dregions{
+            a.active, a:hover {
+                color: #125e81;
+                text-decoration: underline !important;
+            }
+
+            img{
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+            }
+
+            @media (max-width: 768px) {
+                img {
+                    margin: auto;
+                    object-fit: cover;
+                    width: 87vw;
+                }
+            }
+        }
+    }
+}
+
+
+
+
 .page-estructura-organica-icbf {
     .word-gral p {
         font-size: 14px;
