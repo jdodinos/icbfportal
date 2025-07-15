@@ -1150,22 +1150,44 @@
         }
 
         .block-views-blockpersons-block-dregions{
+            ul{
+                li{
+                    @media (min-width: 768px) {
+                        .col-sm-2 {
+                            flex: 0 0 auto;
+                            width: 16.66666667%;
+                        }
+                    }
+                    @media (min-width: 768px) {
+                        .col-sm-4 {
+                            flex: 0 0 auto;
+                            width: 33.33333333%;
+                        }
+                    }
+                }
+            }
+
+
             a.active, a:hover {
                 color: #125e81;
                 text-decoration: underline !important;
             }
 
             img{
-                width: 150px;
-                height: 150px;
+                height: 120px;
+                margin: auto;
                 object-fit: cover;
+                width: auto;
             }
 
             @media (max-width: 768px) {
                 img {
+                    height: inherit;
                     margin: auto;
                     object-fit: cover;
-                    width: 87vw;
+                    width: auto;
+                    display: block;
+                    max-width: 100%;
                 }
             }
         }
