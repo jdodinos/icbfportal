@@ -74,6 +74,8 @@ $ = jQuery;
             speed: 300,
             slidesToShow: 5,
             slidesToScroll: 5,
+            arrows: false,
+            dots: false,
             responsive: [
               {
                 breakpoint: 1024,
@@ -86,8 +88,14 @@ $ = jQuery;
                 breakpoint: 768,
                 settings: {
                   slidesToShow: 2,
-                  slidesToScroll: 2,
-                  dots: true,
+                  slidesToScroll: 2
+                }
+              },
+              {
+                breakpoint: 600,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
                   infinite: true
                 }
               }
