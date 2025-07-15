@@ -90,6 +90,11 @@ function icbf_preprocess_field(&$variables) {
           $html_close_pos = strpos($html2, '>');
           $html_close = substr($html, $item_pos, $html_close_pos);
         }
+
+        if (strpos($item['content']['#text']) !== FALSE) {
+          $item['content']['#text'] = str_replace('owl-carousel st-owl-theme', 'icbf-owl-carousel', $item['content']['#text']);
+          $item['content']['#text'] = str_replace('owl-wrapper owl-origin', 'icbf-owl-carousel-wrapper', $item['content']['#text']);
+        }
       }
     }
   // }
