@@ -176,7 +176,12 @@
     }
 }
 
-
+.view-id-right_of_petition_sapi.view-display-id-block_vista5dias {
+    .form--inline.clearfix {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
 
 .page-id-1237,
 .page-id-1253 {
@@ -359,6 +364,10 @@
         display: block;
     }
 
+    li ul .js-form-item.form-item.js-form-type-radio.form-type-radio.js-form-item-field-location.form-item-field-location {
+        margin-left: 1em;
+    }
+
     .view {
         grid-template-rows: .5fr;
     }
@@ -370,5 +379,30 @@
     .table tbody {
         font-family: var.$font-asap-regular;
         font-size: 14px;
+    }
+}
+
+.page-id-1264 {
+
+    li.list-group-item {
+        color: #555555 !important;
+        padding: 10px 15px;
+        background-color: #fff;
+        border: solid #ddd;
+        border-width: 1px 1px;
+        color: #555 !important;
+        margin: 0;
+    }
+
+    .view-id-documents_sapi.view-display-id-block_11 {
+
+        .view-filters {
+            display: none;
+        }
+
+        .view-content {
+            width: 100%;
+            margin-left: 25%;
+        }
     }
 }
