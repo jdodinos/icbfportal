@@ -1651,58 +1651,58 @@
   }
 
   /* Forzar tamaño para .bs-region--left */
-  .region-content .bs-region--left {
+  .bs-region--left {
     width: 100%;
   }
 
   @media (min-width: 576px) {
-    .region-content .bs-region--left {
+    .bs-region--left {
       width: 25% !important; /* col-sm-3 */
     }
   }
 
   @media (min-width: 768px) {
-    .region-content .bs-region--left {
+    .bs-region--left {
       width: 25% !important; /* col-md-3 */
     }
   }
 
   @media (min-width: 992px) {
-    .region-content .bs-region--left {
+    .bs-region--left {
       width: 25% !important; /* col-lg-3 */
     }
   }
 
   /* Forzar tamaño para .bs-region--right */
-  .region-content .bs-region--right {
+  .bs-region--right {
     width: 100%;
   }
 
   @media (min-width: 576px) {
-    .region-content  .bs-region--right {
+    .bs-region--right {
       width: 75% !important; /* col-sm-9 */
     }
   }
 
   @media (min-width: 768px) {
-    .region-content .bs-region--right {
+    .bs-region--right {
       width: 75% !important; /* col-md-9 */
     }
   }
 
   @media (min-width: 992px) {
-    .region-content.bs-region--right {
+    .bs-region--right {
       width: 75% !important; /* col-lg-9 */
     }
   }
 
-  .region-content.block-field-blocktaxonomy-termsecctionsfield-content{
+  .block-field-blocktaxonomy-termsecctionsfield-content{
     position: relative;
     right: 18%;
   }
 
 
-  .region-content.az-row {
+  .az-row {
     max-width: 1100px; /* Ajusta el valor si quieres más o menos ancho total */
     margin: 0 auto;
     display: flex;
@@ -1720,16 +1720,13 @@
   }
 
   /* Texto: centrado vertical si hay suficiente espacio */
-  .region-content.az-row .col-sm-7 {
+  .az-row .col-sm-7 {
     display: flex;
     align-items: flex-start;
   }
 
-  .region-content.az-element > h2 > strong{
+  .az-element > h2 > span > strong{
     font-family: 'Asap';
-  }
-
-  .region-content.az-element > h2 > span > strong{
     font-weight: 700!important;
   }
 }
