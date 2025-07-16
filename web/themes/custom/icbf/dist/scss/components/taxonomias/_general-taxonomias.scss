@@ -1730,3 +1730,169 @@
     font-weight: 700!important;
   }
 }
+
+
+.page-modelo-planeacion-y-sistema-integrado-gestion-sistema-integrado-de-gestion{
+    #block-icbf-content{
+        .content{
+            .layout {
+                margin: 0 1em;
+            }
+                
+            >.layout:first-child{
+                h4{
+                    a.active, a:hover {
+                        color: #125e81;
+                        text-decoration: underline !important;
+                    }
+                    a {
+                        color: #1996d0;
+                        text-decoration: none !important;
+                    }
+                }
+            }
+
+            >.layout:nth-child(2){
+                .item-list{
+                    ul{
+                        margin: auto;
+                        padding: 1em 0;
+                        text-align: center;
+                        li{
+                            background-color: #fcfcfc;
+                            border-radius: 4px;
+                            border: 1px solid #fff;
+                            padding: 10px;
+                            margin: auto .3em;
+                            min-height: 120px;
+                            line-height: normal;
+                            text-align: center;
+                            font-size: .92em;
+                            font-weight: 600;
+                            width: 12%;
+                            display: inline-grid;
+                            overflow-wrap: break-word;
+                            word-wrap: break-word;
+                            white-space: inherit;
+                            transition: all .2s linear;
+                            -webkit-transition: all .2s linear;
+
+                            a{
+                                color: #36c;
+                                text-decoration: underline !important;
+                            }
+                            a:focus, a:hover {
+                                color: #23527c;
+                                text-decoration: underline;
+                            }
+                        }
+                        li:hover{
+                            background-color: #fff;
+                            border: 1px solid #36c;
+                        }
+
+
+                        li:first-child{
+                            a::before {
+                                background-position: center;
+                                background-repeat: no-repeat !important;
+                                background-size: 55px !important;
+                                background: url(/sites/default/files/btns-psige_01.png);
+                                content: "";
+                                display: block;
+                                height: 60px;
+                                margin: auto;
+                                padding: 0;
+                                width: 60px;
+                            }
+                        }
+                        li:nth-child(2){
+                            a::before {
+                                background-position: center;
+                                background-repeat: no-repeat !important;
+                                background-size: 55px !important;
+                                background: url(/sites/default/files/btns-psige_02.png);
+                                content: "";
+                                display: block;
+                                height: 60px;
+                                margin: auto;
+                                padding: 0;
+                                width: 60px;
+                            }
+                        }
+                        li:nth-child(3){
+                            a::before {
+                                background-position: center;
+                                background-repeat: no-repeat !important;
+                                background-size: 55px !important;
+                                background: url(/sites/default/files/btns-psige_03.png);
+                                content: "";
+                                display: block;
+                                height: 60px;
+                                margin: auto;
+                                padding: 0;
+                                width: 60px;
+                            }
+                        }
+                        li:nth-child(4){
+                            a::before {
+                                background-position: center;
+                                background-repeat: no-repeat !important;
+                                background-size: 55px !important;
+                                background: url(/sites/default/files/btns-psige_04.png);
+                                content: "";
+                                display: block;
+                                height: 60px;
+                                margin: auto;
+                                padding: 0;
+                                width: 60px;
+                            }
+                        }
+                        li:nth-child(5){
+                            a::before {
+                                background-position: center;
+                                background-repeat: no-repeat !important;
+                                background-size: 55px !important;
+                                background: url(/sites/default/files/btns-psige_05.png);
+                                content: "";
+                                display: block;
+                                height: 60px;
+                                margin: auto;
+                                padding: 0;
+                                width: 60px;
+                            }
+                        }
+                        li:nth-child(6){
+                            a::before {
+                                background-position: center;
+                                background-repeat: no-repeat !important;
+                                background-size: 55px !important;
+                                background: url(/sites/default/files/btns-psige_06.png);
+                                content: "";
+                                display: block;
+                                height: 60px;
+                                margin: auto;
+                                padding: 0;
+                                width: 60px;
+                            }
+                        }
+                        li:nth-child(7){
+                            a::before {
+                                background-position: center;
+                                background-repeat: no-repeat !important;
+                                background-size: 55px !important;
+                                background: url(/sites/default/files/btns-psige_07.png);
+                                content: "";
+                                display: block;
+                                height: 60px;
+                                margin: auto;
+                                padding: 0;
+                                width: 60px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
