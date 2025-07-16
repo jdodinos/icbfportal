@@ -1615,7 +1615,7 @@
 
 
 .page-transparencia-y-acceso-informacion-publica-participa {
-  ul .tb-megamenu-nav {
+  .region-content ul .tb-megamenu-nav {
     width: 250px!important;
   }
 
@@ -1651,58 +1651,58 @@
   }
 
   /* Forzar tamaño para .bs-region--left */
-  .bs-region--left {
+  .region-content .bs-region--left {
     width: 100%;
   }
 
   @media (min-width: 576px) {
-    .bs-region--left {
+    .region-content .bs-region--left {
       width: 25% !important; /* col-sm-3 */
     }
   }
 
   @media (min-width: 768px) {
-    .bs-region--left {
+    .region-content .bs-region--left {
       width: 25% !important; /* col-md-3 */
     }
   }
 
   @media (min-width: 992px) {
-    .bs-region--left {
+    .region-content .bs-region--left {
       width: 25% !important; /* col-lg-3 */
     }
   }
 
   /* Forzar tamaño para .bs-region--right */
-  .bs-region--right {
+  .region-content .bs-region--right {
     width: 100%;
   }
 
   @media (min-width: 576px) {
-    .bs-region--right {
+    .region-content  .bs-region--right {
       width: 75% !important; /* col-sm-9 */
     }
   }
 
   @media (min-width: 768px) {
-    .bs-region--right {
+    .region-content .bs-region--right {
       width: 75% !important; /* col-md-9 */
     }
   }
 
   @media (min-width: 992px) {
-    .bs-region--right {
+    .region-content.bs-region--right {
       width: 75% !important; /* col-lg-9 */
     }
   }
 
-  .block-field-blocktaxonomy-termsecctionsfield-content{
+  .region-content.block-field-blocktaxonomy-termsecctionsfield-content{
     position: relative;
     right: 18%;
   }
 
 
-  .az-row {
+  .region-content.az-row {
     max-width: 1100px; /* Ajusta el valor si quieres más o menos ancho total */
     margin: 0 auto;
     display: flex;
@@ -1711,7 +1711,7 @@
   }
 
   /* Imagen: reducir tamaño */
-  .az-row .col-sm-5 img {
+  .region-content .az-row .col-sm-5 img {
     width: 70%;
     height: auto;
     min-height: 200px; /* Ajusta este valor según necesidad */
@@ -1720,16 +1720,16 @@
   }
 
   /* Texto: centrado vertical si hay suficiente espacio */
-  .az-row .col-sm-7 {
+  .region-content.az-row .col-sm-7 {
     display: flex;
     align-items: flex-start;
   }
 
-  .az-element > h2 > strong{
+  .region-content.az-element > h2 > strong{
     font-family: 'Asap';
   }
 
-  .az-element > h2 > span > strong{
+  .region-content.az-element > h2 > span > strong{
     font-weight: 700!important;
   }
 }
