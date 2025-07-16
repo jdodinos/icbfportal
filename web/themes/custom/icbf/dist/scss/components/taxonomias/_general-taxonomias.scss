@@ -1528,3 +1528,87 @@
         }
     }
 }
+
+
+
+.page-innovacion-icbf{
+    #block-page-title-block {
+        display: none;
+    }
+    #block-icbf-content{
+        .block-field-blocktaxonomy-termsecctionsfield-content{
+            .field--name-field-content{
+                >div:nth-child(3){
+                    .az-ctnr{
+                        .az-element:first-child{
+                            margin-bottom: 50px;
+                            @media (min-width: 576px) {
+                                .col-sm-5 {
+                                    width: 10%;
+                                }
+                            }
+                
+                            //style general para slider
+                            .icbf-owl-carousel{
+                                .icbf-owl-carousel-wrapper{
+                                    margin-bottom: 60px;
+                                    
+                                    .slick-prev, .slick-next{
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        border-radius: 100%;
+                                        height: 50px;
+                                        width: 50px;
+                                        font-size: 0;
+                                        border: 0;
+                                        background: rgba(0, 0, 0, .5);
+                                        position: absolute;
+                                        bottom: -5rem;
+                                    }
+                                    .slick-next{
+                                        right: 0;
+                                    }
+                                    .slick-prev{
+                                        right: 60px;
+                                    }
+                
+                                    .slick-prev::before{
+                                        content: "\1438";
+                                        color: #fff !important;
+                                    }
+                                    .slick-next::before{
+                                        content: "\1433";
+                                        color: #fff !important;
+                                    }
+                
+                                    ul.slick-dots{
+                                        li{
+                                            font-size: 0;
+                                            ::marker {
+                                                content: none; // para eliminar cualquier contenido en ::marker
+                                            }
+                
+                                            button{
+                                                border: 0;
+                                                padding: 1px;
+                                                margin: 0 3px;
+                                                background: #ccc;
+                                            }
+                                        }
+                                        li.slick-active{
+                                            button{
+                                                background: #999;
+                                            }
+                                        }
+                
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
