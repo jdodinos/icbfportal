@@ -36,14 +36,16 @@ body .tb-megamenu .nav>.active>a:focus{
   color: inherit;
 }
 
-
+.region-nav-main{
+  position: relative;
+}
 .tb-megamenu {
   background-color: transparent;
   font-family: 'Montserrat', sans-serif;
   font-size: .94em;
   font-style: normal;
   font-weight: 400;
-  position: relative;
+  position: initial;
 
   a.id-m2{
     font-size: 11px !important;
@@ -148,7 +150,6 @@ body .tb-megamenu .nav>.active>a:focus{
     list-style: none;
     margin: 0;
     padding-left: 0;
-    position: relative;
 
     @media (max-width: 991.98px) {
       flex-direction: column;

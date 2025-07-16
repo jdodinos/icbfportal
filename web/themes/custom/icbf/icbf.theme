@@ -90,6 +90,16 @@ function icbf_preprocess_field(&$variables) {
           $html_close_pos = strpos($html2, '>');
           $html_close = substr($html, $item_pos, $html_close_pos);
         }
+
+        if (strpos($item['content']['#text'], 'owl-carousel st-owl-theme') !== FALSE) {
+          $html_text = &$item['content']['#text'];
+          $html_text = str_replace('owl-carousel st-owl-theme', 'icbf-owl-carousel', $html_text);
+          $html_text = str_replace('owl-wrapper', 'icbf-owl-carousel-wrapper', $html_text);
+          // $html_text = str_replace('class="owl-item"', 'class="icbf-owl-item"', $html_text);
+          // Remover todos los atributos `style="..."`
+          $html_text = preg_replace('/\s*style="[^"]*"/i', '', $html_text);
+
+        }
       }
     }
   // }
@@ -103,6 +113,7 @@ function icbf_preprocess_field(&$variables) {
       if (strpos($html, 'data-azb="az_view')) {
         $explode_html = explode('</div>', $html);
         foreach ($explode_html as &$original_element) {
+
           if (strpos($original_element, 'data-azb="az_view')) {
             $last_div_pos = strrpos($original_element, '<div');
             $element = substr($original_element, $last_div_pos);
@@ -134,19 +145,21 @@ function icbf_preprocess_field(&$variables) {
                 $view->preExecute();
                 $view->execute();
 
-                // Render it
+                // Render it.
                 $render_array = $view->render();
                 $html_view = \Drupal::service('renderer')->render($render_array);
+                $html_view = $element . $html_view . '</div>';
                 $original_element = str_replace($element, $html_view, $original_element);
+
               }
             }
           }
-
-          $original_element .= '</div>';
+          else {
+            $original_element .= '</div>';
+          }
         }
-
-        $html = implode('', $explode_html);
-        $item['content']['#text'] = $html;
+        $explode_html = implode('', $explode_html);
+        $item['content']['#text'] = str_replace($html, $explode_html, $item['content']['#text']);
       }
 
       // For blocks in Glazed Builder.
@@ -178,14 +191,27 @@ function icbf_preprocess_field(&$variables) {
                   $view_builder = \Drupal::entityTypeManager()->getViewBuilder('block_content');
                   $render_array = $view_builder->view($block);
                   $html_block = \Drupal::service('renderer')->renderRoot($render_array);
-                  $html = str_replace($original_element, $html_block, $html);
+                  $html_view = $element . $html_block . '</div>';
+                  $original_element = str_replace($element, $html_view, $original_element);
+                  // $html = str_replace($original_element, $html_block, $html);
+
+                  // // Render it.
+                  // $render_array = $view->render();
+                  // $html_view = \Drupal::service('renderer')->render($render_array);
+                  // $html_view = $element . $html_view . '</div>';
+                  // $original_element = str_replace($element, $html_view, $original_element);
                 }
               }
             }
           }
+
+          if ($original_element == '') {
+            $original_element = '</div>';
+          }
         }
 
-        $item['content']['#text'] = $html;
+        $explode_html = implode('', $explode_html);
+        $item['content']['#text'] = str_replace($html, $explode_html, $item['content']['#text']);
       }
 
       // For Iconsd in Glazed Builder.

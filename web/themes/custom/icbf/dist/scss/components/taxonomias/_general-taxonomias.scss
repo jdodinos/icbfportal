@@ -309,7 +309,6 @@
 
                         >.az-element:first-child{
                             >.az-element{
-                                width: 100%;
                                 a:visited {
                                     color: #1996d0 !important;
                                 }
@@ -340,22 +339,53 @@
                                 }
                             }
                         }
+
+                        @media (min-width: 768px) {
+                            .col-sm-8 {
+                                width: 66.6666666667%;
+                            }
+                        }
+
+                        @media (min-width: 768px) {
+                            .col-sm-4 {
+                                flex: 0 0 auto;
+                                width: 33.33333333%;
+                            }
+                        }
+
+                        @media (max-width: 767px) {
+                            .col-sm-8 {
+                                flex: 0 0 auto;
+                                width: 100%;
+                            }
+                        }
+
+                        @media (max-width: 767px) {
+                            .col-sm-4 {
+                                flex: 0 0 auto;
+                                width: 100%;
+                            }
+                        }
+
+
+
                     }
+                    /*
                     @media (min-width: 768px) {
                         >.az-ctnr:first-child{
                             max-width: 67%;
                         }
-                    }
+                    }*/
                     
-        
+                    /*
                     >.az-element{
-                        width: 90vw;/*para pantallas pequeñas*/
+                        width: 90vw;//para pantallas pequeñas
                     }
                     @media (min-width: 768px) {
                         >.az-element{
                             width: 33%;
                         }
-                    }
+                    }*/
         
                     .box-h245{
                         margin: 0;
@@ -404,9 +434,35 @@
 
         >.layout:nth-child(3){
             .slick__arrow{
-                width: 70%;
+                width: 72%;
+                top: 20rem;
                 >button:first-child {
                     margin-left: 20px;
+                }
+            }
+            @media (max-width:849){
+                .slick__arrow{
+                    top: 15rem;
+                }
+            }
+            @media (max-width:849px){
+                .slick__arrow{
+                    top: 15rem;
+                }
+            }
+            @media (max-width:575px){
+                .slick__arrow{
+                    width: 95%;
+                }
+            }
+            #carouselButtons3 {
+                bottom: 50px;
+
+                .glyphicon-play:before {
+                    content: "\25b6";
+                }
+                .glyphicon-pause:before {
+                    content: "\23F8";
                 }
             }
 
@@ -1123,6 +1179,80 @@
     }
 }
 
+
+
+.page-el-instituto-funcionarios-directivos-funcionarios-directivos-regionales{
+    #block-page-title-block, #block-icbf-content{
+        padding: 0 1.5em;
+    }
+
+    #block-icbf-content{
+        .block-field-blocktaxonomy-termsecctionsfield-content{
+            .az-ctnr{
+                margin: 0 auto;
+                .btn{
+                    background: #fff;
+                    border: 1px solid #333;
+                }
+    
+                .btn:focus, .btn:hover {
+                    box-shadow: none;
+                    font-weight: 400;
+                    background: #333;
+                    border: 1px solid #333;
+                    color: #fff;
+                }
+            }
+        }
+
+        .block-views-blockpersons-block-dregions{
+            ul{
+                li{
+                    @media (min-width: 768px) {
+                        .col-sm-2 {
+                            flex: 0 0 auto;
+                            width: 16.66666667%;
+                        }
+                    }
+                    @media (min-width: 768px) {
+                        .col-sm-4 {
+                            flex: 0 0 auto;
+                            width: 33.33333333%;
+                        }
+                    }
+                }
+            }
+
+
+            a.active, a:hover {
+                color: #125e81;
+                text-decoration: underline !important;
+            }
+
+            img{
+                height: 120px;
+                margin: auto;
+                object-fit: cover;
+                width: auto;
+            }
+
+            @media (max-width: 768px) {
+                img {
+                    height: inherit;
+                    margin: auto;
+                    object-fit: cover;
+                    width: auto;
+                    display: block;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+
+
 .page-estructura-organica-icbf {
     .word-gral p {
         font-size: 14px;
@@ -1395,6 +1525,90 @@
         .img-fluid {
             width: 100%;
             height: auto;
+        }
+    }
+}
+
+
+
+.page-innovacion-icbf{
+    #block-page-title-block {
+        display: none;
+    }
+    #block-icbf-content{
+        .block-field-blocktaxonomy-termsecctionsfield-content{
+            .field--name-field-content{
+                >div:nth-child(3){
+                    .az-ctnr{
+                        .az-element:first-child{
+                            margin-bottom: 50px;
+                            @media (min-width: 576px) {
+                                .col-sm-5 {
+                                    width: 10%;
+                                }
+                            }
+                
+                            //style general para slider
+                            .icbf-owl-carousel{
+                                .icbf-owl-carousel-wrapper{
+                                    margin-bottom: 60px;
+                                    
+                                    .slick-prev, .slick-next{
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        border-radius: 100%;
+                                        height: 50px;
+                                        width: 50px;
+                                        font-size: 0;
+                                        border: 0;
+                                        background: rgba(0, 0, 0, .5);
+                                        position: absolute;
+                                        bottom: -5rem;
+                                    }
+                                    .slick-next{
+                                        right: 0;
+                                    }
+                                    .slick-prev{
+                                        right: 60px;
+                                    }
+                
+                                    .slick-prev::before{
+                                        content: "\1438";
+                                        color: #fff !important;
+                                    }
+                                    .slick-next::before{
+                                        content: "\1433";
+                                        color: #fff !important;
+                                    }
+                
+                                    ul.slick-dots{
+                                        li{
+                                            font-size: 0;
+                                            ::marker {
+                                                content: none; // para eliminar cualquier contenido en ::marker
+                                            }
+                
+                                            button{
+                                                border: 0;
+                                                padding: 1px;
+                                                margin: 0 3px;
+                                                background: #ccc;
+                                            }
+                                        }
+                                        li.slick-active{
+                                            button{
+                                                background: #999;
+                                            }
+                                        }
+                
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

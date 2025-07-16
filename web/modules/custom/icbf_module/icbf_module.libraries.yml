@@ -1,0 +1,6 @@
+style:
+  js:
+    js/icbfModule.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
