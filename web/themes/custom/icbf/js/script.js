@@ -133,6 +133,9 @@ $ = jQuery;
 $(document).ready(function () {
   // Mostrar el panel al cargar correctamente usando Bootstrap
 
+  if ($('body').hasClass('page-transparencia-y-acceso-informacion-publica-participa')) {
+    $('#pkojmarg').addClass('show');
+  }
   $('[data-toggle="collapse"]').click(function (e) {
     const target = $(this).attr('href');
     const parent = $(this).data('parent');
