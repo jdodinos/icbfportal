@@ -2,7 +2,17 @@
 
 .page-programas-y-estrategias-primera-infancia-promocion-de-la-lectura-salas-de-lectura,
 .page-programas-y-estrategias-primera-infancia-promocion-de-la-lectura,
+.page-programas-y-estrategias-primera-infancia-acerca-de,
+.page-programas-y-estrategias-primera-infancia-calidad-en-servicios,
+.page-programas-y-estrategias-primera-infancia-promocion-de-la-lectura-fiesta-de-la-lectura,
+.page-programas-y-estrategias-primera-infancia-promocion-de-la-lectura-la-familia-es-mi-cuento,
+.page-programas-y-estrategias-primera-infancia-marco-normativo,
+.page-programas-y-estrategias-primera-infancia-modalidades-de-atencion,
 .page-programas-y-estrategias-primera-infancia-cuentame {
+
+    .az-ctnr.container{
+        max-width: 100%;
+    }
 
     .line-vo,
     .bar-line {
@@ -122,6 +132,37 @@
 
                     @media (max-width: 992px) {
                         width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.page-programas-y-estrategias-primera-infancia-acerca-de{
+    .block-views-blockarticulos-secciones-block-postpinf{
+        padding: 0 20px;
+        .view-content{
+            > div{
+                .field-content{
+                    > div{
+                        display: flex;
+                        .views-field-fieldset-1{
+                            width: calc(100% / 12 * 4);
+
+                            .views-field-title{
+                                color: #123d14;
+                                font-size: 1.42em;
+                                font-weight: 500;
+                                font-family: var.$font-montserrat;
+                                line-height: normal;
+                                margin: .7em 0;
+                            }
+                        }
+                        .views-field-fieldset-2{
+                            width: calc(100% / 12 * 8);
+                            padding: 1.2em;
+                        }
                     }
                 }
             }
