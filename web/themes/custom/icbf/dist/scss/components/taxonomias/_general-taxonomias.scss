@@ -1020,6 +1020,23 @@
 
 
 .page-gestion-humana-manual-de-funciones-0 {
+    .content{
+        padding: 0 7vw;
+    }
+
+    .block-field-blocktaxonomy-termsecctionsfield-content{
+        .field--name-field-content{
+            .col-sm-12{
+                >div{
+                    .word-gral{
+                        >h3:first-child, >p[align="center"]:first-child{
+                            color: black !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     .block-views.block-views-blockdocumentos-g-humana-block-7 h2 {
         font-size: 1.2em;
@@ -1580,7 +1597,7 @@
                                         width: 50px;
                                         font-size: 0;
                                         border: 0;
-                                        background: rgba(0, 0, 0, .5);
+                                        background: rgb(0 0 0 / 46%);
                                         position: absolute;
                                         bottom: -5rem;
                                     }
@@ -1621,6 +1638,17 @@
                                         }
 
                                     }
+                                }
+                            }
+                        }
+                        >.az-element:nth-child(3){
+                            .bg-cajahi{
+                                text-align: center;
+                                a.btn-1519-2{
+                                    bottom: 1em;
+                                    position: absolute;
+                                    left: 50%;
+                                    transform: translateX(-50%);
                                 }
                             }
                         }
