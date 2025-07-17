@@ -848,6 +848,56 @@
     .block-page-title-block {
         display: none;
     }
+
+    #block-icbf-content{
+        .content{
+            >.layout:first-child{
+                .carousel-inner{
+                    .slick__arrow{
+                        width: 72%;
+                        top: 20rem;
+                        >button:first-child {
+                            margin-left: 20px;
+                        }
+                    }
+                    @media (max-width:849){
+                        .slick__arrow{
+                            top: 15rem;
+                        }
+                    }
+                    @media (max-width:849px){
+                        .slick__arrow{
+                            top: 15rem;
+                        }
+                    }
+                    @media (max-width:575px){
+                        .slick__arrow{
+                            width: 95%;
+                        }
+                    }                 
+                }
+            }
+
+            >.layout:nth-child(2){
+                .block-block-content4ec78c60-f36a-45f1-bdd2-1ebf084adad9{
+                    .col-sm-3{
+                        width: 100%;
+                        max-width: 100%;
+                    }
+                    
+                    @media (min-width: 768px) {
+                        .col-sm-3{
+                            flex: 0 0 auto;
+                            width: 25%;
+                        }
+                    }
+                }
+                .block-views-blockmultimedia-block-vdosnbf {
+                    padding: 0 1em;
+                }
+            }
+        }
+    }
 }
 
 .page-programas-y-estrategias-direccion-de-adolescencia-y-juventud {
@@ -1961,6 +2011,24 @@
                 .block-field-blocktaxonomy-termsecctionsfield-content{
                     hr{
                         margin: 2rem 0 0 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.page-atencion-y-servicios-ciudadania-informes-encuesta-satisfaccion{
+    #block-icbf-content{
+        .content{
+            >.layout:nth-child(2){
+                margin: 0 auto;
+                width: 80%;
+
+                table{
+                    tbody{
+                        border: 1px solid rgb(196 196 196 / 80%);
                     }
                 }
             }
