@@ -2035,3 +2035,47 @@
         }
     }
 }
+
+
+
+
+//pagina de segundo nivel
+.page-aseguramiento-la-calidad-licencias-de-funcionamiento-0{
+
+    #block-icbf-content{
+        .block-views-blocklicencias-de-funcionamiento-sapi-block{
+            .view-filters{
+                .form-radios{
+                    input[type=checkbox], input[type=radio] {
+                        appearance: none;
+                        width: 13px;
+                        height: 13px;
+                        border: 1px solid #555;
+                        border-radius: 3px;
+                        margin: 0 4px 0 0 !important;
+                        /* Cuando se selecciona el check*/
+                        :checked {
+                            background-color: #1996d0;
+                            border-color: #1996d0;                        
+                        }
+                        /*Estilos para el icono interno del check*/
+                        ::after {
+                            content: '✔';
+                            color: white;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+            
+                    }
+            
+            
+            
+                }
+            }
+        }
+    }
+    
+}
