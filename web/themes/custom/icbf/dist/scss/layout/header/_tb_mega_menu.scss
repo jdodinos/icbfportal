@@ -165,6 +165,22 @@ body .tb-megamenu .nav>.active>a:focus{
 
       &:nth-child(4) {
         width: 180px;
+        position: relative;
+        &:hover{
+          &::after{
+            position: absolute;
+            content: '';
+            width: 170px;
+            height: 100px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 100%;
+            background: url(https://www.icbf.gov.co/sites/default/files/v4_transparencia_menu.gif) no-repeat center;
+            z-index: 100;
+            background-size: cover;
+          }
+        }
       }
     }
 
