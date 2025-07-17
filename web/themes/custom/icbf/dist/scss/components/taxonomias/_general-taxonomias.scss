@@ -291,7 +291,7 @@
 
 
 .page-rendicion-de-cuentas-icbf{
-    
+
     .content{
         >.layout:first-child{
             .block-block-content64ad3cc9-b82f-4c9f-9ddd-73c4e859fba4{
@@ -301,7 +301,7 @@
                     width: 100%;
                     margin: 0 auto;
                     position: initial;
-        
+
                     >.az-ctnr:first-child{
                         max-width: 90vw;/*para pantallas pequeñas*/
                         text-align: justify;
@@ -309,7 +309,6 @@
 
                         >.az-element:first-child{
                             >.az-element{
-                                width: 100%;
                                 a:visited {
                                     color: #1996d0 !important;
                                 }
@@ -340,23 +339,54 @@
                                 }
                             }
                         }
+
+                        @media (min-width: 768px) {
+                            .col-sm-8 {
+                                width: 66.6666666667%;
+                            }
+                        }
+
+                        @media (min-width: 768px) {
+                            .col-sm-4 {
+                                flex: 0 0 auto;
+                                width: 33.33333333%;
+                            }
+                        }
+
+                        @media (max-width: 767px) {
+                            .col-sm-8 {
+                                flex: 0 0 auto;
+                                width: 100%;
+                            }
+                        }
+
+                        @media (max-width: 767px) {
+                            .col-sm-4 {
+                                flex: 0 0 auto;
+                                width: 100%;
+                            }
+                        }
+
+
+
                     }
+                    /*
                     @media (min-width: 768px) {
                         >.az-ctnr:first-child{
                             max-width: 67%;
                         }
-                    }
-                    
-        
+                    }*/
+
+                    /*
                     >.az-element{
-                        width: 90vw;/*para pantallas pequeñas*/
+                        width: 90vw;//para pantallas pequeñas
                     }
                     @media (min-width: 768px) {
                         >.az-element{
                             width: 33%;
                         }
-                    }
-        
+                    }*/
+
                     .box-h245{
                         margin: 0;
                     }
@@ -399,14 +429,40 @@
                 .layout__region--second{
                     max-width: 70%;
                 }
-            } 
+            }
         }
 
         >.layout:nth-child(3){
             .slick__arrow{
-                width: 70%;
+                width: 72%;
+                top: 20rem;
                 >button:first-child {
                     margin-left: 20px;
+                }
+            }
+            @media (max-width:849){
+                .slick__arrow{
+                    top: 15rem;
+                }
+            }
+            @media (max-width:849px){
+                .slick__arrow{
+                    top: 15rem;
+                }
+            }
+            @media (max-width:575px){
+                .slick__arrow{
+                    width: 95%;
+                }
+            }
+            #carouselButtons3 {
+                bottom: 50px;
+
+                .glyphicon-play:before {
+                    content: "\25b6";
+                }
+                .glyphicon-pause:before {
+                    content: "\23F8";
                 }
             }
 
@@ -588,7 +644,7 @@
             >div:nth-child(2), >div:nth-child(3){
                 padding: 1.5em 3em;
             }
-            
+
             >div:nth-child(4){
                 display: flex;
                 justify-content: center;
@@ -598,7 +654,7 @@
                 .views-field-field-youtube{
                     width: 70rem;
                 }
-                
+
                 .views-field-title{
                     color: #6b6b6b;
                     display: block;
@@ -932,7 +988,7 @@
 
             div.collapse {
                 font-weight: normal;
-                
+
             }
         }
         @media (min-width: 768px) {
@@ -964,6 +1020,23 @@
 
 
 .page-gestion-humana-manual-de-funciones-0 {
+    .content{
+        padding: 0 7vw;
+    }
+
+    .block-field-blocktaxonomy-termsecctionsfield-content{
+        .field--name-field-content{
+            .col-sm-12{
+                >div{
+                    .word-gral{
+                        >h3:first-child, >p[align="center"]:first-child{
+                            color: black !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     .block-views.block-views-blockdocumentos-g-humana-block-7 h2 {
         font-size: 1.2em;
@@ -1044,6 +1117,24 @@
 .page-programas-y-estrategias-proteccion-2023 {
     .az-element .az-text h1 {
         display: none;
+    }
+    .az-ctnr.container{
+        max-width: 100%;
+    }
+    .az-video.embed-responsive{
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
     }
 }
 
@@ -1138,7 +1229,7 @@
                     background: #fff;
                     border: 1px solid #333;
                 }
-    
+
                 .btn:focus, .btn:hover {
                     box-shadow: none;
                     font-weight: 400;
@@ -1150,22 +1241,44 @@
         }
 
         .block-views-blockpersons-block-dregions{
+            ul{
+                li{
+                    @media (min-width: 768px) {
+                        .col-sm-2 {
+                            flex: 0 0 auto;
+                            width: 16.66666667%;
+                        }
+                    }
+                    @media (min-width: 768px) {
+                        .col-sm-4 {
+                            flex: 0 0 auto;
+                            width: 33.33333333%;
+                        }
+                    }
+                }
+            }
+
+
             a.active, a:hover {
                 color: #125e81;
                 text-decoration: underline !important;
             }
 
             img{
-                width: 150px;
-                height: 150px;
+                height: 120px;
+                margin: auto;
                 object-fit: cover;
+                width: auto;
             }
 
             @media (max-width: 768px) {
                 img {
+                    height: inherit;
                     margin: auto;
                     object-fit: cover;
-                    width: 87vw;
+                    width: auto;
+                    display: block;
+                    max-width: 100%;
                 }
             }
         }
@@ -1313,13 +1426,13 @@
                             width: 33.33333333%;
                         }
                     }
-    
+
                 }
             }
             >.layout:last-child{
                 .field--name-field-content{
                     >.az-element{
-                        
+
                         >.az-ctnr{
                             display: flex;
                             flex-wrap: wrap;
@@ -1330,7 +1443,7 @@
                                 >div{
                                     width: 100%;
                                 }
-    
+
                                 .view-documents{
                                     .view-content{
                                         .table{
@@ -1358,9 +1471,9 @@
                             >.az-element:nth-child(3){
                                 width: 100% !important;
                             }
-                            
+
                         }
-                        
+
                         @media (min-width: 768px) {
                             >.az-ctnr{
                                 display: grid;
@@ -1368,15 +1481,15 @@
                                     "a b"
                                     "a c";
                                 grid-template-columns: 66% 33%;
-    
+
                                 @media (min-width: 576px) {
                                     .col-sm-8 {
                                         flex: 0 0 auto;
                                         width: 100% !important;
                                     }
                                 }
-                                
-        
+
+
                                 >.az-element:nth-child(1){
                                     grid-area: a;
                                     width: 100%;
@@ -1396,9 +1509,9 @@
                                 }
                             }
                         }
-    
-    
-                        
+
+
+
                     }
                 }
             }
@@ -1447,6 +1560,410 @@
         .img-fluid {
             width: 100%;
             height: auto;
+        }
+    }
+}
+
+
+
+.page-innovacion-icbf{
+    #block-page-title-block {
+        display: none;
+    }
+    #block-icbf-content{
+        .block-field-blocktaxonomy-termsecctionsfield-content{
+            .field--name-field-content{
+                >div:nth-child(3){
+                    .az-ctnr{
+                        >.az-element:first-child{
+                            margin-bottom: 50px;
+                            @media (min-width: 576px) {
+                                .col-sm-5 {
+                                    width: 10%;
+                                }
+                            }
+
+                            //style general para slider
+                            .icbf-owl-carousel{
+                                .icbf-owl-carousel-wrapper{
+                                    margin-bottom: 60px;
+
+                                    .slick-prev, .slick-next{
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        border-radius: 100%;
+                                        height: 50px;
+                                        width: 50px;
+                                        font-size: 0;
+                                        border: 0;
+                                        background: rgb(0 0 0 / 46%);
+                                        position: absolute;
+                                        bottom: -5rem;
+                                    }
+                                    .slick-next{
+                                        right: 0;
+                                    }
+                                    .slick-prev{
+                                        right: 60px;
+                                    }
+
+                                    .slick-prev::before{
+                                        content: "\1438";
+                                        color: #fff !important;
+                                    }
+                                    .slick-next::before{
+                                        content: "\1433";
+                                        color: #fff !important;
+                                    }
+
+                                    ul.slick-dots{
+                                        li{
+                                            font-size: 0;
+                                            ::marker {
+                                                content: none; // para eliminar cualquier contenido en ::marker
+                                            }
+
+                                            button{
+                                                border: 0;
+                                                padding: 1px;
+                                                margin: 0 3px;
+                                                background: #ccc;
+                                            }
+                                        }
+                                        li.slick-active{
+                                            button{
+                                                background: #999;
+                                            }
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+                        >.az-element:nth-child(3){
+                            .bg-cajahi{
+                                text-align: center;
+                                a.btn-1519-2{
+                                    bottom: 1em;
+                                    position: absolute;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.page-transparencia-y-acceso-informacion-publica-participa {
+  .region-content ul .tb-megamenu-nav {
+    width: 250px!important;
+  }
+
+  .precontent .field__item {
+    max-width: 1150px!important;
+    margin: 1.5em auto!important;
+  }
+
+  .region-content ul.tb-megamenu-nav a {
+    background-color: #fcfcfc !important;
+    border-radius: 4px!important;
+    color: #004686 !important;
+    font-weight: 400 !important;
+    line-height: 18px!important;
+    padding: 10px!important;
+    text-transform: none !important;
+  }
+
+  .region-content .tb-megamenu .tb-megamenu-nav > li {
+    width: 250px!important;
+    max-width: 250px!important;
+  }
+
+  .block-views-blockarticulos-secciones-block-vparticipa{
+    display: flex!important;
+  }
+
+  @media (min-width: 768px) {
+    .page-transparencia-y-acceso-informacion-publica-participa
+    .col-sm-4:has(h4 a[href*="canal-interacción-deliberatoria"]) {
+      margin-left: 66.6666%!important;
+    }
+  }
+
+  /* Forzar tamaño para .bs-region--left */
+  .bs-region--left {
+    width: 100%;
+  }
+
+  @media (min-width: 576px) {
+    .bs-region--left {
+      width: 25% !important; /* col-sm-3 */
+    }
+  }
+
+  @media (min-width: 768px) {
+    .bs-region--left {
+      width: 25% !important; /* col-md-3 */
+    }
+  }
+
+  @media (min-width: 992px) {
+    .bs-region--left {
+      width: 25% !important; /* col-lg-3 */
+    }
+  }
+
+  /* Forzar tamaño para .bs-region--right */
+  .bs-region--right {
+    width: 100%;
+  }
+
+  @media (min-width: 576px) {
+    .bs-region--right {
+      width: 75% !important; /* col-sm-9 */
+    }
+  }
+
+  @media (min-width: 768px) {
+    .bs-region--right {
+      width: 75% !important; /* col-md-9 */
+    }
+  }
+
+  @media (min-width: 992px) {
+    .bs-region--right {
+      width: 75% !important; /* col-lg-9 */
+    }
+  }
+
+  .block-field-blocktaxonomy-termsecctionsfield-content{
+    position: relative;
+    right: 18%;
+  }
+
+
+  .az-row {
+    max-width: 1100px; /* Ajusta el valor si quieres más o menos ancho total */
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  /* Imagen: reducir tamaño */
+  .region-content .az-row .col-sm-5 img {
+    width: 70%;
+    height: auto;
+    min-height: 200px; /* Ajusta este valor según necesidad */
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Texto: centrado vertical si hay suficiente espacio */
+  .az-row .col-sm-7 {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .az-element > h2 > span > strong{
+    font-family: 'Asap';
+    font-weight: 700!important;
+  }
+}
+
+
+.page-modelo-planeacion-y-sistema-integrado-gestion-sistema-integrado-de-gestion{
+    #block-icbf-content{
+        .content{
+            .layout {
+                margin: 0 1em;
+            }
+                
+            >.layout:first-child{
+                h4{
+                    a.active, a:hover {
+                        color: #125e81;
+                        text-decoration: underline !important;
+                    }
+                    a {
+                        color: #1996d0;
+                        text-decoration: none !important;
+                    }
+                }
+            }
+
+            >.layout:nth-child(2){
+                .item-list{
+                    ul{
+                        margin: auto;
+                        padding: 1em 0;
+                        text-align: center;
+                        li{
+                            background-color: #fcfcfc;
+                            border-radius: 4px;
+                            border: 1px solid #fff;
+                            padding: 10px;
+                            margin: auto .3em;
+                            min-height: 120px;
+                            line-height: normal;
+                            text-align: center;
+                            font-size: .92em;
+                            font-weight: 600;
+                            width: 12%;
+                            display: inline-grid;
+                            overflow-wrap: break-word;
+                            word-wrap: break-word;
+                            white-space: inherit;
+                            transition: all .2s linear;
+                            -webkit-transition: all .2s linear;
+
+                            a{
+                                color: #36c;
+                                text-decoration: underline !important;
+                            }
+                            a:focus, a:hover {
+                                color: #23527c;
+                                text-decoration: underline;
+                            }
+                        }
+                        li:hover{
+                            background-color: #fff;
+                            border: 1px solid #36c;
+                        }
+
+
+                        li:first-child{
+                            a::before {
+                                background-position: center;
+                                background-repeat: no-repeat !important;
+                                background-size: 55px !important;
+                                background: url(/sites/default/files/btns-psige_01.png);
+                                content: "";
+                                display: block;
+                                height: 60px;
+                                margin: auto;
+                                padding: 0;
+                                width: 60px;
+                            }
+                        }
+                        li:nth-child(2){
+                            a::before {
+                                background-position: center;
+                                background-repeat: no-repeat !important;
+                                background-size: 55px !important;
+                                background: url(/sites/default/files/btns-psige_02.png);
+                                content: "";
+                                display: block;
+                                height: 60px;
+                                margin: auto;
+                                padding: 0;
+                                width: 60px;
+                            }
+                        }
+                        li:nth-child(3){
+                            a::before {
+                                background-position: center;
+                                background-repeat: no-repeat !important;
+                                background-size: 55px !important;
+                                background: url(/sites/default/files/btns-psige_03.png);
+                                content: "";
+                                display: block;
+                                height: 60px;
+                                margin: auto;
+                                padding: 0;
+                                width: 60px;
+                            }
+                        }
+                        li:nth-child(4){
+                            a::before {
+                                background-position: center;
+                                background-repeat: no-repeat !important;
+                                background-size: 55px !important;
+                                background: url(/sites/default/files/btns-psige_04.png);
+                                content: "";
+                                display: block;
+                                height: 60px;
+                                margin: auto;
+                                padding: 0;
+                                width: 60px;
+                            }
+                        }
+                        li:nth-child(5){
+                            a::before {
+                                background-position: center;
+                                background-repeat: no-repeat !important;
+                                background-size: 55px !important;
+                                background: url(/sites/default/files/btns-psige_05.png);
+                                content: "";
+                                display: block;
+                                height: 60px;
+                                margin: auto;
+                                padding: 0;
+                                width: 60px;
+                            }
+                        }
+                        li:nth-child(6){
+                            a::before {
+                                background-position: center;
+                                background-repeat: no-repeat !important;
+                                background-size: 55px !important;
+                                background: url(/sites/default/files/btns-psige_06.png);
+                                content: "";
+                                display: block;
+                                height: 60px;
+                                margin: auto;
+                                padding: 0;
+                                width: 60px;
+                            }
+                        }
+                        li:nth-child(7){
+                            a::before {
+                                background-position: center;
+                                background-repeat: no-repeat !important;
+                                background-size: 55px !important;
+                                background: url(/sites/default/files/btns-psige_07.png);
+                                content: "";
+                                display: block;
+                                height: 60px;
+                                margin: auto;
+                                padding: 0;
+                                width: 60px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.page-proveedores-icbf-0{
+    #block-icbf-content{
+        .content{
+            .he_back-cleargrey{
+                >.az-ctnr{
+                    >div{
+                        flex-wrap: wrap;
+                    }
+                }
+            }
+                
+            >.layout:last-child{
+                .block-field-blocktaxonomy-termsecctionsfield-content{
+                    hr{
+                        margin: 2rem 0 0 0;
+                    }
+                }
+            }
         }
     }
 }

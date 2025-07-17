@@ -1,0 +1,8 @@
+
+icbf_module.get_procedure:
+  path: '/ajax-callback/get-procedure'
+  defaults:
+    _controller: '\Drupal\icbf_module\Controller\CategorySelectionController::getProcedureResponse'
+    _title: 'Ajax to get procedure'
+  requirements:
+    _permission: 'access content'

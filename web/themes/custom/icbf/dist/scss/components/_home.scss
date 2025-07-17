@@ -23,38 +23,47 @@
     }
 
     .node__content{
-        /*>.layout:nth-child(2){
-            .block-block-content5712aaa6-336a-4df9-b947-c66cd32d67fe {
-                
-                .field--name-field-builder {
-                    display: flex;
-                    justify-content: center;
-                    flex-wrap: wrap;
-                }
-        
-              //bloque - alineacion de imagenes
-                .clearfix #c0yykzfk .az-ctnr {
-                    display: flex;
-        
-                    #hgepm7aq {
-                        display: flex;
-            
-                        .owl-carousel {
-                            display: flex !important;
-            
-                            .owl-wrapper-outer {
-                                display: flex;
-            
-                                .owl-wrapper {
-                                    width: 226px !important;
-                                }
-                            }
-                        }
-                        
+        >.layout:first-child{
+            .view-content{
+                @media (max-width: 576px) {
+                    .col-sm-3 {
+                        flex: 0 0 auto;
+                        width: 100%;
+                        height: auto;
+                        min-height: inherit;
                     }
                 }
             }
-        }*/
+        }
+        >.layout:nth-child(2){
+            .block-block-content74db6d66-0d90-4d55-a950-1807616147b9{
+                @media (max-width: 768px) {
+                    .col-sm-2 {
+                        flex: 0 0 auto;
+                        width: 100%;
+                    }
+                }
+            }
+
+            .block-block-content5712aaa6-336a-4df9-b947-c66cd32d67fe {
+                .slick-slide{
+                    //pantallas pequeñas
+                    @media (max-width: 768px) {
+                        .view-display-id-block_btnx5 {
+                            margin: 0 auto;
+                            max-width: 80%; 
+                            img{
+                                width: 100%;
+                                margin: 0;
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        
+             
+        }
         >.layout:nth-child(3){
             .layout__region--content{
                 .block-block-content1ccf4938-7d27-40c0-aaa5-fe1ccbed9da6{

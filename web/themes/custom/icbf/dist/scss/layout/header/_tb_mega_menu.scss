@@ -38,6 +38,9 @@ body .tb-megamenu .nav>.active>a:focus{
 
 .region-nav-main{
   position: relative;
+  .contextual-region{
+    position: initial;
+  }
 }
 .tb-megamenu {
   background-color: transparent;
