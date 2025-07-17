@@ -1101,6 +1101,24 @@
     .az-element .az-text h1 {
         display: none;
     }
+    .az-ctnr.container{
+        max-width: 100%;
+    }
+    .az-video.embed-responsive{
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    }
 }
 
 .page-el-instituto-funcionarios-directivos-funcionarios-directivos-regionales,
@@ -1540,7 +1558,7 @@
             .field--name-field-content{
                 >div:nth-child(3){
                     .az-ctnr{
-                        .az-element:first-child{
+                        >.az-element:first-child{
                             margin-bottom: 50px;
                             @media (min-width: 576px) {
                                 .col-sm-5 {
@@ -1890,6 +1908,31 @@
                                 width: 60px;
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.page-proveedores-icbf-0{
+    #block-icbf-content{
+        .content{
+            .he_back-cleargrey{
+                >.az-ctnr{
+                    >div{
+                        flex-wrap: wrap;
+                    }
+                }
+            }
+                
+            >.layout:last-child{
+                .block-field-blocktaxonomy-termsecctionsfield-content{
+                    hr{
+                        margin: 2rem 0 0 0;
                     }
                 }
             }

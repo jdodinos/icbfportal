@@ -1,72 +1,80 @@
 @use "../abstracts/variables" as var;
 
-.page-programas-y-estrategias-primera-infancia-cuentame{
+.page-programas-y-estrategias-primera-infancia-cuentame {
 
-    
-    .line-vo, .bar-line {
-        border-top: 1px solid #8095f7;
+    .line-vo,
+    .bar-line {
         border-bottom: 0;
+        border-top: 1px solid #8095f7;
     }
 
-    .vocabulary-secctions{
+    .vocabulary-secctions {
 
-        .tb-megamenu{
-            .tb-megamenu-nav{
+        .tb-megamenu {
+
+            .tb-megamenu-nav {
                 display: flex;
                 flex-direction: column;
-                .tb-megamenu-item{
+
+                .tb-megamenu-item {
+                    margin-bottom: .5em;
                     margin-left: 0;
                     margin-right: 0;
-                    margin-bottom: .5em;
                     padding: 0;
-                    width: 100%;
                     position: relative;
-                    a{
+                    width: 100%;
+
+                    a {
                         background-color: #fcfcfc;
                         border-radius: 4px;
                         color: #004686;
+                        font-family: var.$font-montserrat;
+                        font-size: 12.6px;
                         font-weight: 400;
                         line-height: 18px;
                         padding: 10px;
                         text-decoration: none;
-                        font-family: var.$font-montserrat;
-                        font-size: 12.6px;
 
-                        .caret{
-                            border-top: 0.4em solid transparent;
+                        .caret {
                             border-bottom: 0.4em solid transparent;
                             border-left: 0.4em solid black;
+                            border-top: 0.4em solid transparent;
                         }
                     }
 
-                    &.active-trail{
-                        a{
+                    &.active-trail {
+
+                        a {
                             border: 1px solid #3cb371 !important;
                         }
                     }
 
-                    .tb-megamenu-submenu{
-                        top: 0;
-                        left: 100%;
-                        width: 400px;
-                        padding: 0;
+                    .tb-megamenu-submenu {
                         border-left: 2px solid #009688;
-                        .mega-dropdown-inner{
-                            .tb-megamenu-row.row-fluid{
-                                display: flex;
-                                .tb-megamenu-column{
-                                    width: 100%;
-                                    .tb-megamenu-subnav{
-                                        .tb-megamenu-item{
-                                            position: relative;
-                                            margin: 0;
-                                            border-bottom: 1px solid rgb(238, 238, 238);
+                        left: 100%;
+                        padding: 0;
+                        top: 0;
+                        width: 400px;
 
-                                            a{
+                        .mega-dropdown-inner {
+
+                            .tb-megamenu-row.row-fluid {
+                                display: flex;
+
+                                .tb-megamenu-column {
+                                    width: 100%;
+
+                                    .tb-megamenu-subnav {
+
+                                        .tb-megamenu-item {
+                                            border-bottom: 1px solid rgb(238, 238, 238);
+                                            margin: 0;
+                                            position: relative;
+
+                                            a {
                                                 color: #333;
                                                 font-size: 14px;
                                                 line-height: 21.84px;
-        
                                             }
                                         }
                                     }
@@ -79,32 +87,38 @@
         }
 
         video {
-            width: 100%;
             aspect-ratio: 16 / 9;
             display: block;
+            width: 100%;
         }
 
-        > .content{
-            > .layout--unecol-section{
+        >.content {
+
+            >.layout--unecol-section {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: flex-end;
 
-                .layout__region--first{
+                .layout__region--first {
                     width: calc(100% / 12 * 2);
-                    @media (max-width: 992px){
+
+                    @media (max-width: 992px) {
                         width: 100%;
                     }
                 }
-                .layout__region--second{
+
+                .layout__region--second {
                     width: calc(100% / 12 * 10);
-                    @media (max-width: 992px){
+
+                    @media (max-width: 992px) {
                         width: 100%;
                     }
                 }
-                .layout__region--third{
+
+                .layout__region--third {
                     width: calc(100% / 12 * 5);
-                    @media (max-width: 992px){
+
+                    @media (max-width: 992px) {
                         width: 100%;
                     }
                 }
@@ -112,3 +126,61 @@
         }
     }
 }
+
+.page-bienestar {
+
+    .view-id-articulos_secciones {
+
+        .col-sm-4 {
+            width: 25%;
+        }
+
+        .h245-img {
+            height: 190px;
+
+            img {
+                height: 190px;
+            }
+        }
+    }
+}
+
+.page-programas-y-estrategias-direccion-de-infancia {
+
+    .block-views-blockmisional-ninez-y-adolescencia-block-l1inf,
+    .block-views-blockmisional-ninez-y-adolescencia-block-2linesinf,
+    .block-views-blockmisional-ninez-y-adolescencia-block-3inf {
+
+        .view-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            h4{
+                font-size: 16px !important;
+            }
+
+            .n-lestrategics {
+                margin: 1em 1.1em 1.2em 1.1em;
+            }
+        }
+    }
+}
+
+.page-programas-y-estrategias-direccion-de-adolescencia-y-juventud{
+    .view-display-id-block_3ayj,
+    .view-display-id-block_4ayj,
+    .view-display-id-block_5ayj,
+    .view-display-id-block_6ayj{
+        .view-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .n-lestrategics {
+                margin: 1em 1.1em 1.2em 1.1em;
+            }
+        }
+    }
+}
+
