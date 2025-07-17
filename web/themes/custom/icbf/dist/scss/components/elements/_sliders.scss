@@ -1,0 +1,32 @@
+ @use "../../abstracts/variables" as var;
+
+ .page-id-7213 {
+
+
+
+     .slick-dotted.slick-slider .slick-dots {
+         list-style-type: none;
+     }
+
+     .slick-dotted.slick-slider .slick-dots li.slick-active button {
+         background: #999;
+     }
+
+     .slick-dotted.slick-slider .slick-dots li {
+         display: block;
+         list-style-type: none;
+     }
+
+     .slick-dotted.slick-slider .slick-dots li button {
+         cursor: pointer;
+         box-sizing: border-box;
+         border-radius: 0;
+         font-size: 0;
+         width: 10px;
+         height: 10px;
+         margin: 0 3px;
+         display: inline-block;
+         background: #ccc;
+         border: #ccc;
+     }
+ }
