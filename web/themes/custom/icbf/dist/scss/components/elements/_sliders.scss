@@ -58,21 +58,21 @@
          }
 
          .slick-next {
-             right: 50%;
-         }
-
-         .slick-prev {
              right: 45%;
          }
 
+         .slick-prev {
+             right: 50%;
+         }
+
          .slick-prev::before {
-             content: "\f105";
+             content: "\f104";
              font-family: "FontAwesome" !important;
              color: #929292 !important;
          }
 
          .slick-next::before {
-             content: "\f104";
+             content: "\f105";
              font-family: "FontAwesome" !important;
              color: #929292 !important;
          }
