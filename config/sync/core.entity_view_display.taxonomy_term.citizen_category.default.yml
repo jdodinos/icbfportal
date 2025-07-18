@@ -6,8 +6,157 @@ dependencies:
     - field.field.taxonomy_term.citizen_category.field_content
     - field.field.taxonomy_term.citizen_category.field_procedure
     - taxonomy.vocabulary.citizen_category
+    - views.view.tramites
+  content:
+    - 'block_content:footer:6ef225ee-ab82-493e-9851-60ed5d3c6452'
   module:
+    - block_content
+    - bootstrap_layouts
+    - layout_builder
+    - panelizer
     - text
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: bs_1col
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            main:
+              wrapper: div
+              classes:
+                col-sm-12: col-sm-12
+              add_region_classes: 1
+              attributes: ''
+          context_visibility: {  }
+          context_all_must_pass: 1
+        components:
+          eeb3319d-ffcb-44b6-ae05-445b0a6a1bba:
+            uuid: eeb3319d-ffcb-44b6-ae05-445b0a6a1bba
+            region: main
+            configuration:
+              id: 'field_block:taxonomy_term:citizen_category:field_content'
+              label: Contenido
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+        third_party_settings: {  }
+      -
+        layout_id: bs_2col
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            left:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-6: col-sm-6
+                col-md-6: col-md-6
+                col-lg-6: col-lg-6
+              add_region_classes: 1
+              attributes: ''
+            right:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-6: col-sm-6
+                col-md-6: col-md-6
+                col-lg-6: col-lg-6
+              add_region_classes: 1
+              attributes: ''
+          context_visibility: {  }
+          context_all_must_pass: 1
+        components: {  }
+        third_party_settings: {  }
+      -
+        layout_id: bs_1col
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            main:
+              wrapper: div
+              classes:
+                col-sm-12: col-sm-12
+              add_region_classes: 1
+              attributes: ''
+          context_visibility: {  }
+          context_all_must_pass: 1
+        components:
+          443a15af-bf33-4d3e-9f2f-cde10d2e835d:
+            uuid: 443a15af-bf33-4d3e-9f2f-cde10d2e835d
+            region: main
+            configuration:
+              id: 'views_block:tramites-block_7'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          a543e17e-2886-41da-8fea-a57dc8301011:
+            uuid: a543e17e-2886-41da-8fea-a57dc8301011
+            region: main
+            configuration:
+              id: 'block_content:6ef225ee-ab82-493e-9851-60ed5d3c6452'
+              label: 'banner portafolio en vus'
+              label_display: '0'
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 1
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+        third_party_settings: {  }
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: taxonomy_term.citizen_category.default
 targetEntityType: taxonomy_term
 bundle: citizen_category

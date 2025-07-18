@@ -4674,7 +4674,7 @@ display:
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
+          element_wrapper_type: h4
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
@@ -4804,7 +4804,7 @@ display:
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
+          element_wrapper_type: h4
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
@@ -4944,13 +4944,21 @@ display:
         groups:
           1: AND
       style:
-        type: views_bootstrap_list_group
+        type: views_bootstrap_thumbnail
         options:
           grouping: {  }
-          row_class: ''
-          default_row_class: true
-          panels: 0
-          title_field: ''
+          uses_fields: false
+          alignment: horizontal
+          columns: '12'
+          col_xs: col-xs-12
+          col_sm: col-sm-6
+          col_md: col-md-4
+          col_lg: col-lg-3
+          automatic_width: false
+          col_class_custom: ''
+          col_class_default: true
+          row_class_custom: ''
+          row_class_default: true
       row:
         type: fields
         options: {  }

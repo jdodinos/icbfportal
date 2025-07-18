@@ -3590,7 +3590,7 @@ display:
         type: default
         options:
           grouping: {  }
-          row_class: ''
+          row_class: 'col-sm-4 col-xs-12'
           default_row_class: true
       row:
         type: fields
@@ -3608,7 +3608,7 @@ display:
         arguments: false
         filters: false
         filter_groups: false
-      css_class: row
+      css_class: pp-contain-box
       use_ajax: true
       display_description: 'grid completa'
       display_extenders:

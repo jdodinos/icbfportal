@@ -96,7 +96,7 @@ function icbf_preprocess_field(&$variables) {
           $html_text = str_replace('owl-carousel st-owl-theme', 'icbf-owl-carousel', $html_text);
           $html_text = str_replace('owl-wrapper', 'icbf-owl-carousel-wrapper', $html_text);
           // $html_text = str_replace('class="owl-item"', 'class="icbf-owl-item"', $html_text);
-          // Remover todos los atributos `style="..."`
+          // Remover todos los atributos style="..."
           $html_text = preg_replace('/\s*style="[^"]*"/i', '', $html_text);
 
         }
@@ -150,7 +150,6 @@ function icbf_preprocess_field(&$variables) {
                 $html_view = \Drupal::service('renderer')->render($render_array);
                 $html_view = $element . $html_view . '</div>';
                 $original_element = str_replace($element, $html_view, $original_element);
-
               }
             }
           }
@@ -164,11 +163,13 @@ function icbf_preprocess_field(&$variables) {
 
       // For blocks in Glazed Builder.
       if (strpos($html, 'data-azb="az_block')) {
+        $html = $item['content']['#text'];
         $explode_html = explode('</div>', $html);
-        foreach ($explode_html as $original_element) {
+        foreach ($explode_html as &$original_element) {
           if (strpos($original_element, 'data-azb="az_block')) {
-            $original_element .= '</div>';
-            $element = trim($original_element);
+            $last_div_pos = strrpos($original_element, '<div');
+            $element = substr($original_element, $last_div_pos);
+            $element = trim($element);
 
             // Check if view data.
             $block_data = [];
@@ -193,20 +194,12 @@ function icbf_preprocess_field(&$variables) {
                   $html_block = \Drupal::service('renderer')->renderRoot($render_array);
                   $html_view = $element . $html_block . '</div>';
                   $original_element = str_replace($element, $html_view, $original_element);
-                  // $html = str_replace($original_element, $html_block, $html);
-
-                  // // Render it.
-                  // $render_array = $view->render();
-                  // $html_view = \Drupal::service('renderer')->render($render_array);
-                  // $html_view = $element . $html_view . '</div>';
-                  // $original_element = str_replace($element, $html_view, $original_element);
                 }
               }
             }
           }
-
-          if ($original_element == '') {
-            $original_element = '</div>';
+          else {
+            $original_element .= '</div>';
           }
         }
 
@@ -216,6 +209,7 @@ function icbf_preprocess_field(&$variables) {
 
       // For Iconsd in Glazed Builder.
       if (strpos($html, 'data-azat-icon="')) {
+        $html = $item['content']['#text'];
         $explode_html = explode('</div>', $html);
         foreach ($explode_html as $original_element) {
           if (strpos($original_element, 'data-azat-icon="')) {
@@ -277,6 +271,18 @@ function icbf_preprocess_views_view_field(&$variables) {
         $file_url_generator = \Drupal::service('file_url_generator');
         $variables['video_url'] = $file_url_generator->generateAbsoluteString($file->getFileUri());
       }
+    }
+  }
+
+  // Formatter the value in the constructor field.
+  if ($variables['field']->field == 'field_constructor') {
+    if ($variables['output']) {
+      $output = str_replace('<p>', '', $variables['output']);
+      $output = str_replace('</p>', '', $output);
+      $decoded_html = html_entity_decode($output);
+      $variables['output'] = [
+        '#markup' => $decoded_html,
+      ];
     }
   }
 
@@ -344,7 +350,7 @@ function icbf_theme_suggestions_views_view_field_alter(array &$suggestions, arra
   $field = $variables['field']->field;
 
 
-  $suggestions[] = "views_view_field__{$view->id()}__{$display_id}__{$field}";
+  $suggestions[] = "views_view_field_{$view->id()}{$display_id}_{$field}";
 }
 
 /**
