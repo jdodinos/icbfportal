@@ -1714,120 +1714,167 @@
 
 
 .page-transparencia-y-acceso-informacion-publica-participa {
-  .region-content ul .tb-megamenu-nav {
-    width: 250px!important;
-  }
+    .block-views-blockcalendar-block-page-6{
+        margin-top: 1.5em;
+        .view-calendar{
+            .view-content{
+                .slick-prev, .slick-next{
+                    display: flex;
+                    position: absolute;
+                    top: -1.5em;
+                    background-color: #fff;
+                    border: 1px solid #ddd;
+                    color: #337ab7;
+                    width: 80px;
+                    height: 30px;
+                }
+                
+                .slick-prev:focus, .slick-prev:hover, .slick-next:focus, .slick-next:hover{
+                    color: #23527c;
+                    background-color: #eee;
+                    border-color: #ddd;
+                    text-decoration: underline;
+                }
+    
+                .slick-prev{
+                    border-radius: 5px 0 0 5px;
+                    right: 80px;
+                }
+                .slick-prev::before {
+                    display: flex;
+                    content: "\2039";
+                    color: #337ab7 !important;
+                    font-size: x-large;
+                }
 
-  .precontent .field__item {
-    max-width: 1150px!important;
-    margin: 1.5em auto!important;
-  }
-
-  .region-content ul.tb-megamenu-nav a {
-    background-color: #fcfcfc !important;
-    border-radius: 4px!important;
-    color: #004686 !important;
-    font-weight: 400 !important;
-    line-height: 18px!important;
-    padding: 10px!important;
-    text-transform: none !important;
-  }
-
-  .region-content .tb-megamenu .tb-megamenu-nav > li {
-    width: 250px!important;
-    max-width: 250px!important;
-  }
-
-  .block-views-blockarticulos-secciones-block-vparticipa{
-    display: flex!important;
-  }
-
-  @media (min-width: 768px) {
-    .page-transparencia-y-acceso-informacion-publica-participa
-    .col-sm-4:has(h4 a[href*="canal-interacción-deliberatoria"]) {
-      margin-left: 66.6666%!important;
+                .slick-next{
+                    border-radius: 0 5px 5px 0;
+                    right: 0;
+                }
+                .slick-next::after {
+                    display: flex;
+                    content: "\203A";
+                    color: #337ab7 !important;
+                    font-size: x-large;
+                }
+            }
+        }
     }
-  }
 
-  /* Forzar tamaño para .bs-region--left */
-  .bs-region--left {
-    width: 100%;
-  }
+    .region-content ul .tb-megamenu-nav {
+        width: 250px!important;
+    }
 
-  @media (min-width: 576px) {
+    .precontent .field__item {
+        max-width: 1150px!important;
+        margin: 1.5em auto!important;
+    }
+
+    .region-content ul.tb-megamenu-nav a {
+        background-color: #fcfcfc !important;
+        border-radius: 4px!important;
+        color: #004686 !important;
+        font-weight: 400 !important;
+        line-height: 18px!important;
+        padding: 10px!important;
+        text-transform: none !important;
+    }
+
+    .region-content .tb-megamenu .tb-megamenu-nav > li {
+        width: 250px!important;
+        max-width: 250px!important;
+    }
+
+    .block-views-blockarticulos-secciones-block-vparticipa{
+        display: flex!important;
+    }
+
+    @media (min-width: 768px) {
+        .page-transparencia-y-acceso-informacion-publica-participa
+        .col-sm-4:has(h4 a[href*="canal-interacción-deliberatoria"]) {
+        margin-left: 66.6666%!important;
+        }
+    }
+
+    /* Forzar tamaño para .bs-region--left */
     .bs-region--left {
-      width: 25% !important; /* col-sm-3 */
+        width: 100%;
     }
-  }
 
-  @media (min-width: 768px) {
-    .bs-region--left {
-      width: 25% !important; /* col-md-3 */
+    @media (min-width: 576px) {
+        .bs-region--left {
+        width: 25% !important; /* col-sm-3 */
+        }
     }
-  }
 
-  @media (min-width: 992px) {
-    .bs-region--left {
-      width: 25% !important; /* col-lg-3 */
+    @media (min-width: 768px) {
+        .bs-region--left {
+        width: 25% !important; /* col-md-3 */
+        }
     }
-  }
 
-  /* Forzar tamaño para .bs-region--right */
-  .bs-region--right {
-    width: 100%;
-  }
+    @media (min-width: 992px) {
+        .bs-region--left {
+        width: 25% !important; /* col-lg-3 */
+        }
+    }
 
-  @media (min-width: 576px) {
+    /* Forzar tamaño para .bs-region--right */
     .bs-region--right {
-      width: 75% !important; /* col-sm-9 */
+        width: 100%;
     }
-  }
 
-  @media (min-width: 768px) {
-    .bs-region--right {
-      width: 75% !important; /* col-md-9 */
+    @media (min-width: 576px) {
+        .bs-region--right {
+        width: 75% !important; /* col-sm-9 */
+        }
     }
-  }
 
-  @media (min-width: 992px) {
-    .bs-region--right {
-      width: 75% !important; /* col-lg-9 */
+    @media (min-width: 768px) {
+        .bs-region--right {
+        width: 75% !important; /* col-md-9 */
+        }
     }
-  }
 
-  .block-field-blocktaxonomy-termsecctionsfield-content{
-    position: relative;
-    right: 18%;
-  }
+    @media (min-width: 992px) {
+        .bs-region--right {
+        width: 75% !important; /* col-lg-9 */
+        }
+    }
+
+    .block-field-blocktaxonomy-termsecctionsfield-content{
+        position: relative;
+        right: 18%;
+    }
 
 
-  .az-row {
-    max-width: 1100px; /* Ajusta el valor si quieres más o menos ancho total */
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
+    .az-row {
+        max-width: 1100px; /* Ajusta el valor si quieres más o menos ancho total */
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
 
-  /* Imagen: reducir tamaño */
-  .region-content .az-row .col-sm-5 img {
-    width: 70%;
-    height: auto;
-    min-height: 200px; /* Ajusta este valor según necesidad */
-    display: block;
-    margin: 0 auto;
-  }
+    /* Imagen: reducir tamaño */
+    .region-content .az-row .col-sm-5 img {
+        width: 70%;
+        height: auto;
+        min-height: 200px; /* Ajusta este valor según necesidad */
+        display: block;
+        margin: 0 auto;
+    }
 
-  /* Texto: centrado vertical si hay suficiente espacio */
-  .az-row .col-sm-7 {
-    display: flex;
-    align-items: flex-start;
-  }
+    /* Texto: centrado vertical si hay suficiente espacio */
+    .az-row .col-sm-7 {
+        display: flex;
+        align-items: flex-start;
+    }
 
-  .az-element > h2 > span > strong{
-    font-family: 'Asap';
-    font-weight: 700!important;
-  }
+    .az-element > h2 > span > strong{
+        font-family: 'Asap';
+        font-weight: 700!important;
+    }
 }
 
 
@@ -2047,22 +2094,44 @@
 
     #block-icbf-content{
         .block-views-blocklicencias-de-funcionamiento-sapi-block{
-            .view-filters{
-                .form-radios{
-                    input[type=checkbox], input[type=radio] {
-                        appearance: none;
-                        width: 13px;
-                        height: 13px;
-                        border: 1px solid #555;
-                        border-radius: 3px;
-                        margin: 0 4px 0 0 !important;
-                        /* Cuando se selecciona el check*/
-                        :checked {
-                            background-color: #1996d0;
-                            border-color: #1996d0;                        
+            .page-citaciones{
+                display: grid;
+                grid-template-columns: .3fr 1fr;
+                grid-template-rows: .5fr .1fr;
+                margin: 0 auto;
+                .view-filters{
+                    .form-radios{
+                        .form-item-field-location-db{
+                            display: flex;
+                            margin: 0;
                         }
-                        /*Estilos para el icono interno del check*/
-                        ::after {
+                        label{
+                            white-space: nowrap;
+                            color: #1996d0;
+                            text-decoration: none !important;
+                        }
+                        label:hover{
+                            color: #125e81;
+                            text-decoration: underline !important;
+                        }
+    
+                        input[type=checkbox], input[type=radio] {
+                            appearance: none;
+                            width: 13px;
+                            height: 13px;
+                            border: 1px solid #555;
+                            border-radius: 3px;
+                            margin: 0 4px 0 0 !important;
+                            /* Cuando se selecciona el check*/
+                            /*Estilos para el icono interno del check*/
+                            
+                        }
+                        input[type=checkbox]:checked, input[type=radio]:checked {
+                            background-color: #1996d0;
+                            border-color: #1996d0;
+                        }
+                        
+                        input[type=checkbox]::after, input[type=radio]::after {
                             content: '✔';
                             color: white;
                             width: 100%;
@@ -2071,11 +2140,57 @@
                             align-items: center;
                             justify-content: center;
                         }
-            
                     }
-            
-            
-            
+    
+                    .fieldset-legend{
+                        font-size: 1.4em;
+                    }
+                    .fieldset-legend::after {
+                        content: ":";
+                    }
+                        
+                    .fieldset-wrapper{
+                        padding: 2em 1em 1em 0;
+                    }
+                }
+    
+                nav.pager {
+                    height: min-content;
+                    .pagination{
+                        .page-link{
+                            font-size: 11px;
+                        }
+                        .page-item{
+                            .page-link{
+                                width: 100%;
+                                border-radius: 0%;
+                            }
+    
+                            &.disabled{
+                                span{
+                                    height: initial;
+                                    line-height: 20px;
+                                }
+                            }
+                            a{
+                                text-transform: lowercase;
+                                white-space: nowrap;
+                                font-size: 14px;/*de la pagina del icbf*/
+                            }
+                        }
+    
+                        .page-item:first-child{
+                            .page-link{
+                                border-radius: 5px 0px 0px 5px !important;
+                            }
+                        }
+                        .page-item:last-child{
+                            .page-link{
+                                border-radius: 0px 5px 5px 0px !important;
+                            }
+                        }
+                        
+                    }
                 }
             }
         }
