@@ -2980,9 +2980,36 @@
   }
 }
 
+
+
+
+
+
+
+
+
+
 .page-caja-de-herramientas-innovacion{
   div{
     font-family: 'Montserrat', sans-serif;
   }
 }
 
+
+
+//pagina de segundo nivel
+.page-memorias-encuentro-aprendiendo-juntos{
+    #block-page-title-block {
+        padding: 0 1.5em;
+    }
+
+    #block-icbf-content{
+        .block-field-blocknodepagefield-content{
+            .field--name-field-content{
+                >div:first-child{
+                    font-family: 'Montserrat', sans-serif;
+                }
+            }
+        }
+    }
+}
