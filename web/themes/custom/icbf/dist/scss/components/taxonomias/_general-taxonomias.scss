@@ -1730,3 +1730,391 @@
     font-weight: 700!important;
   }
 }
+
+.page-bienestar-app-3{
+  .layout.layout--unecol-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 20px;
+  }
+
+  /* Cada documento dentro de la lista */
+  .views-view-list-group.list-group .list-group-item {
+    border: 1px solid #e6e6e6;
+  }
+
+
+  .views-label-field-coverimg-msite {
+    display: none;
+  }
+
+  .views-field-field-document-msite a {
+    font-size: 0; /* Oculta el texto original */
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    line-height: 1.1;
+  }
+
+  .views-field-field-document-msite a[href$="video_tutorial_bienestar_app_eas_v2_s.mp4"]::before {
+    content: "Tutorial EAS";
+    font-size: 14px;
+  }
+
+  .views-field-field-document-msite a[href$="manual_usuario_bienestar_app_-_eas.pdf"]::before {
+    content: "Manual de Usuario EAS";
+    font-size: 14px;
+  }
+
+  .views-field-field-document-msite a[href$="eas_infografias_bienestar_app.pdf"]::before {
+    content: "Infografías EAS";
+    font-size: 14px;
+  }
+
+  .views-field-field-document-msite a[href$="uds_infografias_bienestar_app.pdf"]::before {
+    content: "Infografías UDS";
+    font-size: 14px;
+  }
+
+  .views-field-field-document-msite a[href$="manual_usuario_bienestar_app_-_uds.pdf"]::before {
+    content: "Manual Usuario UDS";
+    font-size: 14px;
+  }
+
+  .views-field-field-document-msite a[href$="video_tutorial_bienestar_app_uds_v2_s.mp4"]::before {
+    content: "Tutorial UDS";
+    font-size: 14px;
+  }
+
+  .views-field-field-document-msite a[href$="video_tutorial_bienestar_responsables_o_acudientes_v2_s.mp4"]::before {
+    content: "Tutorial";
+    font-size: 14px;
+  }
+
+  .views-field-field-document-msite a[href$="padres_de_familia_infografias_bienestar_app.pdf"]::before {
+    content: "Infografías Padres";
+    font-size: 14px;
+  }
+
+  .views-field-field-document-msite a[href$="manual_usuario_bienestar_app_-_acudiente.pdf"]::before {
+    content: "Manual Usuario Acudientes";
+    font-size: 14px;
+  }
+
+  #block-icbf-content  .layout--onecol{
+    padding-bottom: 50px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .node__content{
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+  }
+
+  .views-field-field-document-msite .field-content{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+  }
+}
+
+.page-solicitudes-informacion-publica{
+
+  .pe-7s-info.stbe-util-icon-circle,
+  .pe-7s-add-user.stbe-util-icon-circle {
+    font-size: 50px !important;     /* Tamaño del ícono (ajústalo según tu diseño) */
+    color: #ffffff !important;      /* Ícono blanco */
+    background-color: #dddddd !important; /* Fondo gris claro */
+    width: 130px;
+    height: 130px;
+    line-height: 130px;
+    text-align: center;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  [data-az-id="wapak705"]{
+    .pe[class*="pe-7s-"].fa-3x,
+    .pe[class*="pe-7s-"].fa-4x,
+    .pe[class*="pe-7s-"].fa-5x {
+      font-size: 30px !important;        /* Tamaño del ícono dentro del círculo */
+      width: 55px;
+      height: 55px;
+      line-height:50px;
+      text-align: center;
+      border-radius: 50%;
+      display: inline-block;
+      box-sizing: border-box;
+    }
+  }
+
+}
+
+.page-mensaje-de-confirmacion{
+
+  .word-msintro{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.56em;
+  }
+
+  .word-msintro p{
+    padding-top : 10px;
+  }
+
+  .page-header{
+    display: none;
+  }
+
+  [data-az-id="9m6fevo6"]{
+    width: 84.333333%;
+  }
+
+  .btn-primary {
+    color: #fff!important;
+    background-color: #337ab7!important;
+    border-color: #2e6da4!important;
+    margin-right: 10px!important;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .btn-default {
+    color: #333!important;
+    background-color: #fff!important;
+    border-color: #ccc!important;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .modal-footer {
+    padding: 15px!important;;
+    text-align: right!important;;
+    border-top: 1px solid #e5e5e5!important;;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+}
+
+.page-centro-zonal-magdalena-medio,
+.page-centro-zonal-magdalena-medio,
+.page-direccion-regional-atlantico,
+.page-centro-zonal-santa-fe,
+.page-direccion-regional-caldas,
+.page-centro-zonal-macizo-colombiano,
+.-direccion-regional-guainia{
+  /* ===== 1. Fuente y color base global ===== */
+  .region-content {
+    font-family: 'Montserrat', sans-serif;
+    color: #555;
+  }
+
+  /* ===== 2. Estructura en 2 columnas ===== */
+  .bs-2col {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start !important;
+  }
+
+  /* Columna izquierda */
+  .bs-region--left {
+    flex: 1 1 60%;
+    max-width: 60%;
+    padding-right: 20px;
+  }
+
+  /* Columna derecha */
+  .bs-region--right {
+    flex: 1 1 35%;
+    max-width: 35%;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  }
+
+  /* ===== 3. Títulos con íconos e intersecciones ===== */
+  .bs-region--right > .block {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+  }
+
+  /* Último bloque sin línea */
+  .bs-region--right > .block:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  /* Título h2 con ícono */
+  .bs-region--right h2 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    color: #555;
+  }
+
+
+  /* ===== 4. Texto interno de la derecha ===== */
+  .bs-region--right .field__item,
+  .bs-region--right .field__items div {
+    margin-top: 0.2rem;
+    font-size: 14px;
+    color: #555;
+    padding-left: 14px;
+  }
+
+  /* Labels */
+  .field__label {
+    font-weight: bold;
+    color: #1a8b3c;
+    display: inline-block;
+    margin-right: 0.3rem;
+  }
+
+  /* Nombres responsables */
+  .local-staff-list .field__item {
+    color: #2d3e50;
+    font-style: italic;
+    display: inline;
+  }
+
+
+  /* ===== 8. Sección de cobertura ===== */
+  .block-field-blocknodesede-localfield-coverage-areas {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+  }
+
+  .block-field-blocknodesede-localfield-coverage-areas h2 {
+    font-size: 18px;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+
+  /* Columnas de municipios */
+  .block-field-blocknodesede-localfield-coverage-areas .col-sm-6 {
+    width: 50%;
+    float: left;
+  }
+
+  .block-field-blocknodesede-localfield-coverage-areas li {
+    color: #2d3e50;
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+
+  /* Limpiar float */
+  .block-field-blocknodesede-localfield-coverage-areas:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* ===== 9. Responsive ===== */
+  @media (max-width: 768px) {
+    .bs-region--left,
+    .bs-region--right {
+      flex: 1 1 100%;
+      max-width: 100%;
+      padding-right: 0;
+    }
+
+    .block-field-blocknodesede-localfield-coverage-areas .col-sm-6 {
+      width: 100%;
+    }
+  }
+
+
+
+  /* Base del ícono */
+  .bs-region--right h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 16px;
+  }
+
+
+  /* Estilo base del ícono */
+  .bs-region--right h2::before {
+    font-family: "FontAwesome";
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    font-size: 16px;
+    position: absolute;
+    left: 0;
+    top: 2px;
+  }
+
+  /* Íconos válidos en FA 4.3 */
+  .bs-region--right h2:before {
+    content: "";
+  }
+
+  .local-staff-list:before {
+    color: #0b8763;
+    content: "\f105";
+    display: inline;
+    font-family: 'FontAwesome';
+    font-weight: 600;
+    left: 1em;
+    position: absolute;
+  }
+  .field-collection-view .content {
+    margin-top: 0;
+    width: 100%;
+  }
+
+
+  .local-staff-list {
+    margin-bottom: 6px;
+    padding-left: 4px;
+  }
+
+
+  /* Estilo general de íconos */
+  .bs-region--right h2::before {
+    font-family: "FontAwesome";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #1a8b3c;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    content: ""; /* se asigna por clase */
+  }
+
+
+  .node--view-mode-full .field__item {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    color: #555;
+  }
+
+  .bs-region--left{
+    width: 58.666667%!important;
+  }
+
+  .bs-region--right{
+    width: 41.333333%!important;
+  }
+
+  .field__label {
+     font-weight: 500;
+  }
+}
+
+.page-caja-de-herramientas-innovacion{
+  div{
+    font-family: 'Montserrat', sans-serif;
+  }
+}
