@@ -32,6 +32,7 @@
 @use 'components/familia-universal';
 @use 'components/calendario-eventos';
 @use 'components/operacion-procesos';
+@use 'components/estrategico';
 
 @use 'components/elements/breadcrumb';
 @use 'components/elements/custom-table';
@@ -41,6 +42,7 @@
 @use 'components/elements/table-filter';
 @use 'components/elements/table-general';
 @use 'components/elements/page-table';
+@use 'components/elements/sliders';
 
 @use 'components/home';
 @use 'components/content-type/noticias';
