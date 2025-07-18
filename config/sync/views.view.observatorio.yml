@@ -1256,8 +1256,19 @@ display:
         options:
           offset: 0
           items_per_page: 1
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: 7898-row
+          default_row_class: true
+      row:
+        type: fields
+        options: {  }
       defaults:
         pager: false
+        style: false
+        row: false
         fields: false
       display_description: ''
       display_extenders:
