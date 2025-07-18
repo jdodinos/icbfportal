@@ -1278,6 +1278,7 @@
                 .btn{
                     background: #fff;
                     border: 1px solid #333;
+                    font-family: 'montserrat';
                 }
 
                 .btn:focus, .btn:hover {
@@ -1286,6 +1287,7 @@
                     background: #333;
                     border: 1px solid #333;
                     color: #fff;
+                    font-family: 'montserrat';
                 }
             }
         }
@@ -1295,8 +1297,10 @@
                 li{
                     @media (min-width: 768px) {
                         .col-sm-2 {
+                            display: flex;
                             flex: 0 0 auto;
                             width: 16.66666667%;
+                            justify-content: center;
                         }
                     }
                     @media (min-width: 768px) {
