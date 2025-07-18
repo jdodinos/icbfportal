@@ -290,33 +290,35 @@
 }
 
 
-.page-rendicion-de-cuentas-icbf{
+.page-rendicion-de-cuentas-icbf {
 
-    .content{
-        >.layout:first-child{
-            .block-block-content64ad3cc9-b82f-4c9f-9ddd-73c4e859fba4{
-                #bf4gltmr{
+    .content {
+        >.layout:first-child {
+            .block-block-content64ad3cc9-b82f-4c9f-9ddd-73c4e859fba4 {
+                #bf4gltmr {
                     display: flex;
                     flex-wrap: wrap;
                     width: 100%;
                     margin: 0 auto;
                     position: initial;
 
-                    >.az-ctnr:first-child{
-                        max-width: 90vw;/*para pantallas pequeñas*/
+                    >.az-ctnr:first-child {
+                        max-width: 90vw;
+                        /*para pantallas pequeñas*/
                         text-align: justify;
                         padding: 0 1.5em;
 
-                        >.az-element:first-child{
-                            >.az-element{
+                        >.az-element:first-child {
+                            >.az-element {
                                 a:visited {
                                     color: #1996d0 !important;
                                 }
-                                a:hover{
+
+                                a:hover {
                                     color: #125e81 !important;
                                 }
 
-                                h3{
+                                h3 {
                                     color: #6b6b6b;
                                     display: block;
                                     font-family: 'Montserrat', sans-serif;
@@ -328,11 +330,13 @@
                                 }
 
                             }
-                            .item-list{
+
+                            .item-list {
                                 margin: 0 0 0.75em 1.5em !important;
-                                ul{
-                                    li{
-                                        .views-field-field-file-categoria{
+
+                                ul {
+                                    li {
+                                        .views-field-field-file-categoria {
                                             display: none;
                                         }
                                     }
@@ -370,6 +374,7 @@
 
 
                     }
+
                     /*
                     @media (min-width: 768px) {
                         >.az-ctnr:first-child{
@@ -387,20 +392,20 @@
                         }
                     }*/
 
-                    .box-h245{
+                    .box-h245 {
                         margin: 0;
                     }
                 }
             }
         }
 
-        >.layout:nth-child(2){
+        >.layout:nth-child(2) {
             display: flex;
             flex-wrap: wrap;
             padding: 1em;
 
-            .view-id-menu_lista_regionales{
-                .row{
+            .view-id-menu_lista_regionales {
+                .row {
                     display: grid;
 
                     .views-field-name {
@@ -409,58 +414,68 @@
                 }
             }
 
-            .block-block-content756d901f-61d2-4aa0-add5-7bf5d2af4f39{
+            .block-block-content756d901f-61d2-4aa0-add5-7bf5d2af4f39 {
                 padding: 0 1em;
             }
 
-            .layout__region--first{
-                max-width: 90vw;/*para pantallas pequeñas*/
+            .layout__region--first {
+                max-width: 90vw;
+                /*para pantallas pequeñas*/
             }
+
             @media (min-width: 768px) {
-                .layout__region--first{
+                .layout__region--first {
                     max-width: 30%;
                 }
             }
 
-            .layout__region--second{
-                max-width: 90vw;/*para pantallas pequeñas*/
+            .layout__region--second {
+                max-width: 90vw;
+                /*para pantallas pequeñas*/
             }
+
             @media (min-width: 768px) {
-                .layout__region--second{
+                .layout__region--second {
                     max-width: 70%;
                 }
             }
         }
 
-        >.layout:nth-child(3){
-            .slick__arrow{
+        >.layout:nth-child(3) {
+            .slick__arrow {
                 width: 72%;
                 top: 20rem;
+
                 >button:first-child {
                     margin-left: 20px;
                 }
             }
-            @media (max-width:849){
-                .slick__arrow{
+
+            @media (max-width:849) {
+                .slick__arrow {
                     top: 15rem;
                 }
             }
-            @media (max-width:849px){
-                .slick__arrow{
+
+            @media (max-width:849px) {
+                .slick__arrow {
                     top: 15rem;
                 }
             }
-            @media (max-width:575px){
-                .slick__arrow{
+
+            @media (max-width:575px) {
+                .slick__arrow {
                     width: 95%;
                 }
             }
+
             #carouselButtons3 {
                 bottom: 50px;
 
                 .glyphicon-play:before {
                     content: "\25b6";
                 }
+
                 .glyphicon-pause:before {
                     content: "\23F8";
                 }
@@ -468,10 +483,10 @@
 
         }
 
-        >.layout:last-child{
-            .az-ctnr{
-                >.az-element:nth-child(3){
-                    .describet{
+        >.layout:last-child {
+            .az-ctnr {
+                >.az-element:nth-child(3) {
+                    .describet {
                         margin-left: 0;
                     }
                 }
@@ -488,188 +503,201 @@
         1: (url: "https://www.icbf.gov.co/sites/default/files/familias-comunidades-icons_07.png", size: 57px),
         2: (url: "https://www.icbf.gov.co/sites/default/files/familias-comunidades-icons_09.png", size: 37px),
         3: (url: "https://www.icbf.gov.co/sites/default/files/familias-comunidades-icons_11.png", size: 55px),
-        4: (url: "https://www.icbf.gov.co/sites/default/files/fyc-icondoc1_03.png",  size: 55px)
+        4: (url: "https://www.icbf.gov.co/sites/default/files/fyc-icondoc1_03.png", size: 55px)
     );
 
-    #block-icbf-content {
+#block-icbf-content {
 
 
-        .content {
-            >div:nth-child(2) {
-                margin: 4px auto;
-                display: inline-block;
-                border-top: 1px solid #00000024;
-                border-bottom: 1px solid #00000024;
+    .content {
+        >div:nth-child(2) {
+            margin: 4px auto;
+            display: inline-block;
+            border-top: 1px solid #00000024;
+            border-bottom: 1px solid #00000024;
 
-                .block-views-blockmisional-ninez-y-adolescencia-block-2fyc {
-                    #quicktabs-misional-ninez-y-adolescencia {
-                        .item-list {
+            .block-views-blockmisional-ninez-y-adolescencia-block-2fyc {
+                #quicktabs-misional-ninez-y-adolescencia {
+                    .item-list {
+                        display: flex;
+                        justify-content: center;
+
+                        ul {
                             display: flex;
+                            flex-wrap: wrap;
                             justify-content: center;
 
-                            ul {
-                                display: flex;
-                                flex-wrap: wrap;
-                                justify-content: center;
-                                @for $i from 1 through 3 {
-                                    li:nth-child(#{$i}) {
-                                        background-color: #cecece36;
-                                        padding: 8px;
-                                        font-weight: 600;
-                                        $icon: map.get($icons, $i);
-                                        a::before {
-                                            background: url(map.get($icon, url)) center no-repeat !important;
-                                            background-size: map.get($icon, size) !important;
-                                            content: "";
-                                            display: block;
-                                            height: 55px;
-                                            margin: auto;
-                                            padding: 0;
-                                            width: 55px;
-                                        }
-                                        a{
-                                            color: #407021;
-                                            text-decoration: underline;
-                                        }
-                                        a:hover{
-                                            color: #fff;
-                                            text-decoration: underline;
-                                        }
-                                        a:focus, a:active {
-                                            outline: none;
-                                            box-shadow: none;
-                                            text-decoration: underline;
-                                        }
+                            @for $i from 1 through 3 {
+                                li:nth-child(#{$i}) {
+                                    background-color: #cecece36;
+                                    padding: 8px;
+                                    font-weight: 600;
+                                    $icon: map.get($icons, $i);
+
+                                    a::before {
+                                        background: url(map.get($icon, url)) center no-repeat !important;
+                                        background-size: map.get($icon, size) !important;
+                                        content: "";
+                                        display: block;
+                                        height: 55px;
+                                        margin: auto;
+                                        padding: 0;
+                                        width: 55px;
                                     }
-                                }
 
-                                li:hover{
-                                    background-color: #407021;
-                                }
-                            }
-                        }
-                    }
-
-                    .quicktabs-tabpage {
-
-                        //#quicktabs-tabpage-misional-ninez-y-adolescencia-0, #quicktabs-tabpage-misional-ninez-y-adolescencia-0{
-                        .views-field-field-subtitle {
-                            color: #407021;
-                            font-size: 1.4em;
-                            font-weight: 600;
-                            margin-bottom: 1em;
-                        }
-                    }
-                }
-            }
-
-            >div:nth-child(3) {
-                .block-views-blockmisional-ninez-y-adolescencia-block-3fyc {
-                    #quicktabs-misional-ninez-y-adolescencia {
-                        .item-list {
-                            display: flex;
-                            justify-content: center;
-
-                            ul {
-                                display: flex;
-                                flex-wrap: wrap;
-                                justify-content: center;
-                                @for $i from 1 through 4 {
-                                    li:nth-child(#{$i}) {
-                                        background-color: #cecece36;
-                                        font-weight: 600;
-                                        padding: 8px;
-                                        $icon: map.get($icons, $i);
-                                        a::before {
-                                            background: url(map.get($icon, url)) center no-repeat !important;
-                                            background-size: map.get($icon, size) !important;
-                                            content: "";
-                                            display: block;
-                                            height: 55px;
-                                            margin: auto;
-                                            padding: 0;
-                                            width: 55px;
-                                        }
-
-                                        a{
-                                            color: #407021;
-                                        }
-                                        a:hover{
-                                            color: #fff;
-                                            text-decoration: underline;
-                                        }
-                                        a:focus, a:active {
-                                            outline: none;
-                                            box-shadow: none;
-                                            text-decoration: underline;
-                                        }
+                                    a {
+                                        color: #407021;
+                                        text-decoration: underline;
                                     }
-                                }
-                                li:hover{
-                                    background-color: #407021;
-                                }
-                            }
-                        }
 
-                        .quicktabs-main{
-                            display: inline-block;
-                        }
+                                    a:hover {
+                                        color: #fff;
+                                        text-decoration: underline;
+                                    }
 
-                        >.quicktabs-main{
-                            .quicktabs-tabpage:first-child{
-                                .views-field-views-conditional-field{
-                                    ul li::before{
-                                        content: '\25CF';
-                                        margin-right: 6px;
-                                        font-size: 10px;
+                                    a:focus,
+                                    a:active {
+                                        outline: none;
+                                        box-shadow: none;
+                                        text-decoration: underline;
                                     }
                                 }
                             }
-                        }
-                    }
 
-                    .quicktabs-tabpage {
-
-                        //#quicktabs-tabpage-misional-ninez-y-adolescencia-0, #quicktabs-tabpage-misional-ninez-y-adolescencia-0{
-                        .views-field-field-subtitle {
-                            color: #407021;
-                            font-size: 1.4em;
-                            font-weight: 600;
-                            margin-bottom: 1em;
+                            li:hover {
+                                background-color: #407021;
+                            }
                         }
                     }
                 }
-            }
 
-            >div:nth-child(2), >div:nth-child(3){
-                padding: 1.5em 3em;
-            }
+                .quicktabs-tabpage {
 
-            >div:nth-child(4){
-                display: flex;
-                justify-content: center;
-                background-color: #80808012;
-                border-top: 0.5px solid #8080803b;
-
-                .views-field-field-youtube{
-                    width: 70rem;
-                }
-
-                .views-field-title{
-                    color: #6b6b6b;
-                    display: block;
-                    font-family: 'Montserrat', sans-serif;
-                    line-height: initial;
-                    margin: auto;
-                    padding: 1.2em 0;
-                    word-break: break-word;
-                    font-size: 1.1em;
-                    font-weight: 500;
-                    text-align: left;
+                    //#quicktabs-tabpage-misional-ninez-y-adolescencia-0, #quicktabs-tabpage-misional-ninez-y-adolescencia-0{
+                    .views-field-field-subtitle {
+                        color: #407021;
+                        font-size: 1.4em;
+                        font-weight: 600;
+                        margin-bottom: 1em;
+                    }
                 }
             }
         }
+
+        >div:nth-child(3) {
+            .block-views-blockmisional-ninez-y-adolescencia-block-3fyc {
+                #quicktabs-misional-ninez-y-adolescencia {
+                    .item-list {
+                        display: flex;
+                        justify-content: center;
+
+                        ul {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: center;
+
+                            @for $i from 1 through 4 {
+                                li:nth-child(#{$i}) {
+                                    background-color: #cecece36;
+                                    font-weight: 600;
+                                    padding: 8px;
+                                    $icon: map.get($icons, $i);
+
+                                    a::before {
+                                        background: url(map.get($icon, url)) center no-repeat !important;
+                                        background-size: map.get($icon, size) !important;
+                                        content: "";
+                                        display: block;
+                                        height: 55px;
+                                        margin: auto;
+                                        padding: 0;
+                                        width: 55px;
+                                    }
+
+                                    a {
+                                        color: #407021;
+                                    }
+
+                                    a:hover {
+                                        color: #fff;
+                                        text-decoration: underline;
+                                    }
+
+                                    a:focus,
+                                    a:active {
+                                        outline: none;
+                                        box-shadow: none;
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+
+                            li:hover {
+                                background-color: #407021;
+                            }
+                        }
+                    }
+
+                    .quicktabs-main {
+                        display: inline-block;
+                    }
+
+                    >.quicktabs-main {
+                        .quicktabs-tabpage:first-child {
+                            .views-field-views-conditional-field {
+                                ul li::before {
+                                    content: '\25CF';
+                                    margin-right: 6px;
+                                    font-size: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .quicktabs-tabpage {
+
+                    //#quicktabs-tabpage-misional-ninez-y-adolescencia-0, #quicktabs-tabpage-misional-ninez-y-adolescencia-0{
+                    .views-field-field-subtitle {
+                        color: #407021;
+                        font-size: 1.4em;
+                        font-weight: 600;
+                        margin-bottom: 1em;
+                    }
+                }
+            }
+        }
+
+        >div:nth-child(2),
+        >div:nth-child(3) {
+            padding: 1.5em 3em;
+        }
+
+        >div:nth-child(4) {
+            display: flex;
+            justify-content: center;
+            background-color: #80808012;
+            border-top: 0.5px solid #8080803b;
+
+            .views-field-field-youtube {
+                width: 70rem;
+            }
+
+            .views-field-title {
+                color: #6b6b6b;
+                display: block;
+                font-family: 'Montserrat', sans-serif;
+                line-height: initial;
+                margin: auto;
+                padding: 1.2em 0;
+                word-break: break-word;
+                font-size: 1.1em;
+                font-weight: 500;
+                text-align: left;
+            }
+        }
     }
+}
 }
 
 
@@ -849,49 +877,54 @@
         display: none;
     }
 
-    #block-icbf-content{
-        .content{
-            >.layout:first-child{
-                .carousel-inner{
-                    .slick__arrow{
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
+                .carousel-inner {
+                    .slick__arrow {
                         width: 72%;
                         top: 20rem;
+
                         >button:first-child {
                             margin-left: 20px;
                         }
                     }
-                    @media (max-width:849){
-                        .slick__arrow{
+
+                    @media (max-width:849) {
+                        .slick__arrow {
                             top: 15rem;
                         }
                     }
-                    @media (max-width:849px){
-                        .slick__arrow{
+
+                    @media (max-width:849px) {
+                        .slick__arrow {
                             top: 15rem;
                         }
                     }
-                    @media (max-width:575px){
-                        .slick__arrow{
+
+                    @media (max-width:575px) {
+                        .slick__arrow {
                             width: 95%;
                         }
-                    }                 
+                    }
                 }
             }
 
-            >.layout:nth-child(2){
-                .block-block-content4ec78c60-f36a-45f1-bdd2-1ebf084adad9{
-                    .col-sm-3{
+            >.layout:nth-child(2) {
+                .block-block-content4ec78c60-f36a-45f1-bdd2-1ebf084adad9 {
+                    .col-sm-3 {
                         width: 100%;
                         max-width: 100%;
                     }
-                    
+
                     @media (min-width: 768px) {
-                        .col-sm-3{
+                        .col-sm-3 {
                             flex: 0 0 auto;
                             width: 25%;
                         }
                     }
                 }
+
                 .block-views-blockmultimedia-block-vdosnbf {
                     padding: 0 1em;
                 }
@@ -908,19 +941,23 @@
 
     .view-misional-ninez-y-adolescencia {
 
-        .bottm-line{
-            span, .field-content{
+        .bottm-line {
+
+            span,
+            .field-content {
                 display: flex;
                 flex-wrap: wrap;
 
-                >div{
+                >div {
                     width: 90vw;
                 }
+
                 @media (min-width: 768px) {
                     >div:first-child {
                         flex: 0 0 auto;
                         width: 58.33333333%;
                     }
+
                     >div:nth-child(2) {
                         flex: 0 0 auto;
                         width: 41.66666667%;
@@ -937,19 +974,23 @@
         }
     }
 
-    .layout:nth-child(2){
-        .view-misional-ninez-y-adolescencia{
-            .bottm-line:first-child{
+    .layout:nth-child(2) {
+        .view-misional-ninez-y-adolescencia {
+            .bottm-line:first-child {
                 border-bottom: 2px solid #eee;
                 margin-bottom: 1em;
-                .views-field-title{
-                    span, .field-content{
+
+                .views-field-title {
+
+                    span,
+                    .field-content {
                         text-align: center;
                         display: contents;
                     }
                 }
             }
-            .bottm-line:nth-child(2){
+
+            .bottm-line:nth-child(2) {
                 border-bottom: 2px solid #eee;
                 margin-bottom: 1em;
             }
@@ -964,6 +1005,7 @@
             box-shadow: 0.1px 0.1px 3px #80808075;
         }
     }
+
     /*
     .layout:nth-child(n+3):nth-child(-n+6){
         .view-misional-ninez-y-adolescencia{
@@ -977,7 +1019,8 @@
 
 
 
-    .layout:nth-child(7){
+    .layout:nth-child(7) {
+
         //Estilos para el titulo "Así es el trabajo con la niñez y la adolescencia en los territorios"
         .views-field-title {
             display: inline-block;
@@ -986,7 +1029,8 @@
             padding: 0;
             background-color: white;
 
-            span, .field-content{
+            span,
+            .field-content {
                 display: flex;
                 font-weight: 500;
                 margin: 0.5em 0;
@@ -997,7 +1041,7 @@
             }
         }
 
-        .views-field-field-youtube{
+        .views-field-field-youtube {
             display: block;
             padding: 0 1em;
             margin: 0 auto;
@@ -1016,9 +1060,12 @@
         /*para pantallas pequeñas*/
         margin: 2%;
 
-        h4, .n-item-title, .views-field-title{
+        h4,
+        .n-item-title,
+        .views-field-title {
             text-align: left !important;
-            span{
+
+            span {
                 color: #333333d1;
                 font-family: 'Montserrat', sans-serif;
                 font-size: 0.7em;
@@ -1041,6 +1088,7 @@
 
             }
         }
+
         @media (min-width: 768px) {
             .col-sm-9 {
                 max-width: 75%;
@@ -1070,16 +1118,18 @@
 
 
 .page-gestion-humana-manual-de-funciones-0 {
-    .content{
+    .content {
         padding: 0 7vw;
     }
 
-    .block-field-blocktaxonomy-termsecctionsfield-content{
-        .field--name-field-content{
-            .col-sm-12{
-                >div{
-                    .word-gral{
-                        >h3:first-child, >p[align="center"]:first-child{
+    .block-field-blocktaxonomy-termsecctionsfield-content {
+        .field--name-field-content {
+            .col-sm-12 {
+                >div {
+                    .word-gral {
+
+                        >h3:first-child,
+                        >p[align="center"]:first-child {
                             color: black !important;
                         }
                     }
@@ -1168,16 +1218,19 @@
     .az-element .az-text h1 {
         display: none;
     }
-    .az-ctnr.container{
+
+    .az-ctnr.container {
         max-width: 100%;
     }
-    .az-video.embed-responsive{
+
+    .az-video.embed-responsive {
         position: relative;
         width: 100%;
         padding-bottom: 56.25%;
         height: 0;
         overflow: hidden;
-        iframe{
+
+        iframe {
             position: absolute;
             top: 0;
             left: 0;
@@ -1266,22 +1319,26 @@
 
 
 
-.page-el-instituto-funcionarios-directivos-funcionarios-directivos-regionales{
-    #block-page-title-block, #block-icbf-content{
+.page-el-instituto-funcionarios-directivos-funcionarios-directivos-regionales {
+
+    #block-page-title-block,
+    #block-icbf-content {
         padding: 0 1.5em;
     }
 
-    #block-icbf-content{
-        .block-field-blocktaxonomy-termsecctionsfield-content{
-            .az-ctnr{
+    #block-icbf-content {
+        .block-field-blocktaxonomy-termsecctionsfield-content {
+            .az-ctnr {
                 margin: 0 auto;
-                .btn{
+
+                .btn {
                     background: #fff;
                     border: 1px solid #333;
                     font-family: 'montserrat';
                 }
 
-                .btn:focus, .btn:hover {
+                .btn:focus,
+                .btn:hover {
                     box-shadow: none;
                     font-weight: 400;
                     background: #333;
@@ -1292,9 +1349,9 @@
             }
         }
 
-        .block-views-blockpersons-block-dregions{
-            ul{
-                li{
+        .block-views-blockpersons-block-dregions {
+            ul {
+                li {
                     @media (min-width: 768px) {
                         .col-sm-2 {
                             display: flex;
@@ -1303,6 +1360,7 @@
                             justify-content: center;
                         }
                     }
+
                     @media (min-width: 768px) {
                         .col-sm-4 {
                             flex: 0 0 auto;
@@ -1313,12 +1371,13 @@
             }
 
 
-            a.active, a:hover {
+            a.active,
+            a:hover {
                 color: #125e81;
                 text-decoration: underline !important;
             }
 
-            img{
+            img {
                 height: 120px;
                 margin: auto;
                 object-fit: cover;
@@ -1456,26 +1515,27 @@
 }
 
 
-.page-contratacion{
-    .block-page-title-block{
-        .page-header{
+.page-contratacion {
+    .block-page-title-block {
+        .page-header {
             padding: 9px;
         }
     }
 
-    #block-icbf-content{
-        .content{
-            >.layout{
+    #block-icbf-content {
+        .content {
+            >.layout {
                 padding: 9px;
             }
 
-            >.layout:nth-child(2){
-                .view-content{
-                    >div{
+            >.layout:nth-child(2) {
+                .view-content {
+                    >div {
                         width: 100%;
                     }
+
                     @media (min-width: 768px) {
-                        >div{
+                        >div {
                             flex: 0 0 auto;
                             width: 33.33333333%;
                         }
@@ -1483,30 +1543,37 @@
 
                 }
             }
-            >.layout:last-child{
-                .field--name-field-content{
-                    >.az-element{
 
-                        >.az-ctnr{
+            >.layout:last-child {
+                .field--name-field-content {
+                    >.az-element {
+
+                        >.az-ctnr {
                             display: flex;
                             flex-wrap: wrap;
-                            max-width: 90vw; /*para pantallas pequeñas*/
-                            >.az-element:nth-child(1){
+                            max-width: 90vw;
+
+                            /*para pantallas pequeñas*/
+                            >.az-element:nth-child(1) {
                                 width: 100% !important;
 
-                                >div{
+                                >div {
                                     width: 100%;
                                 }
 
-                                .view-documents{
-                                    .view-content{
-                                        .table{
+                                .view-documents {
+                                    .view-content {
+                                        .table {
                                             width: 100%;
-                                            tr, th, td{
+
+                                            tr,
+                                            th,
+                                            td {
                                                 border: 1px solid #ddd;
                                             }
-                                            tbody{
-                                                tr:nth-child(odd){
+
+                                            tbody {
+                                                tr:nth-child(odd) {
                                                     background-color: #f9f9f9;
                                                 }
                                             }
@@ -1514,22 +1581,25 @@
                                     }
                                 }
                             }
-                            >.az-element:nth-child(2){
+
+                            >.az-element:nth-child(2) {
                                 width: 100% !important;
-                                a{
+
+                                a {
                                     word-break: break-all;
                                     white-space: normal;
                                     display: inline-block;
                                 }
                             }
-                            >.az-element:nth-child(3){
+
+                            >.az-element:nth-child(3) {
                                 width: 100% !important;
                             }
 
                         }
 
                         @media (min-width: 768px) {
-                            >.az-ctnr{
+                            >.az-ctnr {
                                 display: grid;
                                 grid-template-areas:
                                     "a b"
@@ -1544,20 +1614,23 @@
                                 }
 
 
-                                >.az-element:nth-child(1){
+                                >.az-element:nth-child(1) {
                                     grid-area: a;
                                     width: 100%;
                                 }
-                                >.az-element:nth-child(2){
+
+                                >.az-element:nth-child(2) {
                                     grid-area: b;
                                     width: 100%;
-                                    a{
+
+                                    a {
                                         word-break: break-all;
                                         white-space: normal;
                                         display: inline-block;
                                     }
                                 }
-                                >.az-element:nth-child(3){
+
+                                >.az-element:nth-child(3) {
                                     grid-area: c;
                                     width: 100%;
                                 }
@@ -1576,25 +1649,27 @@
 
 
 
-.page-atencion-y-servicios-ciudadania{
+.page-atencion-y-servicios-ciudadania {
 
-    .page-header{
+    .page-header {
         border-bottom: 0 !important;
     }
-    #block-icbf-content{
-        .layout:first-child{
-            h1{
+
+    #block-icbf-content {
+        .layout:first-child {
+            h1 {
                 display: none;
             }
         }
 
-        .layout:nth-child(3){
-            #by885n4f{
+        .layout:nth-child(3) {
+            #by885n4f {
                 a:hover {
                     color: #125e81;
                     text-decoration: underline !important;
                 }
-                a:visited{
+
+                a:visited {
                     color: #1996d0;
                 }
             }
@@ -1605,9 +1680,9 @@
 
 
 
-.page-circulo-de-opinion-de-los-ninas-y-ninas-usuarios-de-los-servicios-de-primera-infancia-regional{
-    .node__content{
-        >div{
+.page-circulo-de-opinion-de-los-ninas-y-ninas-usuarios-de-los-servicios-de-primera-infancia-regional {
+    .node__content {
+        >div {
             font-style: normal;
         }
 
@@ -1620,17 +1695,19 @@
 
 
 
-.page-innovacion-icbf{
+.page-innovacion-icbf {
     #block-page-title-block {
         display: none;
     }
-    #block-icbf-content{
-        .block-field-blocktaxonomy-termsecctionsfield-content{
-            .field--name-field-content{
-                >div:nth-child(3){
-                    .az-ctnr{
-                        >.az-element:first-child{
+
+    #block-icbf-content {
+        .block-field-blocktaxonomy-termsecctionsfield-content {
+            .field--name-field-content {
+                >div:nth-child(3) {
+                    .az-ctnr {
+                        >.az-element:first-child {
                             margin-bottom: 50px;
+
                             @media (min-width: 576px) {
                                 .col-sm-5 {
                                     width: 10%;
@@ -1638,11 +1715,12 @@
                             }
 
                             //style general para slider
-                            .icbf-owl-carousel{
-                                .icbf-owl-carousel-wrapper{
+                            .icbf-owl-carousel {
+                                .icbf-owl-carousel-wrapper {
                                     margin-bottom: 60px;
 
-                                    .slick-prev, .slick-next{
+                                    .slick-prev,
+                                    .slick-next {
                                         display: flex;
                                         align-items: center;
                                         justify-content: center;
@@ -1656,40 +1734,45 @@
                                         position: absolute;
                                         bottom: -5rem;
                                     }
-                                    .slick-next{
+
+                                    .slick-next {
                                         right: 0;
                                     }
-                                    .slick-prev{
+
+                                    .slick-prev {
                                         right: 60px;
                                     }
 
-                                    .slick-prev::before{
+                                    .slick-prev::before {
                                         content: "\f137";
                                         font-family: "FontAwesome" !important;
                                         color: #929292 !important;
                                     }
-                                    .slick-next::before{
+
+                                    .slick-next::before {
                                         content: "\f138";
                                         font-family: "FontAwesome" !important;
                                         color: #929292 !important;
                                     }
 
-                                    ul.slick-dots{
-                                        li{
+                                    ul.slick-dots {
+                                        li {
                                             font-size: 0;
+
                                             ::marker {
                                                 content: none; // para eliminar cualquier contenido en ::marker
                                             }
 
-                                            button{
+                                            button {
                                                 border: 0;
                                                 padding: 1px;
                                                 margin: 0 3px;
                                                 background: #ccc;
                                             }
                                         }
-                                        li.slick-active{
-                                            button{
+
+                                        li.slick-active {
+                                            button {
                                                 background: #999;
                                             }
                                         }
@@ -1698,10 +1781,12 @@
                                 }
                             }
                         }
-                        >.az-element:nth-child(3){
-                            .bg-cajahi{
+
+                        >.az-element:nth-child(3) {
+                            .bg-cajahi {
                                 text-align: center;
-                                a.btn-1519-2{
+
+                                a.btn-1519-2 {
                                     bottom: 1em;
                                     position: absolute;
                                     left: 50%;
@@ -1718,11 +1803,14 @@
 
 
 .page-transparencia-y-acceso-informacion-publica-participa {
-    .block-views-blockcalendar-block-page-6{
+    .block-views-blockcalendar-block-page-6 {
         margin-top: 1.5em;
-        .view-calendar{
-            .view-content{
-                .slick-prev, .slick-next{
+
+        .view-calendar {
+            .view-content {
+
+                .slick-prev,
+                .slick-next {
                     display: flex;
                     position: absolute;
                     top: -1.5em;
@@ -1732,18 +1820,22 @@
                     width: 80px;
                     height: 30px;
                 }
-                
-                .slick-prev:focus, .slick-prev:hover, .slick-next:focus, .slick-next:hover{
+
+                .slick-prev:focus,
+                .slick-prev:hover,
+                .slick-next:focus,
+                .slick-next:hover {
                     color: #23527c;
                     background-color: #eee;
                     border-color: #ddd;
                     text-decoration: underline;
                 }
-    
-                .slick-prev{
+
+                .slick-prev {
                     border-radius: 5px 0 0 5px;
                     right: 80px;
                 }
+
                 .slick-prev::before {
                     display: flex;
                     content: "\2039";
@@ -1751,10 +1843,11 @@
                     font-size: x-large;
                 }
 
-                .slick-next{
+                .slick-next {
                     border-radius: 0 5px 5px 0;
                     right: 0;
                 }
+
                 .slick-next::after {
                     display: flex;
                     content: "\203A";
@@ -1766,37 +1859,36 @@
     }
 
     .region-content ul .tb-megamenu-nav {
-        width: 250px!important;
+        width: 250px !important;
     }
 
     .precontent .field__item {
-        max-width: 1150px!important;
-        margin: 1.5em auto!important;
+        max-width: 1150px !important;
+        margin: 1.5em auto !important;
     }
 
     .region-content ul.tb-megamenu-nav a {
         background-color: #fcfcfc !important;
-        border-radius: 4px!important;
+        border-radius: 4px !important;
         color: #004686 !important;
         font-weight: 400 !important;
-        line-height: 18px!important;
-        padding: 10px!important;
+        line-height: 18px !important;
+        padding: 10px !important;
         text-transform: none !important;
     }
 
-    .region-content .tb-megamenu .tb-megamenu-nav > li {
-        width: 250px!important;
-        max-width: 250px!important;
+    .region-content .tb-megamenu .tb-megamenu-nav>li {
+        width: 250px !important;
+        max-width: 250px !important;
     }
 
-    .block-views-blockarticulos-secciones-block-vparticipa{
-        display: flex!important;
+    .block-views-blockarticulos-secciones-block-vparticipa {
+        display: flex !important;
     }
 
     @media (min-width: 768px) {
-        .page-transparencia-y-acceso-informacion-publica-participa
-        .col-sm-4:has(h4 a[href*="canal-interacción-deliberatoria"]) {
-        margin-left: 66.6666%!important;
+        .page-transparencia-y-acceso-informacion-publica-participa .col-sm-4:has(h4 a[href*="canal-interacción-deliberatoria"]) {
+            margin-left: 66.6666% !important;
         }
     }
 
@@ -1807,19 +1899,22 @@
 
     @media (min-width: 576px) {
         .bs-region--left {
-        width: 25% !important; /* col-sm-3 */
+            width: 25% !important;
+            /* col-sm-3 */
         }
     }
 
     @media (min-width: 768px) {
         .bs-region--left {
-        width: 25% !important; /* col-md-3 */
+            width: 25% !important;
+            /* col-md-3 */
         }
     }
 
     @media (min-width: 992px) {
         .bs-region--left {
-        width: 25% !important; /* col-lg-3 */
+            width: 25% !important;
+            /* col-lg-3 */
         }
     }
 
@@ -1830,30 +1925,34 @@
 
     @media (min-width: 576px) {
         .bs-region--right {
-        width: 75% !important; /* col-sm-9 */
+            width: 75% !important;
+            /* col-sm-9 */
         }
     }
 
     @media (min-width: 768px) {
         .bs-region--right {
-        width: 75% !important; /* col-md-9 */
+            width: 75% !important;
+            /* col-md-9 */
         }
     }
 
     @media (min-width: 992px) {
         .bs-region--right {
-        width: 75% !important; /* col-lg-9 */
+            width: 75% !important;
+            /* col-lg-9 */
         }
     }
 
-    .block-field-blocktaxonomy-termsecctionsfield-content{
+    .block-field-blocktaxonomy-termsecctionsfield-content {
         position: relative;
         right: 18%;
     }
 
 
     .az-row {
-        max-width: 1100px; /* Ajusta el valor si quieres más o menos ancho total */
+        max-width: 1100px;
+        /* Ajusta el valor si quieres más o menos ancho total */
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
@@ -1864,7 +1963,8 @@
     .region-content .az-row .col-sm-5 img {
         width: 70%;
         height: auto;
-        min-height: 200px; /* Ajusta este valor según necesidad */
+        min-height: 200px;
+        /* Ajusta este valor según necesidad */
         display: block;
         margin: 0 auto;
     }
@@ -1875,26 +1975,29 @@
         align-items: flex-start;
     }
 
-    .az-element > h2 > span > strong{
+    .az-element>h2>span>strong {
         font-family: 'Asap';
-        font-weight: 700!important;
+        font-weight: 700 !important;
     }
 }
 
 
-.page-modelo-planeacion-y-sistema-integrado-gestion-sistema-integrado-de-gestion{
-    #block-icbf-content{
-        .content{
+.page-modelo-planeacion-y-sistema-integrado-gestion-sistema-integrado-de-gestion {
+    #block-icbf-content {
+        .content {
             .layout {
                 margin: 0 1em;
             }
-                
-            >.layout:first-child{
-                h4{
-                    a.active, a:hover {
+
+            >.layout:first-child {
+                h4 {
+
+                    a.active,
+                    a:hover {
                         color: #125e81;
                         text-decoration: underline !important;
                     }
+
                     a {
                         color: #1996d0;
                         text-decoration: none !important;
@@ -1902,13 +2005,14 @@
                 }
             }
 
-            >.layout:nth-child(2){
-                .item-list{
-                    ul{
+            >.layout:nth-child(2) {
+                .item-list {
+                    ul {
                         margin: auto;
                         padding: 1em 0;
                         text-align: center;
-                        li{
+
+                        li {
                             background-color: #fcfcfc;
                             border-radius: 4px;
                             border: 1px solid #fff;
@@ -1927,22 +2031,25 @@
                             transition: all .2s linear;
                             -webkit-transition: all .2s linear;
 
-                            a{
+                            a {
                                 color: #36c;
                                 text-decoration: underline !important;
                             }
-                            a:focus, a:hover {
+
+                            a:focus,
+                            a:hover {
                                 color: #23527c;
                                 text-decoration: underline;
                             }
                         }
-                        li:hover{
+
+                        li:hover {
                             background-color: #fff;
                             border: 1px solid #36c;
                         }
 
 
-                        li:first-child{
+                        li:first-child {
                             a::before {
                                 background-position: center;
                                 background-repeat: no-repeat !important;
@@ -1956,7 +2063,8 @@
                                 width: 60px;
                             }
                         }
-                        li:nth-child(2){
+
+                        li:nth-child(2) {
                             a::before {
                                 background-position: center;
                                 background-repeat: no-repeat !important;
@@ -1970,7 +2078,8 @@
                                 width: 60px;
                             }
                         }
-                        li:nth-child(3){
+
+                        li:nth-child(3) {
                             a::before {
                                 background-position: center;
                                 background-repeat: no-repeat !important;
@@ -1984,7 +2093,8 @@
                                 width: 60px;
                             }
                         }
-                        li:nth-child(4){
+
+                        li:nth-child(4) {
                             a::before {
                                 background-position: center;
                                 background-repeat: no-repeat !important;
@@ -1998,7 +2108,8 @@
                                 width: 60px;
                             }
                         }
-                        li:nth-child(5){
+
+                        li:nth-child(5) {
                             a::before {
                                 background-position: center;
                                 background-repeat: no-repeat !important;
@@ -2012,7 +2123,8 @@
                                 width: 60px;
                             }
                         }
-                        li:nth-child(6){
+
+                        li:nth-child(6) {
                             a::before {
                                 background-position: center;
                                 background-repeat: no-repeat !important;
@@ -2026,7 +2138,8 @@
                                 width: 60px;
                             }
                         }
-                        li:nth-child(7){
+
+                        li:nth-child(7) {
                             a::before {
                                 background-position: center;
                                 background-repeat: no-repeat !important;
@@ -2050,20 +2163,20 @@
 
 
 
-.page-proveedores-icbf-0{
-    #block-icbf-content{
-        .content{
-            .he_back-cleargrey{
-                >.az-ctnr{
-                    >div{
+.page-proveedores-icbf-0 {
+    #block-icbf-content {
+        .content {
+            .he_back-cleargrey {
+                >.az-ctnr {
+                    >div {
                         flex-wrap: wrap;
                     }
                 }
             }
-                
-            >.layout:last-child{
-                .block-field-blocktaxonomy-termsecctionsfield-content{
-                    hr{
+
+            >.layout:last-child {
+                .block-field-blocktaxonomy-termsecctionsfield-content {
+                    hr {
                         margin: 2rem 0 0 0;
                     }
                 }
@@ -2073,15 +2186,15 @@
 }
 
 
-.page-atencion-y-servicios-ciudadania-informes-encuesta-satisfaccion{
-    #block-icbf-content{
-        .content{
-            >.layout:nth-child(2){
+.page-atencion-y-servicios-ciudadania-informes-encuesta-satisfaccion {
+    #block-icbf-content {
+        .content {
+            >.layout:nth-child(2) {
                 margin: 0 auto;
                 width: 80%;
 
-                table{
-                    tbody{
+                table {
+                    tbody {
                         border: 1px solid rgb(196 196 196 / 80%);
                     }
                 }
@@ -2094,40 +2207,43 @@
 
 
 //pagina de segundo nivel
-.page-aseguramiento-la-calidad-licencias-de-funcionamiento-0, 
-.page-aseguramiento-la-calidad-personerias-juridicas, 
+.page-aseguramiento-la-calidad-licencias-de-funcionamiento-0,
+.page-aseguramiento-la-calidad-personerias-juridicas,
 .page-aseguramiento-la-calidad-procesos-administrativos-sancionatorios-0,
-.page-aseguramiento-la-calidad-directrices-0{
+.page-aseguramiento-la-calidad-directrices-0 {
 
-    #block-icbf-content{
-        .view-licencias-de-funcionamiento-sapi{
+    #block-icbf-content {
+        .view-licencias-de-funcionamiento-sapi {
             display: grid;
             grid-template-areas:
                 "a b"
                 "a c";
             grid-template-columns: 27% 73%;
             grid-template-rows: min-content;
-            
-            .view-filters{
+
+            .view-filters {
                 grid-area: a;
                 width: 100%;
 
-                .form-radios{
-                    .form-item-field-location-db{
+                .form-radios {
+                    .form-item-field-location-db {
                         display: flex;
                         margin: 0;
                     }
-                    label{
+
+                    label {
                         white-space: nowrap;
                         color: #1996d0;
                         text-decoration: none !important;
                     }
-                    label:hover{
+
+                    label:hover {
                         color: #125e81;
                         text-decoration: underline !important;
                     }
 
-                    input[type=checkbox], input[type=radio] {
+                    input[type=checkbox],
+                    input[type=radio] {
                         appearance: none;
                         width: 13px;
                         height: 13px;
@@ -2136,14 +2252,17 @@
                         margin: 0 4px 0 0 !important;
                         /* Cuando se selecciona el check*/
                         /*Estilos para el icono interno del check*/
-                        
+
                     }
-                    input[type=checkbox]:checked, input[type=radio]:checked {
+
+                    input[type=checkbox]:checked,
+                    input[type=radio]:checked {
                         background-color: #1996d0;
                         border-color: #1996d0;
                     }
-                    
-                    input[type=checkbox]::after, input[type=radio]::after {
+
+                    input[type=checkbox]::after,
+                    input[type=radio]::after {
                         content: '✔';
                         color: white;
                         width: 100%;
@@ -2154,78 +2273,86 @@
                     }
                 }
 
-                .fieldset-legend{
+                .fieldset-legend {
                     font-size: 1.4em;
                 }
+
                 .fieldset-legend::after {
                     content: ":";
                 }
-                    
-                .fieldset-wrapper{
+
+                .fieldset-wrapper {
                     padding: 2em 1em 1em 0;
                 }
             }
 
-            .view-content{
+            .view-content {
                 grid-area: b;
                 width: 100%;
             }
-            nav.pager{
+
+            nav.pager {
                 grid-area: c;
                 width: 100%;
             }
         }
-        @media (max-width: 768px){
-            .view-licencias-de-funcionamiento-sapi{
+
+        @media (max-width: 768px) {
+            .view-licencias-de-funcionamiento-sapi {
                 display: flex;
                 flex-wrap: wrap;
             }
         }
     }
-    
+
 }
 
 //diseño del paginador para las paginas
-.page-aseguramiento-la-calidad-licencias-de-funcionamiento-0, 
-.page-aseguramiento-la-calidad-personerias-juridicas{
-        #block-icbf-content{
-        .view-licencias-de-funcionamiento-sapi{
+.page-aseguramiento-la-calidad-licencias-de-funcionamiento-0,
+.page-aseguramiento-la-calidad-personerias-juridicas {
+    #block-icbf-content {
+        .view-licencias-de-funcionamiento-sapi {
             nav.pager {
                 height: min-content;
-                .pagination{
-                    .page-link{
+
+                .pagination {
+                    .page-link {
                         font-size: 11px;
                     }
-                    .page-item{
-                        .page-link{
+
+                    .page-item {
+                        .page-link {
                             width: 100%;
                             border-radius: 0%;
                         }
 
-                        &.disabled{
-                            span{
+                        &.disabled {
+                            span {
                                 height: initial;
                                 line-height: 20px;
                             }
                         }
-                        a{
+
+                        a {
                             text-transform: lowercase;
                             white-space: nowrap;
-                            font-size: 14px;/*de la pagina del icbf*/
+                            font-size: 14px;
+                            /*de la pagina del icbf*/
                         }
                     }
 
-                    .page-item:first-child{
-                        .page-link{
+                    .page-item:first-child {
+                        .page-link {
                             border-radius: 5px 0px 0px 5px !important;
                         }
                     }
-                    .page-item:last-child{
-                        .page-link{
+
+                    .page-item:last-child {
+                        .page-link {
                             border-radius: 0px 5px 5px 0px !important;
                         }
                     }
-                    
+
                 }
             }
         }
@@ -2234,15 +2361,15 @@
 
 
 //pagina de segundo nivel
-.page-noticias-rendicion-de-cuentas-icbf{
-    #block-icbf-content{
-        .node__content{
-            >.layout:first-child{
-                .view-content{
+.page-noticias-rendicion-de-cuentas-icbf {
+    #block-icbf-content {
+        .node__content {
+            >.layout:first-child {
+                .view-content {
                     display: flex;
                     flex-wrap: wrap;
 
-                    @media (min-width: 810px){
+                    @media (min-width: 810px) {
                         .views-row {
                             padding: 1em;
                             width: 33.3333333333%;
@@ -2251,5 +2378,35 @@
                 }
             }
         }
+    }
+}
+
+.page-id-6881 {
+
+    #icbf-module-category-selection-form span {
+        text-align: left;
+        font-family: var.$font-asap-regular;
+    }
+
+    select#edit-citizen-category {
+        height: 40px;
+        border-radius: 150px;
+        padding-left: 24px;
+        border: 1px solid #72bf44;
+        font-family: var.$font-asap-regular;
+    }
+
+    select#edit-procedure {
+        height: 40px;
+        border-radius: 150px;
+        padding-left: 24px;
+        border: 1px solid #72bf44;
+        font-family: var.$font-asap-regular;
+        font-size: 14px;
+    }
+
+    option {
+        font-size: 14px;
+        font-family: var.$font-asap-regular !important;
     }
 }
