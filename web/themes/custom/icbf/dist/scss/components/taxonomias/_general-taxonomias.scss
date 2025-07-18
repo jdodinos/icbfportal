@@ -2098,10 +2098,16 @@
     #block-icbf-content{
         .view-licencias-de-funcionamiento-sapi{
             display: grid;
-            grid-template-columns: .3fr 1fr;
-            grid-template-rows: .5fr .4fr;
-            margin: 0 auto;
+            grid-template-areas:
+                "a b"
+                "a c";
+            grid-template-columns: 27% 73%;
+            grid-template-rows: min-content;
+            
             .view-filters{
+                grid-area: a;
+                width: 100%;
+
                 .form-radios{
                     .form-item-field-location-db{
                         display: flex;
@@ -2154,6 +2160,21 @@
                 .fieldset-wrapper{
                     padding: 2em 1em 1em 0;
                 }
+            }
+
+            .view-content{
+                grid-area: b;
+                width: 100%;
+            }
+            nav.pager{
+                grid-area: c;
+                width: 100%;
+            }
+        }
+        @media (max-width: 768px){
+            .view-licencias-de-funcionamiento-sapi{
+                display: flex;
+                flex-wrap: wrap;
             }
         }
     }
