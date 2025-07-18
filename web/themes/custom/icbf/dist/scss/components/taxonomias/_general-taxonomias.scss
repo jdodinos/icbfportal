@@ -2475,11 +2475,21 @@
     .bs-region--left {
       width: 25% !important; /* col-md-3 */
     }
+
+    select#edit-citizen-category {
+        height: 40px;
+        border-radius: 150px;
+        padding-left: 24px;
+        border: 1px solid #72bf44;
+        font-family: var.$font-asap-regular;
+        font-size: 14px;
+
   }
 
   @media (min-width: 992px) {
     .bs-region--left {
       width: 25% !important; /* col-lg-3 */
+
     }
   }
 
@@ -2539,6 +2549,42 @@
     font-family: 'Asap';
     font-weight: 700!important;
   }
+}
+
+
+        .h2-word-msintro,
+        .word-msintro h4 {
+            font-family: var.$font-asap-regular;
+        }
+    }
+}
+
+.page-id-7898 {
+    .layout.layout--unecol-section {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .layout__region.layout__region--first {
+        width: 75%;
+    }
+
+    .layout__region .layout__region--second {
+        width: 25%;
+    }
+
+    .id-1519 h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.06em;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    h5 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
 }
 
 .page-bienestar-app-3{
@@ -2928,3 +2974,4 @@
     font-family: 'Montserrat', sans-serif;
   }
 }
+
