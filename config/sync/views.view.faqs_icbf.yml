@@ -1814,7 +1814,7 @@ display:
             offset: false
             offset_label: Desplazamiento
           views_infinite_scroll:
-            button_text: 'Cargar más'
+            button_text: 'Mostrar más'
             automatically_load_content: false
             initially_load_all_pages: false
       sorts:
@@ -1891,9 +1891,32 @@ display:
         operator: AND
         groups:
           1: AND
+      style:
+        type: views_bootstrap_grid
+        options:
+          grouping: {  }
+          alignment: horizontal
+          col_class_default: 1
+          col_class_custom: col-sm-4
+          row_class_default: 1
+          row_class_custom: ''
+          columns: '12'
+          col_xs: col-xs-12
+          col_sm: col-sm-6
+          col_md: col-md-4
+          col_lg: col-lg-4
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
       defaults:
         use_ajax: false
         pager: false
+        style: false
+        row: false
         fields: false
         sorts: false
         arguments: false
