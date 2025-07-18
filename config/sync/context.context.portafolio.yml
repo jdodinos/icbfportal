@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - icbf_module
+    - node
     - system
 label: portafolio
 name: portafolio
@@ -18,6 +19,14 @@ conditions:
     uuid: b252bad5-6074-4f4c-9596-42b91fa2c04f
     context_mapping: {  }
     pages: "/portafolio-de-servicios-icbf\r\n/portafolio-de-servicios-icbf/*\r\n/taxonomy/term/6881"
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 3eb069a3-178e-4e61-bc6a-887dac48cb05
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      services_faq: services_faq
 reactions:
   blocks:
     id: blocks
