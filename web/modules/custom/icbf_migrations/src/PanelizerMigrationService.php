@@ -655,8 +655,21 @@ class PanelizerMigrationService {
         }
         break;
 
+      case 'transparencia_019':
+        if ($display_id == 'block_3') {
+          $view_id = 'transparencia_019_sapi';
+        }
+        break;
+
       case 'documents':
-        if ($display_id == 'block' || $display_id == 'block_9' || $display_id == 'block_10' || $display_id == 'block_11') {
+        $displayes = [
+          'block',
+          'block_9',
+          'block_10',
+          'block_11',
+          'block_43',
+        ];
+        if (in_array($display_id, $displayes)) {
           $view_id = 'documents_sapi';
         }
         break;
