@@ -8189,7 +8189,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -8252,7 +8252,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -8374,7 +8374,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -8440,7 +8440,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -8502,7 +8502,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: true
             text: '<span><a href="{{ field_link_more_info }}" title="clic para ampliar información" class="btn-gral">Más Información</a></span>'
@@ -8565,7 +8565,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: true
             text: "<div class=\"word-gral\">\r\n<a href=\"{{ field_document }}\" class=\"btn-gral\" target=\"_blank\" title=\"clic para consultar el documento\">Consultar {{ field_document__description }} <span class=\"fa fa-docpdf\"></span></a>\r\n</div>"
@@ -8630,7 +8630,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<div class="bar-line"></div>'
+            text: "<div class=\"col-xs-12 col-sm-12\">\r\n\t<div class=\"col-xs-12 col-sm-4\">\r\n\t\t<div class=\"views-field views-field-title word-h3title\">\r\n\t\t\t<span class=\"field-content\">{{ title }}</span>\r\n\t\t</div>\r\n\t\t<div class=\"views-field views-field-field-subtitle word-h4subtitle\">\r\n\t\t\t<span class=\"field-content\">{{ field_subtitle }}</span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"col-xs-12 col-sm-8\">\r\n\t\t<div class=\"views-field views-field-field-list-image\">\r\n\t\t\t<span class=\"field-content\">{{ field_list_image }}</span>\r\n\t\t</div>\r\n\t\t<div class=\"views-field views-field-field-introduction-text word-gral\">\r\n\t\t\t<span class=\"field-content\">{{ field_introduction_text }}</span>\r\n\t\t</div>\r\n\t\t<div class=\"views-field views-field-field-link-more-info\">\r\n\t\t\t<span class=\"field-content\">{{ field_link_more_info }}</span>\r\n\t\t</div>\r\n\t\t<div class=\"views-field views-field-field-document\">\r\n\t\t\t<span class=\"field-content\">{{ field_document }}</span>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n<div class=\"bar-line\"></div>"
             make_link: false
             path: ''
             absolute: false
@@ -8849,9 +8849,20 @@ display:
         operator: AND
         groups:
           1: AND
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: false
+      row:
+        type: fields
+        options: {  }
       defaults:
         title: false
         pager: false
+        style: false
+        row: false
         fields: false
         sorts: false
         arguments: false
@@ -14410,7 +14421,7 @@ display:
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
-          multi_type: separator
+          multi_type: ul
           separator: ', '
           field_api_classes: false
         field_constructor:
@@ -14424,8 +14435,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ field_constructor__value }}'
             make_link: false
             path: ''
             absolute: false
@@ -14614,9 +14625,20 @@ display:
         operator: AND
         groups:
           1: AND
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: false
+      row:
+        type: fields
+        options: {  }
       defaults:
         title: false
         pager: false
+        style: false
+        row: false
         fields: false
         sorts: false
         arguments: false
