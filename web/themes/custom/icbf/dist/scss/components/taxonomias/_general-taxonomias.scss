@@ -2231,3 +2231,25 @@
         }
     }
 }
+
+
+//pagina de segundo nivel
+.page-noticias-rendicion-de-cuentas-icbf{
+    #block-icbf-content{
+        .node__content{
+            >.layout:first-child{
+                .view-content{
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    @media (min-width: 810px){
+                        .views-row {
+                            padding: 1em;
+                            width: 33.3333333333%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
