@@ -2094,22 +2094,44 @@
 
     #block-icbf-content{
         .block-views-blocklicencias-de-funcionamiento-sapi-block{
-            .view-filters{
-                .form-radios{
-                    input[type=checkbox], input[type=radio] {
-                        appearance: none;
-                        width: 13px;
-                        height: 13px;
-                        border: 1px solid #555;
-                        border-radius: 3px;
-                        margin: 0 4px 0 0 !important;
-                        /* Cuando se selecciona el check*/
-                        :checked {
-                            background-color: #1996d0;
-                            border-color: #1996d0;                        
+            .page-citaciones{
+                display: grid;
+                grid-template-columns: .3fr 1fr;
+                grid-template-rows: .5fr .1fr;
+                margin: 0 auto;
+                .view-filters{
+                    .form-radios{
+                        .form-item-field-location-db{
+                            display: flex;
+                            margin: 0;
                         }
-                        /*Estilos para el icono interno del check*/
-                        ::after {
+                        label{
+                            white-space: nowrap;
+                            color: #1996d0;
+                            text-decoration: none !important;
+                        }
+                        label:hover{
+                            color: #125e81;
+                            text-decoration: underline !important;
+                        }
+    
+                        input[type=checkbox], input[type=radio] {
+                            appearance: none;
+                            width: 13px;
+                            height: 13px;
+                            border: 1px solid #555;
+                            border-radius: 3px;
+                            margin: 0 4px 0 0 !important;
+                            /* Cuando se selecciona el check*/
+                            /*Estilos para el icono interno del check*/
+                            
+                        }
+                        input[type=checkbox]:checked, input[type=radio]:checked {
+                            background-color: #1996d0;
+                            border-color: #1996d0;
+                        }
+                        
+                        input[type=checkbox]::after, input[type=radio]::after {
                             content: '✔';
                             color: white;
                             width: 100%;
@@ -2118,11 +2140,57 @@
                             align-items: center;
                             justify-content: center;
                         }
-            
                     }
-            
-            
-            
+    
+                    .fieldset-legend{
+                        font-size: 1.4em;
+                    }
+                    .fieldset-legend::after {
+                        content: ":";
+                    }
+                        
+                    .fieldset-wrapper{
+                        padding: 2em 1em 1em 0;
+                    }
+                }
+    
+                nav.pager {
+                    height: min-content;
+                    .pagination{
+                        .page-link{
+                            font-size: 11px;
+                        }
+                        .page-item{
+                            .page-link{
+                                width: 100%;
+                                border-radius: 0%;
+                            }
+    
+                            &.disabled{
+                                span{
+                                    height: initial;
+                                    line-height: 20px;
+                                }
+                            }
+                            a{
+                                text-transform: lowercase;
+                                white-space: nowrap;
+                                font-size: 14px;/*de la pagina del icbf*/
+                            }
+                        }
+    
+                        .page-item:first-child{
+                            .page-link{
+                                border-radius: 5px 0px 0px 5px !important;
+                            }
+                        }
+                        .page-item:last-child{
+                            .page-link{
+                                border-radius: 0px 5px 5px 0px !important;
+                            }
+                        }
+                        
+                    }
                 }
             }
         }
