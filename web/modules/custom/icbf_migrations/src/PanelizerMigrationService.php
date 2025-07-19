@@ -661,14 +661,15 @@ class PanelizerMigrationService {
         }
         break;
 
+      case 'local_shopping':
+        $displayes = ['block'];
+        if (in_array($display_id, $displayes)) {
+          $view_id = 'compras_locales_sapi';
+        }
+        break;
+
       case 'documents':
-        $displayes = [
-          'block',
-          'block_9',
-          'block_10',
-          'block_11',
-          'block_43',
-        ];
+        $displayes = ['block', 'block_9', 'block_10', 'block_11', 'block_43'];
         if (in_array($display_id, $displayes)) {
           $view_id = 'documents_sapi';
         }
