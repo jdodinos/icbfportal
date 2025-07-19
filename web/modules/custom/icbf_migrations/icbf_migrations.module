@@ -5,6 +5,8 @@ use Drupal\migrate\Plugin\MigrateSourceInterface;
 use Drupal\migrate\Plugin\MigrationInterface;
 use Drupal\views\ViewExecutable;
 use Drupal\Core\Cache\Cache;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\layout_builder\SectionComponent;
 
 /**
  * Implementa hook_block_view_alter().
@@ -30,6 +32,7 @@ function icbf_migrations_views_pre_view(ViewExecutable $view, $display_id, array
           ->execute()->fetchAll();
       }
     }
+
     if (!empty($layout_configs)) {
       $cid = 'views_processed';
       $cache_data = \Drupal::cache()->get($cid)->data ?? [];
@@ -57,8 +60,80 @@ function icbf_migrations_views_pre_view(ViewExecutable $view, $display_id, array
         }
       }
     }
+    elseif (empty($layout_configs) && $term) {
+      $vocabulary = $term->bundle();
+      $view_id = $view->id();
+      $args = [];
+      $items_per_page = $view->getItemsPerPage();
+      $config_display = \Drupal::database()->select('config', 'c')
+        ->fields('c', ['data'])
+        ->condition('name', "core.entity_view_display.taxonomy_term.{$vocabulary}.default")
+        ->execute()->fetchAll();
+
+      foreach ($config_display as $config_value) {
+        $layout_config = $config_value->data;
+        $layout_config = unserialize($layout_config);
+        if (isset($layout_config['third_party_settings']['layout_builder']['sections'])) {
+          $sections = $layout_config['third_party_settings']['layout_builder']['sections'];
+          foreach ($sections as $section) {
+            if (isset($section['components'])) {
+              foreach ($section['components'] as $component) {
+                if ($component['configuration']['id'] == "views_block:{$view_id}-{$display_id}" && $component['configuration']['items_per_page'] == $items_per_page) {
+                  if (!empty($component['configuration']['items_per_page'])) {
+                    $filters = explode('/', $component['configuration']['items_per_page']);
+                    foreach ($filters as $filter_value) {
+                      if ($filter_value == '%tid') {
+                        $args[] = $term_id;
+                      }
+                      else {
+                        $args[] = $filter_value;
+                      }
+                    }
+                  }
+
+                  break;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function icbf_migrations_form_layout_builder_update_block_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if (strpos($form_id, 'layout_builder_') !== FALSE) {
+    if (isset($form['settings']['provider']['#type']) && $form['settings']['provider']['#value'] === 'views') {
+      $build_info = $form_state->getBuildInfo();
+
+      if (!empty($build_info['args'][0])) {
+        /** @var \Drupal\layout_builder\SectionComponent $component */
+        $section_storage = $build_info['args'][0];
+
+        $arguments = $form['settings']['views_label']['#description']->getArguments();
+        $url  = explode('/', $arguments[':url']);
+        $view_id = $url[5];
+        $display_id = $url[7];
+
+        foreach ($section_storage->getSections() as $section) {
+          foreach ($section->getComponents() as $component) {
+            $component_id = $component->getPluginId();
+            if ($component_id === "views_block:{$view_id}-{$display_id}") {
+              $form['settings']['override']['items_per_page']['#title'] = t('Contextual filters');
+              $form['settings']['override']['items_per_page']['#type'] = 'textfield';
+              unset($form['settings']['override']['items_per_page']['#options']);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 
 /**
 * Implements hook_prepare_row().
