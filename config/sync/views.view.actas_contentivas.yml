@@ -171,7 +171,7 @@ display:
           label: 'Documento Acta Contentiva'
           exclude: true
           alter:
-            alter_text: true
+            alter_text: false
             text: "<img src=\"/themes/contrib/bootstrap5/images/icons/application-pdf.png\">\r\n<a href=\"{{ field_news_files }}\" data-once=\"views-ajax\">{{ title }}</a>"
             make_link: false
             path: ''

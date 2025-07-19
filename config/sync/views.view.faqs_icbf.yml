@@ -1814,7 +1814,7 @@ display:
             offset: false
             offset_label: Desplazamiento
           views_infinite_scroll:
-            button_text: 'Cargar más'
+            button_text: 'Mostrar más'
             automatically_load_content: false
             initially_load_all_pages: false
       sorts:
@@ -1866,12 +1866,62 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            services_faq: services_faq
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: views_bootstrap_grid
+        options:
+          grouping: {  }
+          alignment: horizontal
+          col_class_default: 1
+          col_class_custom: col-sm-4
+          row_class_default: 1
+          row_class_custom: ''
+          columns: '12'
+          col_xs: col-xs-12
+          col_sm: col-sm-6
+          col_md: col-md-4
+          col_lg: col-lg-4
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
       defaults:
         use_ajax: false
         pager: false
+        style: false
+        row: false
         fields: false
         sorts: false
         arguments: false
+        filters: false
+        filter_groups: false
       use_ajax: true
       display_description: 'relacionados x categoria'
       display_extenders:
