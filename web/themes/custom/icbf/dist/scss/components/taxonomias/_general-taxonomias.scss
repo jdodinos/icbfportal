@@ -2460,6 +2460,24 @@
             }
           }
         }
+
+        nav.pager{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: normal !important;
+            text-transform: lowercase;
+            white-space: nowrap;
+            font-size: 14px;/*de la pagina del icbf*/
+
+            li{
+                font-weight: normal;
+                padding: 0;
+            }
+
+            a{
+                color: #1996d0;
+                text-decoration: none !important;
+            }
+        }
       }
     }
   }
