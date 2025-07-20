@@ -1,0 +1,53 @@
+uuid: 4d4f6f06-f2bd-48c6-96f6-18328fb473a4
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+    - taxonomy
+label: 'Page title En Taxonomia'
+name: page_title_taxonomy
+group: 'Sitio Principal ICBF'
+description: ''
+requireAllConditions: true
+disabled: false
+conditions:
+  'entity_bundle:taxonomy_term':
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 9c22f547-458d-4f70-b411-01e794ee454a
+    context_mapping:
+      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+    bundles:
+      congreso_xxii: congreso_xxii
+      ninos_ninas_y_adolescentes: ninos_ninas_y_adolescentes
+      secctions: secctions
+  request_path:
+    id: request_path
+    negate: true
+    uuid: 9eb92020-9e5c-427c-b778-e59277a73b5f
+    context_mapping: {  }
+    pages: "/programa-adopciones\r\n/taxonomy/term/7439"
+reactions:
+  blocks:
+    id: blocks
+    uuid: 17bee442-bc5b-49da-9d51-9d0c32ea41bc
+    blocks:
+      0965c033-a97d-4c23-b9ad-d1da53cb7e17:
+        uuid: 0965c033-a97d-4c23-b9ad-d1da53cb7e17
+        id: page_title_block
+        label: 'Título de la página'
+        provider: core
+        label_display: '0'
+        region: feature
+        weight: '0'
+        custom_id: page_title_block
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: page_title_taxonomy
+        context_mapping: {  }
+        third_party_settings: {  }
+    include_default_blocks: 0
+    saved: false
+weight: 0
