@@ -3756,12 +3756,13 @@
             .view-display-id-block_3{
                 .view-filters{
                     //titulo filtro
-                    legend{
+                    .fieldset-legend {
                         font-size: 1.4em;
-                        padding-bottom: 1.5em;
                     }
 
                     .form-radios{
+                        padding-bottom: 1em;
+
                         input[type=checkbox], input[type=radio] {
                             appearance: none;
                             width: 13px;
