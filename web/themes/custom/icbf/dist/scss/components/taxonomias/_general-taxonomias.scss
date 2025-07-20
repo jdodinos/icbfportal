@@ -3390,65 +3390,15 @@
     }
 }
 
-.page-nutricion-estrategia-de-atencion-y-prevencion-de-la-desnutricion-infantil,
-.page-nutricion-tabla-de-composicion-de-alimentos-colombianos,
-.page-nutricion-hoja-de-balance-de-alimentos-colombianos
-{
+.page-nutricion-ensin-encuesta-nacional-de-situacion-nutricional{
     #block-icbf-content{
         .content{
             >.layout:first-child{
                 >div:nth-child(2){
-                    .col-sm-4{
-                        border-top: 1px solid #7c7cfc;
-                        width: 100%;
-
-                        >.views-field{
-                            >span.field-content >div {
-                                display: grid;
-                                grid-template-areas: "a b";
-                                grid-template-columns: 33.3333333333% 66.6666666667%;
-                                .views-field-fieldset-1{
-                                    grid-area: a;
-                                }
-                                .views-field-fieldset-2{
-                                    grid-area: b;
-                                }
-
-                                .views-field-fieldset-1, .views-field-fieldset-2{
-                                    .views-field-title{
-                                        color: #123d14;
-                                        font-size: 1.42em;
-                                        font-weight: 500;
-                                        font-family: 'Montserrat', sans-serif;
-                                        line-height: normal;
-                                        margin: .7em 0;
-                                    }
-                                    .views-field-field-subtitle {
-                                        color: #006229;
-                                        font-size: 1.25em;
-                                        font-weight: 500;
-                                        font-family: 'Montserrat', sans-serif;
-                                        line-height: normal;
-                                    }
-                                }
-                            }
-
-                            @media (max-width: 768px){
-                                >span.field-content >div {
-                                    display: flex;
-                                    flex-wrap: wrap;
-                                    .views-field-fieldset-1{
-                                        width: 95%;
-                                    }
-                                    .views-field-fieldset-2{
-                                        width: 95%;
-                                    }
-                                }
-                            }
-                        }
-
-                        .bar-line{
-                            display: none;
+                    @media (max-width: 576px) {
+                        .col-sm-6 {
+                            flex: 0 0 auto;
+                            width: 100%;
                         }
                     }
                 }
@@ -3457,15 +3407,24 @@
     }
 }
 
-.page-nutricion-ensin-encuesta-nacional-de-situacion-nutricional{
-    #block-icbf-content{
+.page-nutricion-estrategia-de-atencion-y-prevencion-de-la-desnutricion-infantil,
+.page-nutricion-tabla-de-composicion-de-alimentos-colombianos,
+.page-nutricion-hoja-de-balance-de-alimentos-colombianos
+{
+        #block-icbf-content{
         .content{
             >.layout:first-child{
                 >div:nth-child(2){
-                    @media (min-width: 576px) {
-                        .col-sm-6 {
-                            flex: 0 0 auto;
-                            width: 100%;
+                    .views-field-nothing{
+                        >.field-content{
+                            >div{
+                                border-top: 1px solid #7c7cfc;
+                                width: 100%;
+                            }
+
+                            .bar-line{
+                                display: none !important;
+                            }
                         }
                     }
                 }
@@ -3479,55 +3438,13 @@
         .content{
             >.layout:first-child{
                 .block-views-blockarticulos-secciones-block-missinfo3{
-                    .col-sm-4{
-                        border-top: 1px solid #7c7cfc;
-                        width: 100%;
-
-                        >.views-field{
-                            >span.field-content >div {
-                                display: grid;
-                                grid-template-areas: "a b";
-                                grid-template-columns: 33.3333333333% 66.6666666667%;
-                                .views-field-fieldset-1{
-                                    grid-area: a;
-                                }
-                                .views-field-fieldset-2{
-                                    grid-area: b;
-                                }
-
-                                .views-field-fieldset-1, .views-field-fieldset-2{
-                                    .views-field-title{
-                                        color: #123d14;
-                                        font-size: 1.42em;
-                                        font-weight: 500;
-                                        font-family: 'Montserrat', sans-serif;
-                                        line-height: normal;
-                                        margin: .7em 0;
-                                    }
-                                    .views-field-field-subtitle {
-                                        color: #006229;
-                                        font-size: 1.25em;
-                                        font-weight: 500;
-                                        font-family: 'Montserrat', sans-serif;
-                                        line-height: normal;
-                                    }
-                                }
-                            }
-
-                            @media (max-width: 768px){
-                                >span.field-content >div {
-                                    display: flex;
-                                    flex-wrap: wrap;
-                                    .views-field-fieldset-1{
-                                        width: 95%;
-                                    }
-                                    .views-field-fieldset-2{
-                                        width: 95%;
-                                    }
-                                }
+                    .views-field-nothing{
+                        .field-content{
+                            >div{
+                                border-top: 1px solid #7c7cfc;
+                                width: 100%;
                             }
                         }
-
                         .bar-line{
                             display: none !important;
                         }
@@ -3549,31 +3466,32 @@
     }
 }
 
+
+
 .page-nutricion-politica-de-seguridad-alimentaria-y-nutricional{
     #block-icbf-content{
         .content{
             >.layout:nth-child(2){
                 >div:nth-child(2){
-                    .az-ctnr{
-                        max-width: 100%;
-                    }
-                    .col-sm-4{
-                        border-top: 1px solid #7c7cfc;
-                        width: 100%;
-
-                        >.views-field{
-                            >span.field-content >div {
+                    .views-field-nothing{
+                        >.field-content{
+                            >div{
+                                border-top: 1px solid #7c7cfc;
+                                width: 100%;
+                            }
+                            /*
+                            >div {
                                 display: grid;
                                 grid-template-areas: "a b";
                                 grid-template-columns: 33.3333333333% 66.6666666667%;
-                                .views-field-fieldset-1{
+                                >div:first-child{
                                     grid-area: a;
                                 }
-                                .views-field-fieldset-2{
+                                >div:nth-child(2){
                                     grid-area: b;
                                 }
 
-                                .views-field-fieldset-1, .views-field-fieldset-2{
+                                >div{
                                     .views-field-title{
                                         color: #123d14;
                                         font-size: 1.42em;
@@ -3593,21 +3511,21 @@
                             }
 
                             @media (max-width: 768px){
-                                >span.field-content >div {
+                                >div {
                                     display: flex;
                                     flex-wrap: wrap;
-                                    .views-field-fieldset-1{
+                                    >div:first-child{
                                         width: 95%;
                                     }
-                                    .views-field-fieldset-2{
+                                    >div:nth-child(2){
                                         width: 95%;
                                     }
                                 }
+                            }*/
+    
+                            .bar-line{
+                                display: none !important;
                             }
-                        }
-
-                        .bar-line{
-                            display: none !important;
                         }
                     }
                 }
