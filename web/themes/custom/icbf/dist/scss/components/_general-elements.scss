@@ -70,9 +70,9 @@ table {
         line-height: 1.1;
     }
 
-    .block-field-blocknodepagefield-content{
-        .az-column.col-sm-4{
-            .az-ctnr.container{
+    .block-field-blocknodepagefield-content {
+        .az-column.col-sm-4 {
+            .az-ctnr.container {
                 max-width: 100%;
             }
         }
@@ -339,7 +339,8 @@ table {
 }
 
 
-.page-mensaje-confirmacion-whatsapp {
+.page-mensaje-confirmacion-whatsapp,
+.page-mensaje-de-confirmacion-pqrs {
 
     .layout.layout--onecol {
         margin: 2rem 0;
@@ -371,6 +372,16 @@ table {
         font-family: var.$font-montserrat-regular;
         padding: 6px 12px;
         background: #F0F0F0;
+    }
+
+    .btn-default {
+        margin-left: 5%;
+    }
+
+    .modal-footer {
+        padding: 15px;
+        text-align: right;
+        border-top: 1px solid #e5e5e5;
     }
 
     .btn-primary {

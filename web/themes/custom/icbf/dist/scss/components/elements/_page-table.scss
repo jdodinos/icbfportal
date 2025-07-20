@@ -165,7 +165,21 @@
 .page-id-1274,
 .page-id-1237,
 .page-id-1238,
-.page-cartelera-virtual-control-interno-disciplinario {
+.page-cartelera-virtual-control-interno-disciplinario,
+.page-migrantes-jornadas-prerregistro,
+.page-node-153025,
+.page-node-153016,
+.page-node-153022 {
+
+    .node--view-mode-full .field__label {
+        font-family: var.$font-montserrat-regular;
+    }
+
+    .field .field-label {
+        font-weight: 700;
+        font-family: var.$font-montserrat-regular;
+    }
+
     li.list-group-item {
         color: #555555 !important;
         padding: 10px 15px;
@@ -407,8 +421,8 @@
     }
 }
 
- .page-id-8076 {
-    .table{
+.page-id-8076 {
+    .table {
         width: 100%;
     }
- }
+}
