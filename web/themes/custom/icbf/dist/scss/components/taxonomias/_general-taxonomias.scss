@@ -1777,76 +1777,77 @@
                                             }
                                         }
 
-                  }
-                }
-              }
-            }
+                                    }
+                                }
+                            }
+                        }
 
-            >.az-element:nth-child(2){
-                .mapco-001 {
-                    position: relative;
-                    right: 0;
-                    top: 14em;
-                    width: 230px;
-                    height: auto;
-                }
+                        >.az-element:nth-child(2) {
+                            .mapco-001 {
+                                position: relative;
+                                right: 0;
+                                top: 14em;
+                                width: 230px;
+                                height: auto;
+                            }
 
-                .mapco-002 {
-                    position: relative;
-                    left: -2em;
-                    top: 10em;
-                    width: 200px;
-                    height: auto;
-                }
+                            .mapco-002 {
+                                position: relative;
+                                left: -2em;
+                                top: 10em;
+                                width: 200px;
+                                height: auto;
+                            }
 
-                .mapco-003 {
-                    position: relative;
-                    right: 12em;
-                    top: 1em;
-                    width: 138px;
-                    height: auto;
-                }
+                            .mapco-003 {
+                                position: relative;
+                                right: 12em;
+                                top: 1em;
+                                width: 138px;
+                                height: auto;
+                            }
 
-                .mapco-004 {
-                    position: relative;
-                    right: 15em;
-                    top: -2em;
-                    width: 138px;
-                    height: auto;
-                }
+                            .mapco-004 {
+                                position: relative;
+                                right: 15em;
+                                top: -2em;
+                                width: 138px;
+                                height: auto;
+                            }
 
-                .mapco-005 {
-                    position: relative;
-                    left: 12em;
-                    top: -2em;
-                    width: 138px;
-                    height: auto;
-                }
+                            .mapco-005 {
+                                position: relative;
+                                left: 12em;
+                                top: -2em;
+                                width: 138px;
+                                height: auto;
+                            }
 
-                .mapco-006 {
-                    position: relative;
-                    left: -5.2em;
-                    top: -9.3em;
-                    width: 186px;
-                    height: auto;
-                }
+                            .mapco-006 {
+                                position: relative;
+                                left: -5.2em;
+                                top: -9.3em;
+                                width: 186px;
+                                height: auto;
+                            }
 
-                .mapco-007 {
-                    position: relative;
-                    left: 1em;
-                    top: -6.5em;
-                    width: 186px;
-                    height: auto;
-                }
+                            .mapco-007 {
+                                position: relative;
+                                left: 1em;
+                                top: -6.5em;
+                                width: 186px;
+                                height: auto;
+                            }
 
-                .mapco-008 img, .mapco-008 {
-                    position: relative;
-                    left: 0em;
-                    bottom: 2em;
-                    width: 180px;
-                    height: auto;
-                }
-            }
+                            .mapco-008 img,
+                            .mapco-008 {
+                                position: relative;
+                                left: 0em;
+                                bottom: 2em;
+                                width: 180px;
+                                height: auto;
+                            }
+                        }
 
                         >.az-element:nth-child(3) {
                             .bg-cajahi {
@@ -2222,11 +2223,11 @@
                     }
                 }
 
-                .quicktabs-main{
-                    .views-field-field-constructor{
-                        .az-ctnr{
-                            >.az-element{
-                                >.az-element:nth-child(3){
+                .quicktabs-main {
+                    .views-field-field-constructor {
+                        .az-ctnr {
+                            >.az-element {
+                                >.az-element:nth-child(3) {
                                     background-image: url(/sites/default/files/solicitud_cambio_de_formato_politicas_calidad_ambiental_seguridad_de_la_informacion_integrada_y_riesgos_del_icbf_2.jpg);
                                     background-size: cover;
                                     background-repeat: no-repeat;
@@ -2453,37 +2454,58 @@
                     display: flex;
                     flex-wrap: wrap;
 
-          @media (min-width: 810px) {
-            .views-row {
-              padding: 1em;
-              width: 33.3333333333%;
+                    @media (min-width: 810px) {
+                        .views-row {
+                            padding: 1em;
+                            width: 33.3333333333%;
+                        }
+                    }
+                }
+
+                nav.pager {
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: normal !important;
+                    text-transform: lowercase;
+                    white-space: nowrap;
+                    font-size: 14px;
+                    /*de la pagina del icbf*/
+
+                    li {
+                        font-weight: normal;
+                        padding: 0;
+                    }
+
+                    a {
+                        color: #1996d0;
+                        text-decoration: none !important;
+                    }
+                }
             }
-          }
         }
-
-        nav.pager{
-            font-family: 'Montserrat', sans-serif;
-            font-weight: normal !important;
-            text-transform: lowercase;
-            white-space: nowrap;
-            font-size: 14px;/*de la pagina del icbf*/
-
-            li{
-                font-weight: normal;
-                padding: 0;
-            }
-
-            a{
-                color: #1996d0;
-                text-decoration: none !important;
-            }
-        }
-      }
     }
-  }
 }
 
-.page-id-6881 {
+.page-id-6881,
+.page-es-valido-que-los-padres-de-comun-acuerdo-definan-quien-tendra-la-custodia-sin-necesidad-de-acudir,
+.page-en-colombia-esta-regulada-la-custodia-compartida,
+.page-si-uno-de-los-progenitores-de-un-nino-fue-privadoa-de-la-patria-potestad-se-requiere-de-su-permiso,
+.page-si-el-padre-perdio-la-patria-potestad-esta-obligado-pagar-la-cuota-alimentaria,
+.page-cuando-voy-demandar-al-padre-o-madre-de-mi-hijo-para-privarlo-de-la-patria-potestad-y-desconozco-su,
+.page-que-edad-el-hijoa-puede-decidir-si-vive-con-el-padre-o-la-madre,
+.page-cual-es-la-diferencia-entre-custodia-y-patria-potestad,
+.page-como-hago-para-quitarle-la-patria-potestad-al-padre-o-madre-de-mi-hijoa-ya-que-no-ha-respondido,
+.page-puedo-perder-la-custodia-de-mi-hijoa-si-no-tengo-trabajo-o-recursos-economicos,
+.page-puedo-solicitar-la-custodia-de-mi-hijo-que-ya-fue-otorgada-al-otro-progenitor,
+.page-tengo-la-custodia-de-mi-hijoa-conferida-por-autoridad-competente-y-el-otro-progenitor-no-desea,
+.page-los-familiares-de-un-menor-de-edad-diferentes-los-padres-pueden-tener-su-custodia,
+.page-cual-es-la-diferencia-entre-custodia-y-patria-potestad-0,
+.page-tengo-la-custodia-de-mi-hija-debidamente-conferida-y-deseo-trasladarme-de-lugar-de-residencia-dentro,
+.page-soy-la-madre-o-padre-de-un-menor-de-edad-por-el-hecho-de-que-me-asignaron-su-custodia,
+.page-soy-menor-de-edad-puedo-tener-la-custodia-de-mi-hijo,
+.page-como-puedo-tener-la-custodia-definitiva-de-mi-hijoa,
+.page-cuales-son-los-procesos-existentes-para-determinar-la-custodia-de-un-menor-de-edad,
+.page-cuales-son-los-criterios-para-fijar-o-determinar-la-custodia-de-un-menor-de-edad
+ {
 
     div#edit-button {
         text-align: left;
@@ -2523,6 +2545,85 @@
         .word-msintro h4 {
             font-family: var.$font-asap-regular;
         }
+    }
+}
+
+.page-es-valido-que-los-padres-de-comun-acuerdo-definan-quien-tendra-la-custodia-sin-necesidad-de-acudir,
+.page-en-colombia-esta-regulada-la-custodia-compartida,
+.page-si-uno-de-los-progenitores-de-un-nino-fue-privadoa-de-la-patria-potestad-se-requiere-de-su-permiso,
+.page-si-el-padre-perdio-la-patria-potestad-esta-obligado-pagar-la-cuota-alimentaria,
+.page-cuando-voy-demandar-al-padre-o-madre-de-mi-hijo-para-privarlo-de-la-patria-potestad-y-desconozco-su,
+.page-que-edad-el-hijoa-puede-decidir-si-vive-con-el-padre-o-la-madre,
+.page-cual-es-la-diferencia-entre-custodia-y-patria-potestad,
+.page-como-hago-para-quitarle-la-patria-potestad-al-padre-o-madre-de-mi-hijoa-ya-que-no-ha-respondido,
+.page-puedo-perder-la-custodia-de-mi-hijoa-si-no-tengo-trabajo-o-recursos-economicos,
+.page-puedo-solicitar-la-custodia-de-mi-hijo-que-ya-fue-otorgada-al-otro-progenitor,
+.page-tengo-la-custodia-de-mi-hijoa-conferida-por-autoridad-competente-y-el-otro-progenitor-no-desea,
+.page-los-familiares-de-un-menor-de-edad-diferentes-los-padres-pueden-tener-su-custodia,
+.page-cual-es-la-diferencia-entre-custodia-y-patria-potestad-0,
+.page-tengo-la-custodia-de-mi-hija-debidamente-conferida-y-deseo-trasladarme-de-lugar-de-residencia-dentro,
+.page-soy-la-madre-o-padre-de-un-menor-de-edad-por-el-hecho-de-que-me-asignaron-su-custodia,
+.page-soy-menor-de-edad-puedo-tener-la-custodia-de-mi-hijo,
+.page-como-puedo-tener-la-custodia-definitiva-de-mi-hijoa,
+.page-cuales-son-los-procesos-existentes-para-determinar-la-custodia-de-un-menor-de-edad,
+.page-cuales-son-los-criterios-para-fijar-o-determinar-la-custodia-de-un-menor-de-edad
+{
+
+    .block-field-blocknodeservices-faqfield-youtube h2,
+    .block-field-blocknodeservices-faqfield-multimedia h2 {
+        color: #60a53a;
+        font-size: 1.36em;
+        font-family: var.$font-montserrat-regular;
+    }
+
+    .field--name-field-related-procedures {
+        .field__item a {
+            font-family: var.$font-montserrat-regular;
+            font-size: 1.2em;
+        }
+    }
+
+    .block-webform-block h2 {
+        font-family: var.$font-asap-regular;
+        font-size: 1.4em;
+    }
+
+    .webform-submission-webform-67009-form {
+        .btn {
+            color: #fff;
+            background-color: #337ab7;
+            border-color: #2e6da4;
+        }
+    }
+
+    .pager__item {
+        .button {
+            font-family: var.$font-montserrat-regular;
+            font-size: 14px;
+        }
+    }
+
+    .word-msintro p {
+        font-family: var.$font-montserrat-regular;
+        font-size: 14px;
+    }
+
+    .fieldset-legend {
+        font-family: var.$font-asap-regular;
+    }
+
+    .field--name-field-faq-code {
+
+        .field__label,
+        .field__item {
+            color: #60a53a;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1em;
+        }
+    }
+
+    .node__submitted {
+        display: none;
     }
 }
 
@@ -2654,11 +2755,11 @@
             align-items: flex-start;
         }
 
-  .az-element > h2 > span > strong{
-    font-family: 'Asap';
-    font-weight: 700!important;
-  }
-}
+        .az-element>h2>span>strong {
+            font-family: 'Asap';
+            font-weight: 700 !important;
+        }
+    }
 }
 
 
@@ -3096,24 +3197,24 @@
 
 
 
-.page-caja-de-herramientas-innovacion{
-  div{
-    font-family: 'Montserrat', sans-serif;
-  }
+.page-caja-de-herramientas-innovacion {
+    div {
+        font-family: 'Montserrat', sans-serif;
+    }
 }
 
 
 
 //pagina de segundo nivel
-.page-memorias-encuentro-aprendiendo-juntos{
+.page-memorias-encuentro-aprendiendo-juntos {
     #block-page-title-block {
         padding: 0 1.5em;
     }
 
-    #block-icbf-content{
-        .block-field-blocknodepagefield-content{
-            .field--name-field-content{
-                >div:first-child{
+    #block-icbf-content {
+        .block-field-blocknodepagefield-content {
+            .field--name-field-content {
+                >div:first-child {
                     font-family: 'Montserrat', sans-serif;
                 }
             }
@@ -3133,23 +3234,24 @@
 .page-nutricion-ensin-encuesta-nacional-de-situacion-nutricional,
 .page-nutricion-tabla-de-composicion-de-alimentos-colombianos,
 .page-nutricion-hoja-de-balance-de-alimentos-colombianos,
-.page-nutricion-educacion-alimentaria-y-nutricional
-{
-    #block-icbf-content{
-        .content{
-            >.layout:first-child{
+.page-nutricion-educacion-alimentaria-y-nutricional {
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
                 display: grid;
                 grid-template-areas: "a b";
                 grid-template-columns: 20% 80%;
-                >div:first-child{
+
+                >div:first-child {
                     grid-area: a;
                 }
-                >div:nth-child(2){
+
+                >div:nth-child(2) {
                     grid-area: b;
                 }
 
-                .tb-megamenu{
-                    ul{
+                .tb-megamenu {
+                    ul {
                         li {
                             padding: 10px;
                             background-color: #fcfcfc;
@@ -3163,55 +3265,61 @@
                                 color: #337ab7;
                                 text-decoration: none;
                             }
-                            a:hover{
+
+                            a:hover {
                                 color: #337ab7;
                                 text-decoration: underline;
                             }
                         }
-                        li:last-child{
+
+                        li:last-child {
                             border: 1px solid #3cb371;
                         }
                     }
                 }
             }
-            @media (max-width: 768px){
-                >.layout:first-child{
+
+            @media (max-width: 768px) {
+                >.layout:first-child {
                     display: flex;
                     flex-wrap: wrap;
 
-                    >div:first-child{
+                    >div:first-child {
                         width: 100%;
                     }
-                    >div:nth-child(2){
+
+                    >div:nth-child(2) {
                         width: 100%;
                         padding: 1em;
                     }
                 }
             }
 
-            >.layout:nth-child(2){
+            >.layout:nth-child(2) {
                 display: inline-block;
             }
         }
     }
 }
 
-.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional{
-    #block-icbf-content{
-        .content{
-            >.layout:nth-child(2){
+.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional {
+    #block-icbf-content {
+        .content {
+            >.layout:nth-child(2) {
                 display: grid;
                 grid-template-areas: "a b";
                 grid-template-columns: 20% 80%;
-                >div:first-child{
+
+                >div:first-child {
                     grid-area: a;
                 }
-                >div:nth-child(2){
+
+                >div:nth-child(2) {
                     grid-area: b;
                 }
 
-                .tb-megamenu{
-                    ul{
+                .tb-megamenu {
+                    ul {
                         li {
                             padding: 10px;
                             background-color: #fcfcfc;
@@ -3225,26 +3333,30 @@
                                 color: #337ab7;
                                 text-decoration: none;
                             }
-                            a:hover{
+
+                            a:hover {
                                 color: #337ab7;
                                 text-decoration: underline;
                             }
                         }
-                        li:last-child{
+
+                        li:last-child {
                             border: 1px solid #3cb371;
                         }
                     }
                 }
             }
-            @media (max-width: 768px){
-                >.layout:nth-child(2){
+
+            @media (max-width: 768px) {
+                >.layout:nth-child(2) {
                     display: flex;
                     flex-wrap: wrap;
 
-                    >div:first-child{
+                    >div:first-child {
                         width: 100%;
                     }
-                    >div:nth-child(2){
+
+                    >div:nth-child(2) {
                         width: 100%;
                         padding: 1em;
                     }
@@ -3256,13 +3368,13 @@
 
 //resaltar item de cada pagina
 //1
-.page-nutricion-bienestarina-mas-y-otros-alimentos-de-alto-valor-nutricional{
-    #block-icbf-content{
-        .content{
-            >.layout:first-child{
-                .tb-megamenu{
-                    ul{
-                        li:first-child{
+.page-nutricion-bienestarina-mas-y-otros-alimentos-de-alto-valor-nutricional {
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
+                .tb-megamenu {
+                    ul {
+                        li:first-child {
                             border: 1px solid #3cb371;
                         }
                     }
@@ -3273,13 +3385,13 @@
 }
 
 //2
-.page-nutricion-estrategia-de-atencion-y-prevencion-de-la-desnutricion-infantil{
-    #block-icbf-content{
-        .content{
-            >.layout:first-child{
-                .tb-megamenu{
-                    ul{
-                        li:nth-child(2){
+.page-nutricion-estrategia-de-atencion-y-prevencion-de-la-desnutricion-infantil {
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
+                .tb-megamenu {
+                    ul {
+                        li:nth-child(2) {
                             border: 1px solid #3cb371;
                         }
                     }
@@ -3290,13 +3402,13 @@
 }
 
 //3
-.page-nutricion-ensin-encuesta-nacional-de-situacion-nutricional{
-    #block-icbf-content{
-        .content{
-            >.layout:first-child{
-                .tb-megamenu{
-                    ul{
-                        li:nth-child(3){
+.page-nutricion-ensin-encuesta-nacional-de-situacion-nutricional {
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
+                .tb-megamenu {
+                    ul {
+                        li:nth-child(3) {
                             border: 1px solid #3cb371;
                         }
                     }
@@ -3307,13 +3419,13 @@
 }
 
 //4
-.page-nutricion-tabla-de-composicion-de-alimentos-colombianos{
-    #block-icbf-content{
-        .content{
-            >.layout:first-child{
-                .tb-megamenu{
-                    ul{
-                        li:nth-child(4){
+.page-nutricion-tabla-de-composicion-de-alimentos-colombianos {
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
+                .tb-megamenu {
+                    ul {
+                        li:nth-child(4) {
                             border: 1px solid #3cb371;
                         }
                     }
@@ -3324,13 +3436,13 @@
 }
 
 //5
-.page-nutricion-hoja-de-balance-de-alimentos-colombianos{
-    #block-icbf-content{
-        .content{
-            >.layout:first-child{
-                .tb-megamenu{
-                    ul{
-                        li:nth-child(5){
+.page-nutricion-hoja-de-balance-de-alimentos-colombianos {
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
+                .tb-megamenu {
+                    ul {
+                        li:nth-child(5) {
                             border: 1px solid #3cb371;
                         }
                     }
@@ -3341,13 +3453,13 @@
 }
 
 //6
-.page-nutricion-educacion-alimentaria-y-nutricional{
-    #block-icbf-content{
-        .content{
-            >.layout:first-child{
-                .tb-megamenu{
-                    ul{
-                        li:nth-child(6){
+.page-nutricion-educacion-alimentaria-y-nutricional {
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
+                .tb-megamenu {
+                    ul {
+                        li:nth-child(6) {
                             border: 1px solid #3cb371;
                         }
                     }
@@ -3358,13 +3470,13 @@
 }
 
 //7
-.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional{
-    #block-icbf-content{
-        .content{
-            >.layout:nth-child(2){
-                .tb-megamenu{
-                    ul{
-                        li:nth-child(7){
+.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional {
+    #block-icbf-content {
+        .content {
+            >.layout:nth-child(2) {
+                .tb-megamenu {
+                    ul {
+                        li:nth-child(7) {
                             border: 1px solid #3cb371;
                         }
                     }
@@ -3376,12 +3488,12 @@
 
 .page-nutricion-estrategia-de-atencion-y-prevencion-de-la-desnutricion-infantil,
 .page-nutricion-ensin-encuesta-nacional-de-situacion-nutricional,
-.page-nutricion-educacion-alimentaria-y-nutricional{
-    #block-icbf-content{
-        .content{
-            >.layout:first-child{
-                >div:nth-child(2){
-                    .az-ctnr{
+.page-nutricion-educacion-alimentaria-y-nutricional {
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
+                >div:nth-child(2) {
+                    .az-ctnr {
                         max-width: 100%;
                     }
                 }
@@ -3390,11 +3502,11 @@
     }
 }
 
-.page-nutricion-ensin-encuesta-nacional-de-situacion-nutricional{
-    #block-icbf-content{
-        .content{
-            >.layout:first-child{
-                >div:nth-child(2){
+.page-nutricion-ensin-encuesta-nacional-de-situacion-nutricional {
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
+                >div:nth-child(2) {
                     @media (max-width: 576px) {
                         .col-sm-6 {
                             flex: 0 0 auto;
@@ -3409,20 +3521,19 @@
 
 .page-nutricion-estrategia-de-atencion-y-prevencion-de-la-desnutricion-infantil,
 .page-nutricion-tabla-de-composicion-de-alimentos-colombianos,
-.page-nutricion-hoja-de-balance-de-alimentos-colombianos
-{
-        #block-icbf-content{
-        .content{
-            >.layout:first-child{
-                >div:nth-child(2){
-                    .views-field-nothing{
-                        >.field-content{
-                            >div{
+.page-nutricion-hoja-de-balance-de-alimentos-colombianos {
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
+                >div:nth-child(2) {
+                    .views-field-nothing {
+                        >.field-content {
+                            >div {
                                 border-top: 1px solid #7c7cfc;
                                 width: 100%;
                             }
 
-                            .bar-line{
+                            .bar-line {
                                 display: none !important;
                             }
                         }
@@ -3433,27 +3544,29 @@
     }
 }
 
-.page-nutricion-educacion-alimentaria-y-nutricional{
-    #block-icbf-content{
-        .content{
-            >.layout:first-child{
-                .block-views-blockarticulos-secciones-block-missinfo3{
-                    .views-field-nothing{
-                        .field-content{
-                            >div{
+.page-nutricion-educacion-alimentaria-y-nutricional {
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
+                .block-views-blockarticulos-secciones-block-missinfo3 {
+                    .views-field-nothing {
+                        .field-content {
+                            >div {
                                 border-top: 1px solid #7c7cfc;
                                 width: 100%;
                             }
                         }
-                        .bar-line{
+
+                        .bar-line {
                             display: none !important;
                         }
                     }
                 }
             }
 
-            .block-views-blockdocuments-block-33, .block-views-blockdocuments-block-34{
-                .views-row{
+            .block-views-blockdocuments-block-33,
+            .block-views-blockdocuments-block-34 {
+                .views-row {
                     margin: 1em;
 
                     .word-gral {
@@ -3468,17 +3581,18 @@
 
 
 
-.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional{
-    #block-icbf-content{
-        .content{
-            >.layout:nth-child(2){
-                >div:nth-child(2){
-                    .views-field-nothing{
-                        >.field-content{
-                            >div{
+.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional {
+    #block-icbf-content {
+        .content {
+            >.layout:nth-child(2) {
+                >div:nth-child(2) {
+                    .views-field-nothing {
+                        >.field-content {
+                            >div {
                                 border-top: 1px solid #7c7cfc;
                                 width: 100%;
                             }
+
                             /*
                             >div {
                                 display: grid;
@@ -3522,8 +3636,8 @@
                                     }
                                 }
                             }*/
-    
-                            .bar-line{
+
+                            .bar-line {
                                 display: none !important;
                             }
                         }
@@ -3533,4 +3647,10 @@
         }
     }
 }
-/*-----------------------------------------------------------------*/
+
+.page-id-8241 {
+    h2 {
+        font-size: 1.4em;
+        font-family: var.$font-asap-regular;
+    }
+}
