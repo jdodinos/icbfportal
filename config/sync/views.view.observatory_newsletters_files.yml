@@ -1153,6 +1153,55 @@ display:
           text: editar
           output_url_as_text: false
           absolute: false
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: custom
+          label: ''
+          exclude: true
+          alter:
+            alter_text: true
+            text: "<button class=\"btn btn-menub\"><a  class=\"btn btn-menub\" href=\"/bienestar/observatorio-bienestar-ninez/boletines\">Consultar Boletines</a></button>\r\n"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
         field_summoned_file:
           id: field_summoned_file
           table: node__field_summoned_file
@@ -1421,7 +1470,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{{ title }}<br/>\r\n{{ field_date }}<br/>"
+            text: "{{ title }}<br/>\r\n{{ field_date }}<br/>\r\n{{ nothing }}<br/>"
             make_link: false
             path: ''
             absolute: false
@@ -1459,10 +1508,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: datetime_default
+          type: datetime_custom
           settings:
             timezone_override: ''
-            format_type: olivero_medium
+            date_format: d/M/Y
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -1576,8 +1625,96 @@ display:
         operator: AND
         groups:
           1: AND
+      style:
+        type: views_bootstrap_table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          override: 1
+          sticky: 0
+          caption: ''
+          summary: ''
+          description: ''
+          columns:
+            field_content: field_content
+            edit_node: edit_node
+            nothing: nothing
+            field_summoned_file: field_summoned_file
+            field_document: field_document
+            field_list_image: field_list_image
+            title: title
+            field_date: field_date
+          info:
+            field_content:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            edit_node:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            nothing:
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            field_summoned_file:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            field_document:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            field_list_image:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            title:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            field_date:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+          default: '-1'
+          empty_table: 0
+          responsive: 0
+          bootstrap_styles:
+            striped: 0
+            bordered: 0
+            hover: 0
+            condensed: 0
+      row:
+        type: fields
+        options: {  }
       defaults:
         pager: false
+        style: false
+        row: false
         fields: false
         arguments: false
         filters: false
