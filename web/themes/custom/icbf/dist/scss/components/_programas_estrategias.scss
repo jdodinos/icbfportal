@@ -22,8 +22,18 @@
     }
 
     .vocabulary-secctions {
-
+        .content .panel-group .panel .panel-heading .panel-title:before{
+            content: none;
+        }
         .tb-megamenu {
+
+            .dropdown-menu{
+                 .active{
+                    > a{
+                        background: none;
+                    }
+                 }
+            }
 
             .tb-megamenu-nav {
                 display: flex;
