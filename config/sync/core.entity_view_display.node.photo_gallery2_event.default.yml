@@ -82,13 +82,16 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
               formatter:
-                type: image
+                type: colorbox
                 label: hidden
                 settings:
-                  image_link: ''
-                  image_style: ''
-                  image_loading:
-                    attribute: lazy
+                  colorbox_image_style: ''
+                  colorbox_gallery: post
+                  colorbox_gallery_custom: ''
+                  colorbox_caption: auto
+                  colorbox_caption_custom: ''
+                  colorbox_node_style: ''
+                  colorbox_node_style_first: ''
                 third_party_settings:
                   field_formatter_class:
                     class: ''
