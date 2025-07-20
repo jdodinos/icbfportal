@@ -1,0 +1,161 @@
+ .page-galeria-migrantes-2021 {
+
+     /* Reset básico para mejorar consistencia visual */
+     * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+     }
+
+     /* Estilos para el contenedor principal */
+     .field--name-field-images-gallery-event {
+         max-width: 1200px;
+         margin: 40px auto;
+         padding: 0 20px;
+     }
+
+     /* Contenedor grid principal */
+     .field__items {
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         /* 3 columnas en desktop */
+         gap: 16px;
+         /* Espacio entre elementos */
+     }
+
+     /* Estilos para cada item de la galería */
+     .field__item {
+         position: relative;
+         overflow: hidden;
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+         aspect-ratio: 4/3;
+         /* Mantener proporción 4:3 para todas las imágenes */
+     }
+
+
+     /* Estilos para los enlaces */
+     .field__item a {
+         display: block;
+         width: 100%;
+         height: 100%;
+         text-decoration: none;
+     }
+
+     /* Estilos para las imágenes */
+     .field__item img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         /* Asegura que las imágenes cubran el espacio sin deformarse */
+         display: block;
+         transition: transform 0.3s ease;
+     }
+
+     /* Tablet: 2 columnas */
+     @media (max-width: 992px) {
+         .field__items {
+             grid-template-columns: repeat(2, 1fr);
+         }
+     }
+
+     /* Móvil: 1 columna */
+     @media (max-width: 576px) {
+         .field__items {
+             grid-template-columns: 1fr;
+         }
+     }
+
+     /* Cabecera de demostración */
+     .header {
+         text-align: center;
+         padding: 30px 0;
+         background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+         color: white;
+         margin-bottom: 40px;
+     }
+
+     .header h1 {
+         font-size: 2.5rem;
+         margin-bottom: 10px;
+     }
+
+     .header p {
+         font-size: 1.2rem;
+         max-width: 800px;
+         margin: 0 auto;
+         line-height: 1.6;
+     }
+
+     /* Indicadores responsivos */
+     .responsive-indicators {
+         position: fixed;
+         top: 20px;
+         right: 20px;
+         background: rgba(0, 0, 0, 0.7);
+         color: white;
+         padding: 10px 15px;
+         border-radius: 20px;
+         font-size: 14px;
+         display: flex;
+         align-items: center;
+         z-index: 1000;
+     }
+
+     .indicator {
+         display: inline-block;
+         width: 12px;
+         height: 12px;
+         border-radius: 50%;
+         margin-left: 8px;
+     }
+
+     .desktop {
+         background: #4CAF50;
+     }
+
+     .tablet {
+         background: #FFC107;
+     }
+
+     .mobile {
+         background: #F44336;
+     }
+
+     @media (max-width: 992px) {
+         .desktop {
+             display: none;
+         }
+
+         .tablet {
+             display: inline-block;
+         }
+
+         .mobile {
+             display: none;
+         }
+
+         .responsive-indicators::before {
+             content: "Tablet: 2 columnas";
+         }
+     }
+
+     @media (max-width: 576px) {
+         .tablet {
+             display: none;
+         }
+
+         .mobile {
+             display: inline-block;
+         }
+
+         .responsive-indicators::before {
+             content: "Móvil: 1 columna";
+         }
+     }
+
+     @media (min-width: 993px) {
+         .responsive-indicators::before {
+             content: "Desktop: 3 columnas";
+         }
+     }
+ }
