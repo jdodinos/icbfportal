@@ -3234,24 +3234,23 @@
 .page-nutricion-ensin-encuesta-nacional-de-situacion-nutricional,
 .page-nutricion-tabla-de-composicion-de-alimentos-colombianos,
 .page-nutricion-hoja-de-balance-de-alimentos-colombianos,
-.page-nutricion-educacion-alimentaria-y-nutricional {
-    #block-icbf-content {
-        .content {
-            >.layout:first-child {
+.page-nutricion-educacion-alimentaria-y-nutricional
+{
+    #block-icbf-content{
+        .content{
+            >.layout:first-child{
                 display: grid;
                 grid-template-areas: "a b";
                 grid-template-columns: 20% 80%;
-
-                >div:first-child {
+                >div:first-child{
                     grid-area: a;
                 }
-
-                >div:nth-child(2) {
+                >div:nth-child(2){
                     grid-area: b;
                 }
 
-                .tb-megamenu {
-                    ul {
+                .tb-megamenu{
+                    ul{
                         li {
                             padding: 10px;
                             background-color: #fcfcfc;
@@ -3265,61 +3264,55 @@
                                 color: #337ab7;
                                 text-decoration: none;
                             }
-
-                            a:hover {
+                            a:hover{
                                 color: #337ab7;
                                 text-decoration: underline;
                             }
                         }
-
-                        li:last-child {
+                        li:last-child{
                             border: 1px solid #3cb371;
                         }
                     }
                 }
             }
-
-            @media (max-width: 768px) {
-                >.layout:first-child {
+            @media (max-width: 768px){
+                >.layout:first-child{
                     display: flex;
                     flex-wrap: wrap;
 
-                    >div:first-child {
+                    >div:first-child{
                         width: 100%;
                     }
-
-                    >div:nth-child(2) {
+                    >div:nth-child(2){
                         width: 100%;
                         padding: 1em;
                     }
                 }
             }
 
-            >.layout:nth-child(2) {
+            >.layout:nth-child(2){
                 display: inline-block;
             }
         }
     }
 }
 
-.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional {
-    #block-icbf-content {
-        .content {
-            >.layout:nth-child(2) {
+.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional{
+    #block-icbf-content{
+        .content{
+            >.layout:nth-child(2){
                 display: grid;
                 grid-template-areas: "a b";
                 grid-template-columns: 20% 80%;
-
-                >div:first-child {
+                >div:first-child{
                     grid-area: a;
                 }
-
-                >div:nth-child(2) {
+                >div:nth-child(2){
                     grid-area: b;
                 }
 
-                .tb-megamenu {
-                    ul {
+                .tb-megamenu{
+                    ul{
                         li {
                             padding: 10px;
                             background-color: #fcfcfc;
@@ -3333,30 +3326,26 @@
                                 color: #337ab7;
                                 text-decoration: none;
                             }
-
-                            a:hover {
+                            a:hover{
                                 color: #337ab7;
                                 text-decoration: underline;
                             }
                         }
-
-                        li:last-child {
+                        li:last-child{
                             border: 1px solid #3cb371;
                         }
                     }
                 }
             }
-
-            @media (max-width: 768px) {
-                >.layout:nth-child(2) {
+            @media (max-width: 768px){
+                >.layout:nth-child(2){
                     display: flex;
                     flex-wrap: wrap;
 
-                    >div:first-child {
+                    >div:first-child{
                         width: 100%;
                     }
-
-                    >div:nth-child(2) {
+                    >div:nth-child(2){
                         width: 100%;
                         padding: 1em;
                     }
@@ -3368,13 +3357,13 @@
 
 //resaltar item de cada pagina
 //1
-.page-nutricion-bienestarina-mas-y-otros-alimentos-de-alto-valor-nutricional {
-    #block-icbf-content {
-        .content {
-            >.layout:first-child {
-                .tb-megamenu {
-                    ul {
-                        li:first-child {
+.page-nutricion-bienestarina-mas-y-otros-alimentos-de-alto-valor-nutricional{
+    #block-icbf-content{
+        .content{
+            >.layout:first-child{
+                .tb-megamenu{
+                    ul{
+                        li:first-child{
                             border: 1px solid #3cb371;
                         }
                     }
@@ -3385,13 +3374,13 @@
 }
 
 //2
-.page-nutricion-estrategia-de-atencion-y-prevencion-de-la-desnutricion-infantil {
-    #block-icbf-content {
-        .content {
-            >.layout:first-child {
-                .tb-megamenu {
-                    ul {
-                        li:nth-child(2) {
+.page-nutricion-estrategia-de-atencion-y-prevencion-de-la-desnutricion-infantil{
+    #block-icbf-content{
+        .content{
+            >.layout:first-child{
+                .tb-megamenu{
+                    ul{
+                        li:nth-child(2){
                             border: 1px solid #3cb371;
                         }
                     }
@@ -3402,13 +3391,13 @@
 }
 
 //3
-.page-nutricion-ensin-encuesta-nacional-de-situacion-nutricional {
-    #block-icbf-content {
-        .content {
-            >.layout:first-child {
-                .tb-megamenu {
-                    ul {
-                        li:nth-child(3) {
+.page-nutricion-ensin-encuesta-nacional-de-situacion-nutricional{
+    #block-icbf-content{
+        .content{
+            >.layout:first-child{
+                .tb-megamenu{
+                    ul{
+                        li:nth-child(3){
                             border: 1px solid #3cb371;
                         }
                     }
@@ -3419,13 +3408,13 @@
 }
 
 //4
-.page-nutricion-tabla-de-composicion-de-alimentos-colombianos {
-    #block-icbf-content {
-        .content {
-            >.layout:first-child {
-                .tb-megamenu {
-                    ul {
-                        li:nth-child(4) {
+.page-nutricion-tabla-de-composicion-de-alimentos-colombianos{
+    #block-icbf-content{
+        .content{
+            >.layout:first-child{
+                .tb-megamenu{
+                    ul{
+                        li:nth-child(4){
                             border: 1px solid #3cb371;
                         }
                     }
@@ -3436,13 +3425,13 @@
 }
 
 //5
-.page-nutricion-hoja-de-balance-de-alimentos-colombianos {
-    #block-icbf-content {
-        .content {
-            >.layout:first-child {
-                .tb-megamenu {
-                    ul {
-                        li:nth-child(5) {
+.page-nutricion-hoja-de-balance-de-alimentos-colombianos{
+    #block-icbf-content{
+        .content{
+            >.layout:first-child{
+                .tb-megamenu{
+                    ul{
+                        li:nth-child(5){
                             border: 1px solid #3cb371;
                         }
                     }
@@ -3453,13 +3442,13 @@
 }
 
 //6
-.page-nutricion-educacion-alimentaria-y-nutricional {
-    #block-icbf-content {
-        .content {
-            >.layout:first-child {
-                .tb-megamenu {
-                    ul {
-                        li:nth-child(6) {
+.page-nutricion-educacion-alimentaria-y-nutricional{
+    #block-icbf-content{
+        .content{
+            >.layout:first-child{
+                .tb-megamenu{
+                    ul{
+                        li:nth-child(6){
                             border: 1px solid #3cb371;
                         }
                     }
@@ -3470,13 +3459,13 @@
 }
 
 //7
-.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional {
-    #block-icbf-content {
-        .content {
-            >.layout:nth-child(2) {
-                .tb-megamenu {
-                    ul {
-                        li:nth-child(7) {
+.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional{
+    #block-icbf-content{
+        .content{
+            >.layout:nth-child(2){
+                .tb-megamenu{
+                    ul{
+                        li:nth-child(7){
                             border: 1px solid #3cb371;
                         }
                     }
@@ -3486,27 +3475,53 @@
     }
 }
 
+
 .page-nutricion-estrategia-de-atencion-y-prevencion-de-la-desnutricion-infantil,
 .page-nutricion-ensin-encuesta-nacional-de-situacion-nutricional,
-.page-nutricion-educacion-alimentaria-y-nutricional {
-    #block-icbf-content {
-        .content {
-            >.layout:first-child {
-                >div:nth-child(2) {
-                    .az-ctnr {
+.page-nutricion-hoja-de-balance-de-alimentos-colombianos,
+.page-nutricion-educacion-alimentaria-y-nutricional,
+.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional
+{
+    #block-icbf-content{
+        .content{
+            >.layout:first-child{
+                >div:nth-child(2){
+                    .az-ctnr{
                         max-width: 100%;
                     }
+                }
+            }
+
+            .panel-title{
+                a{
+                    color: #1996d0;
+                    text-decoration: none !important;
+                }
+                a:hover {
+                    color: #125e81;
+                    text-decoration: underline !important;
+                }
+            }
+            .panel-title::before{
+                content: '';
+                display: flex;
+                padding-right: 0;
+            }
+
+            .panel-body{
+                ul {
+                    padding-left: 40px;
                 }
             }
         }
     }
 }
 
-.page-nutricion-ensin-encuesta-nacional-de-situacion-nutricional {
-    #block-icbf-content {
-        .content {
-            >.layout:first-child {
-                >div:nth-child(2) {
+.page-nutricion-ensin-encuesta-nacional-de-situacion-nutricional{
+    #block-icbf-content{
+        .content{
+            >.layout:first-child{
+                >div:nth-child(2){
                     @media (max-width: 576px) {
                         .col-sm-6 {
                             flex: 0 0 auto;
@@ -3521,19 +3536,20 @@
 
 .page-nutricion-estrategia-de-atencion-y-prevencion-de-la-desnutricion-infantil,
 .page-nutricion-tabla-de-composicion-de-alimentos-colombianos,
-.page-nutricion-hoja-de-balance-de-alimentos-colombianos {
-    #block-icbf-content {
-        .content {
-            >.layout:first-child {
-                >div:nth-child(2) {
-                    .views-field-nothing {
-                        >.field-content {
-                            >div {
+.page-nutricion-hoja-de-balance-de-alimentos-colombianos
+{
+        #block-icbf-content{
+        .content{
+            >.layout:first-child{
+                >div:nth-child(2){
+                    .views-field-nothing{
+                        >.field-content{
+                            >div{
                                 border-top: 1px solid #7c7cfc;
                                 width: 100%;
                             }
 
-                            .bar-line {
+                            .bar-line{
                                 display: none !important;
                             }
                         }
@@ -3544,29 +3560,27 @@
     }
 }
 
-.page-nutricion-educacion-alimentaria-y-nutricional {
-    #block-icbf-content {
-        .content {
-            >.layout:first-child {
-                .block-views-blockarticulos-secciones-block-missinfo3 {
-                    .views-field-nothing {
-                        .field-content {
-                            >div {
+.page-nutricion-educacion-alimentaria-y-nutricional{
+    #block-icbf-content{
+        .content{
+            >.layout:first-child{
+                .block-views-blockarticulos-secciones-block-missinfo3{
+                    .views-field-nothing{
+                        >.field-content{
+                            >div{
                                 border-top: 1px solid #7c7cfc;
                                 width: 100%;
                             }
                         }
-
-                        .bar-line {
+                        .bar-line{
                             display: none !important;
                         }
                     }
                 }
             }
 
-            .block-views-blockdocuments-block-33,
-            .block-views-blockdocuments-block-34 {
-                .views-row {
+            .block-views-blockdocuments-block-33, .block-views-blockdocuments-block-34{
+                .views-row{
                     margin: 1em;
 
                     .word-gral {
@@ -3581,18 +3595,17 @@
 
 
 
-.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional {
-    #block-icbf-content {
-        .content {
-            >.layout:nth-child(2) {
-                >div:nth-child(2) {
-                    .views-field-nothing {
-                        >.field-content {
-                            >div {
+.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional{
+    #block-icbf-content{
+        .content{
+            >.layout:nth-child(2){
+                >div:nth-child(2){
+                    .views-field-nothing{
+                        >.field-content{
+                            >div{
                                 border-top: 1px solid #7c7cfc;
                                 width: 100%;
                             }
-
                             /*
                             >div {
                                 display: grid;
@@ -3636,8 +3649,8 @@
                                     }
                                 }
                             }*/
-
-                            .bar-line {
+    
+                            .bar-line{
                                 display: none !important;
                             }
                         }
@@ -3647,6 +3660,8 @@
         }
     }
 }
+/*-----------------------------------------------------------------*/
+
 
 .page-id-8241 {
     h2 {
