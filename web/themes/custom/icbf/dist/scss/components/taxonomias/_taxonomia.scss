@@ -426,3 +426,21 @@
     margin-top: -8.5rem;
   }
 }
+
+
+.vocabulary-sige-process-type{
+  font-family: var.$font-montserrat;
+  a{
+    font-family: var.$font-montserrat;
+  }
+  .bs-1col,
+  .bs-2col{
+    h2{
+      background-color: #f7f7f7;
+      padding: 5px;
+      font-weight: 700;
+      font-size: 1em;
+      text-align: center;
+    }
+  }
+}
