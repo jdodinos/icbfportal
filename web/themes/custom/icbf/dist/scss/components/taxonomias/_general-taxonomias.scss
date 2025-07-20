@@ -3755,6 +3755,12 @@
             //filtros
             .view-display-id-block_3{
                 .view-filters{
+                    //titulo filtro
+                    legend{
+                        font-size: 1.4em;
+                        padding-bottom: 1.5em;
+                    }
+
                     .form-radios{
                         input[type=checkbox], input[type=radio] {
                             appearance: none;
@@ -3779,12 +3785,6 @@
                             display: flex;
                             align-items: center;
                             justify-content: center;
-                        }
-
-                        //titulo filtro
-                        legend{
-                            font-size: 1.4em;
-                            padding-bottom: 1.5em;
                         }
 
                         //color de letras
