@@ -3649,7 +3649,7 @@
                                     }
                                 }
                             }*/
-    
+
                             .bar-line{
                                 display: none !important;
                             }
@@ -3731,17 +3731,17 @@
                         "c"
                         "d";
                     grid-template-columns: 100%;
-                    
+
                     .view-header {
                         grid-area: b;
                         width: 100%;
                     }
-    
+
                     .view-filters {
                         grid-area: a;
                         width: 100%;
                     }
-    
+
                     .view-content {
                         grid-area: c;
                         width: 100%;
@@ -3776,7 +3776,7 @@
                         /*Estilos para el icono interno del check*/
                         input[type=checkbox]:checked, input[type=radio]:checked {
                             background-color: #1996d0;
-                            border-color: #1996d0;                        
+                            border-color: #1996d0;
                         }
                         input[type=checkbox]::after, input[type=radio]::after {
                             content: '✔';
@@ -3838,7 +3838,7 @@
                             border-radius: 0px 5px 5px 0px !important;
                         }
                     }
-                    
+
                 }
             }
         }
@@ -3898,3 +3898,280 @@
         font-family: var.$font-asap-regular;
     }
 }
+
+.page-caracterizacion-cuidadanos-peticionarios{
+  h3{
+    font-family: 'Asap-Regular'!important;
+    font-size: 1.2em!important;
+  }
+
+  .page-header{
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+    font-size: 1.7em;
+  }
+
+}
+
+.page-licencia-de-funcionamiento,
+.page-personeria-juridica,
+.page-bienes-sin-heredero-o-dueno,
+.page-permiso-de-salida-del-pais,
+.page-adopcion-para-residentes-en-colombia,
+.page-fijacion-de-visitas
+.page-restitucion-internacional-y-regulacion-internacional-de-visitas,
+.page-restitucion-internacional-y-regulacion-internacional-de-visitas{
+
+  #icbf-module-category-selection-form {
+    margin-top: 30px;
+  }
+
+  #icbf-module-category-selection-form > div > .js-form-item{
+    width: 73.33333333%!important;
+  }
+
+  #icbf-module-category-selection-form > div > #container-procedure{
+    width: 83.33333333%!important;
+  }
+
+  .select-citizen-category {
+    height: 40px!important;
+    border-radius: 150px!important;
+    padding-left: 24px!important;
+    border: 1px solid #72bf44!important;
+  }
+
+  #icbf-module-category-selection-form{
+    position: relative;
+    right: 14px;
+  }
+
+  .widgetCitizenContainer #icbf-module-category-selection-form{
+    text-align: justify!important;
+  }
+
+  #edit-citizen-category{
+    position: relative;
+    left: 20px;
+  }
+
+  [data-az-id="511p0q2k"]{
+    margin-top: 25px!important;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: "Asap-Regular"!important;
+  }
+
+
+  .select-citizen-category,
+  .select-procedure{
+    height: 40px!important;
+    border-radius: 150px!important;
+    padding-left: 24px!important;
+    border: 1px solid #72bf44!important;
+  }
+
+
+  /* Forma y estilo base */
+  .stbe-social-links__item i {
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 15px;
+    border-radius: 50%;
+    text-align: center;
+    border: 1px solid #9695da; /* color genérico por defecto */
+    color: #555;
+    transition: all 0.3s ease;
+  }
+
+  /* Espaciado entre íconos */
+  .stbe-social-links__item {
+    display: inline-block;
+    margin: 0 8px;
+  }
+
+  /* Corrección de íconos */
+  [class*="fa-"]::before {
+    display: inline-block;
+  }
+  .stbe-social-links__item a[href*="facebook"] i {
+    color: #3b5998;
+    border-color: #3b5998;
+  }
+  .stbe-social-links__item a[href*="youtube"] i {
+    color: #e52d27;
+    border-color: #3b5998;
+  }
+  .stbe-social-links__item a[href*="twitter"] i {
+    color: #1da1f2;
+    border-color: #3b5998;
+  }
+  .stbe-social-links__item a[href*="instagram"] i {
+    color: #1da1f2;
+    border-color: #3f729b;
+  }
+  .stbe-social-links__item a[href*="facebook"] i:hover {
+    background-color: #fff;
+    color: #3b5998;
+    border-color: #3b5998;
+  }
+  .stbe-social-links__item a[href*="youtube"] i:hover {
+    background-color: #fff;
+    color: #e52d27;
+    border-color: #3b5998;
+  }
+  .stbe-social-links__item a[href*="twitter"] i:hover {
+    background-color: #fff;
+    color: #1da1f2;
+    border-color: #3b5998;
+  }
+  .stbe-social-links__item a[href*="instagram"] i:hover {
+
+    color: #3f729b;
+    border-color: #3b5998;
+  }
+
+  .az-icon .fa {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    color: #1387aa !important;
+    background-color: #f9f4cf !important;
+    border: none;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
+  .az-icon .fa.appear {
+    animation: pulse 1s ease-in-out;
+  }
+
+  .az-icon .fa:hover {
+    transform: scale(1.1);
+  }
+
+  [data-az-id="qhjsd1gw"]{
+    flex-wrap: nowrap!important;
+  }
+
+  .fa-television::before {
+    content: "\f108";
+    font-family: "FontAwesome";
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 50%;
+    background-color: #eaf7fd;
+    color: #1387aa;
+    transition: transform 0.3s ease;
+  }
+
+
+  .glyphicon.glyphicon-info-sign {
+    position: relative;
+    font-size: 0; /* Oculta el contenido original */
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+  }
+
+  /* Inserta nuevo ícono */
+  .glyphicon.glyphicon-info-sign::before {
+    content: "i";
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    color: white;
+    background-color: #555; /* Azul oscuro típico */
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  /* Oculta el span accesorio */
+  .glyphicon.glyphicon-info-sign .element-invisible {
+    display: none;
+  }
+
+
+}
+
+
+.page-portafolio-de-servicios-icbf-oferta{
+  view-filters {
+    margin-top: 2.5rem;
+    width: 110%!important;
+    float: left;
+  }
+
+  /* Asegura posicionamiento solo en este campo específico */
+  .js-form-item-name.form-no-label {
+    position: relative;
+  }
+
+  /* Ícono de recarga solo cuando el input es #edit-name */
+  .js-form-item-name.form-no-label::after {
+    content: "\f021"; /* fa-refresh */
+    font-family: "FontAwesome";
+    font-size: 14px;
+    color: white;
+    background-color: #009688;
+    border-radius: 0 10px 10px 0;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  /* Input padding para que no se solape con el ícono */
+  input[data-drupal-selector="edit-name"] {
+    padding-right: 44px;
+    height: 36px;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  [data-drupal-selector="edit-actions"]{
+    text-align: center;
+  }
+
+  #edit-submit-tramites {
+    color: #fff;
+    background-color: #31b0d5!important;
+    border-color: #269abc!important;
+  }
+
+}
+
+.page-primera-infancia-cuentame{
+  h1, h2, h3, h4 {
+    font-family: "Asap-Regular"!important;
+  }
+  h2{
+    font-size: 1.3em;
+  }
+}
+
+
