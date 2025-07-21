@@ -32,7 +32,7 @@ class CategorySelectionForm extends FormBase {
     ];
 
     $options_cat_citizen = $this->termAsOptions('citizen_category');
-    $options = ['undefined' => '1. Quien eres'];
+    $options = ['undefined' => 'Quien eres'];
     foreach ($options_cat_citizen as $term_id => $term_name) {
       $options[$term_id] = $term_name;
     }
@@ -49,8 +49,7 @@ class CategorySelectionForm extends FormBase {
       ],
     ];
 
-    $options = ['undefined' => '2. Qué te gustaría hacer'];
-    // $button = '<button class="hs_vocabulary21 btn btn-default form-button" type="submit" value="Consulta el portafolio de Servicios Institucional">Consulta el portafolio de Servicios Institucional</button>';
+    $options = ['undefined' => 'Qué te gustaría hacer'];
     $form['container']['right'] = [
       '#prefix' => '<div class="col-xs-12 col-sm-6">',
       '#suffix' => '</div>',
