@@ -4199,7 +4199,9 @@
 .page-adopcion-para-residentes-en-colombia,
 .page-fijacion-de-visitas
 .page-restitucion-internacional-y-regulacion-internacional-de-visitas,
-.page-restitucion-internacional-y-regulacion-internacional-de-visitas{
+.page-restitucion-internacional-y-regulacion-internacional-de-visitas,
+.page-portafolio-de-servicios-icbf-oferta,
+.page-autorizacion-venta-de-inmuebles-de-propiedad-de-los-ninos-ninas-y-adolescentes{
 
   #icbf-module-category-selection-form {
     margin-top: 30px;
@@ -4391,7 +4393,7 @@
 
 
 .page-portafolio-de-servicios-icbf-oferta{
-  view-filters {
+  .view-filters {
     margin-top: 2.5rem;
     width: 110%!important;
     float: left;
@@ -4436,8 +4438,8 @@
 
   #edit-submit-tramites {
     color: #fff;
-    background-color: #31b0d5!important;
-    border-color: #269abc!important;
+    background-color: #5bc0de!important;
+    border-color: #46b8da!important;
   }
 
 }
