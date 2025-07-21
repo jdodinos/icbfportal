@@ -2506,6 +2506,7 @@
 .page-cuales-son-los-procesos-existentes-para-determinar-la-custodia-de-un-menor-de-edad,
 .page-cuales-son-los-criterios-para-fijar-o-determinar-la-custodia-de-un-menor-de-edad {
 
+
     .js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-citizen-category.form-item-citizen-category.form-no-label:before {
         color: #000;
         font-size: 15px;
@@ -2563,6 +2564,21 @@
         padding: 0;
     }
 
+    #icbf-module-category-selection-form {
+        a.btn.btn-default.form-button {
+            font-family: var.$font-asap-regular;
+            color: #333;
+            background-color: #fff;
+            border-color: #ccc;
+
+            &:hover {
+                color: #333;
+                background-color: #e6e5e5;
+                border-color: #adadad;
+            }
+        }
+    }
+
     option {
         font-size: 14px;
         font-family: var.$font-asap-regular !important;
@@ -2570,6 +2586,7 @@
 
     a.btn.btn-default.form-button {
         width: 100%;
+
     }
 
     .az-text {
@@ -2632,8 +2649,13 @@
 
     .pager__item {
         .button {
+            color: #1996d0;
             font-family: var.$font-montserrat-regular;
             font-size: 14px;
+
+            &:hover {
+                color: #125e81;
+            }
         }
     }
 
@@ -2715,7 +2737,6 @@
         }
     }
 
-    /* Forzar tamaño para .bs-region--left */
     .bs-region--left {
         width: 100%;
     }
@@ -2723,14 +2744,14 @@
     @media (min-width: 576px) {
         .bs-region--left {
             width: 25% !important;
-            /* col-sm-3 */
+
         }
     }
 
     @media (min-width: 768px) {
         .bs-region--left {
             width: 25% !important;
-            /* col-md-3 */
+
         }
 
         select#edit-citizen-category {
@@ -2746,12 +2767,9 @@
         @media (min-width: 992px) {
             .bs-region--left {
                 width: 25% !important;
-                /* col-lg-3 */
-
             }
         }
 
-        /* Forzar tamaño para .bs-region--right */
         .bs-region--right {
             width: 100%;
         }
@@ -2759,21 +2777,21 @@
         @media (min-width: 576px) {
             .bs-region--right {
                 width: 75% !important;
-                /* col-sm-9 */
+
             }
         }
 
         @media (min-width: 768px) {
             .bs-region--right {
                 width: 75% !important;
-                /* col-md-9 */
+
             }
         }
 
         @media (min-width: 992px) {
             .bs-region--right {
                 width: 75% !important;
-                /* col-lg-9 */
+
             }
         }
 
@@ -2785,24 +2803,20 @@
 
         .az-row {
             max-width: 1100px;
-            /* Ajusta el valor si quieres más o menos ancho total */
             margin: 0 auto;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
         }
 
-        /* Imagen: reducir tamaño */
         .region-content .az-row .col-sm-5 img {
             width: 70%;
             height: auto;
             min-height: 200px;
-            /* Ajusta este valor según necesidad */
             display: block;
             margin: 0 auto;
         }
 
-        /* Texto: centrado vertical si hay suficiente espacio */
         .az-row .col-sm-7 {
             display: flex;
             align-items: flex-start;
