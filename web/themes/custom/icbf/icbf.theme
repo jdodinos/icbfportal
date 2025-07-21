@@ -372,6 +372,17 @@ function icbf_preprocess_block(&$variables) {
       }
     }
   }
+
+  if ($variables['plugin_id'] == 'webform_block') {
+    $webform = $variables['content']['#webform'];
+    if ($webform) {
+      $webform_url = $webform->toUrl()->toString();
+      $variables['label'] = [
+        '#markup' => '<a href="' . $webform_url . '">' . $variables['label'] . '</a>',
+      ];
+    }
+  }
+
 }
 
 /**
