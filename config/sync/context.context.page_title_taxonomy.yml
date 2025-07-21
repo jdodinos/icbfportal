@@ -27,7 +27,7 @@ conditions:
     negate: true
     uuid: 9eb92020-9e5c-427c-b778-e59277a73b5f
     context_mapping: {  }
-    pages: "/programa-adopciones\r\n/taxonomy/term/7439"
+    pages: "/programa-adopciones\r\n/taxonomy/term/7439\r\n/portafolio-de-servicios-icbf/oferta\r\n/taxonomy/term/7129"
 reactions:
   blocks:
     id: blocks
