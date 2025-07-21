@@ -2506,6 +2506,29 @@
 .page-cuales-son-los-procesos-existentes-para-determinar-la-custodia-de-un-menor-de-edad,
 .page-cuales-son-los-criterios-para-fijar-o-determinar-la-custodia-de-un-menor-de-edad {
 
+    .js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-citizen-category.form-item-citizen-category.form-no-label:before {
+        color: #000;
+        font-size: 15px;
+        content: "1";
+        display: block;
+        width: 2%;
+        position: relative;
+        top: 32px;
+        left: 15px;
+    }
+
+    .js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-procedure.form-item-procedure.form-no-label:before {
+        color: #000;
+        font-size: 15px;
+        content: "2";
+        display: block;
+        width: 2%;
+        position: relative;
+        top: 32px;
+        left: 15px;
+        font-weight: 700;
+    }
+
     div#edit-button {
         text-align: left;
     }
@@ -2513,12 +2536,14 @@
     #icbf-module-category-selection-form span {
         text-align: left;
         font-family: var.$font-asap-regular;
+        margin-top: 40px;
+        margin-bottom: 10px;
     }
 
     select#edit-citizen-category {
         height: 40px;
         border-radius: 150px;
-        padding-left: 24px;
+        padding-left: 35px;
         border: 1px solid #72bf44;
         font-family: var.$font-asap-regular;
         font-size: 14px;
@@ -2527,15 +2552,24 @@
     select#edit-procedure {
         height: 40px;
         border-radius: 150px;
-        padding-left: 24px;
+        padding-left: 35px;
         border: 1px solid #72bf44;
         font-family: var.$font-asap-regular;
         font-size: 14px;
     }
 
+    div#container-procedure {
+        width: 100%;
+        padding: 0;
+    }
+
     option {
         font-size: 14px;
         font-family: var.$font-asap-regular !important;
+    }
+
+    a.btn.btn-default.form-button {
+        width: 100%;
     }
 
     .az-text {
@@ -3936,11 +3970,11 @@
 
 
 /*---------------- /planeacion/plan-de-accion   (Segundo nivel)----------------*/
-.page-planeacion-plan-de-accion{
-    #block-icbf-content{
-        .content{
-            >.layout:first-child{
-                .block-views-blocktransparencia-019-sapi-block-3{
+.page-planeacion-plan-de-accion {
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
+                .block-views-blocktransparencia-019-sapi-block-3 {
                     .view-display-id-block_3 {
                         justify-items: center;
                         display: grid;
@@ -3959,7 +3993,7 @@
                             width: 100%;
                         }
 
-                        nav.pager{
+                        nav.pager {
                             grid-area: c;
                         }
                     }
@@ -3985,7 +4019,7 @@
                                 width: 100%;
                             }
 
-                            nav.pager{
+                            nav.pager {
                                 grid-area: c;
                             }
                         }
