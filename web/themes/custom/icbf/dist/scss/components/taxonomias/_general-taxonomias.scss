@@ -3984,30 +3984,56 @@
 
 
 /*---------------- /planeacion/plan-de-accion   (Segundo nivel)----------------*/
-.page-planeacion-plan-de-accion {
-    #block-icbf-content {
-        .content {
-            >.layout:first-child {
-                .block-views-blocktransparencia-019-sapi-block-3 {
+.page-planeacion-plan-de-accion{
+    #block-icbf-content{
+        .content{
+            >.layout:first-child{
+                .block-field-blocktaxonomy-termsecctionsfield-content {
+                    height: 0;
+                }
+                .block-views-blocktransparencia-019-sapi-block-3{
                     .view-display-id-block_3 {
                         justify-items: center;
                         display: grid;
                         grid-template-areas:
                             "a b"
                             "a c";
-                        grid-template-columns: 16.6666666667% 83.3333333333%;
+                        grid-template-columns: 25% 75%;
 
                         .view-filters {
                             grid-area: a;
                             width: 100%;
+                            margin-top: 0;
+
+                            .fieldset-legend {
+                                white-space: nowrap;
+                            }
                         }
 
                         .view-content {
                             grid-area: b;
                             width: 100%;
+
+                            h4{
+                                font-size: 1.2em;
+                                font-family: 'Asap-regular' !important;
+                                margin-bottom: 10px;
+                            }
+
+                            >div:first-child {
+                                margin-top: 4em;
+                            }
+
+                            >div {
+                                margin-top: 1.56em;
+                            }
+
+                            li {
+                                border: 1px solid #ddd !important;
+                            }
                         }
 
-                        nav.pager {
+                        nav.pager{
                             grid-area: c;
                         }
                     }
@@ -4033,7 +4059,7 @@
                                 width: 100%;
                             }
 
-                            nav.pager {
+                            nav.pager{
                                 grid-area: c;
                             }
                         }
@@ -4044,6 +4070,7 @@
                         .view-filters {
                             .form-radios {
                                 padding-top: 1em;
+                                margin-left: 0;
 
                                 input[type=checkbox],
                                 input[type=radio] {
