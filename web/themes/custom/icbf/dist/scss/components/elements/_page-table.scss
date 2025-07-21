@@ -167,9 +167,15 @@
 .page-id-1238,
 .page-cartelera-virtual-control-interno-disciplinario,
 .page-migrantes-jornadas-prerregistro,
+.page-migrantes-aprende-sobre-migracion,
+.page-migrantes-estrategia-icbf,
 .page-node-153025,
 .page-node-153016,
 .page-node-153022 {
+
+    h3 {
+        font-family: var.$font-asap-regular;
+    }
 
     .node--view-mode-full .field__label {
         font-family: var.$font-montserrat-regular;
