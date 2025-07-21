@@ -1,0 +1,52 @@
+uuid: 9c46bc53-0710-48ca-8f68-5fd018c386e0
+langcode: es
+status: true
+dependencies:
+  module:
+    - icbf_module
+    - system
+    - taxonomy
+label: 'Portafolio en Taxonomias'
+name: portafolio_taxonomy
+group: 'Micrositio portafolio'
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: b252bad5-6074-4f4c-9596-42b91fa2c04f
+    context_mapping: {  }
+    pages: "/portafolio-de-servicios-icbf\r\n/portafolio-de-servicios-icbf/*\r\n/taxonomy/term/6881"
+  'entity_bundle:taxonomy_term':
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 97530ace-4f2e-4976-8a2d-f49257ebc652
+    context_mapping:
+      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+    bundles:
+      procedure: procedure
+reactions:
+  blocks:
+    id: blocks
+    uuid: 9c8438f5-4739-4517-b74e-5046d24de74a
+    blocks:
+      a736e713-97e2-4281-9afd-6e0233955d89:
+        uuid: a736e713-97e2-4281-9afd-6e0233955d89
+        id: category_selection_block
+        label: 'Category selection Block'
+        provider: icbf_module
+        label_display: '0'
+        region: precontent
+        weight: '0'
+        custom_id: category_selection_block
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: portafolio_taxonomy
+        context_mapping: {  }
+        third_party_settings: {  }
+    include_default_blocks: 0
+    saved: false
+weight: 0

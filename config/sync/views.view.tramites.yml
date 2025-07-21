@@ -6474,12 +6474,14 @@ display:
         type: fields
         options: {  }
       defaults:
+        css_class: false
         use_ajax: false
         pager: false
         style: false
         row: false
         fields: false
         arguments: false
+      css_class: row
       use_ajax: true
       display_description: 'related infographs'
       display_extenders:
