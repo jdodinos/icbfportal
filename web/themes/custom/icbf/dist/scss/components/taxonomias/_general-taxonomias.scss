@@ -2504,8 +2504,31 @@
 .page-soy-menor-de-edad-puedo-tener-la-custodia-de-mi-hijo,
 .page-como-puedo-tener-la-custodia-definitiva-de-mi-hijoa,
 .page-cuales-son-los-procesos-existentes-para-determinar-la-custodia-de-un-menor-de-edad,
-.page-cuales-son-los-criterios-para-fijar-o-determinar-la-custodia-de-un-menor-de-edad
- {
+.page-cuales-son-los-criterios-para-fijar-o-determinar-la-custodia-de-un-menor-de-edad {
+
+
+    .js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-citizen-category.form-item-citizen-category.form-no-label:before {
+        color: #000;
+        font-size: 15px;
+        content: "1";
+        display: block;
+        width: 2%;
+        position: relative;
+        top: 32px;
+        left: 15px;
+    }
+
+    .js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-procedure.form-item-procedure.form-no-label:before {
+        color: #000;
+        font-size: 15px;
+        content: "2";
+        display: block;
+        width: 2%;
+        position: relative;
+        top: 32px;
+        left: 15px;
+        font-weight: 700;
+    }
 
     div#edit-button {
         text-align: left;
@@ -2514,12 +2537,14 @@
     #icbf-module-category-selection-form span {
         text-align: left;
         font-family: var.$font-asap-regular;
+        margin-top: 40px;
+        margin-bottom: 10px;
     }
 
     select#edit-citizen-category {
         height: 40px;
         border-radius: 150px;
-        padding-left: 24px;
+        padding-left: 35px;
         border: 1px solid #72bf44;
         font-family: var.$font-asap-regular;
         font-size: 14px;
@@ -2528,15 +2553,40 @@
     select#edit-procedure {
         height: 40px;
         border-radius: 150px;
-        padding-left: 24px;
+        padding-left: 35px;
         border: 1px solid #72bf44;
         font-family: var.$font-asap-regular;
         font-size: 14px;
     }
 
+    div#container-procedure {
+        width: 100%;
+        padding: 0;
+    }
+
+    #icbf-module-category-selection-form {
+        a.btn.btn-default.form-button {
+            font-family: var.$font-asap-regular;
+            color: #333;
+            background-color: #fff;
+            border-color: #ccc;
+
+            &:hover {
+                color: #333;
+                background-color: #e6e5e5;
+                border-color: #adadad;
+            }
+        }
+    }
+
     option {
         font-size: 14px;
         font-family: var.$font-asap-regular !important;
+    }
+
+    a.btn.btn-default.form-button {
+        width: 100%;
+
     }
 
     .az-text {
@@ -2566,8 +2616,7 @@
 .page-soy-menor-de-edad-puedo-tener-la-custodia-de-mi-hijo,
 .page-como-puedo-tener-la-custodia-definitiva-de-mi-hijoa,
 .page-cuales-son-los-procesos-existentes-para-determinar-la-custodia-de-un-menor-de-edad,
-.page-cuales-son-los-criterios-para-fijar-o-determinar-la-custodia-de-un-menor-de-edad
-{
+.page-cuales-son-los-criterios-para-fijar-o-determinar-la-custodia-de-un-menor-de-edad {
 
     .block-field-blocknodeservices-faqfield-youtube h2,
     .block-field-blocknodeservices-faqfield-multimedia h2 {
@@ -2590,6 +2639,8 @@
 
     .webform-submission-webform-67009-form {
         .btn {
+            padding: 6px 12px;
+            font-family: var.$font-montserrat-regular;
             color: #fff;
             background-color: #337ab7;
             border-color: #2e6da4;
@@ -2598,9 +2649,36 @@
 
     .pager__item {
         .button {
+            color: #1996d0;
+            font-family: var.$font-montserrat-regular;
+            font-size: 14px;
+
+            &:hover {
+                color: #125e81;
+            }
+        }
+    }
+
+    .js-webform-states-hidden {
+        label {
+            color: var.$font_color;
+            text-decoration: none;
             font-family: var.$font-montserrat-regular;
             font-size: 14px;
         }
+    }
+
+    .form-radios label {
+        text-decoration: none;
+        color: var.$font_color;
+        font-family: var.$font-montserrat-regular;
+        font-weight: 400;
+    }
+
+    .form-radios .js-form-item.form-item.js-form-type-radio.form-type-radio:hover {
+        text-decoration: none;
+        color: var.$font_color;
+        cursor: pointer;
     }
 
     .word-msintro p {
@@ -2608,9 +2686,6 @@
         font-size: 14px;
     }
 
-    .fieldset-legend {
-        font-family: var.$font-asap-regular;
-    }
 
     .field--name-field-faq-code {
 
@@ -2662,7 +2737,6 @@
         }
     }
 
-    /* Forzar tamaño para .bs-region--left */
     .bs-region--left {
         width: 100%;
     }
@@ -2670,14 +2744,14 @@
     @media (min-width: 576px) {
         .bs-region--left {
             width: 25% !important;
-            /* col-sm-3 */
+
         }
     }
 
     @media (min-width: 768px) {
         .bs-region--left {
             width: 25% !important;
-            /* col-md-3 */
+
         }
 
         select#edit-citizen-category {
@@ -2693,12 +2767,9 @@
         @media (min-width: 992px) {
             .bs-region--left {
                 width: 25% !important;
-                /* col-lg-3 */
-
             }
         }
 
-        /* Forzar tamaño para .bs-region--right */
         .bs-region--right {
             width: 100%;
         }
@@ -2706,21 +2777,21 @@
         @media (min-width: 576px) {
             .bs-region--right {
                 width: 75% !important;
-                /* col-sm-9 */
+
             }
         }
 
         @media (min-width: 768px) {
             .bs-region--right {
                 width: 75% !important;
-                /* col-md-9 */
+
             }
         }
 
         @media (min-width: 992px) {
             .bs-region--right {
                 width: 75% !important;
-                /* col-lg-9 */
+
             }
         }
 
@@ -2732,24 +2803,20 @@
 
         .az-row {
             max-width: 1100px;
-            /* Ajusta el valor si quieres más o menos ancho total */
             margin: 0 auto;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
         }
 
-        /* Imagen: reducir tamaño */
         .region-content .az-row .col-sm-5 img {
             width: 70%;
             height: auto;
             min-height: 200px;
-            /* Ajusta este valor según necesidad */
             display: block;
             margin: 0 auto;
         }
 
-        /* Texto: centrado vertical si hay suficiente espacio */
         .az-row .col-sm-7 {
             display: flex;
             align-items: flex-start;
@@ -3234,23 +3301,24 @@
 .page-nutricion-ensin-encuesta-nacional-de-situacion-nutricional,
 .page-nutricion-tabla-de-composicion-de-alimentos-colombianos,
 .page-nutricion-hoja-de-balance-de-alimentos-colombianos,
-.page-nutricion-educacion-alimentaria-y-nutricional
-{
-    #block-icbf-content{
-        .content{
-            >.layout:first-child{
+.page-nutricion-educacion-alimentaria-y-nutricional {
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
                 display: grid;
                 grid-template-areas: "a b";
                 grid-template-columns: 20% 80%;
-                >div:first-child{
+
+                >div:first-child {
                     grid-area: a;
                 }
-                >div:nth-child(2){
+
+                >div:nth-child(2) {
                     grid-area: b;
                 }
 
-                .tb-megamenu{
-                    ul{
+                .tb-megamenu {
+                    ul {
                         li {
                             padding: 10px;
                             background-color: #fcfcfc;
@@ -3264,55 +3332,61 @@
                                 color: #337ab7;
                                 text-decoration: none;
                             }
-                            a:hover{
+
+                            a:hover {
                                 color: #337ab7;
                                 text-decoration: underline;
                             }
                         }
-                        li:last-child{
+
+                        li:last-child {
                             border: 1px solid #3cb371;
                         }
                     }
                 }
             }
-            @media (max-width: 768px){
-                >.layout:first-child{
+
+            @media (max-width: 768px) {
+                >.layout:first-child {
                     display: flex;
                     flex-wrap: wrap;
 
-                    >div:first-child{
+                    >div:first-child {
                         width: 100%;
                     }
-                    >div:nth-child(2){
+
+                    >div:nth-child(2) {
                         width: 100%;
                         padding: 1em;
                     }
                 }
             }
 
-            >.layout:nth-child(2){
+            >.layout:nth-child(2) {
                 display: inline-block;
             }
         }
     }
 }
 
-.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional{
-    #block-icbf-content{
-        .content{
-            >.layout:nth-child(2){
+.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional {
+    #block-icbf-content {
+        .content {
+            >.layout:nth-child(2) {
                 display: grid;
                 grid-template-areas: "a b";
                 grid-template-columns: 20% 80%;
-                >div:first-child{
+
+                >div:first-child {
                     grid-area: a;
                 }
-                >div:nth-child(2){
+
+                >div:nth-child(2) {
                     grid-area: b;
                 }
 
-                .tb-megamenu{
-                    ul{
+                .tb-megamenu {
+                    ul {
                         li {
                             padding: 10px;
                             background-color: #fcfcfc;
@@ -3326,26 +3400,30 @@
                                 color: #337ab7;
                                 text-decoration: none;
                             }
-                            a:hover{
+
+                            a:hover {
                                 color: #337ab7;
                                 text-decoration: underline;
                             }
                         }
-                        li:last-child{
+
+                        li:last-child {
                             border: 1px solid #3cb371;
                         }
                     }
                 }
             }
-            @media (max-width: 768px){
-                >.layout:nth-child(2){
+
+            @media (max-width: 768px) {
+                >.layout:nth-child(2) {
                     display: flex;
                     flex-wrap: wrap;
 
-                    >div:first-child{
+                    >div:first-child {
                         width: 100%;
                     }
-                    >div:nth-child(2){
+
+                    >div:nth-child(2) {
                         width: 100%;
                         padding: 1em;
                     }
@@ -3357,13 +3435,13 @@
 
 //resaltar item de cada pagina
 //1
-.page-nutricion-bienestarina-mas-y-otros-alimentos-de-alto-valor-nutricional{
-    #block-icbf-content{
-        .content{
-            >.layout:first-child{
-                .tb-megamenu{
-                    ul{
-                        li:first-child{
+.page-nutricion-bienestarina-mas-y-otros-alimentos-de-alto-valor-nutricional {
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
+                .tb-megamenu {
+                    ul {
+                        li:first-child {
                             border: 1px solid #3cb371;
                         }
                     }
@@ -3374,13 +3452,13 @@
 }
 
 //2
-.page-nutricion-estrategia-de-atencion-y-prevencion-de-la-desnutricion-infantil{
-    #block-icbf-content{
-        .content{
-            >.layout:first-child{
-                .tb-megamenu{
-                    ul{
-                        li:nth-child(2){
+.page-nutricion-estrategia-de-atencion-y-prevencion-de-la-desnutricion-infantil {
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
+                .tb-megamenu {
+                    ul {
+                        li:nth-child(2) {
                             border: 1px solid #3cb371;
                         }
                     }
@@ -3391,13 +3469,13 @@
 }
 
 //3
-.page-nutricion-ensin-encuesta-nacional-de-situacion-nutricional{
-    #block-icbf-content{
-        .content{
-            >.layout:first-child{
-                .tb-megamenu{
-                    ul{
-                        li:nth-child(3){
+.page-nutricion-ensin-encuesta-nacional-de-situacion-nutricional {
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
+                .tb-megamenu {
+                    ul {
+                        li:nth-child(3) {
                             border: 1px solid #3cb371;
                         }
                     }
@@ -3408,13 +3486,13 @@
 }
 
 //4
-.page-nutricion-tabla-de-composicion-de-alimentos-colombianos{
-    #block-icbf-content{
-        .content{
-            >.layout:first-child{
-                .tb-megamenu{
-                    ul{
-                        li:nth-child(4){
+.page-nutricion-tabla-de-composicion-de-alimentos-colombianos {
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
+                .tb-megamenu {
+                    ul {
+                        li:nth-child(4) {
                             border: 1px solid #3cb371;
                         }
                     }
@@ -3425,13 +3503,13 @@
 }
 
 //5
-.page-nutricion-hoja-de-balance-de-alimentos-colombianos{
-    #block-icbf-content{
-        .content{
-            >.layout:first-child{
-                .tb-megamenu{
-                    ul{
-                        li:nth-child(5){
+.page-nutricion-hoja-de-balance-de-alimentos-colombianos {
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
+                .tb-megamenu {
+                    ul {
+                        li:nth-child(5) {
                             border: 1px solid #3cb371;
                         }
                     }
@@ -3442,13 +3520,13 @@
 }
 
 //6
-.page-nutricion-educacion-alimentaria-y-nutricional{
-    #block-icbf-content{
-        .content{
-            >.layout:first-child{
-                .tb-megamenu{
-                    ul{
-                        li:nth-child(6){
+.page-nutricion-educacion-alimentaria-y-nutricional {
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
+                .tb-megamenu {
+                    ul {
+                        li:nth-child(6) {
                             border: 1px solid #3cb371;
                         }
                     }
@@ -3459,13 +3537,13 @@
 }
 
 //7
-.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional{
-    #block-icbf-content{
-        .content{
-            >.layout:nth-child(2){
-                .tb-megamenu{
-                    ul{
-                        li:nth-child(7){
+.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional {
+    #block-icbf-content {
+        .content {
+            >.layout:nth-child(2) {
+                .tb-megamenu {
+                    ul {
+                        li:nth-child(7) {
                             border: 1px solid #3cb371;
                         }
                     }
@@ -3480,35 +3558,36 @@
 .page-nutricion-ensin-encuesta-nacional-de-situacion-nutricional,
 .page-nutricion-hoja-de-balance-de-alimentos-colombianos,
 .page-nutricion-educacion-alimentaria-y-nutricional,
-.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional
-{
-    #block-icbf-content{
-        .content{
-            >.layout:first-child{
-                >div:nth-child(2){
-                    .az-ctnr{
+.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional {
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
+                >div:nth-child(2) {
+                    .az-ctnr {
                         max-width: 100%;
                     }
                 }
             }
 
-            .panel-title{
-                a{
+            .panel-title {
+                a {
                     color: #1996d0;
                     text-decoration: none !important;
                 }
+
                 a:hover {
                     color: #125e81;
                     text-decoration: underline !important;
                 }
             }
-            .panel-title::before{
+
+            .panel-title::before {
                 content: '';
                 display: flex;
                 padding-right: 0;
             }
 
-            .panel-body{
+            .panel-body {
                 ul {
                     padding-left: 40px;
                 }
@@ -3517,11 +3596,11 @@
     }
 }
 
-.page-nutricion-ensin-encuesta-nacional-de-situacion-nutricional{
-    #block-icbf-content{
-        .content{
-            >.layout:first-child{
-                >div:nth-child(2){
+.page-nutricion-ensin-encuesta-nacional-de-situacion-nutricional {
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
+                >div:nth-child(2) {
                     @media (max-width: 576px) {
                         .col-sm-6 {
                             flex: 0 0 auto;
@@ -3536,20 +3615,19 @@
 
 .page-nutricion-estrategia-de-atencion-y-prevencion-de-la-desnutricion-infantil,
 .page-nutricion-tabla-de-composicion-de-alimentos-colombianos,
-.page-nutricion-hoja-de-balance-de-alimentos-colombianos
-{
-        #block-icbf-content{
-        .content{
-            >.layout:first-child{
-                >div:nth-child(2){
-                    .views-field-nothing{
-                        >.field-content{
-                            >div{
+.page-nutricion-hoja-de-balance-de-alimentos-colombianos {
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
+                >div:nth-child(2) {
+                    .views-field-nothing {
+                        >.field-content {
+                            >div {
                                 border-top: 1px solid #7c7cfc;
                                 width: 100%;
                             }
 
-                            .bar-line{
+                            .bar-line {
                                 display: none !important;
                             }
                         }
@@ -3560,27 +3638,29 @@
     }
 }
 
-.page-nutricion-educacion-alimentaria-y-nutricional{
-    #block-icbf-content{
-        .content{
-            >.layout:first-child{
-                .block-views-blockarticulos-secciones-block-missinfo3{
-                    .views-field-nothing{
-                        >.field-content{
-                            >div{
+.page-nutricion-educacion-alimentaria-y-nutricional {
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
+                .block-views-blockarticulos-secciones-block-missinfo3 {
+                    .views-field-nothing {
+                        >.field-content {
+                            >div {
                                 border-top: 1px solid #7c7cfc;
                                 width: 100%;
                             }
                         }
-                        .bar-line{
+
+                        .bar-line {
                             display: none !important;
                         }
                     }
                 }
             }
 
-            .block-views-blockdocuments-block-33, .block-views-blockdocuments-block-34{
-                .views-row{
+            .block-views-blockdocuments-block-33,
+            .block-views-blockdocuments-block-34 {
+                .views-row {
                     margin: 1em;
 
                     .word-gral {
@@ -3595,17 +3675,18 @@
 
 
 
-.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional{
-    #block-icbf-content{
-        .content{
-            >.layout:nth-child(2){
-                >div:nth-child(2){
-                    .views-field-nothing{
-                        >.field-content{
-                            >div{
+.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional {
+    #block-icbf-content {
+        .content {
+            >.layout:nth-child(2) {
+                >div:nth-child(2) {
+                    .views-field-nothing {
+                        >.field-content {
+                            >div {
                                 border-top: 1px solid #7c7cfc;
                                 width: 100%;
                             }
+
                             /*
                             >div {
                                 display: grid;
@@ -3650,7 +3731,7 @@
                                 }
                             }*/
 
-                            .bar-line{
+                            .bar-line {
                                 display: none !important;
                             }
                         }
@@ -3660,6 +3741,7 @@
         }
     }
 }
+
 /*-----------------------------------------------------------------*/
 
 
@@ -3669,13 +3751,13 @@
 ******RENDICIÓN DE CUENTAS (Segundo nivel)******
 ************************************************
 */
-.page-mesas-publicas-region{
-    #block-page-title-block{
+.page-mesas-publicas-region {
+    #block-page-title-block {
         display: none;
     }
 
-    #block-icbf-content{
-        .block-views-blockcalendario-rendici-n-block-1{
+    #block-icbf-content {
+        .block-views-blockcalendario-rendici-n-block-1 {
             a {
                 font-family: 'Montserrat', 'sans-serif';
                 font-weight: 500;
@@ -3691,8 +3773,8 @@
             padding: 0 1em;
         }
 
-        .block-views-blockaccountability-sapi-block-3{
-            .view-display-id-block_3{
+        .block-views-blockaccountability-sapi-block-3 {
+            .view-display-id-block_3 {
                 justify-items: center;
                 display: grid;
                 grid-template-areas:
@@ -3714,14 +3796,15 @@
                 .view-content {
                     grid-area: c;
                     width: 100%;
-                    .table{
+
+                    .table {
                         width: 100%;
                     }
                 }
             }
 
-            @media (max-width: 768px){
-                .view-display-id-block_3{
+            @media (max-width: 768px) {
+                .view-display-id-block_3 {
                     justify-items: center;
                     padding: 1em;
                     display: grid;
@@ -3745,7 +3828,8 @@
                     .view-content {
                         grid-area: c;
                         width: 100%;
-                        .table{
+
+                        .table {
                             width: 100%;
                         }
                     }
@@ -3753,17 +3837,19 @@
             }
 
             //filtros
-            .view-display-id-block_3{
-                .view-filters{
+            .view-display-id-block_3 {
+                .view-filters {
+
                     //titulo filtro
                     .fieldset-legend {
                         font-size: 1.4em;
                     }
 
-                    .form-radios{
+                    .form-radios {
                         padding-top: 1em;
 
-                        input[type=checkbox], input[type=radio] {
+                        input[type=checkbox],
+                        input[type=radio] {
                             appearance: none;
                             width: 13px;
                             height: 13px;
@@ -3774,11 +3860,14 @@
 
                         /* Cuando se selecciona el check*/
                         /*Estilos para el icono interno del check*/
-                        input[type=checkbox]:checked, input[type=radio]:checked {
+                        input[type=checkbox]:checked,
+                        input[type=radio]:checked {
                             background-color: #1996d0;
                             border-color: #1996d0;
                         }
-                        input[type=checkbox]::after, input[type=radio]::after {
+
+                        input[type=checkbox]::after,
+                        input[type=radio]::after {
                             content: '✔';
                             color: white;
                             width: 100%;
@@ -3804,37 +3893,41 @@
                     }
                 }
 
-                nav.pager{
-                    .page-link{
+                nav.pager {
+                    .page-link {
                         font-size: 11px;
                     }
-                    .page-item{
-                        .page-link{
+
+                    .page-item {
+                        .page-link {
                             width: 100%;
                             border-radius: 0%;
                         }
 
-                        &.disabled{
-                            span{
+                        &.disabled {
+                            span {
                                 display: none;
                                 height: initial;
                                 line-height: 20px;
                             }
                         }
-                        a{
+
+                        a {
                             text-transform: lowercase;
                             white-space: nowrap;
-                            font-size: 14px;/*de la pagina del icbf*/
+                            font-size: 14px;
+                            /*de la pagina del icbf*/
                         }
                     }
 
-                    .page-item:first-child{
-                        .page-link{
+                    .page-item:first-child {
+                        .page-link {
                             border-radius: 5px 0px 0px 5px !important;
                         }
                     }
-                    .page-item:last-child{
-                        .page-link{
+
+                    .page-item:last-child {
+                        .page-link {
                             border-radius: 0px 5px 5px 0px !important;
                         }
                     }
@@ -3844,6 +3937,7 @@
         }
     }
 }
+
 /*-----------------------------------------------------------------*/
 
 
@@ -3853,28 +3947,29 @@
 ******OBSERVATORIO DE BIENESTAR DE LA NINEZ (Segundo nivel)******
 *****************************************************************
 */
-.page-programas-y-estrategias-archivo-historico-observatorio-del-bienestar-de-la-ninez-infografias{
-    #block-page-title-block{
+.page-programas-y-estrategias-archivo-historico-observatorio-del-bienestar-de-la-ninez-infografias {
+    #block-page-title-block {
         display: none;
     }
 
-    #block-icbf-content{
-        .content{
-            h1{
+    #block-icbf-content {
+        .content {
+            h1 {
                 font-size: 1.7em;
             }
 
-            table{
+            table {
                 width: 100%;
 
-                tbody{
-                    h2{
+                tbody {
+                    h2 {
                         font-size: 1.14em;
                     }
 
                     tr:nth-child(odd) {
                         background-color: #f9f9f9;
                     }
+
                     tr:hover {
                         background-color: #f5f5f5;
                     }
@@ -3888,6 +3983,160 @@
 
 
 
+/*---------------- /planeacion/plan-de-accion   (Segundo nivel)----------------*/
+.page-planeacion-plan-de-accion {
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
+                .block-views-blocktransparencia-019-sapi-block-3 {
+                    .view-display-id-block_3 {
+                        justify-items: center;
+                        display: grid;
+                        grid-template-areas:
+                            "a b"
+                            "a c";
+                        grid-template-columns: 16.6666666667% 83.3333333333%;
+
+                        .view-filters {
+                            grid-area: a;
+                            width: 100%;
+                        }
+
+                        .view-content {
+                            grid-area: b;
+                            width: 100%;
+                        }
+
+                        nav.pager {
+                            grid-area: c;
+                        }
+                    }
+
+                    @media (max-width: 768px) {
+                        .view-display-id-block_3 {
+                            justify-items: center;
+                            padding: 1em;
+                            display: grid;
+                            grid-template-areas:
+                                "a"
+                                "b"
+                                "c";
+                            grid-template-columns: 100%;
+
+                            .view-filters {
+                                grid-area: a;
+                                width: 100%;
+                            }
+
+                            .view-content {
+                                grid-area: b;
+                                width: 100%;
+                            }
+
+                            nav.pager {
+                                grid-area: c;
+                            }
+                        }
+                    }
+
+                    //filtros
+                    .view-display-id-block_3 {
+                        .view-filters {
+                            .form-radios {
+                                padding-top: 1em;
+
+                                input[type=checkbox],
+                                input[type=radio] {
+                                    appearance: none;
+                                    width: 13px;
+                                    height: 13px;
+                                    border: 1px solid #555;
+                                    border-radius: 3px;
+                                    margin: 0 4px 0 0 !important;
+                                }
+
+                                /* Cuando se selecciona el check*/
+                                /*Estilos para el icono interno del check*/
+                                input[type=checkbox]:checked,
+                                input[type=radio]:checked {
+                                    background-color: #1996d0;
+                                    border-color: #1996d0;
+                                }
+
+                                input[type=checkbox]::after,
+                                input[type=radio]::after {
+                                    content: '✔';
+                                    color: white;
+                                    width: 100%;
+                                    height: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                }
+
+                                //color de letras
+                                label {
+                                    white-space: nowrap;
+                                    color: #1996d0;
+                                    text-decoration: none !important;
+                                    font-size: 14px;
+                                }
+
+                                label:hover {
+                                    color: #125e81;
+                                    text-decoration: underline !important;
+                                }
+
+                            }
+                        }
+
+                        nav.pager {
+                            .page-link {
+                                font-size: 11px;
+                            }
+
+                            .page-item {
+                                .page-link {
+                                    width: 100%;
+                                    border-radius: 0%;
+                                }
+
+                                /*
+                                &.disabled {
+                                    span {
+                                        display: none;
+                                        height: initial;
+                                        line-height: 20px;
+                                    }
+                                }*/
+
+                                a {
+                                    text-transform: lowercase;
+                                    white-space: nowrap;
+                                    font-size: 14px;
+                                    /*de la pagina del icbf*/
+                                }
+                            }
+
+                            .page-item:first-child {
+                                .page-link {
+                                    border-radius: 5px 0px 0px 5px !important;
+                                }
+                            }
+
+                            .page-item:last-child {
+                                .page-link {
+                                    border-radius: 0px 5px 5px 0px !important;
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 
@@ -3898,6 +4147,7 @@
         font-family: var.$font-asap-regular;
     }
 }
+
 
 .page-caracterizacion-cuidadanos-peticionarios{
   h3{

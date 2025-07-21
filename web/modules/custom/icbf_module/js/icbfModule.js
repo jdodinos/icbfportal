@@ -13,7 +13,7 @@
             $selectProcedure.empty();
             $selectProcedure.append($('<option>', {
               value: '',
-              text: '2. Qué te gustaría hacer'
+              text: 'Qué te gustaría hacer'
             }));
 
             response.forEach(function (term) {
