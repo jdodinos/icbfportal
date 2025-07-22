@@ -180,3 +180,45 @@
      }
 
  }
+
+
+ .page-id-6662 {
+
+     .slick-dotted.slick-slider .slick-dots li {
+         width: 9px;
+         height: 9px;
+         padding: 0;
+         margin: 0 3px;
+     }
+
+     .slick-dotted.slick-slider .slick-dots li button {
+         display: inline-block;
+         -ms-transform-origin: 50% 100%;
+         transform-origin: 50% 100%;
+         transition: all .3s;
+         border: 1px solid #666;
+         background: #666666;
+         transform-origin: 50% 100%;
+         transition: all .3s;
+         padding: 0;
+     }
+
+     .slick-dotted.slick-slider .slick-dots li.slick-active button {
+         background: #74bc4d !important;
+         border: 2px solid #3cb371;
+         transform: scale(1.8, 1.8);
+         padding: 0;
+     }
+
+     button.slick-prev.slick-arrow {
+         display: none !important;
+     }
+
+     button.slick-next.slick-arrow {
+         display: none !important;
+     }
+
+     ul.slick-dots {
+         font-size: 0;
+     }
+ }

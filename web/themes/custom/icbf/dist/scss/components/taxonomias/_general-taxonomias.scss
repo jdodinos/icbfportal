@@ -3939,11 +3939,6 @@
     }
 }
 
-/*-----------------------------------------------------------------*/
-
-
-
-/*---------------- /planeacion/plan-de-accion   (Segundo nivel)----------------*/
 .page-planeacion-plan-de-accion {
     #block-icbf-content {
         .content {
@@ -4422,7 +4417,8 @@
 }
 
 
-.page-id-6713, .page-id-6714  {
+.page-id-6713,
+.page-id-6714 {
     .embed-containermapa1 {
         opacity: 0;
     }
@@ -4441,5 +4437,97 @@
         list-style: none;
         margin-bottom: .5em;
         padding-left: 1.5em;
+    }
+}
+
+.page-id-6189 {
+    h1 {
+        font-family: 'Asap-regular';
+        font-size: 23.8px;
+    }
+
+    h2 {
+        font-family: 'Asap-Regular';
+    }
+}
+
+.page-id-7898 {
+    img.img-fluid.image-style-medium {
+        height: 132px;
+    }
+
+    .id-1519.rdp-contain {
+        width: 95%;
+    }
+
+    .wcenter.id-1519 h2 {
+        font-size: 22px !important;
+    }
+}
+
+.page-id-8175 {
+    h2 {
+        font-family: "Asap-regular";
+        font-size: 19.6px;
+    }
+
+    table.MsoTableGrid.cke_show_border {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+.page-id-8178 {
+    h2 {
+        font-family: "Asap-regular";
+    }
+
+    .az-element.az-row.row.az-row--sm.az-row--equal-height {
+        .az-element.az-ctnr.az-column.col-sm-2 {
+            width: 13%;
+            margin: auto;
+        }
+    }
+}
+
+.page-id-1276 {
+    .view-id-articulos_secciones {
+        .col-sm-4.col-sx-12 {
+            width: 100%;
+        }
+
+        .views-field.views-field-fieldset-1 {
+            position: relative;
+            width: 30%;
+
+            span.field-content {
+                font-family: "Montserrat-regular";
+                font-weight: 600;
+                color: #6b6b6b;
+            }
+        }
+
+        .views-field.views-field-fieldset-2 {
+            position: relative;
+            width: 70%;
+            left: 30%;
+            margin-top: -2.5rem;
+        }
+
+        .views-field.views-field-fieldset {
+            padding: 2rem;
+            margin: 1rem 0;
+        }
+
+    }
+
+    .panel-title:before {
+        display: none !important;
+    }
+
+    .view.view-articulos-secciones {
+        border-top: 1px solid #8095f7;
+        margin-top: 3rem;
     }
 }
