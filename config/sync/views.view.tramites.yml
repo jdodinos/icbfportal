@@ -27,6 +27,7 @@ dependencies:
     - views_bootstrap
     - views_field_view
     - views_infinite_scroll
+    - views_natural_sort
 id: tramites
 label: 'Tramites (Taxonomía - Trámites SAPI)'
 module: views
@@ -6048,6 +6049,22 @@ display:
         type: none
         options:
           offset: 0
+      sorts:
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: natural
+          order: ASC
+          expose:
+            label: Nombre
+            field_identifier: name
+          exposed: true
       arguments:
         field_category_citizen_target_id:
           id: field_category_citizen_target_id
@@ -6273,14 +6290,17 @@ display:
         options: {  }
       defaults:
         title: false
+        css_class: false
         use_ajax: false
         pager: false
         style: false
         row: false
         fields: false
+        sorts: false
         arguments: false
         filters: false
         filter_groups: false
+      css_class: row
       use_ajax: true
       display_description: 'target definitions'
       display_extenders:
@@ -6293,6 +6313,8 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
       tags:
         - 'config:field.storage.taxonomy_term.field_icon'
         - 'config:field.storage.taxonomy_term.field_link_more_info'
