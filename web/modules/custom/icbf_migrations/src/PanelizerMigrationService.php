@@ -656,7 +656,8 @@ class PanelizerMigrationService {
         break;
 
       case 'transparencia_019':
-        if ($display_id == 'block_3') {
+        $displayes = ['block_3', 'block_paac', 'block_28'];
+        if (in_array($display_id, $displayes)) {
           $view_id = 'transparencia_019_sapi';
         }
         break;
