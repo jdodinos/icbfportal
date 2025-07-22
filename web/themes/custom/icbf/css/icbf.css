@@ -11537,12 +11537,6 @@ a.tooltipid span {
   padding-left: 0
 }
 
-ul.m1 li {
-  background: url(/sites/all/themes/icbf/elements/Cajas/images/green-list-arrow.png) no-repeat;
-  list-style: none;
-  margin-bottom: .5em;
-  padding-left: 1.5em
-}
 
 ul.m2 li {
   background: url(/sites/all/themes/icbf/elements/Cajas/images/blue-list-arrow.png) no-repeat;
