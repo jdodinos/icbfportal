@@ -2515,7 +2515,7 @@
 .page-restitucion-internacional-y-regulacion-internacional-de-visitas,
 .page-restitucion-internacional-y-regulacion-internacional-de-visitas,
 .page-portafolio-de-servicios-icbf-oferta,
-.page-autorizacion-venta-de-inmuebles-de-propiedad-de-los-ninos-ninas-y-adolescentes{
+.page-autorizacion-venta-de-inmuebles-de-propiedad-de-los-ninos-ninas-y-adolescentes {
 
 
     .js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-citizen-category.form-item-citizen-category.form-no-label:before {
@@ -2627,8 +2627,7 @@
 .page-soy-menor-de-edad-puedo-tener-la-custodia-de-mi-hijo,
 .page-como-puedo-tener-la-custodia-definitiva-de-mi-hijoa,
 .page-cuales-son-los-procesos-existentes-para-determinar-la-custodia-de-un-menor-de-edad,
-.page-cuales-son-los-criterios-para-fijar-o-determinar-la-custodia-de-un-menor-de-edadF
-{
+.page-cuales-son-los-criterios-para-fijar-o-determinar-la-custodia-de-un-menor-de-edadF {
 
     .block-field-blocknodeservices-faqfield-youtube h2,
     .block-field-blocknodeservices-faqfield-multimedia h2 {
@@ -3094,7 +3093,7 @@
 
     /* Título h2 con ícono */
     .bs-region--right h2 {
-       font-size: 1.2em;
+        font-size: 1.2em;
         margin-top: 0;
         margin-bottom: 10px;
         padding-left: 16px;
@@ -3178,6 +3177,7 @@
             width: 100%;
         }
     }
+
     .local-staff-list:before {
         color: #0b8763;
         content: "\f105";
@@ -3200,49 +3200,52 @@
     }
 
 
-  /* Dirección */
-  .block-field-blocknodesede-localfield-addres-local-offices h2::before {
-    font-family: "FontAwesome";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    color: #1a8b3c;
-    position: absolute;
-    left: 0;
-    top: 2px;
-    content: "\f041"!important; /* map-marker */
-  }
+    /* Dirección */
+    .block-field-blocknodesede-localfield-addres-local-offices h2::before {
+        font-family: "FontAwesome";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        color: #1a8b3c;
+        position: absolute;
+        left: 0;
+        top: 2px;
+        content: "\f041" !important;
+        /* map-marker */
+    }
 
-  /* Teléfono */
-  .block-field-blocknodesede-localfield-phone h2::before {
-    font-family: "FontAwesome";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    color: #1a8b3c;
-    position: absolute;
-    left: 0;
-    top: 2px;
-    content: "\f095"!important; /* phone */
-  }
+    /* Teléfono */
+    .block-field-blocknodesede-localfield-phone h2::before {
+        font-family: "FontAwesome";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        color: #1a8b3c;
+        position: absolute;
+        left: 0;
+        top: 2px;
+        content: "\f095" !important;
+        /* phone */
+    }
 
-  /* Horario */
-  .block-field-blocknodesede-localfield-working-hours h2::before {
-    font-family: "FontAwesome";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    color: #1a8b3c;
-    position: absolute;
-    left: 0;
-    top: 2px;
-    content: "\f017"!important; /* clock-o */
-  }
+    /* Horario */
+    .block-field-blocknodesede-localfield-working-hours h2::before {
+        font-family: "FontAwesome";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        color: #1a8b3c;
+        position: absolute;
+        left: 0;
+        top: 2px;
+        content: "\f017" !important;
+        /* clock-o */
+    }
 
 
 
 
-  .node--view-mode-full .field__item {
+    .node--view-mode-full .field__item {
         font-size: 14px;
         font-family: 'Montserrat', sans-serif;
         color: #555;
@@ -3579,6 +3582,7 @@
                     text-decoration: underline !important;
                 }
             }
+
             /*
             .panel-title::before {
                 content: '';
@@ -3613,8 +3617,7 @@
 }
 
 .page-nutricion-estrategia-de-atencion-y-prevencion-de-la-desnutricion-infantil,
-.page-nutricion-tabla-de-composicion-de-alimentos-colombianos
-{
+.page-nutricion-tabla-de-composicion-de-alimentos-colombianos {
     #block-icbf-content {
         .content {
             >.layout:first-child {
@@ -3638,7 +3641,7 @@
 }
 
 .page-nutricion-hoja-de-balance-de-alimentos-colombianos,
-.page-nutricion-educacion-alimentaria-y-nutricional{
+.page-nutricion-educacion-alimentaria-y-nutricional {
     #block-icbf-content {
         .content {
             >.layout:first-child {
@@ -3941,14 +3944,15 @@
 
 
 /*---------------- /planeacion/plan-de-accion   (Segundo nivel)----------------*/
-.page-planeacion-plan-de-accion{
-    #block-icbf-content{
-        .content{
-            >.layout:first-child{
+.page-planeacion-plan-de-accion {
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
                 .block-field-blocktaxonomy-termsecctionsfield-content {
                     height: 0;
                 }
-                .block-views-blocktransparencia-019-sapi-block-3{
+
+                .block-views-blocktransparencia-019-sapi-block-3 {
                     .view-display-id-block_3 {
                         justify-items: center;
                         display: grid;
@@ -3971,7 +3975,7 @@
                             grid-area: b;
                             width: 100%;
 
-                            h4{
+                            h4 {
                                 font-size: 1.2em;
                                 font-family: 'Asap-regular' !important;
                                 margin-bottom: 10px;
@@ -3990,7 +3994,7 @@
                             }
                         }
 
-                        nav.pager{
+                        nav.pager {
                             grid-area: c;
                         }
                     }
@@ -4016,7 +4020,7 @@
                                 width: 100%;
                             }
 
-                            nav.pager{
+                            nav.pager {
                                 grid-area: c;
                             }
                         }
@@ -4133,18 +4137,19 @@
 }
 
 
-.page-caracterizacion-cuidadanos-peticionarios{
-  tbody  h4{
-    font-family: 'Asap-Regular'!important;
-    font-size: 1.2em!important;
-  }
-  .page-header{
-    font-family: 'Montserrat', sans-serif;
-    padding-bottom: 9px;
-    margin: 40px 0 20px;
-    border-bottom: 1px solid #eee;
-    font-size: 1.7em;
-  }
+.page-caracterizacion-cuidadanos-peticionarios {
+    tbody h4 {
+        font-family: 'Asap-Regular' !important;
+        font-size: 1.2em !important;
+    }
+
+    .page-header {
+        font-family: 'Montserrat', sans-serif;
+        padding-bottom: 9px;
+        margin: 40px 0 20px;
+        border-bottom: 1px solid #eee;
+        font-size: 1.7em;
+    }
 
 }
 
@@ -4158,218 +4163,238 @@
 .page-restitucion-internacional-y-regulacion-internacional-de-visitas,
 .page-restitucion-internacional-y-regulacion-internacional-de-visitas,
 .page-portafolio-de-servicios-icbf-oferta,
-.page-autorizacion-venta-de-inmuebles-de-propiedad-de-los-ninos-ninas-y-adolescentes{
-  #edit-citizen-category{
-    position: relative;
-    left: 20px;
-  }
+.page-autorizacion-venta-de-inmuebles-de-propiedad-de-los-ninos-ninas-y-adolescentes {
+    #edit-citizen-category {
+        position: relative;
+        left: 20px;
+    }
 
-  [data-az-id="511p0q2k"]{
-    margin-top: 25px!important;
-  }
+    [data-az-id="511p0q2k"] {
+        margin-top: 25px !important;
+    }
 
-  h1, h2, h3, h4 {
-    font-family: "Asap-Regular"!important;
-  }
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: "Asap-Regular" !important;
+    }
 
-  /* Forma y estilo base */
-  .stbe-social-links__item i {
-    width: 28px;
-    height: 28px;
-    line-height: 28px;
-    font-size: 15px;
-    border-radius: 50%;
-    text-align: center;
-    border: 1px solid #9695da; /* color genérico por defecto */
-    color: #555;
-    transition: all 0.3s ease;
-  }
+    /* Forma y estilo base */
+    .stbe-social-links__item i {
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+        font-size: 15px;
+        border-radius: 50%;
+        text-align: center;
+        border: 1px solid #9695da;
+        /* color genérico por defecto */
+        color: #555;
+        transition: all 0.3s ease;
+    }
 
-  /* Espaciado entre íconos */
-  .stbe-social-links__item {
-    display: inline-block;
-    margin: 0 8px;
-  }
+    /* Espaciado entre íconos */
+    .stbe-social-links__item {
+        display: inline-block;
+        margin: 0 8px;
+    }
 
-  /* Corrección de íconos */
-  [class*="fa-"]::before {
-    display: inline-block;
-  }
-  .stbe-social-links__item a[href*="facebook"] i {
-    color: #3b5998;
-    border-color: #3b5998;
-  }
-  .stbe-social-links__item a[href*="youtube"] i {
-    color: #e52d27;
-    border-color: #3b5998;
-  }
-  .stbe-social-links__item a[href*="twitter"] i {
-    color: #1da1f2;
-    border-color: #3b5998;
-  }
-  .stbe-social-links__item a[href*="instagram"] i {
-    color: #1da1f2;
-    border-color: #3f729b;
-  }
-  .stbe-social-links__item a[href*="facebook"] i:hover {
-    background-color: #fff;
-    color: #3b5998;
-    border-color: #3b5998;
-  }
-  .stbe-social-links__item a[href*="youtube"] i:hover {
-    background-color: #fff;
-    color: #e52d27;
-    border-color: #3b5998;
-  }
-  .stbe-social-links__item a[href*="twitter"] i:hover {
-    background-color: #fff;
-    color: #1da1f2;
-    border-color: #3b5998;
-  }
-  .stbe-social-links__item a[href*="instagram"] i:hover {
+    /* Corrección de íconos */
+    [class*="fa-"]::before {
+        display: inline-block;
+    }
 
-    color: #3f729b;
-    border-color: #3b5998;
-  }
+    .stbe-social-links__item a[href*="facebook"] i {
+        color: #3b5998;
+        border-color: #3b5998;
+    }
 
-  .az-icon .fa {
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 30px;
-    color: #1387aa !important;
-    background-color: #f9f4cf !important;
-    border: none;
-    display: inline-block;
-    transition: transform 0.3s ease;
-  }
+    .stbe-social-links__item a[href*="youtube"] i {
+        color: #e52d27;
+        border-color: #3b5998;
+    }
 
-  .az-icon .fa.appear {
-    animation: pulse 1s ease-in-out;
-  }
+    .stbe-social-links__item a[href*="twitter"] i {
+        color: #1da1f2;
+        border-color: #3b5998;
+    }
 
-  .az-icon .fa:hover {
-    transform: scale(1.1);
-  }
+    .stbe-social-links__item a[href*="instagram"] i {
+        color: #1da1f2;
+        border-color: #3f729b;
+    }
 
-  [data-az-id="qhjsd1gw"]{
-    flex-wrap: nowrap!important;
-  }
+    .stbe-social-links__item a[href*="facebook"] i:hover {
+        background-color: #fff;
+        color: #3b5998;
+        border-color: #3b5998;
+    }
 
-  .fa-television::before {
-    content: "\f108";
-    font-family: "FontAwesome";
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: inherit;
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
-    font-size: 30px;
-    border-radius: 50%;
-    background-color: #eaf7fd;
-    color: #1387aa;
-    transition: transform 0.3s ease;
-  }
+    .stbe-social-links__item a[href*="youtube"] i:hover {
+        background-color: #fff;
+        color: #e52d27;
+        border-color: #3b5998;
+    }
 
+    .stbe-social-links__item a[href*="twitter"] i:hover {
+        background-color: #fff;
+        color: #1da1f2;
+        border-color: #3b5998;
+    }
 
-  .glyphicon.glyphicon-info-sign {
-    position: relative;
-    font-size: 0; /* Oculta el contenido original */
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-  }
+    .stbe-social-links__item a[href*="instagram"] i:hover {
 
-  /* Inserta nuevo ícono */
-  .glyphicon.glyphicon-info-sign::before {
-    content: "i";
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    font-size: 13px;
-    color: white;
-    background-color: #555; /* Azul oscuro típico */
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    line-height: 15px;
-    text-align: center;
-    display: inline-block;
-  }
+        color: #3f729b;
+        border-color: #3b5998;
+    }
 
-  /* Oculta el span accesorio */
-  .glyphicon.glyphicon-info-sign .element-invisible {
-    display: none;
-  }
+    .az-icon .fa {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 30px;
+        color: #1387aa !important;
+        background-color: #f9f4cf !important;
+        border: none;
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+
+    .az-icon .fa.appear {
+        animation: pulse 1s ease-in-out;
+    }
+
+    .az-icon .fa:hover {
+        transform: scale(1.1);
+    }
+
+    [data-az-id="qhjsd1gw"] {
+        flex-wrap: nowrap !important;
+    }
+
+    .fa-television::before {
+        content: "\f108";
+        font-family: "FontAwesome";
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        font-size: 30px;
+        border-radius: 50%;
+        background-color: #eaf7fd;
+        color: #1387aa;
+        transition: transform 0.3s ease;
+    }
 
 
-}
+    .glyphicon.glyphicon-info-sign {
+        position: relative;
+        font-size: 0;
+        /* Oculta el contenido original */
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+    }
 
+    /* Inserta nuevo ícono */
+    .glyphicon.glyphicon-info-sign::before {
+        content: "i";
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        font-size: 13px;
+        color: white;
+        background-color: #555;
+        /* Azul oscuro típico */
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        line-height: 15px;
+        text-align: center;
+        display: inline-block;
+    }
 
-.page-portafolio-de-servicios-icbf-oferta{
-  .view-filters {
-    margin-top: 2.5rem;
-    width: 110%!important;
-    float: left;
-  }
+    /* Oculta el span accesorio */
+    .glyphicon.glyphicon-info-sign .element-invisible {
+        display: none;
+    }
 
-  /* Asegura posicionamiento solo en este campo específico */
-  .js-form-item-name.form-no-label {
-    position: relative;
-  }
-
-  /* Ícono de recarga solo cuando el input es #edit-name */
-  .js-form-item-name.form-no-label::after {
-    content: "\f021"; /* fa-refresh */
-    font-family: "FontAwesome";
-    font-size: 14px;
-    color: white;
-    background-color: #009688;
-    border-radius: 0 10px 10px 0;
-    width: 36px;
-    height: 36px;
-    line-height: 36px;
-    text-align: center;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 2;
-    pointer-events: none;
-  }
-
-  /* Input padding para que no se solape con el ícono */
-  input[data-drupal-selector="edit-name"] {
-    padding-right: 44px;
-    height: 36px;
-    border-radius: 10px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  [data-drupal-selector="edit-actions"]{
-    text-align: center;
-    width: 90%;
-  }
-
-  #edit-submit-tramites {
-    color: #fff;
-    background-color: #5bc0de!important;
-    border-color: #46b8da!important;
-  }
 
 }
 
-.page-primera-infancia-cuentame{
-  h1, h2, h3, h4 {
-    font-family: "Asap-Regular"!important;
-  }
-  h2{
-    font-size: 1.3em;
-  }
+
+.page-portafolio-de-servicios-icbf-oferta {
+    .view-filters {
+        margin-top: 2.5rem;
+        width: 110% !important;
+        float: left;
+    }
+
+    /* Asegura posicionamiento solo en este campo específico */
+    .js-form-item-name.form-no-label {
+        position: relative;
+    }
+
+    /* Ícono de recarga solo cuando el input es #edit-name */
+    .js-form-item-name.form-no-label::after {
+        content: "\f021";
+        /* fa-refresh */
+        font-family: "FontAwesome";
+        font-size: 14px;
+        color: white;
+        background-color: #009688;
+        border-radius: 0 10px 10px 0;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    /* Input padding para que no se solape con el ícono */
+    input[data-drupal-selector="edit-name"] {
+        padding-right: 44px;
+        height: 36px;
+        border-radius: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    [data-drupal-selector="edit-actions"] {
+        text-align: center;
+        width: 90%;
+    }
+
+    #edit-submit-tramites {
+        color: #fff;
+        background-color: #5bc0de !important;
+        border-color: #46b8da !important;
+    }
+
+}
+
+.page-primera-infancia-cuentame {
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: "Asap-Regular" !important;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
 }
 
 
@@ -4393,5 +4418,28 @@
 
     div [data-az-id=mku2ldro] {
         width: 33.3% !important;
+    }
+}
+
+
+.page-id-6713, .page-id-6714  {
+    .embed-containermapa1 {
+        opacity: 0;
+    }
+
+    .slide-blackh2 {
+        font-size: 1.2em;
+
+        span {
+            font-family: var.$font-asap-regular;
+        }
+    }
+
+    ul.m1 li {
+        background: url('./../../dist/assets/imgs/green-list-arrow.png');
+        background-repeat: no-repeat;
+        list-style: none;
+        margin-bottom: .5em;
+        padding-left: 1.5em;
     }
 }
