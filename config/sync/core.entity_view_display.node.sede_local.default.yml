@@ -3,6 +3,7 @@ langcode: es
 status: true
 dependencies:
   config:
+    - block_content.type.basic
     - core.entity_view_display.comment.comment_node_sede_local.default
     - field.field.node.sede_local.comment_node_sede_local
     - field.field.node.sede_local.field_addres_local_offices
@@ -19,6 +20,7 @@ dependencies:
     - field.field.node.sede_local.field_working_hours
     - node.type.sede_local
     - views.view.puntos_de_atencion
+    - views.view.puntos_de_atencion_sapi
     - views.view.view_phone_verde
   module:
     - bootstrap_layouts
@@ -263,6 +265,245 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+        third_party_settings: {  }
+      -
+        layout_id: bs_1col
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            main:
+              wrapper: div
+              classes:
+                col-sm-12: col-sm-12
+              add_region_classes: 1
+              attributes: ''
+          context_visibility: {  }
+          context_all_must_pass: 1
+        components:
+          40673aff-7f88-4bc3-8bee-1ce603cc111c:
+            uuid: 40673aff-7f88-4bc3-8bee-1ce603cc111c
+            region: main
+            configuration:
+              id: 'field_block:node:sede_local:field_list_image'
+              label: 'Imagen Listado'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          6a95470d-4e35-4beb-910b-432e6260c795:
+            uuid: 6a95470d-4e35-4beb-910b-432e6260c795
+            region: main
+            configuration:
+              id: 'field_block:node:sede_local:field_addres_local_offices'
+              label: 'Dirección:'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 2
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          da3bf087-7ea5-46d7-bf9e-0b5866866931:
+            uuid: da3bf087-7ea5-46d7-bf9e-0b5866866931
+            region: main
+            configuration:
+              id: 'field_block:node:sede_local:field_phone'
+              label: 'Teléfono (s):'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 3
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          4b00f085-1159-4aa0-a8c6-86f4fe0943ce:
+            uuid: 4b00f085-1159-4aa0-a8c6-86f4fe0943ce
+            region: main
+            configuration:
+              id: 'field_block:node:sede_local:field_working_hours'
+              label: 'Horario de Atención: '
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 4
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          9b26a8e9-c3c9-4053-913c-5b38ec723a1c:
+            uuid: 9b26a8e9-c3c9-4053-913c-5b38ec723a1c
+            region: main
+            configuration:
+              id: 'views_block:puntos_de_atencion_sapi-block_info_header'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 1
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+        third_party_settings: {  }
+      -
+        layout_id: bs_2col
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            left:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-7: col-sm-7
+              add_region_classes: 1
+              attributes: ''
+            right:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-5: col-sm-5
+              add_region_classes: 1
+              attributes: ''
+          context_visibility: {  }
+          context_all_must_pass: 1
+        components:
+          7308eab0-66df-494d-bf1a-b2f7fa26a5b5:
+            uuid: 7308eab0-66df-494d-bf1a-b2f7fa26a5b5
+            region: left
+            configuration:
+              id: 'field_block:node:sede_local:field_local_staff_list'
+              label: 'Director - Coordinador'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          212690c3-2914-4198-b628-dc97afb2ae6f:
+            uuid: 212690c3-2914-4198-b628-dc97afb2ae6f
+            region: right
+            configuration:
+              id: 'inline_block:basic'
+              label: 'Puntos de venta servicios'
+              label_display: '0'
+              provider: layout_builder
+              view_mode: full
+              context_mapping: {  }
+              block_id: 2153
+              block_revision_id: 488
+              block_serialized: null
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+        third_party_settings: {  }
+      -
+        layout_id: bs_1col
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            main:
+              wrapper: div
+              classes:
+                col-sm-12: col-sm-12
+              add_region_classes: 1
+              attributes: ''
+          context_visibility: {  }
+          context_all_must_pass: 1
+        components:
+          27ea4afe-ffa2-4cff-ae42-7bd39d437e42:
+            uuid: 27ea4afe-ffa2-4cff-ae42-7bd39d437e42
+            region: main
+            configuration:
+              id: 'views_block:puntos_de_atencion_sapi-block_czgrid'
+              label: 'Puntos de Atención ICBF en la Región'
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: 'Puntos de Atención ICBF en la Región'
+              items_per_page: none
             weight: 0
             additional:
               context_visibility: {  }
