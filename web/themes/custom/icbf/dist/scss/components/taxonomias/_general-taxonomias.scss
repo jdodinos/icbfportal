@@ -4164,11 +4164,6 @@
 .page-restitucion-internacional-y-regulacion-internacional-de-visitas,
 .page-portafolio-de-servicios-icbf-oferta,
 .page-autorizacion-venta-de-inmuebles-de-propiedad-de-los-ninos-ninas-y-adolescentes {
-    #edit-citizen-category {
-        position: relative;
-        left: 20px;
-    }
-
     [data-az-id="511p0q2k"] {
         margin-top: 25px !important;
     }
@@ -4177,7 +4172,7 @@
     h2,
     h3,
     h4 {
-        font-family: "Asap-Regular" !important;
+        font-family: "Asap-Regular";
     }
 
     /* Forma y estilo base */
@@ -4325,6 +4320,19 @@
         display: none;
     }
 
+  span,a{
+    font-family: 'Montserrat-Regular', sans-serif;
+  }
+
+  a, a:link {
+    color: #1996d0;
+    text-decoration: none !important;
+  }
+
+  .panel-title {
+    font-size: 1em!important;
+    font-family: 'Montserrat', sans-serif!important;;
+  }
 
 }
 
