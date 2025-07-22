@@ -661,6 +661,13 @@ class PanelizerMigrationService {
         }
         break;
 
+      case 'accountability':
+        $displayes = ['block_5'];
+        if (in_array($display_id, $displayes)) {
+          $view_id = 'accountability_sapi';
+        }
+        break;
+
       case 'local_shopping':
         $displayes = ['block'];
         if (in_array($display_id, $displayes)) {
