@@ -11,7 +11,7 @@ _core:
 id: icbf_content
 theme: icbf
 region: content
-weight: -4
+weight: -16
 provider: null
 plugin: system_main_block
 settings:
