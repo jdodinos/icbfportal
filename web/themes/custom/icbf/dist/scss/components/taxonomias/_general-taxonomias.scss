@@ -3337,9 +3337,10 @@
                             }
                         }
 
+                        /*
                         li:last-child {
                             border: 1px solid #3cb371;
-                        }
+                        }*/
                     }
                 }
             }
@@ -3405,9 +3406,11 @@
                             }
                         }
 
+                        /*
                         li:last-child {
                             border: 1px solid #3cb371;
                         }
+                        */
                     }
                 }
             }
@@ -3578,12 +3581,12 @@
                     text-decoration: underline !important;
                 }
             }
-
+            /*
             .panel-title::before {
                 content: '';
                 display: flex;
                 padding-right: 0;
-            }
+            }*/
 
             .panel-body {
                 ul {
@@ -3686,50 +3689,6 @@
                                 border-top: 1px solid #7c7cfc;
                                 width: 100%;
                             }
-
-                            /*
-                            >div {
-                                display: grid;
-                                grid-template-areas: "a b";
-                                grid-template-columns: 33.3333333333% 66.6666666667%;
-                                >div:first-child{
-                                    grid-area: a;
-                                }
-                                >div:nth-child(2){
-                                    grid-area: b;
-                                }
-
-                                >div{
-                                    .views-field-title{
-                                        color: #123d14;
-                                        font-size: 1.42em;
-                                        font-weight: 500;
-                                        font-family: 'Montserrat', sans-serif;
-                                        line-height: normal;
-                                        margin: .7em 0;
-                                    }
-                                    .views-field-field-subtitle {
-                                        color: #006229;
-                                        font-size: 1.25em;
-                                        font-weight: 500;
-                                        font-family: 'Montserrat', sans-serif;
-                                        line-height: normal;
-                                    }
-                                }
-                            }
-
-                            @media (max-width: 768px){
-                                >div {
-                                    display: flex;
-                                    flex-wrap: wrap;
-                                    >div:first-child{
-                                        width: 95%;
-                                    }
-                                    >div:nth-child(2){
-                                        width: 95%;
-                                    }
-                                }
-                            }*/
 
                             .bar-line {
                                 display: none !important;
@@ -4416,3 +4375,25 @@
 }
 
 
+.page-id-6628 {
+    .content .panel-group .panel .panel-heading .panel-title:before {
+        display: none;
+    }
+}
+
+.page-id-6727 {
+    .layout.layout--onecol {
+        padding-bottom: 4rem;
+    }
+}
+
+.page-id-7896 {
+    .word-gral.rdp-contain {
+        display: flex;
+        margin: 2rem 0;
+    }
+
+    div [data-az-id=mku2ldro] {
+        width: 33.3% !important;
+    }
+}
