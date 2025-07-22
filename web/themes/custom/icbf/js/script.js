@@ -223,3 +223,42 @@ $(document).ready(function($) {
     console.log("No se encontró el wrapper de quicktabs");
   }
 });
+
+
+
+//funcionalidad de Collapse (En las paginas de Nutrición)
+$(document).ready(function () {
+  // Lista de clases de página válidas
+  var paginasPermitidas = [
+    '.page-nutricion-bienestarina-mas-y-otros-alimentos-de-alto-valor-nutricional',
+    '.page-nutricion-estrategia-de-atencion-y-prevencion-de-la-desnutricion-infantil',
+    '.page-nutricion-ensin-encuesta-nacional-de-situacion-nutricional',
+    '.page-nutricion-tabla-de-composicion-de-alimentos-colombianos',
+    '.page-nutricion-hoja-de-balance-de-alimentos-colombianos',
+    '.page-nutricion-educacion-alimentaria-y-nutricional',
+    '.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional'
+  ];
+
+  // Verifica si la clase existe en el body
+  var aplicar = paginasPermitidas.some(function (clase) {
+    return $(clase).length > 0;
+  });
+
+  if (aplicar) {
+    const $megamenu = $('#block-icbf-content .content .tb-megamenu');
+    const $menu = $megamenu.find('.nav-collapse');
+    const $button = $megamenu.find('.tb-megamenu-button');
+
+    // Asegurarse de que exista el menú y botón
+    if ($menu.length && $button.length) {
+      // Ocultar inicialmente
+      $menu.removeClass('always-show').removeClass('show').addClass('collapse');
+
+      // Evento click
+      $button.on('click', function (e) {
+        e.preventDefault();
+        $menu.toggleClass('show');
+      });
+    }
+  }
+});
