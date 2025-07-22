@@ -4,6 +4,7 @@
 .page-id-1250,
 .page-id-1245,
 .page-id-6904,
+.page-id-7896,
 .page-citaciones {
 
     li ul .js-form-item.form-item.js-form-type-radio.form-type-radio.js-form-item-field-location.form-item-field-location {
@@ -167,9 +168,15 @@
 .page-id-1238,
 .page-cartelera-virtual-control-interno-disciplinario,
 .page-migrantes-jornadas-prerregistro,
+.page-migrantes-aprende-sobre-migracion,
+.page-migrantes-estrategia-icbf,
 .page-node-153025,
 .page-node-153016,
 .page-node-153022 {
+
+    h3 {
+        font-family: var.$font-asap-regular;
+    }
 
     .node--view-mode-full .field__label {
         font-family: var.$font-montserrat-regular;

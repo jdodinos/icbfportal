@@ -8,6 +8,7 @@ dependencies:
     - taxonomy.vocabulary.citizen_category
     - views.view.tramites
   content:
+    - 'block_content:footer:485b0ed8-fdad-4aec-a2d9-cecf5a74740b'
     - 'block_content:footer:6ef225ee-ab82-493e-9851-60ed5d3c6452'
   module:
     - block_content
@@ -141,6 +142,22 @@ third_party_settings:
             configuration:
               id: 'block_content:6ef225ee-ab82-493e-9851-60ed5d3c6452'
               label: 'banner portafolio en vus'
+              label_display: '0'
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 2
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          01d15004-b8d1-45a9-8bf1-689f6f58d4b6:
+            uuid: 01d15004-b8d1-45a9-8bf1-689f6f58d4b6
+            region: main
+            configuration:
+              id: 'block_content:485b0ed8-fdad-4aec-a2d9-cecf5a74740b'
+              label: 'situación del ciudadano'
               label_display: '0'
               provider: block_content
               status: true

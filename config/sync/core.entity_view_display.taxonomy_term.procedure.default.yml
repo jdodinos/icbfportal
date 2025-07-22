@@ -18,279 +18,135 @@ dependencies:
     - field.field.taxonomy_term.procedure.field_tags_de_tramite
     - field.field.taxonomy_term.procedure.field_tooltip
     - taxonomy.vocabulary.procedure
+    - views.view.tramites
+  content:
+    - 'block_content:footer:485b0ed8-fdad-4aec-a2d9-cecf5a74740b'
+    - 'block_content:footer:6ef225ee-ab82-493e-9851-60ed5d3c6452'
   module:
+    - block_content
+    - bootstrap_layouts
     - image
     - layout_builder
-    - layout_discovery
     - panelizer
     - text
+    - views
 third_party_settings:
   layout_builder:
     enabled: true
     allow_custom: false
     sections:
       -
-        layout_id: layout_onecol
+        layout_id: bs_1col
         layout_settings:
           label: ''
+          context_mapping: {  }
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            main:
+              wrapper: div
+              classes:
+                col-sm-12: col-sm-12
+              add_region_classes: 1
+              attributes: ''
+          context_visibility: {  }
+          context_all_must_pass: 1
         components:
           1ebe2c00-f344-48a0-96da-8accac2d1634:
             uuid: 1ebe2c00-f344-48a0-96da-8accac2d1634
-            region: content
+            region: main
             configuration:
               id: 'field_block:taxonomy_term:procedure:field_header_infografia'
+              label: 'Header Infografia'
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
                 type: text_default
-                label: above
+                label: hidden
                 settings: {  }
-                third_party_settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
             weight: 0
-            additional: {  }
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
           95a97d0e-77e1-459c-acc7-b4411cf3f1bf:
             uuid: 95a97d0e-77e1-459c-acc7-b4411cf3f1bf
-            region: content
+            region: main
             configuration:
               id: 'field_block:taxonomy_term:procedure:field_content'
+              label: Contenido
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
                 type: text_default
                 label: hidden
                 settings: {  }
-                third_party_settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
             weight: 1
-            additional: {  }
-          30ac75bb-a2c0-4ca3-9c26-bbdd99b5f865:
-            uuid: 30ac75bb-a2c0-4ca3-9c26-bbdd99b5f865
-            region: content
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          8069d474-780a-4425-809e-78f1d8b7b2ab:
+            uuid: 8069d474-780a-4425-809e-78f1d8b7b2ab
+            region: main
             configuration:
-              id: 'field_block:taxonomy_term:procedure:description'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: text_default
-                label: hidden
-                settings: {  }
-                third_party_settings: {  }
+              id: 'views_block:tramites-block_9'
+              label: 'También te puede interesar:'
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: 'También te puede interesar:'
+              items_per_page: '%tid'
             weight: 2
-            additional: {  }
-          7257a903-f100-4e47-8ace-044be6ed31ac:
-            uuid: 7257a903-f100-4e47-8ace-044be6ed31ac
-            region: content
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          56f6252c-e2d6-4850-b1f4-56af08bd7670:
+            uuid: 56f6252c-e2d6-4850-b1f4-56af08bd7670
+            region: main
             configuration:
-              id: 'field_block:taxonomy_term:procedure:field_content'
+              id: 'block_content:485b0ed8-fdad-4aec-a2d9-cecf5a74740b'
+              label: 'situación del ciudadano'
               label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: text_default
-                label: hidden
-                settings: {  }
-                third_party_settings: {  }
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
             weight: 3
-            additional: {  }
-          17918baf-af5a-4a6a-be64-8fac2b36308d:
-            uuid: 17918baf-af5a-4a6a-be64-8fac2b36308d
-            region: content
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          430482eb-6f43-46d7-8641-6d825c76fed7:
+            uuid: 430482eb-6f43-46d7-8641-6d825c76fed7
+            region: main
             configuration:
-              id: 'field_block:taxonomy_term:procedure:field_category_citizen'
+              id: 'block_content:6ef225ee-ab82-493e-9851-60ed5d3c6452'
+              label: 'banner portafolio en vus'
               label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: hidden
-                settings:
-                  link: true
-                third_party_settings: {  }
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
             weight: 4
-            additional: {  }
-          a4413438-ab7e-47e4-8a8d-76e1bf456721:
-            uuid: a4413438-ab7e-47e4-8a8d-76e1bf456721
-            region: content
-            configuration:
-              id: 'field_block:taxonomy_term:procedure:field_related_procedures'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 5
-            additional: {  }
-          4f1df3c1-3e4c-4ee4-986d-a7680bf0e98c:
-            uuid: 4f1df3c1-3e4c-4ee4-986d-a7680bf0e98c
-            region: content
-            configuration:
-              id: 'field_block:taxonomy_term:procedure:field_list_image'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: image
-                label: above
-                settings:
-                  image_link: ''
-                  image_style: ''
-                  image_loading:
-                    attribute: lazy
-                third_party_settings: {  }
-            weight: 6
-            additional: {  }
-          4a02b4e9-ac4f-426c-bcf4-24f84481fd86:
-            uuid: 4a02b4e9-ac4f-426c-bcf4-24f84481fd86
-            region: content
-            configuration:
-              id: 'field_block:taxonomy_term:procedure:field_icon'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: image
-                label: above
-                settings:
-                  image_link: ''
-                  image_style: ''
-                  image_loading:
-                    attribute: lazy
-                third_party_settings: {  }
-            weight: 7
-            additional: {  }
-          17d305cd-377b-4d0f-becb-7d09f7bd3b0b:
-            uuid: 17d305cd-377b-4d0f-becb-7d09f7bd3b0b
-            region: content
-            configuration:
-              id: 'field_block:taxonomy_term:procedure:field_procedure_type'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 8
-            additional: {  }
-          c28bb0a3-7b27-4ed1-95b2-9a1e68743a85:
-            uuid: c28bb0a3-7b27-4ed1-95b2-9a1e68743a85
-            region: content
-            configuration:
-              id: 'field_block:taxonomy_term:procedure:field_priority'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: number_integer
-                label: above
-                settings:
-                  thousand_separator: ''
-                  prefix_suffix: true
-                third_party_settings: {  }
-            weight: 9
-            additional: {  }
-          7ebd8047-13b2-412e-afb7-1bb9255033c1:
-            uuid: 7ebd8047-13b2-412e-afb7-1bb9255033c1
-            region: content
-            configuration:
-              id: 'field_block:taxonomy_term:procedure:field_tooltip'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: text_default
-                label: above
-                settings: {  }
-                third_party_settings: {  }
-            weight: 10
-            additional: {  }
-          04ee62ae-f600-467f-afcb-0efa5016b651:
-            uuid: 04ee62ae-f600-467f-afcb-0efa5016b651
-            region: content
-            configuration:
-              id: 'field_block:taxonomy_term:procedure:field_link_videotutorial'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: string
-                label: above
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-            weight: 11
-            additional: {  }
-          e0ec38ee-e552-4fbc-a668-8fe4f0789076:
-            uuid: e0ec38ee-e552-4fbc-a668-8fe4f0789076
-            region: content
-            configuration:
-              id: 'field_block:taxonomy_term:procedure:field_link_more_info'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: string
-                label: above
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-            weight: 12
-            additional: {  }
-          fb27cd42-9f58-41f0-9c4f-f9ce84740a3e:
-            uuid: fb27cd42-9f58-41f0-9c4f-f9ce84740a3e
-            region: content
-            configuration:
-              id: 'field_block:taxonomy_term:procedure:field_link_nomasfilas'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: string
-                label: above
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-            weight: 13
-            additional: {  }
-          d43521a2-0cb8-4826-babe-1db2afe8f06e:
-            uuid: d43521a2-0cb8-4826-babe-1db2afe8f06e
-            region: content
-            configuration:
-              id: 'field_block:taxonomy_term:procedure:field_header_infografia'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: text_default
-                label: above
-                settings: {  }
-                third_party_settings: {  }
-            weight: 14
-            additional: {  }
-          2524c3df-7fdc-40d1-a705-17a2049e7831:
-            uuid: 2524c3df-7fdc-40d1-a705-17a2049e7831
-            region: content
-            configuration:
-              id: 'field_block:taxonomy_term:procedure:field_tags_de_tramite'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 15
-            additional: {  }
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
         third_party_settings: {  }
   panelizer:
     enable: false

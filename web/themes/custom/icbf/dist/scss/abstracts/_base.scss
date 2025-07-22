@@ -10,6 +10,7 @@ body {
 }
 
 body {
+  cursor: inherit;
   height: 100%;
   width: 100%;
   margin: 0;
@@ -191,6 +192,10 @@ legend {
   }
 }
 
+h1.page-header {
+  font-family: var.$font-montserrat;
+  font-size: 1.7em;
+}
 
 .pagination {
   .page-link {

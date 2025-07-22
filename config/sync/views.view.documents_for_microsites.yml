@@ -2805,7 +2805,7 @@ display:
           click_sort_column: target_id
           type: file_default
           settings:
-            use_description_as_link_text: false
+            use_description_as_link_text: true
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -4771,7 +4771,7 @@ display:
           entity_field: title
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
