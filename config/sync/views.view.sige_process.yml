@@ -1797,7 +1797,7 @@ display:
           group_column: target_id
           group_columns: {  }
           group_rows: true
-          delta_limit: 0
+          delta_limit: 1
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
@@ -2468,6 +2468,20 @@ display:
       cache:
         type: none
         options: {  }
+      sorts:
+        field_priority_value:
+          id: field_priority_value
+          table: node__field_priority
+          field: field_priority_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
       arguments:
         field_hiring_process_type_target_id:
           id: field_hiring_process_type_target_id
@@ -2537,6 +2551,40 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
+        field_hiring_process_type_target_id_1:
+          id: field_hiring_process_type_target_id_1
+          table: node__field_hiring_process_type
+          field: field_hiring_process_type_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: entity_target_id
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: php
+          default_argument_options:
+            code: "$url = explode('/', \\Drupal::service('path.current')->getPath());\r\n$term_id = $url[3];\r\n$vocabulary = 'sige_process_type';\r\n$children = \\Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree(\r\n  $vocabulary,\r\n  $term_id,\r\n  NULL,\r\n  FALSE\r\n);\r\n\r\n$terms = [];\r\nforeach ($children as $term) {\r\n  $terms[] = $term->tid;\r\n}\r\n\r\nif (empty($terms)) {\r\n  return 'all';\r\n}\r\nreturn implode(',', $terms);\r\n"
+          summary_options:
+            base_path: ''
+            count: true
+            override: false
+            items_per_page: 25
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: true
+          not: true
       filters:
         status:
           id: status
@@ -2655,6 +2703,7 @@ display:
         cache: false
         pager: false
         fields: false
+        sorts: false
         arguments: false
         filters: false
         filter_groups: false
