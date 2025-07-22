@@ -3,7 +3,6 @@ langcode: es
 status: true
 dependencies:
   config:
-    - block_content.type.basic
     - core.entity_view_display.comment.comment_node_sede_local.default
     - field.field.node.sede_local.comment_node_sede_local
     - field.field.node.sede_local.field_addres_local_offices
@@ -450,23 +449,6 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: ''
-            weight: 0
-            additional:
-              context_visibility: {  }
-              context_all_must_pass: 1
-          212690c3-2914-4198-b628-dc97afb2ae6f:
-            uuid: 212690c3-2914-4198-b628-dc97afb2ae6f
-            region: right
-            configuration:
-              id: 'inline_block:basic'
-              label: 'Puntos de venta servicios'
-              label_display: '0'
-              provider: layout_builder
-              view_mode: full
-              context_mapping: {  }
-              block_id: 2153
-              block_revision_id: 488
-              block_serialized: null
             weight: 0
             additional:
               context_visibility: {  }
