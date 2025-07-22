@@ -6,7 +6,7 @@ dependencies:
     - field.field.taxonomy_term.citizen_category.field_content
     - field.field.taxonomy_term.citizen_category.field_procedure
     - taxonomy.vocabulary.citizen_category
-    - views.view.tramites
+    - views.view.tramites_sapi
   content:
     - 'block_content:footer:485b0ed8-fdad-4aec-a2d9-cecf5a74740b'
     - 'block_content:footer:6ef225ee-ab82-493e-9851-60ed5d3c6452'
@@ -121,21 +121,6 @@ third_party_settings:
           context_visibility: {  }
           context_all_must_pass: 1
         components:
-          443a15af-bf33-4d3e-9f2f-cde10d2e835d:
-            uuid: 443a15af-bf33-4d3e-9f2f-cde10d2e835d
-            region: main
-            configuration:
-              id: 'views_block:tramites-block_7'
-              label: ''
-              label_display: '0'
-              provider: views
-              context_mapping: {  }
-              views_label: ''
-              items_per_page: none
-            weight: 0
-            additional:
-              context_visibility: {  }
-              context_all_must_pass: 1
           a543e17e-2886-41da-8fea-a57dc8301011:
             uuid: a543e17e-2886-41da-8fea-a57dc8301011
             region: main
@@ -148,7 +133,7 @@ third_party_settings:
               info: ''
               view_mode: full
               context_mapping: {  }
-            weight: 2
+            weight: 3
             additional:
               context_visibility: {  }
               context_all_must_pass: 1
@@ -164,7 +149,22 @@ third_party_settings:
               info: ''
               view_mode: full
               context_mapping: {  }
-            weight: 1
+            weight: 2
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          c78614b8-1706-4e86-90a9-120fbd2269a2:
+            uuid: c78614b8-1706-4e86-90a9-120fbd2269a2
+            region: main
+            configuration:
+              id: 'views_block:tramites_sapi-block_7'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
             additional:
               context_visibility: {  }
               context_all_must_pass: 1

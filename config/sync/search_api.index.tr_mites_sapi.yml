@@ -1,0 +1,235 @@
+uuid: dc100f6a-359f-4eea-8478-95ae574f96f5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_category_citizen
+    - field.storage.taxonomy_term.field_icon
+    - field.storage.taxonomy_term.field_list_image
+    - field.storage.taxonomy_term.field_priority
+    - field.storage.taxonomy_term.field_procedure
+    - field.storage.taxonomy_term.field_procedure_type
+    - field.storage.taxonomy_term.field_related_procedures
+    - field.storage.taxonomy_term.field_tags_de_tramite
+    - field.storage.taxonomy_term.field_tooltip
+    - search_api.server.icbf_solr
+  module:
+    - search_api_solr
+    - taxonomy
+third_party_settings:
+  search_api_solr:
+    finalize: false
+    commit_before_finalize: false
+    commit_after_finalize: false
+    debug_finalize: false
+    highlighter:
+      maxAnalyzedChars: 51200
+      fragmenter: gap
+      usePhraseHighlighter: true
+      highlightMultiTerm: true
+      preserveMulti: false
+      regex:
+        slop: 0.5
+        pattern: blank
+        maxAnalyzedChars: 10000
+      highlight:
+        mergeContiguous: false
+        requireFieldMatch: false
+        snippets: 3
+        fragsize: 0
+    mlt:
+      mintf: 1
+      mindf: 1
+      maxdf: 0
+      maxdfpct: 0
+      minwl: 0
+      maxwl: 0
+      maxqt: 100
+      maxntp: 2000
+      boost: false
+      interestingTerms: none
+    term_modifiers:
+      slop: 3
+      fuzzy: 1
+      fuzzy_analyzer: true
+    advanced:
+      index_prefix: ''
+      collection: ''
+      timezone: ''
+    multilingual:
+      limit_to_content_language: false
+      include_language_independent: true
+      use_language_undefined_as_fallback_language: false
+      specific_languages:
+        en: '0'
+        es: '0'
+      use_universal_collation: false
+id: tr_mites_sapi
+name: 'Taxonomía - Trámites SAPI'
+description: ''
+read_only: false
+field_settings:
+  description:
+    label: Descripción
+    datasource_id: 'entity:taxonomy_term'
+    property_path: description
+    type: text
+    dependencies:
+      module:
+        - taxonomy
+  field_category_citizen:
+    label: 'Situación del ciudadano'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_category_citizen
+    type: integer
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_category_citizen
+  field_icon:
+    label: Icono
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_icon
+    type: integer
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_icon
+  field_list_image:
+    label: 'Imagen Listado'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_list_image
+    type: integer
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_list_image
+  field_priority:
+    label: Prioridad
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_priority
+    type: integer
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_priority
+  field_procedure:
+    label: 'Trámites relacionados » Término de taxonomía » Trámites'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: 'field_related_procedures:entity:field_procedure'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_procedure
+        - field.storage.taxonomy_term.field_related_procedures
+      module:
+        - taxonomy
+  field_procedure_type:
+    label: 'Tipo trámite'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_procedure_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_procedure_type
+  field_procedure_type_1:
+    label: 'Tipo trámite'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_procedure_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_procedure_type
+  field_procedure_type_2:
+    label: 'Trámites relacionados » Término de taxonomía » Tipo trámite'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: 'field_related_procedures:entity:field_procedure_type'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_procedure_type
+        - field.storage.taxonomy_term.field_related_procedures
+      module:
+        - taxonomy
+  field_related_procedures:
+    label: 'Trámites relacionados'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_related_procedures
+    type: integer
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_related_procedures
+  field_related_procedures_1:
+    label: 'Trámites relacionados » Término de taxonomía » Trámites relacionados'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: 'field_related_procedures:entity:field_related_procedures'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_related_procedures
+      module:
+        - taxonomy
+  field_tags_de_tramite:
+    label: 'Área / Proceso del tramite'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_tags_de_tramite
+    type: integer
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_tags_de_tramite
+  field_tooltip:
+    label: Tooltip
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_tooltip
+    type: text
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_tooltip
+  name:
+    label: Nombre
+    datasource_id: 'entity:taxonomy_term'
+    property_path: name
+    type: text
+    dependencies:
+      module:
+        - taxonomy
+  parent:
+    label: 'Los padres del término.'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: parent
+    type: integer
+    dependencies:
+      module:
+        - taxonomy
+  tid:
+    label: 'ID del término'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: tid
+    type: integer
+    dependencies:
+      module:
+        - taxonomy
+datasource_settings:
+  'entity:taxonomy_term':
+    bundles:
+      default: false
+      selected:
+        - procedure
+    languages:
+      default: false
+      selected:
+        - es
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  auto_aggregated_fulltext_field: {  }
+  custom_value: {  }
+  entity_type: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+  solr_date_range: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  delete_on_fail: true
+  index_directly: true
+  track_changes_in_references: true
+server: icbf_solr
