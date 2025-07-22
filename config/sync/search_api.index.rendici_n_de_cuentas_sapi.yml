@@ -8,7 +8,7 @@ dependencies:
     - field.storage.node.field_file_categoria
     - field.storage.node.field_location
     - field.storage.node.field_section
-    - search_api.server.icbf
+    - search_api.server.icbf_solr
   module:
     - node
     - search_api_solr
@@ -93,7 +93,7 @@ field_settings:
     label: Ubicación
     datasource_id: 'entity:node'
     property_path: field_location
-    type: integer
+    type: text
     dependencies:
       config:
         - field.storage.node.field_location
@@ -105,6 +105,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_section
+  nid:
+    label: ID
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+    dependencies:
+      module:
+        - node
   status:
     label: Publicado
     datasource_id: 'entity:node'
@@ -148,4 +156,4 @@ options:
   delete_on_fail: true
   index_directly: true
   track_changes_in_references: true
-server: icbf
+server: icbf_solr
