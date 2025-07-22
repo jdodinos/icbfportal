@@ -3614,8 +3614,8 @@
 }
 
 .page-nutricion-estrategia-de-atencion-y-prevencion-de-la-desnutricion-infantil,
-.page-nutricion-tabla-de-composicion-de-alimentos-colombianos,
-.page-nutricion-hoja-de-balance-de-alimentos-colombianos {
+.page-nutricion-tabla-de-composicion-de-alimentos-colombianos
+{
     #block-icbf-content {
         .content {
             >.layout:first-child {
@@ -3638,7 +3638,8 @@
     }
 }
 
-.page-nutricion-educacion-alimentaria-y-nutricional {
+.page-nutricion-hoja-de-balance-de-alimentos-colombianos,
+.page-nutricion-educacion-alimentaria-y-nutricional{
     #block-icbf-content {
         .content {
             >.layout:first-child {
@@ -3659,7 +3660,8 @@
             }
 
             .block-views-blockdocuments-block-33,
-            .block-views-blockdocuments-block-34 {
+            .block-views-blockdocuments-block-34,
+            .block-views-blockdocuments-block-41 {
                 .views-row {
                     margin: 1em;
 
