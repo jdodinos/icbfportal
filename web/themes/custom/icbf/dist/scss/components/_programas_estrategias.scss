@@ -8,6 +8,7 @@
 .page-programas-y-estrategias-primera-infancia-promocion-de-la-lectura-la-familia-es-mi-cuento,
 .page-programas-y-estrategias-primera-infancia-marco-normativo,
 .page-programas-y-estrategias-primera-infancia-modalidades-de-atencion,
+.page-programas-y-estrategias-primera-infancia-mediatica-recursos-para-la-primera-infancia,
 .page-programas-y-estrategias-primera-infancia-cuentame {
 
     .az-ctnr.container{
@@ -21,8 +22,18 @@
     }
 
     .vocabulary-secctions {
-
+        .content .panel-group .panel .panel-heading .panel-title:before{
+            content: none   ;
+        }
         .tb-megamenu {
+
+            .dropdown-menu{
+                 .active{
+                    > a{
+                        background: none;
+                    }
+                 }
+            }
 
             .tb-megamenu-nav {
                 display: flex;
@@ -227,3 +238,38 @@
     }
 }
 
+.page-programas-y-estrategias-direccion-snbf-coordinacion,
+.page-programas-y-estrategias-direccion-snbf-sistemas-de-informacion,
+.page-programas-y-estrategias-direccion-snbf-documentos-y-enlaces,
+.page-programas-y-estrategias-direccion-snbf-que-es-el-snbf{
+    .view-id-news{
+        .slick-dotted.slick-slider{
+            .slick-dots{
+                @media (min-width: 576px){
+                    width: calc(100% / 12 * 9);
+                }
+            }
+        }
+        .slick-prev{
+            left: 15px;
+        }
+        .slick-next {
+            right: 15px;
+            @media (min-width: 576px){
+                right: calc((100% / 12 * 3) + 15px);
+            }
+        }
+    }
+    .views-field-title{
+        color: #333;
+        font-family: var.$font-montserrat;
+        font-size: 1.3em;
+        font-weight: 700;
+        margin: 1em 0;
+    }
+    .az-row--equal-height{
+        .snbf-tabs {
+            margin-bottom: 1rem;
+        }
+    }
+}
