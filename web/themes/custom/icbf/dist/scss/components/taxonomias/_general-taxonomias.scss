@@ -2504,7 +2504,18 @@
 .page-soy-menor-de-edad-puedo-tener-la-custodia-de-mi-hijo,
 .page-como-puedo-tener-la-custodia-definitiva-de-mi-hijoa,
 .page-cuales-son-los-procesos-existentes-para-determinar-la-custodia-de-un-menor-de-edad,
-.page-cuales-son-los-criterios-para-fijar-o-determinar-la-custodia-de-un-menor-de-edad {
+.page-cuales-son-los-criterios-para-fijar-o-determinar-la-custodia-de-un-menor-de-edad,
+.page-licencia-de-funcionamiento,
+.page-personeria-juridica,
+.page-bienes-sin-heredero-o-dueno,
+.page-estado-de-cuenta-de-aportes-parafiscales-0,
+.page-permiso-de-salida-del-pais,
+.page-adopcion-para-residentes-en-colombia,
+.page-fijacion-de-visitas,
+.page-restitucion-internacional-y-regulacion-internacional-de-visitas,
+.page-restitucion-internacional-y-regulacion-internacional-de-visitas,
+.page-portafolio-de-servicios-icbf-oferta,
+.page-autorizacion-venta-de-inmuebles-de-propiedad-de-los-ninos-ninas-y-adolescentes{
 
 
     .js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-citizen-category.form-item-citizen-category.form-no-label:before {
@@ -2616,7 +2627,8 @@
 .page-soy-menor-de-edad-puedo-tener-la-custodia-de-mi-hijo,
 .page-como-puedo-tener-la-custodia-definitiva-de-mi-hijoa,
 .page-cuales-son-los-procesos-existentes-para-determinar-la-custodia-de-un-menor-de-edad,
-.page-cuales-son-los-criterios-para-fijar-o-determinar-la-custodia-de-un-menor-de-edad {
+.page-cuales-son-los-criterios-para-fijar-o-determinar-la-custodia-de-un-menor-de-edad,
+{
 
     .block-field-blocknodeservices-faqfield-youtube h2,
     .block-field-blocknodeservices-faqfield-multimedia h2 {
@@ -3052,21 +3064,18 @@
         justify-content: flex-start !important;
     }
 
-    /* Columna izquierda */
+
     .bs-region--left {
-        flex: 1 1 60%;
-        max-width: 60%;
-        padding-right: 20px;
+        flex: 1 1 56%;
+        max-width: 56%;
     }
 
-    /* Columna derecha */
+
     .bs-region--right {
-        flex: 1 1 35%;
-        max-width: 35%;
-        background-color: #f9f9f9;
+        flex: 1 1 44%;
+        max-width: 44%;
         border-radius: 10px;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        padding: 10px;
     }
 
     /* ===== 3. Títulos con íconos e intersecciones ===== */
@@ -3085,10 +3094,10 @@
 
     /* Título h2 con ícono */
     .bs-region--right h2 {
-        font-size: 16px;
+       font-size: 1.2em;
         margin-top: 0;
         margin-bottom: 10px;
-        padding-left: 20px;
+        padding-left: 16px;
         position: relative;
         color: #555;
     }
@@ -3113,25 +3122,27 @@
 
     /* Nombres responsables */
     .local-staff-list .field__item {
+        font-family: 'Montserrat', sans-serif;
         color: #2d3e50;
         font-style: italic;
-        display: inline;
+        display: inline-flex;
     }
 
 
     /* ===== 8. Sección de cobertura ===== */
     .block-field-blocknodesede-localfield-coverage-areas {
         background: #fff;
-        padding: 20px;
         border-radius: 10px;
         margin-top: 20px;
         border: 1px solid #ddd;
+        padding-left: 11px;
     }
 
     .block-field-blocknodesede-localfield-coverage-areas h2 {
-        font-size: 18px;
         margin-bottom: 0.5rem;
-        font-weight: bold;
+        font-family: 'Montserrat', sans-serif;
+        line-height: normal !important;
+        font-size: 1.2em;
     }
 
     /* Columnas de municipios */
@@ -3167,38 +3178,6 @@
             width: 100%;
         }
     }
-
-
-
-    /* Base del ícono */
-    .bs-region--right h2::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 2px;
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        font-size: 16px;
-    }
-
-
-    /* Estilo base del ícono */
-    .bs-region--right h2::before {
-        font-family: "FontAwesome";
-        font-style: normal;
-        font-weight: normal;
-        text-decoration: inherit;
-        font-size: 16px;
-        position: absolute;
-        left: 0;
-        top: 2px;
-    }
-
-    /* Íconos válidos en FA 4.3 */
-    .bs-region--right h2:before {
-        content: "";
-    }
-
     .local-staff-list:before {
         color: #0b8763;
         content: "\f105";
@@ -3221,22 +3200,49 @@
     }
 
 
-    /* Estilo general de íconos */
-    .bs-region--right h2::before {
-        font-family: "FontAwesome";
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        color: #1a8b3c;
-        position: absolute;
-        left: 0;
-        top: 2px;
-        content: "";
-        /* se asigna por clase */
-    }
+  /* Dirección */
+  .block-field-blocknodesede-localfield-addres-local-offices h2::before {
+    font-family: "FontAwesome";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #1a8b3c;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    content: "\f041"!important; /* map-marker */
+  }
+
+  /* Teléfono */
+  .block-field-blocknodesede-localfield-phone h2::before {
+    font-family: "FontAwesome";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #1a8b3c;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    content: "\f095"!important; /* phone */
+  }
+
+  /* Horario */
+  .block-field-blocknodesede-localfield-working-hours h2::before {
+    font-family: "FontAwesome";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #1a8b3c;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    content: "\f017"!important; /* clock-o */
+  }
 
 
-    .node--view-mode-full .field__item {
+
+
+  .node--view-mode-full .field__item {
         font-size: 14px;
         font-family: 'Montserrat', sans-serif;
         color: #555;
@@ -3254,14 +3260,6 @@
         font-weight: 500;
     }
 }
-
-
-
-
-
-
-
-
 
 
 .page-caja-de-herramientas-innovacion {
@@ -4138,11 +4136,10 @@
 
 
 .page-caracterizacion-cuidadanos-peticionarios{
-  h3{
+  tbody  h4{
     font-family: 'Asap-Regular'!important;
     font-size: 1.2em!important;
   }
-
   .page-header{
     font-family: 'Montserrat', sans-serif;
     padding-bottom: 9px;
@@ -4156,42 +4153,14 @@
 .page-licencia-de-funcionamiento,
 .page-personeria-juridica,
 .page-bienes-sin-heredero-o-dueno,
+.page-estado-de-cuenta-de-aportes-parafiscales-0,
 .page-permiso-de-salida-del-pais,
 .page-adopcion-para-residentes-en-colombia,
-.page-fijacion-de-visitas
+.page-fijacion-de-visitas,
 .page-restitucion-internacional-y-regulacion-internacional-de-visitas,
 .page-restitucion-internacional-y-regulacion-internacional-de-visitas,
 .page-portafolio-de-servicios-icbf-oferta,
 .page-autorizacion-venta-de-inmuebles-de-propiedad-de-los-ninos-ninas-y-adolescentes{
-
-  #icbf-module-category-selection-form {
-    margin-top: 30px;
-  }
-
-  #icbf-module-category-selection-form > div > .js-form-item{
-    width: 73.33333333%!important;
-  }
-
-  #icbf-module-category-selection-form > div > #container-procedure{
-    width: 83.33333333%!important;
-  }
-
-  .select-citizen-category {
-    height: 40px!important;
-    border-radius: 150px!important;
-    padding-left: 24px!important;
-    border: 1px solid #72bf44!important;
-  }
-
-  #icbf-module-category-selection-form{
-    position: relative;
-    right: 14px;
-  }
-
-  .widgetCitizenContainer #icbf-module-category-selection-form{
-    text-align: justify!important;
-  }
-
   #edit-citizen-category{
     position: relative;
     left: 20px;
@@ -4204,16 +4173,6 @@
   h1, h2, h3, h4 {
     font-family: "Asap-Regular"!important;
   }
-
-
-  .select-citizen-category,
-  .select-procedure{
-    height: 40px!important;
-    border-radius: 150px!important;
-    padding-left: 24px!important;
-    border: 1px solid #72bf44!important;
-  }
-
 
   /* Forma y estilo base */
   .stbe-social-links__item i {
@@ -4395,6 +4354,7 @@
 
   [data-drupal-selector="edit-actions"]{
     text-align: center;
+    width: 90%;
   }
 
   #edit-submit-tramites {
