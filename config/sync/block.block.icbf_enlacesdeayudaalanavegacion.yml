@@ -3,14 +3,13 @@ langcode: es
 status: true
 dependencies:
   module:
-    - block_class
     - system
   theme:
     - icbf
 id: icbf_enlacesdeayudaalanavegacion
 theme: icbf
 region: breadcrumb
-weight: 0
+weight: -21
 provider: null
 plugin: system_breadcrumb_block
 settings:
