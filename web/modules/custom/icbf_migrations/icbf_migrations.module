@@ -15,7 +15,6 @@ use Drupal\views\Plugin\views\query\QueryPluginBase;
 function icbf_migrations_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
   if (empty($args[0])) {
     $view_id = $view->id();
-    $args = [];
     // Get the arguments for nodes.
     $node = \Drupal::routeMatch()->getParameter('node');
     if ($node instanceof \Drupal\node\NodeInterface) {
@@ -39,6 +38,7 @@ function icbf_migrations_views_pre_view(ViewExecutable $view, $display_id, array
     if (!empty($layout_configs)) {
       $cid = 'views_processed';
       $cache_data = \Drupal::cache()->get($cid)->data ?? [];
+      $args = [];
 
       foreach ($layout_configs as $layout_config) {
         // @see Drupal\layout_builder\Section
@@ -64,6 +64,7 @@ function icbf_migrations_views_pre_view(ViewExecutable $view, $display_id, array
       }
     }
     elseif (empty($layout_configs) && $term) {
+      $args = [];
       $vocabulary = $term->bundle();
       $items_per_page = $view->getItemsPerPage();
       $config_display = \Drupal::database()->select('config', 'c')
@@ -170,6 +171,21 @@ function icbf_migrations_entity_view_alter(array &$build, \Drupal\Core\Entity\En
       // Remove Gestion Humana section in Layout builder to default.
       unset($build['_layout_builder'][3]);
       $build['_layout_builder']['#cache'] = NULL;
+      break;
+
+    case 'node':
+      if ($entity->bundle() == 'sede_local') {
+        $place_type = $entity->get('field_place_type')->getValue();
+        if (!empty($place_type) && $place_type[0]['target_id'] == 6945) {
+          unset($build['_layout_builder'][0]);
+          unset($build['_layout_builder'][1]);
+        }
+        else {
+          unset($build['_layout_builder'][2]);
+          unset($build['_layout_builder'][3]);
+          unset($build['_layout_builder'][4]);
+        }
+      }
       break;
   }
 }

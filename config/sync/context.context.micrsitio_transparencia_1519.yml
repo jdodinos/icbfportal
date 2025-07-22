@@ -19,7 +19,7 @@ conditions:
     negate: false
     uuid: bf933ce5-2e46-415e-87b0-37a9d23960a6
     context_mapping: {  }
-    pages: "/transparencia-y-acceso-informacion-publica-0\r\n/transparencia-y-acceso-informacion-publica/contratacion\r\n/transparencia-y-acceso-informacion-publica/datos-abiertos\r\n/transparencia-y-acceso-informacion-publica/informacion-de-la-entidad\r\n/transparencia-y-acceso-informacion-publica/informacion-especifica-grupos-interes\r\n/transparencia-y-acceso-informacion-publica/normativa\r\n/transparencia-y-acceso-informacion-publica/participa\r\n/transparencia-y-acceso-informacion-publica/planeacion-presupuesto-e-informes\r\n/transparencia-y-acceso-informacion-publica/reporte-informacion-especifica-entidad\r\n/transparencia-y-acceso-informacion-publica/tramites"
+    pages: "/transparencia-y-acceso-informacion-publica-0\r\n/transparencia-y-acceso-informacion-publica/contratacion\r\n/transparencia-y-acceso-informacion-publica/datos-abiertos\r\n/transparencia-y-acceso-informacion-publica/informacion-de-la-entidad\r\n/transparencia-y-acceso-informacion-publica/informacion-especifica-grupos-interes\r\n/transparencia-y-acceso-informacion-publica/normativa\r\n/transparencia-y-acceso-informacion-publica/participa\r\n/transparencia-y-acceso-informacion-publica/planeacion-presupuesto-e-informes\r\n/transparencia-y-acceso-informacion-publica/reporte-informacion-especifica-entidad\r\n/transparencia-y-acceso-informacion-publica/tramites\r\n/taxonomy/term/8012\r\n/taxonomy/term/8013\r\n/taxonomy/term/8014\r\n/taxonomy/term/8015\r\n/taxonomy/term/8016\r\n/taxonomy/term/8017\r\n/taxonomy/term/8018\r\n/taxonomy/term/8019\r\n/taxonomy/term/8020"
 reactions:
   blocks:
     id: blocks
