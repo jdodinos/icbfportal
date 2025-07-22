@@ -14,6 +14,8 @@ use Drupal\views\Plugin\views\query\QueryPluginBase;
  */
 function icbf_migrations_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
   if (empty($args[0])) {
+    $view_id = $view->id();
+    $args = [];
     // Get the arguments for nodes.
     $node = \Drupal::routeMatch()->getParameter('node');
     if ($node instanceof \Drupal\node\NodeInterface) {
@@ -63,8 +65,6 @@ function icbf_migrations_views_pre_view(ViewExecutable $view, $display_id, array
     }
     elseif (empty($layout_configs) && $term) {
       $vocabulary = $term->bundle();
-      $view_id = $view->id();
-      $args = [];
       $items_per_page = $view->getItemsPerPage();
       $config_display = \Drupal::database()->select('config', 'c')
         ->fields('c', ['data'])
@@ -92,13 +92,35 @@ function icbf_migrations_views_pre_view(ViewExecutable $view, $display_id, array
                     }
                   }
 
-                  break;
+                  break 2;
                 }
               }
             }
           }
         }
       }
+    }
+  }
+
+  // Only for SIGE Process View.
+  if ($view->id() == 'sige_process' && $display_id == 'block_4') {
+    $url = explode('/', \Drupal::service('path.current')->getPath());
+    $term_id = $url[3];
+    $vocabulary = 'sige_process_type';
+    $children = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree(
+      $vocabulary,
+      $term_id,
+    );
+
+    if (empty($children)) {
+      $args[] = 'all';
+    }
+    else {
+      $terms = [];
+      foreach ($children as $term) {
+        $terms[] = $term->tid;
+      }
+      $args[] = implode(',', $terms);
     }
   }
 }
@@ -149,34 +171,6 @@ function icbf_migrations_entity_view_alter(array &$build, \Drupal\Core\Entity\En
       unset($build['_layout_builder'][3]);
       $build['_layout_builder']['#cache'] = NULL;
       break;
-  }
-}
-
-/**
- * Implementa hook_views_query_alter().
- */
-function icbf_migrations_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
-  if ($view->id() === 'sige_process' && $view->current_display === 'block_4') {
-    $term_id = $view->args[0] ?? NULL;
-    if (!$term_id || !is_numeric($term_id)) {
-      return;
-    }
-
-    $children = \Drupal::entityTypeManager()
-      ->getStorage('taxonomy_term')
-      ->loadTree(NULL, $term_id, 1, TRUE);
-
-    $tids = [$term_id];
-    foreach ($children as $child) {
-      $tids[] = $child->id();
-    }
-
-    foreach ($query->where[0]['conditions'] as &$condition) {
-      if (isset($condition['field']) && str_contains($condition['field'], 'taxonomy_term_field')) {
-        $condition['value'] = $tids;
-        $condition['operator'] = 'IN';
-      }
-    }
   }
 }
 

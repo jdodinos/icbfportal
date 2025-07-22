@@ -1,19 +1,20 @@
-langcode: en
+uuid: 4ba7b104-c127-47e0-bdb4-7b027299c990
+langcode: es
 status: true
 dependencies:
   module:
     - system
   theme:
     - icbf
-id: icbf_messages
+id: icbf_mensajes
 theme: icbf
-region: content
-weight: -7
+region: feature
+weight: -20
 provider: null
 plugin: system_messages_block
 settings:
   id: system_messages_block
-  label: Messages
-  provider: system
+  label: Mensajes
   label_display: '0'
+  provider: system
 visibility: {  }
