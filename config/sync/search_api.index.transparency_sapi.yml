@@ -20,7 +20,7 @@ dependencies:
     - field.storage.node.field_trd_ubicacion
     - field.storage.node.field_trd_vigencia
     - field.storage.node.field_trimester
-    - search_api.server.icbf
+    - search_api.server.icbf_solr
   module:
     - file
     - node
@@ -75,7 +75,7 @@ third_party_settings:
         es: '0'
       use_universal_collation: false
 id: transparency_sapi
-name: 'Transparencia SAPI'
+name: 'Transparencia SAPI - Informacion Transparencia'
 description: ''
 read_only: false
 field_settings:
@@ -350,4 +350,4 @@ options:
   delete_on_fail: true
   index_directly: true
   track_changes_in_references: true
-server: icbf
+server: icbf_solr
