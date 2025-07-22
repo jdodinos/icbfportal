@@ -10108,9 +10108,9 @@ display:
           label: ''
           exclude: true
           alter:
-            alter_text: true
+            alter_text: false
             text: '<a href="{{ field_document }}" target="_blank"><span class="sr-only">{{ field_document }}</span></a>'
-            make_link: false
+            make_link: true
             path: '{{ field_document }}'
             absolute: false
             external: false
