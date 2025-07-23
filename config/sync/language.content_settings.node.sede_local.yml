@@ -1,0 +1,11 @@
+uuid: b7adeead-4c52-4efa-ae15-337efbf3c871
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.sede_local
+id: node.sede_local
+target_entity_type_id: node
+target_bundle: sede_local
+default_langcode: site_default
+language_alterable: false
