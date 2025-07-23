@@ -3680,6 +3680,10 @@
                     .view-display-id-block_4 {
                         .view-filters {
 
+                            .js-form-type-textfield label {
+                                display: none;
+                            }
+
                             .fieldset-legend {
                                 //white-space: nowrap;
                                 font-size: 1.2em;
