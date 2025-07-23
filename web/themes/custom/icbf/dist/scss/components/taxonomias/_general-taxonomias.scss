@@ -2392,6 +2392,39 @@
 
 }
 
+.page-aseguramiento-la-calidad-directrices-0{
+    #block-icbf-content {
+        padding: 0 0.5em;
+
+        .block-field-blocktaxonomy-termsecctionsfield-content {
+            display: none;
+        }
+        
+        .view-licencias-de-funcionamiento-sapi {
+            .view-filters{
+                .form-radios {
+                    margin-left: 0;
+                }
+            }
+            .view-content{
+                table{
+                    width: 100%;
+                }
+            }
+            nav.pager{
+                text-transform: lowercase;
+                white-space: nowrap;
+                li{
+                    font-weight: normal !important;
+                }
+            }
+        }
+    }
+}
+
+
+
+
 //diseño del paginador para las paginas
 .page-aseguramiento-la-calidad-licencias-de-funcionamiento-0,
 .page-aseguramiento-la-calidad-personerias-juridicas {
