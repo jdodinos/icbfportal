@@ -61,7 +61,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: '<a href="/node/{{ id }}" title="Consultar Respuesta" target="_blank" class="faq-btn"><i class="fa fa-plus" aria-hidden="true"></i> Consultar respuesta</a>'
+            text: '<a href="/node/{{ nid }}" title="Consultar Respuesta" target="_blank" class="faq-btn"><i class="fa fa-plus" aria-hidden="true"></i> Consultar respuesta</a>'
             make_link: false
             path: ''
             absolute: false
@@ -779,7 +779,7 @@ display:
       exposed_form:
         type: bef
         options:
-          submit_button: Aplicar
+          submit_button: Buscar
           reset_button: false
           reset_button_label: Restablecer
           exposed_sorts_label: 'Ordenar por'
@@ -1197,10 +1197,593 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      fields:
+        nid:
+          id: nid
+          table: search_api_datasource_faqs_sapi_entity_node
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: search_api_field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: true
+            text: '<a href="/node/{{ nid }}" title="Consultar Respuesta" target="_blank" class="faq-btn"><i class="fa fa-plus" aria-hidden="true"></i> Consultar respuesta</a>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_numeric
+          fallback_options:
+            set_precision: false
+            precision: 0
+            decimal: .
+            separator: ','
+            format_plural: false
+            format_plural_string: !!binary MQNAY291bnQ=
+            prefix: ''
+            suffix: ''
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            format_plural_values:
+              - '1'
+              - '@count'
+        field_file_categoria:
+          id: field_file_categoria
+          table: search_api_datasource_faqs_sapi_entity_node
+          field: field_file_categoria
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: search_api_field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_entity
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            display_methods:
+              actas_contentivas_type:
+                display_method: label
+              announcement_status:
+                display_method: label
+              citizen_category:
+                display_method: label
+                view_mode: default
+              congreso_xxii:
+                display_method: label
+                view_mode: default
+              convocatorias_gesti_n_humana:
+                display_method: label
+              departments_municipalities:
+                display_method: label
+              dependencies:
+                display_method: label
+              despublicados:
+                display_method: label
+                view_mode: default
+              entidad_titular:
+                display_method: label
+              event_calendar_status:
+                display_method: label
+              eventos:
+                display_method: label
+              eventos_agenda:
+                display_method: label
+              file_category:
+                display_method: label
+                view_mode: default
+              forums:
+                display_method: label
+                view_mode: default
+              hiring_process_category:
+                display_method: label
+              hiring_process_type:
+                display_method: label
+              locations:
+                display_method: label
+                view_mode: default
+              media_folders:
+                display_method: label
+              menu_childhood:
+                display_method: label
+              menu_observatory:
+                display_method: label
+              menu_transparency:
+                display_method: label
+              migrantes:
+                display_method: label
+              mis_manos_te_ensenan:
+                display_method: label
+                view_mode: default
+              ninos_ninas_y_adolescentes:
+                display_method: label
+                view_mode: default
+              normativa:
+                display_method: label
+              para_papas:
+                display_method: label
+                view_mode: default
+              periodicity:
+                display_method: label
+              petition_rights_status:
+                display_method: label
+              procedure:
+                display_method: label
+                view_mode: default
+              procedure_type:
+                display_method: label
+              programa_adopciones:
+                display_method: label
+                view_mode: default
+              secctions:
+                display_method: label
+                view_mode: default
+              section_labels:
+                display_method: label
+              sige:
+                display_method: label
+              sige_process_type:
+                display_method: label
+                view_mode: default
+              tags:
+                display_method: label
+              tags_tr_mites:
+                display_method: label
+              tipo_de_notificaci_n:
+                display_method: label
+              tipos_de_ubicaci_n:
+                display_method: label
+              transparencia_1519:
+                display_method: label
+              trd_regional:
+                display_method: label
+        title:
+          id: title
+          table: search_api_datasource_faqs_sapi_entity_node
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: search_api_field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: h2
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+        field_faq_code:
+          id: field_faq_code
+          table: search_api_datasource_faqs_sapi_entity_node
+          field: field_faq_code
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: search_api_field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: true
+            text: '<span><i class="fa fa-angle-right" aria-hidden="true"></i> Código No. {{ field_faq_code }}</span>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+        field_youtube:
+          id: field_youtube
+          table: search_api_datasource_faqs_sapi_entity_node
+          field: field_youtube
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: search_api_field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: true
+            text: '<div class="faq-tipright"><a href="{{ field_youtube }}" target="_blank" alt="ver video LSC" title="Video Lenguaje de Señas" class="faq-videor"><i class="fa fa-youtube-play" aria-hidden="true"></i><span class="faq-tiptxtr">Video LSC</span></a></div>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: input
+          type: youtube_url
+          settings:
+            link: false
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+        field_multimedia:
+          id: field_multimedia
+          table: search_api_datasource_faqs_sapi_entity_node
+          field: field_multimedia
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: search_api_field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: true
+            text: '<div class="faq-tipright"><a href="{{ field_multimedia }}" alt="audio" title="escuchar audio" class="faq-audior"><i class="fa fa-headphones" aria-hidden="true"></i><span class="faq-tiptxtr">Audio</span></a></div>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: file_url_plain
+          settings: {  }
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 5
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "<div class=\"box-faq\">\r\n\r\n<div class=\"faq-title\">{{ title }}</div><div>{{ nid }}</div>\r\n<div class=\"label-faq\">{{ field_file_categoria }}</div>\r\n<div class=\"faq-box-line\"></div>\r\n\r\n<div class=\"faq-bottom\">\r\n<div class=\"b-left\">{{ field_faq_code }}</div>\r\n<div class=\"b-right\">{{ field_youtube }} {{ field_multimedia }}</div>\r\n</div>\r\n\r\n</div>\r\n"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
       exposed_form:
         type: bef
         options:
-          submit_button: Aplicar
+          submit_button: Buscar
           reset_button: true
           reset_button_label: Restablecer
           exposed_sorts_label: 'Ordenar por'
@@ -1235,6 +1818,17 @@ display:
                 select_all_none: false
                 select_all_none_nested: false
                 display_inline: false
+              search_api_fulltext:
+                plugin_id: default
+                advanced:
+                  placeholder_text: ''
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+                  hide_label: false
       filters:
         status:
           id: status
@@ -1402,6 +1996,18 @@ display:
                 weights:
                   build: 5
                 settings: {  }
+              exclude_specified_items:
+                weights:
+                  build: 50
+                settings:
+                  exclude: '7178'
+                  regex: 0
+                  invert: 0
+              display_value_widget_order:
+                weights:
+                  sort: 40
+                settings:
+                  sort: ASC
               count_widget_order:
                 weights:
                   sort: 30
@@ -1566,6 +2172,7 @@ display:
         exposed_form: false
         style: false
         row: false
+        fields: false
         filters: false
         filter_groups: false
       use_ajax: true
