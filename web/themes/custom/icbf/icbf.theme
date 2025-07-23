@@ -108,7 +108,6 @@ function icbf_preprocess_field(&$variables) {
             // Remover todos los atributos style="..."
             $html_text = preg_replace('/\s*style="[^"]*"/i', '', $html_text);
           }
-
         }
       }
     }
@@ -293,6 +292,7 @@ function icbf_preprocess_views_view_field(&$variables) {
       $output = str_replace('<p>', '', $variables['output']);
       $output = str_replace('</p>', '', $output);
       $decoded_html = html_entity_decode($output);
+      $decoded_html = icbf_files_directory_process($decoded_html);
       $variables['output'] = [
         '#markup' => $decoded_html,
       ];
@@ -408,15 +408,17 @@ function icbf_preprocess_block(&$variables) {
  *   The processed HTML content with placeholders replaced.
  */
 function icbf_files_directory_process($html) {
-  if (strpos($html, '-base-url-') === FALSE && strpos($html, '-files-directory-') === FALSE) {
-    return $html;
+  if (strpos($html, '-base-url-') != FALSE) {
+    $request = \Drupal::service('request_stack')->getCurrentRequest();
+    $base_url = $request->getSchemeAndHttpHost();
+    $html = str_replace('-base-url-', $base_url, $html);
   }
 
-  $request = \Drupal::service('request_stack')->getCurrentRequest();
-  $base_url = $request->getSchemeAndHttpHost();
-  $public_files_path = \Drupal::config('system.file')->get('path.public') ?? 'sites/default/files';
-  $html = str_replace('-base-url-', $base_url, $html);
-  $html = str_replace('-files-directory-', $public_files_path, $html);
+  if (strpos($html, '-files-directory-') != FALSE) {
+    $public_files_path = \Drupal::config('system.file')->get('path.public') ?? 'sites/default/files';
+    $html = str_replace('-files-directory-', $public_files_path, $html);
+  }
+
   return $html;
 }
 
