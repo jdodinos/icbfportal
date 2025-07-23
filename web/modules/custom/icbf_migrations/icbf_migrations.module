@@ -165,12 +165,16 @@ function icbf_migrations_entity_view_alter(array &$build, \Drupal\Core\Entity\En
   switch ($entity->getEntityTypeId()) {
     case 'taxonomy_term':
       // Add Layout Builder structure to Gestión Humana term.
-      if ($entity->bundle() == 'sige_process_type' && $entity->id() == 6505) {
-        $build['_layout_builder'][2] = $build['_layout_builder'][3];
+      if ($entity->bundle() == 'sige_process_type') {
+        if ($entity->id() == 6505) {
+          $build['_layout_builder'][2] = $build['_layout_builder'][3];
+        }
+        else {
+          // Remove Gestion Humana section in Layout builder to default.
+          unset($build['_layout_builder'][3]);
+          $build['_layout_builder']['#cache'] = NULL;
+        }
       }
-      // Remove Gestion Humana section in Layout builder to default.
-      unset($build['_layout_builder'][3]);
-      $build['_layout_builder']['#cache'] = NULL;
       break;
 
     case 'node':
