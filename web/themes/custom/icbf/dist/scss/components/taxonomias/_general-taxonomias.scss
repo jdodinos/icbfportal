@@ -3731,6 +3731,531 @@
 ******RENDICIÓN DE CUENTAS (Segundo nivel)******
 ************************************************
 */
+
+.page-rendicion-de-cuentas-icbf-sede-direccion-general{
+    #block-icbf-content{
+        .content{
+            font-family: 'Montserrat', sans-serif;
+
+            >.layout:first-child, >.layout:nth-child(3){
+                h1{
+                    font-size: 1.7em;
+                }
+                h3{
+                    font-size: 1.2em;
+                }
+            }
+
+            >.layout:nth-child(2){
+                h2{
+                    font-size: 1.4em;
+                }
+
+                .view-filters{
+                    //titulo filtro
+                    .fieldset-legend {
+                        font-size: 1.4em;
+                    }
+
+                    /*Entorno de desarrollo CHECKS CAMBIADOS*/
+                    .form-radios{
+                        padding-top: 1em;
+
+                        input[type=checkbox], input[type=radio] {
+                            appearance: none;
+                            width: 13px;
+                            height: 13px;
+                            border: 1px solid #555;
+                            border-radius: 3px;
+                            margin: 0 4px 0 0 !important;
+
+                        }
+                        
+                        /* Cuando se selecciona el check*/
+                        input[type=checkbox]:checked, input[type=radio]:checked {
+                            background-color: #1996d0;
+                            border-color: #1996d0;                        
+                        }
+
+                        /*Estilos para el icono interno del check*/    
+                        input[type=checkbox]::after, input[type=radio]::after {
+                            content: '✔';
+                            color: white;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        //color de letras
+                        label {
+                            white-space: nowrap;
+                            color: #1996d0;
+                            text-decoration: none !important;
+                            font-size: 14px;
+                        }
+
+                        label:hover {
+                            color: #125e81;
+                            text-decoration: underline !important;
+                        }
+                            
+                    }
+                }
+
+                nav.pager{
+                    text-transform: lowercase;
+                    white-space: nowrap;
+                    li{
+                        font-weight: normal !important;
+                    }
+                }
+
+                /*RESPONSIVE*/
+                .view-display-id-block_2{
+                    justify-items: center;
+                    display: grid;
+                    grid-template-areas:
+                        "a b"
+                        "a c";
+                    grid-template-columns: 25% 75%;
+
+                    .view-filters{
+                        grid-area: a;
+                        width: 100% !important;
+                    }
+                    .view-content{
+                        grid-area: b;
+                        table{
+                            width: 100% !important;
+                        }
+                    }
+                    nav.pager{
+                        grid-area: c;
+                    }
+                }
+
+                @media (max-width: 768px){
+                    .view-display-id-block_2{
+                        justify-items: center;
+                        padding: 1em;
+                        display: grid;
+                        grid-template-areas:
+                            "a"
+                            "b"
+                            "c";
+                        grid-template-columns: 100%;
+    
+                        .view-filters{
+                            grid-area: a;
+                            width: 100% !important;
+                        }
+                        .view-content{
+                            grid-area: b;
+                            table{
+                                width: 100% !important;
+                            }
+                        }
+                        nav.pager{
+                            grid-area: c;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+.page-rendicion-de-cuentas-icbf-rendicion-de-cuentas-en-regiones {
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
+                .block-field-blocktaxonomy-termsecctionsfield-content {
+                    height: 0;
+                }
+
+                .block-views-blockaccountability-sapi-block-4 {
+                    .view-display-id-block_4 {
+                        justify-items: center;
+                        display: grid;
+                        grid-template-areas:
+                            "a b"
+                            "a c";
+                        grid-template-columns: 25% 75%;
+
+                        .view-filters {
+                            grid-area: a;
+                            width: 100%;
+                            margin-top: 0;
+                        }
+
+                        .view-content {
+                            grid-area: b;
+                            width: 100%;
+
+                            li {
+                                border: 1px solid #ddd !important;
+                            }
+                        }
+
+                        nav.pager {
+                            grid-area: c;
+                        }
+                    }
+
+                    @media (max-width: 768px) {
+                        .view-display-id-block_4 {
+                            justify-items: center;
+                            padding: 1em;
+                            display: grid;
+                            grid-template-areas:
+                                "a"
+                                "b"
+                                "c";
+                            grid-template-columns: 100%;
+
+                            .view-filters {
+                                grid-area: a;
+                                width: 100%;
+                            }
+
+                            .view-content {
+                                grid-area: b;
+                                width: 100%;
+                            }
+
+                            nav.pager {
+                                grid-area: c;
+                            }
+                        }
+                    }
+
+                    //filtros
+                    .view-display-id-block_4 {
+                        .view-filters {
+
+                            .fieldset-legend {
+                                white-space: nowrap;
+                                font-size: 1.2em;
+                            }
+
+                            .form-radios {
+                                padding-top: 1em;
+                                margin-left: 0;
+
+                                input[type=checkbox],
+                                input[type=radio] {
+                                    appearance: none;
+                                    width: 13px;
+                                    height: 13px;
+                                    border: 1px solid #555;
+                                    border-radius: 3px;
+                                    margin: 0 4px 0 0 !important;
+                                }
+
+                                /* Cuando se selecciona el check*/
+                                /*Estilos para el icono interno del check*/
+                                input[type=checkbox]:checked,
+                                input[type=radio]:checked {
+                                    background-color: #1996d0;
+                                    border-color: #1996d0;
+                                }
+
+                                input[type=checkbox]::after,
+                                input[type=radio]::after {
+                                    content: '✔';
+                                    color: white;
+                                    width: 100%;
+                                    height: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                }
+
+                                //color de letras
+                                label {
+                                    white-space: nowrap;
+                                    color: #1996d0;
+                                    text-decoration: none !important;
+                                    font-size: 14px;
+                                }
+
+                                label:hover {
+                                    color: #125e81;
+                                    text-decoration: underline !important;
+                                }
+
+                            }
+                        }
+
+                        .view-content{
+                            h4 time {
+                                display: none;
+                            }
+                            >.view-grouping{
+                                >.view-grouping-content {
+
+                                    >.view-grouping{
+                                        margin-bottom: 20px;
+                                        
+                                        .view-grouping-header {
+                                            font-size: 1.2em;
+                                            font-weight: 500;
+                                            font-family: 'Asap-Regular' !important;
+                                            margin-top: 20px;
+                                            margin-bottom: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        nav.pager {
+                            .page-link {
+                                font-size: 11px;
+                            }
+
+                            .page-item {
+                                .page-link {
+                                    width: 100%;
+                                    border-radius: 0%;
+                                }
+
+                                /*
+                                &.disabled {
+                                    span {
+                                        display: none;
+                                        height: initial;
+                                        line-height: 20px;
+                                    }
+                                }*/
+
+                                a {
+                                    text-transform: lowercase;
+                                    white-space: nowrap;
+                                    font-size: 14px;
+                                    /*de la pagina del icbf*/
+                                }
+                            }
+
+                            .page-item:first-child {
+                                .page-link {
+                                    border-radius: 5px 0px 0px 5px !important;
+                                }
+                            }
+
+                            .page-item:last-child {
+                                .page-link {
+                                    border-radius: 0px 5px 5px 0px !important;
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.page-rendicion-de-cuentas-icbf-audiencias-publicas-de-rendicion-de-cuentas {
+    #block-icbf-content {
+        .content {
+            >.layout:nth-child(2) {
+                .block-field-blocktaxonomy-termsecctionsfield-content {
+                    height: 0;
+                }
+
+                .block-views-blockaccountability-sapi-block-5 {
+                    .view-display-id-block_5 {
+                        justify-items: center;
+                        display: grid;
+                        grid-template-areas:
+                            "a b"
+                            "a c";
+                        grid-template-columns: 25% 75%;
+
+                        .view-filters {
+                            grid-area: a;
+                            width: 100%;
+                            margin-top: 0;
+                        }
+
+                        .view-content {
+                            grid-area: b;
+                            width: 100%;
+
+                            li {
+                                border: 1px solid #ddd !important;
+                            }
+                        }
+
+                        nav.pager {
+                            grid-area: c;
+                        }
+                    }
+
+                    @media (max-width: 768px) {
+                        .view-display-id-block_5 {
+                            justify-items: center;
+                            padding: 1em;
+                            display: grid;
+                            grid-template-areas:
+                                "a"
+                                "b"
+                                "c";
+                            grid-template-columns: 100%;
+
+                            .view-filters {
+                                grid-area: a;
+                                width: 100%;
+                            }
+
+                            .view-content {
+                                grid-area: b;
+                                width: 100%;
+                            }
+
+                            nav.pager {
+                                grid-area: c;
+                            }
+                        }
+                    }
+
+                    //filtros
+                    .view-display-id-block_5 {
+                        .view-filters {
+
+                            .fieldset-legend {
+                                white-space: nowrap;
+                                font-size: 1.2em;
+                            }
+
+                            .form-radios {
+                                padding-top: 1em;
+                                margin-left: 0;
+
+                                input[type=checkbox],
+                                input[type=radio] {
+                                    appearance: none;
+                                    width: 13px;
+                                    height: 13px;
+                                    border: 1px solid #555;
+                                    border-radius: 3px;
+                                    margin: 0 4px 0 0 !important;
+                                }
+
+                                /* Cuando se selecciona el check*/
+                                /*Estilos para el icono interno del check*/
+                                input[type=checkbox]:checked,
+                                input[type=radio]:checked {
+                                    background-color: #1996d0;
+                                    border-color: #1996d0;
+                                }
+
+                                input[type=checkbox]::after,
+                                input[type=radio]::after {
+                                    content: '✔';
+                                    color: white;
+                                    width: 100%;
+                                    height: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                }
+
+                                //color de letras
+                                label {
+                                    white-space: nowrap;
+                                    color: #1996d0;
+                                    text-decoration: none !important;
+                                    font-size: 14px;
+                                }
+
+                                label:hover {
+                                    color: #125e81;
+                                    text-decoration: underline !important;
+                                }
+
+                            }
+                        }
+
+                        .view-content{
+                            h4 time {
+                                display: none;
+                            }
+                            >.view-grouping{
+                                >.view-grouping-content {
+
+                                    >.view-grouping{
+                                        margin-bottom: 20px;
+                                        
+                                        .view-grouping-header {
+                                            font-size: 1.2em;
+                                            font-weight: 500;
+                                            font-family: 'Asap-Regular' !important;
+                                            margin-top: 20px;
+                                            margin-bottom: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        nav.pager {
+                            .page-link {
+                                font-size: 11px;
+                            }
+
+                            .page-item {
+                                .page-link {
+                                    width: 100%;
+                                    border-radius: 0%;
+                                }
+
+                                /*
+                                &.disabled {
+                                    span {
+                                        display: none;
+                                        height: initial;
+                                        line-height: 20px;
+                                    }
+                                }*/
+
+                                a {
+                                    text-transform: lowercase;
+                                    white-space: nowrap;
+                                    font-size: 14px;
+                                    /*de la pagina del icbf*/
+                                }
+                            }
+
+                            .page-item:first-child {
+                                .page-link {
+                                    border-radius: 5px 0px 0px 5px !important;
+                                }
+                            }
+
+                            .page-item:last-child {
+                                .page-link {
+                                    border-radius: 0px 5px 5px 0px !important;
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 .page-mesas-publicas-region {
     #block-page-title-block {
         display: none;
