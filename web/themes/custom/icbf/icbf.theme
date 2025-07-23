@@ -91,13 +91,23 @@ function icbf_preprocess_field(&$variables) {
           $html_close = substr($html, $item_pos, $html_close_pos);
         }
 
-        if (strpos($item['content']['#text'], 'owl-carousel st-owl-theme') !== FALSE) {
-          $html_text = &$item['content']['#text'];
-          $html_text = str_replace('owl-carousel st-owl-theme', 'icbf-owl-carousel', $html_text);
-          $html_text = str_replace('owl-wrapper', 'icbf-owl-carousel-wrapper', $html_text);
-          // $html_text = str_replace('class="owl-item"', 'class="icbf-owl-item"', $html_text);
-          // Remover todos los atributos style="..."
-          $html_text = preg_replace('/\s*style="[^"]*"/i', '', $html_text);
+        if (strpos($item['content']['#text'], 'owl-carousel st-owl-theme') !== FALSE || strpos($item['content']['#text'], 'stpe-quoteslider') !== FALSE) {
+          if (strpos($item['content']['#text'], 'owl-carousel st-owl-theme') !== FALSE) {
+            $string_to_replace = 'owl-carousel st-owl-theme';
+          }
+          elseif (strpos($item['content']['#text'], 'stpe-quoteslider') !== FALSE) {
+            $string_to_replace = 'carousel slide stpe-quoteslider';
+          }
+
+          if (isset($string_to_replace)) {
+            $html_text = &$item['content']['#text'];
+            $html_text = str_replace($string_to_replace, 'icbf-owl-carousel', $html_text);
+            $html_text = str_replace('owl-wrapper', 'icbf-owl-carousel-wrapper', $html_text);
+            $html_text = str_replace('carousel-inner', 'icbf-owl-carousel-wrapper', $html_text);
+            $html_text = preg_replace('/<ol class="carousel-indicators">.*?<\/ol>/s', '', $html_text);
+            // Remover todos los atributos style="..."
+            $html_text = preg_replace('/\s*style="[^"]*"/i', '', $html_text);
+          }
 
         }
       }

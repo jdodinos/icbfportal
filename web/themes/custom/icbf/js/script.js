@@ -112,6 +112,17 @@ $ = jQuery;
             dots: true
           });
         }
+        else if ($('#stpe-quoteslider').length) {
+          $('#stpe-quoteslider .icbf-owl-carousel-wrapper').slick({
+            infinite: true,
+            speed: 1000,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            fade: true
+          });
+        }
         else {
           $('.icbf-owl-carousel-wrapper').slick({
             infinite: true,
