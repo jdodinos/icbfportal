@@ -1,0 +1,15 @@
+@use "../../abstracts/variables" as var;
+
+
+.page-portafolio-de-servicios-icbf-oferta {
+
+    .h2-word-msintro {
+        font-family: var.$font-asap-regular;
+        font-size: 1.4em;
+    }
+
+    .h3-word-msintro span {
+       font-family: var.$font-asap-regular;
+       font-size: 16px; 
+    }
+}
