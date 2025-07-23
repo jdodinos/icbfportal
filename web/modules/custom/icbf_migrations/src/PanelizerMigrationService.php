@@ -671,6 +671,13 @@ class PanelizerMigrationService {
         }
         break;
 
+      case 'catalogo_sme_sapi_':
+        $displayes = ['block'];
+        if (in_array($display_id, $displayes)) {
+          $view_id = 'catalogo_sme_sapi_solr';
+        }
+        break;
+
       case 'local_shopping':
         $displayes = ['block'];
         if (in_array($display_id, $displayes)) {

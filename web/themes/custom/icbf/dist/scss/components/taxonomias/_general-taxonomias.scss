@@ -2173,8 +2173,8 @@
                     input[type=radio]::after {
                         content: '✔';
                         color: white;
-                        width: 100%;
-                        height: 100%;
+                        width: 10px;
+                        height: 10px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -3472,9 +3472,11 @@
             >.layout:first-child, >.layout:nth-child(3){
                 h1{
                     font-size: 1.7em;
+                    font-family: 'Asap-Regular';
                 }
                 h3{
                     font-size: 1.2em;
+                    font-family: 'Asap-Regular';
                 }
 
                 @media (max-width: 768px) {
@@ -3522,8 +3524,8 @@
                         input[type=checkbox]::after, input[type=radio]::after {
                             content: '✔';
                             color: white;
-                            width: 100%;
-                            height: 100%;
+                            width: 10px;
+                            height: 10px;
                             display: flex;
                             align-items: center;
                             justify-content: center;
@@ -3678,6 +3680,10 @@
                     .view-display-id-block_4 {
                         .view-filters {
 
+                            .js-form-type-textfield label {
+                                display: none;
+                            }
+
                             .fieldset-legend {
                                 //white-space: nowrap;
                                 font-size: 1.2em;
@@ -3709,8 +3715,8 @@
                                 input[type=radio]::after {
                                     content: '✔';
                                     color: white;
-                                    width: 100%;
-                                    height: 100%;
+                                    width: 10px;
+                                    height: 10px;
                                     display: flex;
                                     align-items: center;
                                     justify-content: center;
@@ -3903,8 +3909,8 @@
                                 input[type=radio]::after {
                                     content: '✔';
                                     color: white;
-                                    width: 100%;
-                                    height: 100%;
+                                    width: 10px;
+                                    height: 10px;
                                     display: flex;
                                     align-items: center;
                                     justify-content: center;
