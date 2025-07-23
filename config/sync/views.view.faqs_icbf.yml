@@ -594,7 +594,7 @@ display:
       exposed_form:
         type: bef
         options:
-          submit_button: Aplicar
+          submit_button: Buscar
           reset_button: false
           reset_button_label: Restablecer
           exposed_sorts_label: 'Ordenar por'
@@ -615,6 +615,15 @@ display:
               secondary_label: 'Opciones avanzadas'
               secondary_open: false
               reset_button_always_show: false
+            filter:
+              title:
+                plugin_id: default
+                advanced:
+                  placeholder_text: ''
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+                  hide_label: false
       access:
         type: none
         options: {  }
