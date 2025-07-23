@@ -31,7 +31,15 @@ $background-color_12: #b3bc98;
 $background-color_13: #e5e8d9;
 $border-color_1: #fff;
 
-.page-adopciones {
+.page-adopciones,
+.page-adopciones-quienes-pueden-ser-adoptados,
+.page-adopciones-quienes-pueden-adoptar,
+.page-adopciones-requisitos-basicos,
+.page-adopciones-proceso-de-adopcion,
+.page-adopciones-paso-paso,
+.page-adopciones-instituciones-y-organismos-autorizados-instituciones-autorizadas-en-colombia,
+.page-adopciones-instituciones-y-organismos-autorizados-organismos-y-agencias-internacionales
+{
 
     .md-separator, .md-separator-text{
         width: 100%;
@@ -64,7 +72,6 @@ $border-color_1: #fff;
         .tb-megamenu-nav{
             margin: auto;
             max-width: 1150px;
-            padding: .6rem 0 .2rem;
             width: auto;
             background-color: #fff;
             font-family: var.$font-montserrat;
@@ -72,6 +79,7 @@ $border-color_1: #fff;
             border-top: 1px solid #ddd;
             border-bottom: 1px solid #ddd;
             padding: .5em 0;
+            position: relative;
 
             .tb-megamenu-item{
                 width: auto;
@@ -1373,4 +1381,318 @@ $border-color_1: #fff;
     }
 
     /* Mega menu */
+}
+
+.page-adopciones-quienes-pueden-ser-adoptados,
+.page-adopciones-quienes-pueden-adoptar,
+.page-adopciones-requisitos-basicos
+{
+
+    //style general para slider
+    .icbf-owl-carousel-wrapper {
+
+        margin: 40px 0 0;
+
+        .slick-prev,
+        .slick-next {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            //border-radius: 100%;
+            height: 30px;
+            width: 30px;
+            font-size: 0;
+            border: 0;
+            //background: rgb(0 0 0 / 46%);
+            background: transparent;
+            position: absolute;
+            bottom: -5rem;
+        }
+
+        .slick-next {
+            right: 45%;
+        }
+
+        .slick-prev {
+            right: 50%;
+        }
+
+        .slick-prev::before {
+            content: "\f104";
+            font-family: "FontAwesome" !important;
+            color: #929292 !important;
+        }
+
+        .slick-next::before {
+            content: "\f105";
+            font-family: "FontAwesome" !important;
+            color: #929292 !important;
+        }
+
+        ul.slick-dots {
+            li {
+                font-size: 0;
+
+                ::marker {
+                    content: none; // para eliminar cualquier contenido en ::marker
+                }
+
+                button {
+                    border: 0;
+                    padding: 1px;
+                    margin: 0 3px;
+                    background: #ccc;
+                    border-radius: 100%;
+                }
+            }
+
+            li.slick-active {
+                button {
+                    background: #999;
+                }
+            }
+
+        }
+    }
+
+    .word-intro:first-child{
+        margin-top: -100px;
+        margin-bottom: 2em;
+        padding: 1em;
+        background-color: rgba(255, 255, 255, .9);
+        border-radius: 6px;
+        border: none;
+        display: block;
+    }
+    .intro-back:before{
+        height: 100%;
+    }
+
+    .box-intro1b,
+    .box-intro1{
+        padding: 1em .6em;
+        margin: 0 .3em 0 .2em;
+        height: auto;
+        width: auto;
+        min-height: 325px;
+        border-right: 1px solid #ddd;
+        text-align: center;
+        .icon-intro1{
+            display: block;
+            margin: auto;
+            img{
+                width: auto;
+                height: 90px;
+                object-fit: contain;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        .word-gral{
+            color: #6b6b6b;
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            line-height: initial;
+            margin: auto;
+            padding: 1.2em 0;
+            word-break: break-word;
+            text-align: center;
+            
+            strong{
+                font-weight: 600;
+            }
+        }
+
+        .btn-ada-process{
+            border: 1px solid #ddd;
+            border-radius: 7px;
+            font-family: var.$font-montserrat;
+            padding: .5em 1em;
+            text-decoration: none;
+            transition: all .2s ease-in-out;
+            word-break: break-word;
+            display: inline-block;
+            margin-bottom: 1em;
+        }
+    }
+
+    .box-intro1b{
+        border: 0;
+    }
+
+    .content-intro-w{
+        font-family: var.$font-montserrat;
+    }
+
+    .field--name-field-content2-ada{
+        .field__label{
+            display: none;
+        }
+        .field__item{
+            margin-top: 40px;
+        }
+    }
+
+}
+
+.page-adopciones-requisitos-basicos{
+    h1 {
+        font-family: var.$font-montserrat;
+    }
+    @media (min-width: 992px) {
+        .col-lg-3 {
+            flex: 0 0 auto;
+            width: 50%;
+        }
+    }
+}
+
+.page-adopciones-proceso-de-adopcion{
+    h1 {
+        font-family: var.$font-montserrat;
+    }
+    .intro-back:before{
+        height: 100%;
+    }
+    .col-lg-3 {
+        @media (min-width: 992px) {
+            flex: 0 0 auto;
+            width: 50%;
+        }
+    }
+    .col-sm-4{
+        width: calc(100% / 3) !important;
+    }
+}
+
+.page-adopciones-instituciones-y-organismos-autorizados-instituciones-autorizadas-en-colombia,
+.page-adopciones-instituciones-y-organismos-autorizados-organismos-y-agencias-internacionales{
+
+    .adopt-box {
+        background-color: #fcfcfc;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border: 1px solid #ddd;
+        box-shadow: 0 .1rem 1rem rgba(0, 0, 0, .1);
+        display: inline-block;
+        margin: 0 0 18px;
+        padding: 6px;
+        width: 100%;
+    }
+
+    .adopt-title {
+        font-family: var.$font-montserrat;
+        font-size: 1.4em;
+        line-height: normal;
+        margin-bottom: 6px;
+        padding: 15px 0 5px;
+    }
+
+    .adopt-box-id {
+        border-right: 1px solid #ececec;
+        color: #60a53a !important;
+        height: auto;
+    }
+
+    .vocabulary-programa-adopciones{
+
+        .layout--unecol-section{
+
+            display: flex;
+            flex-wrap: wrap;
+
+            .layout__region--first{
+                width: calc(100% / 12 * 3);
+            }
+
+            .layout__region--second{
+                width: calc(100% / 12 * 9);
+
+                .view-adoptions-location-colombia,
+                .view-adoptions-ubication{
+                    .view-content{
+                        .views-row{
+                            background-color: #fcfcfc !important;
+                            border-radius: 4px !important;
+                            border: 1px solid #ddd;
+                            box-shadow: 0 .1rem 1rem rgba(0, 0, 0, .1);
+                            display: inline-block;
+                            margin: 0 0 18px !important;
+                            padding: 6px !important;
+                            width: 100%;
+
+                            > .views-field-fieldset > .field-content{
+                                > div{
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                }
+                                .views-field-edit-node{}
+                                .views-field-fieldset-1{
+                                    border-right: 1px solid #ececec;
+                                    color: #60a53a !important;
+                                    height: auto;
+                                    width: calc(100% / 12 * 4);
+                                    padding: 0 15px;
+
+                                    .views-field-title{
+                                        font-family: var.$font-montserrat;
+                                        font-size: 1.4em !important;
+                                        line-height: normal;
+                                        margin-bottom: 6px;
+                                        padding: 15px 0 5px;
+                                    }
+                                    .views-field-field-lugar{
+                                        h3{
+                                            font-family: var.$font-montserrat;
+                                            font-size: 14px;
+                                        }
+                                    }
+                                    .views-field-field-document{
+                                        word-break: break-all;
+                                        .file{
+                                            background-position: top left;
+                                            padding-left: 0;
+                                            padding-top: 20px;
+                                        }
+                                        a{
+                                            font-family: var.$font-montserrat;
+                                        }
+                                    }
+
+                                }
+                                .views-field-fieldset-2{
+                                    padding: 0 15px;
+                                    width: calc(100% / 12 * 8);
+
+                                    ul.country-adopt{
+                                        margin-left: 0;
+                                        padding-left: 0;
+                                    }
+                                    .email-adopt {
+                                        margin-left: 0;
+                                    }
+
+                                    h1, h2, h3, h4, h5, h6{
+                                        font-family: var.$font-montserrat;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .view-adoptions-ubication{
+                    .adopt-title{
+                        font-size: 19.6px;
+                    }
+                }
+            }
+
+
+        }
+    }
+
+
+
 }
