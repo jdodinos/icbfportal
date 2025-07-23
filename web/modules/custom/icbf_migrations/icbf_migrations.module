@@ -170,13 +170,20 @@ function icbf_migrations_entity_view_alter(array &$build, \Drupal\Core\Entity\En
         // Add Layout Builder structure to Gestión Humana term.
         switch ($entity->bundle()) {
           case 'secctions':
-            // Sections structure 2.
+            // Reestructure the Sections in structure 2.
             $structure2 = [8012, 8013, 8014, 8015, 8016, 8018, 8019, 8020];
+            $structure3 = [6882, 6883, 6886, 6887];
             if (in_array($entity->id(), $structure2)) {
               unset($build['_layout_builder'][0]);
+              unset($build['_layout_builder'][2]);
             }
+            else if (in_array($entity->id(), $structure3)) {
+              unset($build['_layout_builder'][1]);
+            }
+            // Reestructure the Sections in default.
             else {
               unset($build['_layout_builder'][1]);
+              unset($build['_layout_builder'][2]);
             }
             break;
 
