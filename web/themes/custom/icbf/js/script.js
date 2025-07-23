@@ -296,7 +296,6 @@ $(document).ready(function () {
     '.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional'
   ];
 
-  // Verifica si la clase existe en el body
   var aplicar = paginasPermitidas.some(function (clase) {
     return $(clase).length > 0;
   });
@@ -306,15 +305,27 @@ $(document).ready(function () {
     const $menu = $megamenu.find('.nav-collapse');
     const $button = $megamenu.find('.tb-megamenu-button');
 
-    // Asegurarse de que exista el menú y botón
     if ($menu.length && $button.length) {
       // Ocultar inicialmente
       $menu.removeClass('always-show').removeClass('show').addClass('collapse');
 
-      // Evento click
+      // Alternar visibilidad al hacer click en el botón
       $button.on('click', function (e) {
         e.preventDefault();
+        e.stopPropagation(); // evita que el clic llegue al document
         $menu.toggleClass('show');
+      });
+
+      // Prevenir cierre si se hace clic dentro del menú
+      $menu.on('click', function (e) {
+        e.stopPropagation();
+      });
+
+      // Cerrar el menú si se hace clic fuera
+      $(document).on('click', function () {
+        if ($menu.hasClass('show')) {
+          $menu.removeClass('show');
+        }
       });
     }
   }
