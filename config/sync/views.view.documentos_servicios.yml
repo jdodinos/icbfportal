@@ -3076,17 +3076,6 @@ display:
           break_phrase: false
           not: false
       filters:
-        status:
-          id: status
-          table: node_field_data
-          field: status
-          entity_type: node
-          entity_field: status
-          plugin_id: boolean
-          value: '1'
-          group: 1
-          expose:
-            operator: ''
         field_section_target_id:
           id: field_section_target_id
           table: node__field_section
@@ -3208,6 +3197,8 @@ display:
         metatag_display_extender:
           metatags: {  }
           tokenize: false
+      allow:
+        items_per_page: true
     cache_metadata:
       max-age: -1
       contexts:

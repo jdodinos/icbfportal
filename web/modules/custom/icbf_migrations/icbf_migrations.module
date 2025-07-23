@@ -164,13 +164,41 @@ function icbf_migrations_form_layout_builder_update_block_alter(&$form, \Drupal\
 function icbf_migrations_entity_view_alter(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display) {
   switch ($entity->getEntityTypeId()) {
     case 'taxonomy_term':
-      // Add Layout Builder structure to Gestión Humana term.
-      if ($entity->bundle() == 'sige_process_type' && $entity->id() == 6505) {
-        $build['_layout_builder'][2] = $build['_layout_builder'][3];
+      $layout_configs = icbf_migrations_get_layout_config($entity->id());
+
+      if (empty($layout_configs)) {
+        // Add Layout Builder structure to Gestión Humana term.
+        switch ($entity->bundle()) {
+          case 'secctions':
+            // Reestructure the Sections in structure 2.
+            $structure2 = [8012, 8013, 8014, 8015, 8016, 8018, 8019, 8020];
+            $structure3 = [6882, 6883, 6886, 6887];
+            if (in_array($entity->id(), $structure2)) {
+              unset($build['_layout_builder'][0]);
+              unset($build['_layout_builder'][2]);
+            }
+            else if (in_array($entity->id(), $structure3)) {
+              unset($build['_layout_builder'][1]);
+            }
+            // Reestructure the Sections in default.
+            else {
+              unset($build['_layout_builder'][1]);
+              unset($build['_layout_builder'][2]);
+            }
+            break;
+
+          case 'sige_process_type':
+            if ($entity->id() == 6505) {
+              $build['_layout_builder'][2] = $build['_layout_builder'][3];
+            }
+            else {
+              // Remove Gestion Humana section in Layout builder to default.
+              unset($build['_layout_builder'][3]);
+              $build['_layout_builder']['#cache'] = NULL;
+            }
+            break;
+        }
       }
-      // Remove Gestion Humana section in Layout builder to default.
-      unset($build['_layout_builder'][3]);
-      $build['_layout_builder']['#cache'] = NULL;
       break;
 
     case 'node':
@@ -489,6 +517,21 @@ function icbf_migrations_migrate_prepare_row(Row $row, MigrateSourceInterface $s
       }
       break;
   }
+}
+
+/**
+ * Get layout config.
+ */
+function icbf_migrations_get_layout_config($entity_id, $entity_type = 'term') {
+  if ($entity_type == 'term') {
+    $table = 'taxonomy_term__layout_builder__layout';
+  }
+  $layout_configs = \Drupal::database()->select($table, 'tl')
+    ->fields('tl', ['layout_builder__layout_section'])
+    ->condition('entity_id', $entity_id)
+    ->execute()->fetchAll();
+
+  return $layout_configs;
 }
 
 /**

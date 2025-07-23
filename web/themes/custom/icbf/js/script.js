@@ -22,7 +22,7 @@ $ = jQuery;
 
       // Función recalcular submenu Adopciones
       function recalcularSubmenus() {
-        const dropdownItems = document.querySelectorAll('.page-taxonomy-programa_adopciones .tb-megamenu .tb-megamenu-nav > li.dropdown');
+        const dropdownItems = document.querySelectorAll('.page-id-7439 .tb-megamenu .tb-megamenu-nav > li.dropdown');
 
         dropdownItems.forEach(function (item) {
           const submenu = item.querySelector('.tb-megamenu-submenu');
@@ -112,6 +112,29 @@ $ = jQuery;
             dots: true
           });
         }
+        else if ($('#stpe-quoteslider').length) {
+          $('#stpe-quoteslider .icbf-owl-carousel-wrapper').slick({
+            infinite: true,
+            speed: 1000,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            fade: true
+          });
+        }
+        else if ($('.page-id-6662').length) {
+          $(' .icbf-owl-carousel-wrapper').slick({
+            infinite: true,
+            speed: 500,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: true
+          });
+        }
         else if ($('.page-adopciones-quienes-pueden-ser-adoptados .icbf-owl-carousel-wrapper').length) {
           $('.icbf-owl-carousel-wrapper').slick({
             infinite: true,
@@ -153,7 +176,7 @@ $ = jQuery;
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: true,
-            dots: true
+            dots: true,
           });
         }
       };
@@ -194,7 +217,7 @@ $(document).ready(function () {
 
 
 //funcionalidad en familias-y-comunidades al seleccionar iconos
-$(document).ready(function($) {
+$(document).ready(function ($) {
   // Seleccionamos el wrapper de quicktabs específico para esta página
   var $wrapper = $('.page-id-7618 .content .layout:nth-child(3) .quicktabs-wrapper');
 
@@ -231,7 +254,7 @@ $(document).ready(function($) {
     }
 
     // Manejar clic en enlaces de pestañas
-    $tabLinks.on('click', function(e) {
+    $tabLinks.on('click', function (e) {
       e.preventDefault();
       var index = $tabItems.index($(this).parent());
       console.log("Click en pestaña (índice li):", index, $(this).text());

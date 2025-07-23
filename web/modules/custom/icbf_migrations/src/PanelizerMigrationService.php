@@ -471,18 +471,18 @@ class PanelizerMigrationService {
         $block_title = str_replace('|+|', ' - ', $block_title);
         $block_title = str_replace('+|', '- ', $block_title);
         // Caso muy particular de un bloque de páginas.
-        if ($block_id == 'paginas-internas-primera-infanci') {
-          $block_title = 'Páginas internas Primera Infancia';
+        $particular_blocks = [
+          'paginas-internas-primera-infanci' => 'Páginas internas Primera Infancia',
+          '1519---directos-servicios-ciudad' => 'Servicios Ciudadania - 1519-1',
+          'servicios-pqr---1519-3' => 'Servicios PQR - 1519-3',
+          'titulo-micrositio' => 'Observatorio de Bienestar - top',
+          'top---rpc1' => 'TOp RPC 1',
+          'bottom-rpc1' => 'Bann- Informe final RPC',
+        ];
+        if (array_key_exists($block_id, $particular_blocks)) {
+          $block_title = $particular_blocks[$block_id];
         }
-        elseif ($block_id == '1519---directos-servicios-ciudad') {
-          $block_title = 'Servicios Ciudadania - 1519-1';
-        }
-        elseif ($block_id == 'servicios-pqr---1519-3') {
-          $block_title = 'Servicios PQR - 1519-3';
-        }
-        elseif ($block_id == 'titulo-micrositio') {
-          $block_title = 'Observatorio de Bienestar - top';
-        }
+
         $block_query = $this->database->select('block_content', 'b');
         $block_query->join('block_content_field_data', 'bcfd', 'b.id = bcfd.id');
         $block_query->fields('b', ['uuid'])
@@ -602,7 +602,8 @@ class PanelizerMigrationService {
         break;
 
       case 'licencias_de_funcionamiento':
-        if ($display_id == 'block' || $display_id == 'block_1' || $display_id == 'block_2') {
+        $displayes = ['block', 'block_1', 'block_2', 'block_3'];
+        if (in_array($display_id, $displayes)) {
           $view_id = 'licencias_de_funcionamiento_sapi';
         }
         break;
@@ -638,7 +639,8 @@ class PanelizerMigrationService {
         break;
 
       case 'encargos_sapi':
-        if ($display_id == 'block') {
+        $displayes = ['block', 'block_2'];
+        if (in_array($display_id, $displayes)) {
           $view_id = 'encargos_sapi_solr';
         }
         break;
@@ -663,7 +665,7 @@ class PanelizerMigrationService {
         break;
 
       case 'accountability':
-        $displayes = ['block_5'];
+        $displayes = ['block_2', 'block_4', 'block_5'];
         if (in_array($display_id, $displayes)) {
           $view_id = 'accountability_sapi';
         }

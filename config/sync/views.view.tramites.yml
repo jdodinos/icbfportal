@@ -1537,20 +1537,7 @@ display:
             button_text: 'Cargar más'
             automatically_load_content: true
             initially_load_all_pages: false
-      sorts:
-        random:
-          id: random
-          table: views
-          field: random
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: random
-          order: ASC
-          expose:
-            label: ''
-            field_identifier: ''
-          exposed: false
+      sorts: {  }
       arguments: {  }
       filters:
         name:
@@ -1754,7 +1741,7 @@ display:
           metatags: {  }
           tokenize: false
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
