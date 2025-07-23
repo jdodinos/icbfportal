@@ -340,7 +340,8 @@ table {
 
 
 .page-mensaje-confirmacion-whatsapp,
-.page-mensaje-de-confirmacion-pqrs {
+.page-mensaje-de-confirmacion-pqrs,
+.page-mensaje-charla-legal-adopciones {
 
     .layout.layout--onecol {
         margin: 2rem 0;
@@ -375,6 +376,17 @@ table {
     }
 
     .btn-default {
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc;
+        &:hover {
+            color: #333;
+            background-color: #e6e5e5;
+            border-color: #adadad;
+        }
+    }
+
+    .btn-default {
         margin-left: 5%;
     }
 
@@ -390,5 +402,11 @@ table {
         padding: 6px 12px;
         background: #337ab7;
         border-color: #2e6da4;
+
+        &:hover {
+            color: #fff;
+            background-color: #286090;
+            border-color: #204d74;
+        }
     }
 }

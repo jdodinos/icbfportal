@@ -123,6 +123,18 @@ $ = jQuery;
             fade: true
           });
         }
+        else if ($('.page-id-6662').length) {
+          $(' .icbf-owl-carousel-wrapper').slick({
+            infinite: true,
+            speed: 500,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: true
+          });
+        }
         else {
           $('.icbf-owl-carousel-wrapper').slick({
             infinite: true,
@@ -130,7 +142,7 @@ $ = jQuery;
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: true,
-            dots: true
+            dots: true,
           });
         }
       };
@@ -171,7 +183,7 @@ $(document).ready(function () {
 
 
 //funcionalidad en familias-y-comunidades al seleccionar iconos
-$(document).ready(function($) {
+$(document).ready(function ($) {
   // Seleccionamos el wrapper de quicktabs específico para esta página
   var $wrapper = $('.page-id-7618 .content .layout:nth-child(3) .quicktabs-wrapper');
 
@@ -208,7 +220,7 @@ $(document).ready(function($) {
     }
 
     // Manejar clic en enlaces de pestañas
-    $tabLinks.on('click', function(e) {
+    $tabLinks.on('click', function (e) {
       e.preventDefault();
       var index = $tabItems.index($(this).parent());
       console.log("Click en pestaña (índice li):", index, $(this).text());
