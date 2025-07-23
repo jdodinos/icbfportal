@@ -443,4 +443,12 @@
       text-align: center;
     }
   }
+
+  .file--application-pdf{
+    a{
+      font-family: var.$font-asap-regular;
+      font-weight: 500;
+      font-size: 15.4px;
+    }
+  }
 }

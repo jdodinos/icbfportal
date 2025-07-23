@@ -121,6 +121,7 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: flex-end;
+                margin: 0 0 30px;
 
                 .layout__region--first {
                     width: calc(100% / 12 * 2);
@@ -242,6 +243,21 @@
 .page-programas-y-estrategias-direccion-snbf-sistemas-de-informacion,
 .page-programas-y-estrategias-direccion-snbf-documentos-y-enlaces,
 .page-programas-y-estrategias-direccion-snbf-que-es-el-snbf{
+    .az-ctnr.container{
+        .az-element.az-ctnr.az-column.col-sm-3 {
+            @media (max-width: 768px) {
+                width: 50%;
+            }
+            @media (max-width: 576px) {
+                width: 100%;
+            }
+        }
+    }
+
+    a.slide21{
+        word-break: break-word;
+    }
+
     .view-id-news{
         .slick-dotted.slick-slider{
             .slick-dots{
@@ -271,5 +287,9 @@
         .snbf-tabs {
             margin-bottom: 1rem;
         }
+    }
+
+    .view-display-id-block_postsnbf{
+        padding: 0 3em;
     }
 }

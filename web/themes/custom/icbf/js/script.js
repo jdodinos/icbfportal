@@ -22,7 +22,7 @@ $ = jQuery;
 
       // Función recalcular submenu Adopciones
       function recalcularSubmenus() {
-        const dropdownItems = document.querySelectorAll('.page-id-7439 .tb-megamenu .tb-megamenu-nav > li.dropdown');
+        const dropdownItems = document.querySelectorAll('.page-taxonomy-programa_adopciones .tb-megamenu .tb-megamenu-nav > li.dropdown');
 
         dropdownItems.forEach(function (item) {
           const submenu = item.querySelector('.tb-megamenu-submenu');
@@ -110,6 +110,40 @@ $ = jQuery;
             slidesToScroll: 1,
             arrows: true,
             dots: true
+          });
+        }
+        else if ($('.page-adopciones-quienes-pueden-ser-adoptados .icbf-owl-carousel-wrapper').length) {
+          $('.icbf-owl-carousel-wrapper').slick({
+            infinite: true,
+            speed: 500,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: true,
+            responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 5,
+                  slidesToScroll: 5
+                }
+              },
+              {
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2
+                }
+              },
+              {
+                breakpoint: 600,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  infinite: true
+                }
+              }
+            ]
           });
         }
         else {
