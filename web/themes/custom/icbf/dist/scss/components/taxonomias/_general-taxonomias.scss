@@ -4955,16 +4955,31 @@
 ******OFERTA INSTITUCIONAL (Segundo nivel)******
 ************************************************
 */
-.page-fijacion-cuota-de-alimentos
+
+.page-fijacion-cuota-de-alimentos,
+.page-portafolio-de-servicios-icbf-fijacion-cuota-de-alimentos, //en aceptacion
+.page-portafolio-de-servicios-icbf-ninos-y-ninas2, //en aceptacion
+.page-portafolio-de-servicios-icbf-ninos-y-ninas,
+.page-portafolio-de-servicios-icbf-soy-adolescente, //en aceptacion
+.page-portafolio-de-servicios-icbf-adolescentes-y-jovenes,
+.page-portafolio-de-servicios-icbf-soy-entidad, //en aceptacion
+.page-portafolio-de-servicios-icbf-entidades,
+.page-portafolio-de-servicios-icbf-somos-familia, //en aceptacion
+.page-portafolio-de-servicios-icbf-familias
 {
+    .block-page-title-block {
+        display: none !important;
+    }
     .precontent{
+        margin: 2em 0;
+        
         form{
             >div{
                 >div{
                     span{
                         text-align: left;
                     }
-
+    
                     .form-select {
                         height: 40px;
                         border-radius: 150px;
@@ -4975,12 +4990,63 @@
                         font-size: 14px;
                         color: #555;
                     }
+    
+                    select.select-procedure {
+                        width: 100% !important;
+                    }
+                    a.btn.btn-default.form-button {
+                        display: none;
+                    }
                 }
             }
         }
-
+    
     }
 
+    #block-icbf-content{
+        .content{
+            .block-block-content485b0ed8-fdad-4aec-a2d9-cecf5a74740b{
+                h2{
+                    font-family: 'Asap-Regular' !important;
+                    font-size: 1.4em;
+                }
+                h5{
+                    font-family: 'Montserrat', "sans-serif" !important;
+                    font-size: 14px;
+                }
+
+                .az-element.az-icon {
+                    margin-top: 3em;
+                }
+
+                a[type='button']{
+                    padding: 6px 8.4px;
+                }
+
+                @media (max-width: 768px) {
+                    .col-sm-2 {
+                        flex: 0 0 auto;
+                        width: 100%;
+                    }
+                }
+            }
+            .block-block-content6ef225ee-ab82-493e-9851-60ed5d3c6452{
+                h3{
+                    font-family: 'Asap-regular' !important;
+                    span{
+                        font-family: 'Asap-regular' !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.page-fijacion-cuota-de-alimentos,
+.page-portafolio-de-servicios-icbf-fijacion-cuota-de-alimentos //en aceptacion
+{
     #block-icbf-content{
         .content{
             .block-field-blocktaxonomy-termprocedurefield-header-infografia{
@@ -5062,36 +5128,6 @@
                     }
                 }
             }
-
-            .block-block-content485b0ed8-fdad-4aec-a2d9-cecf5a74740b{
-                h5{
-                    font-family: 'Montserrat', "sans-serif" !important;
-                    font-size: 14px;
-                }
-
-                .az-element.az-icon {
-                    margin-top: 3em;
-                }
-
-                a[type='button']{
-                    padding: 6px 8.4px;
-                }
-
-                @media (max-width: 768px) {
-                    .col-sm-2 {
-                        flex: 0 0 auto;
-                        width: 100%;
-                    }
-                }
-            }
-            .block-block-content6ef225ee-ab82-493e-9851-60ed5d3c6452{
-                h3{
-                    font-family: 'Asap-regular' !important;
-                    span{
-                        font-family: 'Asap-regular' !important;
-                    }
-                }
-            }
         }
     }
 }
@@ -5100,28 +5136,6 @@
 .page-portafolio-de-servicios-icbf-ninos-y-ninas2, //en aceptacion
 .page-portafolio-de-servicios-icbf-ninos-y-ninas
 {
-    .precontent{
-        form{
-            #icbf-module-category-selection-form{
-                span{
-                    text-align: left;
-                }
-    
-                .form-select {
-                    height: 40px;
-                    border-radius: 150px;
-                    padding-left: 24px;
-                    border: 1px solid #72bf44;
-                    width: 66%;
-                    margin-left: 1.5em;
-                    font-size: 14px;
-                    color: #555;
-                }
-            }
-        }
-
-    }
-
     #block-icbf-content{
         .content{
             >div:first-child{
@@ -5295,36 +5309,6 @@
                     }
                 }
             }
-
-            .block-block-content485b0ed8-fdad-4aec-a2d9-cecf5a74740b{
-                h5{
-                    font-family: 'Montserrat', "sans-serif" !important;
-                    font-size: 14px;
-                }
-
-                .az-element.az-icon {
-                    margin-top: 3em;
-                }
-
-                a[type='button']{
-                    padding: 6px 8.4px;
-                }
-
-                @media (max-width: 768px) {
-                    .col-sm-2 {
-                        flex: 0 0 auto;
-                        width: 100%;
-                    }
-                }
-            }
-            .block-block-content6ef225ee-ab82-493e-9851-60ed5d3c6452{
-                h3{
-                    font-family: 'Asap-regular' !important;
-                    span{
-                        font-family: 'Asap-regular' !important;
-                    }
-                }
-            }
         }
     }
 }
@@ -5339,27 +5323,6 @@
 .page-portafolio-de-servicios-icbf-somos-familia, //en aceptacion
 .page-portafolio-de-servicios-icbf-familias
 {
-    .precontent{
-        form{
-            #icbf-module-category-selection-form{
-                span{
-                    text-align: left;
-                }
-    
-                .form-select {
-                    height: 40px;
-                    border-radius: 150px;
-                    padding-left: 24px;
-                    border: 1px solid #72bf44;
-                    width: 66%;
-                    margin-left: 1.5em;
-                    font-size: 14px;
-                    color: #555;
-                }
-            }
-        }
-
-    }
 
     #block-icbf-content{
         .content{
@@ -5531,36 +5494,6 @@
                             }
 
                         }
-                    }
-                }
-            }
-
-            .block-block-content485b0ed8-fdad-4aec-a2d9-cecf5a74740b{
-                h5{
-                    font-family: 'Montserrat', "sans-serif" !important;
-                    font-size: 14px;
-                }
-
-                .az-element.az-icon {
-                    margin-top: 3em;
-                }
-
-                a[type='button']{
-                    padding: 6px 8.4px;
-                }
-
-                @media (max-width: 768px) {
-                    .col-sm-2 {
-                        flex: 0 0 auto;
-                        width: 100%;
-                    }
-                }
-            }
-            .block-block-content6ef225ee-ab82-493e-9851-60ed5d3c6452{
-                h3{
-                    font-family: 'Asap-regular' !important;
-                    span{
-                        font-family: 'Asap-regular' !important;
                     }
                 }
             }

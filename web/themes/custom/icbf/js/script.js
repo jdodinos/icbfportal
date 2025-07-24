@@ -332,3 +332,29 @@ $(document).ready(function () {
     }
   }
 });
+
+
+//Se añade la numeracion de los select
+$(document).ready(function () {
+  const clasesPermitidas = [
+    '.page-portafolio-de-servicios-icbf-fijacion-cuota-de-alimentos',
+    '.page-fijacion-cuota-de-alimentos',
+    '.page-portafolio-de-servicios-icbf-ninos-y-ninas2',
+    '.page-portafolio-de-servicios-icbf-ninos-y-ninas',
+    '.page-portafolio-de-servicios-icbf-soy-adolescente',
+    '.page-portafolio-de-servicios-icbf-adolescentes-y-jovenes',
+    '.page-portafolio-de-servicios-icbf-soy-entidad',
+    '.page-portafolio-de-servicios-icbf-entidades',
+    '.page-portafolio-de-servicios-icbf-somos-familia',
+    '.page-portafolio-de-servicios-icbf-familias'
+  ];
+
+  const paginaValida = clasesPermitidas.some(clase => $(clase).length > 0);
+
+  if (paginaValida) {
+    $('.precontent select option').each(function(index) {
+      const textoOriginal = $(this).text().trim();
+      $(this).text((index + 1) + ' ' + textoOriginal);
+    });
+  }
+});
