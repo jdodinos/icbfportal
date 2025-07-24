@@ -9,7 +9,7 @@ dependencies:
 label: 'Portafolio en Taxonomias'
 name: portafolio_taxonomy
 group: 'Micrositio portafolio'
-description: ''
+description: 'Agrega el formulario custom de que hacer por tipo de usuario'
 requireAllConditions: false
 disabled: false
 conditions:

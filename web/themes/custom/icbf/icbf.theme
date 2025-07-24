@@ -191,8 +191,12 @@ function icbf_preprocess_field(&$variables) {
                 $block_id = str_replace('---', '|+|', $block_id);
                 $block_id = str_replace('-', ' ', $block_id);
                 $block_info = trim(str_replace('|+|', ' - ', $block_id));
-                if ($block_info == 'bloque compartir - redes infogra') {
-                  $block_info = 'Bloque Compartir - Redes Infografias';
+                $particular_blocks = [
+                  'titulo micrositio' => 'Observatorio de Bienestar - top',
+                  'bloque compartir - redes infogra' => 'Bloque Compartir - Redes Infografias',
+                ];
+                if (array_key_exists($block_info, $particular_blocks)) {
+                  $block_info = $particular_blocks[$block_info];
                 }
 
                 $blocks = \Drupal::entityTypeManager()

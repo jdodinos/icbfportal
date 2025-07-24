@@ -545,7 +545,7 @@ display:
         options:
           grouping:
             -
-              field: field_dae_year
+              field: field_file_categoria
               rendered: true
               rendered_strip: false
           row_class: ''
@@ -646,7 +646,7 @@ display:
           group_column: ''
           group_columns: {  }
           group_rows: true
-          delta_limit: 1
+          delta_limit: 0
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
@@ -1026,44 +1026,6 @@ display:
             field_identifier: ''
           exposed: false
       filters:
-        status:
-          id: status
-          table: search_api_index_transparency_sapi
-          field: status
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api_boolean
-          operator: '='
-          value: '1'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
         field_file_categoria:
           id: field_file_categoria
           table: search_api_index_transparency_sapi
@@ -1080,14 +1042,14 @@ display:
           group: 1
           exposed: false
           expose:
-            operator_id: ''
-            label: ''
-            description: ''
+            operator_id: field_file_categoria_op
+            label: 'Categoría del archivo'
+            description: null
             use_operator: false
-            operator: ''
+            operator: field_file_categoria_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: ''
+            identifier: field_file_categoria
             required: false
             remember: false
             multiple: false
@@ -1252,9 +1214,35 @@ display:
         operator: AND
         groups:
           1: AND
+      style:
+        type: views_bootstrap_list_group
+        options:
+          grouping:
+            -
+              field: field_file_categoria
+              rendered: true
+              rendered_strip: false
+          row_class: ''
+          default_row_class: true
+          panels: 0
+          title_field: ''
+      row:
+        type: fields
+        options: {  }
+      query:
+        type: search_api_query
+        options:
+          bypass_access: false
+          skip_access: false
+          preserve_facet_query_args: false
+          query_tags: {  }
+          contextual_filters_or: false
       defaults:
+        query: false
         pager: false
         exposed_form: false
+        style: false
+        row: false
         fields: false
         sorts: false
         filters: false
@@ -2155,7 +2143,7 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
@@ -2393,6 +2381,19 @@ display:
                 select_all_none: false
                 select_all_none_nested: false
                 display_inline: false
+              facets_field_dae_year:
+                plugin_id: bef
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+                  hide_label: false
+                select_all_none: false
+                select_all_none_nested: false
+                display_inline: false
       sorts:
         field_dae_year:
           id: field_dae_year
@@ -2421,44 +2422,6 @@ display:
             field_identifier: ''
           exposed: false
       filters:
-        status:
-          id: status
-          table: search_api_index_transparency_sapi
-          field: status
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api_boolean
-          operator: '='
-          value: '1'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
         field_file_categoria:
           id: field_file_categoria
           table: search_api_index_transparency_sapi
@@ -2688,10 +2651,10 @@ display:
             - filemime
             - filemime_1
             - title
-        facets_field_date:
-          id: facets_field_date
+        facets_field_dae_year:
+          id: facets_field_dae_year
           table: search_api_index_transparency_sapi
-          field: facets_field_date
+          field: facets_field_dae_year
           relationship: none
           group_type: group
           admin_label: ''
@@ -2708,7 +2671,7 @@ display:
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_date
+            identifier: field_dae_year
             required: false
             remember: false
             multiple: false
@@ -2809,7 +2772,7 @@ display:
           facet:
             query_operator: and
             min_count: 1
-            show_numbers: false
+            show_numbers: true
             processor_configs:
               date_item:
                 weights:
@@ -2835,7 +2798,22 @@ display:
         sorts: false
         filters: false
         filter_groups: false
+        footer: false
       display_description: doc2+descrip+year
+      footer:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: '<a class="btn-gral" title="clic para consultar informes" href="/planeacion/informes-de-seguimiento">Informes de Seguimiento</a>'
+            format: full_html
+          tokenize: false
       display_extenders:
         metatag_display_extender:
           metatags: {  }
