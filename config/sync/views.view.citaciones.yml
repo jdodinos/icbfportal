@@ -1447,7 +1447,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: search_api_fulltext
-          operator: and
+          operator: or
           value: ''
           group: 1
           exposed: true
@@ -1571,6 +1571,8 @@ display:
           parse_mode: terms
           min_length: 3
           fields:
+            - field_children_fullname
+            - field_citizen_id
             - title
         facets_field_kinship:
           id: facets_field_kinship
@@ -2123,7 +2125,7 @@ display:
             min: ''
             max: ''
             value: '-15 day'
-            type: offset
+            type: date
           group: 1
           exposed: false
           expose:
@@ -2212,7 +2214,7 @@ display:
           empty_table: 0
           responsive: 0
           bootstrap_styles:
-            striped: 0
+            striped: striped
             bordered: 0
             hover: 0
             condensed: 0
