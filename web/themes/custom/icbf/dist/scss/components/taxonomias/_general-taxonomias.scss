@@ -4902,10 +4902,16 @@
 
 
 
-.page-centro-zonal-magdalena-medio{
+.page-centro-zonal-magdalena-medio,
+.page-centro-zonal-santa-fe,
+.page-centro-zonal-macizo-colombiano
+{
     #block-icbf-content{
         .node__content{
             >div:first-child{
+                .bs-region--left {
+                    padding-left: 0;
+                }
                 .bs-region--right{
                     div.field__item{
                         padding-left: 0 !important;
