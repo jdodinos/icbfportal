@@ -1,5 +1,153 @@
 @use "../../abstracts/variables" as var;
 
+.block-category-selection-block {
+
+    margin-bottom: 2%;
+
+    .js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-citizen-category.form-item-citizen-category.form-no-label:before {
+        color: #000;
+        font-size: 15px;
+        content: "1";
+        display: block;
+        width: 2%;
+        position: relative;
+        top: 32px;
+        left: 15px;
+    }
+
+    .js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-procedure.form-item-procedure.form-no-label:before {
+        color: #000;
+        font-size: 15px;
+        content: "2";
+        display: block;
+        width: 2%;
+        position: relative;
+        top: 32px;
+        left: 15px;
+        font-weight: 700;
+    }
+
+    div#edit-button {
+        text-align: left;
+    }
+
+    #icbf-module-category-selection-form span {
+        text-align: left;
+        font-family: var.$font-asap-regular;
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+
+    select#edit-citizen-category {
+        height: 40px;
+        border-radius: 150px;
+        padding-left: 35px;
+        border: 1px solid #72bf44;
+        font-family: var.$font-asap-regular;
+        font-size: 14px;
+    }
+
+    select#edit-procedure {
+        height: 40px;
+        border-radius: 150px;
+        padding-left: 35px;
+        border: 1px solid #72bf44;
+        font-family: var.$font-asap-regular;
+        font-size: 14px;
+    }
+
+    div#container-procedure {
+        width: 100%;
+        padding: 0;
+    }
+
+    #icbf-module-category-selection-form {
+        a.btn.btn-default.form-button {
+            font-family: var.$font-asap-regular;
+            color: #333;
+            background-color: #fff;
+            border-color: #ccc;
+
+            &:hover {
+                color: #333;
+                background-color: #e6e5e5;
+                border-color: #adadad;
+            }
+        }
+    }
+
+    option {
+        font-size: 14px;
+        font-family: var.$font-asap-regular !important;
+    }
+
+    a.btn.btn-default.form-button {
+        width: 100%;
+
+    }
+
+    .az-text {
+
+        .h2-word-msintro,
+        .word-msintro h4 {
+            font-family: var.$font-asap-regular;
+        }
+    }
+}
+
+
+ul.az-element.st-social.stbe-social-links.text-center.stbe-social-links--color-brand.stbe-social-links--hover-color-brand {
+
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    li {
+        border: 1px solid #444;
+        border-radius: 100%;
+        width: 30.8px;
+        height: 30.8px;
+        margin: 0.2em;
+        display: flex;
+        justify-content: center;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                text-decoration: none !important;
+            }
+        }
+    }
+
+    >li:first-child {
+        i {
+            color: #3b5998;
+        }
+    }
+
+    >li:nth-child(2) {
+        i {
+            color: #e52d27;
+        }
+    }
+
+    >li:nth-child(3) {
+        i {
+            color: #55acee;
+        }
+    }
+
+    >li:nth-child(4) {
+        i {
+            color: #3f729b;
+        }
+    }
+
+}
+
 
 .page-portafolio-de-servicios-icbf-oferta {
 
@@ -34,7 +182,6 @@
 .page-permiso-de-salida-del-pais,
 .page-adopcion-para-residentes-en-colombia,
 .page-fijacion-de-visitas,
-.page-restitucion-internacional-y-regulacion-internacional-de-visitas,
 .page-restitucion-internacional-y-regulacion-internacional-de-visitas,
 .page-portafolio-de-servicios-icbf-oferta,
 .page-autorizacion-venta-de-inmuebles-de-propiedad-de-los-ninos-ninas-y-adolescentes {
