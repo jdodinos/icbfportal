@@ -105,6 +105,8 @@ $ = jQuery;
         else if ($('#xisegdle').length) {
           $('#xisegdle .icbf-owl-carousel-wrapper').slick({
             infinite: false,
+            autoplay: true,
+            autoplaySpeed: 3000,
             speed: 300,
             slidesToShow: 5,
             slidesToScroll: 1,
