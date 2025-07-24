@@ -4881,7 +4881,7 @@
 
                             //color de letras
                             label {
-                                white-space: nowrap;
+                                //white-space: nowrap;
                                 color: #1996d0;
                                 text-decoration: none !important;
                                 font-size: 14px;
@@ -4902,10 +4902,16 @@
 
 
 
-.page-centro-zonal-magdalena-medio{
+.page-centro-zonal-magdalena-medio,
+.page-centro-zonal-santa-fe,
+.page-centro-zonal-macizo-colombiano
+{
     #block-icbf-content{
         .node__content{
             >div:first-child{
+                .bs-region--left {
+                    padding-left: 0;
+                }
                 .bs-region--right{
                     div.field__item{
                         padding-left: 0 !important;
@@ -4933,6 +4939,7 @@
 }
 
 /*-----------------------------------------------------------------*/
+
 
 
 
@@ -5091,7 +5098,240 @@
 
 
 .page-portafolio-de-servicios-icbf-ninos-y-ninas2, //en aceptacion
-.page-portafolio-de-servicios-icbf-ninos-y-ninas,
+.page-portafolio-de-servicios-icbf-ninos-y-ninas
+{
+    .precontent{
+        form{
+            #icbf-module-category-selection-form{
+                span{
+                    text-align: left;
+                }
+    
+                .form-select {
+                    height: 40px;
+                    border-radius: 150px;
+                    padding-left: 24px;
+                    border: 1px solid #72bf44;
+                    width: 66%;
+                    margin-left: 1.5em;
+                    font-size: 14px;
+                    color: #555;
+                }
+            }
+        }
+
+    }
+
+    #block-icbf-content{
+        .content{
+            >div:first-child{
+                .az-ctnr {
+                    width: 100%;
+                }
+
+                h1{
+                    font-size: 40px !important;
+                    font-family: 'Asap-Regular' !important;
+                    color: #555 !important;
+                }
+                h4{
+                    font-weight: normal;
+                    font-family: 'Montserrat', sans-serif;
+                    padding-top: 1.5em;
+                    border-top: 1px solid #ddd;
+                }
+                span{
+                    font-family: 'Montserrat', sans-serif;
+                }
+                ul{
+                    list-style: none;
+                    display: flex;
+                    justify-content: center;
+
+                    li{
+                        border: 1px solid #444;
+                        border-radius: 100%;
+                        width: 30.8px;
+                        height: 30.8px;
+                        margin: 0.2em;
+                        display: flex;
+                        justify-content: center;
+
+                        a {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+
+                    >li:first-child{
+                        i{
+                            color: #3b5998;
+                        }
+                    }
+                    >li:nth-child(2){
+                        i{
+                            color: #e52d27;
+                        }
+                    }
+                    >li:nth-child(3){
+                        i{
+                            color: #55acee;
+                        }
+                    }
+                    >li:nth-child(4){
+                        i{
+                            color: #3f729b;
+                        }
+                    }
+                }
+            }
+
+            >div:nth-child(2){
+                .view-id-tramites_sapi {
+                    .view-filters {
+                        width: 100%;
+                        form{
+                            >div{
+                                display: flex;
+                                flex-wrap: wrap;
+
+                                >fieldset{
+                                    width: 45%;
+                                    .form-radios, .form-checkboxes{
+                                        ul{
+                                            list-style: none;
+                                        }
+                                    }
+                                }
+                                >.form-item:nth-child(3){
+                                    width: 180.2px;
+                                    label{
+                                        font-weight: 700;
+                                    }
+                                }
+                                >.form-item:nth-child(4){
+                                    width: 104px;
+                                    label{
+                                        font-weight: 700;
+                                    }
+                                }
+                                >.form-item:nth-child(5){
+                                    width: 80.8px;
+                                    label{
+                                        font-weight: 700;
+                                    }
+                                }
+                                @media (max-width: 768px) {
+                                    >fieldset{
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    @media (max-width: 768px){
+                        .view-content{
+                            >div{
+                                width: 95%;
+                                margin: 0 auto;
+                            }
+                        }
+                    }
+                }
+
+
+                //filtros
+                .view-id-tramites_sapi {
+                    .view-filters {
+                        .form-radios, .form-checkboxes {
+                            padding-top: 1em;
+                            margin-left: 0;
+
+                            input[type=checkbox],
+                            input[type=radio] {
+                                appearance: none;
+                                width: 13px;
+                                height: 13px;
+                                border: 1px solid #555;
+                                border-radius: 3px;
+                                margin: 0 4px 0 0 !important;
+                            }
+
+                            /* Cuando se selecciona el check*/
+                            /*Estilos para el icono interno del check*/
+                            input[type=checkbox]:checked,
+                            input[type=radio]:checked {
+                                background-color: #1996d0;
+                                border-color: #1996d0;
+                            }
+
+                            input[type=checkbox]::after,
+                            input[type=radio]::after {
+                                content: '✔';
+                                color: white;
+                                width: 10px;
+                                height: 10px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+
+                            //color de letras
+                            label {
+                                white-space: nowrap;
+                                color: #1996d0;
+                                text-decoration: none !important;
+                                font-size: 14px;
+                            }
+
+                            label:hover {
+                                color: #125e81;
+                                text-decoration: underline !important;
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            .block-block-content485b0ed8-fdad-4aec-a2d9-cecf5a74740b{
+                h5{
+                    font-family: 'Montserrat', "sans-serif" !important;
+                    font-size: 14px;
+                }
+
+                .az-element.az-icon {
+                    margin-top: 3em;
+                }
+
+                a[type='button']{
+                    padding: 6px 8.4px;
+                }
+
+                @media (max-width: 768px) {
+                    .col-sm-2 {
+                        flex: 0 0 auto;
+                        width: 100%;
+                    }
+                }
+            }
+            .block-block-content6ef225ee-ab82-493e-9851-60ed5d3c6452{
+                h3{
+                    font-family: 'Asap-regular' !important;
+                    span{
+                        font-family: 'Asap-regular' !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
 .page-portafolio-de-servicios-icbf-soy-adolescente, //en aceptacion
 .page-portafolio-de-servicios-icbf-adolescentes-y-jovenes,
 .page-portafolio-de-servicios-icbf-soy-entidad, //en aceptacion
@@ -5186,7 +5426,7 @@
                 }
             }
 
-            >div:nth-child(2){
+            >div:nth-child(3){
                 .view-id-tramites_sapi {
                     .view-filters {
                         width: 100%;
