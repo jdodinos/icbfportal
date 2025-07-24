@@ -93,7 +93,7 @@ field_settings:
     label: Ubicación
     datasource_id: 'entity:node'
     property_path: field_location
-    type: text
+    type: integer
     dependencies:
       config:
         - field.storage.node.field_location
