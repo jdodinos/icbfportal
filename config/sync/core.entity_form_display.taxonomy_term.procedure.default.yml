@@ -17,23 +17,25 @@ dependencies:
     - field.field.taxonomy_term.procedure.field_related_procedures
     - field.field.taxonomy_term.procedure.field_tags_de_tramite
     - field.field.taxonomy_term.procedure.field_tooltip
+    - image.style.thumbnail
     - taxonomy.vocabulary.procedure
   module:
     - field_group
-    - file
+    - image
     - metatag
     - path
+    - shs
     - term_reference_tree
     - text
 third_party_settings:
   field_group:
     group_infograph_basics:
       children:
-        - field_category_citizen
+        - name
+        - field_header_infografia
         - field_content
         - field_tooltip
-        - field_header_infografia
-        - name
+        - field_category_citizen
       label: General
       region: content
       parent_name: ''
@@ -48,11 +50,11 @@ third_party_settings:
         formatter: collapsible
     group_infograph_parameters:
       children:
-        - field_list_image
-        - field_icon
-        - field_procedure_type
         - field_priority
+        - field_procedure_type
         - field_tags_de_tramite
+        - field_icon
+        - field_list_image
       label: 'Parámetros de Identificación'
       region: content
       parent_name: ''
@@ -68,9 +70,9 @@ third_party_settings:
     group_infograph_relations:
       children:
         - field_related_procedures
-        - field_link_videotutorial
         - field_link_more_info
         - field_link_nomasfilas
+        - field_link_videotutorial
       label: Relaciones
       region: content
       parent_name: ''
@@ -89,11 +91,11 @@ bundle: procedure
 mode: default
 content:
   description:
-    type: text_textfield
+    type: text_textarea
     weight: 0
     region: content
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
   field_category_citizen:
@@ -124,11 +126,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_icon:
-    type: file_generic
+    type: image_image
     weight: 7
     region: content
     settings:
       progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
   field_link_more_info:
     type: string_textfield
@@ -155,11 +158,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_list_image:
-    type: file_generic
+    type: image_image
     weight: 8
     region: content
     settings:
       progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
   field_metatag:
     type: metatag_firehose
@@ -188,15 +192,14 @@ content:
       max_depth: 0
     third_party_settings: {  }
   field_related_procedures:
-    type: term_reference_tree
+    type: options_shs
     weight: 3
     region: content
     settings:
-      start_minimized: true
-      leaves_only: false
-      select_parents: false
-      cascading_selection: 0
-      max_depth: 0
+      display_node_count: false
+      create_new_items: false
+      create_new_levels: false
+      force_deepest: false
     third_party_settings: {  }
   field_tags_de_tramite:
     type: term_reference_tree
