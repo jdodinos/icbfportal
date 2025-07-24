@@ -227,66 +227,79 @@
 }
 
 
-.page-id-8017{
-          .az-element.az-text[data-az-id=jtg7u4ks] {
-            margin: 2rem 1rem;
-            h2 {
+.page-id-8017 {
+    .az-element.az-text[data-az-id=jtg7u4ks] {
+        margin: 2rem 1rem;
+
+        h2 {
             font-family: "Asap-regular";
             font-size: 1.4em;
             text-align: center;
-                span{
-                    color: #3498db;
-                    text-align: center;
-                }
-            }
-             p {
-                text-align: center;
-            }
-        }
-        .az-element.az-button.text-center {
-            margin: 2.5rem 0;
-        }
-        .az-element.az-text.center-block[data-az-id=nk5gdfl2] {
-            h2{
-                text-align: center;
-                 margin: 4rem 0;
-            } 
-            strong {
-                font-weight: 700;
-                text-align: center !important;
+
+            span {
                 color: #3498db;
-         
-            }
-        }
-        .az-element[data-az-id=shggx385] , .az-element[data-az-id=uzwqjwdj]  , .az-element[data-az-id=hgnd4ao4]{
-            div[data-az-id=w53wgzn9]{
-                border: 0px solid #4d8ad1;
-                width: 80%;
-                margin: 2rem auto;
-                padding: 0;
-                border-radius: 4px;
-            }
-            .panel{
-                border: 1px solid #4d8ad1;
-                margin: 2rem 0 0 0;
-            }
-             p {
-                font-size: 0;
-                padding: 0;
-                line-height: 0;
-                margin: 0;
-                strong {
-                    font-size: 14px;
-                    line-height: 18px;
-                    font-weight: 600;
-                    font-family: 'montserrat-regular';
-                }
+                text-align: center;
             }
         }
 
+        p {
+            text-align: center;
+        }
+    }
+
+    .az-element.az-button.text-center {
+        margin: 2.5rem 0;
+    }
+
+    .az-element.az-text.center-block[data-az-id=nk5gdfl2] {
+        h2 {
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        strong {
+            font-weight: 700;
+            text-align: center !important;
+            color: #3498db;
+
+        }
+    }
+
+    .az-element[data-az-id=shggx385],
+    .az-element[data-az-id=uzwqjwdj],
+    .az-element[data-az-id=hgnd4ao4] {
+        div[data-az-id=w53wgzn9] {
+            border: 0px solid #4d8ad1;
+            width: 80%;
+            margin: 2rem auto;
+            padding: 0;
+            border-radius: 4px;
+        }
+
+        .panel {
+            border: 1px solid #4d8ad1;
+            margin: 2rem 0 0 0;
+        }
+
+        p {
+            font-size: 0;
+            padding: 0;
+            line-height: 0;
+            margin: 0;
+
+            strong {
+                font-size: 14px;
+                line-height: 18px;
+                font-weight: 600;
+                font-family: 'montserrat-regular';
+            }
+        }
+    }
+
     .az-element.az-button.text-center[data-az-id=o8k8wlvf] {
         margin: 1.5rem 0;
-    }  
+    }
+
     .hover-style-kygqr9tp {
         h3 {
             font-family: "Asap-regular";
@@ -297,88 +310,99 @@
     h4.panel-title a {
         color: #1996d0;
     }
-    .content .panel-group .panel .panel-heading .panel-title:before {
-        display: none;
-    }
+
+  
+
     .az-element.az-text[data-az-id=x5soo6gl] h2 {
         color: #3498db;
         text-align: center;
     }
-    div [data-az-id=cwxag2hb]{
+
+    div [data-az-id=cwxag2hb] {
         img {
             width: 100% !important;
             margin: 0;
         }
     }
-    .az-element.az-text[data-az-id=np5zdh5p] h2 span{
-        font-size: 14px ;
-    }
-    #stpe-quoteslider{
-    ul.slick-dots {
-            margin-top: 4rem;
-             li {
-                 font-size: 0;
 
-                 ::marker {
-                     content: none;
-                 }
+    .az-element.az-text[data-az-id=np5zdh5p] h2 span {
+        font-size: 14px;
+    }
+
+    #stpe-quoteslider {
+        ul.slick-dots {
+            margin-top: 4rem;
+
+            li {
+                font-size: 0;
+
+                ::marker {
+                    content: none;
+                }
+
                 button {
-                     border: 0;
-                     padding: 1px;
-                     margin: 0 3px;
-                     background: #125e81 !important;
-                     border: none !important;
-                     width: 10px !important;
-                     border-radius: 10px !important;
-                     height: 10px !important;
-                 }
-             }
-             li.slick-active {
-                 button {
-                     width: 10px !important;
-                     border-radius: 10px !important;
-                     height: 10px !important;
-                     background: #3cb371 !important;
-                 }
-             }
-         }
-    .owl-controls.clickable {
-        display: none;
+                    border: 0;
+                    padding: 1px;
+                    margin: 0 3px;
+                    background: #125e81 !important;
+                    border: none !important;
+                    width: 10px !important;
+                    border-radius: 10px !important;
+                    height: 10px !important;
+                }
+            }
+
+            li.slick-active {
+                button {
+                    width: 10px !important;
+                    border-radius: 10px !important;
+                    height: 10px !important;
+                    background: #3cb371 !important;
+                }
+            }
+        }
+
+        .owl-controls.clickable {
+            display: none;
+        }
+
+        .slick-slide img {
+            height: 450px;
+        }
+
+        div#slick-slide12 {
+            height: 350px;
+        }
+
+        .slick-track {
+            height: 510px;
+        }
+
+        ul.slick-dots {
+            background: transparent;
+            margin-top: 3%;
+        }
+
+        .slick-slide p {
+            display: none;
+        }
     }
-    .slick-slide img {
-        height: 450px;
-    }
-    div#slick-slide12 {
-        height: 350px;
-    }
-    .slick-track {
-        height: 510px;
-    }
-    
-    ul.slick-dots {
-        background: transparent;
-        margin-top: 3%;
-    }
-    
-    .slick-slide p {
-        display: none;
-    }
-  }
-    
-    .view-calendar{
-          .slick-prev::before {
-             content: "\f104";
-             font-family: 'FontAwesome';
-             color: #337ab7 !important;
-             font-size: 25px;
-         }
-    
-         .slick-next::after {
-             content: "\f105";
-             font-family: 'FontAwesome';
-             color: #337ab7 !important;
-             font-size: 25px;
-         }
+
+    .view-calendar {
+        .slick-prev::before {
+            content: "\f104";
+            font-family: 'FontAwesome';
+            color: #337ab7 !important;
+            font-size: 25px;
+        }
+
+        .slick-next::after {
+            content: "\f105";
+            font-family: 'FontAwesome';
+            color: #337ab7 !important;
+            font-size: 25px;
+        }
+
         button.slick-prev.slick-arrow {
             position: relative;
             left: 77%;
@@ -396,11 +420,12 @@
             align-items: center;
             gap: 6px;
             border-radius: 4px 0 0 4px;
-            &:hover{
+
+            &:hover {
                 background: #eee;
             }
         }
-        
+
         button.slick-next.slick-arrow {
             position: absolute;
             left: 88.1%;
@@ -418,11 +443,23 @@
             align-items: center;
             gap: 6px;
             border-radius: 0 4px 4px 0;
-    
-            &:hover{
+
+            &:hover {
                 background: #eee;
             }
         }
     }
 
+    .calendaro-body {
+        ul {
+            margin: 0;
+            padding: 0 0.2rem;
+            list-style: none;
+        }
+
+        li ul {
+            list-style: revert;
+            margin: 0 1rem;
+        }
+    }
 }
