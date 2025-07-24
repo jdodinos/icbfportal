@@ -545,7 +545,7 @@ display:
         options:
           grouping:
             -
-              field: field_file_categoria
+              field: field_dae_year
               rendered: true
               rendered_strip: false
           row_class: ''
