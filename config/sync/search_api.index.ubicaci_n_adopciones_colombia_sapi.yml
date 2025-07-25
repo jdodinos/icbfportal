@@ -1,0 +1,218 @@
+uuid: 074e6cfd-8ed9-4de7-81d6-3393ce34b0f6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email
+    - field.storage.node.field_lugar
+    - field.storage.node.field_phone
+    - field.storage.node.field_representante_en_colombia
+    - field.storage.taxonomy_term.field_address
+    - search_api.server.icbf_solr
+  module:
+    - node
+    - search_api_solr
+    - taxonomy
+third_party_settings:
+  search_api_solr:
+    finalize: false
+    commit_before_finalize: false
+    commit_after_finalize: false
+    debug_finalize: false
+    highlighter:
+      maxAnalyzedChars: 51200
+      fragmenter: gap
+      usePhraseHighlighter: true
+      highlightMultiTerm: true
+      preserveMulti: false
+      regex:
+        slop: 0.5
+        pattern: blank
+        maxAnalyzedChars: 10000
+      highlight:
+        mergeContiguous: false
+        requireFieldMatch: false
+        snippets: 3
+        fragsize: 0
+    mlt:
+      mintf: 1
+      mindf: 1
+      maxdf: 0
+      maxdfpct: 0
+      minwl: 0
+      maxwl: 0
+      maxqt: 100
+      maxntp: 2000
+      boost: false
+      interestingTerms: none
+    term_modifiers:
+      slop: 3
+      fuzzy: 1
+      fuzzy_analyzer: true
+    advanced:
+      index_prefix: ''
+      collection: ''
+      timezone: ''
+    multilingual:
+      limit_to_content_language: false
+      include_language_independent: true
+      use_language_undefined_as_fallback_language: false
+      specific_languages:
+        en: '0'
+        es: '0'
+      use_universal_collation: false
+id: ubicaci_n_adopciones_colombia_sapi
+name: 'Agencias Adopciones Colombia SAPI'
+description: ''
+read_only: false
+field_settings:
+  administrative_area:
+    label: 'Lugar » Término de taxonomía » Dirección » The top-level administrative subdivision of the country'
+    datasource_id: 'entity:node'
+    property_path: 'field_lugar:entity:field_address:administrative_area'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_lugar
+        - field.storage.taxonomy_term.field_address
+      module:
+        - taxonomy
+  dependent_locality:
+    label: 'Lugar » Término de taxonomía » Dirección » La localidad dependiente (por ejemplo, el vecindario)'
+    datasource_id: 'entity:node'
+    property_path: 'field_lugar:entity:field_address:dependent_locality'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_lugar
+        - field.storage.taxonomy_term.field_address
+      module:
+        - taxonomy
+  field_address:
+    label: 'Lugar » Término de taxonomía » Dirección'
+    datasource_id: 'entity:node'
+    property_path: 'field_lugar:entity:field_address'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_lugar
+        - field.storage.taxonomy_term.field_address
+      module:
+        - taxonomy
+  field_email:
+    label: 'Correo Electrónico'
+    datasource_id: 'entity:node'
+    property_path: field_email
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_email
+  field_lugar:
+    label: Lugar
+    datasource_id: 'entity:node'
+    property_path: field_lugar
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_lugar
+  field_phone:
+    label: Teléfono
+    datasource_id: 'entity:node'
+    property_path: field_phone
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_phone
+  field_representante_en_colombia:
+    label: 'Representante Legal y Director'
+    datasource_id: 'entity:node'
+    property_path: field_representante_en_colombia
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_representante_en_colombia
+  locality:
+    label: 'Lugar » Término de taxonomía » Dirección » La localidad (por ejemplo, la ciudad)'
+    datasource_id: 'entity:node'
+    property_path: 'field_lugar:entity:field_address:locality'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_lugar
+        - field.storage.taxonomy_term.field_address
+      module:
+        - taxonomy
+  nid:
+    label: ID
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+    dependencies:
+      module:
+        - node
+  organization:
+    label: 'Lugar » Término de taxonomía » Dirección » La organización'
+    datasource_id: 'entity:node'
+    property_path: 'field_lugar:entity:field_address:organization'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_lugar
+        - field.storage.taxonomy_term.field_address
+      module:
+        - taxonomy
+  postal_code:
+    label: 'Lugar » Término de taxonomía » Dirección » El código postal'
+    datasource_id: 'entity:node'
+    property_path: 'field_lugar:entity:field_address:postal_code'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_lugar
+        - field.storage.taxonomy_term.field_address
+      module:
+        - taxonomy
+  status:
+    label: Publicado
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - node
+  title:
+    label: Título
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - agencies_adoptions_colombian
+    languages:
+      default: false
+      selected:
+        - es
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  auto_aggregated_fulltext_field: {  }
+  custom_value: {  }
+  entity_type: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+  solr_date_range: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  delete_on_fail: true
+  index_directly: true
+  track_changes_in_references: true
+server: icbf_solr
