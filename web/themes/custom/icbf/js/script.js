@@ -114,6 +114,18 @@ $ = jQuery;
             dots: true
           });
         }
+        else if ($('#5qgon8wb').length) {
+          $('#5qgon8wb .icbf-owl-carousel-wrapper').slick({
+            infinite: false,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            speed: 300,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: true
+          });
+        }
         else if ($('#stpe-quoteslider').length) {
           $('#stpe-quoteslider .icbf-owl-carousel-wrapper').slick({
             infinite: true,
