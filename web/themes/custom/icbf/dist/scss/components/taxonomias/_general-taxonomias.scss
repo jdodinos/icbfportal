@@ -4755,6 +4755,10 @@
                                         font-weight: 700;
                                     }
                                 }
+                                >.form-actions {
+                                    padding-top: 1.2em;
+                                }
+
                                 @media (max-width: 768px) {
                                     >fieldset{
                                         width: 100%;
@@ -4942,6 +4946,9 @@
                                     label{
                                         font-weight: 700;
                                     }
+                                }
+                                >.form-actions {
+                                    padding-top: 1.2em;
                                 }
                                 @media (max-width: 768px) {
                                     >fieldset{
