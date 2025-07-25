@@ -4544,11 +4544,12 @@
         display: none !important;
     }
     .precontent{
-        margin: 2em 0;
+        margin-bottom: 1em;
+        
         
         form{
             >div{
-                >div{
+                >div{/*
                     span{
                         text-align: left;
                     }
@@ -4566,7 +4567,7 @@
     
                     select.select-procedure {
                         width: 100% !important;
-                    }
+                    }*/
                     a.btn.btn-default.form-button {
                         display: none;
                     }
