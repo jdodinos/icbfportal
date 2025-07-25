@@ -4367,6 +4367,17 @@
             }
 
             >div:nth-child(3){
+                h2{
+                    font-family: 'Montserrat', sans-serif;
+                    margin-left: 18%;
+                    font-size: 1.2em !important;
+                }
+                @media (max-width: 768px) {
+                    h2{
+                        margin-left: 1em;
+                    }
+                }
+
                 .view-id-puntos_de_atencion_sapi {
                     justify-items: center;
                     display: grid;
@@ -4534,8 +4545,6 @@
     }
     .precontent{
         margin-bottom: 1em;
-        
-    
     }
 }
 
@@ -4623,6 +4632,19 @@
                             }
                         }
                     }
+                }
+
+                a[type='button'] {
+                    font-family: 'Montserrat', sans-serif;
+                    padding: 6px 8.4px;
+                }
+            }
+
+            .block-views-blocktramites-block-9{
+                h2{
+                    font-family: 'Montserrat', sans-serif;
+                    line-height: normal !important;
+                    font-size: 1.7em;
                 }
             }
         }

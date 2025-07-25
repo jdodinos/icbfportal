@@ -97,11 +97,27 @@
 
 
 
+.precontent {
+    margin-bottom: 1em;
+
+    .form-item,
+    .form-actions {
+        margin-top: 0;
+        padding-top: 0;
+        line-height: 0.5em;
+    }
+
+}
+
+
 ul.az-element.st-social.stbe-social-links.text-center.stbe-social-links--color-brand.stbe-social-links--hover-color-brand {
 
     list-style: none;
     display: flex;
     justify-content: center;
+
+    position: relative;
+    left: -17%;
 
     li {
         border: 1px solid #444;
@@ -167,6 +183,7 @@ ul.az-element.st-social.stbe-social-links.text-center.stbe-social-links--color-b
 
     a[type='button'] {
         padding: 6px 8.4px;
+        font-family: 'Montserrat', sans-serif !important;
     }
 
     @media (max-width: 768px) {
