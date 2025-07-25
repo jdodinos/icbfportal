@@ -1211,7 +1211,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: '<a href="/node/{{ nid }}" title="Consultar Respuesta" target="_blank" class="faq-btn"><i class="fa fa-plus" aria-hidden="true"></i> Consultar respuesta</a>'
+            text: '%url_node'
             make_link: false
             path: ''
             absolute: false
@@ -1743,7 +1743,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"box-faq\">\r\n\r\n<div class=\"faq-title\">{{ title }}</div><div>{{ nid }}</div>\r\n<div class=\"label-faq\">{{ field_file_categoria }}</div>\r\n<div class=\"faq-box-line\"></div>\r\n\r\n<div class=\"faq-bottom\">\r\n<div class=\"b-left\">{{ field_faq_code }}</div>\r\n<div class=\"b-right\">{{ field_youtube }} {{ field_multimedia }}</div>\r\n</div>\r\n\r\n</div>\r\n"
+            text: "<div class=\"box-faq\">\r\n\r\n<div class=\"faq-title\">{{ title }}</div><div>\r\n<a href=\"{{ nid }}\" title=\"Consultar Respuesta\" target=\"_blank\" class=\"faq-btn\"><i class=\"fa fa-plus\" aria-hidden=\"true\"></i> Consultar respuesta</a>\r\n</div>\r\n<div class=\"label-faq\">{{ field_file_categoria }}</div>\r\n<div class=\"faq-box-line\"></div>\r\n\r\n<div class=\"faq-bottom\">\r\n<div class=\"b-left\">{{ field_faq_code }}</div>\r\n<div class=\"b-right\">{{ field_youtube }} {{ field_multimedia }}</div>\r\n</div>\r\n\r\n</div>\r\n"
             make_link: false
             path: ''
             absolute: false
