@@ -91,24 +91,7 @@ function icbf_preprocess_field(&$variables) {
           $html_close = substr($html, $item_pos, $html_close_pos);
         }
 
-        if (strpos($item['content']['#text'], 'owl-carousel st-owl-theme') !== FALSE || strpos($item['content']['#text'], 'stpe-quoteslider') !== FALSE) {
-          if (strpos($item['content']['#text'], 'owl-carousel st-owl-theme') !== FALSE) {
-            $string_to_replace = 'owl-carousel st-owl-theme';
-          }
-          elseif (strpos($item['content']['#text'], 'stpe-quoteslider') !== FALSE) {
-            $string_to_replace = 'carousel slide stpe-quoteslider';
-          }
-
-          if (isset($string_to_replace)) {
-            $html_text = &$item['content']['#text'];
-            $html_text = str_replace($string_to_replace, 'icbf-owl-carousel', $html_text);
-            $html_text = str_replace('owl-wrapper', 'icbf-owl-carousel-wrapper', $html_text);
-            $html_text = str_replace('carousel-inner', 'icbf-owl-carousel-wrapper', $html_text);
-            $html_text = preg_replace('/<ol class="carousel-indicators">.*?<\/ol>/s', '', $html_text);
-            // Remover todos los atributos style="..."
-            $html_text = preg_replace('/\s*style="[^"]*"/i', '', $html_text);
-          }
-        }
+        $item['content']['#text'] = icbf_owl_slide_process($item['content']['#text']);
       }
     }
   // }
@@ -297,6 +280,8 @@ function icbf_preprocess_views_view_field(&$variables) {
       $output = str_replace('</p>', '', $output);
       $decoded_html = html_entity_decode($output);
       $decoded_html = icbf_files_directory_process($decoded_html);
+      $decoded_html = icbf_owl_slide_process($decoded_html);
+
       $variables['output'] = [
         '#markup' => $decoded_html,
       ];
@@ -431,6 +416,28 @@ function icbf_files_directory_process($html) {
   if (strpos($html, '-files-directory-') != FALSE) {
     $public_files_path = \Drupal::config('system.file')->get('path.public') ?? 'sites/default/files';
     $html = str_replace('-files-directory-', $public_files_path, $html);
+  }
+
+  return $html;
+}
+
+function icbf_owl_slide_process($html) {
+  if (strpos($html, 'owl-carousel st-owl-theme') !== FALSE || strpos($html, 'stpe-quoteslider') !== FALSE) {
+    if (strpos($html, 'owl-carousel st-owl-theme') !== FALSE) {
+      $string_to_replace = 'owl-carousel st-owl-theme';
+    }
+    elseif (strpos($html, 'stpe-quoteslider') !== FALSE) {
+      $string_to_replace = 'carousel slide stpe-quoteslider';
+    }
+
+    if (isset($string_to_replace)) {
+      $html = str_replace($string_to_replace, 'icbf-owl-carousel', $html);
+      $html = str_replace('owl-wrapper', 'icbf-owl-carousel-wrapper', $html);
+      $html = str_replace('carousel-inner', 'icbf-owl-carousel-wrapper', $html);
+      $html = preg_replace('/<ol class="carousel-indicators">.*?<\/ol>/s', '', $html);
+      // Remover todos los atributos style="..."
+      $html = preg_replace('/\s*style="[^"]*"/i', '', $html);
+    }
   }
 
   return $html;
