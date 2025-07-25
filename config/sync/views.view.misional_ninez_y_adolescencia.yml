@@ -44,6 +44,7 @@ dependencies:
     - 'taxonomy_term:file_category:d31386a2-7e0c-4843-8ed5-b5b165ebb0ca'
     - 'taxonomy_term:file_category:da44b917-7aa5-400b-8944-ce4e8310d279'
     - 'taxonomy_term:secctions:5e4f0e94-5559-4a4f-8c4b-6d75aa0b9137'
+    - 'taxonomy_term:secctions:79027828-0534-43f1-992e-32e636528e65'
     - 'taxonomy_term:secctions:8bad1864-5906-427e-8a70-a3a3d7e0eae7'
   module:
     - file
@@ -12789,58 +12790,17 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-        field_misional_nna_type_value:
-          id: field_misional_nna_type_value
-          table: node__field_misional_nna_type
-          field: field_misional_nna_type_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: list_field
-          operator: or
-          value:
-            initial: initial
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-        field_file_categoria_target_id:
-          id: field_file_categoria_target_id
-          table: node__field_file_categoria
-          field: field_file_categoria_target_id
+        field_section_target_id:
+          id: field_section_target_id
+          table: node__field_section
+          field: field_section_target_id
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: taxonomy_index_tid
           operator: or
           value:
-            - 7756
+            - 8077
           group: 1
           exposed: false
           expose:
@@ -12871,11 +12831,55 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          vid: file_category
+          vid: secctions
           type: textfield
           hierarchy: false
           limit: true
           error_message: true
+        field_mipg_type_value:
+          id: field_mipg_type_value
+          table: node__field_mipg_type
+          field: field_mipg_type_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: list_field
+          operator: or
+          value:
+            mpg1: mpg1
+            mpg2: mpg2
+            mpg3: mpg3
+            mpg4: mpg4
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
       filter_groups:
         operator: AND
         groups:
@@ -12888,7 +12892,7 @@ display:
               field: field_mipg_type
               rendered: true
               rendered_strip: false
-          row_class: 'n-ltrasversals col-sm-6'
+          row_class: ''
           default_row_class: false
       row:
         type: fields
@@ -12896,7 +12900,7 @@ display:
           default_field_elements: true
           inline: {  }
           separator: ''
-          hide_empty: false
+          hide_empty: true
       defaults:
         title: false
         use_ajax: false
