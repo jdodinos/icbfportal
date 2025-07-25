@@ -120,7 +120,7 @@ $ = jQuery;
             autoplay: true,
             autoplaySpeed: 3000,
             speed: 300,
-            slidesToShow: 5,
+            slidesToShow: 1,
             slidesToScroll: 1,
             arrows: true,
             dots: true
