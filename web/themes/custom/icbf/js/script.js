@@ -14,11 +14,14 @@ $ = jQuery;
         $parent.find(tabId).addClass(active_class);
       });
 
-      $('.view-id-calendar.view-display-id-block_page_6 .view-content').slick({
-        infinite: false,
-        initialSlide: 0,
-        adaptiveHeight: true
-      });
+      if ($('.view-id-calendar.view-display-id-block_page_6').length) {
+        var num_items = $('.view-id-calendar.view-display-id-block_page_6 .view-content >div').length;
+        $('.view-id-calendar.view-display-id-block_page_6 .view-content').slick({
+          infinite: false,
+          initialSlide: num_items,
+          adaptiveHeight: true,
+        });
+      }
 
       // Función recalcular submenu Adopciones
       function recalcularSubmenus() {
@@ -69,6 +72,7 @@ $ = jQuery;
       if (context === document) {
 
         if ($('.block-block-content5712aaa6-336a-4df9-b947-c66cd32d67fe').length) {
+          // Cards del HOME.
           $('#hgepm7aq .icbf-owl-carousel-wrapper').slick({
             infinite: false,
             speed: 300,
@@ -103,6 +107,7 @@ $ = jQuery;
           });
         }
         else if ($('#xisegdle').length) {
+          // Bloque superior de preguntas frecuentes.
           $('#xisegdle .icbf-owl-carousel-wrapper').slick({
             infinite: false,
             autoplay: true,
@@ -127,6 +132,7 @@ $ = jQuery;
           });
         }
         else if ($('#stpe-quoteslider').length) {
+          // Slider inferior pagina Participa.
           $('#stpe-quoteslider .icbf-owl-carousel-wrapper').slick({
             infinite: true,
             speed: 1000,
