@@ -335,6 +335,8 @@ $(document).ready(function () {
 
 
 //Se añade la numeracion de los select
+
+/*
 $(document).ready(function () {
   const clasesPermitidas = [
     '.page-portafolio-de-servicios-icbf-fijacion-cuota-de-alimentos',
@@ -358,3 +360,4 @@ $(document).ready(function () {
     });
   }
 });
+*/
