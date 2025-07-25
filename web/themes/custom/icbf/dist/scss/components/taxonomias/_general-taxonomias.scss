@@ -4534,8 +4534,6 @@
     }
     .precontent{
         margin-bottom: 1em;
-        
-    
     }
 }
 
@@ -4623,6 +4621,19 @@
                             }
                         }
                     }
+                }
+
+                a[type='button'] {
+                    font-family: 'Montserrat', sans-serif;
+                    padding: 6px 8.4px;
+                }
+            }
+
+            .block-views-blocktramites-block-9{
+                h2{
+                    font-family: 'Montserrat', sans-serif;
+                    line-height: normal !important;
+                    font-size: 1.7em;
                 }
             }
         }
