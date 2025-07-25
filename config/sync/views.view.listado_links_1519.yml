@@ -1284,10 +1284,10 @@ display:
     position: 1
     display_options:
       sorts:
-        field_file_priority_value:
-          id: field_file_priority_value
-          table: node__field_file_priority
-          field: field_file_priority_value
+        field_priority_value:
+          id: field_priority_value
+          table: node__field_priority
+          field: field_priority_value
           relationship: none
           group_type: group
           admin_label: ''
