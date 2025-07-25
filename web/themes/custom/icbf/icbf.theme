@@ -339,6 +339,16 @@ function icbf_preprocess_views_view_field(&$variables) {
       ];
     }
   }
+
+  if ($variables['field']->table == 'views' && $variables['field']->field == 'nothing') {
+    if (strpos($variables['output'], '%url_node') !== FALSE && strpos($variables['output'], 'box-faq') !== FALSE ) {
+      $entity = $variables['row']->_entity;
+      $url_alias = \Drupal::service('path_alias.manager')->getAliasByPath('/node/' . $entity->id());
+      $variables['output'] = [
+        '#markup' => str_replace('%url_node', $url_alias, $variables['output'])
+      ];
+    }
+  }
 }
 
 /**
