@@ -95,6 +95,13 @@
     }
 }
 
+.content {
+    >div:first-child {
+        .az-ctnr {
+            width: 100%;
+        }
+    }
+}
 
 ul.az-element.st-social.stbe-social-links.text-center.stbe-social-links--color-brand.stbe-social-links--hover-color-brand {
 
