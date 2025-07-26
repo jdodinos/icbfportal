@@ -4559,48 +4559,6 @@
                 span{
                     font-family: 'Montserrat', sans-serif;
                 }
-                ul{
-                    list-style: none;
-                    display: flex;
-                    justify-content: center;
-
-                    li{
-                        border: 1px solid #444;
-                        border-radius: 100%;
-                        width: 30.8px;
-                        height: 30.8px;
-                        margin: 0.2em;
-                        display: flex;
-                        justify-content: center;
-
-                        a {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                        }
-                    }
-
-                    >li:first-child{
-                        i{
-                            color: #3b5998;
-                        }
-                    }
-                    >li:nth-child(2){
-                        i{
-                            color: #e52d27;
-                        }
-                    }
-                    >li:nth-child(3){
-                        i{
-                            color: #55acee;
-                        }
-                    }
-                    >li:nth-child(4){
-                        i{
-                            color: #3f729b;
-                        }
-                    }
-                }
             }
 
             .block-field-blocktaxonomy-termprocedurefield-content{
@@ -4658,9 +4616,6 @@
     #block-icbf-content{
         .content{
             >div:first-child{
-                .az-ctnr {
-                    width: 100%;
-                }
 
                 h1{
                     font-size: 40px !important;
@@ -4850,10 +4805,6 @@
     #block-icbf-content{
         .content{
             >div:first-child{
-                .az-ctnr {
-                    width: 100%;
-                }
-
                 h1{
                     font-size: 40px !important;
                     font-family: 'Asap-Regular' !important;
@@ -4867,48 +4818,6 @@
                 }
                 span{
                     font-family: 'Montserrat', sans-serif;
-                }
-                ul{
-                    list-style: none;
-                    display: flex;
-                    justify-content: center;
-
-                    li{
-                        border: 1px solid #444;
-                        border-radius: 100%;
-                        width: 30.8px;
-                        height: 30.8px;
-                        margin: 0.2em;
-                        display: flex;
-                        justify-content: center;
-
-                        a {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                        }
-                    }
-
-                    >li:first-child{
-                        i{
-                            color: #3b5998;
-                        }
-                    }
-                    >li:nth-child(2){
-                        i{
-                            color: #e52d27;
-                        }
-                    }
-                    >li:nth-child(3){
-                        i{
-                            color: #55acee;
-                        }
-                    }
-                    >li:nth-child(4){
-                        i{
-                            color: #3f729b;
-                        }
-                    }
                 }
             }
 
