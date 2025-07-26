@@ -2800,20 +2800,7 @@ display:
         filter_groups: false
         footer: false
       display_description: doc2+descrip+year
-      footer:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: text
-          empty: false
-          content:
-            value: '<a class="btn-gral" title="clic para consultar informes" href="/planeacion/informes-de-seguimiento">Informes de Seguimiento</a>'
-            format: full_html
-          tokenize: false
+      footer: {  }
       display_extenders:
         metatag_display_extender:
           metatags: {  }
