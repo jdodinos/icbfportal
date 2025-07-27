@@ -111,7 +111,7 @@ third_party_settings:
               context_all_must_pass: 1
         third_party_settings: {  }
       -
-        layout_id: bs_4col
+        layout_id: bs_2col
         layout_settings:
           label: ''
           context_mapping: {  }
@@ -122,48 +122,18 @@ third_party_settings:
             add_layout_class: 1
             attributes: ''
           regions:
-            first:
+            left:
               wrapper: div
               classes:
                 col-xs-12: col-xs-12
-                col-sm-2: col-sm-2
-                col-md-2: col-md-2
-                col-lg-2: col-lg-2
-                hidden-xs: hidden-xs
-                visible-sm: visible-sm
-                visible-md: visible-md
-                visible-lg: visible-lg
+                col-sm-7: col-sm-7
               add_region_classes: 1
               attributes: ''
-            second:
+            right:
               wrapper: div
               classes:
                 col-xs-12: col-xs-12
-                col-sm-4: col-sm-4
-                col-md-4: col-md-4
-                col-lg-4: col-lg-4
-              add_region_classes: 1
-              attributes: ''
-            third:
-              wrapper: div
-              classes:
-                col-xs-12: col-xs-12
-                col-sm-4: col-sm-4
-                col-md-4: col-md-4
-                col-lg-4: col-lg-4
-              add_region_classes: 1
-              attributes: ''
-            fourth:
-              wrapper: div
-              classes:
-                col-xs-12: col-xs-12
-                col-sm-2: col-sm-2
-                col-md-2: col-md-2
-                col-lg-2: col-lg-2
-                hidden-xs: hidden-xs
-                visible-sm: visible-sm
-                visible-md: visible-md
-                visible-lg: visible-lg
+                col-sm-5: col-sm-5
               add_region_classes: 1
               attributes: ''
           context_visibility: {  }
@@ -171,7 +141,7 @@ third_party_settings:
         components:
           62de0295-9393-4c41-9c44-6a22f4652295:
             uuid: 62de0295-9393-4c41-9c44-6a22f4652295
-            region: second
+            region: left
             configuration:
               id: 'field_block:node:articulo_mis_manos_te_ensenan:field_date'
               label: Fecha
@@ -195,7 +165,7 @@ third_party_settings:
               context_all_must_pass: 1
           02a02852-abba-431b-b14f-1ff8e0009e2b:
             uuid: 02a02852-abba-431b-b14f-1ff8e0009e2b
-            region: third
+            region: right
             configuration:
               id: 'field_block:node:articulo_mis_manos_te_ensenan:field_post_image_mte'
               label: 'Imagen Principal'
@@ -221,7 +191,7 @@ third_party_settings:
               context_all_must_pass: 1
         third_party_settings: {  }
       -
-        layout_id: bs_3col
+        layout_id: bs_1col
         layout_settings:
           label: ''
           context_mapping: {  }
@@ -232,39 +202,10 @@ third_party_settings:
             add_layout_class: 1
             attributes: ''
           regions:
-            left:
+            main:
               wrapper: div
               classes:
-                col-xs-12: col-xs-12
-                col-sm-2: col-sm-2
-                col-md-2: col-md-2
-                col-lg-2: col-lg-2
-                hidden-xs: hidden-xs
-                visible-sm: visible-sm
-                visible-md: visible-md
-                visible-lg: visible-lg
-              add_region_classes: 1
-              attributes: ''
-            middle:
-              wrapper: div
-              classes:
-                col-xs-12: col-xs-12
-                col-sm-8: col-sm-8
-                col-md-8: col-md-8
-                col-lg-8: col-lg-8
-              add_region_classes: 1
-              attributes: ''
-            right:
-              wrapper: div
-              classes:
-                col-xs-12: col-xs-12
-                col-sm-2: col-sm-2
-                col-md-2: col-md-2
-                col-lg-2: col-lg-2
-                hidden-xs: hidden-xs
-                visible-sm: visible-sm
-                visible-md: visible-md
-                visible-lg: visible-lg
+                col-sm-12: col-sm-12
               add_region_classes: 1
               attributes: ''
           context_visibility: {  }
@@ -272,7 +213,7 @@ third_party_settings:
         components:
           8c1da236-6934-472d-b1fd-c5afb53d7e8c:
             uuid: 8c1da236-6934-472d-b1fd-c5afb53d7e8c
-            region: middle
+            region: main
             configuration:
               id: 'field_block:node:articulo_mis_manos_te_ensenan:field_youtube'
               label: 'Video en Youtube'
@@ -303,7 +244,7 @@ third_party_settings:
               context_all_must_pass: 1
           af69f331-8e7d-4839-9aad-c519fee7a42d:
             uuid: af69f331-8e7d-4839-9aad-c519fee7a42d
-            region: middle
+            region: main
             configuration:
               id: 'field_block:node:articulo_mis_manos_te_ensenan:field_resume'
               label: Resumen
@@ -325,7 +266,7 @@ third_party_settings:
               context_all_must_pass: 1
           1d6e8248-50a0-480f-ab30-f17173eb3afd:
             uuid: 1d6e8248-50a0-480f-ab30-f17173eb3afd
-            region: middle
+            region: main
             configuration:
               id: 'field_block:node:articulo_mis_manos_te_ensenan:field_media_audio_mte'
               label: 'Audio adjunto'
@@ -353,7 +294,7 @@ third_party_settings:
               context_all_must_pass: 1
           6d860970-601d-457b-b58a-7f922a298594:
             uuid: 6d860970-601d-457b-b58a-7f922a298594
-            region: middle
+            region: main
             configuration:
               id: 'field_block:node:articulo_mis_manos_te_ensenan:field_post_body_mte'
               label: 'Contenido del Post'
@@ -375,7 +316,7 @@ third_party_settings:
               context_all_must_pass: 1
           305b90b2-2980-4676-a513-1a4a503b4ece:
             uuid: 305b90b2-2980-4676-a513-1a4a503b4ece
-            region: middle
+            region: main
             configuration:
               id: 'field_block:node:articulo_mis_manos_te_ensenan:field_document_mmte'
               label: 'Documento adjunto'
