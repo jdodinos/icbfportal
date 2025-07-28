@@ -486,6 +486,10 @@
                     .view-content {
                         grid-area: b;
                         width: 100%;
+
+                        table{
+                            width: 98%;
+                        }
                     }
 
                     nav.pager {
