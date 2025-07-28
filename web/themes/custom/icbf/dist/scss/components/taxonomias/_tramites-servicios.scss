@@ -95,8 +95,6 @@
     }
 }
 
-
-
 .precontent {
     margin-bottom: 1em;
 
@@ -110,19 +108,49 @@
 }
 
 
+ul.m1 li {
+    background: url("/themes/custom/icbf/dist/assets/imgs/green-list-arrow.png");
+    background-repeat: no-repeat;
+    margin-bottom: .5em;
+    padding-left: 1.5em;
+    list-style: none;
+}
+
+ul.m2 li {
+    background: url("/themes/custom/icbf/dist/assets/imgs/blue-list-arrow.png");
+    background-repeat: no-repeat;
+    margin-bottom: .5em;
+    padding-left: 1.5em;
+    list-style: none;
+}
+
+ul.m3 li {
+    background: url("/themes/custom/icbf/dist/assets/imgs/orange-list-arrow.png");
+    background-repeat: no-repeat;
+    margin-bottom: .5em;
+    padding-left: 1.5em;
+    list-style: none;
+}
+
+ul.m4 li {
+    background: url("/themes/custom/icbf/dist/assets/imgs/red-list-arrow.png");
+    background-repeat: no-repeat;
+    margin-bottom: .5em;
+    padding-left: 1.5em;
+    list-style: none;
+}
+
 ul.az-element.st-social.stbe-social-links.text-center.stbe-social-links--color-brand.stbe-social-links--hover-color-brand {
 
-    list-style: none;
     display: flex;
     justify-content: center;
-    margin: 0 !important;
-    padding: 0;
     position: relative;
-    left: -17%;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
 
     li {
-        border: 1px solid #444;
-        border-radius: 100%;
+        list-style: none;
         width: 30.8px;
         height: 30.8px;
         margin: 0.2em;
@@ -163,7 +191,6 @@ ul.az-element.st-social.stbe-social-links.text-center.stbe-social-links--color-b
             color: #3f729b;
         }
     }
-
 }
 
 
@@ -206,12 +233,14 @@ ul.az-element.st-social.stbe-social-links.text-center.stbe-social-links--color-b
     }
 }
 
+.h2-word-msintro {
+    font-family: var.$font-asap-regular;
+    font-size: 1.4em;
+}
+
 .page-portafolio-de-servicios-icbf-oferta {
 
-    .h2-word-msintro {
-        font-family: var.$font-asap-regular;
-        font-size: 1.4em;
-    }
+
 
     .h3-word-msintro span {
         font-family: var.$font-asap-regular;
@@ -243,33 +272,7 @@ ul.az-element.st-social.stbe-social-links.text-center.stbe-social-links--color-b
 .page-portafolio-de-servicios-icbf-oferta,
 .page-autorizacion-venta-de-inmuebles-de-propiedad-de-los-ninos-ninas-y-adolescentes {
 
-    ul.m1 {
-        background: url("/themes/custom/icbf/dist/assets/imgs/green-list-arrow.png");
-        background-repeat: no-repeat;
-        margin-bottom: .5em;
-        padding-left: 1.5em;
-    }
 
-    ul.m2 li {
-        background: url("/themes/custom/icbf/dist/assets/imgs/blue-list-arrow.png");
-        background-repeat: no-repeat;
-        margin-bottom: .5em;
-        padding-left: 1.5em;
-    }
-
-    ul.m3 li {
-        background: url("/themes/custom/icbf/dist/assets/imgs/orange-list-arrow.png");
-        background-repeat: no-repeat;
-        margin-bottom: .5em;
-        padding-left: 1.5em;
-    }
-
-    ul.m4 li {
-        background: url("/themes/custom/icbf/dist/assets/imgs/red-list-arrow.png");
-        background-repeat: no-repeat;
-        margin-bottom: .5em;
-        padding-left: 1.5em;
-    }
 
     #wpm39m14 {
         h3 {

@@ -4333,6 +4333,11 @@
                         font-weight: 500;
                         font-family: 'Montserrat', sans-serif;
                     }
+                    .field__item{
+                        font-family: 'Montserrat', sans-serif !important;
+                        font-style: normal;
+                        margin-left: 3px;
+                    }
     
                     .local-staff-list::before {
                         color: #0b8763;

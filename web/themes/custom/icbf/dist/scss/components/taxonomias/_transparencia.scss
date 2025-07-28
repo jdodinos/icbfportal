@@ -311,7 +311,7 @@
         color: #1996d0;
     }
 
-  
+
 
     .az-element.az-text[data-az-id=x5soo6gl] h2 {
         color: #3498db;
@@ -458,8 +458,18 @@
         }
 
         li ul {
-            list-style: revert;
+            list-style: none;
             margin: 0 1rem;
+        }
+
+        td::before {
+            content: "•";
+            color: black;
+            font-size: 2.5em;
+            display: inline-block;
+            width: 2em;
+            margin-left: -0.5em;
+            position: absolute;
         }
     }
 }
