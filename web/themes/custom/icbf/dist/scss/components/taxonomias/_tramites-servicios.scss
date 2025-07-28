@@ -107,6 +107,9 @@
 
 }
 
+h3.info-title2g {
+    font-size: 1.2em;
+}
 
 ul.m1 li {
     background: url("/themes/custom/icbf/dist/assets/imgs/green-list-arrow.png");
@@ -295,16 +298,6 @@ ul.m4 li {
         }
     }
 
-}
-
-.page-taxonomy-secctions {
-    .block-page-title-block {
-        display: none !important;
-    }
-
-    .precontent {
-        margin-bottom: 1em;
-    }
 }
 
 
@@ -531,10 +524,17 @@ ul.m4 li {
 ************************************************
 */
 
+.page-portafolio-de-servicios-icbf-ninos-y-ninas2 {
+    .block-page-title-block {
+        display: none !important;
+    }
 
+    .precontent {
+        margin-bottom: 1em;
+    }
+}
 
 .page-portafolio-de-servicios-icbf-ninos-y-ninas2,
-//en aceptacion
 .page-portafolio-de-servicios-icbf-ninos-y-ninas {
     #block-icbf-content {
         .content {
