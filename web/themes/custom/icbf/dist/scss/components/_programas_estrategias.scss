@@ -16,6 +16,10 @@
 .page-programas-y-estrategias-primera-infancia-mediatica-recursos-para-la-primera-infancia,
 .page-programas-y-estrategias-primera-infancia-cuentame {
 
+    .item-list ul{
+        padding-left: 20px;
+    }
+
     .az-ctnr.container{
         max-width: 100%;
     }
@@ -247,7 +251,27 @@
 .page-programas-y-estrategias-direccion-snbf-coordinacion,
 .page-programas-y-estrategias-direccion-snbf-sistemas-de-informacion,
 .page-programas-y-estrategias-direccion-snbf-documentos-y-enlaces,
-.page-programas-y-estrategias-direccion-snbf-que-es-el-snbf{
+.page-programas-y-estrategias-direccion-snbf-que-es-el-snbf
+{
+    
+    .item-list ul,
+    .views-field-field-constructor ul{
+        padding-left: 20px;
+        li{
+            margin: 0 0 0.25em 1.5em;
+        }
+    }
+
+    .field-content{
+        ul{
+            padding-left: 20px;
+            li{
+                margin: 0 0 0.25em 1.5em;
+            }
+        }
+    }
+
+
     .az-ctnr.container{
         .az-element.az-ctnr.az-column.col-sm-3 {
             @media (max-width: 768px) {
