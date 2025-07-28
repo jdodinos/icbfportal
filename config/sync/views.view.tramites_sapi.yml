@@ -2270,9 +2270,10 @@ display:
             identifier: field_procedure_type
             required: false
             remember: false
-            multiple: false
+            multiple: true
             remember_roles:
               authenticated: authenticated
+              0: '0'
               anonymous: '0'
               administrador_funcional: '0'
               content_editor: '0'
@@ -2411,6 +2412,7 @@ display:
             multiple: true
             remember_roles:
               authenticated: authenticated
+              0: '0'
               anonymous: '0'
               administrador_funcional: '0'
               content_editor: '0'
