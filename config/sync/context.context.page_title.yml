@@ -33,6 +33,7 @@ conditions:
       documento_multiple: documento_multiple
       encargos: encargos
       evaluaci_n: evaluaci_n
+      event_calendar: event_calendar
       forum: forum
       info_contexto: info_contexto
       isotope_example: isotope_example
