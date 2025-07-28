@@ -202,16 +202,32 @@ function icbf_migrations_entity_view_alter(array &$build, \Drupal\Core\Entity\En
       break;
 
     case 'node':
-      if ($entity->bundle() == 'sede_local') {
-        $place_type = $entity->get('field_place_type')->getValue();
-        if (!empty($place_type) && $place_type[0]['target_id'] == 6945) {
-          unset($build['_layout_builder'][0]);
-          unset($build['_layout_builder'][1]);
-        }
-        else {
-          unset($build['_layout_builder'][2]);
-          unset($build['_layout_builder'][3]);
-          unset($build['_layout_builder'][4]);
+      $layout_configs = icbf_migrations_get_layout_config($entity->id(), 'node');
+      if (empty($layout_configs)) {
+        switch ($entity->bundle()) {
+          case 'sede_local':
+            $place_type = $entity->get('field_place_type')->getValue();
+            if (!empty($place_type) && $place_type[0]['target_id'] == 6945) {
+              unset($build['_layout_builder'][0]);
+              unset($build['_layout_builder'][1]);
+            }
+            else {
+              unset($build['_layout_builder'][2]);
+              unset($build['_layout_builder'][3]);
+              unset($build['_layout_builder'][4]);
+            }
+            break;
+
+          case 'articles_portal_web':
+            $post_type = $entity->get('field_post_type_especific')->getValue();
+            $post_type = $entity->field_post_type_especific->value;
+            if ($post_type == 'post_editorial') {
+              unset($build['_layout_builder'][0]);
+            }
+            else {
+              unset($build['_layout_builder'][1]);
+            }
+            break;
         }
       }
       break;
@@ -523,9 +539,16 @@ function icbf_migrations_migrate_prepare_row(Row $row, MigrateSourceInterface $s
  * Get layout config.
  */
 function icbf_migrations_get_layout_config($entity_id, $entity_type = 'term') {
-  if ($entity_type == 'term') {
-    $table = 'taxonomy_term__layout_builder__layout';
+  switch ($entity_type) {
+    case 'term':
+      $table = 'taxonomy_term__layout_builder__layout';
+      break;
+
+    case 'node':
+      $table = 'node__layout_builder__layout';
+      break;
   }
+
   $layout_configs = \Drupal::database()->select($table, 'tl')
     ->fields('tl', ['layout_builder__layout_section'])
     ->condition('entity_id', $entity_id)

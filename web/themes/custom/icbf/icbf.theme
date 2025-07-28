@@ -455,16 +455,30 @@ function icbf_preprocess_tb_megamenu_item(&$variables) {
  * Implements hook_page_attachments_alter().
  */
 function icbf_page_attachments_alter(array &$attachments) {
-  $term = \Drupal::routeMatch()->getParameter('taxonomy_term');
-  if ($term && $term instanceof EntityInterface) {
-    $vocabulary = $term->bundle();
+  $main_library = 'icbf/main-styling';
+  $ninos_ninas_library = 'icbf/ninos-y-ninas';
 
-    if ($vocabulary == 'ninos_ninas_y_adolescentes') {
-      $global_style_index = array_search('icbf/main-styling', $attachments['#attached']['library']);
-      if ($global_style_index !== FALSE) {
-        unset($attachments['#attached']['library'][$global_style_index]);
+  foreach (\Drupal::routeMatch()->getParameters() as $param) {
+    if ($param instanceof EntityInterface) {
+      $entity_type = $param->bundle();
+      if ($param instanceof Term) {
+        if ($entity_type == 'ninos_ninas_y_adolescentes') {
+          $global_style_index = array_search($main_library, $attachments['#attached']['library']);
+          if ($global_style_index !== FALSE) {
+            unset($attachments['#attached']['library'][$global_style_index]);
+          }
+          $attachments['#attached']['library'][] = $ninos_ninas_library;
+        }
       }
-      $attachments['#attached']['library'][] = 'icbf/ninos-y-ninas';
+      elseif ($param instanceof NodeInterface) {
+        if ($entity_type == 'articulo_nna') {
+          $global_style_index = array_search('icbf/main-styling', $attachments['#attached']['library']);
+          if ($global_style_index !== FALSE) {
+            unset($attachments['#attached']['library'][$global_style_index]);
+          }
+          $attachments['#attached']['library'][] = $ninos_ninas_library;
+        }
+      }
     }
   }
 }
