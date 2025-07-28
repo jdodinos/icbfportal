@@ -3794,6 +3794,13 @@
                     }
                 }
             }
+
+            @media (min-width: 576px) {
+                .col-sm-8 {
+                    flex: 0 0 auto;
+                    width: 66%;
+                }
+            }
         }
     }
 }
@@ -4325,6 +4332,13 @@
                 border-top: 1px solid #ddd;
 
                 >div:first-child{
+                    h2{
+                        font-family: 'Montserrat', sans-serif !important;
+                        font-style: normal;
+                        font-size: 1.2em;
+                        margin-bottom: 1em !important;
+                    }
+
                     >div{
                         padding-bottom: 1em;
                         border-bottom: 1px solid #ddd;
@@ -4336,7 +4350,7 @@
                     .field__item{
                         font-family: 'Montserrat', sans-serif !important;
                         font-style: normal;
-                        margin-left: 3px;
+                        margin-left: 1em;
                     }
     
                     .local-staff-list::before {
@@ -4345,7 +4359,7 @@
                         display: inline;
                         font-family: 'FontAwesome';
                         font-weight: 600;
-                        left: 1em;
+                        left: 2em;
                         position: absolute;
                     }
                 }
