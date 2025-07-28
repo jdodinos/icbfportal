@@ -11,7 +11,7 @@
         display: block;
         width: 2%;
         position: relative;
-        top: 32px;
+        top: 28px;
         left: 15px;
     }
 
@@ -22,7 +22,7 @@
         display: block;
         width: 2%;
         position: relative;
-        top: 32px;
+        top: 28px;
         left: 15px;
         font-weight: 700;
     }
@@ -140,62 +140,6 @@ ul.m4 li {
     list-style: none;
 }
 
-ul.az-element.st-social.stbe-social-links.text-center.stbe-social-links--color-brand.stbe-social-links--hover-color-brand {
-
-    display: flex;
-    justify-content: center;
-    position: relative;
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-
-    li {
-        list-style: none;
-        width: 30.8px;
-        height: 30.8px;
-        margin: 0.2em;
-        display: flex;
-        justify-content: center;
-        border-radius: 50%;
-        border: 1px solid #444;
-
-        a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            &:hover {
-                text-decoration: none !important;
-            }
-        }
-    }
-
-    >li:first-child {
-        i {
-            color: #3b5998;
-        }
-    }
-
-    >li:nth-child(2) {
-        i {
-            color: #e52d27;
-        }
-    }
-
-    >li:nth-child(3) {
-        i {
-            color: #55acee;
-        }
-    }
-
-    >li:nth-child(4) {
-        i {
-            color: #3f729b;
-        }
-    }
-}
-
-
 .block-block-content485b0ed8-fdad-4aec-a2d9-cecf5a74740b {
     h2 {
         font-family: 'Asap-Regular' !important;
@@ -240,9 +184,505 @@ ul.az-element.st-social.stbe-social-links.text-center.stbe-social-links--color-b
     font-size: 1.4em;
 }
 
+.page-taxonomy-procedure {
+
+    ul.az-element.st-social.stbe-social-links.text-center.stbe-social-links--color-brand.stbe-social-links--hover-color-brand {
+
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+
+        li {
+            list-style: none;
+            width: 30.8px;
+            height: 30.8px;
+            margin: 0.2em;
+            display: flex;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid #444;
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:hover {
+                    text-decoration: none !important;
+                }
+            }
+        }
+
+        >li:first-child {
+            i {
+                color: #3b5998;
+            }
+        }
+
+        >li:nth-child(2) {
+            i {
+                color: #e52d27;
+            }
+        }
+
+        >li:nth-child(3) {
+            i {
+                color: #55acee;
+            }
+        }
+
+        >li:nth-child(4) {
+            i {
+                color: #3f729b;
+            }
+        }
+    }
+
+
+    .block-field-blocktaxonomy-termprocedurefield-content {
+        .az-ctnr {
+            >.az-element:first-child {
+                h3 {
+                    font-family: 'Asap-regular' !important;
+
+                    span {
+                        font-family: 'Asap-regular' !important;
+                    }
+
+                }
+
+                p {
+                    font-family: 'Montserrat', 'sans-serif' !important;
+
+                    span {
+                        font-family: 'Montserrat', 'sans-serif' !important;
+                    }
+                }
+            }
+
+            >.az-element:nth-child(2) {
+                font-family: 'Montserrat', 'sans-serif' !important;
+            }
+
+            >.az-element {
+                h3 {
+                    font-family: var.$font-asap-regular;
+
+                    span {
+                        font-family: var.$font-asap-regular;
+                    }
+                }
+            }
+        }
+
+        a[type='button'] {
+            font-family: 'Montserrat', sans-serif;
+            padding: 6px 8.4px;
+        }
+    }
+
+    .block-views-blocktramites-block-9 {
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            line-height: normal !important;
+            font-size: 1.7em;
+        }
+    }
+
+    .block-field-blocktaxonomy-termprocedurefield-header-infografia {
+        span {
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+
+}
+
+.page-taxonomy-secctions {
+    .block-page-title-block {
+        display: none !important;
+    }
+
+    .precontent {
+        margin-bottom: 1em;
+    }
+}
+
+
+.page-taxonomy-citizen_category {
+    .block-page-title-block {
+        display: none !important;
+    }
+
+    .precontent {
+        margin-bottom: 1em;
+    }
+
+    #block-icbf-content {
+        .content {
+            >div:first-child {
+                h1 {
+                    font-size: 40px !important;
+                    font-family: 'Asap-Regular' !important;
+                    color: #555 !important;
+                }
+
+                h4 {
+                    font-weight: normal;
+                    font-family: 'Montserrat', sans-serif;
+                    padding-top: 1.5em;
+                    border-top: 1px solid #ddd;
+                }
+
+                span {
+                    font-family: 'Montserrat', sans-serif;
+                }
+            }
+
+            >div:nth-child(3) {
+                .view-id-tramites_sapi {
+                    .view-filters {
+                        width: 100%;
+
+                        form {
+                            >div {
+                                display: flex;
+                                flex-wrap: wrap;
+
+                                >fieldset {
+                                    width: 45%;
+
+                                    .form-radios,
+                                    .form-checkboxes {
+                                        ul {
+                                            list-style: none;
+                                        }
+                                    }
+                                }
+
+                                >.form-item:nth-child(3) {
+                                    width: 180.2px;
+
+                                    label {
+                                        font-weight: 700;
+                                    }
+                                }
+
+                                >.form-item:nth-child(4) {
+                                    width: 104px;
+
+                                    label {
+                                        font-weight: 700;
+                                    }
+                                }
+
+                                >.form-item:nth-child(5) {
+                                    width: 80.8px;
+
+                                    label {
+                                        font-weight: 700;
+                                    }
+                                }
+
+                                >.form-actions {
+                                    padding-top: 1.2em;
+                                }
+
+                                @media (max-width: 768px) {
+                                    >fieldset {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    @media (max-width: 768px) {
+                        .view-content {
+                            >div {
+                                width: 95%;
+                                margin: 0 auto;
+                            }
+                        }
+                    }
+                }
+
+
+                //filtros
+                .view-id-tramites_sapi {
+                    .view-filters {
+
+                        .form-radios,
+                        .form-checkboxes {
+                            padding-top: 1em;
+                            margin-left: 0;
+
+                            input[type=checkbox],
+                            input[type=radio] {
+                                appearance: none;
+                                width: 13px;
+                                height: 13px;
+                                border: 1px solid #555;
+                                border-radius: 3px;
+                                margin: 0 4px 0 0 !important;
+                            }
+
+                            /* Cuando se selecciona el check*/
+                            /*Estilos para el icono interno del check*/
+                            input[type=checkbox]:checked,
+                            input[type=radio]:checked {
+                                background-color: #1996d0;
+                                border-color: #1996d0;
+                            }
+
+                            input[type=checkbox]::after,
+                            input[type=radio]::after {
+                                content: '✔';
+                                color: white;
+                                width: 10px;
+                                height: 10px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+
+                            //color de letras
+                            label {
+                                white-space: nowrap;
+                                color: #1996d0;
+                                text-decoration: none !important;
+                                font-size: 14px;
+                            }
+
+                            label:hover {
+                                color: #125e81;
+                                text-decoration: underline !important;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+
+/*
+************************************************
+******OFERTA INSTITUCIONAL (Segundo nivel)******
+************************************************
+*/
+
+
+
+.page-portafolio-de-servicios-icbf-ninos-y-ninas2,
+//en aceptacion
+.page-portafolio-de-servicios-icbf-ninos-y-ninas {
+    #block-icbf-content {
+        .content {
+            >div:first-child {
+
+                h1 {
+                    font-size: 40px !important;
+                    font-family: 'Asap-Regular' !important;
+                    color: #555 !important;
+                }
+
+                h4 {
+                    font-weight: normal;
+                    font-family: 'Montserrat', sans-serif;
+                    padding-top: 1.5em;
+                    border-top: 1px solid #ddd;
+                }
+
+                span {
+                    font-family: 'Montserrat', sans-serif;
+                }
+
+                ul {
+                    list-style: none;
+                    display: flex;
+                    justify-content: center;
+
+                    li {
+                        border: 1px solid #444;
+                        border-radius: 100%;
+                        width: 30.8px;
+                        height: 30.8px;
+                        margin: 0.2em;
+                        display: flex;
+                        justify-content: center;
+
+                        a {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+
+                    >li:first-child {
+                        i {
+                            color: #3b5998;
+                        }
+                    }
+
+                    >li:nth-child(2) {
+                        i {
+                            color: #e52d27;
+                        }
+                    }
+
+                    >li:nth-child(3) {
+                        i {
+                            color: #55acee;
+                        }
+                    }
+
+                    >li:nth-child(4) {
+                        i {
+                            color: #3f729b;
+                        }
+                    }
+                }
+            }
+
+            >div:nth-child(2) {
+                .view-id-tramites_sapi {
+                    .view-filters {
+                        width: 100%;
+
+                        form {
+                            >div {
+                                display: flex;
+                                flex-wrap: wrap;
+
+                                >fieldset {
+                                    width: 45%;
+
+                                    .form-radios,
+                                    .form-checkboxes {
+                                        ul {
+                                            list-style: none;
+                                        }
+                                    }
+                                }
+
+                                >.form-item:nth-child(3) {
+                                    width: 180.2px;
+
+                                    label {
+                                        font-weight: 700;
+                                    }
+                                }
+
+                                >.form-item:nth-child(4) {
+                                    width: 104px;
+
+                                    label {
+                                        font-weight: 700;
+                                    }
+                                }
+
+                                >.form-item:nth-child(5) {
+                                    width: 80.8px;
+
+                                    label {
+                                        font-weight: 700;
+                                    }
+                                }
+
+                                >.form-actions {
+                                    padding-top: 1.2em;
+                                }
+
+                                @media (max-width: 768px) {
+                                    >fieldset {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    @media (max-width: 768px) {
+                        .view-content {
+                            >div {
+                                width: 95%;
+                                margin: 0 auto;
+                            }
+                        }
+                    }
+                }
+
+
+                //filtros
+                .view-id-tramites_sapi {
+                    .view-filters {
+
+                        .form-radios,
+                        .form-checkboxes {
+                            padding-top: 1em;
+                            margin-left: 0;
+
+                            input[type=checkbox],
+                            input[type=radio] {
+                                appearance: none;
+                                width: 13px;
+                                height: 13px;
+                                border: 1px solid #555;
+                                border-radius: 3px;
+                                margin: 0 4px 0 0 !important;
+                            }
+
+                            /* Cuando se selecciona el check*/
+                            /*Estilos para el icono interno del check*/
+                            input[type=checkbox]:checked,
+                            input[type=radio]:checked {
+                                background-color: #1996d0;
+                                border-color: #1996d0;
+                            }
+
+                            input[type=checkbox]::after,
+                            input[type=radio]::after {
+                                content: '✔';
+                                color: white;
+                                width: 10px;
+                                height: 10px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+
+                            //color de letras
+                            label {
+                                white-space: nowrap;
+                                color: #1996d0;
+                                text-decoration: none !important;
+                                font-size: 14px;
+                            }
+
+                            label:hover {
+                                color: #125e81;
+                                text-decoration: underline !important;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 .page-portafolio-de-servicios-icbf-oferta {
-
-
 
     .h3-word-msintro span {
         font-family: var.$font-asap-regular;
@@ -308,9 +748,7 @@ ul.az-element.st-social.stbe-social-links.text-center.stbe-social-links--color-b
         height: 28px;
         line-height: 28px;
         font-size: 15px;
-        border-radius: 50%;
         text-align: center;
-        border: 1px solid #444;
         /* color genérico por defecto */
         color: #555;
         transition: all 0.3s ease;
@@ -329,46 +767,42 @@ ul.az-element.st-social.stbe-social-links.text-center.stbe-social-links--color-b
 
     .stbe-social-links__item a[href*="facebook"] i {
         color: #3b5998;
-        border: 1px solid #444;
+
     }
 
     .stbe-social-links__item a[href*="youtube"] i {
         color: #e52d27;
-        border: 1px solid #444;
+
     }
 
     .stbe-social-links__item a[href*="twitter"] i {
         color: #1da1f2;
-        border: 1px solid #444;
+
     }
 
     .stbe-social-links__item a[href*="instagram"] i {
         color: #1da1f2;
-        border: 1px solid #444;
+
     }
 
     .stbe-social-links__item a[href*="facebook"] i:hover {
         background-color: #fff;
         color: #3b5998;
-        border: 1px solid #444;
+
     }
 
     .stbe-social-links__item a[href*="youtube"] i:hover {
         background-color: #fff;
         color: #e52d27;
-        border: 1px solid #444;
     }
 
     .stbe-social-links__item a[href*="twitter"] i:hover {
         background-color: #fff;
         color: #1da1f2;
-        border: 1px solid #444;
     }
 
     .stbe-social-links__item a[href*="instagram"] i:hover {
-
         color: #3f729b;
-        border: 1px solid #444;
     }
 
     .az-icon .fa {
@@ -433,7 +867,6 @@ ul.az-element.st-social.stbe-social-links.text-center.stbe-social-links--color-b
         font-size: 13px;
         color: white;
         background-color: #555;
-        /* Azul oscuro típico */
         border-radius: 50%;
         width: 15px;
         height: 15px;
