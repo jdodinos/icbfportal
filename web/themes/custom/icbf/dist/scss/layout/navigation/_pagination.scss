@@ -6,11 +6,11 @@
   }
 
   &.pager__item--next {
-    width: 102.5px;
+    width: 103px;
 
     .page-link {
       &::before {
-        content: "Siguiente >";
+        content: "Siguiente > ";
       }
 
       >span[aria-hidden="true"] {
