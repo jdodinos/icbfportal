@@ -3782,7 +3782,16 @@
 
                 tbody {
                     h2 {
-                        font-size: 1.14em;
+                        font-size: 1.1833em;
+                    }
+
+                    a, a:link {
+                        color: #1996d0;
+                        text-decoration: none !important;
+                        &.active, &:hover, &:focus {
+                            color: #125e81;
+                            text-decoration: underline !important;
+                        } 
                     }
 
                     tr:nth-child(odd) {
