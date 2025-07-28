@@ -41,6 +41,13 @@ $border-color_1: #fff;
 .page-adopciones-instituciones-y-organismos-autorizados-organismos-y-agencias-internacionales
 {
 
+    .bg-intro{
+        h1, h2, h2, h3, h4, h5{
+            font-family: var.$font-montserrat;
+            font-weight: 600;
+        }
+    }
+
     .md-separator, .md-separator-text{
         width: 100%;
     }
@@ -1463,6 +1470,9 @@ $border-color_1: #fff;
         border-radius: 6px;
         border: none;
         display: block;
+        @media (max-width: 850px){
+            margin-top: 0px;
+        }
     }
     .intro-back:before{
         height: 100%;

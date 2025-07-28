@@ -1,5 +1,7 @@
 @use "../../abstracts/variables" as var;
 
+
+
 #block-icbf-page-title {
   width: 70%;
   margin: auto;
@@ -444,7 +446,10 @@
     }
   }
 
-  .file--application-pdf{
+  .file,
+  .file--application-pdf,
+  .file--x-office-document,
+  .file--x-office-spreadsheet{
     a{
       font-family: var.$font-asap-regular;
       font-weight: 500;
