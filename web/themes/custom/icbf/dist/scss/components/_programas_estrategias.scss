@@ -481,6 +481,34 @@
                         grid-area: a;
                         width: 100%;
                         margin-top: 0;
+
+                        form {
+                            >div {
+                                display: grid;
+                                grid-template-areas:
+                                    "a"
+                                    "b"
+                                    "c"
+                                    "d"
+                                    "e";
+                                
+                                >.form-item:first-child{
+                                    grid-area: a;
+                                }
+                                >.form-item:nth-child(2) {
+                                    grid-area: c;
+                                }
+                                >.form-item:nth-child(3) {
+                                    grid-area: d;
+                                }
+                                >.form-item:nth-child(4) {
+                                    grid-area: b;
+                                }
+                                >.form-actions {
+                                    grid-area: e;
+                                }
+                            }
+                        }
                     }
 
                     .view-content {
