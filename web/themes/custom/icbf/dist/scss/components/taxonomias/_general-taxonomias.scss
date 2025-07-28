@@ -4367,6 +4367,17 @@
             }
 
             >div:nth-child(3){
+                h2{
+                    font-family: 'Montserrat', sans-serif;
+                    margin-left: 18%;
+                    font-size: 1.2em !important;
+                }
+                @media (max-width: 768px) {
+                    h2{
+                        margin-left: 1em;
+                    }
+                }
+
                 .view-id-puntos_de_atencion_sapi {
                     justify-items: center;
                     display: grid;
@@ -4534,8 +4545,6 @@
     }
     .precontent{
         margin-bottom: 1em;
-        
-    
     }
 }
 
@@ -4549,48 +4558,6 @@
             .block-field-blocktaxonomy-termprocedurefield-header-infografia{
                 span{
                     font-family: 'Montserrat', sans-serif;
-                }
-                ul{
-                    list-style: none;
-                    display: flex;
-                    justify-content: center;
-
-                    li{
-                        border: 1px solid #444;
-                        border-radius: 100%;
-                        width: 30.8px;
-                        height: 30.8px;
-                        margin: 0.2em;
-                        display: flex;
-                        justify-content: center;
-
-                        a {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                        }
-                    }
-
-                    >li:first-child{
-                        i{
-                            color: #3b5998;
-                        }
-                    }
-                    >li:nth-child(2){
-                        i{
-                            color: #e52d27;
-                        }
-                    }
-                    >li:nth-child(3){
-                        i{
-                            color: #55acee;
-                        }
-                    }
-                    >li:nth-child(4){
-                        i{
-                            color: #3f729b;
-                        }
-                    }
                 }
             }
 
@@ -4624,6 +4591,19 @@
                         }
                     }
                 }
+
+                a[type='button'] {
+                    font-family: 'Montserrat', sans-serif;
+                    padding: 6px 8.4px;
+                }
+            }
+
+            .block-views-blocktramites-block-9{
+                h2{
+                    font-family: 'Montserrat', sans-serif;
+                    line-height: normal !important;
+                    font-size: 1.7em;
+                }
             }
         }
     }
@@ -4636,9 +4616,6 @@
     #block-icbf-content{
         .content{
             >div:first-child{
-                .az-ctnr {
-                    width: 100%;
-                }
 
                 h1{
                     font-size: 40px !important;
@@ -4733,6 +4710,10 @@
                                         font-weight: 700;
                                     }
                                 }
+                                >.form-actions {
+                                    padding-top: 1.2em;
+                                }
+
                                 @media (max-width: 768px) {
                                     >fieldset{
                                         width: 100%;
@@ -4824,10 +4805,6 @@
     #block-icbf-content{
         .content{
             >div:first-child{
-                .az-ctnr {
-                    width: 100%;
-                }
-
                 h1{
                     font-size: 40px !important;
                     font-family: 'Asap-Regular' !important;
@@ -4841,48 +4818,6 @@
                 }
                 span{
                     font-family: 'Montserrat', sans-serif;
-                }
-                ul{
-                    list-style: none;
-                    display: flex;
-                    justify-content: center;
-
-                    li{
-                        border: 1px solid #444;
-                        border-radius: 100%;
-                        width: 30.8px;
-                        height: 30.8px;
-                        margin: 0.2em;
-                        display: flex;
-                        justify-content: center;
-
-                        a {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                        }
-                    }
-
-                    >li:first-child{
-                        i{
-                            color: #3b5998;
-                        }
-                    }
-                    >li:nth-child(2){
-                        i{
-                            color: #e52d27;
-                        }
-                    }
-                    >li:nth-child(3){
-                        i{
-                            color: #55acee;
-                        }
-                    }
-                    >li:nth-child(4){
-                        i{
-                            color: #3f729b;
-                        }
-                    }
                 }
             }
 
@@ -4920,6 +4855,9 @@
                                     label{
                                         font-weight: 700;
                                     }
+                                }
+                                >.form-actions {
+                                    padding-top: 1.2em;
                                 }
                                 @media (max-width: 768px) {
                                     >fieldset{

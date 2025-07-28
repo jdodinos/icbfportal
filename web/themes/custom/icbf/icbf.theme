@@ -91,24 +91,7 @@ function icbf_preprocess_field(&$variables) {
           $html_close = substr($html, $item_pos, $html_close_pos);
         }
 
-        if (strpos($item['content']['#text'], 'owl-carousel st-owl-theme') !== FALSE || strpos($item['content']['#text'], 'stpe-quoteslider') !== FALSE) {
-          if (strpos($item['content']['#text'], 'owl-carousel st-owl-theme') !== FALSE) {
-            $string_to_replace = 'owl-carousel st-owl-theme';
-          }
-          elseif (strpos($item['content']['#text'], 'stpe-quoteslider') !== FALSE) {
-            $string_to_replace = 'carousel slide stpe-quoteslider';
-          }
-
-          if (isset($string_to_replace)) {
-            $html_text = &$item['content']['#text'];
-            $html_text = str_replace($string_to_replace, 'icbf-owl-carousel', $html_text);
-            $html_text = str_replace('owl-wrapper', 'icbf-owl-carousel-wrapper', $html_text);
-            $html_text = str_replace('carousel-inner', 'icbf-owl-carousel-wrapper', $html_text);
-            $html_text = preg_replace('/<ol class="carousel-indicators">.*?<\/ol>/s', '', $html_text);
-            // Remover todos los atributos style="..."
-            $html_text = preg_replace('/\s*style="[^"]*"/i', '', $html_text);
-          }
-        }
+        $item['content']['#text'] = icbf_owl_slide_process($item['content']['#text']);
       }
     }
   // }
@@ -297,6 +280,8 @@ function icbf_preprocess_views_view_field(&$variables) {
       $output = str_replace('</p>', '', $output);
       $decoded_html = html_entity_decode($output);
       $decoded_html = icbf_files_directory_process($decoded_html);
+      $decoded_html = icbf_owl_slide_process($decoded_html);
+
       $variables['output'] = [
         '#markup' => $decoded_html,
       ];
@@ -436,6 +421,28 @@ function icbf_files_directory_process($html) {
   return $html;
 }
 
+function icbf_owl_slide_process($html) {
+  if (strpos($html, 'owl-carousel st-owl-theme') !== FALSE || strpos($html, 'stpe-quoteslider') !== FALSE) {
+    if (strpos($html, 'owl-carousel st-owl-theme') !== FALSE) {
+      $string_to_replace = 'owl-carousel st-owl-theme';
+    }
+    elseif (strpos($html, 'stpe-quoteslider') !== FALSE) {
+      $string_to_replace = 'carousel slide stpe-quoteslider';
+    }
+
+    if (isset($string_to_replace)) {
+      $html = str_replace($string_to_replace, 'icbf-owl-carousel', $html);
+      $html = str_replace('owl-wrapper', 'icbf-owl-carousel-wrapper', $html);
+      $html = str_replace('carousel-inner', 'icbf-owl-carousel-wrapper', $html);
+      $html = preg_replace('/<ol class="carousel-indicators">.*?<\/ol>/s', '', $html);
+      // Remover todos los atributos style="..."
+      $html = preg_replace('/\s*style="[^"]*"/i', '', $html);
+    }
+  }
+
+  return $html;
+}
+
 /**
  * Implements hook_preprocess_HOOK().
  */
@@ -448,16 +455,30 @@ function icbf_preprocess_tb_megamenu_item(&$variables) {
  * Implements hook_page_attachments_alter().
  */
 function icbf_page_attachments_alter(array &$attachments) {
-  $term = \Drupal::routeMatch()->getParameter('taxonomy_term');
-  if ($term && $term instanceof EntityInterface) {
-    $vocabulary = $term->bundle();
+  $main_library = 'icbf/main-styling';
+  $ninos_ninas_library = 'icbf/ninos-y-ninas';
 
-    if ($vocabulary == 'ninos_ninas_y_adolescentes') {
-      $global_style_index = array_search('icbf/main-styling', $attachments['#attached']['library']);
-      if ($global_style_index !== FALSE) {
-        unset($attachments['#attached']['library'][$global_style_index]);
+  foreach (\Drupal::routeMatch()->getParameters() as $param) {
+    if ($param instanceof EntityInterface) {
+      $entity_type = $param->bundle();
+      if ($param instanceof Term) {
+        if ($entity_type == 'ninos_ninas_y_adolescentes') {
+          $global_style_index = array_search($main_library, $attachments['#attached']['library']);
+          if ($global_style_index !== FALSE) {
+            unset($attachments['#attached']['library'][$global_style_index]);
+          }
+          $attachments['#attached']['library'][] = $ninos_ninas_library;
+        }
       }
-      $attachments['#attached']['library'][] = 'icbf/ninos-y-ninas';
+      elseif ($param instanceof NodeInterface) {
+        if ($entity_type == 'articulo_nna') {
+          $global_style_index = array_search('icbf/main-styling', $attachments['#attached']['library']);
+          if ($global_style_index !== FALSE) {
+            unset($attachments['#attached']['library'][$global_style_index]);
+          }
+          $attachments['#attached']['library'][] = $ninos_ninas_library;
+        }
+      }
     }
   }
 }

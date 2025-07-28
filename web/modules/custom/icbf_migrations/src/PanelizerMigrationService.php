@@ -671,6 +671,13 @@ class PanelizerMigrationService {
         }
         break;
 
+      case 'adoptions_location_colombia':
+        $displayes = ['block'];
+        if (in_array($display_id, $displayes)) {
+          $view_id = 'adoptions_location_colombia_sapi';
+        }
+        break;
+
       case 'catalogo_sme_sapi_':
         $displayes = ['block'];
         if (in_array($display_id, $displayes)) {

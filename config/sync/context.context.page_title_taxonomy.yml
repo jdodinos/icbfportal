@@ -21,6 +21,7 @@ conditions:
     bundles:
       congreso_xxii: congreso_xxii
       ninos_ninas_y_adolescentes: ninos_ninas_y_adolescentes
+      programa_adopciones: programa_adopciones
       secctions: secctions
   request_path:
     id: request_path

@@ -2903,7 +2903,7 @@ display:
           type: datetime_custom
           settings:
             timezone_override: ''
-            date_format: d/m/Y
+            date_format: d/M/Y
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -2950,7 +2950,7 @@ display:
           reset_button: true
           reset_button_label: Restablecer
           exposed_sorts_label: 'Ordenar por'
-          expose_sort_order: true
+          expose_sort_order: false
           sort_asc_label: Asc
           sort_desc_label: Desc
           text_input_required: 'Seleccione cualquier filtro y pulse Aplicar para ver los resultados'
@@ -3539,7 +3539,6 @@ display:
         - url
         - url.query_args
         - 'url.query_args:sort_by'
-        - 'url.query_args:sort_order'
         - 'user.node_grants:view'
       tags:
         - 'config:field.storage.node.field_date'
