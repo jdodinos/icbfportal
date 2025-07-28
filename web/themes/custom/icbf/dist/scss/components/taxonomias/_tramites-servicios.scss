@@ -468,6 +468,58 @@ ul.m4 li {
         }
     }
 
+    ul.az-element.st-social.stbe-social-links.text-center.stbe-social-links--color-brand.stbe-social-links--hover-color-brand {
+
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        li {
+            list-style: none;
+            width: 30.8px;
+            height: 30.8px;
+            margin: 0.2em;
+            display: flex;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid #444;
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:hover {
+                    text-decoration: none !important;
+                }
+            }
+        }
+
+        >li:first-child {
+            i {
+                color: #3b5998;
+            }
+        }
+
+        >li:nth-child(2) {
+            i {
+                color: #e52d27;
+            }
+        }
+
+        >li:nth-child(3) {
+            i {
+                color: #55acee;
+            }
+        }
+
+        >li:nth-child(4) {
+            i {
+                color: #3f729b;
+            }
+        }
+    }
+
 }
 
 
