@@ -1,5 +1,10 @@
 @use "../abstracts/variables" as var;
 
+.page-adopciones .entryb-ada .contentb-ada ul li::before, .page-adopciones-quienes-pueden-ser-adoptados .entryb-ada .contentb-ada ul li::before, .page-adopciones-quienes-pueden-adoptar .entryb-ada .contentb-ada ul li::before, .page-adopciones-requisitos-basicos .entryb-ada .contentb-ada ul li::before, .page-adopciones-proceso-de-adopcion .entryb-ada .contentb-ada ul li::before, .page-adopciones-paso-paso .entryb-ada .contentb-ada ul li::before, .page-adopciones-instituciones-y-organismos-autorizados-instituciones-autorizadas-en-colombia .entryb-ada .contentb-ada ul li::before, .page-adopciones-instituciones-y-organismos-autorizados-organismos-y-agencias-internacionales .entryb-ada .contentb-ada ul li::before {
+    content: "-";
+    margin-right: 0.5em;
+}
+
 .page-programas-y-estrategias-primera-infancia-promocion-de-la-lectura-salas-de-lectura,
 .page-programas-y-estrategias-primera-infancia-promocion-de-la-lectura,
 .page-programas-y-estrategias-primera-infancia-acerca-de,

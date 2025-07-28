@@ -25,36 +25,52 @@ $ = jQuery;
 
       // Función recalcular submenu Adopciones
       function recalcularSubmenus() {
-        const dropdownItems = document.querySelectorAll('.page-id-7439 .tb-megamenu .tb-megamenu-nav > li.dropdown');
+        const pageSelectors = [
+            '.page-id-7439',
+            '.page-adopciones',
+            '.page-adopciones-quienes-pueden-adoptar',
+            '.page-adopciones-quienes-pueden-ser-adoptados',
+            '.page-adopciones-quienes-pueden-adoptar',
+            '.page-adopciones-requisitos-basicos',
+            '.page-adopciones-proceso-de-adopcion',
+            '.page-adopciones-paso-paso',
+            
+            // aquí puedes agregar más
+        ];
+
+        // Crear un selector combinado
+        const combinedSelector = pageSelectors
+            .map(sel => `${sel} .tb-megamenu .tb-megamenu-nav > li.dropdown`)
+            .join(', ');
+
+        const dropdownItems = document.querySelectorAll(combinedSelector);
 
         dropdownItems.forEach(function (item) {
-          const submenu = item.querySelector('.tb-megamenu-submenu');
-          if (!submenu) return;
+            const submenu = item.querySelector('.tb-megamenu-submenu');
+            if (!submenu) return;
 
-          // Reset de estilos anteriores
-          submenu.style.left = '';
-          submenu.style.right = '';
-          submenu.style.position = 'absolute';
+            submenu.style.left = '';
+            submenu.style.right = '';
+            submenu.style.position = 'absolute';
 
-          // Calcular posición y ajustes
-          const itemRect = item.getBoundingClientRect();
-          let viewportWidth = window.innerWidth;
-          if (viewportWidth > 1150) {
-            viewportWidth = 1150;
-          }
+            const itemRect = item.getBoundingClientRect();
+            let viewportWidth = window.innerWidth;
+            if (viewportWidth > 1150) {
+                viewportWidth = 1150;
+            }
 
-          const submenuWidth = submenu.offsetWidth || 400;
-          const projectedRight = itemRect.left + submenuWidth;
+            const submenuWidth = submenu.offsetWidth || 400;
+            const projectedRight = itemRect.left + submenuWidth;
 
-          if (projectedRight > viewportWidth) {
-            submenu.style.left = 'initial';
-            submenu.style.right = '0';
-          } else {
-            submenu.style.left = item.offsetLeft + 'px';
-            submenu.style.right = 'initial';
-          }
+            if (projectedRight > viewportWidth) {
+                submenu.style.left = 'initial';
+                submenu.style.right = '0';
+            } else {
+                submenu.style.left = item.offsetLeft + 'px';
+                submenu.style.right = 'initial';
+            }
         });
-      }
+    }
 
       recalcularSubmenus()
       document.addEventListener('DOMContentLoaded', recalcularSubmenus);
@@ -168,21 +184,30 @@ $ = jQuery;
                 breakpoint: 1024,
                 settings: {
                   slidesToShow: 5,
-                  slidesToScroll: 5
+                }
+              },
+              {
+                breakpoint: 992,
+                settings: {
+                  slidesToShow: 4,
+                }
+              },
+              {
+                breakpoint: 860,
+                settings: {
+                  slidesToShow: 3,
                 }
               },
               {
                 breakpoint: 768,
                 settings: {
                   slidesToShow: 2,
-                  slidesToScroll: 2
                 }
               },
               {
                 breakpoint: 600,
                 settings: {
                   slidesToShow: 1,
-                  slidesToScroll: 1,
                   infinite: true
                 }
               }
@@ -313,7 +338,8 @@ $(document).ready(function () {
     '.page-nutricion-tabla-de-composicion-de-alimentos-colombianos',
     '.page-nutricion-hoja-de-balance-de-alimentos-colombianos',
     '.page-nutricion-educacion-alimentaria-y-nutricional',
-    '.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional'
+    '.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional',
+    // '.page-adopciones-paso-paso',
   ];
 
   var aplicar = paginasPermitidas.some(function (clase) {
