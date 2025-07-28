@@ -195,24 +195,21 @@ ul.m4 li {
         margin-left: calc(-50vw + 50%);
         margin-right: calc(-50vw + 50%);
 
+
         li {
-            list-style: none;
-            width: 30.8px;
-            height: 30.8px;
+            border: 1px solid #444;
+            border-radius: 100%;
+            width: 33px;
+            height: 33px;
             margin: 0.2em;
             display: flex;
             justify-content: center;
-            border-radius: 50%;
-            border: 1px solid #444;
 
             a {
+                width: 8px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-
-                &:hover {
-                    text-decoration: none !important;
-                }
             }
         }
 
@@ -477,8 +474,8 @@ ul.m4 li {
 
         li {
             list-style: none;
-            width: 30.8px;
-            height: 30.8px;
+            width: 33px;
+            height: 33px;
             margin: 0.2em;
             display: flex;
             justify-content: center;
@@ -486,6 +483,7 @@ ul.m4 li {
             border: 1px solid #444;
 
             a {
+                width: 8px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -563,6 +561,7 @@ ul.m4 li {
                     list-style: none;
                     display: flex;
                     justify-content: center;
+                    max-width: 750px;
 
                     li {
                         border: 1px solid #444;
@@ -766,8 +765,6 @@ ul.m4 li {
 .page-restitucion-internacional-y-regulacion-internacional-de-visitas,
 .page-portafolio-de-servicios-icbf-oferta,
 .page-autorizacion-venta-de-inmuebles-de-propiedad-de-los-ninos-ninas-y-adolescentes {
-
-
 
     #wpm39m14 {
         h3 {
