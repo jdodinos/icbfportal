@@ -161,8 +161,26 @@
 }
 
 .page-programas-y-estrategias-primera-infancia-acerca-de{
+
+    .taxonomy-term{
+        .layout__region--first{
+            h2{
+                font-family: var.$font-montserrat;
+                font-size: 15.24px;
+                font-weight: 500;
+                margin: 0 0 10px;
+            }
+        }
+    }
+
     .block-views-blockarticulos-secciones-block-postpinf{
         padding: 0 20px;
+
+        .view-articulos-secciones{
+            border-bottom: 0;
+            border-top: 1px solid #8095f7;
+            margin-top: 20px;
+        }
         .view-content{
             > div{
                 .field-content{
@@ -490,22 +508,33 @@
                                     "b"
                                     "c"
                                     "d"
-                                    "e";
+                                    "e"
+                                    "f";
                                 
                                 >.form-item:first-child{
                                     grid-area: a;
                                 }
                                 >.form-item:nth-child(2) {
-                                    grid-area: c;
+                                    grid-area: b;
+
+                                    label{
+                                        font-weight: 700;
+                                    }
                                 }
                                 >.form-item:nth-child(3) {
                                     grid-area: d;
                                 }
                                 >.form-item:nth-child(4) {
-                                    grid-area: b;
+                                    grid-area: e;
+                                }
+                                >.form-item:nth-child(5) {
+                                    grid-area: c;
+                                    label{
+                                        font-weight: 700;
+                                    }
                                 }
                                 >.form-actions {
-                                    grid-area: e;
+                                    grid-area: f;
                                 }
                             }
                         }
