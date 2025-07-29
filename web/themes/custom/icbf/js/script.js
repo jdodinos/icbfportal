@@ -34,7 +34,7 @@ $ = jQuery;
             '.page-adopciones-requisitos-basicos',
             '.page-adopciones-proceso-de-adopcion',
             '.page-adopciones-paso-paso',
-            
+
             // aquí puedes agregar más
         ];
 
@@ -176,6 +176,8 @@ $ = jQuery;
             infinite: true,
             speed: 500,
             slidesToShow: 5,
+            autoplay: true,
+            autoplaySpeed: 12000,
             slidesToScroll: 1,
             arrows: true,
             dots: true,
