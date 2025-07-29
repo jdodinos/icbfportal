@@ -692,6 +692,13 @@ class PanelizerMigrationService {
         }
         break;
 
+      case 'adoptions_ubication':
+        $displayes = ['block_2'];
+        if (in_array($display_id, $displayes)) {
+          $view_id = 'adoptions_ubication_sapi';
+        }
+        break;
+
       case 'documents':
         $displayes = ['block', 'block_4', 'block_9', 'block_10', 'block_11', 'block_43'];
         if (in_array($display_id, $displayes)) {
