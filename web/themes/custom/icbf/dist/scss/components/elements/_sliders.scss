@@ -241,10 +241,12 @@
 
          .slick-next {
              right: 1%;
+             z-index: 9999;
          }
 
          .slick-prev {
-             right: 99%;
+             left: 1%;
+             z-index: 9999;
          }
 
          .slick-prev {
