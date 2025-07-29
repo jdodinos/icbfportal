@@ -498,6 +498,10 @@
                                 }
                                 >.form-item:nth-child(2) {
                                     grid-area: b;
+
+                                    label{
+                                        font-weight: 700;
+                                    }
                                 }
                                 >.form-item:nth-child(3) {
                                     grid-area: d;
@@ -507,6 +511,9 @@
                                 }
                                 >.form-item:nth-child(5) {
                                     grid-area: c;
+                                    label{
+                                        font-weight: 700;
+                                    }
                                 }
                                 >.form-actions {
                                     grid-area: f;
