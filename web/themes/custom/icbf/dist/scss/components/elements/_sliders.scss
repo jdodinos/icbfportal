@@ -256,6 +256,7 @@
                 transform-origin: 0 100%;
                 width: 40%;
                 height: 2px;
+                transition: transform 0.4s ease;
             }
             &::after{
                 content: "";
@@ -265,6 +266,18 @@
                 transform-origin: 0 100%;
                 width: 40%;
                 height: 2px;
+                transition: transform 0.4s ease;
+            }
+
+            &:hover{
+                background: #3366cc;
+
+                &::before{
+                    transform: translateX(50%) rotate(35deg);
+                }
+                &::after{
+                    transform: translateX(-50%) rotate(-35deg);
+                }
             }
         }
 
@@ -277,6 +290,7 @@
                 transform-origin: 100% 0;
                 width: 40%;
                 height: 2px;
+                transition: transform 0.4s ease;
             }
             &::after{
                 content: "";
@@ -286,6 +300,18 @@
                 transform-origin: 100% 0;
                 width: 40%;
                 height: 2px;
+                transition: transform 0.4s ease;
+            }
+
+            &:hover{
+                background: #3366cc;
+
+                &::before{
+                    transform: translateX(50%) rotate(-35deg);
+                }
+                &::after{
+                    transform: translateX(-50%) rotate(35deg);
+                }
             }
         }
 
@@ -308,7 +334,7 @@
 
             li.slick-active {
                 button {
-                    background: #999;
+                    background: #3366cc !important;
                 }
             }
 
