@@ -171,8 +171,8 @@ $ = jQuery;
             dots: true
           });
         }
-        else if ($('.page-id-8092').length) {
-          $(' .icbf-owl-carousel-wrapper').slick({
+        else if ($('#6gy1mn3w').length) {
+          $('#6gy1mn3w .icbf-owl-carousel-wrapper').slick({
             infinite: false,
             speed: 300,
             slidesToShow: 5,
