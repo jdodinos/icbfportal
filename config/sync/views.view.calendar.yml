@@ -3916,7 +3916,7 @@ display:
           click_sort_column: value
           type: daterange_custom
           settings:
-            timezone_override: Europe/Lisbon
+            timezone_override: Africa/Dakar
             date_format: Y-m-d
             from_to: start_date
             separator: '-'
@@ -3982,7 +3982,7 @@ display:
           click_sort_column: value
           type: daterange_default
           settings:
-            timezone_override: Europe/Lisbon
+            timezone_override: Africa/Dakar
             format_type: olivero_medium
             from_to: start_date
             separator: ''
@@ -4114,7 +4114,7 @@ display:
           click_sort_column: value
           type: daterange_custom
           settings:
-            timezone_override: Europe/Lisbon
+            timezone_override: Africa/Dakar
             date_format: 'l d \d\e F \d\e Y - h:i a'
             from_to: start_date
             separator: '-'
