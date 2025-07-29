@@ -1589,6 +1589,7 @@ $border-color_1: #fff;
         margin: 0 0 18px;
         padding: 6px;
         width: 100%;
+        word-break: break-all;
     }
 
     .adopt-title {
@@ -1620,6 +1621,7 @@ $border-color_1: #fff;
                 width: calc(100% / 12 * 12);
 
                 .view-adoptions-location-colombia,
+                .view-adoptions-location-colombia-sapi,
                 .view-adoptions-ubication,
                 .view-adoptions-ubication-sapi{
                     display: flex;
@@ -1627,20 +1629,27 @@ $border-color_1: #fff;
 
                     .view-filters{
                         width: calc(100% / 12 * 3);
-
+                        @media (max-width: 768px) {
+                            width: 100%;
+                        }
+                        
+                        legend{
+                            display: block;
+                            font-size: 16.8px;
+                            margin: 0 0 30px;
+                        }
+                        
                         .form-radios{
                             display: flex;
                             flex-direction: column;
 
-                            legend{
-                                display: block;
-                                font-size: 16.8px;
-                                margin: 0 0 30px;
-                            }
                         }
                     }
                     .view-content{
                         width: calc(100% / 12 * 9);
+                        @media (max-width: 768px) {
+                            width: 100%;
+                        }
 
                         .views-row{
                             background-color: #fcfcfc !important;
