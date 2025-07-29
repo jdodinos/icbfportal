@@ -18,7 +18,7 @@ $ = jQuery;
         var num_items = $('.view-id-calendar.view-display-id-block_page_6 .view-content >div').length;
         $('.view-id-calendar.view-display-id-block_page_6 .view-content').slick({
           infinite: false,
-          initialSlide: num_items -1,
+          initialSlide: num_items - 1,
           adaptiveHeight: true,
         });
       }
@@ -26,51 +26,51 @@ $ = jQuery;
       // Función recalcular submenu Adopciones
       function recalcularSubmenus() {
         const pageSelectors = [
-            '.page-id-7439',
-            '.page-adopciones',
-            '.page-adopciones-quienes-pueden-adoptar',
-            '.page-adopciones-quienes-pueden-ser-adoptados',
-            '.page-adopciones-quienes-pueden-adoptar',
-            '.page-adopciones-requisitos-basicos',
-            '.page-adopciones-proceso-de-adopcion',
-            '.page-adopciones-paso-paso',
+          '.page-id-7439',
+          '.page-adopciones',
+          '.page-adopciones-quienes-pueden-adoptar',
+          '.page-adopciones-quienes-pueden-ser-adoptados',
+          '.page-adopciones-quienes-pueden-adoptar',
+          '.page-adopciones-requisitos-basicos',
+          '.page-adopciones-proceso-de-adopcion',
+          '.page-adopciones-paso-paso',
 
-            // aquí puedes agregar más
+          // aquí puedes agregar más
         ];
 
         // Crear un selector combinado
         const combinedSelector = pageSelectors
-            .map(sel => `${sel} .tb-megamenu .tb-megamenu-nav > li.dropdown`)
-            .join(', ');
+          .map(sel => `${sel} .tb-megamenu .tb-megamenu-nav > li.dropdown`)
+          .join(', ');
 
         const dropdownItems = document.querySelectorAll(combinedSelector);
 
         dropdownItems.forEach(function (item) {
-            const submenu = item.querySelector('.tb-megamenu-submenu');
-            if (!submenu) return;
+          const submenu = item.querySelector('.tb-megamenu-submenu');
+          if (!submenu) return;
 
-            submenu.style.left = '';
-            submenu.style.right = '';
-            submenu.style.position = 'absolute';
+          submenu.style.left = '';
+          submenu.style.right = '';
+          submenu.style.position = 'absolute';
 
-            const itemRect = item.getBoundingClientRect();
-            let viewportWidth = window.innerWidth;
-            if (viewportWidth > 1150) {
-                viewportWidth = 1150;
-            }
+          const itemRect = item.getBoundingClientRect();
+          let viewportWidth = window.innerWidth;
+          if (viewportWidth > 1150) {
+            viewportWidth = 1150;
+          }
 
-            const submenuWidth = submenu.offsetWidth || 400;
-            const projectedRight = itemRect.left + submenuWidth;
+          const submenuWidth = submenu.offsetWidth || 400;
+          const projectedRight = itemRect.left + submenuWidth;
 
-            if (projectedRight > viewportWidth) {
-                submenu.style.left = 'initial';
-                submenu.style.right = '0';
-            } else {
-                submenu.style.left = item.offsetLeft + 'px';
-                submenu.style.right = 'initial';
-            }
+          if (projectedRight > viewportWidth) {
+            submenu.style.left = 'initial';
+            submenu.style.right = '0';
+          } else {
+            submenu.style.left = item.offsetLeft + 'px';
+            submenu.style.right = 'initial';
+          }
         });
-    }
+      }
 
       recalcularSubmenus()
       document.addEventListener('DOMContentLoaded', recalcularSubmenus);
@@ -159,7 +159,7 @@ $ = jQuery;
             fade: true
           });
         }
-        else if ($('.page-id-6662').length) {
+        else if ($('.page-id-6662').length || $('.page-id-8077').length) {
           $(' .icbf-owl-carousel-wrapper').slick({
             infinite: true,
             speed: 500,
@@ -169,6 +169,40 @@ $ = jQuery;
             slidesToScroll: 1,
             arrows: true,
             dots: true
+          });
+        }
+        else if ($('.page-id-8092').length) {
+          $(' .icbf-owl-carousel-wrapper').slick({
+            infinite: false,
+            speed: 300,
+            slidesToShow: 5,
+            slidesToScroll: 5,
+            arrows: false,
+            dots: false,
+            responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 5,
+                  slidesToScroll: 5
+                }
+              },
+              {
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2
+                }
+              },
+              {
+                breakpoint: 600,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  infinite: true
+                }
+              }
+            ]
           });
         }
         else if ($('.page-adopciones-quienes-pueden-ser-adoptados .icbf-owl-carousel-wrapper').length) {
