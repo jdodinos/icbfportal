@@ -4604,7 +4604,7 @@
                                 background-position: center;
                                 background-repeat: no-repeat !important;
                                 background-size: 57px !important;
-                                background: url('/sites/default/files/mpg-images_10.png');
+                                background: url('/sites/default/files/mpg-images_06.png');
                                 content: "";
                                 display: block;
                                 height: 55px;
@@ -4618,7 +4618,7 @@
                                 background-position: center;
                                 background-repeat: no-repeat !important;
                                 background-size: 57px !important;
-                                background: url('/sites/default/files/mpg-images_06.png');
+                                background: url('/sites/default/files/mpg-images_08.png');
                                 content: "";
                                 display: block;
                                 height: 55px;
@@ -4632,7 +4632,7 @@
                                 background-position: center;
                                 background-repeat: no-repeat !important;
                                 background-size: 57px !important;
-                                background: url('/sites/default/files/mpg-images_08.png');
+                                background: url('/sites/default/files/mpg-images_03.png');
                                 content: "";
                                 display: block;
                                 height: 55px;
@@ -4646,7 +4646,7 @@
                                 background-position: center;
                                 background-repeat: no-repeat !important;
                                 background-size: 57px !important;
-                                background: url('/sites/default/files/mpg-images_03.png');
+                                background: url('/sites/default/files/mpg-images_10.png');
                                 content: "";
                                 display: block;
                                 height: 55px;
@@ -4654,6 +4654,15 @@
                                 padding: 0;
                                 width: 55px;
                             }
+                        }
+                    }
+                }
+                .quicktabs-main{
+                    >.quicktabs-tabpage{
+                        h4{
+                            font-size: 1.1em;
+                            font-family: var.$font-asap-regular;
+                            margin: 0 1px 4px;
                         }
                     }
                 }
