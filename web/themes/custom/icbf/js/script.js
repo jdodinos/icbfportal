@@ -375,6 +375,7 @@ $(document).ready(function () {
     '.page-nutricion-hoja-de-balance-de-alimentos-colombianos',
     '.page-nutricion-educacion-alimentaria-y-nutricional',
     '.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional',
+    '.page-programas-y-estrategias-primera-infancia-mediatica-recursos-para-la-primera-infancia',
     // '.page-adopciones-paso-paso',
   ];
 
