@@ -4555,3 +4555,109 @@
 }
 
 
+
+/*
+--------/modelo-planeacion-y-sistema-integrado-gestion/modelo-integrado-de-planeacion-y-gestion---------
+*/
+
+.page-modelo-planeacion-y-sistema-integrado-gestion-modelo-integrado-de-planeacion-y-gestion{
+    #block-icbf-content{
+        .content{
+            >.layout:nth-child(2){
+                .item-list{
+                    ul{
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin: 0 auto;
+                        width: fit-content;
+                        justify-content: center;
+                        padding: 1em 0;
+
+                        li{
+                            background-color: #f5f5f5 !important;
+                            border-radius: 4px;
+                            border: 1px solid #fff;
+                            padding: 15px 12px 6px !important;
+                            margin: auto .3em !important;
+                            text-align: center;
+                            font-size: 1em;
+                            font-weight: 600;
+                            min-width: 120px;
+                            display: inline-block !important;
+
+                            a {
+                                color: #125e81;
+                                text-decoration: underline !important;
+                                font-family: var.$font-montserrat-regular;
+                                font-weight: 600;
+                                outline: none;
+
+                                &:hover{
+                                    color: #36c;
+                                }
+                            }
+
+                        }
+
+                        >li:first-child {
+                            a::before{
+                                background-position: center;
+                                background-repeat: no-repeat !important;
+                                background-size: 57px !important;
+                                background: url('/sites/default/files/mpg-images_10.png');
+                                content: "";
+                                display: block;
+                                height: 55px;
+                                margin: auto;
+                                padding: 0;
+                                width: 55px;
+                            }
+                        }
+                        >li:nth-child(2) {
+                            a::before{
+                                background-position: center;
+                                background-repeat: no-repeat !important;
+                                background-size: 57px !important;
+                                background: url('/sites/default/files/mpg-images_06.png');
+                                content: "";
+                                display: block;
+                                height: 55px;
+                                margin: auto;
+                                padding: 0;
+                                width: 55px;
+                            }
+                        }
+                        >li:nth-child(3){
+                            a::before{
+                                background-position: center;
+                                background-repeat: no-repeat !important;
+                                background-size: 57px !important;
+                                background: url('/sites/default/files/mpg-images_08.png');
+                                content: "";
+                                display: block;
+                                height: 55px;
+                                margin: auto;
+                                padding: 0;
+                                width: 55px;
+                            }
+                        }
+                        >li:nth-child(4){
+                            a::before{
+                                background-position: center;
+                                background-repeat: no-repeat !important;
+                                background-size: 57px !important;
+                                background: url('/sites/default/files/mpg-images_03.png');
+                                content: "";
+                                display: block;
+                                height: 55px;
+                                margin: auto;
+                                padding: 0;
+                                width: 55px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
