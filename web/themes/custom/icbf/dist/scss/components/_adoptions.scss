@@ -1613,15 +1613,35 @@ $border-color_1: #fff;
             flex-wrap: wrap;
 
             .layout__region--first{
-                width: calc(100% / 12 * 3);
+                width: calc(100% / 12 * 0);
             }
 
             .layout__region--second{
-                width: calc(100% / 12 * 9);
+                width: calc(100% / 12 * 12);
 
                 .view-adoptions-location-colombia,
-                .view-adoptions-ubication{
+                .view-adoptions-ubication,
+                .view-adoptions-ubication-sapi{
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    .view-filters{
+                        width: calc(100% / 12 * 3);
+
+                        .form-radios{
+                            display: flex;
+                            flex-direction: column;
+
+                            legend{
+                                display: block;
+                                font-size: 16.8px;
+                                margin: 0 0 30px;
+                            }
+                        }
+                    }
                     .view-content{
+                        width: calc(100% / 12 * 9);
+
                         .views-row{
                             background-color: #fcfcfc !important;
                             border-radius: 4px !important;
@@ -1631,6 +1651,8 @@ $border-color_1: #fff;
                             margin: 0 0 18px !important;
                             padding: 6px !important;
                             width: 100%;
+                            box-shadow: none;
+                            border: 0;
 
                             > .views-field-fieldset > .field-content{
                                 > div{
@@ -1689,6 +1711,10 @@ $border-color_1: #fff;
                                 }
                             }
                         }
+                    }
+
+                    .pager{
+                        width: 100%;
                     }
                 }
 
