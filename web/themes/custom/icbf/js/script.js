@@ -18,7 +18,7 @@ $ = jQuery;
         var num_items = $('.view-id-calendar.view-display-id-block_page_6 .view-content >div').length;
         $('.view-id-calendar.view-display-id-block_page_6 .view-content').slick({
           infinite: false,
-          initialSlide: num_items,
+          initialSlide: num_items -1,
           adaptiveHeight: true,
         });
       }
@@ -34,7 +34,7 @@ $ = jQuery;
             '.page-adopciones-requisitos-basicos',
             '.page-adopciones-proceso-de-adopcion',
             '.page-adopciones-paso-paso',
-            
+
             // aquí puedes agregar más
         ];
 
