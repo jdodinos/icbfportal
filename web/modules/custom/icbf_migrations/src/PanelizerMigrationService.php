@@ -470,6 +470,7 @@ class PanelizerMigrationService {
         $block_title = str_replace('-', ' ', $block_title);
         $block_title = str_replace('|+|', ' - ', $block_title);
         $block_title = str_replace('+|', '- ', $block_title);
+
         // Caso muy particular de un bloque de páginas.
         $particular_blocks = [
           'paginas-internas-primera-infanci' => 'Páginas internas Primera Infancia',
@@ -478,6 +479,7 @@ class PanelizerMigrationService {
           'titulo-micrositio' => 'Observatorio de Bienestar - top',
           'top---rpc1' => 'TOp RPC 1',
           'bottom-rpc1' => 'Bann- Informe final RPC',
+          'nombramientos---button-archive' => 'Nombramientos - Button Archive',
         ];
         if (array_key_exists($block_id, $particular_blocks)) {
           $block_title = $particular_blocks[$block_id];
@@ -696,6 +698,13 @@ class PanelizerMigrationService {
         $displayes = ['block_2'];
         if (in_array($display_id, $displayes)) {
           $view_id = 'adoptions_ubication_sapi';
+        }
+        break;
+
+      case 'documentos_g_humana':
+        $displayes = ['block_1'];
+        if (in_array($display_id, $displayes)) {
+          $view_id = 'documentos_g_humana_sapi';
         }
         break;
 

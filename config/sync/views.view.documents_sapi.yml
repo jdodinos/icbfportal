@@ -815,7 +815,7 @@ display:
     id: block_10
     display_title: 'informe trimestral'
     display_plugin: block
-    position: 1
+    position: 2
     display_options:
       fields:
         nid:
@@ -1564,7 +1564,7 @@ display:
     id: block_11
     display_title: 'Informe PQRDS'
     display_plugin: block
-    position: 1
+    position: 3
     display_options:
       fields:
         nid:
@@ -2393,7 +2393,7 @@ display:
     id: block_4
     display_title: Bienestarina
     display_plugin: block
-    position: 1
+    position: 4
     display_options:
       fields:
         nid:
@@ -3744,7 +3744,7 @@ display:
     id: block_43
     display_title: 'boletines Observatorio'
     display_plugin: block
-    position: 1
+    position: 5
     display_options:
       fields:
         field_document:
@@ -4467,7 +4467,7 @@ display:
     id: block_9
     display_title: 'Notificaciones Juridica'
     display_plugin: block
-    position: 1
+    position: 6
     display_options:
       fields:
         nid:
