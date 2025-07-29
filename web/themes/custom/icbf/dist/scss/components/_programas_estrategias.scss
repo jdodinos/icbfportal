@@ -508,22 +508,33 @@
                                     "b"
                                     "c"
                                     "d"
-                                    "e";
+                                    "e"
+                                    "f";
                                 
                                 >.form-item:first-child{
                                     grid-area: a;
                                 }
                                 >.form-item:nth-child(2) {
-                                    grid-area: c;
+                                    grid-area: b;
+
+                                    label{
+                                        font-weight: 700;
+                                    }
                                 }
                                 >.form-item:nth-child(3) {
                                     grid-area: d;
                                 }
                                 >.form-item:nth-child(4) {
-                                    grid-area: b;
+                                    grid-area: e;
+                                }
+                                >.form-item:nth-child(5) {
+                                    grid-area: c;
+                                    label{
+                                        font-weight: 700;
+                                    }
                                 }
                                 >.form-actions {
-                                    grid-area: e;
+                                    grid-area: f;
                                 }
                             }
                         }
