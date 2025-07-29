@@ -160,6 +160,50 @@
     }
 }
 
+.page-programas-y-estrategias-primera-infancia-mediatica-recursos-para-la-primera-infancia{
+    #block-icbf-content{
+        .content{
+            >.layout:first-child{
+                .layout__region--first{
+                    h2 {
+                        font-family: 'Montserrat', sans-serif;
+                        line-height: normal !important;
+                        font-size: 1.1em;
+                        margin: 0 1px 4px;
+                    }
+                    .tb-megamenu{
+                        span.caret {
+                            background-color: #bebebe;
+                            border-radius: 4px;
+                            position: absolute;
+                            right: 0.3em;
+                            height: 16px !important;
+                            width: 16px !important;
+                            bottom: .3em;
+                            border: 0 !important;
+
+                            &::before {
+                                content: '\f105' !important;
+                                font-family: FontAwesome;
+                                font-weight: 900;
+                                color: #fff !important;
+                                display: flex;
+                                justify-content: center;
+                                position: absolute;
+                                top: -1px;
+                                left: 40%;  
+                            }
+                        }
+                    }
+                }
+                .layout__region--second {
+                    padding-left: 1.5em;
+                }
+            }
+        }
+    }
+}
+
 .page-programas-y-estrategias-primera-infancia-acerca-de{
 
     .taxonomy-term{
