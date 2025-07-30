@@ -552,6 +552,22 @@ ul.m4 li {
     }
 }
 
+
+.page-portafolio-de-servicios-icbf-soy-padre-madre-o-cuidador{
+    #block-icbf-content {
+        .content {
+            >div:first-child {
+                h4 {
+                    font-family: var.$font-asap-regular !important;
+                    font-size: 1.1em !important;
+                }
+            }
+        }
+    }
+}
+
+
+
 /*
 ************************************************
 ******OFERTA INSTITUCIONAL (Segundo nivel)******
@@ -945,13 +961,12 @@ ul.m4 li {
 
     /* Inserta nuevo ícono */
     .glyphicon.glyphicon-info-sign::before {
-        // content: "i";
+        content: "\e086";
         // font-family: Arial, sans-serif;
         font-family: var.$font-glyphicons-halflings !important;
-        font-weight: bold;
-        font-size: 13px;
-        color: white;
-        background-color: #555;
+        //font-weight: bold;
+        font-size: 14px;
+        color: #555;
         border-radius: 50%;
         width: 15px;
         height: 15px;
