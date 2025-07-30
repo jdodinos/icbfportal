@@ -20,6 +20,8 @@ $ = jQuery;
           infinite: false,
           initialSlide: num_items -1,
           adaptiveHeight: true,
+          fade: true,
+          speed: 300,
         });
       }
 
