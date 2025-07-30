@@ -252,7 +252,7 @@ function icbf_preprocess_field(&$variables) {
 
 function icbf_preprocess_layout(&$variables) {
   if (isset($variables['attributes']['class'][2])) {
-    $variables['attributes']['class'][1] = 'layout--unecol-section';
+    $variables['attributes']['class'][1] = 'layout--unecol-section layout--onecol-section';
     unset($variables['attributes']['class'][2]);
   }
 }
