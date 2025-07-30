@@ -1,14 +1,16 @@
 <?php
 
+use Drupal\Core\Cache\Cache;
+use Drupal\Core\Database\Database;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Renderer;
+use Drupal\layout_builder\SectionComponent;
 use Drupal\migrate\Row;
 use Drupal\migrate\Plugin\MigrateSourceInterface;
 use Drupal\migrate\Plugin\MigrationInterface;
-use Drupal\views\ViewExecutable;
-use Drupal\Core\Cache\Cache;
-use Drupal\Core\Form\FormStateInterface;
-use Drupal\layout_builder\SectionComponent;
 use Drupal\views\Plugin\views\query\QueryPluginBase;
-use Drupal\Core\Database\Database;
+use Drupal\views\ViewExecutable;
+use Drupal\views\Views;
 
 /**
  * Implementa hook_block_view_alter().
@@ -128,26 +130,6 @@ function icbf_migrations_views_pre_view(ViewExecutable $view, $display_id, array
 }
 
 /**
- * Implements hook_form_alter().
- */
-function icbf_migrations_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-  $url = explode('/', \Drupal::service('path.current')->getPath());
-  $term_id = $url[3];
-  $vocabulary = 'sige_process_type';
-  $children = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree(
-    $vocabulary,
-    $term_id,
-    NULL,
-    FALSE
-  );
-
-  $terms = [];
-  foreach ($children as $term) {
-    $terms[] = $term->tid;
-  }
-}
-
-/**
  * Implements hook_views_query_alter().
  */
 function icbf_migrations_views_query_alter(ViewExecutable $view, QueryPluginBase &$query) {
@@ -223,11 +205,21 @@ function icbf_migrations_entity_view_alter(array &$build, \Drupal\Core\Entity\En
   switch ($entity->getEntityTypeId()) {
     case 'taxonomy_term':
       $layout_configs = icbf_migrations_get_layout_config($entity->id());
+      if (!empty($layout_configs) && count($layout_configs) == 1) {
+        foreach ($layout_configs as $value) {
+          if (strpos($value->layout_builder__layout_section, 'Drupal\layout_builder\SectionComponent') === FALSE) {
+            $layout_configs = [];
+            break;
+          }
+        }
+      }
 
       if (empty($layout_configs)) {
+        $load_default_structure = TRUE;
         // Add Layout Builder structure to Gestión Humana term.
         switch ($entity->bundle()) {
           case 'secctions':
+            $load_default_structure = FALSE;
             // Reestructure the Sections in structure 2.
             $structure2 = [8012, 8013, 8014, 8015, 8016, 8018, 8019, 8020];
             $structure3 = [6882, 6883, 6886, 6887];
@@ -246,6 +238,7 @@ function icbf_migrations_entity_view_alter(array &$build, \Drupal\Core\Entity\En
             break;
 
           case 'sige_process_type':
+            $load_default_structure = FALSE;
             if ($entity->id() == 6505) {
               $build['_layout_builder'][2] = $build['_layout_builder'][3];
             }
@@ -255,6 +248,49 @@ function icbf_migrations_entity_view_alter(array &$build, \Drupal\Core\Entity\En
               $build['_layout_builder']['#cache'] = NULL;
             }
             break;
+        }
+
+        if ($load_default_structure) {
+          // Check the structure to validate if the term has information to display.
+          foreach ($build['_layout_builder'] as $section_key => $section_val) {
+            if (is_int($section_key)) {
+              foreach ($section_val as $key => $value) {
+                if (strpos($key, '#') === FALSE) {
+                  $component = reset($value);
+                  if (isset($component['#plugin_id'])) {
+                    $load_default_structure = FALSE;
+                    break 2;
+                  }
+                }
+              }
+            }
+          }
+
+          if ($load_default_structure) {
+            $view_id = 'taxonomy_term';
+            $display_id = 'page';
+            $arguments = [$entity->id()];
+            $view = Views::getView($view_id);
+
+            if (is_object($view)) {
+              $view->setDisplay($display_id);
+              $view->setArguments($arguments);
+              $view->execute();
+
+              // Render the view
+              $result = \Drupal::service('renderer')->render($view->render());
+              $build['_layout_builder'][0] = [
+                'page_title' => [
+                  '#prefix' => '<h1 class="page-header">',
+                  '#suffix' => '</h1>',
+                  '#markup' => $entity->name->value,
+                ],
+                'view' => [
+                  '#markup' => $result,
+                ]
+              ];
+            }
+          }
         }
       }
       break;

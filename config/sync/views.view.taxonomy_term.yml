@@ -1,6 +1,6 @@
 uuid: 6d2b7b11-fefe-4422-a7e5-3b34f11e5634
 langcode: es
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
@@ -212,7 +212,7 @@ display:
         metatag_display_extender:
           metatags: {  }
           tokenize: false
-      path: transparencia
+      path: taxonomy/term/%tid
     cache_metadata:
       max-age: -1
       contexts:
