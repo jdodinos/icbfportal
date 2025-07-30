@@ -702,7 +702,7 @@ class PanelizerMigrationService {
         break;
 
       case 'documentos_g_humana':
-        $displayes = ['block_1'];
+        $displayes = ['block_1', 'block_16'];
         if (in_array($display_id, $displayes)) {
           $view_id = 'documentos_g_humana_sapi';
         }
