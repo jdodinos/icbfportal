@@ -552,6 +552,22 @@ ul.m4 li {
     }
 }
 
+
+.page-portafolio-de-servicios-icbf-soy-padre-madre-o-cuidador{
+    #block-icbf-content {
+        .content {
+            >div:first-child {
+                h4 {
+                    font-family: var.$font-asap-regular !important;
+                    font-size: 1.1em !important;
+                }
+            }
+        }
+    }
+}
+
+
+
 /*
 ************************************************
 ******OFERTA INSTITUCIONAL (Segundo nivel)******
