@@ -4083,15 +4083,26 @@
 
 .page-primera-infancia-cuentame {
 
-    h1,
-    h2,
+    h1{
+        font-family: 'Montserrat', sans-serif;
+        margin-bottom: 40px;
+    }
+    h2{
+        span{
+            font-family: var.$font-asap-regular !important;
+        }
+    }
+
+    .view-content{
+        a.active, a:hover{
+            color: #125e81;
+            text-decoration: underline !important;
+        }
+    }
+
     h3,
     h4 {
         font-family: "Asap-Regular" !important;
-    }
-
-    h2 {
-        font-size: 1.3em;
     }
 }
 
