@@ -18,6 +18,7 @@ dependencies:
     - image
     - search_api
     - text
+    - views_infinite_scroll
 id: tramites_sapi
 label: 'Taxonomía - Trámites SAPI'
 module: views
@@ -2173,6 +2174,29 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
+      pager:
+        type: infinite_scroll
+        options:
+          offset: 0
+          pagination_heading_level: h4
+          items_per_page: 9
+          total_pages: null
+          id: 0
+          tags:
+            next: 'Siguiente >'
+            previous: '‹ Anterior'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- Todo -'
+            offset: false
+            offset_label: Desplazamiento
+          views_infinite_scroll:
+            button_text: 'Cargar más'
+            automatically_load_content: true
+            initially_load_all_pages: false
       exposed_form:
         type: bef
         options:
@@ -2197,15 +2221,17 @@ display:
               secondary_label: 'Opciones avanzadas'
               secondary_open: false
               reset_button_always_show: false
+            sort:
+              plugin_id: default
+              advanced:
+                combine: false
+                combine_rewrite: ''
+                reset: false
+                reset_label: ''
+                collapsible: false
+                collapsible_label: 'Opciones de ordenación'
+                is_secondary: false
             filter:
-              name:
-                plugin_id: default
-                advanced:
-                  placeholder_text: ''
-                  collapsible: false
-                  collapsible_disable_automatic_open: false
-                  is_secondary: false
-                  hide_label: false
               facets_field_procedure_type:
                 plugin_id: bef
                 advanced:
@@ -2232,7 +2258,28 @@ display:
                 select_all_none: false
                 select_all_none_nested: false
                 display_inline: false
+              name:
+                plugin_id: default
+                advanced:
+                  placeholder_text: ''
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+                  hide_label: false
       sorts:
+        field_priority:
+          id: field_priority
+          table: search_api_index_tr_mites_sapi
+          field: field_priority
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
         name:
           id: name
           table: search_api_index_tr_mites_sapi
@@ -2406,13 +2453,13 @@ display:
             min_count: 1
             show_numbers: true
             processor_configs:
-              hierarchy_processor:
-                weights:
-                  build: 100
-                settings: {  }
               translate_entity:
                 weights:
                   build: 5
+                settings: {  }
+              hierarchy_processor:
+                weights:
+                  build: 100
                 settings: {  }
               count_widget_order:
                 weights:
@@ -2545,13 +2592,13 @@ display:
             min_count: 1
             show_numbers: true
             processor_configs:
-              hierarchy_processor:
-                weights:
-                  build: 100
-                settings: {  }
               translate_entity:
                 weights:
                   build: 5
+                settings: {  }
+              hierarchy_processor:
+                weights:
+                  build: 100
                 settings: {  }
               count_widget_order:
                 weights:
@@ -2673,7 +2720,7 @@ display:
             autocomplete_filter: 0
             autocomplete_min_chars: '0'
             autocomplete_items: '10'
-            autocomplete_field: ''
+            autocomplete_field: name
             autocomplete_raw_suggestion: 1
             autocomplete_raw_dropdown: 1
             autocomplete_dependent: 0
@@ -2697,6 +2744,7 @@ display:
           1: AND
       defaults:
         css_class: false
+        pager: false
         exposed_form: false
         fields: false
         sorts: false
@@ -2715,6 +2763,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - url.query_args
         - 'url.query_args:sort_by'
         - 'url.query_args:sort_order'
       tags:
