@@ -347,7 +347,7 @@ ul.m4 li {
                     font-weight: normal;
                     font-family: 'Montserrat', sans-serif;
                     padding-top: 1.5em;
-                    border-top: 1px solid #ddd;
+                    //border-top: 1px solid #ddd;
                 }
 
                 span {
@@ -540,7 +540,17 @@ ul.m4 li {
 
 
 
-
+.page-portafolio-de-servicios-icbf-soy-madre-padre-comunitario-o-agente-educativo{
+    #block-icbf-content {
+        .content {
+            >div:first-child {
+                .az-ctnr.container >.row:first-child{
+                    font-family: 'Montserrat', sans-serif;
+                }
+            }
+        }
+    }
+}
 
 /*
 ************************************************
