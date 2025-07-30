@@ -175,10 +175,12 @@ $ = jQuery;
         }
         else if ($('#6gy1mn3w').length) {
           $('#6gy1mn3w .icbf-owl-carousel-wrapper').slick({
-            infinite: false,
-            speed: 300,
+            infinite: true,
+            speed: 1000,
+            autoplaySpeed: 12000,
             slidesToShow: 5,
             slidesToScroll: 5,
+            autoplay: true,
             arrows: false,
             dots: false,
             responsive: [
@@ -186,14 +188,14 @@ $ = jQuery;
                 breakpoint: 1024,
                 settings: {
                   slidesToShow: 5,
-                  slidesToScroll: 5
+                  slidesToScroll: 1
                 }
               },
               {
                 breakpoint: 768,
                 settings: {
                   slidesToShow: 2,
-                  slidesToScroll: 2
+                  slidesToScroll: 1
                 }
               },
               {
@@ -201,7 +203,6 @@ $ = jQuery;
                 settings: {
                   slidesToShow: 1,
                   slidesToScroll: 1,
-                  infinite: true
                 }
               }
             ]
