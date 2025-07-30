@@ -2,9 +2,37 @@ _core:
   default_config_hash: GUKBlXIBQ2d0H8Q7M_Rqn1Q93tRxLPfs9cG-VeQC9NI
 langcode: es
 page_title: 'Mapa del sitio'
-path: sitemap
+path: /sitemap
 message:
   value: ''
   format: plain_text
-plugins: {  }
+plugins:
+  'vocabulary:secctions':
+    base_plugin: vocabulary
+    enabled: true
+    weight: -18
+    settings:
+      title: Secciones
+      show_description: false
+      show_count: false
+      display_unpublished: false
+      term_depth: 9
+      term_count_threshold: 0
+      customize_link: false
+      term_link: entity.taxonomy_term.canonical|taxonomy_term
+      always_link: false
+      enable_rss: false
+      rss_link: view.taxonomy_term.feed_1|arg_0
+      rss_depth: 9
+    id: 'vocabulary:secctions'
+    provider: sitemap
+  frontpage:
+    base_plugin: frontpage
+    enabled: true
+    weight: -19
+    settings:
+      title: 'Página de Inicio'
+      rss: /rss.xml
+    id: frontpage
+    provider: sitemap
 include_css: true
