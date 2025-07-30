@@ -1250,6 +1250,23 @@
         font-size: 18px;
     }
 
+    .view-id-persons.view-display-id-block_sede_list {
+        display: flex;
+        flex-wrap: wrap;
+
+        .view-filters {
+            margin-top: 0;
+            width: 100%;
+
+            .form-type-textfield.form-item-title {
+                max-width: 270px;
+            }
+
+            .form-type-select.form-item-field-person-area {
+                max-width: 590px;
+            }
+        }
+    }
 
     .form-actions {
         margin-top: 0;
@@ -2223,7 +2240,7 @@
         .block-field-blocktaxonomy-termsecctionsfield-content {
             display: none;
         }
-        
+
         .view-licencias-de-funcionamiento-sapi {
             .view-filters{
                 .form-radios {
@@ -3079,14 +3096,14 @@
                             margin: 0 4px 0 0 !important;
 
                         }
-                        
+
                         /* Cuando se selecciona el check*/
                         input[type=checkbox]:checked, input[type=radio]:checked {
                             background-color: #1996d0;
-                            border-color: #1996d0;                        
+                            border-color: #1996d0;
                         }
 
-                        /*Estilos para el icono interno del check*/    
+                        /*Estilos para el icono interno del check*/
                         input[type=checkbox]::after, input[type=radio]::after {
                             content: '✔';
                             color: white;
@@ -3109,7 +3126,7 @@
                             color: #125e81;
                             text-decoration: underline !important;
                         }
-                            
+
                     }
                 }
 
@@ -3155,7 +3172,7 @@
                             "b"
                             "c";
                         grid-template-columns: 100%;
-    
+
                         .view-filters{
                             grid-area: a;
                             width: 100% !important;
@@ -3313,7 +3330,7 @@
 
                                     >.view-grouping{
                                         margin-bottom: 20px;
-                                        
+
                                         .view-grouping-header {
                                             font-size: 1.2em;
                                             font-weight: 500;
@@ -3507,7 +3524,7 @@
 
                                     >.view-grouping{
                                         margin-bottom: 20px;
-                                        
+
                                         .view-grouping-header {
                                             font-size: 1.2em;
                                             font-weight: 500;
@@ -3795,7 +3812,7 @@
                         &.active, &:hover, &:focus {
                             color: #125e81;
                             text-decoration: underline !important;
-                        } 
+                        }
                     }
 
                     tr:nth-child(odd) {
@@ -4280,7 +4297,7 @@
                         .view-content{
                             >div{
                                 width: 100%;
-    
+
                                 h1{
                                     a{
                                         color: #fff !important;
@@ -4290,7 +4307,7 @@
                             }
                         }
                     }
-    
+
                     >div:nth-last-child(-n+3) {
                         display: inline-block;
                         vertical-align: top;
@@ -4298,7 +4315,7 @@
                         box-sizing: border-box;
                         text-align: center;
                         padding: 0 15px;
-    
+
                         h2{
                             font-family: 'Montserrat', sans-serif;
                             font-size: 1.2em;
@@ -4308,7 +4325,7 @@
                             font-family: 'Montserrat', sans-serif;
                         }
                     }
-    
+
                     >div:nth-child(3){
                         margin-left: 10%;
                         h2::before {
@@ -4376,7 +4393,7 @@
                         font-style: normal;
                         margin-left: 1em;
                     }
-    
+
                     .local-staff-list::before {
                         color: #0b8763;
                         content: "\f105";
