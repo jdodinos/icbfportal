@@ -1537,7 +1537,35 @@ display:
             button_text: 'Cargar más'
             automatically_load_content: true
             initially_load_all_pages: false
-      sorts: {  }
+      sorts:
+        field_priority_value:
+          id: field_priority_value
+          table: taxonomy_term__field_priority
+          field: field_priority_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: natural
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
       arguments: {  }
       filters:
         name:
