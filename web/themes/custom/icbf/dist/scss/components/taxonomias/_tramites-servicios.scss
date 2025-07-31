@@ -1057,6 +1057,10 @@ ul.m4 li {
                 .view-content {
                     grid-area: b;
                     width: 100%;
+
+                    table{
+                        width: 100%;
+                    }
                 }
 
                 nav.pager {
@@ -1104,9 +1108,6 @@ ul.m4 li {
 
 
 .page-gestion-humana-convocatorias-planta-temporal{
-    .block-page-title-block {
-        margin-left: 0.5em;
-    }
 
     .block-field-blocktaxonomy-termsecctionsfield-content{
         padding-left: 15px;
@@ -1202,6 +1203,9 @@ ul.m4 li {
     }
     
     @media (max-width: 768px) {
+        .block-page-title-block {
+            margin-left: 0.5em;
+        }
         .view-display-id-block_3 {
             justify-items: center;
             padding: 1em;
