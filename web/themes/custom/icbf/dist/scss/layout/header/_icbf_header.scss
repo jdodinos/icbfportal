@@ -78,12 +78,15 @@
     width: auto;
 
     .main-logo {
-        float: left;
+        //float: left;
+        float: right;
         font-family: "object-fit:contain";
         height: 80px;
         object-fit: contain;
         padding: 0;
-        width: auto;
+        padding-left: 0 !important;
+        //width: auto;
+        width: 60px;
     }
 }
 
