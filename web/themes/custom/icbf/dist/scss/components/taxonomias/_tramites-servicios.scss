@@ -1099,5 +1099,96 @@ ul.m4 li {
 
 
 
+.page-gestion-humana-convocatorias-planta-temporal{
+    .block-field-blocktaxonomy-termsecctionsfield-content{
+        a {
+            color: #1996d0;
+            text-decoration: none !important;
+            font-size: 14px;
+            
+            &:hover {
+                color: #125e81;
+                text-decoration: underline !important;
+            }
+        }
+    }
+
+    .view-display-id-block_3{
+        .view-content{
+            table{
+                width: 100%;
+
+                tbody{
+                    tr {
+                        display: flex;
+                        flex-wrap: wrap;
+                        border: 1px solid #ddd;
+                        padding: 10px 15px;
+                        td{
+                            width: 100%;
+                            border: 0 !important;
+                            padding: 0 !important;
+
+                            a{
+                                font-family: var.$font-asap-regular !important;
+                                font-size: 1.1em;
+                            }
+                        }
+
+                        td.views-field.views-field-field-date {
+                            text-align: right;
+                            font-size: .8em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    //Responsive
+    .view-display-id-block_3 {
+        justify-items: center;
+        display: grid;
+        grid-template-areas:
+            "a b";
+        grid-template-columns: 25% 75%;
+    
+        .view-filters {
+            grid-area: a;
+            width: 100%;
+            //margin-top: 0;
+        }
+    
+        .view-content {
+            grid-area: b;
+            width: 100%;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .view-display-id-block_3 {
+            justify-items: center;
+            padding: 1em;
+            display: grid;
+            grid-template-areas:
+                "a"
+                "b";
+            grid-template-columns: 100%;
+    
+            .view-filters {
+                grid-area: a;
+                width: 100%;
+                margin-top: 1em;
+            }
+    
+            .view-content {
+                grid-area: b;
+                width: 100%;
+            }
+        }
+    }
+}
+
 
 
