@@ -31,29 +31,31 @@ $ = jQuery;
         var $wrapper = $('.view-id-tramites_sapi.view-display-id-block_7 fieldset[data-drupal-selector="edit-field-tags-de-tramite"] .bef-checkboxes');
         var $lis = $wrapper.find('li');
 
-        $.each($lis, function(key, value) {
-          if (key >= 10) {
-            $(this).css('display', 'none');
-          }
-        });
+        if ($lis.length > 10) {
+          $.each($lis, function(key, value) {
+            if (key >= 10) {
+              $(this).css('display', 'none');
+            }
+          });
 
-        if (!$wrapper.find('.btn-show-more').length) {
-          $wrapper.append('<a class="btn-show-more more" href="">Mostrar Más</a>');
-          $wrapper.find('.btn-show-more').click(function(e) {
-            e.preventDefault();
-            if ($(this).hasClass('more')) {
-              $lis.css('display', 'block');
-              $(this).text('Mostrar Menos').removeClass('more').addClass('less');
-            }
-            else {
-              $.each($lis, function (key, value) {
-                if (key >= 10) {
-                  $(this).css('display', 'none');
-                }
-              });
-              $(this).text('Mostrar Más').removeClass('less').addClass('more');
-            }
-          }).css('margin-left', '20px');
+          if (!$wrapper.find('.btn-show-more').length) {
+            $wrapper.append('<a class="btn-show-more more" href="">Mostrar Más</a>');
+            $wrapper.find('.btn-show-more').click(function(e) {
+              e.preventDefault();
+              if ($(this).hasClass('more')) {
+                $lis.show('slow');
+                $(this).text('Mostrar Menos').removeClass('more').addClass('less');
+              }
+              else {
+                $.each($lis, function (key, value) {
+                  if (key >= 10) {
+                    $(this).hide('slow');
+                  }
+                });
+                $(this).text('Mostrar Más').removeClass('less').addClass('more');
+              }
+            }).css('margin-left', '20px');
+          }
         }
       }
 
