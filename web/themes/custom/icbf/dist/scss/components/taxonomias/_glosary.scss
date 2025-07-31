@@ -19,9 +19,7 @@
         min-width: 100%;
         position: relative;
 
-        .form-item-search-api-fulltext {
-          max-width: 200px;
-        }
+        .form-item-search-api-fulltext { max-width: 200px; }
 
         .form-item-field-tags {
           .bef-links {
@@ -33,16 +31,10 @@
               li {
                 display: inline-block;
 
-                &:nth-child(1) {
-                  display: none;
-                }
-                &:after {
-                  content: '|';
-                }
+                &:nth-child(1) { display: none; }
+                &:after { content: '|'; }
                 &:last-child {
-                  &::after {
-                    content: '';
-                  }
+                  &::after { content: ''; }
                 }
 
                 a {
@@ -70,10 +62,24 @@
           top: 32px;
           left: 220px;
 
-          &[name="reset"] {
-            left: 290px;
+          &[name="reset"] { left: 290px; }
+        }
+      }
+
+      .view-content {
+        .views-field-title {
+          a {
+            color: green;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2em;
+            font-weight: 500;
           }
         }
+      }
+
+      .pager {
+        margin-left: 50%;
+        transform: translate(-50%, 0);
       }
     }
   }
