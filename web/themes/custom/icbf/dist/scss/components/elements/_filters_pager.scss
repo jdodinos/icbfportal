@@ -1,0 +1,98 @@
+.page-id-6976,
+.page-id-6905{
+    .view-filters {
+        .form-radios,
+        .form-checkboxes {
+            padding-top: 1em;
+            margin-left: 0;
+
+            input[type=checkbox],
+            input[type=radio] {
+                appearance: none;
+                width: 13px;
+                height: 13px;
+                border: 1px solid #555;
+                border-radius: 3px;
+                margin: 0 4px 0 0 !important;
+            }
+
+            /* Cuando se selecciona el check*/
+            /*Estilos para el icono interno del check*/
+            input[type=checkbox]:checked,
+            input[type=radio]:checked {
+                background-color: #1996d0;
+                border-color: #1996d0;
+            }
+
+            input[type=checkbox]::after,
+            input[type=radio]::after {
+                content: '✔';
+                color: white;
+                width: 10px;
+                height: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            //color de letras
+            label {
+                //white-space: nowrap;
+                color: #1996d0;
+                text-decoration: none !important;
+                font-size: 14px;
+            }
+
+            label:hover {
+                color: #125e81;
+                text-decoration: underline !important;
+            }
+
+        }
+    }
+}
+
+
+.page-id-6976{
+    nav.pager {
+        .page-link {
+            font-size: 11px;
+        }
+    
+        .page-item {
+            .page-link {
+                width: 100%;
+                border-radius: 0%;
+            }
+    
+            /*
+            &.disabled {
+                span {
+                    display: none;
+                    height: initial;
+                    line-height: 20px;
+                }
+            }*/
+    
+            a {
+                text-transform: lowercase;
+                white-space: nowrap;
+                font-size: 14px;
+                /*de la pagina del icbf*/
+            }
+        }
+    
+        .page-item:first-child {
+            .page-link {
+                border-radius: 5px 0px 0px 5px !important;
+            }
+        }
+    
+        .page-item:last-child {
+            .page-link {
+                border-radius: 0px 5px 5px 0px !important;
+            }
+        }
+    
+    }
+}
