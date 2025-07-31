@@ -4713,7 +4713,7 @@
                             //white-space: nowrap;
                             font-size: 1.4em;
                         }
-                        
+
                         .form-radios{
                             padding-top: 1em;
                             margin-left: 0;
@@ -4767,7 +4767,23 @@
 
                         }
                     }
-                    
+
+                    .view-content {
+                        .view-grouping-header {
+                            font-family: Asap;
+                            font-size: 1.2em;
+                            font-weight: 500;
+                            line-height: 1.1;
+                            color: inherit;
+                            margin-top: 20px;
+                            margin-bottom: 10px;
+                        }
+
+                        .table {
+                            margin-bottom: 30px;
+                        }
+                    }
+
                     nav.pager {
                         .page-link {
                             font-size: 11px;
