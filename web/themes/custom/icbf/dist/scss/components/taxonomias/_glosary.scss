@@ -19,12 +19,19 @@
         min-width: 100%;
         position: relative;
 
-        .form-item-search-api-fulltext { max-width: 200px; }
+        .form-item-search-api-fulltext {
+          max-width: 200px;
+
+          label {
+            font-weight: 700;
+          }
+        }
 
         .form-item-field-tags {
           .bef-links {
             ul {
               list-style: none;
+              padding-left: 0;
               width: 100%;
 
 
@@ -59,17 +66,26 @@
 
         .button.form-submit {
           position: absolute;
-          top: 32px;
+          top: 28px;
           left: 220px;
+          color: var.$color-primary-white;
+          background-color: #5bc0de;
+          border-color: #46b8da;
+          padding: 6px 12px;
 
-          &[name="reset"] { left: 290px; }
+          &[name="reset"] {
+            left: 290px;
+            color: #333;
+            background-color: var.$color-primary-white;
+            border-color: #ccc;
+          }
         }
       }
 
       .view-content {
         .views-field-title {
           a {
-            color: green;
+            color: var.$color-text-green;
             font-family: 'Montserrat', sans-serif;
             font-size: 1.2em;
             font-weight: 500;
