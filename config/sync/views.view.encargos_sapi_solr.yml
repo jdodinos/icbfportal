@@ -1045,7 +1045,7 @@ display:
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: 'Búsqueda por nombre'
+            label: ''
             description: ''
             use_operator: false
             operator: search_api_fulltext_op

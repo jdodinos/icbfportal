@@ -23,6 +23,7 @@
           max-width: 200px;
 
           label {
+            font-family: var.$font-asap-regular;
             font-weight: 700;
           }
         }
@@ -58,6 +59,9 @@
                       width: 40%;
                     }
                   }
+
+                  .letter { color: #1281ba}
+                  .number { color: #555; }
                 }
               }
             }

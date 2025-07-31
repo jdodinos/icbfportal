@@ -16,7 +16,7 @@ conditions:
     negate: false
     uuid: cd1cd326-dae3-4aaa-9029-71a333316048
     context_mapping: {  }
-    pages: /citaciones
+    pages: "/citaciones\r\n/glosario-de-terminos-icbf"
 reactions:
   blocks:
     id: blocks
