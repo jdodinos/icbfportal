@@ -132,7 +132,7 @@ function icbf_migrations_views_pre_view(ViewExecutable $view, $display_id, array
 /**
  * Implements hook_views_query_alter().
  */
-function icbf_migrations_views_query_alter(ViewExecutable $view, QueryPluginBase &$query) {
+function icbf_migrations_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
   if ($view->id() == 'sige_process' && $view->current_display == 'block_4') {
     $tid = \Drupal::routeMatch()->getRawParameter('taxonomy_term');
     $cid = 'sige_process.block_4.' . $tid;
