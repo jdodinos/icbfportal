@@ -15,8 +15,7 @@
         font-size: 15px;
         font-family: var.$font-montserrat-regular;
         line-height: 1.5em;
-
-       
+      
 
         .block-views-blockcontent-block-content-title {
             width: 100%;
@@ -102,6 +101,26 @@
             }
         }
 
+        .block-field-blocknodenewsfield-content{
+            width: 100%;
+
+            table td,
+            table th {
+                border: 1px solid rgb(128, 128, 128);
+                padding: 6px;
+            }
+
+            table th{
+                font-weight: 700;
+                font-family: var.$font-montserrat;
+            }
+
+            ul{
+                margin: 20px 0;
+                padding-left: 2.5em;
+            }
+        }
+
 
         
 
@@ -167,12 +186,13 @@
                 .views-field-title {
 
                     a {
-                        font-family: var.$font-montserrat-regular;
-                        font-size: 14px;
+                        font-family: 'Momntserrat',sans-serif;
+                        font-size: 15.4px;
                         font-weight: 500;
-                        line-height: normal;
                         margin: 0 1px 4px;
                         padding-top: .5em;
+                        line-height: 1.1em;
+                        display: inline-block;
                     }
                 }
             }
@@ -205,6 +225,7 @@
         .view-content{
             strong{
                 display: block;
+                font-family: var.$font-montserrat;
             }
         }
     }

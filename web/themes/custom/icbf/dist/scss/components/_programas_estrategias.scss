@@ -158,6 +158,8 @@
             }
         }
     }
+
+
 }
 
 .page-programas-y-estrategias-primera-infancia-mediatica-recursos-para-la-primera-infancia{
@@ -1099,5 +1101,108 @@
     }
 }
 
+
+/*-----Menu------*/
+.page-programas-y-estrategias-primera-infancia-promocion-de-la-lectura-salas-de-lectura,
+.page-programas-y-estrategias-primera-infancia-promocion-de-la-lectura,
+.page-programas-y-estrategias-primera-infancia-acerca-de,
+.page-programas-y-estrategias-primera-infancia-calidad-en-servicios,
+.page-programas-y-estrategias-primera-infancia-promocion-de-la-lectura-fiesta-de-la-lectura,
+.page-programas-y-estrategias-primera-infancia-promocion-de-la-lectura-la-familia-es-mi-cuento,
+.page-programas-y-estrategias-primera-infancia-marco-normativo,
+.page-programas-y-estrategias-primera-infancia-modalidades-de-atencion,
+.page-programas-y-estrategias-primera-infancia-mediatica-recursos-para-la-primera-infancia,
+.page-programas-y-estrategias-primera-infancia-cuentame{
+    .layout--unecol-section,
+    .layout--onecol-section{
+        
+        @media (max-width: 992px) {
+            .tb-megamenu{
+                position: relative;
+
+                .tb-megamenu-button {
+                    background-color: #378135 !important;
+                    color: #fff !important;
+                    padding-left: 0 !important;
+                    border-radius: 0 .3rem .3em 0;
+                }
+                .tb-megamenu-button:focus {
+                    outline: none;
+                }
+                .nav-collapse{
+                    ul{
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        margin: 0;
+                        display: block;
+                        z-index: 999999 !important;
+                        background-color: rgba(254, 254, 254, 1);
+                        width: max-content;
+                        li{
+                            border-bottom: 1px solid #ddd;
+                            border-radius: 0;
+                            margin-bottom: 0;
+                            padding: .6em .1em !important;
+                            background-color: rgba(254, 254, 254, 1);
+                            width: 100%;
+                            filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+                            min-width: 300px;
+                            a {
+                                color: #388136 !important;
+                                font-family: "Montserrat", sans-serif;
+                                font-weight: 600;
+                                font-size: 0.9em;
+                                width: 100%;
+                                text-align: center;
+                                border: 0;
+                                padding: 2px 12px;
+                                text-align: left;
+                            }
+
+                            &.active{
+                                border: 0 !important;
+                            }
+
+                            .tb-megamenu-submenu{
+                                display: flex;
+                                .tb-megamenu-column-inner{
+                                    margin: 0;
+                                    border: 0;
+                                    padding: 0;
+                                    .tb-megamenu-subnav{
+                                        position: initial;
+                                        .tb-megamenu-item{
+                                            a{
+                                                font-size: 12.5px;
+                                                padding: 0;
+                                                margin-left: 0;
+                                            }
+                                            &.active-trail{
+                                                a{
+                                                    background: none;
+                                                    border: 0 !important;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        li.active{
+                            border: 0;
+                            a{
+                                background-color: #eee;
+                            }
+                        } 
+                    }
+                }
+                
+            }
+            
+        }
+    }
+}
 
 /*-----------------------------------------------------------------*/
