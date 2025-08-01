@@ -294,12 +294,16 @@
             }
 
             .view-content {
-                margin-top: 2.5rem;
                 width: 75%;
 
                 table {
                     float: inherit;
                     width: 100%;
+
+                    tr >th:nth-child(2),
+                    tr >td:nth-child(2) {
+                        width: 150px;
+                    }
                 }
             }
 
