@@ -13,6 +13,7 @@
 @use 'layout/header/icbf_header';
 @use 'layout/header/tb_mega_menu';
 @use 'layout/header/header';
+@use 'layout/header/custom_header';
 
 @use 'layout/footer/footer';
 @use 'layout/navigation/pagination';
@@ -36,6 +37,7 @@
 
 @use 'components/elements/breadcrumb';
 @use 'components/elements/custom-table';
+@use 'components/elements/filters_pager';
 @use 'components/elements/page-general';
 @use 'components/elements/internal-page';
 @use 'components/elements/internal-news';

@@ -1369,19 +1369,26 @@
         .block-views-blockpersons-block-dregions {
             ul {
                 li {
-                    @media (min-width: 768px) {
-                        .col-sm-2 {
-                            display: flex;
-                            flex: 0 0 auto;
-                            width: 16.66666667%;
-                            justify-content: center;
+                    .row{
+                        @media (min-width: 768px) {
+                            .col-sm-2 {
+                                display: flex;
+                                flex: 0 0 auto;
+                                width: 16.66666667%;
+                                justify-content: center;
+                            }
+                            >.col-sm-2:nth-child(2){
+                                flex-wrap: wrap;
+                                height: fit-content;
+                                justify-content: left !important;
+                            }
                         }
-                    }
-
-                    @media (min-width: 768px) {
-                        .col-sm-4 {
-                            flex: 0 0 auto;
-                            width: 33.33333333%;
+    
+                        @media (min-width: 768px) {
+                            .col-sm-4 {
+                                flex: 0 0 auto;
+                                width: 33.33333333%;
+                            }
                         }
                     }
                 }

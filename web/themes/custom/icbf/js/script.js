@@ -31,29 +31,31 @@ $ = jQuery;
         var $wrapper = $('.view-id-tramites_sapi.view-display-id-block_7 fieldset[data-drupal-selector="edit-field-tags-de-tramite"] .bef-checkboxes');
         var $lis = $wrapper.find('li');
 
-        $.each($lis, function(key, value) {
-          if (key >= 10) {
-            $(this).css('display', 'none');
-          }
-        });
+        if ($lis.length > 10) {
+          $.each($lis, function(key, value) {
+            if (key >= 10) {
+              $(this).css('display', 'none');
+            }
+          });
 
-        if (!$wrapper.find('.btn-show-more').length) {
-          $wrapper.append('<a class="btn-show-more more" href="">Mostrar Más</a>');
-          $wrapper.find('.btn-show-more').click(function(e) {
-            e.preventDefault();
-            if ($(this).hasClass('more')) {
-              $lis.css('display', 'block');
-              $(this).text('Mostrar Menos').removeClass('more').addClass('less');
-            }
-            else {
-              $.each($lis, function (key, value) {
-                if (key >= 10) {
-                  $(this).css('display', 'none');
-                }
-              });
-              $(this).text('Mostrar Más').removeClass('less').addClass('more');
-            }
-          }).css('margin-left', '20px');
+          if (!$wrapper.find('.btn-show-more').length) {
+            $wrapper.append('<a class="btn-show-more more" href="">Mostrar Más</a>');
+            $wrapper.find('.btn-show-more').click(function(e) {
+              e.preventDefault();
+              if ($(this).hasClass('more')) {
+                $lis.show('slow');
+                $(this).text('Mostrar Menos').removeClass('more').addClass('less');
+              }
+              else {
+                $.each($lis, function (key, value) {
+                  if (key >= 10) {
+                    $(this).hide('slow');
+                  }
+                });
+                $(this).text('Mostrar Más').removeClass('less').addClass('more');
+              }
+            }).css('margin-left', '20px');
+          }
         }
       }
 
@@ -401,8 +403,8 @@ $(document).ready(function ($) {
 
 //funcionalidad de Collapse (En las paginas de Nutrición)
 $(document).ready(function () {
-  // Lista de clases de página válidas
   var paginasPermitidas = [
+    '.region-nav-main',
     '.page-nutricion-bienestarina-mas-y-otros-alimentos-de-alto-valor-nutricional',
     '.page-nutricion-estrategia-de-atencion-y-prevencion-de-la-desnutricion-infantil',
     '.page-nutricion-ensin-encuesta-nacional-de-situacion-nutricional',
@@ -411,7 +413,6 @@ $(document).ready(function () {
     '.page-nutricion-educacion-alimentaria-y-nutricional',
     '.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional',
     '.page-programas-y-estrategias-primera-infancia-mediatica-recursos-para-la-primera-infancia',
-    // '.page-adopciones-paso-paso',
   ];
 
   var aplicar = paginasPermitidas.some(function (clase) {
@@ -419,33 +420,36 @@ $(document).ready(function () {
   });
 
   if (aplicar) {
-    const $megamenu = $('#block-icbf-content .content .tb-megamenu');
-    const $menu = $megamenu.find('.nav-collapse');
-    const $button = $megamenu.find('.tb-megamenu-button');
+    const $megamenu = $('.tb-megamenu');
 
-    if ($menu.length && $button.length) {
-      // Ocultar inicialmente
-      $menu.removeClass('always-show').removeClass('show').addClass('collapse');
+    $megamenu.each(function () {
+      const $thisMenu = $(this);
+      const $button = $thisMenu.find('.tb-megamenu-button');
+      const $collapse = $thisMenu.find('.nav-collapse');
 
-      // Alternar visibilidad al hacer click en el botón
-      $button.on('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation(); // evita que el clic llegue al document
-        $menu.toggleClass('show');
-      });
+      if ($button.length && $collapse.length) {
+        $collapse.removeClass('always-show show').addClass('collapse');
 
-      // Prevenir cierre si se hace clic dentro del menú
-      $menu.on('click', function (e) {
-        e.stopPropagation();
-      });
+        $button.on('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
 
-      // Cerrar el menú si se hace clic fuera
-      $(document).on('click', function () {
-        if ($menu.hasClass('show')) {
-          $menu.removeClass('show');
-        }
-      });
-    }
+          // Cierra cualquier otro collapse abierto
+          $('.tb-megamenu .nav-collapse.show').not($collapse).removeClass('show');
+
+          // Alterna el actual
+          $collapse.toggleClass('show');
+        });
+
+        $collapse.on('click', function (e) {
+          e.stopPropagation();
+        });
+
+        $(document).on('click', function () {
+          $collapse.removeClass('show');
+        });
+      }
+    });
   }
 });
 

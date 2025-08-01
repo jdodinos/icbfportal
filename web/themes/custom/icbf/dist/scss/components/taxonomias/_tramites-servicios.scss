@@ -566,6 +566,17 @@ ul.m4 li {
     }
 }
 
+//--/portafolio-de-servicios-icbf/adopcion-para-residentes-en-colombia
+.page-id-6738{
+    .block-field-blocktaxonomy-termprocedurefield-header-infografia span {
+        font-family: var.$font-asap-regular;
+    }
+    .block-field-blocktaxonomy-termprocedurefield-content{
+        >div:first-child >div:nth-child(4) >.az-ctnr >.az-element:first-child {
+            width: 100%;
+        }
+    } 
+}
 
 
 /*
@@ -810,7 +821,7 @@ ul.m4 li {
 .page-bienes-sin-heredero-o-dueno,
 .page-estado-de-cuenta-de-aportes-parafiscales-0,
 .page-permiso-de-salida-del-pais,
-.page-adopcion-para-residentes-en-colombia,
+.page-id-6738,
 .page-fijacion-de-visitas,
 .page-restitucion-internacional-y-regulacion-internacional-de-visitas,
 .page-portafolio-de-servicios-icbf-oferta,
@@ -1000,3 +1011,234 @@ ul.m4 li {
     }
 
 }
+
+
+
+
+
+
+
+//------------------------------Gestion-----------------------
+.page-gestion-humana-nombramientos-resoluciones-de-nombramientos-provisionales{
+    #block-icbf-content{
+        .views-element-container{
+            >h2 {
+                margin-top: 2em;
+                margin-bottom: 0;
+                margin-left: 25%;
+                padding: 5px;
+                font-size: 1em;
+                font-weight: 700;
+                font-family: 'Montserrat', sans-serif;
+                background-color: #f7f7f7;
+                text-align: center;
+            }
+            .view-filters{
+                margin-top: -2.1em;
+
+                span.fieldset-legend {
+                    display: flex;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    padding: 3px;
+                    font-size: 1em;
+                    font-weight: 700 !important;
+                    font-family: 'Montserrat', sans-serif !important;
+                    background-color: #f7f7f7;
+                    justify-content: center;
+                }
+            }
+
+
+            //Responsive
+            .view-display-id-block_2 {
+                justify-items: center;
+                display: grid;
+                grid-template-areas:
+                    "a b"
+                    "a c";
+                grid-template-columns: 25% 75%;
+
+                .view-filters {
+                    grid-area: a;
+                    width: 100%;
+                    //margin-top: 0;
+                }
+
+                .view-content {
+                    grid-area: b;
+                    width: 100%;
+
+                    table{
+                        width: 100%;
+                    }
+                }
+
+                nav.pager {
+                    grid-area: c;
+                }
+            }
+
+            @media (max-width: 768px) {
+                >h2 {
+                    margin-left: 0 !important;
+                }
+
+                .view-display-id-block_2 {
+                    justify-items: center;
+                    padding: 1em;
+                    display: grid;
+                    grid-template-areas:
+                        "a"
+                        "b"
+                        "c";
+                    grid-template-columns: 100%;
+
+                    .view-filters {
+                        grid-area: a;
+                        width: 100%;
+                        margin-top: 1em;
+                    }
+
+                    .view-content {
+                        grid-area: b;
+                        width: 100%;
+                    }
+
+                    nav.pager {
+                        grid-area: c;
+                    }
+                }
+            }
+
+
+        }
+    }
+}
+
+
+
+.page-gestion-humana-convocatorias-planta-temporal{
+
+    .block-field-blocktaxonomy-termsecctionsfield-content{
+        padding-left: 15px;
+        padding-right: 15px;
+        a {
+            color: #1996d0;
+            text-decoration: none !important;
+            font-size: 14px;
+            
+            &:hover {
+                color: #125e81;
+                text-decoration: underline !important;
+            }
+        }
+    }
+
+    .view-display-id-block_3{
+        .view-filters{
+            div.form-actions input.button {
+                margin-left: 5px;
+                color: #fff;
+                background-color: #5bc0de;
+                border-color: #46b8da;
+
+                &:hover{
+                    background-color: #31b0d5;
+                    border-color: #269abc;
+                }
+            }
+        }
+
+        .view-content{
+            table{
+                width: 100%;
+
+                thead {
+                    display: none;
+                }
+                tbody{
+                    >tr:first-child {
+                        border-top-right-radius: 4px;
+                        border-top-left-radius: 4px;
+                    }
+                    >tr:last-child {
+                        border-bottom-right-radius: 4px;
+                        border-bottom-left-radius: 4px;
+                    }
+
+                    tr {
+                        display: flex;
+                        flex-wrap: wrap;
+                        border: 1px solid #ddd;
+                        padding: 10px 15px;
+                        td{
+                            width: 100%;
+                            border: 0 !important;
+                            padding: 0 !important;
+
+                            a{
+                                font-family: var.$font-asap-regular !important;
+                                font-size: 1.1em;
+                            }
+                        }
+
+                        td.views-field.views-field-field-date {
+                            text-align: right;
+                            font-size: .8em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Responsive
+    .view-display-id-block_3 {
+        justify-items: center;
+        display: grid;
+        grid-template-areas:
+            "a b";
+        grid-template-columns: 25% 75%;
+    
+        .view-filters {
+            grid-area: a;
+            width: 100%;
+            //margin-top: 0;
+        }
+    
+        .view-content {
+            grid-area: b;
+            width: 100%;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .block-page-title-block {
+            margin-left: 0.5em;
+        }
+        .view-display-id-block_3 {
+            justify-items: center;
+            padding: 1em;
+            display: grid;
+            grid-template-areas:
+                "a"
+                "b";
+            grid-template-columns: 100%;
+    
+            .view-filters {
+                grid-area: a;
+                width: 100%;
+                margin-top: 1em;
+            }
+    
+            .view-content {
+                grid-area: b;
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
