@@ -311,7 +311,7 @@ function icbf_preprocess_views_view_field(&$variables) {
     // Get the ID of the current View and its display.
     $view_id = $variables['view']->id();
     $display_id = $variables['view']->current_display;
-    $displayes = ['block_2', 'block_4', 'block_7'];
+    $displayes = ['block_2', 'block_4', 'block_5', 'block_7'];
 
     if ($view_id == 'sige_process' && in_array($display_id, $displayes)) {
       // @see \Drupal\node\Entity\Node
