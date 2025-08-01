@@ -281,6 +281,39 @@
     .layout__region.layout__region--second {
         margin-bottom: 1.5em;
     }
+
+    .view-id-encargos_sapi_solr {
+        &.view-display-id-block {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+
+            .view-filters {
+                float: inherit;
+                width: 25%;
+            }
+
+            .view-content {
+                margin-top: 2.5rem;
+                width: 75%;
+
+                table {
+                    float: inherit;
+                    width: 100%;
+                }
+            }
+
+            .pager {
+                width: 75%;
+            }
+        }
+
+        &.contextual-region {
+            .view-content {
+                margin-top: 0;
+            }
+        }
+    }
 }
 
 .page-id-6715,

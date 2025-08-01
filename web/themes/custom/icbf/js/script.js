@@ -23,6 +23,7 @@ $ = jQuery;
           adaptiveHeight: true,
           fade: true,
           speed: 300,
+          prevArrow: '<button type="button" class="slick-prev">Prev</button>'
         });
       }
 
