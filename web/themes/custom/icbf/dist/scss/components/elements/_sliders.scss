@@ -1,4 +1,73 @@
  @use "../../abstracts/variables" as var;
+ @use "../../abstracts/mixins" as mixins;
+
+// Default styles to sliders.
+.page-id-1233 {
+    .icbf-owl-carousel {
+        .icbf-owl-carousel-wrapper {
+            @include mixins.position;
+
+            .slick-list {
+                img {
+                    @include mixins.wh(100%);
+                }
+            }
+
+            // Arrows
+            .slick-arrow {
+                @include mixins.position(absolute, top, left, 50%);
+                @include mixins.wh(40px, 40px);
+                background: rgba(0, 0, 0, .5);
+                border: 10px solid transparent;
+                border-radius: 50%;
+                font-size: 0;
+                margin: 0 10px;
+                transform: translate(0, -50%);
+                z-index: 10;
+                transition: all .3s;
+
+                &:before {
+                    @include mixins.position(absolute, top, left, 25%, 0);
+                    @include mixins.wh(50%, 50%);
+                    content: '';
+                    transition: all .3s;
+                    backface-visibility: hidden;
+                    border-right: 1px solid #fff;
+                    border-bottom: 1px solid #fff;
+                }
+
+                &.slick-prev {
+                    &:before {
+                        transform: rotate(-225deg) translate(-50%, -50%);
+                    }
+                }
+
+                &.slick-next {
+                    left: initial;
+                    right: 0;
+
+                    &:before {
+                        left: 50%;
+                        transform: rotate(-45deg) translate(-50%, -50%);
+                    }
+                }
+            }
+
+            // Dots
+            .slick-dots {
+                @include mixins.position(absolute, bottom, left, 0, 50%);
+                font-size: 0;
+                list-style: none;
+                padding: 0;
+
+                li {
+                    margin: 0 2px;
+                }
+            }
+        }
+
+    }
+}
 
  .page-id-7213 {
 
