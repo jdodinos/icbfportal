@@ -2890,7 +2890,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -2931,8 +2931,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: file_url_plain
-          settings: {  }
+          type: file_default
+          settings:
+            use_description_as_link_text: false
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -3015,7 +3016,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: true
             text: '<h4><img>&nbsp;<a href="{{ field_document }}" title="{{ title }}" class="file-url">{{ title }}</a></h4>'
@@ -3268,6 +3269,22 @@ display:
             label: ''
             field_identifier: ''
           exposed: false
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
       arguments:
         field_hiring_process_type_target_id:
           id: field_hiring_process_type_target_id
