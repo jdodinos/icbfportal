@@ -1325,4 +1325,58 @@ ul.m4 li {
 }
 
 
+/*--------------------------
+-----CONSULTA CIUDADANA-----
+---------------------------*/
 
+.page-id-8031, ///planeacion/plan-anticorrupcion-y-atencion-al-ciudadano
+.page-id-8159 ///planeacion/programa-de-transparencia-y-etica-publica
+{
+    #block-icbf-content{
+        .content{
+            .block-views-blocktransparencia-019-sapi-block-paac{
+                .view-display-id-block_paac{
+                    grid-template-rows: .5fr .1fr !important;
+
+                    .view-content{
+                        h4 {
+                            font-family: var.$font-asap-regular !important;
+                            font-size: 1.2em !important;
+                            margin-top: 20px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+
+            .block-views-blocktransparencia-019-sapi-block-28{
+                .view-content{
+                    h4 {
+                        font-family: var.$font-asap-regular !important;
+                        font-size: 1.2em !important;
+                        margin-top: 20px;
+                        margin-bottom: 10px;
+                    }
+                }
+                >h2{
+                    font-family: 'Montserrat', sans-serif;
+                    line-height: normal !important;
+                    font-size: 1.4em;
+                    margin-left: 24%;
+                }
+                @media (max-width: 768px) {
+                    >h2 {
+                        margin-left: 2em;
+                    }
+                }
+
+                .view-display-id-block_28{
+                    .view-filters{
+                        opacity: 0;
+                        height: 0;
+                    }
+                }
+            }
+        }
+    }
+}
