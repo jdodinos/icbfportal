@@ -1,0 +1,15 @@
+@use "../../abstracts/variables" as var;
+@use "../../abstracts/mixins" as mixins;
+
+div {
+  // Default block menu micrositio
+  &[data-azb="az_block-bean-titulo-micrositio"] {
+
+    .az-ctnr.container {
+      >.az-element:first-child {
+        display: flex;
+        flex-wrap: nowrap;
+      }
+    }
+  }
+}
