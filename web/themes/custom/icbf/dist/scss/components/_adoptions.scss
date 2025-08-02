@@ -1598,6 +1598,11 @@ $border-color_1: #fff;
         line-height: normal;
         margin-bottom: 6px;
         padding: 15px 0 5px;
+        color: #60a53a !important;
+
+        a{
+            color: inherit;
+        }
     }
 
     .adopt-box-id {
@@ -1739,5 +1744,15 @@ $border-color_1: #fff;
     }
 
 
+
+}
+.page-adopciones-instituciones-y-organismos-autorizados-instituciones-autorizadas-en-colombia,
+.page-adopciones-instituciones-y-organismos-autorizados-organismos-y-agencias-internacionales{
+    h1.page-header{
+        font-family: var.$font-montserrat;
+    }
+    .country-p{
+        font-family: var.$font-montserrat;
+    }
 
 }
