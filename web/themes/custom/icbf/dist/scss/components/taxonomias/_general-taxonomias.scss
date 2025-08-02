@@ -3857,6 +3857,8 @@
     .block-field-blocktaxonomy-termsecctionsfield-content{
         >div{
             >.az-element:nth-child(2){
+                margin: 0 auto;
+                width: 97%;
                 >div{
                     >.az-element:first-child{
                         >.az-element:first-child{
@@ -3866,13 +3868,14 @@
                                 }
                             } 
                         }
+                        /*
                         >.az-element:nth-child(2){
                             >.az-element:first-child{
                                 h3, ul{
                                     display: none;
                                 }
                             }
-                        }
+                        }*/
                     }
                     >.az-element:nth-child(2){
                         h2 {
@@ -3895,13 +3898,21 @@
     }
 
     .view-id-observatory_newsletters_files{
-        thead {
-            display: none;
-        }
-        tbody{
-            a.btn.btn-menub {
-                padding: 12px 24px;
-                background-color: #f0f0f0;
+        table{
+            width: 100%;
+            thead {
+                display: none;
+            }
+            tbody{
+                tr{
+                    >td:first-child{
+                        width: 40%;
+                    }
+                }
+                a.btn.btn-menub {
+                    padding: 12px 24px;
+                    background-color: #f0f0f0;
+                }
             }
         }
     }
