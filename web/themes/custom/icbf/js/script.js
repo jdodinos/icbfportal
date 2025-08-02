@@ -471,30 +471,33 @@ $(document).ready(function () {
 });
 
 
-//Se añade la numeracion de los select
 
-/*
+//funcionalidad de filtros para doble tablas (se oculta el segundo filtro pero se debe activar con el primero)
+// Espera a que el DOM esté listo
 $(document).ready(function () {
-  const clasesPermitidas = [
-    '.page-portafolio-de-servicios-icbf-fijacion-cuota-de-alimentos',
-    '.page-fijacion-cuota-de-alimentos',
-    '.page-portafolio-de-servicios-icbf-ninos-y-ninas2',
-    '.page-portafolio-de-servicios-icbf-ninos-y-ninas',
-    '.page-portafolio-de-servicios-icbf-soy-adolescente',
-    '.page-portafolio-de-servicios-icbf-adolescentes-y-jovenes',
-    '.page-portafolio-de-servicios-icbf-soy-entidad',
-    '.page-portafolio-de-servicios-icbf-entidades',
-    '.page-portafolio-de-servicios-icbf-somos-familia',
-    '.page-portafolio-de-servicios-icbf-familias'
-  ];
+  const $pagina = $('.page-id-6891');
 
-  const paginaValida = clasesPermitidas.some(clase => $(clase).length > 0);
+  if ($pagina.length) {
+    // field_dae_year → field_date
+    $pagina.find('input[name="field_dae_year"]').on('change', function () {
+      const valor = $(this).val();
+      $pagina.find('input[name="field_date"]').each(function () {
+        if ($(this).val() === valor) {
+          $(this).prop('checked', true).trigger('change');
+        }
+      });
+    });
 
-  if (paginaValida) {
-    $('.precontent select option').each(function(index) {
-      const textoOriginal = $(this).text().trim();
-      $(this).text((index + 1) + ' ' + textoOriginal);
+    // field_date → field_dae_year
+    $pagina.find('input[name="field_date"]').on('change', function () {
+      const valor = $(this).val();
+      $pagina.find('input[name="field_dae_year"]').each(function () {
+        if ($(this).val() === valor) {
+          $(this).prop('checked', true).trigger('change');
+        }
+      });
     });
   }
 });
-*/
+
+
