@@ -474,6 +474,7 @@ $(document).ready(function () {
 
 //funcionalidad de filtros para doble tablas (se oculta el segundo filtro pero se debe activar con el primero)
 // Espera a que el DOM esté listo
+/*
 $(document).ready(function () {
   const $pagina = $('.page-id-8031');
 
@@ -498,6 +499,6 @@ $(document).ready(function () {
       });
     });
   }
-});
+});*/
 
 
