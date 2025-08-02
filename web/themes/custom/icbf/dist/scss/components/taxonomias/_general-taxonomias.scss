@@ -3908,6 +3908,9 @@
                     >td:first-child{
                         width: 40%;
                     }
+                    td {
+                        border-bottom: 0 !important;
+                    }
                 }
                 a.btn.btn-menub {
                     padding: 12px 24px;

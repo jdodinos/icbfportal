@@ -208,6 +208,22 @@ $ = jQuery;
             dots: true
           });
         }
+        else if ($('.page-id-1233 #qzywunrj').length) {
+          const $carousel = $('.page-id-1233 #qzywunrj .icbf-owl-carousel-wrapper');
+
+          // Inicializa Slick
+          $carousel.slick({
+            fade: true,
+            infinite: true,
+            speed: 1000,
+            autoplaySpeed: 4000,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            arrows: true,
+            dots: true
+          });
+        }
         else if ($('#6gy1mn3w').length) {
           $('#6gy1mn3w .icbf-owl-carousel-wrapper').slick({
             infinite: true,
