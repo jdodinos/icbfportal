@@ -1,0 +1,109 @@
+@use "../abstracts/variables" as var;
+
+
+.page-gestion-humana-nombramientos-resoluciones-convocatoria-433{
+    
+    .az-ctnr.container{
+        max-width: 100%;
+    }
+    
+    .layout--onecol-section:first-child{
+        display: flex;
+        gap: 30px;
+
+        .layout__region--first{
+            width: calc(100% / 12 * 3);
+            @media (max-width: 768px){
+                width: 100%;
+            }
+        }
+        .layout__region--second{
+            width: calc(100% / 12 * 9);
+            @media (max-width: 768px){
+                width: 100%;
+            }
+
+            .views-view-list-group{
+                .list-group-item{
+                    padding: 10px;
+                    &:not(:last-child){
+                        border-bottom: 2px solid #ddd;
+                    }
+                }
+            }
+        }
+    }
+
+    .block-views-blockdocumentos-g-humana-sapi-block-1{
+        h2{
+            font-family: var.$font-montserrat;
+            margin: 0 0 20px;
+        }
+
+        .views-view-list-group{
+            .list-group-item{
+                padding: 10px;
+                &:not(:last-child){
+                    border-bottom: 2px solid #ddd;
+                }
+            }
+        }
+    }
+
+}
+
+.page-gestion-humana-nombramientos-resoluciones-convocatoria-2149{
+    
+    .az-ctnr.container{
+        max-width: 100%;
+    }
+
+    .layout__region--content{
+        display: flex;
+        gap: 30px;
+
+        .block-field-blocktaxonomy-termsecctionsfield-content{
+            width: calc(100% / 12 * 3);
+            @media (max-width: 768px){
+                width: 100%;
+            }
+        }
+        .block-views-blockdocumentos-g-humana-attachment-1{
+            width: calc(100% / 12 * 9);
+            @media (max-width: 768px){
+                width: 100%;
+            }
+        }
+
+        .views-view-list-group{
+            .list-group-item{
+                padding: 10px;
+                &:not(:last-child){
+                    border-bottom: 2px solid #ddd;
+                }
+            }
+        }
+        
+    }
+
+    .bs-2col{
+        flex-wrap: wrap;
+        .bs-region--left{
+            flex: initial;
+            width: 100%;
+        }
+        .bs-region--right{
+            flex: initial;
+            width: 100%;
+        }
+    }
+
+    #views-bootstrap-documentos-g-humana-sapi-block-16{
+        .list-group-item{
+            padding: 10px;
+            &:not(:last-child){
+                border-bottom: 2px solid #ddd;
+            }
+        }
+    }
+}
