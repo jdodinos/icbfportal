@@ -62,6 +62,22 @@
 
                 li {
                     margin: 0 2px;
+
+                    button{
+                        background: rgba(0, 0, 0, .5) !important;
+                        border: 0 !important;
+                        padding: 2px;
+                        margin: 0 1px;
+                        width: 9px;
+                        height: 9px;
+                    }
+
+                    &.slick-active{
+                        button {
+                            background: #000 !important;
+                            border: 0 !important;
+                        }
+                    }
                 }
             }
         }
