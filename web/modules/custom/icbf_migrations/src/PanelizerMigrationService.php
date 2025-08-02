@@ -635,7 +635,8 @@ class PanelizerMigrationService {
         break;
 
       case 'vacancies':
-        if ($display_id == 'block_cpdr') {
+        $displayes = ['block_cpdr', 'block_3'];
+        if (in_array($display_id, $displayes)) {
           $view_id = 'vacancies_sapi';
         }
         break;

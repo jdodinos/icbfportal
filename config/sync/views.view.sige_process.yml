@@ -2728,7 +2728,7 @@ display:
           field: nid
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: 'Este filtro se cambia por código'
           entity_type: node
           entity_field: nid
           plugin_id: numeric
