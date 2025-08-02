@@ -3893,8 +3893,20 @@
                 }
             }
         }
+        
+        a:not(.btn), a:link:not(.btn) {
+            color: #1996d0 !important;
+            text-decoration: none !important;
 
-
+            &.active, &:hover {
+                color: #125e81 !important;
+                text-decoration: underline !important;
+            }
+        }
+        .btn.focus, .btn:focus, .btn:hover {
+            color: #333;
+            text-decoration: none;
+        }
     }
 
     .view-id-observatory_newsletters_files{
