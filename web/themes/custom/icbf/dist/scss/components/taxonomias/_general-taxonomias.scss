@@ -3790,8 +3790,7 @@
 ******OBSERVATORIO DE BIENESTAR DE LA NINEZ (Segundo nivel)******
 *****************************************************************
 */
-.page-programas-y-estrategias-archivo-historico-observatorio-del-bienestar-de-la-ninez-infografias,
-.page-id-1233 {
+.page-programas-y-estrategias-archivo-historico-observatorio-del-bienestar-de-la-ninez-infografias{
     #block-page-title-block {
         display: none;
     }
@@ -3838,6 +3837,71 @@
                     flex: 0 0 auto;
                     width: 66%;
                 }
+            }
+        }
+    }
+
+}
+
+.page-id-1233{
+    .icbf-owl-carousel{
+        .owl-controls.clickable {
+            height: 0 !important;
+        }
+    }
+
+    #block-page-title-block {
+        display: none;
+    }
+
+    .block-field-blocktaxonomy-termsecctionsfield-content{
+        >div{
+            >.az-element:nth-child(2){
+                >div{
+                    >.az-element:first-child{
+                        >.az-element:first-child{
+                            >.az-element:nth-child(2){
+                                >.az-element >.az-element:nth-child(2) {
+                                    display: none;
+                                }
+                            } 
+                        }
+                        >.az-element:nth-child(2){
+                            >.az-element:first-child{
+                                h3, ul{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                    >.az-element:nth-child(2){
+                        h2 {
+                            text-align: center;
+                            background-color: #f0f0f0;
+                            padding: 20px 0 10px;
+                        }
+                    }
+                    >.az-element{
+                        h2 span{
+                            color: #27ae60;
+                            font-size: 19.6px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    .view-id-observatory_newsletters_files{
+        thead {
+            display: none;
+        }
+        tbody{
+            a.btn.btn-menub {
+                padding: 12px 24px;
+                background-color: #f0f0f0;
             }
         }
     }
