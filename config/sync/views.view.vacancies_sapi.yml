@@ -1386,7 +1386,7 @@ display:
           element_label_class: ''
           element_label_colon: true
           element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_class: tb-right
           element_default_classes: true
           empty: ''
           hide_empty: false
@@ -1806,68 +1806,13 @@ display:
         groups:
           1: AND
       style:
-        type: views_bootstrap_table
+        type: views_bootstrap_list_group
         options:
           grouping: {  }
           row_class: ''
           default_row_class: true
-          override: 1
-          sticky: 0
-          caption: ''
-          summary: ''
-          description: ''
-          columns:
-            nid: nid
-            field_announcement_label: field_announcement_label
-            field_announcement_label_1: field_announcement_label_1
-            field_announcement_id: field_announcement_id
-            title: title
-            field_label_alert: field_label_alert
-            field_date: field_date
-          info:
-            nid:
-              align: ''
-              separator: ''
-              empty_column: 0
-              responsive: ''
-            field_announcement_label:
-              align: ''
-              separator: ''
-              empty_column: 0
-              responsive: ''
-            field_announcement_label_1:
-              align: ''
-              separator: ''
-              empty_column: 0
-              responsive: ''
-            field_announcement_id:
-              align: ''
-              separator: ''
-              empty_column: 0
-              responsive: ''
-            title:
-              align: ''
-              separator: ''
-              empty_column: 0
-              responsive: ''
-            field_label_alert:
-              align: ''
-              separator: ''
-              empty_column: 0
-              responsive: ''
-            field_date:
-              align: ''
-              separator: ''
-              empty_column: 0
-              responsive: ''
-          default: '-1'
-          empty_table: 0
-          responsive: 0
-          bootstrap_styles:
-            striped: 0
-            bordered: 0
-            hover: 0
-            condensed: 0
+          panels: 0
+          title_field: ''
       row:
         type: fields
         options: {  }
