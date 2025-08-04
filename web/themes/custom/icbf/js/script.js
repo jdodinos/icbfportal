@@ -208,6 +208,22 @@ $ = jQuery;
             dots: true
           });
         }
+        else if ($('.page-id-1233 #qzywunrj').length) {
+          const $carousel = $('.page-id-1233 #qzywunrj .icbf-owl-carousel-wrapper');
+
+          // Inicializa Slick
+          $carousel.slick({
+            fade: true,
+            infinite: true,
+            speed: 1000,
+            autoplaySpeed: 4000,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            arrows: true,
+            dots: true
+          });
+        }
         else if ($('#6gy1mn3w').length) {
           $('#6gy1mn3w .icbf-owl-carousel-wrapper').slick({
             infinite: true,
@@ -354,7 +370,6 @@ $(document).ready(function ($) {
 
     // Función para cambiar pestaña
     function activateTab(index) {
-      console.log("Activando pestaña (índice li):", index);
 
       // Actualizar estado de las pestañas
       $tabItems
@@ -376,7 +391,6 @@ $(document).ready(function ($) {
     $tabLinks.on('click', function (e) {
       e.preventDefault();
       var index = $tabItems.index($(this).parent());
-      console.log("Click en pestaña (índice li):", index, $(this).text());
       activateTab(index);
     });
 
@@ -395,8 +409,6 @@ $(document).ready(function ($) {
       $tabItems.eq(0).addClass('active').attr('aria-selected', 'true');
       $tabPages.eq(0).removeClass('quicktabs-hide');
     }
-  } else {
-    console.log("No se encontró el wrapper de quicktabs");
   }
 });
 
@@ -455,30 +467,34 @@ $(document).ready(function () {
 });
 
 
-//Se añade la numeracion de los select
 
+//funcionalidad de filtros para doble tablas (se oculta el segundo filtro pero se debe activar con el primero)
+// Espera a que el DOM esté listo
 /*
 $(document).ready(function () {
-  const clasesPermitidas = [
-    '.page-portafolio-de-servicios-icbf-fijacion-cuota-de-alimentos',
-    '.page-fijacion-cuota-de-alimentos',
-    '.page-portafolio-de-servicios-icbf-ninos-y-ninas2',
-    '.page-portafolio-de-servicios-icbf-ninos-y-ninas',
-    '.page-portafolio-de-servicios-icbf-soy-adolescente',
-    '.page-portafolio-de-servicios-icbf-adolescentes-y-jovenes',
-    '.page-portafolio-de-servicios-icbf-soy-entidad',
-    '.page-portafolio-de-servicios-icbf-entidades',
-    '.page-portafolio-de-servicios-icbf-somos-familia',
-    '.page-portafolio-de-servicios-icbf-familias'
-  ];
+  const $pagina = $('.page-id-8031');
 
-  const paginaValida = clasesPermitidas.some(clase => $(clase).length > 0);
+  if ($pagina.length) {
+    // field_dae_year → field_date
+    $pagina.find('input[name="field_dae_year"]').on('change', function () {
+      const valor = $(this).val();
+      $pagina.find('input[name="field_date"]').each(function () {
+        if ($(this).val() === valor) {
+          $(this).prop('checked', true).trigger('change');
+        }
+      });
+    });
 
-  if (paginaValida) {
-    $('.precontent select option').each(function(index) {
-      const textoOriginal = $(this).text().trim();
-      $(this).text((index + 1) + ' ' + textoOriginal);
+    // field_date → field_dae_year
+    $pagina.find('input[name="field_date"]').on('change', function () {
+      const valor = $(this).val();
+      $pagina.find('input[name="field_dae_year"]').each(function () {
+        if ($(this).val() === valor) {
+          $(this).prop('checked', true).trigger('change');
+        }
+      });
     });
   }
-});
-*/
+});*/
+
+
