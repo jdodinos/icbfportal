@@ -1363,6 +1363,9 @@ ul.m4 li {
                         margin-top: 20px;
                         margin-bottom: 10px;
                     }
+                    li.list-group-item{
+                        border: 1px solid #ddd !important;
+                    }
                 }
                 >h2{
                     font-family: 'Montserrat', sans-serif;
