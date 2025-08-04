@@ -1074,10 +1074,10 @@ display:
           hierarchy: true
           limit: true
           error_message: true
-        facets_field_date:
-          id: facets_field_date
+        facets_field_dae_year:
+          id: facets_field_dae_year
           table: search_api_index_transparency_sapi
-          field: facets_field_date
+          field: facets_field_dae_year
           relationship: none
           group_type: group
           admin_label: ''
@@ -1088,13 +1088,13 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: 'Filtrar por Fecha de Publicación'
+            label: 'Fecha (Año)'
             description: ''
             use_operator: false
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_date
+            identifier: field_dae_year
             required: false
             remember: false
             multiple: false
@@ -1239,6 +1239,7 @@ display:
           contextual_filters_or: false
       defaults:
         query: false
+        use_ajax: false
         pager: false
         exposed_form: false
         style: false
@@ -1247,11 +1248,13 @@ display:
         sorts: false
         filters: false
         filter_groups: false
+      use_ajax: false
       display_description: 'Participacion ciudadana 1'
       display_extenders:
         metatag_display_extender:
           metatags: {  }
           tokenize: false
+      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -2792,6 +2795,7 @@ display:
         groups:
           1: AND
       defaults:
+        use_ajax: false
         pager: false
         exposed_form: false
         fields: false
@@ -2799,6 +2803,7 @@ display:
         filters: false
         filter_groups: false
         footer: false
+      use_ajax: false
       display_description: doc2+descrip+year
       footer: {  }
       display_extenders:
