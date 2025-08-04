@@ -370,7 +370,6 @@ $(document).ready(function ($) {
 
     // Función para cambiar pestaña
     function activateTab(index) {
-      console.log("Activando pestaña (índice li):", index);
 
       // Actualizar estado de las pestañas
       $tabItems
@@ -392,7 +391,6 @@ $(document).ready(function ($) {
     $tabLinks.on('click', function (e) {
       e.preventDefault();
       var index = $tabItems.index($(this).parent());
-      console.log("Click en pestaña (índice li):", index, $(this).text());
       activateTab(index);
     });
 
@@ -411,8 +409,6 @@ $(document).ready(function ($) {
       $tabItems.eq(0).addClass('active').attr('aria-selected', 'true');
       $tabPages.eq(0).removeClass('quicktabs-hide');
     }
-  } else {
-    console.log("No se encontró el wrapper de quicktabs");
   }
 });
 
