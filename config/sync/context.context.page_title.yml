@@ -53,7 +53,7 @@ conditions:
     negate: true
     uuid: cd1cd326-dae3-4aaa-9029-71a333316048
     context_mapping: {  }
-    pages: "<front>\r\n/programa-adopciones"
+    pages: "<front>\r\n/programa-adopciones\r\n/mi-familia-universal\r\n/viajemos-en-familia\r\n/node/147942\r\n/node/147943\r\n/node/147944\r\n/node/147963\r\n/node/147967\r\n/node/147969\r\n/node/147970\r\n/node/147972\r\n/node/147975\r\n/node/147976\r\n/node/147978\r\n/node/147983\r\n/node/147986\r\n/node/147987\r\n/node/147988\r\n/node/147990\r\n/node/147991\r\n/node/148667\r\n/node/148671\r\n/node/148918\r\n/node/148919\r\n/node/148920\r\n/node/148921\r\n/node/148922\r\n/node/148923\r\n/node/148924\r\n/node/148925\r\n/node/148926\r\n/node/148927\r\n/node/159084\r\n/node/159103\r\n/node/159104\r\n/node/159106\r\n/node/159107\r\n/node/159109\r\n"
 reactions:
   blocks:
     id: blocks
