@@ -1587,7 +1587,7 @@ $border-color_1: #fff;
         box-shadow: 0 .1rem 1rem rgba(0, 0, 0, .1);
         display: inline-block;
         margin: 0 0 18px;
-        padding: 6px;
+        padding: 6px 6px 16px;
         width: 100%;
         word-break: break-all;
     }
@@ -1599,9 +1599,45 @@ $border-color_1: #fff;
         margin-bottom: 6px;
         padding: 15px 0 5px;
         color: #60a53a !important;
+        word-break: break-word;
 
         a{
             color: inherit;
+        }
+    }
+
+    [class*="file--application-"] {
+        font-family: var.$font-montserrat;
+        font-size: 14px;
+        line-height: 1em;
+    }
+
+    ul.country-adopt {
+        font-size: 14px;
+        line-height: 1.6em;
+        margin-left: -10px;
+    }
+
+    .email-adopt {
+        font-size: 14px;
+        line-height: 1.6em;
+        margin-left: 0;
+    }
+
+    .adopt-box{
+        .col-sm-8{
+            font-size: 0;
+            line-height: 0;
+
+            .country-p{
+                font-size: 14px;
+                font-weight: normal;
+                margin: 0;
+            }
+
+            .country-title{
+                font-family: var.$font-montserrat;
+            }
         }
     }
 
@@ -1609,6 +1645,11 @@ $border-color_1: #fff;
         border-right: 1px solid #ececec;
         color: #60a53a !important;
         height: auto;
+
+        .country-p{
+            font-weight: 400;
+            font-size: 14px;
+        }
     }
 
     .vocabulary-programa-adopciones{
