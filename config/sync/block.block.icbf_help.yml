@@ -11,7 +11,7 @@ _core:
 id: icbf_help
 theme: icbf
 region: content
-weight: -7
+weight: -19
 provider: null
 plugin: help_block
 settings:

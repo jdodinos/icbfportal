@@ -12,16 +12,25 @@ dependencies:
     - field.field.taxonomy_term.secctions.field_metatag
     - field.field.taxonomy_term.secctions.field_microsite_info_category
     - field.field.taxonomy_term.secctions.field_multimedia_complement
+    - field.field.taxonomy_term.secctions.field_path_class
     - field.field.taxonomy_term.secctions.field_priority
     - field.field.taxonomy_term.secctions.field_related_procedures
     - field.field.taxonomy_term.secctions.field_taxonomy_image
     - field.field.taxonomy_term.secctions.layout_builder__layout
     - taxonomy.vocabulary.secctions
+    - views.view.tramites_sapi
+  content:
+    - 'block_content:footer:485b0ed8-fdad-4aec-a2d9-cecf5a74740b'
+    - 'block_content:footer:6ef225ee-ab82-493e-9851-60ed5d3c6452'
   module:
+    - block_content
+    - bootstrap_layouts
     - layout_builder
     - layout_discovery
     - panelizer
+    - tb_megamenu
     - text
+    - views
 third_party_settings:
   layout_builder:
     enabled: true
@@ -47,6 +56,163 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 2
             additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: bs_2col
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            left:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-3: col-sm-3
+              add_region_classes: 1
+              attributes: ''
+            right:
+              wrapper: div
+              classes:
+                col-xs-12: col-xs-12
+                col-sm-9: col-sm-9
+              add_region_classes: 1
+              attributes: ''
+          context_visibility: {  }
+          context_all_must_pass: 1
+        components:
+          3434350a-9061-4bd4-b201-cf8e0f611f4e:
+            uuid: 3434350a-9061-4bd4-b201-cf8e0f611f4e
+            region: left
+            configuration:
+              id: 'tb_megamenu_menu_block:mgm-6038204b97dda'
+              label: 'Menu Transparencia 1519'
+              label_display: '0'
+              provider: tb_megamenu
+              context_mapping: {  }
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          8b0c0e80-d3df-4de7-bc56-93bd36c909f3:
+            uuid: 8b0c0e80-d3df-4de7-bc56-93bd36c909f3
+            region: right
+            configuration:
+              id: 'field_block:taxonomy_term:secctions:name'
+              label: Nombre
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          51f80ff7-a057-4153-9747-93119d6a7850:
+            uuid: 51f80ff7-a057-4153-9747-93119d6a7850
+            region: right
+            configuration:
+              id: 'field_block:taxonomy_term:secctions:field_content'
+              label: Contenido
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 1
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+        third_party_settings: {  }
+      -
+        layout_id: bs_1col
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            main:
+              wrapper: div
+              classes:
+                col-sm-12: col-sm-12
+              add_region_classes: 1
+              attributes: ''
+          context_visibility: {  }
+          context_all_must_pass: 1
+        components:
+          b022b72d-233e-4e1d-be5a-7a4f22ac0eae:
+            uuid: b022b72d-233e-4e1d-be5a-7a4f22ac0eae
+            region: main
+            configuration:
+              id: 'views_block:tramites_sapi-block_7'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          2dce911b-b69d-49de-bbb5-652d0901b46d:
+            uuid: 2dce911b-b69d-49de-bbb5-652d0901b46d
+            region: main
+            configuration:
+              id: 'block_content:485b0ed8-fdad-4aec-a2d9-cecf5a74740b'
+              label: 'situación del ciudadano'
+              label_display: '0'
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 1
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          1f1575e1-7a14-4fc5-a523-5666e48d730c:
+            uuid: 1f1575e1-7a14-4fc5-a523-5666e48d730c
+            region: main
+            configuration:
+              id: 'block_content:6ef225ee-ab82-493e-9851-60ed5d3c6452'
+              label: 'banner portafolio en vus'
+              label_display: '0'
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 2
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
         third_party_settings: {  }
   panelizer:
     enable: false
@@ -78,6 +244,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_path_class:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
   field_category_citizen: true

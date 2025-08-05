@@ -1283,6 +1283,22 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      sorts:
+        field_priority_value:
+          id: field_priority_value
+          table: node__field_priority
+          field: field_priority_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+      defaults:
+        sorts: false
       display_description: ''
       display_extenders:
         metatag_display_extender:

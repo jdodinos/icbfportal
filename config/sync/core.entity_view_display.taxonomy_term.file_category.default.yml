@@ -1,0 +1,75 @@
+uuid: 0883b2d9-8a04-4400-9f45-23986c830941
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.file_category
+    - views.view.content
+  module:
+    - layout_builder
+    - layout_discovery
+    - panelizer
+    - text
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          3a51452d-9dfd-412c-a7c9-6a193fcdeb8f:
+            uuid: 3a51452d-9dfd-412c-a7c9-6a193fcdeb8f
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:file_category:description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          88e97a6a-dea7-477a-8a9f-353ade28e3ca:
+            uuid: 88e97a6a-dea7-477a-8a9f-353ade28e3ca
+            region: content
+            configuration:
+              id: 'views_block:content-block_content_term'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 1
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+        third_party_settings: {  }
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: taxonomy_term.file_category.default
+targetEntityType: taxonomy_term
+bundle: file_category
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_attachments: true
+  search_api_excerpt: true

@@ -1,0 +1,267 @@
+uuid: 8dac4929-07e9-4d76-9aa7-34b8f6aa0251
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_email
+    - field.storage.node.field_creation_date
+    - field.storage.node.field_dae_year
+    - field.storage.node.field_date
+    - field.storage.node.field_document
+    - field.storage.node.field_file_categoria
+    - field.storage.node.field_hiring_process_category
+    - field.storage.node.field_hiring_type_process
+    - field.storage.node.field_location
+    - field.storage.node.field_parent
+    - field.storage.node.field_process_object
+    - field.storage.node.field_section
+    - field.storage.node.field_unpublish_date
+    - search_api.server.icbf
+  module:
+    - file
+    - node
+    - search_api_solr
+third_party_settings:
+  search_api_solr:
+    finalize: false
+    commit_before_finalize: false
+    commit_after_finalize: false
+    debug_finalize: false
+    highlighter:
+      maxAnalyzedChars: 51200
+      fragmenter: gap
+      usePhraseHighlighter: true
+      highlightMultiTerm: true
+      preserveMulti: false
+      regex:
+        slop: 0.5
+        pattern: blank
+        maxAnalyzedChars: 10000
+      highlight:
+        mergeContiguous: false
+        requireFieldMatch: false
+        snippets: 3
+        fragsize: 0
+    mlt:
+      mintf: 1
+      mindf: 1
+      maxdf: 0
+      maxdfpct: 0
+      minwl: 0
+      maxwl: 0
+      maxqt: 100
+      maxntp: 2000
+      boost: false
+      interestingTerms: none
+    term_modifiers:
+      slop: 3
+      fuzzy: 1
+      fuzzy_analyzer: true
+    advanced:
+      index_prefix: ''
+      collection: ''
+      timezone: ''
+    multilingual:
+      limit_to_content_language: false
+      include_language_independent: true
+      use_language_undefined_as_fallback_language: false
+      specific_languages:
+        en: '0'
+        es: '0'
+      use_universal_collation: false
+id: hiring_process
+name: 'Procesos de Contratación SAPI'
+description: ''
+read_only: false
+field_settings:
+  description:
+    label: 'Documento » Descripción'
+    datasource_id: 'entity:node'
+    property_path: 'field_document:description'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_document
+  field_contact_email:
+    label: 'Correo electrónico de contacto'
+    datasource_id: 'entity:node'
+    property_path: field_contact_email
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_contact_email
+  field_contact_email_1:
+    label: 'Correo electrónico de contacto'
+    datasource_id: 'entity:node'
+    property_path: field_contact_email
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_contact_email
+  field_creation_date:
+    label: 'Fecha fijación'
+    datasource_id: 'entity:node'
+    property_path: field_creation_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_creation_date
+  field_dae_year:
+    label: Fecha
+    datasource_id: 'entity:node'
+    property_path: field_dae_year
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_dae_year
+  field_date:
+    label: Fecha
+    datasource_id: 'entity:node'
+    property_path: field_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_date
+  field_document:
+    label: Documento
+    datasource_id: 'entity:node'
+    property_path: field_document
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_document
+  field_file_categoria:
+    label: 'Categoría del archivo'
+    datasource_id: 'entity:node'
+    property_path: field_file_categoria
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_file_categoria
+  field_hiring_process_category:
+    label: 'Categoría de proceso'
+    datasource_id: 'entity:node'
+    property_path: field_hiring_process_category
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_hiring_process_category
+  field_hiring_type_process:
+    label: 'Tipo de proceso de contratación'
+    datasource_id: 'entity:node'
+    property_path: field_hiring_type_process
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_hiring_type_process
+  field_location:
+    label: Ubicación
+    datasource_id: 'entity:node'
+    property_path: field_location
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_location
+  field_parent:
+    label: 'Contenido padre'
+    datasource_id: 'entity:node'
+    property_path: field_parent
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_parent
+  field_process_object:
+    label: 'Objeto del proceso'
+    datasource_id: 'entity:node'
+    property_path: field_process_object
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_process_object
+  field_section:
+    label: Sección
+    datasource_id: 'entity:node'
+    property_path: field_section
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_section
+  field_unpublish_date:
+    label: 'Fecha desfijación'
+    datasource_id: 'entity:node'
+    property_path: field_unpublish_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_unpublish_date
+  filename:
+    label: 'Documento » Archivo » Nombre de archivo'
+    datasource_id: 'entity:node'
+    property_path: 'field_document:entity:filename'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_document
+      module:
+        - file
+  format:
+    label: 'Objeto del proceso » Formato de texto'
+    datasource_id: 'entity:node'
+    property_path: 'field_process_object:format'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_process_object
+  status:
+    label: Publicado
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - node
+  title:
+    label: Título
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    dependencies:
+      module:
+        - node
+  type:
+    label: 'Tipo de contenido'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - document
+        - hiring_process
+    languages:
+      default: false
+      selected:
+        - es
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  auto_aggregated_fulltext_field: {  }
+  custom_value: {  }
+  entity_type: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+  solr_date_range: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  delete_on_fail: true
+  index_directly: true
+  track_changes_in_references: true
+server: icbf

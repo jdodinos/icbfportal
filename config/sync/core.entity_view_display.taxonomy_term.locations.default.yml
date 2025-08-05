@@ -20,7 +20,42 @@ dependencies:
     - field.field.taxonomy_term.locations.field_working_hours
     - taxonomy.vocabulary.locations
   module:
+    - bootstrap_layouts
+    - layout_builder
+    - panelizer
     - text
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: bs_1col
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            main:
+              wrapper: div
+              classes:
+                col-sm-12: col-sm-12
+              add_region_classes: 1
+              attributes: ''
+          context_visibility: {  }
+          context_all_must_pass: 1
+        components: {  }
+        third_party_settings: {  }
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: taxonomy_term.locations.default
 targetEntityType: taxonomy_term
 bundle: locations

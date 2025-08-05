@@ -1,11 +1,49 @@
-global-styling:
+main-styling:
   css:
     theme:
-      css/ninos-y-ninas.css: {}
       css/icbf.css: {}
       css/style.css: {}
       dist/css/main.css: {}
   js:
     js/script.js: {}
+    js/colabs.js: {}
   dependencies:
     - core/jquery
+    - core/drupal
+    - icbf/owl
+    - slick/slick
+
+ninos-y-ninas:
+  css:
+    theme:
+      css/ninos-y-ninas.css: {}
+      dist-ninos-y-ninas/css/main.css: {}
+  js:
+    js/ninos-y-ninas.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - icbf/owl
+
+mi-familia-universal:
+  css:
+    theme:
+      css/mifamiliauniversal.css: {}
+  js:
+    # js/ninos-y-ninas.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - icbf/owl
+
+owl:
+  css:
+    theme:
+      libraries/owl/owl.carousel.css: {}
+      libraries/owl/owl.theme.css: {}
+      libraries/owl/owl.transitions.css: {}
+  js:
+    libraries/owl/owl.carousel.js: {}
+  dependencies:
+    - core/jquery
+    - core/once

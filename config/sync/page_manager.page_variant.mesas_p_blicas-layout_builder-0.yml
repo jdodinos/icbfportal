@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - page_manager.page.mesas_p_blicas
+    - views.view.accountability_sapi
     - views.view.calendario_rendici_n
   content:
     - 'block_content:footer:756d901f-61d2-4aa0-add5-7bf5d2af4f39'
@@ -53,9 +54,24 @@ variant_settings:
             items_per_page: none
           weight: 0
           additional: {  }
+        8c607638-32ea-4e92-af03-ae74905e0223:
+          uuid: 8c607638-32ea-4e92-af03-ae74905e0223
+          region: main
+          configuration:
+            id: 'views_block:calendario_rendici_n-block_page_1'
+            label: ''
+            label_display: '0'
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 1
+          additional:
+            context_visibility: {  }
+            context_all_must_pass: 1
       third_party_settings: {  }
     -
-      layout_id: bs_2col
+      layout_id: bs_1col
       layout_settings:
         label: ''
         context_mapping: {  }
@@ -66,19 +82,30 @@ variant_settings:
           add_layout_class: 1
           attributes: ''
         regions:
-          left:
+          main:
             wrapper: div
             classes:
-              col-sm-4: col-sm-4
+              col-sm-12: col-sm-12
             add_region_classes: 1
             attributes: ''
-          right:
-            wrapper: div
-            classes:
-              col-sm-8: col-sm-8
-            add_region_classes: 1
-            attributes: ''
-      components: {  }
+        context_visibility: {  }
+        context_all_must_pass: 1
+      components:
+        46822b62-b72b-49ca-8723-fa71536bf2de:
+          uuid: 46822b62-b72b-49ca-8723-fa71536bf2de
+          region: main
+          configuration:
+            id: 'views_block:accountability_sapi-block_3'
+            label: ''
+            label_display: '0'
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 0
+          additional:
+            context_visibility: {  }
+            context_all_must_pass: 1
       third_party_settings: {  }
     -
       layout_id: bs_1col

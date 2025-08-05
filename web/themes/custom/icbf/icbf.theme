@@ -29,6 +29,16 @@ function icbf_preprocess_html(&$variables) {
       if ($param instanceof Term) {
         $vid = $param->vid->getString();
         $variables['attributes']['class'][] = 'page-taxonomy-' . $vid;
+        $variables['attributes']['class'][] = 'page-id-' . $param->id();
+
+        if ($param->hasField('field_path_class') && !$param->get('field_path_class')->isEmpty()) {
+          $raw_class = $param->field_path_class->value;
+          // Trim whitespace, convert to lowercase, and sanitize it as a valid CSS class.
+          $sanitized_class = Html::cleanCssIdentifier(strtolower(trim($raw_class)));
+
+          $variables['attributes']['class'][] = "page-{$sanitized_class}";
+          $variables['attributes']['class'][] = $sanitized_class;
+        }
       }
     }
   }
@@ -79,10 +89,9 @@ function icbf_preprocess_field(&$variables) {
           $html2 = substr($html, $item_pos);
           $html_close_pos = strpos($html2, '>');
           $html_close = substr($html, $item_pos, $html_close_pos);
-          // dump($html2);
-          // dump($html_close);
-        //   # code...
         }
+
+        $item['content']['#text'] = icbf_owl_slide_process($item['content']['#text']);
       }
     }
   // }
@@ -95,10 +104,12 @@ function icbf_preprocess_field(&$variables) {
       // For views in Glazed Builder.
       if (strpos($html, 'data-azb="az_view')) {
         $explode_html = explode('</div>', $html);
-        foreach ($explode_html as $original_element) {
+        foreach ($explode_html as &$original_element) {
+
           if (strpos($original_element, 'data-azb="az_view')) {
-            $original_element .= '</div>';
-            $element = trim($original_element);
+            $last_div_pos = strrpos($original_element, '<div');
+            $element = substr($original_element, $last_div_pos);
+            $element = trim($element);
 
             // Check if there are contextual filters.
             $filter = [];
@@ -126,25 +137,31 @@ function icbf_preprocess_field(&$variables) {
                 $view->preExecute();
                 $view->execute();
 
-                // Render it
+                // Render it.
                 $render_array = $view->render();
                 $html_view = \Drupal::service('renderer')->render($render_array);
-                $html = str_replace($original_element, $html_view, $html);
+                $html_view = $element . $html_view . '</div>';
+                $original_element = str_replace($element, $html_view, $original_element);
               }
             }
           }
+          else {
+            $original_element .= '</div>';
+          }
         }
-
-        $item['content']['#text'] = $html;
+        $explode_html = implode('', $explode_html);
+        $item['content']['#text'] = str_replace($html, $explode_html, $item['content']['#text']);
       }
 
       // For blocks in Glazed Builder.
       if (strpos($html, 'data-azb="az_block')) {
+        $html = $item['content']['#text'];
         $explode_html = explode('</div>', $html);
-        foreach ($explode_html as $original_element) {
+        foreach ($explode_html as &$original_element) {
           if (strpos($original_element, 'data-azb="az_block')) {
-            $original_element .= '</div>';
-            $element = trim($original_element);
+            $last_div_pos = strrpos($original_element, '<div');
+            $element = substr($original_element, $last_div_pos);
+            $element = trim($element);
 
             // Check if view data.
             $block_data = [];
@@ -157,6 +174,13 @@ function icbf_preprocess_field(&$variables) {
                 $block_id = str_replace('---', '|+|', $block_id);
                 $block_id = str_replace('-', ' ', $block_id);
                 $block_info = trim(str_replace('|+|', ' - ', $block_id));
+                $particular_blocks = [
+                  'titulo micrositio' => 'Observatorio de Bienestar - top',
+                  'bloque compartir - redes infogra' => 'Bloque Compartir - Redes Infografias',
+                ];
+                if (array_key_exists($block_info, $particular_blocks)) {
+                  $block_info = $particular_blocks[$block_info];
+                }
 
                 $blocks = \Drupal::entityTypeManager()
                   ->getStorage('block_content')
@@ -167,9 +191,55 @@ function icbf_preprocess_field(&$variables) {
                   $view_builder = \Drupal::entityTypeManager()->getViewBuilder('block_content');
                   $render_array = $view_builder->view($block);
                   $html_block = \Drupal::service('renderer')->renderRoot($render_array);
-                  $html = str_replace($original_element, $html_block, $html);
+                  $html_view = $element . $html_block . '</div>';
+                  $original_element = str_replace($element, $html_view, $original_element);
                 }
               }
+            }
+          }
+          else {
+            $original_element .= '</div>';
+          }
+        }
+
+        $explode_html = implode('', $explode_html);
+        $item['content']['#text'] = str_replace($html, $explode_html, $item['content']['#text']);
+      }
+
+      // For Iconsd in Glazed Builder.
+      if (strpos($html, 'data-azat-icon="')) {
+        $html = $item['content']['#text'];
+        $explode_html = explode('</div>', $html);
+        foreach ($explode_html as $original_element) {
+          if (strpos($original_element, 'data-azat-icon="')) {
+            $original_element .= '</div>';
+            $element = trim($original_element);
+
+            // Check if view data.
+            $block_data = [];
+            $pos_block_info = strpos($element, 'data-azat-icon="');
+            $string = substr($element, $pos_block_info);
+            $string_array = explode('"', $string);
+            $icon_class = [];
+            $icon_style = '';
+            foreach ($string_array as $elem_value) {
+              if (strpos($elem_value, 'pe pe-') !== FALSE || strpos($elem_value, 'et et-') !== FALSE || strpos($elem_value, 'fa') !== FALSE) {
+                $icon_class[] = $elem_value;
+              }
+              elseif (strpos($elem_value, 'color:') !== FALSE) {
+                $icon_style = $elem_value;
+              }
+            }
+
+            if (!empty($icon_class)) {
+              $icon_class = implode(' ', $icon_class);
+              $icon_html = '<i class="' . $icon_class . '"';
+              if (!empty($icon_style)) {
+                $icon_html .= ' style="' . $icon_style . '"';
+              }
+              $icon_html .= '></i>';
+              $element = str_replace('&nbsp;', $icon_html, $original_element);
+              $html = str_replace($original_element, $element, $html);
             }
           }
         }
@@ -177,6 +247,13 @@ function icbf_preprocess_field(&$variables) {
         $item['content']['#text'] = $html;
       }
     }
+  }
+}
+
+function icbf_preprocess_layout(&$variables) {
+  if (isset($variables['attributes']['class'][2])) {
+    $variables['attributes']['class'][1] = 'layout--unecol-section layout--onecol-section';
+    unset($variables['attributes']['class'][2]);
   }
 }
 
@@ -195,6 +272,103 @@ function icbf_preprocess_views_view_field(&$variables) {
       }
     }
   }
+
+  // Formatter the value in the constructor field.
+  if ($variables['field']->field == 'field_constructor') {
+    if ($variables['output']) {
+      $output = str_replace('<p>', '', $variables['output']);
+      $output = str_replace('</p>', '', $output);
+      $decoded_html = html_entity_decode($output);
+      $decoded_html = icbf_files_directory_process($decoded_html);
+      $decoded_html = icbf_owl_slide_process($decoded_html);
+
+      $variables['output'] = [
+        '#markup' => $decoded_html,
+      ];
+    }
+  }
+
+  // Check if the current field being rendered is 'field_news_files'.
+  if ($variables['field']->field == 'field_news_files') {
+    // Get the ID of the current View and its display.
+    $view_id = $variables['view']->id();
+    $display_id = $variables['view']->current_display;
+
+    if ($view_id == 'actas_contentivas' && $display_id == 'block') {
+      // @see \Drupal\node\Entity\Node
+      $entity = $variables['row']->_entity;
+
+      // Replace the filename with the node title in the rendered field output.
+      $output = icbf_change_filename_by_title('field_news_files', $entity, $variables['output']);
+      $variables['output'] = [
+        '#markup' => $output
+      ];
+    }
+  }
+
+  // Check if the current field being rendered is 'field_document'.
+  if ($variables['field']->field == 'field_document') {
+    // Get the ID of the current View and its display.
+    $view_id = $variables['view']->id();
+    $display_id = $variables['view']->current_display;
+    $displayes = ['block_2', 'block_4', 'block_5', 'block_7'];
+
+    if ($view_id == 'sige_process' && in_array($display_id, $displayes)) {
+      // @see \Drupal\node\Entity\Node
+      $entity = $variables['row']->_entity;
+
+      // Replace the filename with the node title in the rendered field output.
+      $output = icbf_change_filename_by_title('field_document', $entity, $variables['output']);
+      $variables['output'] = [
+        '#markup' => $output
+      ];
+    }
+  }
+
+  if ($variables['field']->table == 'views' && $variables['field']->field == 'nothing') {
+    if (strpos($variables['output'], '%url_node') !== FALSE && strpos($variables['output'], 'box-faq') !== FALSE ) {
+      $entity = $variables['row']->_entity;
+      $url_alias = \Drupal::service('path_alias.manager')->getAliasByPath('/node/' . $entity->id());
+      $variables['output'] = [
+        '#markup' => str_replace('%url_node', $url_alias, $variables['output'])
+      ];
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function icbf_preprocess_bef_links(&$variables) {
+  foreach ($variables['element'] as $key => &$value) {
+    if (is_int($key)) {
+      $title_values = explode('(', $value['#title']);
+      $value['#title'] = [
+        '#markup' => '<span class="letter">' . $title_values[0] . '</span><span class="number">(' . $title_values[1] . '</span>'
+      ];
+    }
+  }
+}
+
+/**
+ * The icbf_change_filename_by_title function
+ */
+function icbf_change_filename_by_title($field_name, $entity, $output) {
+  if ($entity->hasField($field_name) && !$entity->get($field_name)->isEmpty()) {
+    // @see \Drupal\file\Entity\File
+    $file = $entity->get($field_name)->entity;
+
+    // Ensure that the loaded entity is a valid File entity.
+    if ($file instanceof \Drupal\file\Entity\File) {
+      $title = $entity->getTitle();
+      $filename = $file->getFilename();
+
+      // Replace the filename with the node title in the rendered field output.
+      $output = str_replace(">{$filename}<", ">{$title}<", $output);
+    }
+
+    return $output;
+  }
 }
 
 function icbf_theme_suggestions_views_view_field_alter(array &$suggestions, array $variables) {
@@ -203,20 +377,38 @@ function icbf_theme_suggestions_views_view_field_alter(array &$suggestions, arra
   $field = $variables['field']->field;
 
 
-  $suggestions[] = "views_view_field__{$view->id()}__{$display_id}__{$field}";
+  $suggestions[] = "views_view_field_{$view->id()}{$display_id}_{$field}";
 }
 
 /**
  * Implementa hook_preprocess_block().
  */
 function icbf_preprocess_block(&$variables) {
+  // Remove the title of the page title block on the front page.
+  if ($variables['plugin_id'] == 'page_title_block' && \Drupal::service('path.matcher')->isFrontPage()) {
+    $variables['content']['#title'] = '';
+  }
+
   if (isset($variables['elements']['#configuration']['formatter']['override_title'])) {
     $label_display = $variables['elements']['#configuration']['label_display'];
     $block_settings = $variables['elements']['#configuration']['formatter'];
     if ($label_display && $block_settings['override_title']) {
-      $variables['label']['#markup'] = $block_settings['override_title_text'] ?? '';
+      if (is_array($variables['label'])) {
+        $variables['label']['#markup'] = $block_settings['override_title_text'] ?? '';
+      }
     }
   }
+
+  if ($variables['plugin_id'] == 'webform_block') {
+    $webform = $variables['content']['#webform'];
+    if ($webform) {
+      $webform_url = $webform->toUrl()->toString();
+      $variables['label'] = [
+        '#markup' => '<a href="' . $webform_url . '">' . $variables['label'] . '</a>',
+      ];
+    }
+  }
+
 }
 
 /**
@@ -229,15 +421,39 @@ function icbf_preprocess_block(&$variables) {
  *   The processed HTML content with placeholders replaced.
  */
 function icbf_files_directory_process($html) {
-  if (strpos($html, '-base-url-') === FALSE && strpos($html, '-files-directory-') === FALSE) {
-    return $html;
+  if (strpos($html, '-base-url-') != FALSE) {
+    $request = \Drupal::service('request_stack')->getCurrentRequest();
+    $base_url = $request->getSchemeAndHttpHost();
+    $html = str_replace('-base-url-', $base_url, $html);
   }
 
-  $request = \Drupal::service('request_stack')->getCurrentRequest();
-  $base_url = $request->getSchemeAndHttpHost();
-  $public_files_path = \Drupal::config('system.file')->get('path.public') ?? 'sites/default/files';
-  $html = str_replace('-base-url-', $base_url, $html);
-  $html = str_replace('-files-directory-', $public_files_path, $html);
+  if (strpos($html, '-files-directory-') != FALSE) {
+    $public_files_path = \Drupal::config('system.file')->get('path.public') ?? 'sites/default/files';
+    $html = str_replace('-files-directory-', $public_files_path, $html);
+  }
+
+  return $html;
+}
+
+function icbf_owl_slide_process($html) {
+  if (strpos($html, 'owl-carousel st-owl-theme') !== FALSE || strpos($html, 'stpe-quoteslider') !== FALSE) {
+    if (strpos($html, 'owl-carousel st-owl-theme') !== FALSE) {
+      $string_to_replace = 'owl-carousel st-owl-theme';
+    }
+    elseif (strpos($html, 'stpe-quoteslider') !== FALSE) {
+      $string_to_replace = 'carousel slide stpe-quoteslider';
+    }
+
+    if (isset($string_to_replace)) {
+      $html = str_replace($string_to_replace, 'icbf-owl-carousel', $html);
+      $html = str_replace('owl-wrapper', 'icbf-owl-carousel-wrapper', $html);
+      $html = str_replace('carousel-inner', 'icbf-owl-carousel-wrapper', $html);
+      $html = preg_replace('/<ol class="carousel-indicators">.*?<\/ol>/s', '', $html);
+      // Remover todos los atributos style="..."
+      $html = preg_replace('/\s*style="[^"]*"/i', '', $html);
+    }
+  }
+
   return $html;
 }
 
@@ -247,4 +463,36 @@ function icbf_files_directory_process($html) {
 function icbf_preprocess_tb_megamenu_item(&$variables) {
   $link_title = Html::cleanCssIdentifier($variables['link']['title']);
   $variables['attributes']['class'][] = 'item-link-' . strtolower($link_title);
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function icbf_page_attachments_alter(array &$attachments) {
+  $main_library = 'icbf/main-styling';
+  $ninos_ninas_library = 'icbf/ninos-y-ninas';
+
+  foreach (\Drupal::routeMatch()->getParameters() as $param) {
+    if ($param instanceof EntityInterface) {
+      $entity_type = $param->bundle();
+      if ($param instanceof Term) {
+        if ($entity_type == 'ninos_ninas_y_adolescentes') {
+          $global_style_index = array_search($main_library, $attachments['#attached']['library']);
+          if ($global_style_index !== FALSE) {
+            unset($attachments['#attached']['library'][$global_style_index]);
+          }
+          $attachments['#attached']['library'][] = $ninos_ninas_library;
+        }
+      }
+      elseif ($param instanceof NodeInterface) {
+        if ($entity_type == 'articulo_nna') {
+          $global_style_index = array_search('icbf/main-styling', $attachments['#attached']['library']);
+          if ($global_style_index !== FALSE) {
+            unset($attachments['#attached']['library'][$global_style_index]);
+          }
+          $attachments['#attached']['library'][] = $ninos_ninas_library;
+        }
+      }
+    }
+  }
 }

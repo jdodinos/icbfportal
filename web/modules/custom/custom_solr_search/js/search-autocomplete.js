@@ -1,7 +1,7 @@
 (function ($, Drupal, once) {
   Drupal.behaviors.customSearchAutocomplete = {
     attach: function (context, settings) {
-      once('autocomplete', '#search-input', context).forEach(function (element) {
+      once('autocomplete', '#edit-search', context).forEach(function (element) {
         if ($.fn.autocomplete) {  // Check if autocomplete is available
           $(element).autocomplete({
             source: function (request, response) {
@@ -14,3 +14,25 @@
     }
   };
 })(jQuery, Drupal, once);
+
+
+const clearBtn = document.querySelector('#edit-clear');
+const campos = [
+  '#edit-author',
+  '#edit-topic',
+  '#edit-file-type',
+  '#edit-filename',
+  '#edit-date'
+];
+clearBtn.type = "button";
+clearBtn.addEventListener('click', () => {
+  campos.forEach(selector => {
+    const campo = document.querySelector(selector);
+    if (campo) campo.value = '';
+  });
+});
+
+
+document.querySelector(".advanced-close-wrapper").addEventListener('click',()=>{
+    document.querySelector("#edit-advanced").style.display = "none"
+})

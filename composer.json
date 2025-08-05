@@ -150,7 +150,7 @@
         "drupal/publishcontent": "^1.7",
         "drupal/purge": "^3.6",
         "drupal/quick_node_clone": "^1.22",
-        "drupal/quicktabs": "^4.0",
+        "drupal/quicktabs": "^3.0@alpha",
         "drupal/rdf": "^2.0",
         "drupal/recaptcha": "^3.4",
         "drupal/redirect": "^1.11",
@@ -301,6 +301,9 @@
             },
             "drupal/metatag": {
                 "Fix error when sort metetags": "./patchs/metatag-remove-group-sort.patch"
+            },
+            "drupal/core": {
+                "Video and audio in views": "./patchs/3224617_views_support_video_source_tag.patch"
             }
         },
         "merge-plugin": {

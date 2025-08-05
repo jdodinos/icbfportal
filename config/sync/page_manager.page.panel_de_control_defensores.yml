@@ -1,0 +1,25 @@
+uuid: d582981c-8309-4b2c-b590-ed6f49047f49
+langcode: es
+status: true
+dependencies:
+  module:
+    - user
+id: panel_de_control_defensores
+label: 'Panel de Control Defensores'
+description: ''
+use_admin_theme: false
+path: /citaciones/panel
+access_logic: and
+access_conditions:
+  -
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrador_funcional: administrador_funcional
+      administrator: administrator
+      administrador_icbf: administrador_icbf
+      citaciones: citaciones
+      defensor_de_familia: defensor_de_familia
+parameters: {  }

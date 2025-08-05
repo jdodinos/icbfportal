@@ -7,11 +7,13 @@
 @use 'abstracts/base';
 @use 'abstracts/fonts';
 @use 'abstracts/general';
-
+@use 'abstracts/p7Icons';
+@use 'abstracts/icons';
 
 @use 'layout/header/icbf_header';
 @use 'layout/header/tb_mega_menu';
 @use 'layout/header/header';
+@use 'layout/header/custom_header';
 
 @use 'layout/footer/footer';
 @use 'layout/navigation/pagination';
@@ -25,17 +27,34 @@
 @use 'components/general-elements';
 @use 'components/default-documents';
 @use 'components/taxonomias/general-taxonomias';
+@use 'components/adoptions';
+@use 'components/programas_estrategias';
+@use 'components/custom-pages';
+@use 'components/familia-universal';
+@use 'components/calendario-eventos';
+@use 'components/operacion-procesos';
+@use 'components/estrategico';
+@use 'components/gestion-humana';
 
+@use 'components/elements/blocks';
 @use 'components/elements/breadcrumb';
 @use 'components/elements/custom-table';
+@use 'components/elements/filters_pager';
 @use 'components/elements/page-general';
 @use 'components/elements/internal-page';
 @use 'components/elements/internal-news';
 @use 'components/elements/table-filter';
 @use 'components/elements/table-general';
+@use 'components/elements/page-table';
+@use 'components/elements/sliders';
+@use 'components/elements/gallery-pages';
 
+@use 'components/home';
 @use 'components/content-type/noticias';
 
 
 @use 'components/taxonomias/taxonomia';
 @use 'components/taxonomias/area';
+@use 'components/taxonomias/tramites-servicios';
+@use 'components/taxonomias/transparencia';
+@use 'components/taxonomias/glosary';

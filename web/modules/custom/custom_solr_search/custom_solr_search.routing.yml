@@ -8,9 +8,10 @@ custom_solr_search.autocomplete:
     _format: 'json'
 
 custom_solr_search.search_page:
-  path: '/buscador'
+  path: '/buscar'
   defaults:
     _controller: '\Drupal\custom_solr_search\Controller\SearchPageController::renderSearchPage'
     _title: 'Buscador'
   requirements:
     _permission: 'access content'
+

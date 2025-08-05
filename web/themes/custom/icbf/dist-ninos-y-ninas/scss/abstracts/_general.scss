@@ -1,0 +1,54 @@
+@use "variables" as var;
+
+.box-tag {
+  background-color: rgb(92 177 86 / 85%);
+  border-bottom-left-radius: .3em;
+  border-bottom-right-radius: .3em;
+  padding: 3px 5px;
+  position: absolute;
+  right: 2%;
+  top: 0;
+}
+
+button {
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    background: red;
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 27px;
+    height: 37px;
+    left: auto;
+    right: 2%;
+    top: 40%;
+    width: 37px;
+  }
+}
+
+.describe-section {
+  font-size: 1.7em;
+  font-family: var.$Schoolbell, sans-serif;
+  color: #555;
+  line-height: initial
+}
+
+.nna-postid {
+  font-size: 2.7em;
+  font-family: var.$Schoolbell, sans-serif;
+  color: #05358c;
+  background: -webkit-linear-gradient(#1262d9, #05358c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: initial
+}
+
+.nna-boxtitle {
+  color: #05358c !important;
+  font-family: var.$Schoolbell, sans-serif;
+  font-weight: 600;
+  font-size: 1.63em;
+  line-height: inherit;
+  text-decoration: none;
+  transition: all ease .3s
+}

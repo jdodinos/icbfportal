@@ -45,3 +45,14 @@
     text-decoration: underline;
   }
 }
+
+@mixin wh($w: auto, $h: auto) {
+  width: $w;
+  height: $h;
+}
+
+@mixin position($pos: relative, $pos_x: left, $pos_y: top, $pos_x_value: 0, $pos_y_value: 0) {
+  position: $pos;
+  #{$pos_x}: $pos_x_value;
+  #{$pos_y}: $pos_y_value;
+}

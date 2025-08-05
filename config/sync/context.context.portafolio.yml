@@ -2,10 +2,9 @@ uuid: 252dee44-0d65-441a-a60d-2d7c5b815b67
 langcode: es
 status: true
 dependencies:
-  content:
-    - 'block_content:footer:0abba220-44e8-4ac7-be45-d4a3bf8e452f'
   module:
-    - block_content
+    - icbf_module
+    - node
     - system
 label: portafolio
 name: portafolio
@@ -19,29 +18,34 @@ conditions:
     negate: false
     uuid: b252bad5-6074-4f4c-9596-42b91fa2c04f
     context_mapping: {  }
-    pages: "/portafolio-de-servicios-icbf\r\n/portafolio-de-servicios-icbf/*"
+    pages: "/portafolio-de-servicios-icbf\r\n/portafolio-de-servicios-icbf/*\r\n/taxonomy/term/6881"
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 3eb069a3-178e-4e61-bc6a-887dac48cb05
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      services_faq: services_faq
 reactions:
   blocks:
     id: blocks
     uuid: 9c8438f5-4739-4517-b74e-5046d24de74a
     blocks:
-      3dd9a94f-e114-46ec-b4ed-30d9850d279f:
-        uuid: 3dd9a94f-e114-46ec-b4ed-30d9850d279f
-        id: 'block_content:0abba220-44e8-4ac7-be45-d4a3bf8e452f'
-        label: 'Widget Portafolio'
-        provider: block_content
+      a736e713-97e2-4281-9afd-6e0233955d89:
+        uuid: a736e713-97e2-4281-9afd-6e0233955d89
+        id: category_selection_block
+        label: 'Category selection Block'
+        provider: icbf_module
         label_display: '0'
-        region: content
+        region: precontent
         weight: '0'
-        custom_id: block_content_0abba220_44e8_4ac7_be45_d4a3bf8e452f
+        custom_id: category_selection_block
         theme: icbf
         css_class: ''
         unique: 0
         context_id: portafolio
         context_mapping: {  }
-        status: true
-        info: ''
-        view_mode: full
         third_party_settings: {  }
     include_default_blocks: 0
     saved: false

@@ -3,8 +3,30 @@ $fonts: "./../assets/fonts" !default;
 @font-face {
   font-family: "montserrat";
   src: url("./../assets/fonts/montserrat/Montserrat-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url("./../assets/fonts/montserrat/Montserrat-Regular.ttf");
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url("./../assets/fonts/montserrat/Montserrat-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url("./../assets/fonts/montserrat/Montserrat-Bold.woff2") format('woff2');
+  font-weight: 700;
+  font-style: normal;
+
 }
 
 @font-face {
@@ -17,6 +39,13 @@ $fonts: "./../assets/fonts" !default;
 @font-face {
   font-family: "montserrat-light";
   src: url("./../assets/fonts/montserrat/Montserrat-Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "glyphicons-halflings-regular";
+  src: url("./../assets/fonts/glyphicons/glyphicons-halflings-regular.ttf");
   font-weight: normal;
   font-style: normal;
 }

@@ -527,7 +527,7 @@ $settings['update_free_access'] = FALSE;
  * security by serving user-uploaded files from a different domain or subdomain
  * pointing to the same server. Do not include a trailing slash.
  */
-# $settings['file_public_base_url'] = 'http://downloads.example.com/files';
+#$settings['file_public_base_url'] = 'http://downloads.example.com/files';
 
 /**
  * Public file path:
@@ -922,3 +922,9 @@ $databases['migrate']['default'] = [
   'prefix' => '',
 ];
 $settings['config_sync_directory'] = '../config/sync';
+
+// Automatically generated include for settings managed by ddev.
+$ddev_settings = __DIR__ . '/settings.ddev.php';
+if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
+  require $ddev_settings;
+}

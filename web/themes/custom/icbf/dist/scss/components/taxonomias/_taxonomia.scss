@@ -1,8 +1,14 @@
 @use "../../abstracts/variables" as var;
 
+
+
 #block-icbf-page-title {
   width: 70%;
   margin: auto;
+
+  .f-introtop {
+    border-bottom: 0;
+  }
 
   h1 {
     font-family: var.$font-montserrat;
@@ -15,7 +21,7 @@
 }
 
 #block-icbf-content {
-  width: 70%;
+  width: 100%;
   margin: auto;
   max-width: 1150px;
 }
@@ -80,6 +86,7 @@
     font-size: 14px;
     font-family: "Asap";
     color: var.$color-text-gray;
+
     p {
       margin: 0;
     }
@@ -99,5 +106,354 @@
     border-bottom: 1px solid #d3d7d9;
     margin-bottom: 1em;
     padding-bottom: 0.5rem;
+  }
+}
+
+.slick--skin--boxed>.slick__slider>.slick-list {
+  margin: 0;
+}
+
+.slick--skin--boxed-carousel .slide__content {
+  margin: 0;
+}
+
+.slick-arrow:before {
+  color: #929292;
+}
+
+.page-taxonomy-secctions {
+  font-family: 'montserrat';
+
+  .view-id-articulos_secciones {
+    .content-landbox {
+      .col-sm-5 {
+
+        .youtube-container {
+          margin: .7em 0;
+        }
+      }
+
+      .col-sm-7 {
+        font-size: 12.46px;
+        line-height: 17.0702px;
+      }
+
+      .youtube-container--responsive {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        /* 16:9 ratio */
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+
+        iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border: 0;
+        }
+      }
+    }
+  }
+
+  .view-misional-ninez-y-adolescencia {
+    .bottm-line {
+      border: 0;
+    }
+  }
+
+  .block-views-blockmisional-ninez-y-adolescencia-block-vdoinf {
+    .views-field-title {
+      color: #6b6b6b;
+      display: block;
+      font-family: 'montserrat';
+      font-weight: 500;
+      line-height: initial;
+      font-size: 15.4px;
+      padding: 1.2em 0;
+      word-break: break-word;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  .block-views-blockmisional-ninez-y-adolescencia-block-2ayj {
+    max-width: 920px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .view-misional-ninez-y-adolescencia {
+    .views-field-title {
+      color: #333;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.7em;
+      font-weight: 600;
+      margin: 1em 0;
+      text-align: center;
+    }
+  }
+}
+
+.page-consulta-ciudadana-1,
+.page-planeacion-y-presupuesto-participativo,
+.page-participacion-para-el-diagnostico-e-identificacion-de-problemas,
+.page-colaboracion-e-innovacion-0,
+.page-control-social-0,
+.page-participa-colaboracion-e-innovacion,
+.page-canal-interacción-deliberatoria-pc,
+.page-participa-consulta-ciudadana {
+  #main {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .btn-primary {
+    color: #fff;
+    background-color: #337ab7 !important;
+    border-color: #2e6da4 !important;
+  }
+
+  .row {
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .word-gral h3 {
+    font-size: 1.38em;
+    font-weight: 500;
+    font-family: var.$font-montserrat !important;
+  }
+
+  .word-gral h4 {
+    font-size: 1.32em;
+    font-weight: 500;
+    font-family: var.$font-montserrat !important;
+  }
+
+  #id-1519 h1 {
+    font-family: var.$font-montserrat-regular !important;
+  }
+
+  .word-gral strong {
+    font-weight: 600;
+  }
+
+  a.btn.stpe-outlinebutton {
+    font-family: inherit !important;
+    font-weight: 400 !important;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    padding: 0.5em 1.2em !important;
+    border: 1px solid #333 !important;
+    background-color: transparent !important;
+    border-radius: 5px !important;
+    color: #333 !important;
+    text-align: center;
+  }
+
+  a.btn.stpe-outlinebutton:hover {
+    background-color: #333 !important;
+    color: #fff !important;
+  }
+
+  #dxt79nkh {
+    margin-bottom: 3em;
+  }
+
+  .page-header {
+    font-family: var.$font-montserrat;
+  }
+
+  a, a:link {
+    color: #1996d0;
+    text-decoration: none !important;
+  }
+
+  a.active, a:hover {
+    color: #125e81;
+    text-decoration: underline !important;
+  }
+
+}
+
+.page-atencion-y-servicios-ciudadania-linea-anticorrupcion-icbf {
+  .featured {
+    display: none;
+  }
+
+  .row-offcanvas {
+    padding-top: 1rem;
+  }
+
+  div [data-az-id="8pnqiakl"] {
+    flex: 0 0 auto;
+    width: 37.66666667%;
+    /* 5/12 */
+  }
+
+  div [data-az-id="3snb96cf"] {
+    flex: 0 0 auto;
+    width: 48.666667%;
+  }
+
+  .list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #555 !important;
+  }
+
+  div.views-element-container>h2 {
+    margin-left: 25%;
+  }
+
+  .describet {
+    font-size: .9em;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    margin-left: 20px;
+  }
+
+}
+
+
+.page-contratacion-notificaciones-y-avisos {
+  .list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #555 !important;
+  }
+
+  .list-group-item:first-child {
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+  }
+}
+
+.page-contratacion-venta-de-acciones-no-inscritas-en-bolsa {
+  .table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+  }
+
+  tbody tr {
+    padding: 8px;
+    line-height: 1.428571429;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+  }
+
+  tbody tr:nth-child(n+1):nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+
+  tr:nth-child(n+1):nth-child(even) {
+    background-color: #ffffff;
+  }
+
+
+  .view-filters {
+    margin-top: 2.5rem;
+    width: 110%;
+    float: left;
+  }
+
+  .form--inline .form-actions {
+    padding-top: 26px;
+    margin-left: 6px;
+  }
+
+  .btn-primary {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+
+  }
+
+  table {
+    width: 100%;
+  }
+}
+
+
+.page-atencion-y-servicios-ciudadania-informes-pqrs {
+  tbody {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #555;
+  }
+
+  tr>td.views-field>h4 {
+    font-size: 14px;
+    font-family: var.$font-asap-regular !important;
+  }
+
+  .page-header {
+    display: none;
+  }
+
+  fieldset>legend {
+    margin-bottom: 12%;
+    font-size: 20px;
+    margin-left: 7%;
+  }
+}
+
+.page-contratacion {
+  .view-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+}
+
+.page-atencion-y-servicios-ciudadania-publicaciones-derecho-de-peticion-ley-1755-2015 {
+  .view-content {
+    margin-bottom: 6%;
+  }
+
+  .view-filters {
+    margin-top: -8.5rem;
+  }
+}
+
+
+.vocabulary-sige-process-type{
+  font-family: var.$font-montserrat;
+  a{
+    font-family: var.$font-montserrat;
+  }
+  .bs-1col,
+  .bs-2col{
+    h2{
+      background-color: #f7f7f7;
+      padding: 5px;
+      font-weight: 700;
+      font-size: 1em;
+      text-align: center;
+    }
+  }
+
+  .file,
+  .file--application-pdf,
+  .file--x-office-document,
+  .file--x-office-spreadsheet{
+    a{
+      font-family: var.$font-asap-regular;
+      font-weight: 500;
+      font-size: 15.4px;
+    }
   }
 }

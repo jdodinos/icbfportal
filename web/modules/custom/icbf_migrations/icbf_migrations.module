@@ -1,54 +1,345 @@
 <?php
 
+use Drupal\Core\Cache\Cache;
+use Drupal\Core\Database\Database;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Renderer;
+use Drupal\layout_builder\SectionComponent;
 use Drupal\migrate\Row;
 use Drupal\migrate\Plugin\MigrateSourceInterface;
 use Drupal\migrate\Plugin\MigrationInterface;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
 use Drupal\views\ViewExecutable;
+use Drupal\views\Views;
 
 /**
- * Implementa hook_block_view_alter().
+ * Implementa hook_views_pre_view().
  */
 function icbf_migrations_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
   if (empty($args[0])) {
-    $args = [];
+    $view_id = $view->id();
     // Get the arguments for nodes.
     $node = \Drupal::routeMatch()->getParameter('node');
     if ($node instanceof \Drupal\node\NodeInterface) {
       $node_id = $node->id();
-      $layout_configs = \Drupal::database()->select('node__layout_builder__layout', 'nl')
-        ->fields('nl', ['layout_builder__layout_section'])
-        ->condition('entity_id', $node_id)
-        ->execute()->fetchAll();
+      $layout_configs = icbf_migrations_get_layout_config($node_id, 'node');
     }
     else {
       $term = \Drupal::routeMatch()->getParameter('taxonomy_term');
       if ($term instanceof \Drupal\taxonomy\Entity\Term ) {
         $term_id = $term->id();
-        $layout_configs = \Drupal::database()->select('taxonomy_term__layout_builder__layout', 'tl')
-          ->fields('tl', ['layout_builder__layout_section'])
-          ->condition('entity_id', $term_id)
-          ->execute()->fetchAll();
+        $layout_configs = icbf_migrations_get_layout_config($term_id);
       }
     }
 
     if (!empty($layout_configs)) {
+      $cid = 'views_processed';
+      $cache_data = \Drupal::cache()->get($cid)->data ?? [];
+      $args = [];
+
       foreach ($layout_configs as $layout_config) {
         // @see Drupal\layout_builder\Section
         $layout_config = $layout_config->layout_builder__layout_section;
         $layout_config = unserialize($layout_config);
         $layout_components = $layout_config->getComponents();
-        foreach ($layout_components as $component) {
+        foreach ($layout_components as $comp_uuid => $component) {
+          $args = [];
           $component_config = $component->get('configuration');
           if ($component_config['id'] == "views_block:{$view->id()}-{$display_id}") {
-            if (!empty($component_config['arguments'])) {
-              foreach ($component_config['arguments'] as $block_argument) {
-                $args[] = $block_argument;
+            if (!in_array($comp_uuid, $cache_data)) {
+              if (!empty($component_config['arguments'])) {
+                $cache_data[$comp_uuid] = $comp_uuid;
+                \Drupal::cache()->set($cid, $cache_data, time() + 10);
+                foreach ($component_config['arguments'] as $block_argument) {
+                  $args[] = $block_argument;
+                }
+              }
+              break 2;
+            }
+          }
+        }
+      }
+    }
+    elseif (empty($layout_configs) && $term) {
+      $args = [];
+      $vocabulary = $term->bundle();
+      $items_per_page = $view->getItemsPerPage();
+      $config_display = \Drupal::database()->select('config', 'c')
+        ->fields('c', ['data'])
+        ->condition('name', "core.entity_view_display.taxonomy_term.{$vocabulary}.default")
+        ->execute()->fetchAll();
+
+      foreach ($config_display as $config_value) {
+        $layout_config = $config_value->data;
+        $layout_config = unserialize($layout_config);
+        if (isset($layout_config['third_party_settings']['layout_builder']['sections'])) {
+          $sections = $layout_config['third_party_settings']['layout_builder']['sections'];
+          foreach ($sections as $section) {
+            if (isset($section['components'])) {
+              foreach ($section['components'] as $component) {
+                if ($component['configuration']['id'] == "views_block:{$view_id}-{$display_id}" && $component['configuration']['items_per_page'] == $items_per_page) {
+                  if (!empty($component['configuration']['items_per_page'])) {
+                    $filters = explode('/', $component['configuration']['items_per_page']);
+                    foreach ($filters as $filter_value) {
+                      if ($filter_value == '%tid') {
+                        $args[] = $term_id;
+                      }
+                      else {
+                        $args[] = $filter_value;
+                      }
+                    }
+                  }
+
+                  break 2;
+                }
               }
             }
           }
         }
       }
     }
+  }
+
+  // Only for SIGE Process View.
+  if ($view->id() == 'sige_process' && $display_id == 'block_4') {
+    $url = explode('/', \Drupal::service('path.current')->getPath());
+    $term_id = $url[3];
+    $vocabulary = 'sige_process_type';
+    $children = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree(
+      $vocabulary,
+      $term_id,
+    );
+
+    if (empty($children)) {
+      $args[] = 'all';
+    }
+    else {
+      $terms = [];
+      foreach ($children as $term) {
+        $terms[] = $term->tid;
+      }
+      $args[] = implode(',', $terms);
+    }
+  }
+}
+
+/**
+ * Implementa hook_preprocess_block().
+ */
+function icbf_migrations_preprocess_block(&$variables) {
+  $block = $variables['elements']['#plugin_id'] ?? NULL;
+  if (strpos($block, 'views_block:') === 0 && isset($variables['configuration']['arguments'])) {
+    $view_id = $variables['content']['#name'];
+    $view = Views::getView($view_id);
+
+    if (is_object($view)) {
+      $display_id = $variables['content']['#display_id'];
+      $args = $variables['configuration']['arguments'];
+      $view->setDisplay($display_id);
+      $view->setArguments($args);
+
+      $view->execute();
+      $variables['#view'] = $view;
+    }
+  }
+}
+
+/**
+ * Implements hook_views_query_alter().
+ */
+function icbf_migrations_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+  if ($view->id() == 'sige_process' && $view->current_display == 'block_4') {
+    $tid = \Drupal::routeMatch()->getRawParameter('taxonomy_term');
+    $cid = 'sige_process.block_4.' . $tid;
+    $result = \Drupal::cache()->get($cid)->data ?? [];
+
+    if (!$result) {
+      $term = $node_storage = \Drupal::entityTypeManager()->getStorage('taxonomy_term')
+        ->load($tid);
+      if ($term) {
+        // Get the parent numbers.
+        $depth = 1;
+        $parents = $term->get('parent')->referencedEntities();
+        while (!empty($parents)) {
+          $depth++;
+          $parents = reset($parents)->get('parent')->referencedEntities();
+        }
+
+        // Get the nid availables.
+        $connection = \Drupal::database();
+        $queryhp = $connection->select('node__field_hiring_process_type', 'f');
+        $queryhp->addField('f', 'entity_id');
+        $queryhp->groupBy('f.entity_id');
+        $queryhp->having('COUNT(f.field_hiring_process_type_target_id) = :count', [':count' => $depth]);
+        $result = $queryhp->execute()->fetchCol();
+        \Drupal::cache()->set($cid, $result, time() + 10);
+      }
+    }
+
+    $query->where[1]['conditions'][4]['value'] = $result;
+    $query->where[1]['conditions'][4]['operator'] = 'IN';
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function icbf_migrations_form_layout_builder_update_block_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if (strpos($form_id, 'layout_builder_') !== FALSE) {
+    if (isset($form['settings']['provider']['#type']) && $form['settings']['provider']['#value'] === 'views') {
+      $build_info = $form_state->getBuildInfo();
+
+      if (!empty($build_info['args'][0])) {
+        /** @var \Drupal\layout_builder\SectionComponent $component */
+        $section_storage = $build_info['args'][0];
+
+        $arguments = $form['settings']['views_label']['#description']->getArguments();
+        $url  = explode('/', $arguments[':url']);
+        $view_id = $url[5];
+        $display_id = $url[7];
+
+        foreach ($section_storage->getSections() as $section) {
+          foreach ($section->getComponents() as $component) {
+            $component_id = $component->getPluginId();
+            if ($component_id === "views_block:{$view_id}-{$display_id}") {
+              $form['settings']['override']['items_per_page']['#title'] = t('Contextual filters');
+              $form['settings']['override']['items_per_page']['#type'] = 'textfield';
+              unset($form['settings']['override']['items_per_page']['#options']);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implementa hook_entity_view_alter().
+ */
+function icbf_migrations_entity_view_alter(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display) {
+  switch ($entity->getEntityTypeId()) {
+    case 'taxonomy_term':
+      $layout_configs = icbf_migrations_get_layout_config($entity->id());
+      if (!empty($layout_configs) && count($layout_configs) == 1) {
+        foreach ($layout_configs as $value) {
+          if (strpos($value->layout_builder__layout_section, 'Drupal\layout_builder\SectionComponent') === FALSE) {
+            $layout_configs = [];
+            break;
+          }
+        }
+      }
+
+      if (empty($layout_configs)) {
+        $load_default_structure = TRUE;
+        // Add Layout Builder structure to Gestión Humana term.
+        switch ($entity->bundle()) {
+          case 'secctions':
+            $load_default_structure = FALSE;
+            // Reestructure the Sections in structure 2.
+            $structure2 = [8012, 8013, 8014, 8015, 8016, 8018, 8019, 8020];
+            $structure3 = [6882, 6883, 6886, 6887];
+            if (in_array($entity->id(), $structure2)) {
+              unset($build['_layout_builder'][0]);
+              unset($build['_layout_builder'][2]);
+            }
+            else if (in_array($entity->id(), $structure3)) {
+              unset($build['_layout_builder'][1]);
+            }
+            // Reestructure the Sections in default.
+            else {
+              unset($build['_layout_builder'][1]);
+              unset($build['_layout_builder'][2]);
+            }
+            break;
+
+          case 'sige_process_type':
+            $load_default_structure = FALSE;
+            if ($entity->id() == 6505) {
+              $build['_layout_builder'][2] = $build['_layout_builder'][3];
+            }
+            else {
+              // Remove Gestion Humana section in Layout builder to default.
+              unset($build['_layout_builder'][3]);
+              $build['_layout_builder']['#cache'] = NULL;
+            }
+            break;
+        }
+
+        if ($load_default_structure) {
+          // Check the structure to validate if the term has information to display.
+          foreach ($build['_layout_builder'] as $section_key => $section_val) {
+            if (is_int($section_key)) {
+              foreach ($section_val as $key => $value) {
+                if (strpos($key, '#') === FALSE) {
+                  $component = reset($value);
+                  if (isset($component['#plugin_id'])) {
+                    $load_default_structure = FALSE;
+                    break 2;
+                  }
+                }
+              }
+            }
+          }
+
+          if ($load_default_structure) {
+            $view_id = 'taxonomy_term';
+            $display_id = 'page';
+            $arguments = [$entity->id()];
+            $view = Views::getView($view_id);
+
+            if (is_object($view)) {
+              $view->setDisplay($display_id);
+              $view->setArguments($arguments);
+              $view->execute();
+
+              // Render the view
+              $result = \Drupal::service('renderer')->render($view->render());
+              $build['_layout_builder'][0] = [
+                'page_title' => [
+                  '#prefix' => '<h1 class="page-header">',
+                  '#suffix' => '</h1>',
+                  '#markup' => $entity->name->value,
+                ],
+                'view' => [
+                  '#markup' => $result,
+                ]
+              ];
+            }
+          }
+        }
+      }
+      break;
+
+    case 'node':
+      $layout_configs = icbf_migrations_get_layout_config($entity->id(), 'node');
+      if (empty($layout_configs)) {
+        switch ($entity->bundle()) {
+          case 'sede_local':
+            $place_type = $entity->get('field_place_type')->getValue();
+            if (!empty($place_type) && $place_type[0]['target_id'] == 6945) {
+              unset($build['_layout_builder'][0]);
+              unset($build['_layout_builder'][1]);
+            }
+            else {
+              unset($build['_layout_builder'][2]);
+              unset($build['_layout_builder'][3]);
+              unset($build['_layout_builder'][4]);
+            }
+            break;
+
+          case 'articles_portal_web':
+            $post_type = $entity->get('field_post_type_especific')->getValue();
+            $post_type = $entity->field_post_type_especific->value;
+            if ($post_type == 'post_editorial') {
+              unset($build['_layout_builder'][0]);
+            }
+            else {
+              unset($build['_layout_builder'][1]);
+            }
+            break;
+        }
+      }
+      break;
   }
 }
 
@@ -351,6 +642,28 @@ function icbf_migrations_migrate_prepare_row(Row $row, MigrateSourceInterface $s
       }
       break;
   }
+}
+
+/**
+ * Get layout config.
+ */
+function icbf_migrations_get_layout_config($entity_id, $entity_type = 'term') {
+  switch ($entity_type) {
+    case 'term':
+      $table = 'taxonomy_term__layout_builder__layout';
+      break;
+
+    case 'node':
+      $table = 'node__layout_builder__layout';
+      break;
+  }
+
+  $layout_configs = \Drupal::database()->select($table, 'tl')
+    ->fields('tl', ['layout_builder__layout_section'])
+    ->condition('entity_id', $entity_id)
+    ->execute()->fetchAll();
+
+  return $layout_configs;
 }
 
 /**

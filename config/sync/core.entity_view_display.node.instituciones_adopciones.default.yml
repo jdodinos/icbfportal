@@ -209,7 +209,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
               formatter:
-                type: basic_string
+                type: email_mailto
                 label: hidden
                 settings: {  }
                 third_party_settings:
@@ -231,7 +231,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
               formatter:
-                type: basic_string
+                type: email_mailto
                 label: inline
                 settings: {  }
                 third_party_settings:

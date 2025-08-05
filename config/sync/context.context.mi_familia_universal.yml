@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - system
+    - tb_megamenu
 label: mi_familia_universal
 name: mi_familia_universal
 group: null
@@ -16,6 +17,27 @@ conditions:
     negate: false
     uuid: c07a1061-c059-441f-8418-1f29182c6c3b
     context_mapping: {  }
-    pages: /mi-familia-universal
-reactions: {  }
+    pages: "/mi-familia-universal\r\n/mi-familia-universal/*\r\n/viajemos-en-familia\r\n/viajemos-en-familia/*\r\n/node/147942\r\n/node/147943\r\n/node/147944\r\n/node/147963\r\n/node/147967\r\n/node/147969\r\n/node/147970\r\n/node/147972\r\n/node/147975\r\n/node/147976\r\n/node/147978\r\n/node/147983\r\n/node/147986\r\n/node/147987\r\n/node/147988\r\n/node/147990\r\n/node/147991\r\n/node/148667\r\n/node/148671\r\n/node/148918\r\n/node/148919\r\n/node/148920\r\n/node/148921\r\n/node/148922\r\n/node/148923\r\n/node/148924\r\n/node/148925\r\n/node/148926\r\n/node/148927\r\n/node/159084\r\n/node/159103\r\n/node/159104\r\n/node/159106\r\n/node/159107\r\n/node/159109\r\n"
+reactions:
+  blocks:
+    id: blocks
+    uuid: 441f81e0-a348-4d5c-97aa-28d9d63c5e90
+    blocks:
+      92242064-74d4-4db1-8c43-fd20d1ee556f:
+        uuid: 92242064-74d4-4db1-8c43-fd20d1ee556f
+        id: 'tb_megamenu_menu_block:mfu'
+        label: 'Menú MFU'
+        provider: tb_megamenu
+        label_display: '0'
+        region: feature
+        weight: '0'
+        custom_id: tb_megamenu_menu_block_mfu
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: mi_familia_universal
+        context_mapping: {  }
+        third_party_settings: {  }
+    include_default_blocks: 0
+    saved: false
 weight: 0

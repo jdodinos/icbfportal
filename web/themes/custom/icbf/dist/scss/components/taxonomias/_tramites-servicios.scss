@@ -1,0 +1,1391 @@
+@use "../../abstracts/variables" as var;
+
+.block-category-selection-block {
+
+    margin-bottom: 2%;
+
+    .js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-citizen-category.form-item-citizen-category.form-no-label:before {
+        color: #000;
+        font-size: 15px;
+        content: "1";
+        display: block;
+        width: 2%;
+        position: relative;
+        top: 28px;
+        left: 15px;
+    }
+
+    .js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-procedure.form-item-procedure.form-no-label:before {
+        color: #000;
+        font-size: 15px;
+        content: "2";
+        display: block;
+        width: 2%;
+        position: relative;
+        top: 28px;
+        left: 15px;
+        font-weight: 700;
+    }
+
+    div#edit-button {
+        text-align: left;
+    }
+
+    #icbf-module-category-selection-form span {
+        text-align: left;
+        font-family: var.$font-asap-regular;
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+
+    select#edit-citizen-category {
+        height: 40px;
+        border-radius: 150px;
+        padding-left: 35px;
+        border: 1px solid #72bf44;
+        font-family: var.$font-asap-regular;
+        font-size: 14px;
+    }
+
+    select#edit-procedure {
+        height: 40px;
+        border-radius: 150px;
+        padding-left: 35px;
+        border: 1px solid #72bf44;
+        font-family: var.$font-asap-regular;
+        font-size: 14px;
+    }
+
+    div#container-procedure {
+        width: 100%;
+        padding: 0;
+    }
+
+    #icbf-module-category-selection-form {
+        a.btn.btn-default.form-button {
+            font-family: var.$font-asap-regular;
+            color: #333;
+            background-color: #fff;
+            border-color: #ccc;
+
+            &:hover {
+                color: #333;
+                background-color: #e6e5e5;
+                border-color: #adadad;
+            }
+        }
+    }
+
+    option {
+        font-size: 14px;
+        font-family: var.$font-asap-regular !important;
+    }
+
+    a.btn.btn-default.form-button {
+        width: 100%;
+
+    }
+
+    .az-text {
+
+        .h2-word-msintro,
+        .word-msintro h4 {
+            font-family: var.$font-asap-regular;
+        }
+    }
+}
+
+.precontent {
+    margin-bottom: 1em;
+
+    .form-item,
+    .form-actions {
+        margin-top: 0;
+        padding-top: 0;
+        line-height: 0.5em;
+    }
+
+}
+
+h3.info-title2g {
+    font-size: 1.2em;
+}
+
+ul.m1 li {
+    background: url("/themes/custom/icbf/dist/assets/imgs/green-list-arrow.png");
+    background-repeat: no-repeat;
+    margin-bottom: .5em;
+    padding-left: 1.5em;
+    list-style: none;
+}
+
+ul.m2 li {
+    background: url("/themes/custom/icbf/dist/assets/imgs/blue-list-arrow.png");
+    background-repeat: no-repeat;
+    margin-bottom: .5em;
+    padding-left: 1.5em;
+    list-style: none;
+}
+
+ul.m3 li {
+    background: url("/themes/custom/icbf/dist/assets/imgs/orange-list-arrow.png");
+    background-repeat: no-repeat;
+    margin-bottom: .5em;
+    padding-left: 1.5em;
+    list-style: none;
+}
+
+ul.m4 li {
+    background: url("/themes/custom/icbf/dist/assets/imgs/red-list-arrow.png");
+    background-repeat: no-repeat;
+    margin-bottom: .5em;
+    padding-left: 1.5em;
+    list-style: none;
+}
+
+.block-block-content485b0ed8-fdad-4aec-a2d9-cecf5a74740b {
+    h2 {
+        font-family: 'Asap-Regular' !important;
+        font-size: 1.4em;
+    }
+
+    h5 {
+        font-family: 'Montserrat', "sans-serif" !important;
+        font-size: 14px;
+    }
+
+    .az-element.az-icon {
+        margin-top: 3em;
+    }
+
+    //botones "Oferta institucional según público objetivo"
+    a[type='button'] {
+        padding: 6px 8.4px;
+        font-family: 'Montserrat', sans-serif !important;
+    }
+
+    @media (max-width: 768px) {
+        .col-sm-2 {
+            flex: 0 0 auto;
+            width: 100%;
+        }
+    }
+}
+
+.block-block-content6ef225ee-ab82-493e-9851-60ed5d3c6452 {
+    h3 {
+        font-family: 'Asap-regular' !important;
+
+        span {
+            font-family: 'Asap-regular' !important;
+        }
+    }
+}
+
+.h2-word-msintro {
+    font-family: var.$font-asap-regular;
+    font-size: 1.4em;
+}
+
+.page-taxonomy-procedure {
+
+    ul.vineta-verde {
+        padding-left: 3em;
+    }
+
+    ul.az-element.st-social.stbe-social-links.text-center.stbe-social-links--color-brand.stbe-social-links--hover-color-brand {
+
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+
+
+        li {
+            border: 1px solid #444;
+            border-radius: 100%;
+            width: 33px;
+            height: 33px;
+            margin: 0.2em;
+            display: flex;
+            justify-content: center;
+
+            a {
+                width: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        >li:first-child {
+            i {
+                color: #3b5998;
+            }
+        }
+
+        >li:nth-child(2) {
+            i {
+                color: #e52d27;
+            }
+        }
+
+        >li:nth-child(3) {
+            i {
+                color: #55acee;
+            }
+        }
+
+        >li:nth-child(4) {
+            i {
+                color: #3f729b;
+            }
+        }
+    }
+
+
+    .block-field-blocktaxonomy-termprocedurefield-content {
+        .az-ctnr {
+            >.az-element:first-child {
+                h3 {
+                    font-family: 'Asap-regular' !important;
+
+                    span {
+                        font-family: 'Asap-regular' !important;
+                    }
+
+                }
+
+                p {
+                    font-family: 'Montserrat', 'sans-serif' !important;
+
+                    span {
+                        font-family: 'Montserrat', 'sans-serif' !important;
+                    }
+                }
+            }
+
+            >.az-element:nth-child(2) {
+                font-family: 'Montserrat', 'sans-serif' !important;
+            }
+
+            >.az-element {
+                h3 {
+                    font-family: var.$font-asap-regular;
+
+                    span {
+                        font-family: var.$font-asap-regular;
+                    }
+                }
+            }
+        }
+
+        a[type='button'] {
+            font-family: 'Montserrat', sans-serif;
+            padding: 6px 8.4px;
+        }
+    }
+
+    .block-views-blocktramites-block-9 {
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            line-height: normal !important;
+            font-size: 1.7em;
+        }
+    }
+
+    .block-field-blocktaxonomy-termprocedurefield-header-infografia {
+        span {
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+
+    .az-element.az-icon.text-center {
+        margin: auto;
+        width: 50%;
+        border-radius: 100%;
+        background: #f9f4cf;
+        color: #fff;
+        padding: .8em;
+    }
+
+    .table {
+        float: none;
+
+        td {
+            border-top: none !important;
+        }
+
+        tr {
+            border-color: transparent;
+        }
+    }
+}
+
+
+.page-taxonomy-citizen_category {
+    .block-page-title-block {
+        display: none !important;
+    }
+
+    .precontent {
+        margin-bottom: 1em;
+    }
+
+    #block-icbf-content {
+        .content {
+            >div:first-child {
+                h1 {
+                    font-size: 40px !important;
+                    font-family: 'Asap-Regular' !important;
+                    color: #555 !important;
+                }
+
+                h4 {
+                    font-weight: normal;
+                    font-family: 'Montserrat', sans-serif;
+                    padding-top: 1.5em;
+                    //border-top: 1px solid #ddd;
+                }
+
+                span {
+                    font-family: 'Montserrat', sans-serif;
+                }
+            }
+
+            >div:nth-child(3) {
+                .view-id-tramites_sapi {
+                    .view-filters {
+                        width: 100%;
+
+                        form {
+                            >div {
+                                display: flex;
+                                flex-wrap: wrap;
+
+                                >fieldset {
+                                    width: 45%;
+
+                                    .form-radios,
+                                    .form-checkboxes {
+                                        ul {
+                                            list-style: none;
+                                        }
+                                    }
+                                }
+
+                                >.form-item:nth-child(3) {
+                                    width: 180.2px;
+
+                                    label {
+                                        font-weight: 700;
+                                    }
+                                }
+
+                                >.form-item:nth-child(4) {
+                                    width: 104px;
+
+                                    label {
+                                        font-weight: 700;
+                                    }
+                                }
+
+                                >.form-item:nth-child(5) {
+                                    width: 80.8px;
+
+                                    label {
+                                        font-weight: 700;
+                                    }
+                                }
+
+                                >.form-actions {
+                                    padding-top: 1.2em;
+                                }
+
+                                @media (max-width: 768px) {
+                                    >fieldset {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    @media (max-width: 768px) {
+                        .view-content {
+                            >div {
+                                width: 95%;
+                                margin: 0 auto;
+                            }
+                        }
+                    }
+                }
+
+
+                //filtros
+                .view-id-tramites_sapi {
+                    .view-filters {
+
+                        .form-radios,
+                        .form-checkboxes {
+                            padding-top: 1em;
+                            margin-left: 0;
+
+                            input[type=checkbox],
+                            input[type=radio] {
+                                appearance: none;
+                                width: 13px;
+                                height: 13px;
+                                border: 1px solid #555;
+                                border-radius: 3px;
+                                margin: 0 4px 0 0 !important;
+                            }
+
+                            /* Cuando se selecciona el check*/
+                            /*Estilos para el icono interno del check*/
+                            input[type=checkbox]:checked,
+                            input[type=radio]:checked {
+                                background-color: #1996d0;
+                                border-color: #1996d0;
+                            }
+
+                            input[type=checkbox]::after,
+                            input[type=radio]::after {
+                                content: '✔';
+                                color: white;
+                                width: 10px;
+                                height: 10px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+
+                            //color de letras
+                            label {
+                                white-space: nowrap;
+                                color: #1996d0;
+                                text-decoration: none !important;
+                                font-size: 14px;
+                            }
+
+                            label:hover {
+                                color: #125e81;
+                                text-decoration: underline !important;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ul.az-element.st-social.stbe-social-links.text-center.stbe-social-links--color-brand.stbe-social-links--hover-color-brand {
+
+        display: flex;
+        justify-content: center;
+        position: relative;
+        max-width: 750px;
+
+        li {
+            list-style: none;
+            width: 33px;
+            height: 33px;
+            margin: 0.2em;
+            display: flex;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid #444;
+
+            a {
+                width: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:hover {
+                    text-decoration: none !important;
+                }
+            }
+        }
+
+        >li:first-child {
+            i {
+                color: #3b5998;
+            }
+        }
+
+        >li:nth-child(2) {
+            i {
+                color: #e52d27;
+            }
+        }
+
+        >li:nth-child(3) {
+            i {
+                color: #55acee;
+            }
+        }
+
+        >li:nth-child(4) {
+            i {
+                color: #3f729b;
+            }
+        }
+    }
+
+}
+
+
+
+.page-portafolio-de-servicios-icbf-soy-madre-padre-comunitario-o-agente-educativo{
+    #block-icbf-content {
+        .content {
+            >div:first-child {
+                .az-ctnr.container >.row:first-child{
+                    font-family: 'Montserrat', sans-serif;
+                }
+            }
+        }
+    }
+}
+
+
+.page-portafolio-de-servicios-icbf-soy-padre-madre-o-cuidador{
+    #block-icbf-content {
+        .content {
+            >div:first-child {
+                h4 {
+                    font-family: var.$font-asap-regular !important;
+                    font-size: 1.1em !important;
+                }
+            }
+        }
+    }
+}
+
+//--/portafolio-de-servicios-icbf/adopcion-para-residentes-en-colombia
+.page-id-6738{
+    .block-field-blocktaxonomy-termprocedurefield-header-infografia span {
+        font-family: var.$font-asap-regular;
+    }
+    .block-field-blocktaxonomy-termprocedurefield-content{
+        >div:first-child >div:nth-child(4) >.az-ctnr >.az-element:first-child {
+            width: 100%;
+        }
+    } 
+}
+
+//--/portafolio-de-servicios-icbf/permiso-de-salida-del-pais
+.page-id-7084{
+    .block-field-blocktaxonomy-termprocedurefield-content{
+        .az-ctnr.container{
+            >.az-element:nth-child(5){
+                >.az-column:nth-child(2){
+                    >.az-text.interlinea{
+                        p span{
+                            font-family: 'Montserrat', sans-serif !important;
+                        }
+                    }
+                }
+            }
+            >.az-element:nth-child(7){
+                >.az-column:nth-child(2){
+                    >.az-text.interlinea{
+                        ul li span{
+                            font-family: 'Montserrat', sans-serif !important;
+                        }
+                    } 
+                } 
+            }
+            >.az-element:nth-child(8){
+                >.az-element{
+                    >.az-element:nth-child(3){
+                        >.az-element:nth-child(2){
+                            margin-right: 0 !important;
+                        }
+                    } 
+                } 
+            }
+            >.az-element:nth-child(9){
+                >.az-element:nth-child(2){
+                    >.az-element:nth-child(3){
+                        p span{
+                            font-family: 'Montserrat', sans-serif !important;
+                        }
+                    } 
+                } 
+            } 
+        }
+    }
+    .block-views-blocktramites-block-9{
+        .view-display-id-block_9{
+            >.view-content span.views-label-view {
+                font-family: 'Montserrat', sans-serif !important;
+            }
+        } 
+    }
+}
+
+/*
+************************************************
+******OFERTA INSTITUCIONAL (Segundo nivel)******
+************************************************
+*/
+
+.page-portafolio-de-servicios-icbf-ninos-y-ninas2 {
+    .block-page-title-block {
+        display: none !important;
+    }
+
+    .precontent {
+        margin-bottom: 1em;
+    }
+}
+
+.page-portafolio-de-servicios-icbf-ninos-y-ninas2,
+.page-portafolio-de-servicios-icbf-ninos-y-ninas {
+    #block-icbf-content {
+        .content {
+            >div:first-child {
+
+                h1 {
+                    font-size: 40px !important;
+                    font-family: 'Asap-Regular' !important;
+                    color: #555 !important;
+                }
+
+                h4 {
+                    font-weight: normal;
+                    font-family: 'Montserrat', sans-serif;
+                    padding-top: 1.5em;
+                    border-top: 1px solid #ddd;
+                }
+
+                span {
+                    font-family: 'Montserrat', sans-serif;
+                }
+
+                ul {
+                    list-style: none;
+                    display: flex;
+                    justify-content: center;
+                    max-width: 750px;
+
+                    li {
+                        border: 1px solid #444;
+                        border-radius: 100%;
+                        width: 30.8px;
+                        height: 30.8px;
+                        margin: 0.2em;
+                        display: flex;
+                        justify-content: center;
+
+                        a {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+
+                    >li:first-child {
+                        i {
+                            color: #3b5998;
+                        }
+                    }
+
+                    >li:nth-child(2) {
+                        i {
+                            color: #e52d27;
+                        }
+                    }
+
+                    >li:nth-child(3) {
+                        i {
+                            color: #55acee;
+                        }
+                    }
+
+                    >li:nth-child(4) {
+                        i {
+                            color: #3f729b;
+                        }
+                    }
+                }
+            }
+
+            >div:nth-child(2) {
+                .view-id-tramites_sapi {
+                    .view-filters {
+                        width: 100%;
+
+                        form {
+                            >div {
+                                display: flex;
+                                flex-wrap: wrap;
+
+                                >fieldset {
+                                    width: 45%;
+
+                                    .form-radios,
+                                    .form-checkboxes {
+                                        ul {
+                                            list-style: none;
+                                        }
+                                    }
+                                }
+
+                                >.form-item:nth-child(3) {
+                                    width: 180.2px;
+
+                                    label {
+                                        font-weight: 700;
+                                    }
+                                }
+
+                                >.form-item:nth-child(4) {
+                                    width: 104px;
+
+                                    label {
+                                        font-weight: 700;
+                                    }
+                                }
+
+                                >.form-item:nth-child(5) {
+                                    width: 80.8px;
+
+                                    label {
+                                        font-weight: 700;
+                                    }
+                                }
+
+                                >.form-actions {
+                                    padding-top: 1.2em;
+                                }
+
+                                @media (max-width: 768px) {
+                                    >fieldset {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    @media (max-width: 768px) {
+                        .view-content {
+                            >div {
+                                width: 95%;
+                                margin: 0 auto;
+                            }
+                        }
+                    }
+                }
+
+
+                //filtros
+                .view-id-tramites_sapi {
+                    .view-filters {
+
+                        .form-radios,
+                        .form-checkboxes {
+                            padding-top: 1em;
+                            margin-left: 0;
+
+                            input[type=checkbox],
+                            input[type=radio] {
+                                appearance: none;
+                                width: 13px;
+                                height: 13px;
+                                border: 1px solid #555;
+                                border-radius: 3px;
+                                margin: 0 4px 0 0 !important;
+                            }
+
+                            /* Cuando se selecciona el check*/
+                            /*Estilos para el icono interno del check*/
+                            input[type=checkbox]:checked,
+                            input[type=radio]:checked {
+                                background-color: #1996d0;
+                                border-color: #1996d0;
+                            }
+
+                            input[type=checkbox]::after,
+                            input[type=radio]::after {
+                                content: '✔';
+                                color: white;
+                                width: 10px;
+                                height: 10px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+
+                            //color de letras
+                            label {
+                                white-space: nowrap;
+                                color: #1996d0;
+                                text-decoration: none !important;
+                                font-size: 14px;
+                            }
+
+                            label:hover {
+                                color: #125e81;
+                                text-decoration: underline !important;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.page-portafolio-de-servicios-icbf-oferta {
+
+    .h3-word-msintro span {
+        font-family: var.$font-asap-regular;
+        font-size: 16px;
+    }
+
+    .btn-primary {
+        color: #fff;
+        background-color: #5bc0de;
+        border-color: #46b8da;
+
+        &:hover {
+            color: #fff;
+            background-color: #31b0d5;
+            border-color: #269abc;
+        }
+    }
+
+    input.form-control, ul.ui-menu li a {
+        font-family: 'Montserrat', sans-serif;
+        color: #555 !important;
+        font-size: 14px;
+    }
+
+    input.form-control{
+        border-radius: 0 8px 8px 0;
+        &:focus {
+            outline: 0;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+            border: 1px solid #ccc;
+            transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        }
+    }
+
+    ul.ui-menu{
+        border-radius: 3px;
+        li{
+            margin: 7px 0;
+            a{
+                display: block;
+                width: 100%;
+                background-color: transparent !important;
+                border: transparent;
+
+                &.active, &:hover, &:visited, &:focus {
+                    background-color: #337AB7 !important;
+                    color: #fff !important;
+                    text-decoration: underline !important;
+                }
+            }
+        } 
+    }
+}
+
+.page-licencia-de-funcionamiento,
+.page-personeria-juridica,
+.page-bienes-sin-heredero-o-dueno,
+.page-estado-de-cuenta-de-aportes-parafiscales-0,
+.page-permiso-de-salida-del-pais,
+.page-id-6738,
+.page-fijacion-de-visitas,
+.page-restitucion-internacional-y-regulacion-internacional-de-visitas,
+.page-portafolio-de-servicios-icbf-oferta,
+.page-autorizacion-venta-de-inmuebles-de-propiedad-de-los-ninos-ninas-y-adolescentes {
+
+    #wpm39m14 {
+        h3 {
+            font-family: var.$font-asap-regular;
+            font-size: 1.2em;
+        }
+    }
+
+    .stpe-outlinebutton {
+        font-family: 'montserrat';
+    }
+
+    span {
+        font-family: 'montserrat';
+    }
+
+    [data-az-id="511p0q2k"] {
+        margin-top: 25px !important;
+    }
+
+    h1,
+    h2 span,
+    h3 span,
+    h4 span {
+        font-family: "Asap-Regular";
+    }
+
+    /* Forma y estilo base */
+    .stbe-social-links__item i {
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+        font-size: 15px;
+        text-align: center;
+        /* color genérico por defecto */
+        color: #555;
+        transition: all 0.3s ease;
+    }
+
+    /* Espaciado entre íconos */
+    .stbe-social-links__item {
+        display: inline-block;
+        margin: 0 8px;
+    }
+
+    /* Corrección de íconos */
+    [class*="fa-"]::before {
+        display: inline-block;
+    }
+
+    .stbe-social-links__item a[href*="facebook"] i {
+        color: #3b5998;
+
+    }
+
+    .stbe-social-links__item a[href*="youtube"] i {
+        color: #e52d27;
+
+    }
+
+    .stbe-social-links__item a[href*="twitter"] i {
+        color: #1da1f2;
+
+    }
+
+    .stbe-social-links__item a[href*="instagram"] i {
+        color: #1da1f2;
+
+    }
+
+    .stbe-social-links__item a[href*="facebook"] i:hover {
+        background-color: #fff;
+        color: #3b5998;
+
+    }
+
+    .stbe-social-links__item a[href*="youtube"] i:hover {
+        background-color: #fff;
+        color: #e52d27;
+    }
+
+    .stbe-social-links__item a[href*="twitter"] i:hover {
+        background-color: #fff;
+        color: #1da1f2;
+    }
+
+    .stbe-social-links__item a[href*="instagram"] i:hover {
+        color: #3f729b;
+    }
+
+    .az-icon .fa {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 30px;
+        color: #1387aa !important;
+        background-color: #f9f4cf !important;
+        border: none;
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+
+    .az-icon .fa.appear {
+        animation: pulse 1s ease-in-out;
+    }
+
+    .az-icon .fa:hover {
+        transform: scale(1.1);
+    }
+
+    [data-az-id="qhjsd1gw"] {
+        flex-wrap: nowrap !important;
+    }
+
+    .fa-television::before {
+        content: "\f108";
+        font-family: "FontAwesome";
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        font-size: 30px;
+        border-radius: 50%;
+        background-color: #eaf7fd;
+        color: #1387aa;
+        transition: transform 0.3s ease;
+    }
+
+
+    .glyphicon.glyphicon-info-sign {
+        position: relative;
+        font-size: 0;
+        /* Oculta el contenido original */
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+    }
+
+    /* Inserta nuevo ícono */
+    .glyphicon.glyphicon-info-sign::before {
+        content: "\e086";
+        // font-family: Arial, sans-serif;
+        font-family: var.$font-glyphicons-halflings !important;
+        //font-weight: bold;
+        font-size: 14px;
+        color: #555;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        line-height: 15px;
+        text-align: center;
+        display: inline-block;
+    }
+
+    /* Oculta el span accesorio */
+    .glyphicon.glyphicon-info-sign .element-invisible {
+        display: none;
+    }
+
+    .panel-heading .panel-title {
+        color: #1996d0;
+        text-decoration: none !important;
+        font-size: 1em !important;
+        font-family: 'Montserrat', sans-serif !important;
+        ;
+    }
+
+    .az-element.az-icon {
+        margin-top: 30px;
+    }
+
+    @media (max-width: 576px) {
+        .col-sm-2 {
+            flex: 0 0 auto;
+            width: 100%;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+//------------------------------Gestion-----------------------
+.page-gestion-humana-nombramientos-resoluciones-de-nombramientos-provisionales{
+    #block-icbf-content{
+        .views-element-container{
+            >h2 {
+                margin-top: 2em;
+                margin-bottom: 0;
+                margin-left: 25%;
+                padding: 5px;
+                font-size: 1em;
+                font-weight: 700;
+                font-family: 'Montserrat', sans-serif;
+                background-color: #f7f7f7;
+                text-align: center;
+            }
+            .view-filters{
+                margin-top: -2.1em;
+
+                span.fieldset-legend {
+                    display: flex;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    padding: 3px;
+                    font-size: 1em;
+                    font-weight: 700 !important;
+                    font-family: 'Montserrat', sans-serif !important;
+                    background-color: #f7f7f7;
+                    justify-content: center;
+                }
+            }
+
+
+            //Responsive
+            .view-display-id-block_2 {
+                justify-items: center;
+                display: grid;
+                grid-template-areas:
+                    "a b"
+                    "a c";
+                grid-template-columns: 25% 75%;
+
+                .view-filters {
+                    grid-area: a;
+                    width: 100%;
+                    //margin-top: 0;
+                }
+
+                .view-content {
+                    grid-area: b;
+                    width: 100%;
+
+                    table{
+                        width: 100%;
+                    }
+                }
+
+                nav.pager {
+                    grid-area: c;
+                }
+            }
+
+            @media (max-width: 768px) {
+                >h2 {
+                    margin-left: 0 !important;
+                }
+
+                .view-display-id-block_2 {
+                    justify-items: center;
+                    padding: 1em;
+                    display: grid;
+                    grid-template-areas:
+                        "a"
+                        "b"
+                        "c";
+                    grid-template-columns: 100%;
+
+                    .view-filters {
+                        grid-area: a;
+                        width: 100%;
+                        margin-top: 1em;
+                    }
+
+                    .view-content {
+                        grid-area: b;
+                        width: 100%;
+                    }
+
+                    nav.pager {
+                        grid-area: c;
+                    }
+                }
+            }
+
+
+        }
+    }
+}
+
+
+
+.page-gestion-humana-convocatorias-planta-temporal{
+
+    .block-field-blocktaxonomy-termsecctionsfield-content{
+        padding-left: 15px;
+        padding-right: 15px;
+        a {
+            color: #1996d0;
+            text-decoration: none !important;
+            font-size: 14px;
+            
+            &:hover {
+                color: #125e81;
+                text-decoration: underline !important;
+            }
+        }
+    }
+
+    .view-display-id-block_3{
+        .view-filters{
+            div.form-actions input.button {
+                margin-left: 5px;
+                color: #fff;
+                background-color: #5bc0de;
+                border-color: #46b8da;
+
+                &:hover{
+                    background-color: #31b0d5;
+                    border-color: #269abc;
+                }
+            }
+        }
+
+        .view-content{
+            table{
+                width: 100%;
+
+                thead {
+                    display: none;
+                }
+                tbody{
+                    >tr:first-child {
+                        border-top-right-radius: 4px;
+                        border-top-left-radius: 4px;
+                    }
+                    >tr:last-child {
+                        border-bottom-right-radius: 4px;
+                        border-bottom-left-radius: 4px;
+                    }
+
+                    tr {
+                        display: flex;
+                        flex-wrap: wrap;
+                        border: 1px solid #ddd;
+                        padding: 10px 15px;
+                        td{
+                            width: 100%;
+                            border: 0 !important;
+                            padding: 0 !important;
+
+                            a{
+                                font-family: var.$font-asap-regular !important;
+                                font-size: 1.1em;
+                            }
+                        }
+
+                        td.views-field.views-field-field-date {
+                            text-align: right;
+                            font-size: .8em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Responsive
+    .view-display-id-block_3 {
+        justify-items: center;
+        display: grid;
+        grid-template-areas:
+            "a b";
+        grid-template-columns: 25% 75%;
+    
+        .view-filters {
+            grid-area: a;
+            width: 100%;
+            //margin-top: 0;
+        }
+    
+        .view-content {
+            grid-area: b;
+            width: 100%;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .block-page-title-block {
+            margin-left: 0.5em;
+        }
+        .view-display-id-block_3 {
+            justify-items: center;
+            padding: 1em;
+            display: grid;
+            grid-template-areas:
+                "a"
+                "b";
+            grid-template-columns: 100%;
+    
+            .view-filters {
+                grid-area: a;
+                width: 100%;
+                margin-top: 1em;
+            }
+    
+            .view-content {
+                grid-area: b;
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+/*--------------------------
+-----CONSULTA CIUDADANA-----
+---------------------------*/
+
+.page-id-8031, ///planeacion/plan-anticorrupcion-y-atencion-al-ciudadano
+.page-id-8159 ///planeacion/programa-de-transparencia-y-etica-publica
+{
+    .region-content{
+        min-height: 350px;
+    }
+    #block-icbf-content{
+        .content{
+            .block-views-blocktransparencia-019-sapi-block-paac{
+                .view-display-id-block_paac{
+                    grid-template-rows: .5fr .1fr !important;
+
+                    .view-content{
+                        h4 {
+                            font-family: var.$font-asap-regular !important;
+                            font-size: 1.2em !important;
+                            margin-top: 20px;
+                            margin-bottom: 10px;
+                        }
+                        li.list-group-item{
+                            border: 1px solid #ddd !important;
+                        }
+                    }
+                }
+            }
+
+            .block-views-blocktransparencia-019-sapi-block-28{
+                .view-content{
+                    h4 {
+                        font-family: var.$font-asap-regular !important;
+                        font-size: 1.2em !important;
+                        margin-top: 20px;
+                        margin-bottom: 10px;
+                    }
+                    li.list-group-item{
+                        border: 1px solid #ddd !important;
+                    }
+                }
+                >h2{
+                    font-family: 'Montserrat', sans-serif;
+                    line-height: normal !important;
+                    font-size: 1.4em;
+                    margin-left: 24%;
+                }
+                @media (max-width: 768px) {
+                    >h2 {
+                        margin-left: 2em;
+                    }
+                }
+
+                .view-display-id-block_28{
+                    .view-filters{
+                        opacity: 0;
+                        height: 0;
+                    }
+                }
+            }
+        }
+    }
+}

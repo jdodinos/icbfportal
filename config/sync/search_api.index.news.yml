@@ -1,0 +1,599 @@
+uuid: 85f4f1c1-b64f-4e22-b584-f7c78e215b5b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_category_citizen
+    - field.storage.node.field_date
+    - field.storage.node.field_images
+    - field.storage.node.field_list_image
+    - field.storage.node.field_location
+    - field.storage.node.field_lugar
+    - field.storage.node.field_news_fijo
+    - field.storage.node.field_priority
+    - field.storage.node.field_relevant
+    - field.storage.node.field_section
+    - field.storage.node.field_section_tag
+    - field.storage.taxonomy_term.field_address
+    - field.storage.taxonomy_term.field_contact_email
+    - field.storage.taxonomy_term.field_phone
+    - search_api.server.icbf
+  module:
+    - file
+    - node
+    - search_api_solr
+    - taxonomy
+third_party_settings:
+  search_api_solr:
+    finalize: false
+    commit_before_finalize: false
+    commit_after_finalize: false
+    debug_finalize: false
+    highlighter:
+      maxAnalyzedChars: 51200
+      fragmenter: gap
+      usePhraseHighlighter: true
+      highlightMultiTerm: true
+      preserveMulti: false
+      regex:
+        slop: 0.5
+        pattern: blank
+        maxAnalyzedChars: 10000
+      highlight:
+        mergeContiguous: false
+        requireFieldMatch: false
+        snippets: 3
+        fragsize: 0
+    mlt:
+      mintf: 1
+      mindf: 1
+      maxdf: 0
+      maxdfpct: 0
+      minwl: 0
+      maxwl: 0
+      maxqt: 100
+      maxntp: 2000
+      boost: false
+      interestingTerms: none
+    term_modifiers:
+      slop: 3
+      fuzzy: 1
+      fuzzy_analyzer: true
+    advanced:
+      index_prefix: ''
+      collection: ''
+      timezone: ''
+    multilingual:
+      limit_to_content_language: false
+      include_language_independent: true
+      use_language_undefined_as_fallback_language: false
+      specific_languages:
+        en: '0'
+        es: '0'
+      use_universal_collation: false
+id: news
+name: 'Noticias SAPI'
+description: ''
+read_only: false
+field_settings:
+  alt:
+    label: 'Imagen listado » Texto alternativo'
+    datasource_id: 'entity:node'
+    property_path: 'field_list_image:alt'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_list_image
+  alt_1:
+    label: 'Imagen(es) complementarias » Texto alternativo'
+    datasource_id: 'entity:node'
+    property_path: 'field_images:alt'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_images
+  changed:
+    label: 'Imagen listado » Archivo » Modificado'
+    datasource_id: 'entity:node'
+    property_path: 'field_list_image:entity:changed'
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_list_image
+      module:
+        - file
+  changed_1:
+    label: 'Imagen(es) complementarias » Archivo » Modificado'
+    datasource_id: 'entity:node'
+    property_path: 'field_images:entity:changed'
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_images
+      module:
+        - file
+  created:
+    label: 'Fecha de autoría'
+    datasource_id: 'entity:node'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - node
+  created_1:
+    label: 'Imagen listado » Archivo » Creado'
+    datasource_id: 'entity:node'
+    property_path: 'field_list_image:entity:created'
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_list_image
+      module:
+        - file
+  created_2:
+    label: 'Imagen(es) complementarias » Archivo » Creado'
+    datasource_id: 'entity:node'
+    property_path: 'field_images:entity:created'
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_images
+      module:
+        - file
+  fid:
+    label: 'Imagen listado » Archivo » ID del archivo'
+    datasource_id: 'entity:node'
+    property_path: 'field_list_image:entity:fid'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_list_image
+      module:
+        - file
+  fid_1:
+    label: 'Imagen(es) complementarias » Archivo » ID del archivo'
+    datasource_id: 'entity:node'
+    property_path: 'field_images:entity:fid'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_images
+      module:
+        - file
+  field_category_citizen:
+    label: 'Categoría situación del ciudadano'
+    datasource_id: 'entity:node'
+    property_path: field_category_citizen
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_category_citizen
+  field_contact_email:
+    label: 'Ubicación » Término de taxonomía » Correo electrónico de contacto'
+    datasource_id: 'entity:node'
+    property_path: 'field_location:entity:field_contact_email'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_location
+        - field.storage.taxonomy_term.field_contact_email
+      module:
+        - taxonomy
+  field_date:
+    label: Fecha
+    datasource_id: 'entity:node'
+    property_path: field_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_date
+  field_images:
+    label: 'Imagen(es) complementarias'
+    datasource_id: 'entity:node'
+    property_path: field_images
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_images
+  field_list_image:
+    label: 'Imagen listado'
+    datasource_id: 'entity:node'
+    property_path: field_list_image
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_list_image
+  field_location:
+    label: Ubicación
+    datasource_id: 'entity:node'
+    property_path: field_location
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_location
+  field_location_1:
+    label: Ubicación
+    datasource_id: 'entity:node'
+    property_path: field_location
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_location
+  field_lugar:
+    label: Lugar
+    datasource_id: 'entity:node'
+    property_path: field_lugar
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_lugar
+  field_news_fijo:
+    label: 'Fijo al principio de la lista'
+    datasource_id: 'entity:node'
+    property_path: field_news_fijo
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_news_fijo
+  field_phone:
+    label: 'Ubicación » Término de taxonomía » Teléfono'
+    datasource_id: 'entity:node'
+    property_path: 'field_location:entity:field_phone'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_location
+        - field.storage.taxonomy_term.field_phone
+      module:
+        - taxonomy
+  field_priority:
+    label: Prioridad
+    datasource_id: 'entity:node'
+    property_path: field_priority
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_priority
+  field_relevant:
+    label: Relevancia
+    datasource_id: 'entity:node'
+    property_path: field_relevant
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_relevant
+  field_section:
+    label: Sección
+    datasource_id: 'entity:node'
+    property_path: field_section
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_section
+  field_section_tag:
+    label: Etiqueta
+    datasource_id: 'entity:node'
+    property_path: field_section_tag
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_section_tag
+  filemime:
+    label: 'Imagen listado » Archivo » Tipo MIME de archivo'
+    datasource_id: 'entity:node'
+    property_path: 'field_list_image:entity:filemime'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_list_image
+      module:
+        - file
+  filemime_1:
+    label: 'Imagen(es) complementarias » Archivo » Tipo MIME de archivo'
+    datasource_id: 'entity:node'
+    property_path: 'field_images:entity:filemime'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_images
+      module:
+        - file
+  filename:
+    label: 'Imagen listado » Archivo » Nombre de archivo'
+    datasource_id: 'entity:node'
+    property_path: 'field_list_image:entity:filename'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_list_image
+      module:
+        - file
+  filename_1:
+    label: 'Imagen(es) complementarias » Archivo » Nombre de archivo'
+    datasource_id: 'entity:node'
+    property_path: 'field_images:entity:filename'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_images
+      module:
+        - file
+  filesize:
+    label: 'Imagen listado » Archivo » Tamaño de archivo'
+    datasource_id: 'entity:node'
+    property_path: 'field_list_image:entity:filesize'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_list_image
+      module:
+        - file
+  filesize_1:
+    label: 'Imagen(es) complementarias » Archivo » Tamaño de archivo'
+    datasource_id: 'entity:node'
+    property_path: 'field_images:entity:filesize'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_images
+      module:
+        - file
+  height:
+    label: 'Imagen listado » Alto'
+    datasource_id: 'entity:node'
+    property_path: 'field_list_image:height'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_list_image
+  height_1:
+    label: 'Imagen(es) complementarias » Alto'
+    datasource_id: 'entity:node'
+    property_path: 'field_images:height'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_images
+  langcode:
+    label: 'Imagen listado » Archivo » Código de idioma'
+    datasource_id: 'entity:node'
+    property_path: 'field_list_image:entity:langcode'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_list_image
+      module:
+        - file
+  langcode_1:
+    label: 'Imagen(es) complementarias » Archivo » Código de idioma'
+    datasource_id: 'entity:node'
+    property_path: 'field_images:entity:langcode'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_images
+      module:
+        - file
+  locality:
+    label: 'Ubicación » Término de taxonomía » Dirección » La localidad (por ejemplo, la ciudad)'
+    datasource_id: 'entity:node'
+    property_path: 'field_location:entity:field_address:locality'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_location
+        - field.storage.taxonomy_term.field_address
+      module:
+        - taxonomy
+  name:
+    label: 'Ubicación » Término de taxonomía » Nombre'
+    datasource_id: 'entity:node'
+    property_path: 'field_location:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_location
+      module:
+        - taxonomy
+  name_1:
+    label: 'Categoría situación del ciudadano » Término de taxonomía » Nombre'
+    datasource_id: 'entity:node'
+    property_path: 'field_category_citizen:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_category_citizen
+      module:
+        - taxonomy
+  nid:
+    label: ID
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+    dependencies:
+      module:
+        - node
+  status:
+    label: Publicado
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - node
+  status_1:
+    label: 'Imagen listado » Archivo » Estado'
+    datasource_id: 'entity:node'
+    property_path: 'field_list_image:entity:status'
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_list_image
+      module:
+        - file
+  status_2:
+    label: 'Imagen(es) complementarias » Archivo » Estado'
+    datasource_id: 'entity:node'
+    property_path: 'field_images:entity:status'
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_images
+      module:
+        - file
+  tid:
+    label: 'Sección » Término de taxonomía » ID del término'
+    datasource_id: 'entity:node'
+    property_path: 'field_section:entity:tid'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_section
+      module:
+        - taxonomy
+  tid_1:
+    label: 'Categoría situación del ciudadano » Término de taxonomía » ID del término'
+    datasource_id: 'entity:node'
+    property_path: 'field_category_citizen:entity:tid'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_category_citizen
+      module:
+        - taxonomy
+  title:
+    label: Título
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - node
+  title_1:
+    label: 'Imagen listado » Título'
+    datasource_id: 'entity:node'
+    property_path: 'field_list_image:title'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_list_image
+  title_2:
+    label: 'Imagen(es) complementarias » Título'
+    datasource_id: 'entity:node'
+    property_path: 'field_images:title'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_images
+  type:
+    label: 'Tipo de contenido'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - node
+  uid:
+    label: 'Imagen listado » Archivo » ID de Usuario'
+    datasource_id: 'entity:node'
+    property_path: 'field_list_image:entity:uid'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_list_image
+      module:
+        - file
+  uid_1:
+    label: 'Imagen(es) complementarias » Archivo » ID de Usuario'
+    datasource_id: 'entity:node'
+    property_path: 'field_images:entity:uid'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_images
+      module:
+        - file
+  uri:
+    label: 'Imagen listado » Archivo » URI'
+    datasource_id: 'entity:node'
+    property_path: 'field_list_image:entity:uri'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_list_image
+      module:
+        - file
+  uri_1:
+    label: 'Imagen(es) complementarias » Archivo » URI'
+    datasource_id: 'entity:node'
+    property_path: 'field_images:entity:uri'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_images
+      module:
+        - file
+  uuid:
+    label: 'Imagen listado » Archivo » UUID'
+    datasource_id: 'entity:node'
+    property_path: 'field_list_image:entity:uuid'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_list_image
+      module:
+        - file
+  uuid_1:
+    label: 'Imagen(es) complementarias » Archivo » UUID'
+    datasource_id: 'entity:node'
+    property_path: 'field_images:entity:uuid'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_images
+      module:
+        - file
+  width:
+    label: 'Imagen listado » Ancho'
+    datasource_id: 'entity:node'
+    property_path: 'field_list_image:width'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_list_image
+  width_1:
+    label: 'Imagen(es) complementarias » Ancho'
+    datasource_id: 'entity:node'
+    property_path: 'field_images:width'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_images
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - news
+    languages:
+      default: false
+      selected:
+        - es
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  auto_aggregated_fulltext_field: {  }
+  custom_value: {  }
+  entity_type: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+  solr_date_range: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  delete_on_fail: true
+  index_directly: true
+  track_changes_in_references: true
+server: icbf

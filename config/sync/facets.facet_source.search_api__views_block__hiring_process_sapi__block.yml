@@ -1,0 +1,9 @@
+uuid: 2a96a435-e726-454c-9bea-10cfb8cd4ca0
+langcode: es
+status: true
+dependencies: {  }
+id: search_api__views_block__hiring_process_sapi__block
+name: 'search_api:views_block__hiring_process_sapi__block'
+filter_key: null
+url_processor: query_string
+breadcrumb: {  }

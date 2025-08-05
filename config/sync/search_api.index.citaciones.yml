@@ -1,0 +1,434 @@
+uuid: c7d933df-0deb-47a8-9551-97d5a692d326
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_act_number
+    - field.storage.node.field_children_defendant
+    - field.storage.node.field_creation_date
+    - field.storage.node.field_legal_act
+    - field.storage.node.field_legal_act_date
+    - field.storage.node.field_legal_resolution
+    - field.storage.node.field_lugar
+    - field.storage.node.field_officer_name
+    - field.storage.node.field_region_office
+    - field.storage.node.field_resolution_date
+    - field.storage.node.field_sim_number
+    - field.storage.node.field_summoned
+    - field.storage.node.field_summoned_address
+    - field.storage.node.field_summoned_file2
+    - field.storage.node.field_unpublish_date
+    - field.storage.paragraph.field_children_fullname
+    - field.storage.paragraph.field_citizen_id
+    - field.storage.paragraph.field_document_type
+    - field.storage.paragraph.field_full_name
+    - field.storage.paragraph.field_kinship
+    - field.storage.paragraph.field_other_kinship
+    - search_api.server.icbf
+  module:
+    - node
+    - paragraphs
+    - search_api_solr
+third_party_settings:
+  search_api_solr:
+    finalize: false
+    commit_before_finalize: false
+    commit_after_finalize: false
+    debug_finalize: false
+    highlighter:
+      maxAnalyzedChars: 51200
+      fragmenter: gap
+      usePhraseHighlighter: true
+      highlightMultiTerm: true
+      preserveMulti: false
+      regex:
+        slop: 0.5
+        pattern: blank
+        maxAnalyzedChars: 10000
+      highlight:
+        mergeContiguous: false
+        requireFieldMatch: false
+        snippets: 3
+        fragsize: 0
+    mlt:
+      mintf: 1
+      mindf: 1
+      maxdf: 0
+      maxdfpct: 0
+      minwl: 0
+      maxwl: 0
+      maxqt: 100
+      maxntp: 2000
+      boost: false
+      interestingTerms: none
+    term_modifiers:
+      slop: 3
+      fuzzy: 1
+      fuzzy_analyzer: true
+    advanced:
+      index_prefix: ''
+      collection: ''
+      timezone: ''
+    multilingual:
+      limit_to_content_language: false
+      include_language_independent: true
+      use_language_undefined_as_fallback_language: false
+      specific_languages:
+        en: '0'
+        es: '0'
+      use_universal_collation: false
+id: citaciones
+name: 'Citaciones SAPI'
+description: ''
+read_only: false
+field_settings:
+  changed:
+    label: Modificado
+    datasource_id: 'entity:node'
+    property_path: changed
+    type: date
+    dependencies:
+      module:
+        - node
+  created:
+    label: 'Fecha de autoría'
+    datasource_id: 'entity:node'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - node
+  description:
+    label: 'Archivo adjunto » Descripción'
+    datasource_id: 'entity:node'
+    property_path: 'field_summoned_file2:description'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_summoned_file2
+  field_act_number:
+    label: 'Número auto'
+    datasource_id: 'entity:node'
+    property_path: field_act_number
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_act_number
+  field_children_defendant:
+    label: 'Niño, niña o adolescente'
+    datasource_id: 'entity:node'
+    property_path: field_children_defendant
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_children_defendant
+  field_children_fullname:
+    label: 'Citados » Párrafo » Nombre completo'
+    datasource_id: 'entity:node'
+    property_path: 'field_summoned:entity:field_children_fullname'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_summoned
+        - field.storage.paragraph.field_children_fullname
+      module:
+        - paragraphs
+  field_citizen_id:
+    label: 'Citados » Párrafo » Número documento'
+    datasource_id: 'entity:node'
+    property_path: 'field_summoned:entity:field_citizen_id'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_summoned
+        - field.storage.paragraph.field_citizen_id
+      module:
+        - paragraphs
+  field_creation_date:
+    label: 'Fecha fijación'
+    datasource_id: 'entity:node'
+    property_path: field_creation_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_creation_date
+  field_document_type:
+    label: 'Citados » Párrafo » Tipo de documento'
+    datasource_id: 'entity:node'
+    property_path: 'field_summoned:entity:field_document_type'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_summoned
+        - field.storage.paragraph.field_document_type
+      module:
+        - paragraphs
+  field_full_name:
+    label: 'Citados » Párrafo » Nombre completo'
+    datasource_id: 'entity:node'
+    property_path: 'field_summoned:entity:field_full_name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_summoned
+        - field.storage.paragraph.field_full_name
+      module:
+        - paragraphs
+  field_kinship:
+    label: 'Citados » Párrafo » Parentesco'
+    datasource_id: 'entity:node'
+    property_path: 'field_summoned:entity:field_kinship'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_summoned
+        - field.storage.paragraph.field_kinship
+      module:
+        - paragraphs
+  field_legal_act:
+    label: 'Acción legal'
+    datasource_id: 'entity:node'
+    property_path: field_legal_act
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_legal_act
+  field_legal_act_date:
+    label: 'Fecha del auto'
+    datasource_id: 'entity:node'
+    property_path: field_legal_act_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_legal_act_date
+  field_legal_resolution:
+    label: 'Nombre de la  Audiencia'
+    datasource_id: 'entity:node'
+    property_path: field_legal_resolution
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_legal_resolution
+  field_lugar:
+    label: Departamento
+    datasource_id: 'entity:node'
+    property_path: field_lugar
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_lugar
+  field_officer_name:
+    label: 'Nombre de defensor'
+    datasource_id: 'entity:node'
+    property_path: field_officer_name
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_officer_name
+  field_other_kinship:
+    label: 'Citados » Párrafo » Otro parentesco'
+    datasource_id: 'entity:node'
+    property_path: 'field_summoned:entity:field_other_kinship'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_summoned
+        - field.storage.paragraph.field_other_kinship
+      module:
+        - paragraphs
+  field_region_office:
+    label: Regional
+    datasource_id: 'entity:node'
+    property_path: field_region_office
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_region_office
+  field_resolution_date:
+    label: 'Fecha Audiencia'
+    datasource_id: 'entity:node'
+    property_path: field_resolution_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_resolution_date
+  field_sim_number:
+    label: '# Radicado SIM'
+    datasource_id: 'entity:node'
+    property_path: field_sim_number
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_sim_number
+  field_summoned:
+    label: Citados
+    datasource_id: 'entity:node'
+    property_path: field_summoned
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_summoned
+  field_summoned_1:
+    label: Citados
+    datasource_id: 'entity:node'
+    property_path: field_summoned
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_summoned
+  field_summoned_address:
+    label: 'Dirección citación'
+    datasource_id: 'entity:node'
+    property_path: field_summoned_address
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_summoned_address
+  field_summoned_file2:
+    label: 'Archivo adjunto'
+    datasource_id: 'entity:node'
+    property_path: field_summoned_file2
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_summoned_file2
+  field_unpublish_date:
+    label: 'Fecha desfijación'
+    datasource_id: 'entity:node'
+    property_path: field_unpublish_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_unpublish_date
+  nid:
+    label: ID
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+    dependencies:
+      module:
+        - node
+  revision_id:
+    label: 'Citados » Párrafo » ID de revisión'
+    datasource_id: 'entity:node'
+    property_path: 'field_summoned:entity:revision_id'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_summoned
+      module:
+        - paragraphs
+  status:
+    label: Publicado
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - node
+  title:
+    label: Título
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    dependencies:
+      module:
+        - node
+  type:
+    label: 'Tipo de contenido'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - node
+  uid:
+    label: 'Escrito por'
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - summon
+        - summon_sdg
+    languages:
+      default: false
+      selected:
+        - es
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  auto_aggregated_fulltext_field: {  }
+  custom_value: {  }
+  entity_type: {  }
+  ignore_character:
+    weights:
+      preprocess_index: -10
+      preprocess_query: -10
+    all_fields: false
+    fields:
+      - description
+      - field_act_number
+      - field_children_fullname
+      - field_citizen_id
+      - field_document_type
+      - field_full_name
+      - field_kinship
+      - field_legal_act
+      - field_legal_resolution
+      - field_officer_name
+      - field_other_kinship
+      - field_sim_number
+      - field_summoned_address
+      - title
+      - type
+    ignorable: "['¿¡!?,.:;]"
+    ignorable_classes:
+      - Pc
+      - Pd
+      - Pe
+      - Pf
+      - Pi
+      - Po
+      - Ps
+  ignorecase:
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+    all_fields: false
+    fields:
+      - description
+      - field_act_number
+      - field_children_fullname
+      - field_citizen_id
+      - field_document_type
+      - field_full_name
+      - field_kinship
+      - field_legal_act
+      - field_legal_resolution
+      - field_officer_name
+      - field_other_kinship
+      - field_sim_number
+      - field_summoned_address
+      - title
+      - type
+  language_with_fallback: {  }
+  rendered_item: {  }
+  solr_date_range:
+    weights:
+      preprocess_index: 0
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  delete_on_fail: true
+  index_directly: true
+  track_changes_in_references: true
+server: icbf

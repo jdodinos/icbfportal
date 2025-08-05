@@ -14,6 +14,7 @@ use Drupal\block_content\Entity\BlockContent;
 class PanelizerMigrationService {
   private $secondDatabase = 'migrate';
   public $block_config;
+  public $panelizer = FALSE;
 
   /**
    *
@@ -201,9 +202,15 @@ class PanelizerMigrationService {
                 $section_type = 'layout_onecol';
             }
 
+            $children_info = [];
+            foreach ($value['children'] as $child) {
+              $children_info[$child] = $layout_settings['items'][$child] ?? [];
+            }
+
             // Crear una sección (fila) con un layout de una columna.
             $sections[$item->did][] = [
               'children' => $value['children'],
+              'children_info' => $children_info,
               'section_name' => $region_name,
               'section' => new Section($section_type),
             ];
@@ -213,6 +220,58 @@ class PanelizerMigrationService {
     }
 
     return $sections;
+  }
+
+  public function searchSectionInLayout($panel_name, $panels_display) {
+    $position = [];
+    foreach ($panels_display as $item) {
+      $layout_settings = unserialize($item->layout_settings);
+
+      if ($layout_settings && isset($layout_settings['items'][$panel_name])) {
+        if ($layout_settings['items'][$panel_name]['parent'] == 'main') {
+          $position = [
+            'panel_name' => $panel_name,
+            'section_name' => $panel_name,
+          ];
+          break;
+        }
+        else {
+          $parent_name = $layout_settings['items'][$panel_name]['parent'];
+          if ($layout_settings['items'][$parent_name]['parent'] == 'main') {
+            $position = $parent_name;
+            $position = [
+              'panel_name' => $panel_name,
+              'section_name' => $parent_name,
+            ];
+            break;
+          }
+          else {
+            $position = ['panel_name' => $parent_name];
+            $parent_name = $layout_settings['items'][$parent_name]['parent'];
+            if ($layout_settings['items'][$parent_name]['parent'] == 'main') {
+              $position['section_name'] = $parent_name;
+            }
+            else {
+              $position = ['panel_name' => $parent_name];
+              $parent_name = $layout_settings['items'][$parent_name]['parent'];
+              if ($layout_settings['items'][$parent_name]['parent'] == 'main') {
+                $position['section_name'] = $parent_name;
+              }
+            }
+          }
+        }
+      }
+      else {
+        // If the layout settings are not available, we assume the panel is in
+        // the main section.
+        $position = [
+          'panel_name' => $panel_name,
+          'section_name' => 'main-row',
+        ];
+      }
+    }
+
+    return $position;
   }
 
   public function deleteLayoutSectionsForEntity($entity) {
@@ -271,10 +330,16 @@ class PanelizerMigrationService {
   }
 
   public function addViewInBlock($view_id, $configuration) {
+    $this->block_config = [];
     $display_id = $configuration['display'];
+    $view_id = $this->checkingViewId($view_id, $display_id);
     $view = View::load($view_id);
     $messages = [];
     if ($view) {
+      if (strpos($display_id, 'page_') === 0) {
+        $display_id = 'block_' . $display_id;
+      }
+
       $displays = $view->get('display');
       if (isset($displays[$display_id])) {
         $layout_field = 'views_block';
@@ -311,6 +376,7 @@ class PanelizerMigrationService {
   }
 
   public function addCustomBlock($subtype, $configuration, $name = '') {
+    $this->block_config = [];
     $label_display = $this->validateLabelDisplay($configuration);
     $block = BlockContent::create([
       'type' => 'basic',
@@ -341,6 +407,7 @@ class PanelizerMigrationService {
   }
 
   public function addBlockContentInBlock($subtype, $configuration) {
+    $this->block_config = [];
     $label_display = $this->validateLabelDisplay($configuration);
     $messages = [];
 
@@ -388,7 +455,6 @@ class PanelizerMigrationService {
       $position_explode = strpos($subtype, '-');
       $block_type = substr($subtype, 0, $position_explode);
       $block_id = substr($subtype, $position_explode + 1);
-
       if ($block_type == 'block') {
         $block_uuid = $this->database->select('block_content', 'b')
           ->fields('b', ['uuid'])
@@ -397,8 +463,28 @@ class PanelizerMigrationService {
       }
       elseif ($block_type == 'bean') {
         $block_title = str_replace('---', '|+|', $block_id);
+        if (strpos($block_id, '--') !== FALSE) {
+          $block_title = str_replace('--', '+|', $block_id);
+        }
+
         $block_title = str_replace('-', ' ', $block_title);
         $block_title = str_replace('|+|', ' - ', $block_title);
+        $block_title = str_replace('+|', '- ', $block_title);
+
+        // Caso muy particular de un bloque de páginas.
+        $particular_blocks = [
+          'paginas-internas-primera-infanci' => 'Páginas internas Primera Infancia',
+          '1519---directos-servicios-ciudad' => 'Servicios Ciudadania - 1519-1',
+          'servicios-pqr---1519-3' => 'Servicios PQR - 1519-3',
+          'titulo-micrositio' => 'Observatorio de Bienestar - top',
+          'top---rpc1' => 'TOp RPC 1',
+          'bottom-rpc1' => 'Bann- Informe final RPC',
+          'nombramientos---button-archive' => 'Nombramientos - Button Archive',
+        ];
+        if (array_key_exists($block_id, $particular_blocks)) {
+          $block_title = $particular_blocks[$block_id];
+        }
+
         $block_query = $this->database->select('block_content', 'b');
         $block_query->join('block_content_field_data', 'bcfd', 'b.id = bcfd.id');
         $block_query->fields('b', ['uuid'])
@@ -501,6 +587,137 @@ class PanelizerMigrationService {
       ->fetchObject();
 
     return $query ?? FALSE;
+  }
+
+  private function checkingViewId($view_id, $display_id) {
+    switch ($view_id) {
+      case 'news':
+        if ($display_id == 'block_newslist') {
+          $view_id = 'noticias_sapi';
+        }
+        break;
+
+      case 'documentos_de_contratacion':
+        if ($display_id == 'block') {
+          $view_id = 'documentos_de_contratacion_sapi';
+        }
+        break;
+
+      case 'licencias_de_funcionamiento':
+        $displayes = ['block', 'block_1', 'block_2', 'block_3'];
+        if (in_array($display_id, $displayes)) {
+          $view_id = 'licencias_de_funcionamiento_sapi';
+        }
+        break;
+
+      case 'curriculum_vitae':
+        if ($display_id == 'block_2') {
+          $view_id = 'curriculum_vitae_sapi';
+        }
+        break;
+
+      case 'notifications_pc':
+        if ($display_id == 'block') {
+          $view_id = 'notifications_pc_sapi';
+        }
+        break;
+
+      case 'right_of_petition':
+        if ($display_id == 'block_vista5dias') {
+          $view_id = 'right_of_petition_sapi';
+        }
+        break;
+
+      case 'documentos_servicios':
+        if ($display_id == 'block_5' || $display_id == 'block_11') {
+          $view_id = 'documentos_servicios_sapi';
+        }
+        break;
+
+      case 'vacancies':
+        $displayes = ['block_cpdr', 'block_3'];
+        if (in_array($display_id, $displayes)) {
+          $view_id = 'vacancies_sapi';
+        }
+        break;
+
+      case 'encargos_sapi':
+        $displayes = ['block', 'block_2'];
+        if (in_array($display_id, $displayes)) {
+          $view_id = 'encargos_sapi_solr';
+        }
+        break;
+
+      case 'faqs_icbf':
+        if ($display_id == 'block_page_1' || $display_id == 'page_1') {
+          $view_id = 'faqs_icbf_sapi';
+        }
+        break;
+
+      case 'hiring_process':
+        if ($display_id == 'block' || $display_id == 'block_1') {
+          $view_id = 'hiring_process_sapi';
+        }
+        break;
+
+      case 'transparencia_019':
+        $displayes = ['block_3', 'block_paac', 'block_28'];
+        if (in_array($display_id, $displayes)) {
+          $view_id = 'transparencia_019_sapi';
+        }
+        break;
+
+      case 'accountability':
+        $displayes = ['block_2', 'block_4', 'block_5'];
+        if (in_array($display_id, $displayes)) {
+          $view_id = 'accountability_sapi';
+        }
+        break;
+
+      case 'adoptions_location_colombia':
+        $displayes = ['block'];
+        if (in_array($display_id, $displayes)) {
+          $view_id = 'adoptions_location_colombia_sapi';
+        }
+        break;
+
+      case 'catalogo_sme_sapi_':
+        $displayes = ['block'];
+        if (in_array($display_id, $displayes)) {
+          $view_id = 'catalogo_sme_sapi_solr';
+        }
+        break;
+
+      case 'local_shopping':
+        $displayes = ['block'];
+        if (in_array($display_id, $displayes)) {
+          $view_id = 'compras_locales_sapi';
+        }
+        break;
+
+      case 'adoptions_ubication':
+        $displayes = ['block_2'];
+        if (in_array($display_id, $displayes)) {
+          $view_id = 'adoptions_ubication_sapi';
+        }
+        break;
+
+      case 'documentos_g_humana':
+        $displayes = ['block_1', 'block_16'];
+        if (in_array($display_id, $displayes)) {
+          $view_id = 'documentos_g_humana_sapi';
+        }
+        break;
+
+      case 'documents':
+        $displayes = ['block', 'block_4', 'block_9', 'block_10', 'block_11', 'block_43'];
+        if (in_array($display_id, $displayes)) {
+          $view_id = 'documents_sapi';
+        }
+        break;
+    }
+
+    return $view_id;
   }
 
 }

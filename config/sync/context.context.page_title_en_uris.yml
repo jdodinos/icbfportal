@@ -1,0 +1,42 @@
+uuid: e7804d0f-af03-435d-b467-b46ae34cbc2a
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+label: 'Page title En URIS'
+name: page_title_en_uris
+group: 'Sitio Principal ICBF'
+description: 'Título de la página en URIS'
+requireAllConditions: true
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: cd1cd326-dae3-4aaa-9029-71a333316048
+    context_mapping: {  }
+    pages: "/citaciones\r\n/glosario-de-terminos-icbf"
+reactions:
+  blocks:
+    id: blocks
+    uuid: 61e3c8d8-bbe7-437f-b8bb-316e0ee5b4ab
+    blocks:
+      fa4f5fc2-b8ca-487b-a568-7b82ac3b112c:
+        uuid: fa4f5fc2-b8ca-487b-a568-7b82ac3b112c
+        id: page_title_block
+        label: 'Título de la página'
+        provider: core
+        label_display: '0'
+        region: feature
+        weight: '0'
+        custom_id: page_title_block
+        theme: icbf
+        css_class: ''
+        unique: 1
+        context_id: page_title_en_uris
+        context_mapping: {  }
+        third_party_settings: {  }
+    include_default_blocks: 0
+    saved: false
+weight: 0

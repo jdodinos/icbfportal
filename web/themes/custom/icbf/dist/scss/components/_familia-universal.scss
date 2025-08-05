@@ -1,0 +1,43 @@
+@use "../abstracts/variables" as var;
+
+.page-mi-familia-universal{
+
+    .block-tb-megamenu-menu-blockmfu{
+        .tb-megamenu{
+            max-width: 1150px;
+            margin: 1.5em auto;
+
+            .tb-megamenu-nav{
+                .tb-megamenu-item{
+                    max-width: initial;
+                    width: initial;
+
+                    a{
+                        color: #0e69a1;
+                        font-size: 14px;
+                        font-family: var.$font-montserrat;
+                        line-height: 21.84px;
+
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+
+                    &:first-child{
+                        max-width: initial;
+                        a{
+                            background: url('/sites/default/files/mfu-logo_03.png') no-repeat;
+                            background-size: contain;
+                            display: block;
+                            font-size: 0;
+                            height: 76px;
+                            width: 221px;
+                        }
+
+                    }
+                }
+            }
+
+        }
+    }
+}

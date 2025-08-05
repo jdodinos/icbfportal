@@ -103,8 +103,8 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: ''
-          exclude: true
+          label: 'Documento Acta Contentiva'
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -145,8 +145,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: file_url_plain
-          settings: {  }
+          type: file_default
+          settings:
+            use_description_as_link_text: false
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -168,10 +169,10 @@ display:
           entity_field: title
           plugin_id: field
           label: 'Documento Acta Contentiva'
-          exclude: false
+          exclude: true
           alter:
-            alter_text: true
-            text: '<img>&nbsp;<a href="{{ field_news_files }}" title="{{ title }}" class="file-url">{{ title }}</a>'
+            alter_text: false
+            text: "<img src=\"/themes/contrib/bootstrap5/images/icons/application-pdf.png\">\r\n<a href=\"{{ field_news_files }}\" data-once=\"views-ajax\">{{ title }}</a>"
             make_link: false
             path: ''
             absolute: false
@@ -338,7 +339,7 @@ display:
           type: datetime_custom
           settings:
             timezone_override: ''
-            date_format: M
+            date_format: F
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -357,8 +358,8 @@ display:
       exposed_form:
         type: bef
         options:
-          submit_button: Aplicar
-          reset_button: false
+          submit_button: Consultar
+          reset_button: true
           reset_button_label: Restablecer
           exposed_sorts_label: 'Ordenar por'
           expose_sort_order: true
@@ -378,6 +379,31 @@ display:
               secondary_label: 'Opciones avanzadas'
               secondary_open: false
               reset_button_always_show: false
+            sort:
+              plugin_id: default
+              advanced:
+                combine: false
+                combine_rewrite: ''
+                reset: false
+                reset_label: ''
+                collapsible: false
+                collapsible_label: 'Opciones de ordenación'
+                is_secondary: false
+            filter:
+              field_date_value:
+                plugin_id: default
+                advanced:
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+                  hide_label: false
+              field_date_value_1:
+                plugin_id: default
+                advanced:
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+                  hide_label: false
       access:
         type: none
         options: {  }
@@ -422,6 +448,135 @@ display:
           plugin_id: bundle
           value:
             acta_contentiva: acta_contentiva
+          group: 1
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: string
+          operator: allwords
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: title_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: title_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: title
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrador_funcional: '0'
+              content_editor: '0'
+              administrator: '0'
+              administrador_icbf: '0'
+              administrador_infraestructura: '0'
+              admin_webforms: '0'
+              adopciones: '0'
+              abastecimiento: '0'
+              aseguramiento_calidad: '0'
+              citaciones: '0'
+              comunicaciones: '0'
+              contratacion: '0'
+              contratacion_regionales: '0'
+              convocatoria: '0'
+              constructor_glazed_b: '0'
+              defensor_de_familia: '0'
+              documentos: '0'
+              documentos_micrositiios: '0'
+              editor_contenidos_vip_: '0'
+              editor_transparencia: '0'
+              editor_micrositios: '0'
+              editor_ninos_y_ninas: '0'
+              encargos: '0'
+              evaluacion: '0'
+              gestion_humana: '0'
+              informacion_transparencia: '0'
+              juridica: '0'
+              planeacion: '0'
+              mejoramiento_sige: '0'
+              noticias: '0'
+              noticias_compras_locales: '0'
+              notificaciones_coactivos: '0'
+              observatorio_de_bienestar: '0'
+              servicios_docs_derechos_peticion_puntos_atencion_: '0'
+              servicios_portafolio_: '0'
+              sede_direccion_general: '0'
+              regional_amazonas: '0'
+              regional_antioquia: '0'
+              regional_arauca: '0'
+              regional_atlantico: '0'
+              regional_bogota: '0'
+              regional_boyaca: '0'
+              regional_bolivar: '0'
+              regional_caldas: '0'
+              regional_caqueta: '0'
+              regional_casanare: '0'
+              regional_cauca: '0'
+              regional_cesar: '0'
+              regional_choco: '0'
+              regional_cordoba: '0'
+              regional_cundinamarca: '0'
+              regional_la_guajira: '0'
+              regional_guainia: '0'
+              regional_guaviare: '0'
+              regional_huila: '0'
+              regional_magdalena: '0'
+              regional_meta: '0'
+              regional_narino: '0'
+              regional_norte_de_santander: '0'
+              regional_putumayo: '0'
+              regional_quindio: '0'
+              regional_risaralda: '0'
+              regional_san_andres: '0'
+              regional_santander: '0'
+              regional_sucre: '0'
+              regional_tolima: '0'
+              regional_valle: '0'
+              regional_vaupes: '0'
+              regional_vichada: '0'
+              migracion: '0'
+              web_master: '0'
+              rendicion_de_cuentas: '0'
+              rol_1: '0'
+              administrador_funcional_ajustado: '0'
+              transparencia_contenidos: '0'
+              administrar_datos_ninos_migrantes_venezolanos: '0'
+              eventos_calendario: '0'
+            placeholder: ''
+            autocomplete_filter: 0
+            autocomplete_min_chars: '0'
+            autocomplete_items: '10'
+            autocomplete_field: title
+            autocomplete_raw_suggestion: 1
+            autocomplete_raw_dropdown: 1
+            autocomplete_dependent: 0
+            autocomplete_contextual: 0
+            autocomplete_autosubmit: 0
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
         field_date_value:
           id: field_date_value
           table: node__field_date
@@ -668,6 +823,10 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
         type: views_bootstrap_table
       row:

@@ -1,0 +1,1227 @@
+@use "../abstracts/variables" as var;
+
+.page-adopciones .entryb-ada .contentb-ada ul li::before, .page-adopciones-quienes-pueden-ser-adoptados .entryb-ada .contentb-ada ul li::before, .page-adopciones-quienes-pueden-adoptar .entryb-ada .contentb-ada ul li::before, .page-adopciones-requisitos-basicos .entryb-ada .contentb-ada ul li::before, .page-adopciones-proceso-de-adopcion .entryb-ada .contentb-ada ul li::before, .page-adopciones-paso-paso .entryb-ada .contentb-ada ul li::before, .page-adopciones-instituciones-y-organismos-autorizados-instituciones-autorizadas-en-colombia .entryb-ada .contentb-ada ul li::before, .page-adopciones-instituciones-y-organismos-autorizados-organismos-y-agencias-internacionales .entryb-ada .contentb-ada ul li::before {
+    content: "-";
+    margin-right: 0.5em;
+}
+
+.page-programas-y-estrategias-primera-infancia-promocion-de-la-lectura-salas-de-lectura,
+.page-programas-y-estrategias-primera-infancia-promocion-de-la-lectura,
+.page-programas-y-estrategias-primera-infancia-acerca-de,
+.page-programas-y-estrategias-primera-infancia-calidad-en-servicios,
+.page-programas-y-estrategias-primera-infancia-promocion-de-la-lectura-fiesta-de-la-lectura,
+.page-programas-y-estrategias-primera-infancia-promocion-de-la-lectura-la-familia-es-mi-cuento,
+.page-programas-y-estrategias-primera-infancia-marco-normativo,
+.page-programas-y-estrategias-primera-infancia-modalidades-de-atencion,
+.page-programas-y-estrategias-primera-infancia-mediatica-recursos-para-la-primera-infancia,
+.page-programas-y-estrategias-primera-infancia-cuentame {
+
+    .block-tb-megamenu-menu-blockmgm-5edfcfafa91eb{
+        >h2{
+            font-family: 'Montserrat', sans-serif !important;
+            line-height: normal !important;
+            font-size: 1.1em !important;
+            margin: 0 1px 4px;
+        }
+    }
+
+    .item-list ul{
+        padding-left: 20px;
+    }
+
+    .az-ctnr.container{
+        max-width: 100%;
+    }
+
+    .line-vo,
+    .bar-line {
+        border-bottom: 0;
+        border-top: 1px solid #8095f7;
+    }
+
+    .vocabulary-secctions {
+        .content .panel-group .panel .panel-heading .panel-title:before{
+            content: none   ;
+        }
+        .tb-megamenu {
+
+            .dropdown-menu{
+                 .active{
+                    > a{
+                        background: none;
+                    }
+                 }
+            }
+
+            .tb-megamenu-nav {
+                display: flex;
+                flex-direction: column;
+
+                .tb-megamenu-item {
+                    //margin-bottom: .5em;
+                    margin-left: 0;
+                    margin-right: 0;
+                    padding: 0;
+                    position: relative;
+                    width: 100%;
+
+                    a {
+                        background-color: #fcfcfc;
+                        border-radius: 4px;
+                        color: #004686;
+                        font-family: var.$font-montserrat;
+                        font-size: 12.6px;
+                        font-weight: 400;
+                        line-height: 18px;
+                        padding: 10px;
+                        text-decoration: none;
+
+                        .caret {
+                            border-bottom: 0.4em solid transparent;
+                            border-left: 0.4em solid black;
+                            border-top: 0.4em solid transparent;
+                        }
+                    }
+
+                    &.active-trail {
+
+                        a {
+                            border: 1px solid #3cb371 !important;
+                        }
+                    }
+
+                    .tb-megamenu-submenu {
+                        border-left: 2px solid #009688;
+                        left: 100%;
+                        padding: 0;
+                        top: 0;
+                        width: 400px;
+
+                        .mega-dropdown-inner {
+
+                            .tb-megamenu-row.row-fluid {
+                                display: flex;
+
+                                .tb-megamenu-column {
+                                    width: 100%;
+
+                                    .tb-megamenu-subnav {
+
+                                        .tb-megamenu-item {
+                                            border-bottom: 1px solid rgb(238, 238, 238);
+                                            margin: 0;
+                                            position: relative;
+
+                                            a {
+                                                color: #333;
+                                                font-size: 14px;
+                                                line-height: 21.84px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        video {
+            aspect-ratio: 16 / 9;
+            display: block;
+            width: 100%;
+        }
+
+        >.content {
+
+            >.layout--unecol-section {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                margin: 0 0 30px;
+
+                .layout__region--first {
+                    width: calc(100% / 12 * 2);
+
+                    @media (max-width: 992px) {
+                        width: 100%;
+                    }
+                }
+
+                .layout__region--second {
+                    width: calc(100% / 12 * 10);
+
+                    @media (max-width: 992px) {
+                        width: 100%;
+                    }
+                }
+
+                .layout__region--third {
+                    width: calc(100% / 12 * 5);
+
+                    @media (max-width: 992px) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+.page-programas-y-estrategias-primera-infancia-mediatica-recursos-para-la-primera-infancia{
+    #block-icbf-content{
+        .content{
+            >.layout:first-child{
+                .layout__region--first{
+                    h2 {
+                        font-family: 'Montserrat', sans-serif;
+                        line-height: normal !important;
+                        font-size: 1.1em;
+                        margin: 0 1px 4px;
+                    }
+                    /*
+                    .tb-megamenu{
+                        span.caret {
+                            background-color: #bebebe;
+                            border-radius: 4px;
+                            position: absolute;
+                            right: 0.3em;
+                            height: 16px !important;
+                            width: 16px !important;
+                            bottom: .3em;
+                            border: 0 !important;
+
+                            &::before {
+                                content: '\f105' !important;
+                                font-family: FontAwesome;
+                                font-weight: 900;
+                                color: #fff !important;
+                                display: flex;
+                                justify-content: center;
+                                position: absolute;
+                                top: -1px;
+                                left: 40%;  
+                            }
+                        }
+                    }
+                    
+                    @media (max-width: 992px) {
+                        .tb-megamenu{
+                            .tb-megamenu-button {
+                                background-color: #378135 !important;
+                                color: #fff !important;
+                                padding-left: 0 !important;
+                                border-radius: 0 .3rem .3em 0;
+                            }
+                            .tb-megamenu-button:focus {
+                                outline: none;
+                            }
+                            .nav-collapse{
+                                ul{
+                                    position: absolute;
+                                    left: 30px;
+                                    top: 27em;
+                                    margin: 0;
+                                    display: block;
+                                    z-index: 999999 !important;
+                                    background-color: rgba(254, 254, 254, 1);
+                                    width: max-content;
+                                    li{
+                                        border-bottom: 1px solid #ddd;
+                                        border-radius: 0;
+                                        margin-bottom: 0;
+                                        padding: .6em .1em !important;
+                                        background-color: rgba(254, 254, 254, 1);
+                                        width: 100%;
+                                        filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+                                        a {
+                                            color: #388136 !important;
+                                            font-family: "Montserrat", sans-serif;
+                                            font-weight: 600;
+                                            font-size: 0.9em;
+                                            width: 100%;
+                                            text-align: center;
+                                            //width: auto;
+                                            border: 0;
+                                            padding: 7px 10px 7px 10px;
+                                        }
+                                    }
+
+                                    li.active{
+                                        border: 0;
+                                        a{
+                                            background-color: #eee;
+                                        }
+                                    } 
+                                }
+                            }
+                            
+                        }
+                        
+                    }*/
+                }
+                .layout__region--second {
+                    padding-left: 1.5em;
+                }
+            }
+        }
+    }
+}
+
+.page-programas-y-estrategias-primera-infancia-acerca-de{
+
+    .taxonomy-term{
+        .layout__region--first{
+            h2{
+                font-family: var.$font-montserrat;
+                font-size: 15.24px;
+                font-weight: 500;
+                margin: 0 0 10px;
+            }
+        }
+    }
+
+    .block-views-blockarticulos-secciones-block-postpinf{
+        padding: 0 20px;
+
+        .view-articulos-secciones{
+            border-bottom: 0;
+            border-top: 1px solid #8095f7;
+            margin-top: 20px;
+        }
+        .view-content{
+            > div{
+                .field-content{
+                    > div{
+                        display: flex;
+                        .views-field-fieldset-1{
+                            width: calc(100% / 12 * 4);
+
+                            .views-field-title{
+                                color: #123d14;
+                                font-size: 1.42em;
+                                font-weight: 500;
+                                font-family: var.$font-montserrat;
+                                line-height: normal;
+                                margin: .7em 0;
+                            }
+                        }
+                        .views-field-fieldset-2{
+                            width: calc(100% / 12 * 8);
+                            padding: 1.2em;
+                        }
+                    }
+                }
+
+                &:last-child{
+                    .views-field-nothing{
+                        .bar-line{
+                            display: none;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+.page-bienestar {
+
+    .view-id-articulos_secciones {
+
+        .col-sm-4 {
+            width: 25%;
+        }
+
+        .h245-img {
+            height: 190px;
+
+            img {
+                height: 190px;
+            }
+        }
+    }
+}
+
+.page-programas-y-estrategias-direccion-de-infancia {
+
+    .block-views-blockmisional-ninez-y-adolescencia-block-l1inf,
+    .block-views-blockmisional-ninez-y-adolescencia-block-2linesinf,
+    .block-views-blockmisional-ninez-y-adolescencia-block-3inf {
+
+        .view-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            h4{
+                font-size: 16px !important;
+            }
+
+            .n-lestrategics {
+                margin: 1em 1.1em 1.2em 1.1em;
+            }
+        }
+    }
+}
+
+.page-programas-y-estrategias-direccion-de-adolescencia-y-juventud{
+    .view-display-id-block_3ayj,
+    .view-display-id-block_4ayj,
+    .view-display-id-block_5ayj,
+    .view-display-id-block_6ayj{
+        .view-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .n-lestrategics {
+                margin: 1em 1.1em 1.2em 1.1em;
+            }
+        }
+    }
+}
+
+.page-programas-y-estrategias-direccion-snbf-coordinacion,
+.page-programas-y-estrategias-direccion-snbf-sistemas-de-informacion,
+.page-programas-y-estrategias-direccion-snbf-documentos-y-enlaces,
+.page-programas-y-estrategias-direccion-snbf-que-es-el-snbf
+{
+    
+    .item-list ul,
+    .views-field-field-constructor ul{
+        padding-left: 20px;
+        li{
+            margin: 0 0 0.25em 1.5em;
+        }
+    }
+
+    .field-content{
+        ul{
+            padding-left: 20px;
+            li{
+                margin: 0 0 0.25em 1.5em;
+            }
+        }
+    }
+
+
+    .az-ctnr.container{
+        .az-element.az-ctnr.az-column.col-sm-3 {
+            @media (max-width: 768px) {
+                width: 50%;
+            }
+            @media (max-width: 576px) {
+                width: 100%;
+            }
+        }
+    }
+
+    a.slide21{
+        word-break: break-word;
+    }
+
+    .view-id-news{
+        .slick-dotted.slick-slider{
+            .slick-dots{
+                @media (min-width: 576px){
+                    width: calc(100% / 12 * 9);
+                }
+            }
+        }
+        .slick-prev{
+            left: 15px;
+        }
+        .slick-next {
+            right: 15px;
+            @media (min-width: 576px){
+                right: calc((100% / 12 * 3) + 15px);
+            }
+        }
+    }
+    .views-field-title{
+        color: #333;
+        font-family: var.$font-montserrat;
+        font-size: 1.3em;
+        font-weight: 700;
+        margin: 1em 0;
+    }
+    .az-row--equal-height{
+        .snbf-tabs {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .view-display-id-block_postsnbf{
+        padding: 0 3em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*
+*************************************
+******NUTRICIÓN (Segundo nivel)******
+*************************************
+*/
+.page-nutricion-bienestarina-mas-y-otros-alimentos-de-alto-valor-nutricional,
+.page-nutricion-estrategia-de-atencion-y-prevencion-de-la-desnutricion-infantil,
+.page-nutricion-ensin-encuesta-nacional-de-situacion-nutricional,
+.page-nutricion-tabla-de-composicion-de-alimentos-colombianos,
+.page-nutricion-hoja-de-balance-de-alimentos-colombianos,
+.page-nutricion-educacion-alimentaria-y-nutricional {
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
+                display: grid;
+                grid-template-areas: "a b";
+                grid-template-columns: 20% 80%;
+
+                >div:first-child {
+                    grid-area: a;
+                }
+
+                >div:nth-child(2) {
+                    grid-area: b;
+                }
+
+                .block-tb-megamenu{
+                    h2{
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 1.4em;
+                    }
+                }
+
+                .tb-megamenu {
+                    ul {
+                        li {
+                            padding: 10px;
+                            background-color: #fcfcfc;
+                            border-radius: 4px;
+                            font-family: 'montserrat';
+                            color: #004686;
+                            margin-bottom: .5em;
+                            width: 174px;
+
+                            a {
+                                color: #337ab7;
+                                text-decoration: none;
+                            }
+
+                            a:hover {
+                                color: #337ab7;
+                                text-decoration: underline;
+                            }
+                        }
+
+                        li.active{
+                            border: 1px solid #3cb371;
+                        }
+                    }
+                }
+
+                @media (max-width: 992px) {
+                    .tb-megamenu{
+                        .tb-megamenu-button {
+                            background-color: #378135 !important;
+                            color: #fff !important;
+                            padding-left: 0 !important;
+                            border-radius: 0 .3rem .3em 0;
+                        }
+                        .tb-megamenu-button:focus {
+                            outline: none;
+                        }
+                        .nav-collapse{
+                            ul{
+                                position: absolute;
+                                left: 30px;
+                                top: 35em;
+                                margin: 0;
+                                display: block;
+                                z-index: 999999 !important;
+                                background-color: rgba(254, 254, 254, 1);
+                                width: min-content;
+                                li{
+                                    border-bottom: 1px solid #ddd;
+                                    border-radius: 0;
+                                    margin-bottom: 0;
+                                    padding: .6em .1em !important;
+                                    background-color: rgba(254, 254, 254, 1);
+                                    width: 100%;
+                                    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+                                    a {
+                                        color: #388136 !important;
+                                        font-family: "Montserrat", sans-serif;
+                                        font-weight: 600;
+                                        font-size: 0.955em;
+                                        width: 100%;
+                                        text-align: center;
+                                        //width: auto;
+                                        border: 0;
+                                        padding: 7px 10px 7px 10px;
+                                    }
+                                }
+
+                                li.active{
+                                    border: 0;
+                                    a{
+                                        background-color: #eee;
+                                    }
+                                } 
+                            }
+                        }
+                        
+                    }
+                    
+                }
+            }
+
+            @media (max-width: 768px) {
+                >.layout:first-child {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    >div:first-child {
+                        width: 100%;
+                    }
+
+                    >div:nth-child(2) {
+                        width: 100%;
+                        padding: 1em;
+                    }
+                }
+            }
+
+            >.layout:nth-child(2) {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+.page-nutricion-bienestarina-mas-y-otros-alimentos-de-alto-valor-nutricional{
+    #block-icbf-content {
+        .content {
+            >.layout:nth-child(3){
+                .view-display-id-block_4 {
+                    justify-items: center;
+                    display: grid;
+                    grid-template-areas:
+                        "a b"
+                        "a c";
+                    grid-template-columns: 25% 75%;
+
+                    .view-filters {
+                        grid-area: a;
+                        width: 100%;
+                        margin-top: 0;
+
+                        form {
+                            >div {
+                                display: grid;
+                                grid-template-areas:
+                                    "a"
+                                    "b"
+                                    "c"
+                                    "d"
+                                    "e"
+                                    "f";
+                                
+                                >.form-item:first-child{
+                                    grid-area: a;
+                                }
+                                >.form-item:nth-child(2) {
+                                    grid-area: b;
+
+                                    label{
+                                        font-weight: 700;
+                                    }
+                                }
+                                >.form-item:nth-child(3) {
+                                    grid-area: d;
+                                }
+                                >.form-item:nth-child(4) {
+                                    grid-area: e;
+                                }
+                                >.form-item:nth-child(5) {
+                                    grid-area: c;
+                                    label{
+                                        font-weight: 700;
+                                    }
+                                }
+                                >.form-actions {
+                                    grid-area: f;
+                                }
+                            }
+                        }
+                    }
+
+                    .view-content {
+                        grid-area: b;
+                        width: 100%;
+
+                        table{
+                            width: 98%;
+                        }
+                    }
+
+                    nav.pager {
+                        grid-area: c;
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    .view-display-id-block_4 {
+                        justify-items: center;
+                        padding: 1em;
+                        display: grid;
+                        grid-template-areas:
+                            "a"
+                            "b"
+                            "c";
+                        grid-template-columns: 100%;
+
+                        .view-filters {
+                            grid-area: a;
+                            width: 100%;
+                        }
+
+                        .view-content {
+                            grid-area: b;
+                            width: 100%;
+                        }
+
+                        nav.pager {
+                            grid-area: c;
+                        }
+                    }
+                }
+
+                //filtros
+                .view-display-id-block_4 {
+                    .view-filters {
+
+                        .fieldset-legend {
+                            //white-space: nowrap;
+                            font-size: 1.2em;
+                        }
+
+                        .form-radios {
+                            padding-top: 1em;
+                            margin-left: 0;
+
+                            input[type=checkbox],
+                            input[type=radio] {
+                                appearance: none;
+                                width: 13px;
+                                height: 13px;
+                                border: 1px solid #555;
+                                border-radius: 3px;
+                                margin: 0 4px 0 0 !important;
+                            }
+
+                            /* Cuando se selecciona el check*/
+                            /*Estilos para el icono interno del check*/
+                            input[type=checkbox]:checked,
+                            input[type=radio]:checked {
+                                background-color: #1996d0;
+                                border-color: #1996d0;
+                            }
+
+                            input[type=checkbox]::after,
+                            input[type=radio]::after {
+                                content: '✔';
+                                color: white;
+                                width: 10px;
+                                height: 10px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+
+                            //color de letras
+                            label {
+                                //white-space: nowrap;
+                                color: #1996d0;
+                                text-decoration: none !important;
+                                font-size: 14px;
+                            }
+
+                            label:hover {
+                                color: #125e81;
+                                text-decoration: underline !important;
+                            }
+
+                        }
+                    }
+
+                    nav.pager {
+                        .page-link {
+                            font-size: 11px;
+                        }
+
+                        .page-item {
+                            .page-link {
+                                width: 100%;
+                                border-radius: 0%;
+                            }
+
+                            /*
+                            &.disabled {
+                                span {
+                                    display: none;
+                                    height: initial;
+                                    line-height: 20px;
+                                }
+                            }*/
+
+                            a {
+                                text-transform: lowercase;
+                                white-space: nowrap;
+                                font-size: 14px;
+                                /*de la pagina del icbf*/
+                            }
+                        }
+
+                        .page-item:first-child {
+                            .page-link {
+                                border-radius: 5px 0px 0px 5px !important;
+                            }
+                        }
+
+                        .page-item:last-child {
+                            .page-link {
+                                border-radius: 0px 5px 5px 0px !important;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional {
+    #block-icbf-content {
+        .content {
+            >.layout:nth-child(2) {
+                display: grid;
+                grid-template-areas: "a b";
+                grid-template-columns: 20% 80%;
+
+                >div:first-child {
+                    grid-area: a;
+                }
+
+                >div:nth-child(2) {
+                    grid-area: b;
+                }
+
+                .block-tb-megamenu{
+                    h2{
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 1.4em;
+                    }
+                }
+
+                .tb-megamenu {
+                    ul {
+                        li {
+                            padding: 10px;
+                            background-color: #fcfcfc;
+                            border-radius: 4px;
+                            font-family: 'montserrat';
+                            color: #004686;
+                            margin-bottom: .5em;
+                            width: 174px;
+
+                            a {
+                                color: #337ab7;
+                                text-decoration: none;
+                            }
+
+                            a:hover {
+                                color: #337ab7;
+                                text-decoration: underline;
+                            }
+                        }
+
+                        
+                        li.active {
+                            border: 1px solid #3cb371;
+                        }
+                    }
+                }
+
+                @media (max-width: 992px) {
+                    .tb-megamenu{
+                        .tb-megamenu-button {
+                            background-color: #378135 !important;
+                            color: #fff !important;
+                            padding-left: 0 !important;
+                            border-radius: 0 .3rem .3em 0;
+                        }
+                        .tb-megamenu-button:focus {
+                            outline: none;
+                        }
+                        .nav-collapse{
+                            ul{
+                                position: absolute;
+                                left: 30px;
+                                top: 35em;
+                                margin: 0;
+                                display: block;
+                                z-index: 999999 !important;
+                                background-color: rgba(254, 254, 254, 1);
+                                width: min-content;
+                                li{
+                                    border-bottom: 1px solid #ddd;
+                                    border-radius: 0;
+                                    margin-bottom: 0;
+                                    padding: .6em .1em !important;
+                                    background-color: rgba(254, 254, 254, 1);
+                                    width: 100%;
+                                    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+                                    a {
+                                        color: #388136 !important;
+                                        font-family: "Montserrat", sans-serif;
+                                        font-weight: 600;
+                                        font-size: 0.955em;
+                                        width: 100%;
+                                        text-align: center;
+                                        //width: auto;
+                                        border: 0;
+                                        padding: 7px 10px 7px 10px;
+                                    }
+                                }
+
+                                li.active{
+                                    border: 0;
+                                    a{
+                                        background-color: #eee;
+                                    }
+                                } 
+                            }
+                        }
+                        
+                    }
+                    
+                }
+            }
+
+            @media (max-width: 768px) {
+                >.layout:nth-child(2) {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    >div:first-child {
+                        width: 100%;
+                    }
+
+                    >div:nth-child(2) {
+                        width: 100%;
+                        padding: 1em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.page-nutricion-estrategia-de-atencion-y-prevencion-de-la-desnutricion-infantil,
+.page-nutricion-ensin-encuesta-nacional-de-situacion-nutricional,
+.page-nutricion-hoja-de-balance-de-alimentos-colombianos,
+.page-nutricion-educacion-alimentaria-y-nutricional,
+.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional {
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
+                >div:nth-child(2) {
+                    .az-ctnr {
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            .panel-title {
+                a {
+                    color: #1996d0;
+                    text-decoration: none !important;
+                }
+
+                a:hover {
+                    color: #125e81;
+                    text-decoration: underline !important;
+                }
+            }
+            /*
+            .panel-title::before {
+                content: '';
+                display: flex;
+                padding-right: 0;
+            }*/
+
+            .panel-body {
+                ul {
+                    padding-left: 40px;
+                }
+            }
+        }
+    }
+}
+
+.page-nutricion-ensin-encuesta-nacional-de-situacion-nutricional {
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
+                >div:nth-child(2) {
+                    @media (max-width: 576px) {
+                        .col-sm-6 {
+                            flex: 0 0 auto;
+                            width: 100%;
+                        }
+                    }
+
+                    .view-display-id-block_6{
+                        .row-1{
+                            >div:nth-child(5), >div:nth-child(6){
+                                .thumbnail{
+                                    font-size: 0 !important;
+                                    border: 0 !important;
+                                }
+                            }
+                        }
+                    }
+
+                    .panel-body{
+                        ul.m1 {
+                            list-style: url("/themes/custom/icbf/dist/assets/imgs/green-list-arrow.png");
+                        }
+                        ul.m2 {
+                            list-style: url("/themes/custom/icbf/dist/assets/imgs/blue-list-arrow.png");
+                        }
+                        ul.m3 {
+                            list-style: url("/themes/custom/icbf/dist/assets/imgs/orange-list-arrow.png");
+                        }
+
+                        ul.m1, ul.m2, ul.m3{
+                            li{
+                                background: none;
+                                list-style: inherit;
+                                margin-bottom: .5em;
+                                padding-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.page-nutricion-estrategia-de-atencion-y-prevencion-de-la-desnutricion-infantil,
+.page-nutricion-tabla-de-composicion-de-alimentos-colombianos
+{
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
+                >div:nth-child(2) {
+                    .views-field-nothing {
+                        >.field-content {
+                            >div {
+                                border-top: 1px solid #7c7cfc;
+                                width: 100%;
+                            }
+
+                            .bar-line {
+                                display: none !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.page-nutricion-hoja-de-balance-de-alimentos-colombianos,
+.page-nutricion-educacion-alimentaria-y-nutricional{
+    #block-icbf-content {
+        .content {
+            >.layout:first-child {
+                .block-views-blockarticulos-secciones-block-missinfo3 {
+                    .views-field-nothing {
+                        >.field-content {
+                            >div {
+                                border-top: 1px solid #7c7cfc;
+                                width: 100%;
+                            }
+                        }
+
+                        .bar-line {
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+
+            .block-views-blockdocuments-block-33,
+            .block-views-blockdocuments-block-34,
+            .block-views-blockdocuments-block-41 {
+                .views-row {
+                    margin: 1em;
+
+                    .word-gral {
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.page-nutricion-politica-de-seguridad-alimentaria-y-nutricional {
+    #block-icbf-content {
+        .content {
+            >.layout:nth-child(2) {
+                >div:nth-child(2) {
+                    .views-field-nothing {
+                        >.field-content {
+                            >div {
+                                border-top: 1px solid #7c7cfc;
+                                width: 100%;
+                            }
+
+                            .bar-line {
+                                display: none !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*-----Menu------*/
+.page-programas-y-estrategias-primera-infancia-promocion-de-la-lectura-salas-de-lectura,
+.page-programas-y-estrategias-primera-infancia-promocion-de-la-lectura,
+.page-programas-y-estrategias-primera-infancia-acerca-de,
+.page-programas-y-estrategias-primera-infancia-calidad-en-servicios,
+.page-programas-y-estrategias-primera-infancia-promocion-de-la-lectura-fiesta-de-la-lectura,
+.page-programas-y-estrategias-primera-infancia-promocion-de-la-lectura-la-familia-es-mi-cuento,
+.page-programas-y-estrategias-primera-infancia-marco-normativo,
+.page-programas-y-estrategias-primera-infancia-modalidades-de-atencion,
+.page-programas-y-estrategias-primera-infancia-mediatica-recursos-para-la-primera-infancia,
+.page-programas-y-estrategias-primera-infancia-cuentame{
+    .layout--unecol-section,
+    .layout--onecol-section{
+        
+        @media (max-width: 992px) {
+            .tb-megamenu{
+                position: relative;
+
+                .tb-megamenu-button {
+                    background-color: #378135 !important;
+                    color: #fff !important;
+                    padding-left: 0 !important;
+                    border-radius: 0 .3rem .3em 0;
+                }
+                .tb-megamenu-button:focus {
+                    outline: none;
+                }
+                .nav-collapse{
+                    ul{
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        margin: 0;
+                        display: block;
+                        z-index: 999999 !important;
+                        background-color: rgba(254, 254, 254, 1);
+                        width: max-content;
+                        li{
+                            border-bottom: 1px solid #ddd;
+                            border-radius: 0;
+                            margin-bottom: 0;
+                            padding: .6em .1em !important;
+                            background-color: rgba(254, 254, 254, 1);
+                            width: 100%;
+                            filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+                            min-width: 300px;
+                            a {
+                                color: #388136 !important;
+                                font-family: "Montserrat", sans-serif;
+                                font-weight: 600;
+                                font-size: 0.9em;
+                                width: 100%;
+                                text-align: center;
+                                border: 0;
+                                padding: 2px 12px;
+                                text-align: left;
+                            }
+
+                            &.active{
+                                border: 0 !important;
+                            }
+
+                            .tb-megamenu-submenu{
+                                display: flex;
+                                .tb-megamenu-column-inner{
+                                    margin: 0;
+                                    border: 0;
+                                    padding: 0;
+                                    .tb-megamenu-subnav{
+                                        position: initial;
+                                        .tb-megamenu-item{
+                                            a{
+                                                font-size: 12.5px;
+                                                padding: 0;
+                                                margin-left: 0;
+                                            }
+                                            &.active-trail{
+                                                a{
+                                                    background: none;
+                                                    border: 0 !important;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        li.active{
+                            border: 0;
+                            a{
+                                background-color: #eee;
+                            }
+                        } 
+                    }
+                }
+                
+            }
+            
+        }
+    }
+}
+
+/*-----------------------------------------------------------------*/

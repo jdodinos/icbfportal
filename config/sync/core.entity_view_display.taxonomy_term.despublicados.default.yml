@@ -3,38 +3,60 @@ langcode: es
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.despublicados.layout_builder__layout
     - taxonomy.vocabulary.despublicados
   module:
+    - bootstrap_layouts
     - layout_builder
-    - layout_discovery
     - panelizer
     - text
 third_party_settings:
   layout_builder:
     enabled: true
-    allow_custom: true
+    allow_custom: false
     sections:
       -
-        layout_id: layout_onecol
+        layout_id: bs_1col
         layout_settings:
           label: ''
+          context_mapping: {  }
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            main:
+              wrapper: div
+              classes:
+                col-sm-12: col-sm-12
+              add_region_classes: 1
+              attributes: ''
+          context_visibility: {  }
+          context_all_must_pass: 1
         components:
-          75a58e0e-a2b5-427e-ac36-f48285b147ee:
-            uuid: 75a58e0e-a2b5-427e-ac36-f48285b147ee
-            region: content
+          d9b83846-e80a-49ad-95f4-c9594e26a6ba:
+            uuid: d9b83846-e80a-49ad-95f4-c9594e26a6ba
+            region: main
             configuration:
               id: 'field_block:taxonomy_term:despublicados:description'
+              label: Descripción
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
                 type: text_default
                 label: hidden
                 settings: {  }
-                third_party_settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
             weight: 0
-            additional: {  }
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
         third_party_settings: {  }
   panelizer:
     enable: false

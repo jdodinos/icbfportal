@@ -1,0 +1,159 @@
+uuid: db972833-435d-460e-b6f8-f232944090e4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - field.storage.node.field_document
+    - field.storage.node.field_file_categoria
+    - field.storage.node.field_location
+    - field.storage.node.field_section
+    - search_api.server.icbf_solr
+  module:
+    - node
+    - search_api_solr
+third_party_settings:
+  search_api_solr:
+    finalize: false
+    commit_before_finalize: false
+    commit_after_finalize: false
+    debug_finalize: false
+    highlighter:
+      maxAnalyzedChars: 51200
+      fragmenter: gap
+      usePhraseHighlighter: true
+      highlightMultiTerm: true
+      preserveMulti: false
+      regex:
+        slop: 0.5
+        pattern: blank
+        maxAnalyzedChars: 10000
+      highlight:
+        mergeContiguous: false
+        requireFieldMatch: false
+        snippets: 3
+        fragsize: 0
+    mlt:
+      mintf: 1
+      mindf: 1
+      maxdf: 0
+      maxdfpct: 0
+      minwl: 0
+      maxwl: 0
+      maxqt: 100
+      maxntp: 2000
+      boost: false
+      interestingTerms: none
+    term_modifiers:
+      slop: 3
+      fuzzy: 1
+      fuzzy_analyzer: true
+    advanced:
+      index_prefix: ''
+      collection: ''
+      timezone: ''
+    multilingual:
+      limit_to_content_language: false
+      include_language_independent: true
+      use_language_undefined_as_fallback_language: false
+      specific_languages:
+        en: '0'
+        es: '0'
+      use_universal_collation: false
+id: rendici_n_de_cuentas_sapi
+name: 'Rendición de cuentas (SAPI)'
+description: ''
+read_only: false
+field_settings:
+  field_date:
+    label: Fecha
+    datasource_id: 'entity:node'
+    property_path: field_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_date
+  field_document:
+    label: Documento
+    datasource_id: 'entity:node'
+    property_path: field_document
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_document
+  field_file_categoria:
+    label: 'Categoría del archivo'
+    datasource_id: 'entity:node'
+    property_path: field_file_categoria
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_file_categoria
+  field_location:
+    label: Ubicación
+    datasource_id: 'entity:node'
+    property_path: field_location
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_location
+  field_section:
+    label: Sección
+    datasource_id: 'entity:node'
+    property_path: field_section
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_section
+  nid:
+    label: ID
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+    dependencies:
+      module:
+        - node
+  status:
+    label: Publicado
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - node
+  title:
+    label: Título
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - rendicion_de_cuentas
+    languages:
+      default: false
+      selected:
+        - es
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  auto_aggregated_fulltext_field: {  }
+  custom_value: {  }
+  entity_type: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+  solr_date_range: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  delete_on_fail: true
+  index_directly: true
+  track_changes_in_references: true
+server: icbf_solr

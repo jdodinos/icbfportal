@@ -5111,22 +5111,45 @@ display:
         groups:
           1: AND
       style:
-        type: views_bootstrap_carousel
+        type: slick
         options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          interval: '14000'
-          navigation: 1
-          indicators: 1
-          pause: 1
-          wrap: 1
-          columns: '1'
-          breakpoints: md
-          display: fields
+          caption:
+            edit_node: '0'
+            field_list_image: '0'
+            field_link_url: '0'
+          optionset: default
+          class: ''
           image: ''
+          link: ''
+          overlay: ''
           title: ''
-          description: ''
+          vanilla: true
+          layout: ''
+          cache: 0
+          admin_uri: '/admin/structure/views/ajax/display/banners/block_20/style_options?_wrapper_format=drupal_ajax'
+          grid: ''
+          grid_medium: ''
+          grid_small: ''
+          style: ''
+          skin: boxed-carousel
+          overridables:
+            arrows: arrows
+            autoplay: autoplay
+            dots: dots
+            draggable: draggable
+            infinite: infinite
+            mouseWheel: '0'
+            randomize: '0'
+            variableWidth: '0'
+          thumbnail: ''
+          optionset_thumbnail: ''
+          skin_thumbnail: ''
+          thumbnail_caption: ''
+          thumbnail_effect: ''
+          thumbnail_position: ''
+          override: true
+          preserve_keys: false
+          visible_items: null
       row:
         type: fields
         options:
@@ -6030,10 +6053,10 @@ display:
           style: ''
           skin: boxed-carousel
           overridables:
-            arrows: '0'
+            arrows: arrows
+            dots: dots
+            draggable: draggable
             autoplay: '0'
-            dots: '0'
-            draggable: '0'
             infinite: '0'
             mouseWheel: '0'
             randomize: '0'
@@ -6044,7 +6067,7 @@ display:
           thumbnail_caption: ''
           thumbnail_effect: ''
           thumbnail_position: ''
-          override: false
+          override: true
           preserve_keys: false
           visible_items: null
       row:
@@ -6351,7 +6374,7 @@ display:
           entity_type: node
           entity_field: created
           plugin_id: date
-          order: DESC
+          order: ASC
           expose:
             label: ''
             field_identifier: ''

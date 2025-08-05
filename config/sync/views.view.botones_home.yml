@@ -819,29 +819,50 @@ display:
           offset: 0
           items_per_page: 3
       sorts:
-        field_dae_year_value:
-          id: field_dae_year_value
-          table: node__field_dae_year
-          field: field_dae_year_value
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
           relationship: none
           group_type: group
-          plugin_id: datetime
-          order: DESC
+          admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: standard
+          order: ASC
           expose:
             label: ''
+            field_identifier: ''
           exposed: false
-          ui_name: ''
         field_date_value:
           id: field_date_value
           table: node__field_date
           field: field_date_value
           relationship: none
           group_type: group
+          admin_label: ''
           plugin_id: datetime
           order: DESC
           expose:
             label: ''
+            field_identifier: ''
           exposed: false
+          granularity: second
+          ui_name: ''
+        field_dae_year_value:
+          id: field_dae_year_value
+          table: node__field_dae_year
+          field: field_dae_year_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
           ui_name: ''
       filters:
         status:
@@ -974,7 +995,10 @@ display:
         pager_options: false
       use_ajax: true
       display_description: ''
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
       style_plugin: default
       style_options:
         grouping: {  }
@@ -1414,8 +1438,7 @@ display:
         options:
           grouping: {  }
           row_class: ''
-          default_row_class: false
-          row_class_special: 0
+          default_row_class: true
       row:
         type: fields
         options: {  }
@@ -1432,7 +1455,10 @@ display:
         filter_groups: false
       use_ajax: false
       display_description: '5 items per line'
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
       style_plugin: default
       style_options:
         grouping: {  }

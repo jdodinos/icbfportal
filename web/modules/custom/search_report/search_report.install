@@ -5,7 +5,7 @@ use Drupal\Core\Database\Schema;
 /**
  * Implements hook_schema().
  */
-function search_reports_schema() {
+function search_report_schema() {
   $schema['search_log'] = [
     'description' => 'Log of all search queries and metadata.',
     'fields' => [
@@ -35,4 +35,18 @@ function search_reports_schema() {
     'primary key' => ['id'],
   ];
   return $schema;
+}
+
+/**
+ * Crea la tabla search_log luego de corregir hook_schema().
+ */
+function search_report_update_8001() {
+  // Recupera el controlador de la base de datos
+  $schema = \Drupal::database()->schema();
+  // Solo crea la tabla si no existe
+  if (! $schema->tableExists('search_log')) {
+    // Usa la definición del esquema tal como en hook_schema()
+    $definition = search_report_schema()['search_log'];
+    $schema->createTable('search_log', $definition);
+  }
 }

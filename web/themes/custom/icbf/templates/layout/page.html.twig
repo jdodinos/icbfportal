@@ -72,18 +72,33 @@
         <div id="main" class="{{ container }}">
           {{ page.featured_top }}
 
-          <div class="breadcrumb">
-           <div class="breadcrumb-container">
-             <p class="breadcrumb-title">{{ 'Usted está en: ' }}</p>
-             <div class="breadcrumb-content"> {{ page.breadcrumb }}</div>
-           </div>
-          </div>
+          {% if page.pre_breadcrumb %}
+            <div class="pre-breadcrumb">
+              {{ page.pre_breadcrumb }}
+            </div>
+          {% endif %}
+
+          {% if page.breadcrumb %}
+            <div class="breadcrumb">
+              <div class="breadcrumb-container">
+                <p class="breadcrumb-title">{{ 'Usted está en: ' }}</p>
+                <div class="breadcrumb-content"> {{ page.breadcrumb }}</div>
+              </div>
+            </div>
+          {% endif %}
+
 
           {% if page.feature %}
             <div class="featured">
               {{ page.feature }}
             </div>
           {% endif %}
+
+            {% if page.precontent %}
+              <div class="precontent">
+                {{ page.precontent }}
+              </div>
+            {% endif %}
 
           <div class="row row-offcanvas row-offcanvas-left clearfix">
             <main{{ content_attributes }}>

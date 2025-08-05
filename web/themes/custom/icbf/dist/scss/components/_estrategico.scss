@@ -1,0 +1,31 @@
+@use "../abstracts/variables" as var;
+
+.page-estrategico-gestion-de-tecnologia-e-informacion{
+    .vocabulary-sige-process-type{
+        .layout--unecol-section{
+            display: flex;
+            margin: 15px 0;
+            .layout__region--first{
+                padding: 0 15px;
+                width: 50%;
+            }
+            .layout__region--second{
+                padding: 0 15px;
+                width: 50%;
+            }
+
+            .field__label{
+                background-color: #f7f7f7;
+                padding: 5px;
+                font-weight: 700;
+                font-size: 1em;
+                text-align: center;
+                font-family: var.$font-montserrat;
+            }
+            .field__item{
+                font-family: var.$font-montserrat;
+                padding: 10px;
+            }
+        }
+    }
+}

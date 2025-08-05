@@ -1,0 +1,18 @@
+uuid: 44f58be8-3fa9-4719-9e13-b859471dca44
+langcode: es
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: database_local
+name: 'Database local'
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 3
+  matching: words
+  phrase: bigram
+  autocomplete:
+    suggest_suffix: true
+    suggest_words: true

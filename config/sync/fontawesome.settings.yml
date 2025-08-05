@@ -2,7 +2,7 @@ _core:
   default_config_hash: O6iR50mYuA_c7wYr4mehe-lHJNwCMYbXQrbKamgYEPs
 tag: i
 method: svg
-load_assets: true
+load_assets: false
 use_cdn: true
 external_svg_location: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css'
 use_shim: true

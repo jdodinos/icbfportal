@@ -4,7 +4,7 @@ description: 'icbf subtheme based on Bootstrap 5 theme.'
 core_version_requirement: '^10.1 || ^11.0'
 'base theme': bootstrap5
 libraries:
-  - icbf/global-styling
+  - icbf/main-styling
 ckeditor_stylesheets:
   - css/style.css
 ckeditor5-stylesheets:
@@ -14,8 +14,10 @@ regions:
   nav_branding: 'Navigation branding region'
   nav_main: 'Main navigation region'
   nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
+  pre_breadcrumb: PRE Breadcrumb
   breadcrumb: Breadcrumbs
   feature: Feature
+  precontent: 'PRE content'
   content: 'Main content'
   sidebar_first: 'Sidebar first'
   sidebar_second: 'Sidebar second'

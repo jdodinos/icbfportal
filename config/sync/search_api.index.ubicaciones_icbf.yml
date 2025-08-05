@@ -1,0 +1,202 @@
+uuid: 7a3a078b-b161-4c66-a539-02ed64deae73
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_addres_local_offices
+    - field.storage.node.field_latitud_y_longitud
+    - field.storage.node.field_local_staff_list
+    - field.storage.node.field_location_root
+    - field.storage.node.field_lugar
+    - field.storage.node.field_place_type
+    - field.storage.node.field_telefono_verde
+    - field.storage.node.field_working_hours
+    - search_api.server.icbf_solr
+  module:
+    - node
+    - search_api_solr
+third_party_settings:
+  search_api_solr:
+    finalize: false
+    commit_before_finalize: false
+    commit_after_finalize: false
+    debug_finalize: false
+    highlighter:
+      maxAnalyzedChars: 51200
+      fragmenter: gap
+      usePhraseHighlighter: true
+      highlightMultiTerm: true
+      preserveMulti: false
+      regex:
+        slop: 0.5
+        pattern: blank
+        maxAnalyzedChars: 10000
+      highlight:
+        mergeContiguous: false
+        requireFieldMatch: false
+        snippets: 3
+        fragsize: 0
+    mlt:
+      mintf: 1
+      mindf: 1
+      maxdf: 0
+      maxdfpct: 0
+      minwl: 0
+      maxwl: 0
+      maxqt: 100
+      maxntp: 2000
+      boost: false
+      interestingTerms: none
+    term_modifiers:
+      slop: 3
+      fuzzy: 1
+      fuzzy_analyzer: true
+    advanced:
+      index_prefix: ''
+      collection: ''
+      timezone: ''
+    multilingual:
+      limit_to_content_language: false
+      include_language_independent: true
+      use_language_undefined_as_fallback_language: false
+      specific_languages:
+        en: '0'
+        es: '0'
+      use_universal_collation: false
+id: ubicaciones_icbf
+name: 'Ubicaciones ICBF Puntos de atencion '
+description: ''
+read_only: false
+field_settings:
+  field_addres_local_offices:
+    label: 'Dirección sede'
+    datasource_id: 'entity:node'
+    property_path: field_addres_local_offices
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_addres_local_offices
+  field_latitud_y_longitud:
+    label: 'Latitud y Longitud'
+    datasource_id: 'entity:node'
+    property_path: field_latitud_y_longitud
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_latitud_y_longitud
+  field_local_staff_list:
+    label: 'Directores y Encargados'
+    datasource_id: 'entity:node'
+    property_path: field_local_staff_list
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_local_staff_list
+  field_location_root:
+    label: 'Ubicación Raiz'
+    datasource_id: 'entity:node'
+    property_path: field_location_root
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_location_root
+  field_lugar:
+    label: Lugar
+    datasource_id: 'entity:node'
+    property_path: field_lugar
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_lugar
+  field_place_type:
+    label: 'Tipo de Ubicación'
+    datasource_id: 'entity:node'
+    property_path: field_place_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_place_type
+  field_telefono_verde:
+    label: 'Teléfono Verde'
+    datasource_id: 'entity:node'
+    property_path: field_telefono_verde
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_telefono_verde
+  field_working_hours:
+    label: 'Horario de Atención'
+    datasource_id: 'entity:node'
+    property_path: field_working_hours
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_working_hours
+  nid:
+    label: ID
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+    dependencies:
+      module:
+        - node
+  status:
+    label: Publicado
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - node
+  title:
+    label: Título
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    dependencies:
+      module:
+        - node
+  type:
+    label: 'Tipo de contenido'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - node
+  uid:
+    label: 'Escrito por'
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - sede_local
+    languages:
+      default: false
+      selected:
+        - es
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  auto_aggregated_fulltext_field: {  }
+  custom_value: {  }
+  entity_type: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+  solr_date_range: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  delete_on_fail: true
+  index_directly: true
+  track_changes_in_references: true
+server: icbf_solr

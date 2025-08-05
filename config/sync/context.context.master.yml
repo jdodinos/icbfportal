@@ -3,13 +3,13 @@ langcode: es
 status: true
 dependencies:
   content:
-    - 'block_content:basic:2a9d6e8c-2f64-4e57-afcd-11a267e36b52'
     - 'block_content:basic:306d71b1-8c6a-44b6-9c63-41eecd10a216'
     - 'block_content:basic:3731656c-3f12-4308-a0e8-47782413eab1'
     - 'block_content:basic:4beded73-8324-49f2-8438-d520af056eec'
     - 'block_content:basic:9dd6a42d-0f4b-4989-86b7-6405bb91e534'
   module:
     - block_content
+    - custom_solr_search
     - system
     - taxonomy
     - tb_megamenu
@@ -25,7 +25,7 @@ conditions:
     negate: true
     uuid: 906f81f6-5eb0-496f-aa86-63db0eea48e5
     context_mapping: {  }
-    pages: "/backup-home\r\n/ser-papas\r\n/ser-papas/*\r\n/adopciones\r\n/programa-adopciones\r\n/programa-adopciones/*\r\n/adopciones/quienes-pueden-ser-adoptados\r\n/adopciones/quienes-pueden-ser-adoptados/lineamiento\r\n/adopciones/quienes-pueden-adoptar\r\n/adopciones/requisitos-basicos\r\n/adopciones/proceso-de-adopcion\r\n/adopciones/proceso-de-adopcion/etapa-administrativa\r\n/adopciones/proceso-de-adopcion/etapa-judicial\r\n/adopciones/proceso-de-adopcion/seguimiento\r\n/adopciones/paso-paso\r\n/adopciones/instituciones-y-organismos-autorizados\r\n/adopciones/instituciones-organismos/colombia\r\n/adopciones/instituciones-organismos/internacionales\r\n/ninos-y-ninas-home-demo\r\n/ninos-y-ninas\r\n/ninos-y-ninas/*\r\n/adolescentes\r\n/adolescentes/*\r\n/atencion-servicios\r\n/pacto-colombia-con-las-juventudes\r\n/mi-familia-universal\r\n/mi-familia-universal/*"
+    pages: "/backup-home\r\n/ser-papas\r\n/ser-papas/*\r\n/adopciones\r\n/programa-adopciones\r\n/programa-adopciones/*\r\n/adopciones/quienes-pueden-ser-adoptados\r\n/adopciones/quienes-pueden-ser-adoptados/lineamiento\r\n/adopciones/quienes-pueden-adoptar\r\n/adopciones/requisitos-basicos\r\n/adopciones/proceso-de-adopcion\r\n/adopciones/proceso-de-adopcion/etapa-administrativa\r\n/adopciones/proceso-de-adopcion/etapa-judicial\r\n/adopciones/proceso-de-adopcion/seguimiento\r\n/adopciones/paso-paso\r\n/adopciones/instituciones-y-organismos-autorizados\r\n/adopciones/instituciones-organismos/colombia\r\n/adopciones/instituciones-organismos/internacionales\r\n/ninos-y-ninas-home-demo\r\n/ninos-y-ninas\r\n/ninos-y-ninas/*\r\n/adolescentes\r\n/adolescentes/*\r\n/atencion-servicios\r\n/pacto-colombia-con-las-juventudes\r\n/mi-familia-universal\r\n/mi-familia-universal/*\r\n/viajemos-en-familia\r\n/viajemos-en-familia/*\r\n/node/147942\r\n/node/147943\r\n/node/147944\r\n/node/147963\r\n/node/147967\r\n/node/147969\r\n/node/147970\r\n/node/147972\r\n/node/147975\r\n/node/147976\r\n/node/147978\r\n/node/147983\r\n/node/147986\r\n/node/147987\r\n/node/147988\r\n/node/147990\r\n/node/147991\r\n/node/148667\r\n/node/148671\r\n/node/148918\r\n/node/148919\r\n/node/148920\r\n/node/148921\r\n/node/148922\r\n/node/148923\r\n/node/148924\r\n/node/148925\r\n/node/148926\r\n/node/148927\r\n/node/159084\r\n/node/159103\r\n/node/159104\r\n/node/159106\r\n/node/159107\r\n/node/159109\r\n"
   'entity_bundle:taxonomy_term':
     id: 'entity_bundle:taxonomy_term'
     negate: true
@@ -34,6 +34,7 @@ conditions:
       taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
     bundles:
       congreso_xxii: congreso_xxii
+      programa_adopciones: programa_adopciones
 reactions:
   blocks:
     id: blocks
@@ -90,24 +91,6 @@ reactions:
         info: ''
         view_mode: full
         third_party_settings: {  }
-      b286dc33-933c-4bce-adb8-c8701e7bc2f8:
-        uuid: b286dc33-933c-4bce-adb8-c8701e7bc2f8
-        id: 'block_content:2a9d6e8c-2f64-4e57-afcd-11a267e36b52'
-        label: 'Buscador ICBF Avanzado'
-        provider: block_content
-        label_display: '0'
-        region: nav_main
-        weight: '0'
-        custom_id: block_content_2a9d6e8c_2f64_4e57_afcd_11a267e36b52
-        theme: icbf
-        css_class: ''
-        unique: 0
-        context_id: master
-        context_mapping: {  }
-        status: true
-        info: ''
-        view_mode: full
-        third_party_settings: {  }
       17793e5d-fb54-476d-8afb-4a615f39d4ef:
         uuid: 17793e5d-fb54-476d-8afb-4a615f39d4ef
         id: 'block_content:9dd6a42d-0f4b-4989-86b7-6405bb91e534'
@@ -143,6 +126,21 @@ reactions:
         status: true
         info: ''
         view_mode: full
+        third_party_settings: {  }
+      2b6a5d47-cf23-4d16-89fc-8b14cf3c8255:
+        uuid: 2b6a5d47-cf23-4d16-89fc-8b14cf3c8255
+        id: custom_solr_minimal_search_block
+        label: 'Minimal Solr Search Block'
+        provider: custom_solr_search
+        label_display: '0'
+        region: nav_main
+        weight: '0'
+        custom_id: custom_solr_minimal_search_block
+        theme: icbf
+        css_class: ''
+        unique: 0
+        context_id: master
+        context_mapping: {  }
         third_party_settings: {  }
     include_default_blocks: 1
     saved: false

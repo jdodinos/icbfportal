@@ -1,0 +1,89 @@
+uuid: d7be7669-3251-4f41-adf7-0d42a2070206
+langcode: es
+status: true
+dependencies:
+  config:
+    - page_manager.page.panel_de_control_defensores
+    - views.view.panel_control_defensores
+    - views.view.usuarios
+  module:
+    - bootstrap_layouts
+    - views
+id: panel_de_control_defensores-layout_builder-0
+label: 'Layout Builder'
+weight: 0
+variant: layout_builder
+variant_settings:
+  id: layout_builder
+  label: null
+  weight: 0
+  uuid: 393cf052-4fc2-4dda-abf8-6e671b22eccc
+  sections:
+    -
+      layout_id: bs_2col
+      layout_settings:
+        label: ''
+        context_mapping: {  }
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          left:
+            wrapper: div
+            classes:
+              col-xs-12: col-xs-12
+              col-sm-4: col-sm-4
+              col-md-4: col-md-4
+              col-lg-4: col-lg-4
+            add_region_classes: 1
+            attributes: ''
+          right:
+            wrapper: div
+            classes:
+              col-xs-12: col-xs-12
+              col-sm-8: col-sm-8
+              col-md-8: col-md-8
+              col-lg-8: col-lg-8
+            add_region_classes: 1
+            attributes: ''
+        context_visibility: {  }
+        context_all_must_pass: 1
+      components:
+        c4a727d1-de46-4c99-8535-3542a1ca65c2:
+          uuid: c4a727d1-de46-4c99-8535-3542a1ca65c2
+          region: left
+          configuration:
+            id: 'views_block:usuarios-block'
+            label: Defensores
+            label_display: visible
+            provider: views
+            context_mapping: {  }
+            views_label: Defensores
+            items_per_page: none
+          weight: 0
+          additional:
+            context_visibility: {  }
+            context_all_must_pass: 1
+        3e58cf76-5a4b-47cc-8269-e09388ab1ad2:
+          uuid: 3e58cf76-5a4b-47cc-8269-e09388ab1ad2
+          region: right
+          configuration:
+            id: 'views_block:panel_control_defensores-page_block'
+            label: ''
+            label_display: '0'
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 0
+          additional:
+            context_visibility: {  }
+            context_all_must_pass: 1
+      third_party_settings: {  }
+page: panel_de_control_defensores
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

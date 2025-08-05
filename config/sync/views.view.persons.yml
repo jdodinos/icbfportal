@@ -50,7 +50,6 @@ dependencies:
     - 'taxonomy_term:dependencies:5a5e2e0f-3639-45f7-9dcf-6be83eb8f27a'
     - 'taxonomy_term:dependencies:5c3e2554-3cef-46d6-9fa7-7011f15c4b74'
     - 'taxonomy_term:dependencies:61c17a26-a8dd-4d33-8d0d-f955bbe4c444'
-    - 'taxonomy_term:dependencies:6421d802-d1f4-42ab-b33c-6ee0080f1f0a'
     - 'taxonomy_term:dependencies:6698c69c-2ce8-42b5-b8b3-d03dc0ec05aa'
     - 'taxonomy_term:dependencies:69185b8f-d1ab-403a-8085-33611bd3bbe4'
     - 'taxonomy_term:dependencies:6a083eb6-7195-40ce-b36a-72e0200a1bfa'
@@ -77,7 +76,6 @@ dependencies:
     - 'taxonomy_term:dependencies:b5862365-fe47-4a38-bb08-e4b59505e5a3'
     - 'taxonomy_term:dependencies:ba55705a-54a0-41e1-bb3e-e984ed733273'
     - 'taxonomy_term:dependencies:c494b032-b92f-401c-8601-82a1d62e195b'
-    - 'taxonomy_term:dependencies:c5f8b0c5-bc8e-4526-acbc-4fd6ec57b899'
     - 'taxonomy_term:dependencies:c72f82e3-29df-4ee0-bf8d-1da99b7cd18c'
     - 'taxonomy_term:dependencies:cd3bc549-753d-47a3-8165-665ce920900d'
     - 'taxonomy_term:dependencies:d5e1e27d-a981-4b70-90d7-dd0c13596712'
@@ -5060,7 +5058,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: ''
+          empty: '<img typeof="foaf:Image" class="img-responsive" src="https://www.icbf.gov.co/sites/default/files/default_images/user-she.png" width="103" height="103" alt="" title="">'
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -5686,49 +5684,21 @@ display:
           text: Editar
           output_url_as_text: false
           absolute: false
-      filters:
-        type:
-          id: type
-          table: node_field_data
-          field: type
+      sorts:
+        field_file_priority_value:
+          id: field_file_priority_value
+          table: node__field_file_priority
+          field: field_file_priority_value
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          operator: in
-          value:
-            persona: persona
-          group: 1
-          exposed: false
+          plugin_id: standard
+          order: DESC
           expose:
-            operator_id: ''
             label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            field_identifier: ''
+          exposed: false
+      filters:
         field_person_position_value:
           id: field_person_position_value
           table: node__field_person_position
@@ -5957,6 +5927,7 @@ display:
         style: false
         row: false
         fields: false
+        sorts: false
         filters: false
         filter_groups: false
       display_description: 'responsive view'
@@ -7984,8 +7955,8 @@ display:
           label: ''
           exclude: true
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '<div class="photo-staff">{{ field_photo }} </div>'
             make_link: false
             path: ''
             absolute: false
@@ -8018,7 +7989,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: ''
+          empty: '<img typeof="foaf:Image" class="img-responsive" src="https://www.icbf.gov.co/sites/default/files/default_images/user-she.png" width="103" height="103" alt="" title="">'
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -8087,7 +8058,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: ''
+          empty: '<img typeof="foaf:Image" class="img-responsive" src="https://www.icbf.gov.co/sites/default/files/default_images/user-she.png" width="103" height="103" alt="" title="">'
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -8656,48 +8627,6 @@ display:
           group: 1
           expose:
             operator: ''
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          operator: in
-          value:
-            persona: persona
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
         field_person_position_value:
           id: field_person_position_value
           table: node__field_person_position
@@ -8746,6 +8675,134 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: string
+          operator: word
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: title_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: title_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: title
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrador_funcional: '0'
+              content_editor: '0'
+              administrator: '0'
+              administrador_icbf: '0'
+              administrador_infraestructura: '0'
+              admin_webforms: '0'
+              adopciones: '0'
+              abastecimiento: '0'
+              aseguramiento_calidad: '0'
+              citaciones: '0'
+              comunicaciones: '0'
+              contratacion: '0'
+              contratacion_regionales: '0'
+              convocatoria: '0'
+              constructor_glazed_b: '0'
+              defensor_de_familia: '0'
+              documentos: '0'
+              documentos_micrositiios: '0'
+              editor_contenidos_vip_: '0'
+              editor_transparencia: '0'
+              editor_micrositios: '0'
+              editor_ninos_y_ninas: '0'
+              encargos: '0'
+              evaluacion: '0'
+              gestion_humana: '0'
+              informacion_transparencia: '0'
+              juridica: '0'
+              planeacion: '0'
+              mejoramiento_sige: '0'
+              noticias: '0'
+              noticias_compras_locales: '0'
+              notificaciones_coactivos: '0'
+              observatorio_de_bienestar: '0'
+              servicios_docs_derechos_peticion_puntos_atencion_: '0'
+              servicios_portafolio_: '0'
+              sede_direccion_general: '0'
+              regional_amazonas: '0'
+              regional_antioquia: '0'
+              regional_arauca: '0'
+              regional_atlantico: '0'
+              regional_bogota: '0'
+              regional_boyaca: '0'
+              regional_bolivar: '0'
+              regional_caldas: '0'
+              regional_caqueta: '0'
+              regional_casanare: '0'
+              regional_cauca: '0'
+              regional_cesar: '0'
+              regional_choco: '0'
+              regional_cordoba: '0'
+              regional_cundinamarca: '0'
+              regional_la_guajira: '0'
+              regional_guainia: '0'
+              regional_guaviare: '0'
+              regional_huila: '0'
+              regional_magdalena: '0'
+              regional_meta: '0'
+              regional_narino: '0'
+              regional_norte_de_santander: '0'
+              regional_putumayo: '0'
+              regional_quindio: '0'
+              regional_risaralda: '0'
+              regional_san_andres: '0'
+              regional_santander: '0'
+              regional_sucre: '0'
+              regional_tolima: '0'
+              regional_valle: '0'
+              regional_vaupes: '0'
+              regional_vichada: '0'
+              migracion: '0'
+              web_master: '0'
+              rendicion_de_cuentas: '0'
+              rol_1: '0'
+              administrador_funcional_ajustado: '0'
+              transparencia_contenidos: '0'
+              administrar_datos_ninos_migrantes_venezolanos: '0'
+              eventos_calendario: '0'
+            placeholder: ''
+            autocomplete_filter: 0
+            autocomplete_min_chars: '0'
+            autocomplete_items: '10'
+            autocomplete_field: title
+            autocomplete_raw_suggestion: 1
+            autocomplete_raw_dropdown: 1
+            autocomplete_dependent: 0
+            autocomplete_contextual: 0
+            autocomplete_autosubmit: 0
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
         field_person_area_target_id:
           id: field_person_area_target_id
           table: node__field_person_area
@@ -8755,45 +8812,7 @@ display:
           admin_label: ''
           plugin_id: taxonomy_index_tid
           operator: or
-          value:
-            6429: 6429
-            6132: 6132
-            6136: 6136
-            6134: 6134
-            6131: 6131
-            7747: 7747
-            6142: 6142
-            6442: 6442
-            6138: 6138
-            6135: 6135
-            6444: 6444
-            6133: 6133
-            6152: 6152
-            6150: 6150
-            6149: 6149
-            6147: 6147
-            6146: 6146
-            6137: 6137
-            6148: 6148
-            6441: 6441
-            6445: 6445
-            6446: 6446
-            6433: 6433
-            6436: 6436
-            6430: 6430
-            6141: 6141
-            6437: 6437
-            6431: 6431
-            6434: 6434
-            6140: 6140
-            7748: 7748
-            6143: 6143
-            6440: 6440
-            6439: 6439
-            6144: 6144
-            6438: 6438
-            6435: 6435
-            6432: 6432
+          value: {  }
           group: 1
           exposed: true
           expose:
@@ -8888,7 +8907,7 @@ display:
               transparencia_contenidos: '0'
               administrar_datos_ninos_migrantes_venezolanos: '0'
               eventos_calendario: '0'
-            reduce: true
+            reduce: false
           is_grouped: false
           group_info:
             label: ''
@@ -8904,9 +8923,51 @@ display:
           reduce_duplicates: false
           vid: dependencies
           type: select
-          hierarchy: false
+          hierarchy: true
           limit: true
           error_message: true
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            persona: persona
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
       filter_groups:
         operator: AND
         groups:

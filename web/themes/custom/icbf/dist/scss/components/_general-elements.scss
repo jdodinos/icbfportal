@@ -1,5 +1,94 @@
 @use "../abstracts/variables" as var;
 
+
+
+
+.block-page-title-block {
+    max-width: 1150px;
+    margin: 1.5em auto
+}
+
+table {
+    --bs-table-bg: inherit !important;
+    background-color: transparent;
+}
+
+
+.block-views-blockdocuments-block-8 {
+    width: 70%;
+    margin: auto;
+
+    table {
+        border: 1px solid #dddddd;
+        color: #555;
+        font-family: 'Montserrat';
+    }
+
+    h2 {
+        font-family: 'Montserrat';
+        line-height: normal !important;
+    }
+
+    .views-field-field-document div {
+        color: #555;
+        font-family: 'Montserrat';
+    }
+
+    a {
+        font-family: 'Asap-Regular';
+    }
+
+}
+
+.page-estadisticas {
+    h2 {
+        font-family: var.$font-asap-regular;
+    }
+
+    .btn {
+        font-family: var.$font-montserrat-regular;
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
+
+.page-proveedores-icbf-0 {
+    .views-field.views-field-field-introduction-text {
+        font-family: var.$font-montserrat-regular;
+    }
+}
+
+.page-es-hora-de-cambiar {
+    p {
+        font-family: var.$font-montserrat-regular;
+    }
+
+    h3 {
+        font-family: var.$font-asap-regular;
+        font-size: 1.2em;
+        font-weight: 500;
+        line-height: 1.1;
+    }
+
+    .block-field-blocknodepagefield-content {
+        .az-column.col-sm-4 {
+            .az-ctnr.container {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.word-gral {
+    color: #6b6b6b;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    line-height: initial;
+    margin: auto;
+    padding: 1.2em 0;
+    word-break: break-word;
+}
+
 .custom-title {
     margin-bottom: 1em;
 
@@ -247,4 +336,77 @@
     color: #333;
     background-color: #e6e5e5;
     border-color: #adadad;
+}
+
+
+.page-mensaje-confirmacion-whatsapp,
+.page-mensaje-de-confirmacion-pqrs,
+.page-mensaje-charla-legal-adopciones {
+
+    .layout.layout--onecol {
+        margin: 2rem 0;
+    }
+
+    .az-element.az-ctnr.az-column.col-sm-12 {
+        padding: 0;
+    }
+
+    #block-page-title-block {
+        display: none;
+    }
+
+    .messages__list {
+        display: none;
+    }
+
+    .node--view-mode-full .field__item p {
+        margin: 0 0 10px;
+    }
+
+    p {
+        font-family: var.$font-montserrat-regular;
+        line-height: 1.6em;
+    }
+
+    .btn {
+        font-size: 14px;
+        font-family: var.$font-montserrat-regular;
+        padding: 6px 12px;
+        background: #F0F0F0;
+    }
+
+    .btn-default {
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc;
+        &:hover {
+            color: #333;
+            background-color: #e6e5e5;
+            border-color: #adadad;
+        }
+    }
+
+    .btn-default {
+        margin-left: 5%;
+    }
+
+    .modal-footer {
+        padding: 15px;
+        text-align: right;
+        border-top: 1px solid #e5e5e5;
+    }
+
+    .btn-primary {
+        font-size: 14px;
+        font-family: var.$font-montserrat-regular;
+        padding: 6px 12px;
+        background: #337ab7;
+        border-color: #2e6da4;
+
+        &:hover {
+            color: #fff;
+            background-color: #286090;
+            border-color: #204d74;
+        }
+    }
 }

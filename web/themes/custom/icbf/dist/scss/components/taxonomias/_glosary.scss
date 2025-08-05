@@ -1,0 +1,106 @@
+@use "../../abstracts/variables" as var;
+@use 'sass:map';
+
+.generic-title {
+  font-family: var.$Asap;
+  font-size: 1.7em;
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.page-glosario-de-terminos-icbf {
+  .view-glosario-icbf {
+    &.view-id-glosario_icbf {
+      display: flex;
+      flex-wrap: wrap;
+
+      .view-filters {
+        min-width: 100%;
+        position: relative;
+
+        .form-item-search-api-fulltext {
+          max-width: 200px;
+
+          label {
+            font-family: var.$font-asap-regular;
+            font-weight: 700;
+          }
+        }
+
+        .form-item-field-tags {
+          .bef-links {
+            ul {
+              list-style: none;
+              padding-left: 0;
+              width: 100%;
+
+
+              li {
+                display: inline-block;
+
+                &:nth-child(1) { display: none; }
+                &:after { content: '|'; }
+                &:last-child {
+                  &::after { content: ''; }
+                }
+
+                a {
+                  padding: 5px;
+                  position: relative;
+
+                  &.bef-link--selected {
+                    &:after {
+                      content: "";
+                      position: absolute;
+                      bottom: 3px;
+                      left: 2px;
+                      border-bottom: 1px solid #1281ba;
+                      width: 40%;
+                    }
+                  }
+
+                  .letter { color: #1281ba}
+                  .number { color: #555; }
+                }
+              }
+            }
+          }
+        }
+
+        .button.form-submit {
+          position: absolute;
+          top: 28px;
+          left: 220px;
+          color: var.$color-primary-white;
+          background-color: #5bc0de;
+          border-color: #46b8da;
+          padding: 6px 12px;
+
+          &[name="reset"] {
+            left: 290px;
+            color: #333;
+            background-color: var.$color-primary-white;
+            border-color: #ccc;
+          }
+        }
+      }
+
+      .view-content {
+        .views-field-title {
+          a {
+            color: var.$color-text-green;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2em;
+            font-weight: 500;
+          }
+        }
+      }
+
+      .pager {
+        margin-left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+}
