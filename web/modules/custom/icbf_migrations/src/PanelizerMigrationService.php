@@ -480,6 +480,7 @@ class PanelizerMigrationService {
           'top---rpc1' => 'TOp RPC 1',
           'bottom-rpc1' => 'Bann- Informe final RPC',
           'nombramientos---button-archive' => 'Nombramientos - Button Archive',
+          'mapa-de-colombia---calendario-mp' => 'Mapa de Colombia - Calendario MP',
         ];
         if (array_key_exists($block_id, $particular_blocks)) {
           $block_title = $particular_blocks[$block_id];
