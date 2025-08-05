@@ -1274,6 +1274,10 @@ ul.m4 li {
                     }
                 }
             }
+
+            ul li.list-group-item {
+                border: 1px solid #ddd !important;
+            }
         }
     }
 

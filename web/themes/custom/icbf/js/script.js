@@ -436,33 +436,14 @@ $(document).ready(function () {
 
 
 
-//funcionalidad de filtros para doble tablas (se oculta el segundo filtro pero se debe activar con el primero)
-// Espera a que el DOM esté listo
-/*
+
 $(document).ready(function () {
-  const $pagina = $('.page-id-8031');
+  const $collapsePage = $('.page-id-6905 div.panel-collapse.collapse');
 
-  if ($pagina.length) {
-    // field_dae_year → field_date
-    $pagina.find('input[name="field_dae_year"]').on('change', function () {
-      const valor = $(this).val();
-      $pagina.find('input[name="field_date"]').each(function () {
-        if ($(this).val() === valor) {
-          $(this).prop('checked', true).trigger('change');
-        }
-      });
-    });
-
-    // field_date → field_dae_year
-    $pagina.find('input[name="field_date"]').on('change', function () {
-      const valor = $(this).val();
-      $pagina.find('input[name="field_dae_year"]').each(function () {
-        if ($(this).val() === valor) {
-          $(this).prop('checked', true).trigger('change');
-        }
-      });
-    });
+  if ($collapsePage.length) {
+    //añado la clase
+    $collapsePage.addClass('show');
   }
-});*/
+});
 
 
