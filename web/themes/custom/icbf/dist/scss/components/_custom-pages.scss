@@ -154,6 +154,12 @@
         display: none;
     }
 
+    .slick-track div.slick-slide{
+        width: 220px !important;
+        >div >div.owl-item >.az-element{
+            width: 220px !important;
+        }
+    } 
 
 
     a.btn.stpe-outlinebutton.glazed-util-border-white.glazed-util-color-white.glazed-util-hover-border-white.glazed-util-hover-background-white.glazed-util-hover-color-primary.btn-block:hover {
@@ -176,7 +182,8 @@
         color: #ffffff;
         border-color: #019bbc;
         border-radius: 20px;
-        font-size: 12px;
+        font-size: 1.2rem;
+        font-family: 'Montserrat', sans-serif !important;
         padding: 0.5rem 1rem;
     }
 
