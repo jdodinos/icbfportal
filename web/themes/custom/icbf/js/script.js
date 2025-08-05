@@ -60,6 +60,16 @@ $ = jQuery;
         }
       }
 
+      if (($('body.page-id-1241').length || $('body.page-id-8162').length) && !$('.layout-builder-form').length) {
+        if ($('.block-block-content87cf2944-7f67-4699-9371-02878a25afea').length) {
+          var $block_buttons = $('.block-block-content87cf2944-7f67-4699-9371-02878a25afea');
+
+          $('.view-id-documentos_g_humana_sapi .view-filters').append($block_buttons);
+
+        }
+
+      }
+
       // Función recalcular submenu Adopciones
       function recalcularSubmenus() {
         const pageSelectors = [
@@ -123,197 +133,155 @@ $ = jQuery;
   Drupal.behaviors.owlInit = {
     attach: function (context, settings) {
       if (context === document) {
+        var wrapper_slider = '.icbf-owl-carousel-wrapper';
+        var slide_settings = {
+          infinite: true,
+          speed: 500,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          dots: true,
+        }
 
         if ($('.block-block-content5712aaa6-336a-4df9-b947-c66cd32d67fe').length) {
           // Cards del HOME.
-          $('#hgepm7aq .icbf-owl-carousel-wrapper').slick({
-            infinite: false,
-            speed: 300,
-            slidesToShow: 5,
-            slidesToScroll: 5,
-            arrows: false,
-            dots: false,
-            responsive: [
-              {
-                breakpoint: 1024,
-                settings: {
-                  slidesToShow: 5,
-                  slidesToScroll: 5
-                }
-              },
-              {
-                breakpoint: 768,
-                settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 2
-                }
-              },
-              {
-                breakpoint: 600,
-                settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1,
-                  infinite: true
-                }
+          wrapper_slider = '#hgepm7aq .icbf-owl-carousel-wrapper';
+          slide_settings.infinite = false;
+          slide_settings.speed = 300;
+          slide_settings.slidesToShow = 5;
+          slide_settings.slidesToScroll = 5;
+          slide_settings.arrows = false;
+          slide_settings.dots = false;
+          slide_settings.responsive = [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 5,
+                slidesToScroll: 5
               }
-            ]
-          });
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true
+              }
+            }
+          ];
         }
         else if ($('#xisegdle').length) {
           // Bloque superior de preguntas frecuentes.
-          $('#xisegdle .icbf-owl-carousel-wrapper').slick({
-            infinite: false,
-            autoplay: true,
-            autoplaySpeed: 3000,
-            speed: 300,
-            slidesToShow: 5,
-            slidesToScroll: 1,
-            arrows: true,
-            dots: true
-          });
+          wrapper_slider = '#xisegdle .icbf-owl-carousel-wrapper';
+          slide_settings.infinite = false;
+          slide_settings.speed = 300;
+          slide_settings.slidesToShow = 5;
+          slide_settings.autoplay = true;
+          slide_settings.autoplaySpeed = 3000;
         }
         else if ($('#5qgon8wb').length) {
-          $('#5qgon8wb .icbf-owl-carousel-wrapper').slick({
-            infinite: false,
-            autoplay: true,
-            autoplaySpeed: 3000,
-            speed: 300,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: true,
-            dots: true
-          });
+          wrapper_slider = '#5qgon8wb .icbf-owl-carousel-wrapper';
+          slide_settings.infinite = false;
+          slide_settings.speed = 300;
         }
         else if ($('#stpe-quoteslider').length) {
           // Slider inferior pagina Participa.
-          $('#stpe-quoteslider .icbf-owl-carousel-wrapper').slick({
-            infinite: true,
-            speed: 1000,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: true,
-            fade: true
-          });
+          wrapper_slider = '#stpe-quoteslider .icbf-owl-carousel-wrapper';
+          slide_settings.speed = 1000;
+          slide_settings.arrows = false;
+          slide_settings.fade = true;
         }
         else if ($('.page-id-6662').length || $('.page-id-8077').length) {
-          $(' .icbf-owl-carousel-wrapper').slick({
-            infinite: true,
-            speed: 500,
-            autoplay: true,
-            autoplaySpeed: 3000,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: true,
-            dots: true
-          });
+          slide_settings.autoplay = true;
+          slide_settings.autoplaySpeed = 3000;
         }
         else if ($('.page-id-1233 #qzywunrj').length) {
-          const $carousel = $('.page-id-1233 #qzywunrj .icbf-owl-carousel-wrapper');
-
-          // Inicializa Slick
-          $carousel.slick({
-            fade: true,
-            infinite: true,
-            speed: 1000,
-            autoplaySpeed: 4000,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            arrows: true,
-            dots: true
-          });
+          wrapper_slider = '.page-id-1233 #qzywunrj .icbf-owl-carousel-wrapper';
+          slide_settings.speed = 1000;
+          slide_settings.autoplay = true;
+          slide_settings.autoplaySpeed = 4000;
+          slide_settings.fade = true;
         }
         else if ($('#6gy1mn3w').length) {
-          $('#6gy1mn3w .icbf-owl-carousel-wrapper').slick({
-            infinite: true,
-            speed: 1000,
-            autoplaySpeed: 12000,
-            slidesToShow: 5,
-            slidesToScroll: 5,
-            autoplay: true,
-            arrows: false,
-            dots: false,
-            responsive: [
-              {
-                breakpoint: 1024,
-                settings: {
-                  slidesToShow: 5,
-                  slidesToScroll: 1
-                }
-              },
-              {
-                breakpoint: 768,
-                settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 1
-                }
-              },
-              {
-                breakpoint: 600,
-                settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1,
-                }
+          wrapper_slider = '#6gy1mn3w .icbf-owl-carousel-wrapper';
+          slide_settings.speed = 1000;
+          slide_settings.slidesToShow = 5;
+          slide_settings.slidesToScroll = 5;
+          slide_settings.arrows = false;
+          slide_settings.dots = false;
+          slide_settings.autoplay = true;
+          slide_settings.autoplaySpeed = 12000;
+          slide_settings.responsive = [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 5,
+                slidesToScroll: 1
               }
-            ]
-          });
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              }
+            }
+          ];
         }
         else if ($('.page-adopciones-quienes-pueden-ser-adoptados .icbf-owl-carousel-wrapper').length) {
-          $('.icbf-owl-carousel-wrapper').slick({
-            infinite: true,
-            speed: 500,
-            slidesToShow: 5,
-            autoplay: true,
-            autoplaySpeed: 12000,
-            slidesToScroll: 1,
-            arrows: true,
-            dots: true,
-            responsive: [
-              {
-                breakpoint: 1024,
-                settings: {
-                  slidesToShow: 5,
-                }
-              },
-              {
-                breakpoint: 992,
-                settings: {
-                  slidesToShow: 4,
-                }
-              },
-              {
-                breakpoint: 860,
-                settings: {
-                  slidesToShow: 3,
-                }
-              },
-              {
-                breakpoint: 768,
-                settings: {
-                  slidesToShow: 2,
-                }
-              },
-              {
-                breakpoint: 600,
-                settings: {
-                  slidesToShow: 1,
-                  infinite: true
-                }
+          slide_settings.slidesToShow = 5;
+          slide_settings.autoplay = true;
+          slide_settings.autoplaySpeed = 12000;
+          slide_settings.responsive = [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 5,
               }
-            ]
-          });
+            },
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 4,
+              }
+            },
+            {
+              breakpoint: 860,
+              settings: {
+                slidesToShow: 3,
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2,
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 1,
+                infinite: true
+              }
+            }
+          ];
         }
-        else {
-          $('.icbf-owl-carousel-wrapper').slick({
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: true,
-            dots: true,
-          });
-        }
+
+        $(wrapper_slider).slick(slide_settings);
       };
     }
   };
