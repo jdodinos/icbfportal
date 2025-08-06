@@ -154,12 +154,21 @@
         display: none;
     }
 
-    .slick-track div.slick-slide{
-        width: 220px !important;
-        >div >div.owl-item >.az-element{
-            width: 220px !important;
-        }
-    } 
+
+    .icbf-owl-carousel-wrapper{
+        width: 98.3% !important;
+    }
+
+    .slick-track{
+        min-width: max-content !important;
+        div.slick-slide{
+            width: 230px !important;
+            >div >div.owl-item >.az-element{
+                width: 220px !important;
+            }
+        } 
+    }
+    
 
 
     a.btn.stpe-outlinebutton.glazed-util-border-white.glazed-util-color-white.glazed-util-hover-border-white.glazed-util-hover-background-white.glazed-util-hover-color-primary.btn-block:hover {
