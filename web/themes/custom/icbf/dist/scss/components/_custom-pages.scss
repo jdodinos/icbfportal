@@ -19,6 +19,12 @@
 }
 
 .page-id-7194 {
+
+    .view-display-id-block_page_1{
+        grid-template-rows: .5fr .0fr !important;
+        min-height: fit-content;
+    }
+
     .layout__region.layout__region--content {
         background-image: url("/sites/default/files/bg-blue-canales_1.jpg");
         background-position: center bottom;
