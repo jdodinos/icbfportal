@@ -76,6 +76,12 @@
                 position: relative;
                 left: -45vw !important;
                 width: 80vw !important;
+
+                .az-ctnr >.az-element >div {
+                    margin: 1em auto;
+                    width: 70%;
+                }
+
                 .mega-dropdown-inner{
                     width: 75vw;
     
@@ -95,6 +101,27 @@
                         .m20-cunt{
                             >div{
                                 width: 100% !important;
+                                margin: 1em 0;
+                            }
+
+                            .m20-canal{
+                                margin: 2em 0 !important;
+
+                                .m20-icon-c{
+                                    a{
+                                        padding: 0px !important;
+                                    }
+                                    img{
+                                        min-width: 38px !important;
+                                        min-height: 38px !important;
+                                    }
+                                }
+                                .m20-info{
+                                    a {
+                                        padding: 1px !important;
+                                    }
+                                    max-height: fit-content !important;
+                                }
                             }
                         }
                     }
