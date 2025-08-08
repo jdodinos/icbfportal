@@ -35,6 +35,9 @@
     }
 
     .block-views-blockdocumentos-g-humana-sapi-block-1{
+        
+        margin-top: 30px;
+
         h2{
             font-family: var.$font-montserrat;
             margin: 0 0 20px;
@@ -51,7 +54,22 @@
     }
 
     .view-documentos-g-humana-sapi{
-        
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        .view-filters{
+            float: none;
+            width: calc(100% / 12 * 3);
+        }
+
+        .view-content{
+            width: calc((100% / 12 * 9) - 30px);
+        }
+
+        .pager{
+            width: 100%;
+        }
     }
 
 }
@@ -107,6 +125,35 @@
             padding: 10px;
             &:not(:last-child){
                 border-bottom: 2px solid #ddd;
+            }
+        }
+    }
+
+    .block-views-blockdocumentos-g-humana-sapi-block-16{
+
+        margin-top: 30px;
+        
+        h2{
+            font-family: var.$font-montserrat;
+            margin: 0 0 20px;
+        }
+
+        .view-display-id-block_16{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+
+            .view-filters{
+                float: none;
+                width: calc(100% / 12 * 3);
+            }
+
+            .view-content{
+                width: calc((100% / 12 * 9) - 30px);
+            }
+
+            .pager{
+                width: 100%;
             }
         }
     }
