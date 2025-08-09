@@ -447,3 +447,33 @@ $(document).ready(function () {
 });
 
 
+
+$(function() {
+  const $menuRegion = $(".region-nav-main .tb-megamenu-nav");
+
+  // Solo ejecutar si el ancho es <= 992px
+  if (window.matchMedia("(max-width: 992px)").matches && $menuRegion.length) {
+
+    //Poner al mismo nivel la etiqueta a y el span.caret
+    const $caret = $menuRegion.find('a .caret');
+    $caret.each(function() {
+      $(this).insertAfter($(this).parent('a'));
+    });
+    
+
+    //aunque haya hover o focus sobre la etiqueta a, no se abrira el submenu
+    $menuRegion.on("mouseenter mouseleave focus", "a.dropdown-toggle", function() {
+      $menuRegion.find("li.tb-megamenu-item").removeClass("open");
+    });
+
+    //al hacer click sobre span.caret abre o cierra el submenu
+    $menuRegion.on('click', 'span.caret', function(e) {
+      e.preventDefault(); // Evita que siga el enlace
+      var $li = $(this).closest('li');
+
+      // Alterna la clase 'open' solo en este li
+      $li.toggleClass('open');
+    });
+  }
+});
+
