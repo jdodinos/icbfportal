@@ -52,6 +52,11 @@
             max-width: 40vw !important;
             padding: 1em .1em !important;
             border-bottom: 1px solid #d9d9d9;
+
+            /*
+            .tb-megamenu-submenu{
+                display: none !important;
+            }*/
             
             &:not(:first-child){
                 >a{
@@ -64,8 +69,21 @@
                 border: 0 !important;
                 font-size: .94em;
                 padding: 0 0 1px;
-                &:hover{
+                &:hover, &:focus{
                     color: #004686 !important;
+                    background-color: #fcfcfc !important;
+
+                    span.caret{
+                        border-top-color: #666;
+                        border-bottom-color: #666;
+                    }
+                }
+
+                span.caret {
+                    display: inline-block !important;
+                    min-width: 8px;
+                    min-height: 8px;
+                    margin: 0;
                 }
 
             } 
@@ -138,9 +156,15 @@
                 }
             }
 
-            &.open >.dropdown-toggle{
-                background-color: #fff;
-            }
+            &.open{
+                >.dropdown-toggle{
+                    background-color: #fcfcfc;
+                }
+                span.caret{
+                    border-top-color: #666;
+                    border-bottom-color: #666;
+                }
+            } 
         } 
     }
 }
