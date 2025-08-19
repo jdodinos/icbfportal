@@ -1,6 +1,9 @@
 @use "../abstracts/variables" as var;
 
 .page-planeacion-modelo-de-operacion-por-procesos{
+    .block-page-title-block {
+        display: none;
+    }
     .layout--onecol{
         .layout__region--content{
             display: grid;
