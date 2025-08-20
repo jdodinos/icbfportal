@@ -10533,7 +10533,7 @@ a.icon-after .glyphicon {
 
 body {
   color: #555;
-  font-family: Asap, sans-serif;
+  font-family: 'Asap-Regular', sans-serif;
   line-height: 1.4em
 }
 
@@ -10577,7 +10577,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: Asap
+  font-family: 'Asap-Regular'
 }
 
 h1 {
@@ -13339,7 +13339,7 @@ h4 {
   margin: 0 !important
 }
 
-@import url(https://fonts.googleapis.com/css?family=Asap:400,700,400italic,700italic&subset=latin,latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Asap:400,700,400,700&subset=latin,latin-ext);
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700&subset=latin-ext');
 
@@ -17726,7 +17726,7 @@ area {
   border-top: 1px solid #666;
   font-size: 14px;
   padding-top: 6px;
-  font-family: 'Asap', sans-serif
+  font-family: 'Asap-Regular', sans-serif
 }
 
 .maps {
@@ -18171,7 +18171,7 @@ a.tooltipv:hover span {
   -moz-border-radius: 4px;
   background-color: #333;
   color: #fff;
-  font-family: 'Asap', sans-serif;
+  font-family: 'Asap-Regular', sans-serif;
   font-size: .95em;
   word-wrap: break-word
 }

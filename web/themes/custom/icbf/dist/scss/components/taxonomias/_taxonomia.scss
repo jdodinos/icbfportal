@@ -32,7 +32,7 @@
     padding-bottom: 9px;
     margin-top: 0;
     margin-bottom: 20px;
-    font-family: var.$Asap;
+    font-family: var.$font-asap-regular;
   }
 
   .field--label-above {
@@ -58,7 +58,7 @@
     padding: 0;
 
     &.node__meta {
-      font-family: var.$Asap;
+      font-family: var.$font-asap-regular;
       font-weight: 400;
       color: #777;
 
@@ -84,7 +84,7 @@
 
   .field__item {
     font-size: 14px;
-    font-family: "Asap";
+    font-family: var.$font-asap-regular;
     color: var.$color-text-gray;
 
     p {
@@ -270,12 +270,14 @@
     font-family: var.$font-montserrat;
   }
 
-  a, a:link {
+  a,
+  a:link {
     color: #1996d0;
     text-decoration: none !important;
   }
 
-  a.active, a:hover {
+  a.active,
+  a:hover {
     color: #125e81;
     text-decoration: underline !important;
   }
@@ -430,14 +432,16 @@
 }
 
 
-.vocabulary-sige-process-type{
+.vocabulary-sige-process-type {
   font-family: var.$font-montserrat;
-  a{
+
+  a {
     font-family: var.$font-montserrat;
   }
+
   .bs-1col,
-  .bs-2col{
-    h2{
+  .bs-2col {
+    h2 {
       background-color: #f7f7f7;
       padding: 5px;
       font-weight: 700;
@@ -449,8 +453,8 @@
   .file,
   .file--application-pdf,
   .file--x-office-document,
-  .file--x-office-spreadsheet{
-    a{
+  .file--x-office-spreadsheet {
+    a {
       font-family: var.$font-asap-regular;
       font-weight: 500;
       font-size: 15.4px;
