@@ -347,6 +347,18 @@
     }
 }
 
+.page-bienestar-nutricion{
+    .block-field-blocktaxonomy-termsecctionsfield-content{
+        .az-ctnr.container {
+            display: flex;
+
+            >.az-element:nth-child(3) {
+                width: 100%;
+            }
+        }
+    }
+}
+
 .page-programas-y-estrategias-direccion-de-infancia {
 
     .block-views-blockmisional-ninez-y-adolescencia-block-l1inf,
