@@ -997,12 +997,14 @@
         }
     }
 
-    .layout:nth-child(n+5):nth-child(-n+7),
-    .layout:nth-child(4) h2 {
-        background-color: #f5f5f5;
-
-        .n-ltrasversals {
-            box-shadow: 0.1px 0.1px 3px #80808075;
+    .content{
+        .layout:nth-child(n+5):nth-child(-n+7),
+        .layout:nth-child(4){
+            background-color: #f5f5f5;
+    
+            .n-ltrasversals {
+                box-shadow: 0.1px 0.1px 3px #80808075;
+            }
         }
     }
 
