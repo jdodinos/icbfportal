@@ -94,7 +94,7 @@
             >.tb-megamenu-submenu{//:hover
                 position: relative;
                 left: -45vw !important;
-                width: 80vw !important;
+                min-width: 80vw !important;
 
                 .az-ctnr >.az-element >div {
                     margin: 1em auto;
