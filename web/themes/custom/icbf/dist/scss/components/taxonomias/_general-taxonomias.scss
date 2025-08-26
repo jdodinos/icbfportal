@@ -506,198 +506,202 @@
         4: (url: "https://www.icbf.gov.co/sites/default/files/fyc-icondoc1_03.png", size: 55px)
     );
 
-#block-icbf-content {
-
-
-    .content {
-        >div:nth-child(2) {
-            margin: 4px auto;
+    #block-icbf-content {
+    
+        .block-views-blockdocuments-for-microsites-block-dfyc1 {
             display: inline-block;
-            border-top: 1px solid #00000024;
-            border-bottom: 1px solid #00000024;
-
-            .block-views-blockmisional-ninez-y-adolescencia-block-2fyc {
-                #quicktabs-misional-ninez-y-adolescencia {
-                    .item-list {
-                        display: flex;
-                        justify-content: center;
-
-                        ul {
+            height: fit-content;
+        }
+    
+        .content {
+            >div:nth-child(2) {
+                margin: 4px auto;
+                display: inline-block;
+                border-top: 1px solid #00000024;
+                border-bottom: 1px solid #00000024;
+    
+                .block-views-blockmisional-ninez-y-adolescencia-block-2fyc {
+                    #quicktabs-misional-ninez-y-adolescencia {
+                        .item-list {
                             display: flex;
-                            flex-wrap: wrap;
                             justify-content: center;
-
-                            @for $i from 1 through 3 {
-                                li:nth-child(#{$i}) {
-                                    background-color: #cecece36;
-                                    padding: 8px;
-                                    font-weight: 600;
-                                    $icon: map.get($icons, $i);
-
-                                    a::before {
-                                        background: url(map.get($icon, url)) center no-repeat !important;
-                                        background-size: map.get($icon, size) !important;
-                                        content: "";
-                                        display: block;
-                                        height: 55px;
-                                        margin: auto;
-                                        padding: 0;
-                                        width: 55px;
-                                    }
-
-                                    a {
-                                        color: #407021;
-                                        text-decoration: underline;
-                                    }
-
-                                    a:hover {
-                                        color: #fff;
-                                        text-decoration: underline;
-                                    }
-
-                                    a:focus,
-                                    a:active {
-                                        outline: none;
-                                        box-shadow: none;
-                                        text-decoration: underline;
+    
+                            ul {
+                                display: flex;
+                                flex-wrap: wrap;
+                                justify-content: center;
+    
+                                @for $i from 1 through 3 {
+                                    li:nth-child(#{$i}) {
+                                        background-color: #cecece36;
+                                        padding: 8px;
+                                        font-weight: 600;
+                                        $icon: map.get($icons, $i);
+    
+                                        a::before {
+                                            background: url(map.get($icon, url)) center no-repeat !important;
+                                            background-size: map.get($icon, size) !important;
+                                            content: "";
+                                            display: block;
+                                            height: 55px;
+                                            margin: auto;
+                                            padding: 0;
+                                            width: 55px;
+                                        }
+    
+                                        a {
+                                            color: #407021;
+                                            text-decoration: underline;
+                                        }
+    
+                                        a:hover {
+                                            color: #fff;
+                                            text-decoration: underline;
+                                        }
+    
+                                        a:focus,
+                                        a:active {
+                                            outline: none;
+                                            box-shadow: none;
+                                            text-decoration: underline;
+                                        }
                                     }
                                 }
-                            }
-
-                            li:hover {
-                                background-color: #407021;
+    
+                                li:hover {
+                                    background-color: #407021;
+                                }
                             }
                         }
                     }
-                }
-
-                .quicktabs-tabpage {
-
-                    //#quicktabs-tabpage-misional-ninez-y-adolescencia-0, #quicktabs-tabpage-misional-ninez-y-adolescencia-0{
-                    .views-field-field-subtitle {
-                        color: #407021;
-                        font-size: 1.4em;
-                        font-weight: 600;
-                        margin-bottom: 1em;
+    
+                    .quicktabs-tabpage {
+    
+                        //#quicktabs-tabpage-misional-ninez-y-adolescencia-0, #quicktabs-tabpage-misional-ninez-y-adolescencia-0{
+                        .views-field-field-subtitle {
+                            color: #407021;
+                            font-size: 1.4em;
+                            font-weight: 600;
+                            margin-bottom: 1em;
+                        }
                     }
                 }
             }
-        }
-
-        >div:nth-child(3) {
-            .block-views-blockmisional-ninez-y-adolescencia-block-3fyc {
-                #quicktabs-misional-ninez-y-adolescencia {
-                    .item-list {
-                        display: flex;
-                        justify-content: center;
-
-                        ul {
+    
+            >div:nth-child(3) {
+                .block-views-blockmisional-ninez-y-adolescencia-block-3fyc {
+                    #quicktabs-misional-ninez-y-adolescencia {
+                        .item-list {
                             display: flex;
-                            flex-wrap: wrap;
                             justify-content: center;
-
-                            @for $i from 1 through 4 {
-                                li:nth-child(#{$i}) {
-                                    background-color: #cecece36;
-                                    font-weight: 600;
-                                    padding: 8px;
-                                    $icon: map.get($icons, $i);
-
-                                    a::before {
-                                        background: url(map.get($icon, url)) center no-repeat !important;
-                                        background-size: map.get($icon, size) !important;
-                                        content: "";
-                                        display: block;
-                                        height: 55px;
-                                        margin: auto;
-                                        padding: 0;
-                                        width: 55px;
-                                    }
-
-                                    a {
-                                        color: #407021;
-                                    }
-
-                                    a:hover {
-                                        color: #fff;
-                                        text-decoration: underline;
-                                    }
-
-                                    a:focus,
-                                    a:active {
-                                        outline: none;
-                                        box-shadow: none;
-                                        text-decoration: underline;
+    
+                            ul {
+                                display: flex;
+                                flex-wrap: wrap;
+                                justify-content: center;
+    
+                                @for $i from 1 through 4 {
+                                    li:nth-child(#{$i}) {
+                                        background-color: #cecece36;
+                                        font-weight: 600;
+                                        padding: 8px;
+                                        $icon: map.get($icons, $i);
+    
+                                        a::before {
+                                            background: url(map.get($icon, url)) center no-repeat !important;
+                                            background-size: map.get($icon, size) !important;
+                                            content: "";
+                                            display: block;
+                                            height: 55px;
+                                            margin: auto;
+                                            padding: 0;
+                                            width: 55px;
+                                        }
+    
+                                        a {
+                                            color: #407021;
+                                        }
+    
+                                        a:hover {
+                                            color: #fff;
+                                            text-decoration: underline;
+                                        }
+    
+                                        a:focus,
+                                        a:active {
+                                            outline: none;
+                                            box-shadow: none;
+                                            text-decoration: underline;
+                                        }
                                     }
                                 }
-                            }
-
-                            li:hover {
-                                background-color: #407021;
-                            }
-                        }
-                    }
-
-                    .quicktabs-main {
-                        display: inline-block;
-                    }
-
-                    >.quicktabs-main {
-                        .quicktabs-tabpage:first-child {
-                            .views-field-views-conditional-field {
-                                ul li::before {
-                                    content: '\25CF';
-                                    margin-right: 6px;
-                                    font-size: 10px;
+    
+                                li:hover {
+                                    background-color: #407021;
                                 }
                             }
                         }
+    
+                        .quicktabs-main {
+                            display: inline-block;
+                        }
+    
+                        >.quicktabs-main {
+                            .quicktabs-tabpage:first-child {
+                                .views-field-views-conditional-field {
+                                    ul li::before {
+                                        content: '\25CF';
+                                        margin-right: 6px;
+                                        font-size: 10px;
+                                    }
+                                }
+                            }
+                        }
                     }
-                }
-
-                .quicktabs-tabpage {
-
-                    //#quicktabs-tabpage-misional-ninez-y-adolescencia-0, #quicktabs-tabpage-misional-ninez-y-adolescencia-0{
-                    .views-field-field-subtitle {
-                        color: #407021;
-                        font-size: 1.4em;
-                        font-weight: 600;
-                        margin-bottom: 1em;
+    
+                    .quicktabs-tabpage {
+    
+                        //#quicktabs-tabpage-misional-ninez-y-adolescencia-0, #quicktabs-tabpage-misional-ninez-y-adolescencia-0{
+                        .views-field-field-subtitle {
+                            color: #407021;
+                            font-size: 1.4em;
+                            font-weight: 600;
+                            margin-bottom: 1em;
+                        }
                     }
                 }
             }
-        }
-
-        >div:nth-child(2),
-        >div:nth-child(3) {
-            padding: 1.5em 3em;
-        }
-
-        >div:nth-child(4) {
-            display: flex;
-            justify-content: center;
-            background-color: #80808012;
-            border-top: 0.5px solid #8080803b;
-
-            .views-field-field-youtube {
-                width: 70rem;
+    
+            >div:nth-child(2),
+            >div:nth-child(3) {
+                padding: 1.5em 3em;
             }
-
-            .views-field-title {
-                color: #6b6b6b;
-                display: block;
-                font-family: 'Montserrat', sans-serif;
-                line-height: initial;
-                margin: auto;
-                padding: 1.2em 0;
-                word-break: break-word;
-                font-size: 1.1em;
-                font-weight: 500;
-                text-align: left;
+    
+            >div:nth-child(4) {
+                display: flex;
+                justify-content: center;
+                background-color: #80808012;
+                border-top: 0.5px solid #8080803b;
+    
+                .views-field-field-youtube {
+                    width: 70rem;
+                }
+    
+                .views-field-title {
+                    color: #6b6b6b;
+                    display: block;
+                    font-family: 'Montserrat', sans-serif;
+                    line-height: initial;
+                    margin: auto;
+                    padding: 1.2em 0;
+                    word-break: break-word;
+                    font-size: 1.1em;
+                    font-weight: 500;
+                    text-align: left;
+                }
             }
         }
     }
-}
 }
 
 
