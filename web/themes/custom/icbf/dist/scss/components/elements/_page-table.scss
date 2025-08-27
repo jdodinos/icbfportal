@@ -277,7 +277,9 @@
     }
 }
 
-.page-id-1240 {
+// styles for check
+.page-id-1240,
+.page-id-6715 {
     .layout__region.layout__region--second {
         margin-bottom: 1.5em;
     }
@@ -300,8 +302,8 @@
                     float: inherit;
                     width: 100%;
 
-                    tr >th:nth-child(2),
-                    tr >td:nth-child(2) {
+                    tr>th:nth-child(2),
+                    tr>td:nth-child(2) {
                         width: 150px;
                     }
                 }
