@@ -10,15 +10,25 @@
     .layout--onecol-section:first-child{
         display: flex;
         gap: 30px;
+        @media (max-width: 768px){
+            flex-wrap: wrap;
+            gap: 10px;
+        }
 
         .layout__region--first{
             width: calc(100% / 12 * 3);
+            @media (max-width: 1200px){
+                padding: 0 15px;
+            }
             @media (max-width: 768px){
                 width: 100%;
             }
         }
         .layout__region--second{
             width: calc(100% / 12 * 9);
+            @media (max-width: 1200px){
+                padding: 0 15px;
+            }
             @media (max-width: 768px){
                 width: 100%;
             }
@@ -35,6 +45,9 @@
     }
 
     .block-views-blockdocumentos-g-humana-sapi-block-1{
+        
+        margin-top: 30px;
+
         h2{
             font-family: var.$font-montserrat;
             margin: 0 0 20px;
@@ -50,6 +63,40 @@
         }
     }
 
+    .view-documentos-g-humana-sapi{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        .view-filters{
+            float: none;
+            width: calc(100% / 12 * 3);
+            @media (max-width: 1200px){
+                padding: 0 15px;
+            }
+            @media (max-width: 768px){
+                width: 100%;
+            }
+        }
+
+        .view-content{
+            width: calc((100% / 12 * 9) - 30px);
+            @media (max-width: 1200px){
+                padding: 0 15px;
+            }
+            @media (max-width: 768px){
+                width: 100%;
+            }
+        }
+
+        .pager{
+            width: 100%;
+            @media (max-width: 1200px){
+                padding: 0 15px;
+            }
+        }
+    }
+
 }
 
 .page-gestion-humana-nombramientos-resoluciones-convocatoria-2149{
@@ -61,15 +108,26 @@
     .layout__region--content{
         display: flex;
         gap: 30px;
+        
+        @media (max-width: 768px){
+            flex-wrap: wrap;
+            gap: 10px;
+        }
 
         .block-field-blocktaxonomy-termsecctionsfield-content{
             width: calc(100% / 12 * 3);
+            @media (max-width: 1200px){
+                padding: 0 15px;
+            }
             @media (max-width: 768px){
                 width: 100%;
             }
         }
         .block-views-blockdocumentos-g-humana-attachment-1{
             width: calc(100% / 12 * 9);
+            @media (max-width: 1200px){
+                padding: 0 15px;
+            }
             @media (max-width: 768px){
                 width: 100%;
             }
@@ -103,6 +161,51 @@
             padding: 10px;
             &:not(:last-child){
                 border-bottom: 2px solid #ddd;
+            }
+        }
+    }
+
+    .block-views-blockdocumentos-g-humana-sapi-block-16{
+
+        margin-top: 30px;
+
+        h2{
+            font-family: var.$font-montserrat;
+            margin: 0 0 20px;
+        }
+
+        .view-display-id-block_16{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+
+            .view-filters{
+                float: none;
+                width: calc(100% / 12 * 3);
+                @media (max-width: 1200px){
+                    padding: 0 15px;
+                }
+                @media (max-width: 768px){
+                    width: 100%;
+                }
+            }
+
+            .view-content{
+                width: calc((100% / 12 * 9) - 30px);
+                @media (max-width: 1200px){
+                    padding: 0 15px;
+                }
+                @media (max-width: 768px){
+                    width: 100%;
+                }
+            }
+
+            .pager{
+                width: 100%;
+
+                @media (max-width: 1200px){
+                    padding: 0 15px;
+                }
             }
         }
     }

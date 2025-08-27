@@ -49,9 +49,15 @@
 
 
         .tb-megamenu .nav-collapse .nav >li.tb-megamenu-item {
+            display: flex;
             max-width: 40vw !important;
             padding: 1em .1em !important;
             border-bottom: 1px solid #d9d9d9;
+
+            /*
+            .tb-megamenu-submenu{
+                display: none !important;
+            }*/
             
             &:not(:first-child){
                 >a{
@@ -64,8 +70,21 @@
                 border: 0 !important;
                 font-size: .94em;
                 padding: 0 0 1px;
-                &:hover{
+                &:hover, &:focus{
                     color: #004686 !important;
+                    background-color: #fcfcfc !important;
+
+                    span.caret{
+                        border-top-color: #666;
+                        border-bottom-color: #666;
+                    }
+                }
+
+                span.caret {
+                    display: inline-block !important;
+                    min-width: 8px;
+                    min-height: 8px;
+                    margin: 0;
                 }
 
             } 
@@ -75,7 +94,13 @@
             >.tb-megamenu-submenu{//:hover
                 position: relative;
                 left: -45vw !important;
-                width: 80vw !important;
+                min-width: 80vw !important;
+
+                .az-ctnr >.az-element >div {
+                    margin: 1em auto;
+                    width: 70%;
+                }
+
                 .mega-dropdown-inner{
                     width: 75vw;
     
@@ -95,6 +120,27 @@
                         .m20-cunt{
                             >div{
                                 width: 100% !important;
+                                margin: 1em 0;
+                            }
+
+                            .m20-canal{
+                                margin: 2em 0 !important;
+
+                                .m20-icon-c{
+                                    a{
+                                        padding: 0px !important;
+                                    }
+                                    img{
+                                        min-width: 38px !important;
+                                        min-height: 38px !important;
+                                    }
+                                }
+                                .m20-info{
+                                    a {
+                                        padding: 1px !important;
+                                    }
+                                    max-height: fit-content !important;
+                                }
                             }
                         }
                     }
@@ -111,9 +157,15 @@
                 }
             }
 
-            &.open >.dropdown-toggle{
-                background-color: #fff;
-            }
+            &.open{
+                >.dropdown-toggle{
+                    background-color: #fcfcfc;
+                }
+                span.caret{
+                    border-top-color: #666;
+                    border-bottom-color: #666;
+                }
+            } 
         } 
     }
 }

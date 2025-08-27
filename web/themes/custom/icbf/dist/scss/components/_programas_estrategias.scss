@@ -347,6 +347,18 @@
     }
 }
 
+.page-bienestar-nutricion{
+    .block-field-blocktaxonomy-termsecctionsfield-content{
+        .az-ctnr.container {
+            display: flex;
+
+            >.az-element:nth-child(3) {
+                width: 100%;
+            }
+        }
+    }
+}
+
 .page-programas-y-estrategias-direccion-de-infancia {
 
     .block-views-blockmisional-ninez-y-adolescencia-block-l1inf,
@@ -1225,3 +1237,39 @@
 }
 
 /*-----------------------------------------------------------------*/
+
+
+
+.page-id-1214{
+
+    .view-id-documents_for_microsites{
+        li.list-group-item{
+            border: 1px solid #ddd !important;
+            
+            span{
+                width: 100%;
+                a {
+                    display: flex;
+                    white-space: normal !important;
+                    word-break: break-word;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    #block-icbf-content{
+        .content{
+            .layout:nth-child(3){
+                >.layout__region{
+                    display: flex;
+                }
+            }
+        }
+    }
+    
+    .az-element.az-row.row.text-center.az-row--sm.az-row--equal-height >div {
+        margin: 0 !important;
+        padding: 0;
+    }
+}

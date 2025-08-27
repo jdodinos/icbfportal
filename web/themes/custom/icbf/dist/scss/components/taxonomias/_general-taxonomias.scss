@@ -508,6 +508,10 @@
 
 #block-icbf-content {
 
+    .block-views-blockdocuments-for-microsites-block-dfyc1 {
+        display: inline-block;
+        height: fit-content;
+    }
 
     .content {
         >div:nth-child(2) {
@@ -997,12 +1001,15 @@
         }
     }
 
-    .layout:nth-child(n+5):nth-child(-n+7),
-    .layout:nth-child(4) h2 {
-        background-color: #f5f5f5;
+    .content {
 
-        .n-ltrasversals {
-            box-shadow: 0.1px 0.1px 3px #80808075;
+        .layout:nth-child(n+5):nth-child(-n+7),
+        .layout:nth-child(4) {
+            background-color: #f5f5f5;
+
+            .n-ltrasversals {
+                box-shadow: 0.1px 0.1px 3px #80808075;
+            }
         }
     }
 
@@ -1369,7 +1376,7 @@
         .block-views-blockpersons-block-dregions {
             ul {
                 li {
-                    .row{
+                    .row {
                         @media (min-width: 768px) {
                             .col-sm-2 {
                                 display: flex;
@@ -1377,7 +1384,8 @@
                                 width: 16.66666667%;
                                 justify-content: center;
                             }
-                            >.col-sm-2:nth-child(2){
+
+                            >.col-sm-2:nth-child(2) {
                                 flex-wrap: wrap;
                                 height: fit-content;
                                 justify-content: left !important;
@@ -1564,110 +1572,28 @@
                             width: 33.33333333%;
                         }
                     }
-
                 }
             }
 
-            >.layout:last-child {
-                .field--name-field-content {
-                    >.az-element {
-
-                        >.az-ctnr {
-                            display: flex;
-                            flex-wrap: wrap;
-                            max-width: 90vw;
-
-                            /*para pantallas pequeñas*/
-                            >.az-element:nth-child(1) {
-                                width: 100% !important;
-
-                                >div {
-                                    width: 100%;
-                                }
-
-                                .view-documents {
-                                    .view-content {
-                                        .table {
-                                            width: 100%;
-
-                                            tr,
-                                            th,
-                                            td {
-                                                border: 1px solid #ddd;
-                                            }
-
-                                            tbody {
-                                                tr:nth-child(odd) {
-                                                    background-color: #f9f9f9;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-
-                            >.az-element:nth-child(2) {
-                                width: 100% !important;
-
-                                a {
-                                    word-break: break-all;
-                                    white-space: normal;
-                                    display: inline-block;
-                                }
-                            }
-
-                            >.az-element:nth-child(3) {
-                                width: 100% !important;
-                            }
-
+            .view-documents {
+                .view-content {
+                    .table {
+                        width: 100%;
+                        tr,
+                        th,
+                        td {
+                            border: 1px solid #ddd;
                         }
 
-                        @media (min-width: 768px) {
-                            >.az-ctnr {
-                                display: grid;
-                                grid-template-areas:
-                                    "a b"
-                                    "a c";
-                                grid-template-columns: 66% 33%;
-
-                                @media (min-width: 576px) {
-                                    .col-sm-8 {
-                                        flex: 0 0 auto;
-                                        width: 100% !important;
-                                    }
-                                }
-
-
-                                >.az-element:nth-child(1) {
-                                    grid-area: a;
-                                    width: 100%;
-                                }
-
-                                >.az-element:nth-child(2) {
-                                    grid-area: b;
-                                    width: 100%;
-
-                                    a {
-                                        word-break: break-all;
-                                        white-space: normal;
-                                        display: inline-block;
-                                    }
-                                }
-
-                                >.az-element:nth-child(3) {
-                                    grid-area: c;
-                                    width: 100%;
-                                }
+                        tbody {
+                            tr:nth-child(odd) {
+                                background-color: #f9f9f9;
                             }
                         }
-
-
-
                     }
                 }
             }
         }
-
     }
 }
 
@@ -2131,8 +2057,9 @@
                     }
                 }
             }
-            .block-views-blockdocumentos-servicios-block-4{
-                >h2{
+
+            .block-views-blockdocumentos-servicios-block-4 {
+                >h2 {
                     font-family: 'Montserrat', sans-serif;
                     line-height: normal !important;
                     font-size: 1.4em;
@@ -2247,7 +2174,7 @@
 
 }
 
-.page-aseguramiento-la-calidad-directrices-0{
+.page-aseguramiento-la-calidad-directrices-0 {
     #block-icbf-content {
         padding: 0 0.5em;
 
@@ -2256,20 +2183,23 @@
         }
 
         .view-licencias-de-funcionamiento-sapi {
-            .view-filters{
+            .view-filters {
                 .form-radios {
                     margin-left: 0;
                 }
             }
-            .view-content{
-                table{
+
+            .view-content {
+                table {
                     width: 100%;
                 }
             }
-            nav.pager{
+
+            nav.pager {
                 text-transform: lowercase;
                 white-space: nowrap;
-                li{
+
+                li {
                     font-weight: normal !important;
                 }
             }
@@ -3060,18 +2990,20 @@
 ************************************************
 */
 
-.page-rendicion-de-cuentas-icbf-sede-direccion-general{
-    #block-icbf-content{
-        .content{
+.page-rendicion-de-cuentas-icbf-sede-direccion-general {
+    #block-icbf-content {
+        .content {
             padding: 0 1em;
             font-family: 'Montserrat', sans-serif;
 
-            >.layout:first-child, >.layout:nth-child(3){
-                h1{
+            >.layout:first-child,
+            >.layout:nth-child(3) {
+                h1 {
                     font-size: 1.7em;
                     font-family: 'Asap-Regular';
                 }
-                h3{
+
+                h3 {
                     font-size: 1.2em;
                     font-family: 'Asap-Regular';
                 }
@@ -3084,24 +3016,26 @@
                 }
             }
 
-            >.layout:nth-child(2){
+            >.layout:nth-child(2) {
                 margin-bottom: 1em;
 
-                h2{
+                h2 {
                     font-size: 1.4em;
                 }
 
-                .view-filters{
+                .view-filters {
+
                     //titulo filtro
                     .fieldset-legend {
                         font-size: 1.4em;
                     }
 
                     /*Entorno de desarrollo CHECKS CAMBIADOS*/
-                    .form-radios{
+                    .form-radios {
                         padding-top: 1em;
 
-                        input[type=checkbox], input[type=radio] {
+                        input[type=checkbox],
+                        input[type=radio] {
                             appearance: none;
                             width: 13px;
                             height: 13px;
@@ -3112,13 +3046,15 @@
                         }
 
                         /* Cuando se selecciona el check*/
-                        input[type=checkbox]:checked, input[type=radio]:checked {
+                        input[type=checkbox]:checked,
+                        input[type=radio]:checked {
                             background-color: #1996d0;
                             border-color: #1996d0;
                         }
 
                         /*Estilos para el icono interno del check*/
-                        input[type=checkbox]::after, input[type=radio]::after {
+                        input[type=checkbox]::after,
+                        input[type=radio]::after {
                             content: '✔';
                             color: white;
                             width: 10px;
@@ -3144,16 +3080,17 @@
                     }
                 }
 
-                nav.pager{
+                nav.pager {
                     text-transform: lowercase;
                     white-space: nowrap;
-                    li{
+
+                    li {
                         font-weight: normal !important;
                     }
                 }
 
                 /*RESPONSIVE*/
-                .view-display-id-block_2{
+                .view-display-id-block_2 {
                     justify-items: center;
                     display: grid;
                     grid-template-areas:
@@ -3161,23 +3098,26 @@
                         "a c";
                     grid-template-columns: 25% 75%;
 
-                    .view-filters{
+                    .view-filters {
                         grid-area: a;
                         width: 100% !important;
                     }
-                    .view-content{
+
+                    .view-content {
                         grid-area: b;
-                        table{
+
+                        table {
                             width: 100% !important;
                         }
                     }
-                    nav.pager{
+
+                    nav.pager {
                         grid-area: c;
                     }
                 }
 
-                @media (max-width: 768px){
-                    .view-display-id-block_2{
+                @media (max-width: 768px) {
+                    .view-display-id-block_2 {
                         justify-items: center;
                         padding: 1em;
                         display: grid;
@@ -3187,17 +3127,20 @@
                             "c";
                         grid-template-columns: 100%;
 
-                        .view-filters{
+                        .view-filters {
                             grid-area: a;
                             width: 100% !important;
                         }
-                        .view-content{
+
+                        .view-content {
                             grid-area: b;
-                            table{
+
+                            table {
                                 width: 100% !important;
                             }
                         }
-                        nav.pager{
+
+                        nav.pager {
                             grid-area: c;
                         }
                     }
@@ -3335,14 +3278,15 @@
                             }
                         }
 
-                        .view-content{
+                        .view-content {
                             h4 time {
                                 display: none;
                             }
-                            >.view-grouping{
+
+                            >.view-grouping {
                                 >.view-grouping-content {
 
-                                    >.view-grouping{
+                                    >.view-grouping {
                                         margin-bottom: 20px;
 
                                         .view-grouping-header {
@@ -3529,14 +3473,15 @@
                             }
                         }
 
-                        .view-content{
+                        .view-content {
                             h4 time {
                                 display: none;
                             }
-                            >.view-grouping{
+
+                            >.view-grouping {
                                 >.view-grouping-content {
 
-                                    >.view-grouping{
+                                    >.view-grouping {
                                         margin-bottom: 20px;
 
                                         .view-grouping-header {
@@ -3797,7 +3742,7 @@
 ******OBSERVATORIO DE BIENESTAR DE LA NINEZ (Segundo nivel)******
 *****************************************************************
 */
-.page-programas-y-estrategias-archivo-historico-observatorio-del-bienestar-de-la-ninez-infografias{
+.page-programas-y-estrategias-archivo-historico-observatorio-del-bienestar-de-la-ninez-infografias {
     #block-page-title-block {
         display: none;
     }
@@ -3820,10 +3765,14 @@
                         font-size: 1.1833em;
                     }
 
-                    a, a:link {
+                    a,
+                    a:link {
                         color: #1996d0;
                         text-decoration: none !important;
-                        &.active, &:hover, &:focus {
+
+                        &.active,
+                        &:hover,
+                        &:focus {
                             color: #125e81;
                             text-decoration: underline !important;
                         }
@@ -3850,8 +3799,8 @@
 
 }
 
-.page-id-1233{
-    .icbf-owl-carousel{
+.page-id-1233 {
+    .icbf-owl-carousel {
         .owl-controls.clickable {
             height: 0 !important;
         }
@@ -3861,20 +3810,22 @@
         display: none;
     }
 
-    .block-field-blocktaxonomy-termsecctionsfield-content{
-        >div{
-            >.az-element:nth-child(2){
+    .block-field-blocktaxonomy-termsecctionsfield-content {
+        >div {
+            >.az-element:nth-child(2) {
                 margin: 0 auto;
                 width: 97%;
-                >div{
-                    >.az-element:first-child{
-                        >.az-element:first-child{
-                            >.az-element:nth-child(2){
-                                >.az-element >.az-element:nth-child(2) {
+
+                >div {
+                    >.az-element:first-child {
+                        >.az-element:first-child {
+                            >.az-element:nth-child(2) {
+                                >.az-element>.az-element:nth-child(2) {
                                     display: none;
                                 }
-                            } 
+                            }
                         }
+
                         /*
                         >.az-element:nth-child(2){
                             >.az-element:first-child{
@@ -3884,15 +3835,17 @@
                             }
                         }*/
                     }
-                    >.az-element:nth-child(2){
+
+                    >.az-element:nth-child(2) {
                         h2 {
                             text-align: center;
                             background-color: #f0f0f0;
                             padding: 20px 0 10px;
                         }
                     }
-                    >.az-element{
-                        h2 span{
+
+                    >.az-element {
+                        h2 span {
                             color: #27ae60;
                             font-size: 19.6px;
                         }
@@ -3900,37 +3853,46 @@
                 }
             }
         }
-        
-        a:not(.btn), a:link:not(.btn) {
+
+        a:not(.btn),
+        a:link:not(.btn) {
             color: #1996d0 !important;
             text-decoration: none !important;
 
-            &.active, &:hover {
+            &.active,
+            &:hover {
                 color: #125e81 !important;
                 text-decoration: underline !important;
             }
         }
-        .btn.focus, .btn:focus, .btn:hover {
+
+        .btn.focus,
+        .btn:focus,
+        .btn:hover {
             color: #333;
             text-decoration: none;
         }
     }
 
-    .view-id-observatory_newsletters_files{
-        table{
+    .view-id-observatory_newsletters_files {
+        table {
             width: 100%;
+
             thead {
                 display: none;
             }
-            tbody{
-                tr{
-                    >td:first-child{
+
+            tbody {
+                tr {
+                    >td:first-child {
                         width: 40%;
                     }
+
                     td {
                         border-bottom: 0 !important;
                     }
                 }
+
                 a.btn.btn-menub {
                     padding: 12px 24px;
                     background-color: #f0f0f0;
@@ -4205,18 +4167,21 @@
 
 .page-primera-infancia-cuentame {
 
-    h1{
+    h1 {
         font-family: 'Montserrat', sans-serif;
         margin-bottom: 40px;
     }
-    h2{
-        span{
+
+    h2 {
+        span {
             font-family: var.$font-asap-regular !important;
         }
     }
 
-    .view-content{
-        a.active, a:hover{
+    .view-content {
+
+        a.active,
+        a:hover {
             color: #125e81;
             text-decoration: underline !important;
         }
@@ -4253,7 +4218,8 @@
 }
 
 
-.page-id-6713, .page-id-6714  {
+.page-id-6713,
+.page-id-6714 {
     .embed-containermapa1 {
         opacity: 0;
     }
@@ -4378,19 +4344,19 @@
 .page-direccion-regional-amazonas,
 .page-direccion-regional-atlantico,
 .page-direccion-regional-caldas,
-.page-direccion-regional-guainia{
-    #block-icbf-content{
-        footer.node__meta{
+.page-direccion-regional-guainia {
+    #block-icbf-content {
+        footer.node__meta {
             display: none;
         }
 
-        .node__content{
+        .node__content {
             font-family: 'Montserrat', "sans-serif" !important;
 
-            >div:first-child{
-                >div{
-                    .block-field-blocknodesede-localfield-list-image{
-                        img{
+            >div:first-child {
+                >div {
+                    .block-field-blocknodesede-localfield-list-image {
+                        img {
                             max-width: 100%;
                             width: 100%;
                             height: auto;
@@ -4398,13 +4364,14 @@
                             object-fit: cover;
                         }
                     }
-                    .block-views-blockpuntos-de-atencion-sapi-block-info-header{
-                        .view-content{
-                            >div{
+
+                    .block-views-blockpuntos-de-atencion-sapi-block-info-header {
+                        .view-content {
+                            >div {
                                 width: 100%;
 
-                                h1{
-                                    a{
+                                h1 {
+                                    a {
                                         color: #fff !important;
                                         pointer-events: none;
                                     }
@@ -4421,18 +4388,19 @@
                         text-align: center;
                         padding: 0 15px;
 
-                        h2{
+                        h2 {
                             font-family: 'Montserrat', sans-serif;
                             font-size: 1.2em;
                         }
 
-                        div{
+                        div {
                             font-family: 'Montserrat', sans-serif;
                         }
                     }
 
-                    >div:nth-child(3){
+                    >div:nth-child(3) {
                         margin-left: 10%;
+
                         h2::before {
                             color: #0b8763;
                             font-family: 'FontAwesome';
@@ -4441,7 +4409,8 @@
                             margin-right: 5px;
                         }
                     }
-                    >div:nth-child(4){
+
+                    >div:nth-child(4) {
                         h2::before {
                             color: #0b8763;
                             font-family: 'FontAwesome';
@@ -4450,8 +4419,10 @@
                             margin-right: 5px;
                         }
                     }
-                    >div:nth-child(5){
+
+                    >div:nth-child(5) {
                         margin-right: 10%;
+
                         h2::before {
                             color: #0b8763;
                             font-family: 'FontAwesome';
@@ -4461,8 +4432,8 @@
                         }
                     }
 
-                    @media (max-width: 768px){
-                        >div:nth-last-child(-n+3){
+                    @media (max-width: 768px) {
+                        >div:nth-last-child(-n+3) {
                             width: 100%;
                             margin: 0 auto !important;
                         }
@@ -4472,28 +4443,30 @@
 
             }
 
-            >div:nth-child(2){
+            >div:nth-child(2) {
                 margin-top: 1.5em;
                 margin-bottom: 1.5em;
                 border-top: 1px solid #ddd;
 
-                >div:first-child{
-                    h2{
+                >div:first-child {
+                    h2 {
                         font-family: 'Montserrat', sans-serif !important;
                         font-style: normal;
                         font-size: 1.2em;
                         margin-bottom: 1em !important;
                     }
 
-                    >div{
+                    >div {
                         padding-bottom: 1em;
                         border-bottom: 1px solid #ddd;
                     }
+
                     .field__label {
                         font-weight: 500;
                         font-family: 'Montserrat', sans-serif;
                     }
-                    .field__item{
+
+                    .field__item {
                         font-family: 'Montserrat', sans-serif !important;
                         font-style: normal;
                         margin-left: 1em;
@@ -4510,7 +4483,7 @@
                     }
                 }
 
-                >div:nth-child(2){
+                >div:nth-child(2) {
                     border: 1px solid #ddd;
                     border-radius: 6px;
                     height: auto;
@@ -4518,12 +4491,15 @@
                     padding: 0 .8em;
                     margin: 1em 0 .5em;
 
-                    .word-gral{
+                    .word-gral {
                         >* {
                             padding: 0.2em;
                         }
-                        >p:first-child{
-                            a, a:hover {
+
+                        >p:first-child {
+
+                            a,
+                            a:hover {
                                 color: #125e81;
                             }
                         }
@@ -4531,14 +4507,15 @@
                 }
             }
 
-            >div:nth-child(3){
-                h2{
+            >div:nth-child(3) {
+                h2 {
                     font-family: 'Montserrat', sans-serif;
                     margin-left: 18%;
                     font-size: 1.2em !important;
                 }
+
                 @media (max-width: 768px) {
-                    h2{
+                    h2 {
                         margin-left: 1em;
                     }
                 }
@@ -4636,9 +4613,9 @@
                         }
                     }
 
-                    .view-content{
-                        .item-list{
-                            ul{
+                    .view-content {
+                        .item-list {
+                            ul {
                                 margin-left: 0 !important;
                             }
                         }
@@ -4653,31 +4630,34 @@
 
 .page-centro-zonal-magdalena-medio,
 .page-centro-zonal-santa-fe,
-.page-centro-zonal-macizo-colombiano
-{
-    #block-icbf-content{
-        .node__content{
-            >div:first-child{
+.page-centro-zonal-macizo-colombiano {
+    #block-icbf-content {
+        .node__content {
+            >div:first-child {
                 .bs-region--left {
                     padding-left: 0;
                 }
-                .bs-region--right{
-                    div.field__item{
+
+                .bs-region--right {
+                    div.field__item {
                         padding-left: 0 !important;
                     }
-                    .block-field-blocknodesede-localfield-local-staff-list{
-                        h2{
+
+                    .block-field-blocknodesede-localfield-local-staff-list {
+                        h2 {
                             padding-left: 0 !important;
                         }
-                        div.field__label{
+
+                        div.field__label {
                             margin-left: 5px !important;
                         }
                     }
                 }
             }
-            >div:nth-child(2){
-                ul{
-                    li{
+
+            >div:nth-child(2) {
+                ul {
+                    li {
                         color: #555;
                         font-size: 14px !important;
                     }
@@ -4693,12 +4673,12 @@
 --------/modelo-planeacion-y-sistema-integrado-gestion/modelo-integrado-de-planeacion-y-gestion---------
 */
 
-.page-modelo-planeacion-y-sistema-integrado-gestion-modelo-integrado-de-planeacion-y-gestion{
-    #block-icbf-content{
-        .content{
-            >.layout:nth-child(2){
-                .item-list{
-                    ul{
+.page-modelo-planeacion-y-sistema-integrado-gestion-modelo-integrado-de-planeacion-y-gestion {
+    #block-icbf-content {
+        .content {
+            >.layout:nth-child(2) {
+                .item-list {
+                    ul {
                         display: flex;
                         flex-wrap: wrap;
                         margin: 0 auto;
@@ -4706,7 +4686,7 @@
                         justify-content: center;
                         padding: 1em 0;
 
-                        li{
+                        li {
                             background-color: #f5f5f5 !important;
                             border-radius: 4px;
                             border: 1px solid #fff;
@@ -4725,7 +4705,7 @@
                                 font-weight: 600;
                                 outline: none;
 
-                                &:hover{
+                                &:hover {
                                     color: #36c;
                                 }
                             }
@@ -4733,7 +4713,7 @@
                         }
 
                         >li:first-child {
-                            a::before{
+                            a::before {
                                 background-position: center;
                                 background-repeat: no-repeat !important;
                                 background-size: 57px !important;
@@ -4746,8 +4726,9 @@
                                 width: 55px;
                             }
                         }
+
                         >li:nth-child(2) {
-                            a::before{
+                            a::before {
                                 background-position: center;
                                 background-repeat: no-repeat !important;
                                 background-size: 57px !important;
@@ -4760,8 +4741,9 @@
                                 width: 55px;
                             }
                         }
-                        >li:nth-child(3){
-                            a::before{
+
+                        >li:nth-child(3) {
+                            a::before {
                                 background-position: center;
                                 background-repeat: no-repeat !important;
                                 background-size: 57px !important;
@@ -4774,8 +4756,9 @@
                                 width: 55px;
                             }
                         }
-                        >li:nth-child(4){
-                            a::before{
+
+                        >li:nth-child(4) {
+                            a::before {
                                 background-position: center;
                                 background-repeat: no-repeat !important;
                                 background-size: 57px !important;
@@ -4790,9 +4773,10 @@
                         }
                     }
                 }
-                .quicktabs-main{
-                    >.quicktabs-tabpage{
-                        h4{
+
+                .quicktabs-main {
+                    >.quicktabs-tabpage {
+                        h4 {
                             font-size: 1.1em;
                             font-family: var.$font-asap-regular;
                             margin: 0 1px 4px;
@@ -4807,10 +4791,11 @@
 
 
 
-.page-estadisticas-evaluaciones-investigaciones-y-estudios{
-    #block-icbf-content{
-        .content{
-            >.layout:nth-child(2){
+.page-estadisticas-evaluaciones-investigaciones-y-estudios {
+    #block-icbf-content {
+        .content {
+            >.layout:nth-child(2) {
+
                 //filtros
                 .view-display-id-block {
                     .view-filters {
@@ -4819,7 +4804,7 @@
                             font-size: 1.4em;
                         }
 
-                        .form-radios{
+                        .form-radios {
                             padding-top: 1em;
                             margin-left: 0;
 
@@ -4934,7 +4919,7 @@
 
 
                 /*RESPONSIVE*/
-                .view-display-id-block{
+                .view-display-id-block {
                     justify-items: center;
                     display: grid;
                     grid-template-areas:
@@ -4942,23 +4927,26 @@
                         "a c";
                     grid-template-columns: 25% 75%;
 
-                    .view-filters{
+                    .view-filters {
                         grid-area: a;
                         width: 100% !important;
                     }
-                    .view-content{
+
+                    .view-content {
                         grid-area: b;
-                        table{
+
+                        table {
                             width: 100% !important;
                         }
                     }
-                    nav.pager{
+
+                    nav.pager {
                         grid-area: c;
                     }
                 }
 
-                @media (max-width: 768px){
-                    .view-display-id-block{
+                @media (max-width: 768px) {
+                    .view-display-id-block {
                         justify-items: center;
                         padding: 1em;
                         display: grid;
@@ -4968,17 +4956,20 @@
                             "c";
                         grid-template-columns: 100%;
 
-                        .view-filters{
+                        .view-filters {
                             grid-area: a;
                             width: 100% !important;
                         }
-                        .view-content{
+
+                        .view-content {
                             grid-area: b;
-                            table{
+
+                            table {
                                 width: 100% !important;
                             }
                         }
-                        nav.pager{
+
+                        nav.pager {
                             grid-area: c;
                         }
                     }

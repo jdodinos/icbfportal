@@ -11,6 +11,8 @@ use Drupal\migrate\Plugin\MigrationInterface;
 use Drupal\views\Plugin\views\query\QueryPluginBase;
 use Drupal\views\ViewExecutable;
 use Drupal\views\Views;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\ContentEntityInterface;
 
 /**
  * Implementa hook_views_pre_view().
@@ -1158,3 +1160,94 @@ function icbf_migrations_permissions_to_ignore() {
 
   return $permissions;
 }
+
+/**
+ * Hook: cuando se cargan entidades en lote.
+ */
+function icbf_migrations_entity_load(array $entities) {
+  icbf_migrations_protect_null_fields($entities);
+}
+
+/**
+ * Hook: antes de guardar una entidad.
+ */
+function icbf_migrations_entity_presave(EntityInterface $entity) {
+  icbf_migrations_protect_null_fields([$entity]);
+}
+
+/**
+ * Asegura que los campos no devuelvan NULL (los inicializa a [] si es necesario).
+ *
+ * Esto evita el "Call to a member function getTranslation() on null"
+ * que aparece durante migraciones cuando Drupal espera un FieldItemList.
+ *
+ * @param \Drupal\Core\Entity\EntityInterface[] $entities
+ */
+function icbf_migrations_protect_null_fields(array $entities) {
+  $field_manager = \Drupal::service('entity_field.manager');
+
+  foreach ($entities as $entity) {
+    if (!($entity instanceof ContentEntityInterface)) {
+      continue;
+    }
+
+    // Intentamos obtener bundle; si no hay bundle, usamos solo campos presentes.
+    $entity_type = $entity->getEntityTypeId();
+    $bundle = method_exists($entity, 'bundle') ? $entity->bundle() : NULL;
+
+    // 1) Primero, saneamos campos ya presentes en la entidad (rápido y seguro).
+    foreach ($entity->getFields() as $name => $field_item_list) {
+      try {
+        if ($entity->hasField($name) && $entity->get($name) === NULL) {
+          // Inicializa como array vacío -> FieldItemList vacío.
+          $entity->set($name, []);
+        }
+      }
+      catch (\Throwable $e) {
+        // No interrumpir el proceso; solo log.
+        \Drupal::logger('icbf_migrations')->warning('No se pudo inicializar campo @field en @etype:@id — @msg', [
+          '@field' => $name,
+          '@etype' => $entity_type,
+          '@id' => $entity->id(),
+          '@msg' => $e->getMessage(),
+        ]);
+      }
+    }
+
+    // 2) Si tenemos bundle, también recorremos las definiciones declaradas y
+    // aseguramos que si la entidad reconoce el campo pero get() devuelve NULL, lo inicializamos.
+    if ($bundle !== NULL) {
+      try {
+        $defs = $field_manager->getFieldDefinitions($entity_type, $bundle);
+        foreach ($defs as $field_name => $def) {
+          if ($def->isComputed()) {
+            continue;
+          }
+          if ($entity->hasField($field_name) && $entity->get($field_name) === NULL) {
+            try {
+              $entity->set($field_name, []);
+            }
+            catch (\Throwable $e) {
+              \Drupal::logger('icbf_migrations')->warning('Error inicializando @field en @etype:@id — @msg', [
+                '@field' => $field_name,
+                '@etype' => $entity_type,
+                '@id' => $entity->id(),
+                '@msg' => $e->getMessage(),
+              ]);
+            }
+          }
+        }
+      }
+      catch (\Throwable $e) {
+        // No detener migración si algo falla al leer definiciones.
+        \Drupal::logger('icbf_migrations')->notice('No se pudo obtener field definitions para @etype/@bundle — @msg', [
+          '@etype' => $entity_type,
+          '@bundle' => $bundle,
+          '@msg' => $e->getMessage(),
+        ]);
+      }
+    }
+  }
+}
+
+
