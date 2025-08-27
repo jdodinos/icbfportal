@@ -1158,3 +1158,20 @@ function icbf_migrations_permissions_to_ignore() {
 
   return $permissions;
 }
+
+/**
+ * Implements hook_entity_presave().
+ */
+function icbf_migrations_entity_presave(EntityInterface $entity) {
+  // Verificar si la entidad tiene traducciones
+  if ($entity->isTranslatable()) {
+    $languages = $entity->getTranslationLanguages();
+    foreach ($languages as $language) {
+      if (!$entity->hasTranslation($language->getId())) {
+        // Crear traducción si no existe
+        $entity->addTranslation($language->getId(), $entity->toArray());
+      }
+    }
+  }
+}
+
