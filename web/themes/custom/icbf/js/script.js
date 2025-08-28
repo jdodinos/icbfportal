@@ -506,3 +506,52 @@ $(document).ready(function () {
         }
     });
 });
+
+//aplicación de estilos "Boton de accesibilidad"
+$(document).ready(function () {
+  // Escuchar clics en todos los elementos que empiecen con str
+  $("[id^='str']").on("click", function (e) {
+    e.preventDefault();
+
+    let id = $(this).attr("id");
+
+    // --- Font Size ---
+    if (id.startsWith("strFontSizeCode_")) {
+      let fontSize = id.split("_")[1]; // ej: "125%"
+      $("body").css("font-size", fontSize);
+
+    // --- Line Height ---
+    } else if (id.startsWith("strLineHeight_")) {
+      let lineHeight = id.split("_")[1]; // ej: "1.5"
+      document.body.style.setProperty("line-height", lineHeight, "important");
+
+    // --- Word Spacing ---
+    } else if (id.startsWith("strWordSpacing_")) {
+      let spacing = id.split("_")[1]; // ej: "-0.1em"
+      $("body").css("word-spacing", spacing);
+
+    // --- Font Family ---
+    } else if (id.startsWith("strFontScript_")) {
+      let font = id.split("_")[1]; // ej: "Arial"
+      document.body.style.setProperty("font-family", font, "important");
+
+    // --- Background & Font Color ---
+    } else if (id.startsWith("strBackFontColorCode_")) {
+      // ejemplo id: strBackFontColorCode_000000FFFFFF
+      let colors = id.split("_")[1]; // "000000FFFFFF"
+      let fg = "#" + colors.substring(0, 6); // primeros 6 chars → fondo
+      let bg = "#" + colors.substring(6);    // últimos → texto
+
+      $("body").css({
+        "background-color": bg,
+        "color": fg
+      });
+    }
+  });
+
+  // Restaurar estilos
+  $("#ctrlRestoreDefaults").on("click", function (e) {
+    e.preventDefault();
+    $("body").removeAttr("style"); // borra todos los estilos inline
+  });
+});
