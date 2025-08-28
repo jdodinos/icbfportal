@@ -477,3 +477,32 @@ $(function() {
   }
 });
 
+
+
+
+//----funcion boton de accesibilidad
+$(document).ready(function () {
+    var $trigger = $("#accesibility");
+    var $menu = $(".slidedown_accesibility");
+
+    // Ocultar
+    $menu.hide();
+
+    // Alternar al hacer click
+    $trigger.on("click", function (e) {
+        e.preventDefault();
+        $menu.toggle(); 
+    });
+
+    // Ocultar si se hace click fuera del menú o del enlace
+    $(document).on("click", function (e) {
+        if (
+            !$menu.is(e.target) && 
+            $menu.has(e.target).length === 0 && 
+            !$trigger.is(e.target) && 
+            $trigger.has(e.target).length === 0
+        ) {
+            $menu.hide();
+        }
+    });
+});
