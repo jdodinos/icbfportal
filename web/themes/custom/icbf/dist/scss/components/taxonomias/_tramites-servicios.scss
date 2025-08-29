@@ -1417,3 +1417,21 @@ ul.m4 li {
         }
     }
 }
+
+
+.page-citaciones-panel{
+    .contextual-region{
+        .view-filters{
+            width: 100% !important;
+
+            .form--inline.clearfix {
+                display: flex;
+                width: 100%;
+
+                >div.js-form-item {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+}
