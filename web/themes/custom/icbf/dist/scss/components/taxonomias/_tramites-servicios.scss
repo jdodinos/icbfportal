@@ -1434,4 +1434,18 @@ ul.m4 li {
             }
         }
     }
+
+
+    #block-icbf-content{
+        .col-xs-12.col-sm-4.col-md-4.col-lg-4.bs-region.bs-region--left {
+            flex: 0 0 auto !important;
+            width: 16.6666667% !important;
+            max-width: 16.6666667% !important;
+        }
+        .col-xs-12.col-sm-8.col-md-8.col-lg-8.bs-region.bs-region--right {
+            flex: 0 0 auto !important;
+            width: 83.3333% !important;
+            max-width: 83.3333% !important;
+        }
+    }
 }
