@@ -1447,5 +1447,12 @@ ul.m4 li {
             width: 83.3333% !important;
             max-width: 83.3333% !important;
         }
+
+        @media (max-width: 849px) {
+            >.row.bs-2col {
+                flex-direction: column;
+                overflow: scroll;
+            }
+        }
     }
 }
