@@ -1431,6 +1431,10 @@ ul.m4 li {
                 >div.js-form-item {
                     width: 100% !important;
                 }
+
+                >div {
+                    align-content: space-evenly;
+                }
             }
         }
     }
@@ -1448,10 +1452,13 @@ ul.m4 li {
             max-width: 83.3333% !important;
         }
 
+        >.row.bs-2col {
+            overflow: scroll;
+        }
+
         @media (max-width: 849px) {
             >.row.bs-2col {
                 flex-direction: column;
-                overflow: scroll;
             }
         }
     }
