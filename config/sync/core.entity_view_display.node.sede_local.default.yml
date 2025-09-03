@@ -21,7 +21,10 @@ dependencies:
     - views.view.puntos_de_atencion
     - views.view.puntos_de_atencion_sapi
     - views.view.view_phone_verde
+  content:
+    - 'block_content:basic:1b2fb466-ea62-4283-942a-bf7ae59a01ed'
   module:
+    - block_content
     - bootstrap_layouts
     - comment
     - entity_reference_revisions
@@ -449,6 +452,22 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: ''
+            weight: 0
+            additional:
+              context_visibility: {  }
+              context_all_must_pass: 1
+          9a7a95e2-1f9f-4ba5-adff-7526040e863c:
+            uuid: 9a7a95e2-1f9f-4ba5-adff-7526040e863c
+            region: right
+            configuration:
+              id: 'block_content:1b2fb466-ea62-4283-942a-bf7ae59a01ed'
+              label: 'Puntos de venta servicios'
+              label_display: '0'
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
             weight: 0
             additional:
               context_visibility: {  }
