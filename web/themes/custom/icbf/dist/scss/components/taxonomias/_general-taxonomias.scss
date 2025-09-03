@@ -1579,6 +1579,7 @@
                 .view-content {
                     .table {
                         width: 100%;
+
                         tr,
                         th,
                         td {
@@ -1597,7 +1598,11 @@
     }
 }
 
-
+.page-id-1220 {
+    .az-element {
+        position: static !important;
+    }
+}
 
 .page-atencion-y-servicios-ciudadania {
 
