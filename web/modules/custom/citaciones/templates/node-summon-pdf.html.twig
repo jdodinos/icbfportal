@@ -297,7 +297,7 @@
 
             {{ p.field_full_name.value }}
             {% if p.field_citizen_id.value %}
-              {{ p.field_document_type.value ~ " " ~ p.field_citizen_id.value }}
+              {{ p.field_document_type.value ~ ' ' ~ p.field_citizen_id.value }}
             {% else %}
               Sin documento - SD 0
             {% endif %}({{ p.field_kinship.value }}){% if not loop.last %}
@@ -307,7 +307,7 @@
             {% set c = item.entity %}
             {{ c.field_children_fullname.value }}
             {% if c.field_citizen_id.value %}
-              {{ c.field_document_type.value ~ " " ~ c.field_citizen_id.value }}
+              {{ c.field_document_type.value ~ ' ' ~ c.field_citizen_id.value }}
             {% else %}
               Sin documento - SD 0
             {% endif %}
@@ -365,10 +365,10 @@
     <!-- Footer con información de contacto -->
     <div class="footer">
       <div class="contact-info">
-        <p>Dirección: Carrera 42 # 5 C - 48</p>
+        <p>Dirección: {{ node.field_summoned_address.value }}</p>
         <p>Teléfono: 57(2) 488 25 25</p>
-        <p>Centro Zonal Sur</p>
-        <p>Regional Valle</p>
+        <p>{{ location2 }}</p>
+        <p>{{ region1 }}</p>
         <p>Línea gratuita nacional ICBF: 01 8000 91 8080</p>
         <p>www.icbf.gov.co</p>
         <p>Creado el: {{ node.field_legal_act_date.value|date('d/m/Y') }}</p>
