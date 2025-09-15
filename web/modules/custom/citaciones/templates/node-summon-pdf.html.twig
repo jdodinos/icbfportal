@@ -80,6 +80,7 @@
   .director {
     font-size: 12px;
     line-height: 1.2;
+    color: #888;
   }
   
   .regional,
@@ -229,7 +230,6 @@
     font-size: 12px;
     color: #000;
     font-weight: bold;
-    text-transform: uppercase;
   }
   
   .institution-location {
@@ -354,7 +354,7 @@
       <div class="signature-block">
         <p class="signature-name">{{ node.field_officer_name.value }}</p>
         <p class="signature-title">Defensor(a) de Familia</p>
-        <p class="institution-name">INSTITUTO COLOMBIANO DE BIENESTAR FAMILIAR</p>
+        <p class="institution-name">Instituto Colombiano de Bienestar Familiar</p>
         <p class="institution-location">{{ region1 }}</p>
         <p class="institution-location">{{ region2 }}</p>
         <p class="institution-location">{{ location1 ~ (location1 and location2 ? ' - ' : '') ~ location2 }}</p>
