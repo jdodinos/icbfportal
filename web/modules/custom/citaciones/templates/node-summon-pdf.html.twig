@@ -1,440 +1,408 @@
 <style>
-
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	}
-
-	body {
-		font-family: 'Asap', Arial, sans-serif;
-		background-color: #f5f5f5;
-		color: #000;
-		line-height: 1.4;
-		font-size: 12px;
-	}
-
-	/* Aplicar fuente Asap a todos los elementos */
-	* {
-		font-family: 'Asap', Arial, sans-serif;
-		font-weight: 400;
-	}
-
-	/* Contenedor principal del documento */
-	.document-container {
-		max-width: 210mm;
-		min-height: 297mm;
-		margin: 20px auto;
-		background-color: white;
-		box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-		padding: 20mm;
-		position: relative;
-	}
-
-	/* Header del documento */
-	.header {
-		display: flex;
-		align-items: center; /* centra verticalmente */
-		justify-content: space-between; /* separa a los lados */
-		margin-bottom: 10px;
-	}
-
-	.img-header img {
-		height: 80px; /* tamaño de logo más compacto */
-		width: auto;
-		margin: 0;
-	}
-
-	.header-content {
-		flex: 1;
-		text-align: center;
-		padding: 0 15px; /* un poquito de espacio entre texto y logos */
-	}
-
-	.country {
-		font-family: 'Asap', Arial, sans-serif;
-		font-size: 16px;
-		color: #000;
-		text-transform: uppercase;
-	}
-
-	.department {
-		font-family: 'Asap', Arial, sans-serif;
-		font-size: 14px;
-		color: #000;
-		margin-bottom: 5px;
-		text-transform: uppercase;
-	}
-
-	.institution {
-		font-family: 'Asap', Arial, sans-serif;
-		font-size: 13px;
-		font-weight: bold;
-		color: #76b82a;
-		text-transform: uppercase;
-	}
-
-	.director {
-		font-family: 'Asap', Arial, sans-serif;
-		font-size: 12px;
-		font-weight: normal;
-		color: #b3b3b3;
-	}
-
-	.regional,
-	.location,
-	.defensoria {
-		font-family: 'Asap', Arial, sans-serif;
-		font-size: 12px;
-		font-weight: normal;
-	}
-
-	/* Línea separadora */
-	.separator-line {
-		width: 100%;
-		height: 1px;
-		background-color: #000;
-	}
-
-
-	/* Contenido de la citación */
-	.citation-content {
-		margin-bottom: 30px;
-	}
-
-	.citation-header h2 {
-		font-family: 'Asap', Arial, sans-serif;
-		font-size: 13px;
-		font-weight: bold;
-		color: #000;
-		margin-bottom: 10px;
-		text-transform: uppercase;
-		text-align: center;
-	}
-
-	.citation-header h3 {
-		font-family: 'Asap', Arial, sans-serif;
-		font-size: 12px;
-		font-weight: bold;
-		color: #000;
-		margin-bottom: 15px;
-		text-transform: uppercase;
-		text-align: center;
-	}
-
-	.citation-text p {
-		font-family: 'Asap', Arial, sans-serif;
-		font-size: 11px;
-		color: #000;
-		text-align: justify;
-		line-height: 1.5;
-		margin-bottom: 15px;
-	}
-
-	.citation-text strong {
-		font-family: 'Asap', Arial, sans-serif;
-		font-weight: bold;
-	}
-
-	.case-info {
-		margin: 15px 0;
-	}
-
-	.case-info p {
-		font-family: 'Asap', Arial, sans-serif;
-		font-size: 11px;
-		color: #000;
-		margin-bottom: 5px;
-	}
-
-	.case-number {
-		font-family: 'Asap', Arial, sans-serif;
-		font-size: 11px;
-		color: #000;
-
-	}
-
-	.notification-warning {
-		margin: 15px 0 18px;
-	}
-
-	.notification-warning p {
-		font-weight: bold;
-	}
-
-	.notification-warning p {
-		font-family: 'Asap', Arial, sans-serif;
-		font-size: 11px;
-		color: #000;
-	}
-
-	/* Sección de fechas y referencia legal */
-	.dates-legal-section {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
-	}
-
-	.dates-box {
-		border: 1px solid #888;
-		padding: 10px 18px 10px 10px;
-		min-width: 220px;
-	}
-
-	.dates-box p {
-		font-family: 'Asap', Arial, sans-serif;
-		font-size: 11px;
-		color: #000;
-		margin-bottom: 5px;
-	}
-
-	.dates-box p:last-child {
-		margin-bottom: 0;
-	}
-
-	.legal-reference {
-		text-align: right;
-		flex: 1;
-	}
-
-	.legal-reference p {
-		font-family: 'Asap', Arial, sans-serif;
-		font-size: 11px;
-		color: #000;
-	}
-
-	/* Sección de firma */
-	.signature-section {
-		margin: 30px 0;
-		text-align: center;
-	}
-
-	.signature-block {
-		display: inline-block;
-	}
-
-	.signature-name {
-		font-family: 'Asap', Arial, sans-serif;
-		font-size: 12px;
-		color: #000;
-		font-weight: bold;
-		margin-bottom: 5px;
-		text-transform: uppercase;
-	}
-
-	.signature-title {
-		font-family: 'Asap', Arial, sans-serif;
-		font-size: 11px;
-		color: #000;
-		margin-bottom: 10px;
-	}
-
-	.institution-name {
-		font-family: 'Asap', Arial, sans-serif;
-		font-size: 12px;
-		color: #000;
-		font-weight: bold;
-		margin-bottom: 5px;
-		text-transform: uppercase;
-	}
-
-	.institution-location {
-		font-family: 'Asap', Arial, sans-serif;
-		font-size: 11px;
-		color: #000;
-		margin-bottom: 3px;
-	}
-
-	.institution-location:last-child {
-		margin-bottom: 0;
-	}
-
-	/* Footer con información de contacto */
-	.footer {
-		border-top: 1px solid #000;
-		position: absolute;
-		bottom: 20mm;
-		left: 20mm;
-		right: 20mm;
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
-	}
-
-	.img-footer img {
-		margin-top: 20px;
-		height: 60px;
-	}
-
-	.contact-info {
-		margin-top: 20px;
-		flex: 1;
-	}
-
-	.contact-info p {
-		font-family: 'Asap', Arial, sans-serif;
-		font-size: 10px;
-		color: #000;
-		margin-bottom: 2px;
-	}
-
-	.contact-info strong {
-		font-family: 'Asap', Arial, sans-serif;
-		font-weight: bold;
-	}
-
-	.footer-checkbox {
-		width: 15px;
-		height: 15px;
-		border: 1px solid #000;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: 12px;
-		margin-top: 5px;
-	}
-
-
-
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Asap', Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #000;
+    line-height: 1.4;
+    font-size: 12px;
+  }
+  
+  /* Aplicar fuente Asap a todos los elementos */
+  * {
+    font-family: 'Asap', Arial, sans-serif;
+    font-weight: 400;
+  }
+  
+  /* Contenedor principal del documento */
+  .document-container {
+    max-width: 210mm;
+    min-height: 297mm;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20mm;
+    position: relative;
+  }
+  
+  /* Header del documento */
+  .header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 3px;
+    margin-bottom: 10px;
+  }
+  
+  .img-header img {
+    height: 80px; /* tamaño de logo más compacto */
+    width: auto;
+    margin: 0;
+  }
+  
+  .header-content {
+    flex: 1;
+    text-align: center;
+    padding: 0 15px; /* un poquito de espacio entre texto y logos */
+  }
+  
+  .country {
+    font-family: 'Asap', Arial, sans-serif;
+    font-size: 16px;
+    color: #000;
+    text-transform: uppercase;
+  }
+  
+  .department {
+    font-family: 'Asap', Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+  
+  .institution {
+    font-family: 'Asap', Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: #76b82a;
+    text-transform: uppercase;
+  }
+  
+  .director {
+    font-family: 'Asap', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color: #b3b3b3;
+  }
+  
+  .regional,
+  .location,
+  .defensoria {
+    font-family: 'Asap', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+  }
+  
+  /* Línea separadora */
+  .separator-line {
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+  }
+  
+  /* Contenido de la citación */
+  .citation-content {
+    margin-bottom: 30px;
+  }
+  
+  .citation-header h2 {
+    font-family: 'Asap', Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .citation-header h3 {
+    font-family: 'Asap', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .citation-text p {
+    font-family: 'Asap', Arial, sans-serif;
+    font-size: 11px;
+    color: #000;
+    text-align: justify;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  .citation-text strong {
+    font-family: 'Asap', Arial, sans-serif;
+    font-weight: bold;
+  }
+  
+  .case-info {
+    margin: 15px 0;
+  }
+  
+  .case-info p {
+    font-family: 'Asap', Arial, sans-serif;
+    font-size: 11px;
+    color: #000;
+    margin-bottom: 5px;
+  }
+  
+  .case-number {
+    font-family: 'Asap', Arial, sans-serif;
+    font-size: 11px;
+    color: #000;
+  }
+  
+  .notification-warning {
+    margin: 15px 0 18px;
+  }
+  
+  .notification-warning p {
+    font-weight: bold;
+  }
+  
+  .notification-warning p {
+    font-family: 'Asap', Arial, sans-serif;
+    font-size: 11px;
+    color: #000;
+  }
+  
+  /* Sección de fechas y referencia legal */
+  .dates-legal-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .dates-box {
+    border: 1px solid #888;
+    padding: 10px 18px 10px 10px;
+    min-width: 220px;
+  }
+  
+  .dates-box p {
+    font-family: 'Asap', Arial, sans-serif;
+    font-size: 11px;
+    color: #000;
+    margin-bottom: 5px;
+  }
+  
+  .dates-box p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .legal-reference {
+    text-align: right;
+    flex: 1;
+  }
+  
+  .legal-reference p {
+    font-family: 'Asap', Arial, sans-serif;
+    font-size: 11px;
+    color: #000;
+  }
+  
+  /* Sección de firma */
+  .signature-section {
+    margin: 30px 0;
+    text-align: center;
+  }
+  
+  .signature-block {
+    display: inline-block;
+  }
+  
+  .signature-name {
+    font-family: 'Asap', Arial, sans-serif;
+    font-size: 12px;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+  
+  .signature-title {
+    font-family: 'Asap', Arial, sans-serif;
+    font-size: 11px;
+    color: #000;
+    margin-bottom: 10px;
+  }
+  
+  .institution-name {
+    font-family: 'Asap', Arial, sans-serif;
+    font-size: 12px;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+  
+  .institution-location {
+    font-family: 'Asap', Arial, sans-serif;
+    font-size: 11px;
+    color: #000;
+    margin-bottom: 3px;
+  }
+  
+  .institution-location:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Footer con información de contacto */
+  .footer {
+    border-top: 1px solid #000;
+    position: absolute;
+    bottom: 20mm;
+    left: 20mm;
+    right: 20mm;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .img-footer img {
+    margin-top: 20px;
+    height: 60px;
+  }
+  
+  .contact-info {
+    margin-top: 20px;
+    flex: 1;
+  }
+  
+  .contact-info p {
+    font-family: 'Asap', Arial, sans-serif;
+    font-size: 10px;
+    color: #000;
+    margin-bottom: 2px;
+  }
+  
+  .contact-info strong {
+    font-family: 'Asap', Arial, sans-serif;
+    font-weight: bold;
+  }
 </style>
 <body>
-	<div
-		class="document-container">
-        {% set region1 = node.field_region_office[0].entity.name.value ?? '' %}
-        {% set region2 = node.field_region_office[1].entity.name.value ?? '' %}
+  <div>
+    {% set region1 = node.field_region_office[0].entity.name.value ?? '' %}
+    {% set region2 = node.field_region_office[1].entity.name.value ?? '' %}
 
-        {% set location1 = node.field_lugar[0].entity.name.value ?? '' %}
-        {% set location2 = node.field_lugar[1].entity.name.value ?? '' %}
-		<!-- Header oficial -->
-		<div class="header">
-			<div class="img-header">
-				<img src="{{ base_path }}modules/custom/citaciones/assets/logo6.jpg" alt="Logo" width="100" height="auto">
-			</div>
-			<div class="header-content">
-				<h1 class="country">República de Colombia</h1>
-				<h2 class="department">Departamento para la Prosperidad Social</h2>
-				<h3 class="institution">Instituto Colombiano de Bienestar Familiar</h3>
-				<p class="director">Cecilia De la Fuente de Lleras</p>
-				<p class="regional">{{ region1 ~ (region1 and region2 ? ' - ' : '') ~ region2 }}</p>
-				< class="location">{{ location1 ~ (location1 and location2 ? ' - ' : '') ~ location2 }}</p>
-				<p class="defensoria">Defensoría de familia</p>
-			</div>
-			<div class="img-header">
-				<img src="{{ base_path }}modules/custom/citaciones/assets/logo6.jpg" alt="Logo" width="100" height="auto">
-			</div>
-		</div>
+    {% set location1 = node.field_lugar[0].entity.name.value ?? '' %}
+    {% set location2 = node.field_lugar[1].entity.name.value ?? '' %}
+    <!-- Header oficial -->
+    <div class="header">
+      <div class="img-header">
+        <img src="{{ base_path }}modules/custom/citaciones/assets/logo6.jpg" alt="Logo-icbf" />
+      </div>
+      <div class="header-content">
+        <h1 class="country">República de Colombia</h1>
+        <h2 class="department">Departamento para la Prosperidad Social</h2>
+        <h3 class="institution">Instituto Colombiano de Bienestar Familiar</h3>
+        <p class="director">Cecilia De la Fuente de Lleras</p>
+        <p class="regional">{{ region1 ~ (region1 and region2 ? ' - ' : '') ~ region2 }}</p>
+        <p class="location">{{ location1 ~ (location1 and location2 ? ' - ' : '') ~ location2 }}</p>
+        <p class="defensoria">Defensoría de familia</p>
+      </div>
+      <div class="img-header">
+        <img src="{{ base_path }}modules/custom/citaciones/assets/logo6.jpg" alt="Logo" width="100" height="auto" />
+      </div>
+    </div>
 
-		<!-- Línea separadora -->
-		<div class="separator-line"></div>
+    <!-- Línea separadora -->
+    <div class="separator-line"></div>
 
-		<!-- Contenido principal de la citación -->
-		<div class="citation-content">
-			<div class="citation-header">
-				<h2>LA SUSCRITA DEFENSORÍA DE FAMILIA</h2>
-				<h3>CITA:</h3>
-			</div>
+    <!-- Contenido principal de la citación -->
+    <div class="citation-content">
+      <div class="citation-header">
+        <h2>LA SUSCRITA DEFENSORÍA DE FAMILIA</h2>
+        <h3>CITA:</h3>
+      </div>
 
-			<div class="citation-text">
-				<p>
-					A
-					{% for item in node.field_summoned %}
-						{# Cargar la entidad del párrafo #}
-						{% set p = item.entity %}
+      <div class="citation-text">
+        <p>
+          A{% for item in node.field_summoned %}
+            {# Cargar la entidad del párrafo #}
+            {% set p = item.entity %}
 
-						{{ p.field_full_name.value }}
-						{% if p.field_citizen_id.value %}
-							{{ p.field_document_type.value ~ p.field_citizen_id.value  }}
-						{% else %}
-							Sin documento - SD 0
-						{% endif %}
-						({{ p.field_kinship.value }})
-						{% if not loop.last %},
-						{% endif %}
-					{% endfor %}
+            {{ p.field_full_name.value }}
+            {% if p.field_citizen_id.value %}
+              {{ p.field_document_type.value ~ p.field_citizen_id.value }}
+            {% else %}
+              Sin documento - SD 0
+            {% endif %}({{ p.field_kinship.value }}){% if not loop.last %}
+              ,
+            {% endif %}
+          {% endfor %}de{% for item in node.field_children_defendant %}
+            {% set c = item.entity %}
+            {{ c.field_children_fullname.value }}
+            {% if c.field_citizen_id.value %}
+              {{ c.field_document_type.value ~ c.field_citizen_id.value }}
+            {% else %}
+              Sin documento - SD 0
+            {% endif %}
+          {% endfor %},
 
-					de
-                    {% for item in node.field_children_defendant %}
-                    {% set c = item.entity %}
-					{{ c.field_children_fullname.value }}
-					{% if c.field_citizen_id.value %}
-						{{ c.field_document_type.value ~ c.field_citizen_id.value}}
-                    {% else %}
-							Sin documento - SD 0
-					{% endif %}
-                    {% endfor %},
-					
-					    a los miembros de su familia de origen y extensa, y a las demás personas interesadas o implicadas
-					    de la solicitud; a favor de quien(es) este Despacho adelantará Proceso administrativo de restablecimiento de derechos,
-					    para que en el término de cinco (5) días posteriores a la publicación de la presente citación, comparezca(n)
-					    ante esta Defensoría de Familia ubicada en
-					{{ node.field_summoned_address.value }}
-					para ser notificados del contenido del Auto
-					{{ node.field_act_number.value }}
-					proferido el día
-					{{ node.field_fecha_auto.value|date("d/m/Y") }}.
-				</p>
-			</div>
+          a los miembros de su familia de origen y extensa, y a las demás personas interesadas o implicadas de la solicitud; a favor de quien(es) este Despacho adelantará Proceso administrativo de restablecimiento de derechos, para que en el término de cinco (5) días posteriores a la publicación de la presente citación, comparezca(n) ante esta Defensoría de Familia ubicada en
+          {{ node.field_summoned_address.value }}
+          para ser notificados del contenido del Auto
+          {{ node.field_act_number.value }}
+          proferido el día
+          {{ node.field_fecha_auto.value|date('d/m/Y') }}.
+        </p>
+      </div>
 
+      <div class="case-info">
+        <p>
+          <strong>HISTORIA DE ATENCIÓN O SIM NRO:</strong>
+        </p>
+        <p class="case-number">{{ node.field_sim_number.value }}</p>
+      </div>
 
-			<div class="case-info">
-				<p>
-					<strong>HISTORIA DE ATENCIÓN O SIM NRO:</strong>
-				</p>
-				<p class="case-number">{{ node.field_sim_number.value }}</p>
-			</div>
+      <div class="notification-warning" style="margin-bottom: 10px;">
+        <p>De no asistir en el término mencionado, se entenderá surtida la notificación.</p>
+      </div>
 
-			<div class="notification-warning" style="margin-bottom: 10px;">
-				<p>
-					De no asistir en el término mencionado, se entenderá surtida la notificación.
-				</p>
-			</div>
+      <div class="dates-legal-section" style="display: flex; align-items: flex-start; gap: 18px;">
+        <div class="dates-box">
+          <p style="color: #666; margin-bottom: 6px; font-weight: normal;">
+            Fijado el:
+            <span style="color: #444; font-weight: 500;">{{ node.field_creation_date.value|date('d/m/Y') }}.</span>
+          </p>
+          <p style="color: #666; font-weight: normal;">
+            Desfijar el:
+            <span style="color: #444; font-weight: 500;">{{ node.field_unpublish_date.value|date('d/m/Y') }}.</span>
+          </p>
+        </div>
+        <div class="legal-reference" style="display: flex; align-items: center; height: 100%;">
+          <span style="color: #888; font-weight: normal;">Artículo 102 del Código de Infancia y Adolescencia</span>
+        </div>
+      </div>
+    </div>
 
-			<div class="dates-legal-section" style="display: flex; align-items: flex-start; gap: 18px;">
-				<div class="dates-box">
-					<p style="color: #666; margin-bottom: 6px; font-weight: normal;">
-						Fijado el:
-						<span style="color: #444; font-weight: 500;">{{ node.field_creation_date.value|date("d/m/Y") }}.</span>
-					</p>
-					<p style="color: #666; font-weight: normal;">
-						Desfijar el:
-						<span style="color: #444; font-weight: 500;">{{ node.field_unpublish_date.value|date("d/m/Y") }}.</span>
-					</p>
-				</div>
-				<div class="legal-reference" style="display: flex; align-items: center; height: 100%;">
-					<span style="color: #888; font-weight: normal;">
-						Artículo 102 del Código de Infancia y Adolescencia
-					</span>
-				</div>
-			</div>
-		</div>
+    <!-- Sección de firma -->
+    <div class="signature-section">
+      <div class="signature-block">
+        <p class="signature-name">{{ node.field_officer_name.value }}</p>
+        <p class="signature-title">Defensor(a) de Familia</p>
+        <p class="institution-name">INSTITUTO COLOMBIANO DE BIENESTAR FAMILIAR</p>
+        <p class="institution-location">{{ region1 }}</p>
+        <p class="institution-location">{{ region2 }}</p>
+        <p class="institution-location">{{ location1 ~ (location1 and location2 ? ' - ' : '') ~ location2 }}</p>
+      </div>
+    </div>
 
-		<!-- Sección de firma -->
-		<div class="signature-section">
-			<div class="signature-block">
-				<p class="signature-name">{{ node.field_officer_name.value }}</p>
-				<p class="signature-title">Defensor(a) de Familia</p>
-				<p class="institution-name">INSTITUTO COLOMBIANO DE BIENESTAR FAMILIAR</p>
-				<p class="institution-location">{{ region1 }}</p>
-				<p class="institution-location">{{ region2 }}</p>
-				<p class="institution-location">{{ location1 ~ (location1 and location2 ? ' - ' : '') ~ location2 }}</p>
-			</div>
-		</div>
-
-
-		<!-- Footer con información de contacto -->
-		<div class="footer">
-			<div class="contact-info">
-				<p>Dirección: Carrera 42 # 5 C - 48</p>
-				<p>Teléfono: 57(2) 488 25 25</p>
-				<p>Centro Zonal Sur</p>
-				<p>Regional Valle</p>
-				<p>Línea gratuita nacional ICBF: 01 8000 91 8080</p>
-				<p>www.icbf.gov.co</p>
-				<p>Creado el: {{ node.field_legal_act_date.value|date("d/m/Y") }}</p>
-			</div>
-			<div class="img-footer">
-				<img src="{{ base_path }}modules/custom/citaciones/assets/logo3.jpg" alt="Logo" width="100" height="auto">
-			</div>
-		</div>
-	</div>
+    <!-- Footer con información de contacto -->
+    <div class="footer">
+      <div class="contact-info">
+        <p>Dirección: Carrera 42 # 5 C - 48</p>
+        <p>Teléfono: 57(2) 488 25 25</p>
+        <p>Centro Zonal Sur</p>
+        <p>Regional Valle</p>
+        <p>Línea gratuita nacional ICBF: 01 8000 91 8080</p>
+        <p>www.icbf.gov.co</p>
+        <p>Creado el: {{ node.field_legal_act_date.value|date('d/m/Y') }}</p>
+      </div>
+      <div class="img-footer">
+        <img src="{{ base_path }}modules/custom/citaciones/assets/logo3.jpg" alt="Logo" width="100" height="auto" />
+      </div>
+    </div>
+  </div>
 </body>
