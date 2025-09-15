@@ -326,22 +326,30 @@
 
     {% set location1 = node.field_lugar[0].entity.name.value ?? '' %}
     {% set location2 = node.field_lugar[1].entity.name.value ?? '' %}
+    
     <!-- Header oficial -->
-    <div class="header">
-      <div class="img-header">
-        <img src="{{ base_path }}modules/custom/citaciones/assets/logo6.jpg" alt="Logo-icbf" />
-      </div>
-      <div class="header-content">
-        <h1 class="country">República de Colombia</h1>
-        <h2 class="department">Departamento para la Prosperidad Social</h2>
-        <h3 class="institution">Instituto Colombiano de Bienestar Familiar</h3>
-        <p class="director">Cecilia De la Fuente de Lleras</p>
-        <p class="regional">{{ region1 ~ (region1 and region2 ? ' - ' : '') ~ region2 }}</p>
-        <p class="location">{{ location1 ~ (location1 and location2 ? ' - ' : '') ~ location2 }}</p>
-        <p class="defensoria">Defensoría de familia</p>
-      </div>
-      <div class="img-header">
-        <img src="{{ base_path }}modules/custom/citaciones/assets/logo6.jpg" alt="Logo" />
+    <div class="container text-center" style="margin-bottom:15px;">
+      <div class="row align-items-center">
+        <!-- Logo izquierdo -->
+        <div class="col-3">
+          <img src="{{ base_path }}modules/custom/citaciones/assets/logo6.jpg" alt="Logo-icbf" class="img-fluid" style="max-width:80px;" />
+        </div>
+
+        <!-- Contenido central -->
+        <div class="col-6">
+          <h1 class="m-0" style="font-size:14px; font-weight:bold;">República de Colombia</h1>
+          <h2 class="m-0" style="font-size:12px;">Departamento para la Prosperidad Social</h2>
+          <h3 class="m-0" style="font-size:12px; font-weight:bold; color:#4CAF50;">Instituto Colombiano de Bienestar Familiar</h3>
+          <p class="m-0" style="font-size:11px;">Cecilia De la Fuente de Lleras</p>
+          <p class="m-0" style="font-size:11px;">{{ region1 ~ (region1 and region2 ? ' - ' : '') ~ region2 }}</p>
+          <p class="m-0" style="font-size:11px;">{{ location1 ~ (location1 and location2 ? ' - ' : '') ~ location2 }}</p>
+          <p class="m-0" style="font-size:11px; font-weight:bold;">Defensoría de familia</p>
+        </div>
+
+        <!-- Logo derecho -->
+        <div class="col-3">
+          <img src="{{ base_path }}modules/custom/citaciones/assets/logo6.jpg" alt="Logo" class="img-fluid" style="max-width:80px;" />
+        </div>
       </div>
     </div>
 
