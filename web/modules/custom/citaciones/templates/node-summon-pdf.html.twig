@@ -31,22 +31,29 @@
   
   /* Header del documento */
   .header {
-    display: flex;
-    align-items: flex-start;
+    width: 100%;
+    overflow: hidden;
     margin-bottom: 3px;
-    margin-bottom: 10px;
+  }
+  
+  .img-header {
+    float: left;
+    width: 20%;
+  }
+  
+  .img-header:last-child {
+    float: right;
   }
   
   .img-header img {
-    height: 80px; /* tamaño de logo más compacto */
-    width: 100px;
-    margin: 0;
+    margin-top: 20px;
+    height: 100px;
   }
   
   .header-content {
-    flex: 1;
+    display: inline-block;
+    width: 60%;
     text-align: center;
-    padding: 0 15px; /* un poquito de espacio entre texto y logos */
   }
   
   .country {
