@@ -7,7 +7,7 @@
   
   body {
     font-family: 'Asap', Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: white;
     color: #000;
     line-height: 1.4;
     font-size: 12px;
@@ -25,7 +25,6 @@
     min-height: 297mm;
     margin: 20px auto;
     background-color: white;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     padding: 20mm;
     position: relative;
   }
@@ -40,7 +39,7 @@
   
   .img-header img {
     height: 80px; /* tamaño de logo más compacto */
-    width: auto;
+    width: 100px;
     margin: 0;
   }
   
@@ -281,14 +280,14 @@
   }
 </style>
 <body>
-  <div>
+  <div class="document-container">
     {% set region1 = node.field_region_office[0].entity.name.value ?? '' %}
     {% set region2 = node.field_region_office[1].entity.name.value ?? '' %}
 
     {% set location1 = node.field_lugar[0].entity.name.value ?? '' %}
     {% set location2 = node.field_lugar[1].entity.name.value ?? '' %}
     <!-- Header oficial -->
-    <div class="header">
+    <div class="header" style="display: flex;">
       <div class="img-header">
         <img src="{{ base_path }}modules/custom/citaciones/assets/logo6.jpg" alt="Logo-icbf" />
       </div>
@@ -302,7 +301,7 @@
         <p class="defensoria">Defensoría de familia</p>
       </div>
       <div class="img-header">
-        <img src="{{ base_path }}modules/custom/citaciones/assets/logo6.jpg" alt="Logo" width="100" height="auto" />
+        <img src="{{ base_path }}modules/custom/citaciones/assets/logo6.jpg" alt="Logo" />
       </div>
     </div>
 
