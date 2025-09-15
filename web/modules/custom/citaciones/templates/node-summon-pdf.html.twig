@@ -297,7 +297,7 @@
 
             {{ p.field_full_name.value }}
             {% if p.field_citizen_id.value %}
-              {{ p.field_document_type.value ~ p.field_citizen_id.value }}
+              {{ p.field_document_type.value ~ " " ~ p.field_citizen_id.value }}
             {% else %}
               Sin documento - SD 0
             {% endif %}({{ p.field_kinship.value }}){% if not loop.last %}
@@ -307,7 +307,7 @@
             {% set c = item.entity %}
             {{ c.field_children_fullname.value }}
             {% if c.field_citizen_id.value %}
-              {{ c.field_document_type.value ~ c.field_citizen_id.value }}
+              {{ c.field_document_type.value ~ " " ~ c.field_citizen_id.value }}
             {% else %}
               Sin documento - SD 0
             {% endif %}
