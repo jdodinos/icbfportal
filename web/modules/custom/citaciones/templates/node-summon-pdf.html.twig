@@ -31,20 +31,32 @@
   
   /* Header del documento */
   .header {
-    margin-bottom: 3px;
+    width: 100%;
     margin-bottom: 10px;
+    /* Reemplazamos flex con table */
+    display: table;
+    table-layout: fixed;
   }
   
-  .img-header img {
-    height: 10px; /* tamaño de logo más compacto */
-    width: 10px;
-    margin-top: 10px;
+  .img-header {
+    /* Ajustamos para comportamiento tipo tabla */
+    display: table-cell;
+    vertical-align: top;
+    width: 15%; /* Ajusta según necesites */
   }
   
   .header-content {
-    flex: 1;
+    display: table-cell;
+    vertical-align: top;
+    width: 70%; /* Ajusta según necesites */
     text-align: center;
-    padding: 0 15px; /* un poquito de espacio entre texto y logos */
+    padding: 0 15px;
+  }
+  
+  .img-header img {
+    width: 60px; /* o el tamaño que necesites */
+    height: auto;
+    margin-top: 10px;
   }
   
   .country {
@@ -272,9 +284,6 @@
     margin-bottom: 2px;
   }
   
-  .d-flex {
-    display: flex !important;
-  }
   
   .contact-info strong {
     font-family: 'Asap', Arial, sans-serif;
@@ -289,8 +298,8 @@
     {% set location1 = node.field_lugar[0].entity.name.value ?? '' %}
     {% set location2 = node.field_lugar[1].entity.name.value ?? '' %}
     <!-- Header oficial -->
-    <div class="header d-flex">
-      <div class="img-header d-flex">
+    <div class="header">
+      <div class="img-header">
         <img src="{{ base_path }}modules/custom/citaciones/assets/logo6.jpg" alt="Logo-icbf" />
       </div>
       <div class="header-content">
