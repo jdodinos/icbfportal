@@ -1,0 +1,233 @@
+<?php
+
+use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\Core\File\FileSystemInterface;
+use Drupal\file\Entity\File;
+use Drupal\node\NodeInterface;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implementación de hook_theme() para la plantilla PDF.
+ */
+function citaciones_theme($existing, $type, $theme, $path) {
+  $moduleHandler = \Drupal::service('extension.list.module');
+  $modulePath = $moduleHandler->getPath('citaciones');
+
+  return [
+    'node_summon_pdf' => [
+      'variables' => [
+        'node' => NULL,
+      ],
+      'template' => 'node-summon-pdf',
+      'path' => $modulePath . '/templates',
+    ],
+  ];
+}
+
+/**
+ * Hook node presave: genera PDF y lo adjunta al nodo cuando se crea un nodo
+ * del tipo 'summon'.
+ *
+ * - Calcula (si existe) las fechas con la clase festivos (mantiene compatibilidad
+ *   intentando cargar el fichero original si existe).
+ * - Renderiza la plantilla '#theme' => 'node_summon_pdf' para obtener HTML.
+ * - Genera PDF usando mpdf (composer require mpdf/mpdf).
+ * - Guarda el PDF en public://pdf_using_mpdf/ y crea un File entity.
+ * - Adjunta el archivo al campo 'field_summoned_file' si existe en el nodo.
+ */
+function citaciones_node_presave(NodeInterface $node) {
+  // Sólo nos interesa el tipo 'summon'.
+  if ($node->getType() !== 'summon') {
+    return;
+  }
+
+  // Si el nodo es nuevo, intentar generar las fechas (clase festivos) igual que antes.
+  if ($node->isNew()) {
+    $summon_dates = [];
+
+    // Intentar cargar la clase festivos si existe en el módulo.
+    if (!class_exists('festivos')) {
+      $moduleHandler = \Drupal::service('extension.list.module');
+      $module_path = $moduleHandler->getPath('citaciones');
+      $c1 = DRUPAL_ROOT . '/' . $module_path . '/classes/festivos.class.php';
+      $c2 = DRUPAL_ROOT . '/' . $module_path . '/classes/festivos.class.inc';
+      if (file_exists($c1)) {
+        require_once $c1;
+      } elseif (file_exists($c2)) {
+        require_once $c2;
+      }
+    }
+
+    if (class_exists('festivos')) {
+      try {
+        $festivos_handler = new \festivos();
+        if (method_exists($festivos_handler, 'generaFechas')) {
+          $summon_dates = $festivos_handler->generaFechas();
+        }
+      }
+      catch (\Throwable $e) {
+        // caeremos al fallback
+      }
+    }
+
+    // Fallback: 5 días consecutivos empezando hoy
+    if (empty($summon_dates)) {
+      for ($i = 0; $i < 5; $i++) {
+        $summon_dates[] = date('Y-m-d', strtotime("+{$i} days"));
+      }
+    }
+
+    // Si existen los campos en el contenido, asignarlos (con zona horaria Bogotá).
+    if ($node->hasField('field_creation_date')) {
+      try {
+        $dt = new DrupalDateTime($summon_dates[0] . ' 00:00:00', new \DateTimeZone('America/Bogota'));
+        // Formato ISO que aceptan campos datetime
+        $node->set('field_creation_date', $dt->format('Y-m-d\TH:i:s'));
+      } catch (\Exception $e) {
+        $node->set('field_creation_date', $summon_dates[0] . ' 00:00:00');
+      }
+    }
+
+    if ($node->hasField('field_unpublish_date')) {
+      try {
+        $dt2 = new DrupalDateTime($summon_dates[4] . ' 23:59:00', new \DateTimeZone('America/Bogota'));
+        $node->set('field_unpublish_date', $dt2->format('Y-m-d\TH:i:s'));
+      } catch (\Exception $e) {
+        $node->set('field_unpublish_date', $summon_dates[4] . ' 23:59:00');
+      }
+    }
+  }
+
+  // Recolectar TIDs de 'field_region_office' y 'field_lugar' si existen.
+  $locations_tids = [];
+  if ($node->hasField('field_region_office')) {
+    foreach ($node->get('field_region_office')->getValue() as $item) {
+      if (!empty($item['target_id'])) {
+        $locations_tids[] = $item['target_id'];
+      }
+    }
+  }
+  if ($node->hasField('field_lugar')) {
+    foreach ($node->get('field_lugar')->getValue() as $item) {
+      if (!empty($item['target_id'])) {
+        $locations_tids[] = $item['target_id'];
+      }
+    }
+  }
+  if (!empty($locations_tids)) {
+    $locations = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadMultiple($locations_tids);
+    // Guardamos en la propiedad temporal $node->locations para que esté disponible
+    // durante el renderizado del template que generará el PDF.
+    $node->locations = $locations;
+  }
+
+  // Renderizar la plantilla Twig definida por hook_theme (node-summon-pdf.html.twig).
+  $build = [
+    '#theme' => 'node_summon_pdf',
+    '#node' => $node,
+  ];
+  // Obtener HTML renderizado (string).
+  $html = \Drupal::service('renderer')->renderRoot($build);
+
+  // Preparar filename seguro.
+  $pdf_filename_raw = str_replace('(a)', '', $node->label());
+  // sustituir caracteres no permitidos por guión bajo
+  $pdf_filename_raw = preg_replace('/[^A-Za-z0-9_\-]/', '_', $pdf_filename_raw);
+  if (strlen($pdf_filename_raw) == 0) {
+    $pdf_filename_raw = 'citacion_' . time();
+  }
+
+  // Preparar directorio público y URI destino.
+  $directory = 'public://pdf_using_mpdf';
+  $file_system = \Drupal::service('file_system');
+  // Crear directorio si no existe.
+  $file_system->prepareDirectory($directory, FileSystemInterface::CREATE_DIRECTORY);
+
+  $uri = $directory . '/' . $pdf_filename_raw . '.pdf';
+
+  // Generar el PDF y escribirlo en $uri.
+  $result = citaciones_generate_pdf_file($html, $uri);
+  if ($result !== TRUE) {
+    // Log de error si falló la generación.
+    \Drupal::logger('citaciones')->error('Error generando PDF: @msg', ['@msg' => (string) $result]);
+  } else {
+    // Crear File entity y adjuntarlo al nodo si el campo existe.
+    try {
+      $managed = File::create([
+        'uri' => $uri,
+        'status' => 1,
+      ]);
+      $managed->save();
+
+      if ($node->hasField('field_summoned_file')) {
+        // los file fields en D8+ esperan target_id
+        $node->set('field_summoned_file', [
+          ['target_id' => $managed->id(), 'display' => 1, 'description' => 'Generado automáticamente']
+        ]);
+      }
+      // Nota: la creación de file usage se realiza en hook_entity_insert() abajo.
+    } catch (\Throwable $e) {
+      \Drupal::logger('citaciones')->error('No se pudo crear la entidad File para el PDF: @msg', ['@msg' => $e->getMessage()]);
+    }
+  }
+}
+
+/**
+ * Hook entity insert: registrar uso de archivos adjuntos luego de insertar el nodo.
+ *
+ * Añadimos file usage a los archivos que hayan quedado en el campo 'field_summoned_file'.
+ */
+function citaciones_entity_insert(EntityInterface $entity) {
+  if ($entity instanceof NodeInterface && $entity->getType() === 'summon') {
+    if ($entity->hasField('field_summoned_file')) {
+      $items = $entity->get('field_summoned_file')->getValue();
+      foreach ($items as $item) {
+        if (!empty($item['target_id'])) {
+          $file = File::load($item['target_id']);
+          if ($file) {
+            \Drupal::service('file.usage')->add($file, 'citaciones', 'node', $entity->id());
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/**
+ * Genera un archivo PDF en la ruta $destination_uri (ej: public://pdf_using_mpdf/nombre.pdf).
+ *
+ * Retorna TRUE en caso de éxito o string con el mensaje de error (si falla).
+ *
+ * Requiere la biblioteca mpdf (instalar: composer require mpdf/mpdf).
+ */
+function citaciones_generate_pdf_file($html, $destination_uri) {
+  $file_system = \Drupal::service('file_system');
+  $realpath = $file_system->realpath($destination_uri);
+  $temp_dir = $file_system->realpath('temporary://');
+
+  if (!class_exists('\Mpdf\Mpdf')) {
+    return 'Mpdf no está instalado. Ejecuta: composer require mpdf/mpdf';
+  }
+
+  try {
+    // Crear instancia de mPDF. Forzamos tempDir a la carpeta temporal de Drupal.
+    $mpdf = new \Mpdf\Mpdf(['tempDir' => $temp_dir]);
+
+    // mPDF necesita HTML válido; se le pasa el string.
+    $mpdf->WriteHTML($html);
+
+    // Guardar a fichero. mPDF acepta 'F' o la constante Destination::FILE en versiones modernas.
+    if (class_exists('\Mpdf\Output\Destination')) {
+      // mPDF moderno
+      $mpdf->Output($realpath, \Mpdf\Output\Destination::FILE);
+    } else {
+      // Compatibilidad con versiones antiguas
+      $mpdf->Output($realpath, 'F');
+    }
+
+    return TRUE;
+  } catch (\Throwable $e) {
+    return $e->getMessage();
+  }
+}
