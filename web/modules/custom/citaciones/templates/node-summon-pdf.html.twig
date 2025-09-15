@@ -53,7 +53,7 @@
   
   .header-content {
     width: 100%;
-    margin: -180px 0 auto;
+    margin: -150px 0 auto;
     text-align: center;
     padding: 0%;
   }
@@ -171,7 +171,6 @@
   
   /* Sección de fechas y referencia legal */
   .dates-legal-section {
-    display: flex;
     justify-content: space-between;
     align-items: flex-start;
   }
@@ -195,7 +194,6 @@
   
   .legal-reference {
     text-align: right;
-    flex: 1;
   }
   
   .legal-reference p {
@@ -251,25 +249,12 @@
   }
   
   /* Footer con información de contacto */
-  .footer {
-    border-top: 1px solid #000;
-    position: absolute;
-    bottom: 20mm;
-    left: 20mm;
-    right: 20mm;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  
-  .img-footer img {
-    margin-top: 20px;
-    height: 60px;
-  }
+ 
+
   
   .contact-info {
     margin-top: 20px;
-    flex: 1;
+    
   }
   
   .contact-info p {
@@ -362,7 +347,7 @@
         <p>De no asistir en el término mencionado, se entenderá surtida la notificación.</p>
       </div>
 
-      <div class="dates-legal-section" style="display: flex; align-items: flex-start; gap: 18px;">
+      <div class="dates-legal-section">
         <div class="dates-box">
           <p style="color: #666; margin-bottom: 6px; font-weight: normal;">
             Fijado el:
@@ -373,7 +358,7 @@
             <span style="color: #444; font-weight: 500;">{{ node.field_unpublish_date.value|date('d/m/Y') }}.</span>
           </p>
         </div>
-        <div class="legal-reference" style="display: flex; align-items: center; height: 100%;">
+        <div class="legal-reference">
           <span style="color: #888; font-weight: normal;">Artículo 102 del Código de Infancia y Adolescencia</span>
         </div>
       </div>
