@@ -366,8 +366,8 @@
     <div class="footer">
       <div class="contact-info">
         <p>Dirección: {{ node.field_summoned_address.value }}</p>
-        <p>Teléfono: 57(2) 488 25 25</p>
-        <p>{{ location2 }}</p>
+        <p>Teléfono: {{ node.field_region_office[1].entity.field_phone.value }}</p>
+        <p>{{ region2 }}</p>
         <p>{{ region1 }}</p>
         <p>Línea gratuita nacional ICBF: 01 8000 91 8080</p>
         <p>www.icbf.gov.co</p>
