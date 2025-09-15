@@ -43,9 +43,11 @@
   
   .img-header {
     left: 0;
+    float: left;
   }
   
   .img-header img {
+    width: 80px;
     height: auto;
     margin: 0 auto;
     display: block;
@@ -55,6 +57,7 @@
     width: 70%;
     margin: 0 auto;
     text-align: center;
+    padding: 0%;
   }
   
   /* Ajustes específicos para el texto del header */
@@ -293,7 +296,9 @@
 
     <!-- Header oficial -->
     <div class="header">
-   
+      <div class="img-header">
+        <img src="{{ base_path }}modules/custom/citaciones/assets/logo6.jpg" alt="Logo-icbf" width="80" />
+      </div>
       <div class="header-content">
         <h1 class="country">REPÚBLICA DE COLOMBIA</h1>
         <h2 class="department">DEPARTAMENTO PARA LA PROSPERIDAD SOCIAL</h2>
