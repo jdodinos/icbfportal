@@ -31,29 +31,20 @@
   
   /* Header del documento */
   .header {
-    width: 100%;
-    overflow: hidden;
     margin-bottom: 3px;
-  }
-  
-  .img-header {
-    float: left;
-    width: 20%;
-  }
-  
-  .img-header:last-child {
-    float: right;
+    margin-bottom: 10px;
   }
   
   .img-header img {
-    margin-top: 20px;
-    height: 100px;
+    height: 80px; /* tamaño de logo más compacto */
+    width: 100px;
+    margin-top: 10px;
   }
   
   .header-content {
-    display: inline-block;
-    width: 60%;
+    flex: 1;
     text-align: center;
+    padding: 0 15px; /* un poquito de espacio entre texto y logos */
   }
   
   .country {
@@ -281,6 +272,10 @@
     margin-bottom: 2px;
   }
   
+  .d-flex {
+    display: flex !important;
+  }
+  
   .contact-info strong {
     font-family: 'Asap', Arial, sans-serif;
     font-weight: bold;
@@ -294,8 +289,8 @@
     {% set location1 = node.field_lugar[0].entity.name.value ?? '' %}
     {% set location2 = node.field_lugar[1].entity.name.value ?? '' %}
     <!-- Header oficial -->
-    <div class="header">
-      <div class="img-header">
+    <div class="header d-flex">
+      <div class="img-header d-flex">
         <img src="{{ base_path }}modules/custom/citaciones/assets/logo6.jpg" alt="Logo-icbf" />
       </div>
       <div class="header-content">
