@@ -294,79 +294,8 @@
 		margin-top: 5px;
 	}
 
-	/* Estilos para impresión */
-	@media print {
-		body {
-			background-color: white;
-		}
 
-		.document-container {
-			max-width: none;
-			min-height: none;
-			margin: 0;
-			box-shadow: none;
-			padding: 15mm;
-		}
 
-		.footer {
-			position: fixed;
-			bottom: 10mm;
-		}
-	}
-
-	/* Responsive para pantallas pequeñas */
-	@media(max-width: 768px) {
-		.document-container {
-			margin: 10px;
-			padding: 15px;
-		}
-
-		.header {
-			flex-direction: column;
-			text-align: center;
-		}
-
-		.checkbox-left,
-		.checkbox-right {
-			display: none;
-		}
-
-		.country {
-			font-size: 14px;
-		}
-
-		.department {
-			font-size: 12px;
-		}
-
-		.institution {
-			font-size: 11px;
-		}
-
-		.dates-legal-section {
-			flex-direction: column;
-			align-items: flex-start;
-		}
-
-		.legal-reference {
-			margin-left: 0;
-			margin-top: 10px;
-			text-align: left;
-		}
-
-		.footer {
-			position: relative;
-			bottom: auto;
-			left: auto;
-			right: auto;
-			flex-direction: column;
-			align-items: flex-start;
-		}
-
-		.footer-checkbox {
-			margin-top: 10px;
-		}
-	}
 </style>
 <body>
 	<div
@@ -387,7 +316,7 @@
 				<h3 class="institution">Instituto Colombiano de Bienestar Familiar</h3>
 				<p class="director">Cecilia De la Fuente de Lleras</p>
 				<p class="regional">{{ region1 ~ (region1 and region2 ? ' - ' : '') ~ region2 }}</p>
-				<p class="location">{{ location1 ~ (location1 and location2 ? ' - ' : '') ~ location2 }}</p></p>
+				< class="location">{{ location1 ~ (location1 and location2 ? ' - ' : '') ~ location2 }}</p>
 				<p class="defensoria">Defensoría de familia</p>
 			</div>
 			<div class="img-header">
