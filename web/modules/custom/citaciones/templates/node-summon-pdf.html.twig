@@ -61,18 +61,15 @@
   /* Ajustes específicos para el texto del header */
   .country {
     font-size: 16px;
-    margin-bottom: 4px;
     line-height: 1.2;
   }
   
   .department {
     font-size: 14px;
-    margin-bottom: 4px;
     line-height: 1.2;
   }
   
   .institution {
-    margin-bottom: 4px;
     line-height: 1.2;
     font-size: 13px;
     font-weight: bold;
@@ -101,7 +98,7 @@
   
   /* Contenido de la citación */
   .citation-content {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
   
   .citation-header h2 {
@@ -109,7 +106,7 @@
     font-size: 13px;
     font-weight: bold;
     color: #000;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     text-transform: uppercase;
     text-align: center;
   }
@@ -119,7 +116,7 @@
     font-size: 12px;
     font-weight: bold;
     color: #000;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     text-transform: uppercase;
     text-align: center;
   }
@@ -130,7 +127,7 @@
     color: #000;
     text-align: justify;
     line-height: 1.5;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
   
   .citation-text strong {
@@ -139,7 +136,7 @@
   }
   
   .case-info {
-    margin: 15px 0;
+    margin: 12px 0;
   }
   
   .case-info p {
@@ -204,7 +201,7 @@
   
   /* Sección de firma */
   .signature-section {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     text-align: center;
   }
   
@@ -224,7 +221,7 @@
     font-family: 'Asap', Arial, sans-serif;
     font-size: 11px;
     color: #000;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   
   .institution-name {
@@ -244,7 +241,7 @@
   /* Footer con información de contacto */
   
   .contact-info {
-    margin-top: 20px;
+    margin-top: 10px;
   }
   
   .contact-info p {
@@ -331,13 +328,13 @@
         <p class="case-number">{{ node.field_sim_number.value }}</p>
       </div>
 
-      <div class="notification-warning" style="margin-bottom: 10px;">
+      <div class="notification-warning" style="margin-bottom: 5px;">
         <p>De no asistir en el término mencionado, se entenderá surtida la notificación.</p>
       </div>
 
       <div class="dates-legal-section">
         <div class="dates-box">
-          <p style="color: #666; margin-bottom: 6px; font-weight: normal;">
+          <p style="color: #666; margin-bottom: 5px; font-weight: normal;">
             Fijado el:
             <span style="color: #444; font-weight: 500;">{{ node.field_creation_date.value|date('d/m/Y') }}.</span>
           </p>
